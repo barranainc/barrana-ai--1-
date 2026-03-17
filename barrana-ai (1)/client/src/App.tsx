@@ -1,0 +1,108 @@
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import NotFound from "@/pages/NotFound";
+import { Route, Switch } from "wouter";
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import ServiceDetail from "./pages/ServiceDetail";
+import Industries from "./pages/Industries";
+import IndustryDetail from "./pages/IndustryDetail";
+import Locations from "./pages/Locations";
+import LocationDetail from "./pages/LocationDetail";
+import Resources from "./pages/Resources";
+import CaseStudies from "./pages/CaseStudies";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+// SEO/AEO Expansion Pages
+import KnowledgeBase from "./pages/KnowledgeBase";
+import KnowledgeArticle from "./pages/KnowledgeArticle";
+import Playbooks from "./pages/Playbooks";
+import PlaybookDetail from "./pages/PlaybookDetail";
+import Glossary from "./pages/Glossary";
+import BeforeAfter from "./pages/BeforeAfter";
+import Benchmarks from "./pages/Benchmarks";
+import Governance from "./pages/Governance";
+import WorkflowTemplates from "./pages/WorkflowTemplates";
+import OperatorInsights from "./pages/OperatorInsights";
+import OperatorInsightArticle from "./pages/OperatorInsightArticle";
+import Integrations from "./pages/Integrations";
+import IntegrationDetail from "./pages/IntegrationDetail";
+import ROICalculator from "./pages/ROICalculator";
+import LocalSEOPage from "./pages/LocalSEOPage";
+import FAQ from "./pages/FAQ";
+
+function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Navigation />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+}
+
+function Router() {
+  return (
+    <Layout>
+      <Switch>
+        {/* Core Pages */}
+        <Route path="/" component={Home} />
+        <Route path="/services" component={Services} />
+        <Route path="/services/:slug" component={ServiceDetail} />
+        <Route path="/industries" component={Industries} />
+        <Route path="/industries/:slug" component={IndustryDetail} />
+        <Route path="/locations" component={Locations} />
+        <Route path="/locations/:slug" component={LocationDetail} />
+        <Route path="/resources" component={Resources} />
+        <Route path="/case-studies" component={CaseStudies} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/faq" component={FAQ} />
+
+        {/* SEO/AEO Expansion Pages */}
+        <Route path="/knowledge" component={KnowledgeBase} />
+        <Route path="/knowledge/:slug" component={KnowledgeArticle} />
+        <Route path="/playbooks" component={Playbooks} />
+        <Route path="/playbooks/:slug" component={PlaybookDetail} />
+        <Route path="/glossary" component={Glossary} />
+        <Route path="/before-after" component={BeforeAfter} />
+        <Route path="/benchmarks" component={Benchmarks} />
+        <Route path="/governance" component={Governance} />
+        <Route path="/templates" component={WorkflowTemplates} />
+        <Route path="/operator-insights" component={OperatorInsights} />
+        <Route path="/operator-insights/:slug" component={OperatorInsightArticle} />
+        <Route path="/integrations" component={Integrations} />
+        <Route path="/integrations/:slug" component={IntegrationDetail} />
+        <Route path="/automation-roi-calculator" component={ROICalculator} />
+
+        {/* Local SEO Matrix */}
+        <Route path="/ai-automation/:city" component={LocalSEOPage} />
+        <Route path="/ai-automation/:city/:industry" component={LocalSEOPage} />
+
+        {/* Fallback */}
+        <Route path="/404" component={NotFound} />
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
+  );
+}
+
+function App() {
+  return (
+    <ErrorBoundary>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
+
+export default App;
