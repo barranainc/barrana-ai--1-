@@ -645,7 +645,7 @@ export default function Home() {
           <div style={{
             background: OFFWHITE,
             borderRadius: "0.875rem",
-            padding: "2rem 2.5rem 2.5rem",
+            padding: "1.5rem 1.75rem 1.75rem",
             border: `1px solid ${BORDER}`,
           }}>
             <WorkflowDiagram

@@ -55,7 +55,7 @@ export default function HeroSystemVisual() {
       {/* Team layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "1rem 1rem",
+        padding: "0.75rem 1rem",
         background: "rgba(22,163,74,0.06)",
         borderRadius: "0.75rem",
         border: "1px solid rgba(22,163,74,0.2)",
@@ -82,9 +82,9 @@ export default function HeroSystemVisual() {
         ))}
       </div>
 
-      {/* Connector lines top — taller so diagonals are gentle, not steep */}
+      {/* Connector lines top */}
       <div style={{
-        height: "2.25rem", position: "relative",
+        height: "1.5rem", position: "relative",
         opacity: phase >= 4 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
@@ -102,7 +102,7 @@ export default function HeroSystemVisual() {
       {/* Automation layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.875rem 1rem",
+        padding: "0.625rem 0.875rem",
         background: "rgba(40,56,145,0.08)",
         borderRadius: "0.75rem",
         border: "1.5px solid rgba(40,56,145,0.25)",
@@ -132,7 +132,7 @@ export default function HeroSystemVisual() {
 
       {/* Connector lines bottom */}
       <div style={{
-        height: "2.25rem", position: "relative",
+        height: "1.5rem", position: "relative",
         opacity: phase >= 2 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
@@ -150,7 +150,7 @@ export default function HeroSystemVisual() {
       {/* Tools layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "1rem 1rem",
+        padding: "0.75rem 1rem",
         background: "rgba(40,56,145,0.03)",
         borderRadius: "0.75rem",
         border: "1px solid var(--b-border)",
@@ -177,7 +177,7 @@ export default function HeroSystemVisual() {
         ))}
       </div>
 
-      <div style={{ textAlign: "center", fontSize: "0.6875rem", color: "var(--b-grey)", marginTop: "0.875rem", opacity: 0.6 }}>
+      <div style={{ textAlign: "center", fontSize: "0.6875rem", color: "var(--b-grey)", marginTop: "0.625rem", opacity: 0.6 }}>
         Your tools stay the same. We automate the coordination layer between them.
       </div>
     </div>

@@ -55,9 +55,18 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
 
   return (
     <div ref={containerRef}>
-      {!isMobile ? (
-        /* Desktop: horizontal chip flow */
-        <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "4px" }}>
+      {/* Desktop: scrollable horizontal chip flow — never wraps */}
+      <div
+        className={isMobile ? "hidden" : "block"}
+        style={{
+          overflowX: "auto",
+          overflowY: "visible",
+          paddingBottom: "4px", // prevent clipping box-shadow on chips
+          /* hide scrollbar visually but keep scroll functional */
+          scrollbarWidth: "none",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "4px", width: "max-content" }}>
           {steps.map((step, i) => {
             const s = typeStyle[step.type];
             return (
@@ -67,31 +76,32 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
                     background: s.bg,
                     border: `1.5px solid ${s.border}`,
                     borderRadius: "0.5rem",
-                    padding: "0.5rem 1rem",
+                    padding: "0.45rem 0.875rem",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
-                    gap: "0.2rem",
+                    gap: "0.15rem",
                     opacity: show ? 1 : 0,
                     transform: show ? "scale(1)" : "scale(0.85)",
                     transition: reduced ? "none" : `opacity 0.35s ease ${i * 0.12}s, transform 0.35s cubic-bezier(0.34,1.56,0.64,1) ${i * 0.12}s`,
-                    minWidth: "96px",
+                    minWidth: "88px",
                     textAlign: "center",
+                    flexShrink: 0,
                   }}
                 >
-                  <span style={{ fontSize: "0.625rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: s.text, opacity: 0.75 }}>
+                  <span style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.07em", textTransform: "uppercase", color: s.text, opacity: 0.75 }}>
                     {s.label}
                   </span>
-                  <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--b-dark)", lineHeight: 1.3 }}>
+                  <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--b-dark)", lineHeight: 1.3 }}>
                     {step.label}
                   </span>
                 </div>
                 {i < steps.length - 1 && (
                   <ArrowRight
-                    size={14}
+                    size={13}
                     style={{
                       color: "var(--b-border)",
-                      margin: "0 3px",
+                      margin: "0 2px",
                       flexShrink: 0,
                       opacity: show ? 1 : 0,
                       transition: reduced ? "none" : `opacity 0.3s ease ${0.1 + i * 0.12}s`,
@@ -102,37 +112,40 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
             );
           })}
         </div>
-      ) : (
-        /* Mobile: compact vertical list */
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-          {steps.map((step, i) => {
-            const s = typeStyle[step.type];
-            return (
-              <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
-                <div style={{
-                  width: "6px", height: "6px", borderRadius: "50%",
-                  background: s.border, flexShrink: 0,
-                }} />
-                <div style={{
-                  background: s.bg,
-                  border: `1px solid ${s.border}`,
-                  borderRadius: "0.4rem",
-                  padding: "0.35rem 0.75rem",
-                  flex: 1,
-                  display: "flex",
-                  gap: "0.5rem",
-                  alignItems: "center",
-                }}>
-                  <span style={{ fontSize: "0.6rem", fontWeight: 700, color: s.text, textTransform: "uppercase", letterSpacing: "0.06em", flexShrink: 0 }}>
-                    {s.label}
-                  </span>
-                  <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "var(--b-dark)" }}>{step.label}</span>
-                </div>
+      </div>
+
+      {/* Mobile: compact vertical list */}
+      <div
+        className={isMobile ? "block" : "hidden"}
+        style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}
+      >
+        {steps.map((step, i) => {
+          const s = typeStyle[step.type];
+          return (
+            <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <div style={{
+                width: "6px", height: "6px", borderRadius: "50%",
+                background: s.border, flexShrink: 0,
+              }} />
+              <div style={{
+                background: s.bg,
+                border: `1px solid ${s.border}`,
+                borderRadius: "0.375rem",
+                padding: "0.3rem 0.625rem",
+                flex: 1,
+                display: "flex",
+                gap: "0.5rem",
+                alignItems: "center",
+              }}>
+                <span style={{ fontSize: "0.575rem", fontWeight: 700, color: s.text, textTransform: "uppercase", letterSpacing: "0.06em", flexShrink: 0 }}>
+                  {s.label}
+                </span>
+                <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--b-dark)" }}>{step.label}</span>
               </div>
-            );
-          })}
-        </div>
-      )}
+            </div>
+          );
+        })}
+      </div>
 
       {/* Result badge */}
       {resultBadge && (
