@@ -645,7 +645,7 @@ export default function Home() {
           <div style={{
             background: OFFWHITE,
             borderRadius: "0.875rem",
-            padding: "2rem",
+            padding: "2rem 2.5rem 2.5rem",
             border: `1px solid ${BORDER}`,
           }}>
             <WorkflowDiagram
@@ -653,15 +653,17 @@ export default function Home() {
               steps={workflowTabs[activeTab].steps}
               resultBadge={workflowTabs[activeTab].badge}
             />
-            <p style={{
-              marginTop: "1.5rem",
-              fontSize: "0.9375rem",
-              color: GREY,
-              lineHeight: 1.7,
-              maxWidth: "72ch",
-            }}>
-              {workflowTabs[activeTab].description}
-            </p>
+            <div style={{ marginTop: "1.75rem", paddingTop: "1.5rem", borderTop: `1px solid ${BORDER}` }}>
+              <p style={{
+                fontSize: "0.9375rem",
+                color: GREY,
+                lineHeight: 1.7,
+                maxWidth: "72ch",
+                margin: 0,
+              }}>
+                {workflowTabs[activeTab].description}
+              </p>
+            </div>
           </div>
 
           <Reveal delay={0.1}>
