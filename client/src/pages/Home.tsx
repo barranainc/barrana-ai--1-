@@ -246,16 +246,26 @@ const localBusinessSchema = {
   description:
     "AI automation consultancy for small businesses. We build systems that respond to leads in 90 seconds, recover 15+ staff hours per week, and increase operational capacity by 30%.",
   url: "https://barrana.ai",
+  telephone: "+1-647-367-6771",
+  email: "help@barrana.ai",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "50 Corstate Avenue, Unit 01",
     addressLocality: "Vaughan",
     addressRegion: "Ontario",
+    postalCode: "L4K 4X2",
     addressCountry: "CA",
   },
   areaServed: [
     "Toronto", "Vaughan", "Markham", "Richmond Hill", "Mississauga", "North York",
   ],
   serviceType: "AI Automation Consulting",
+  sameAs: [
+    "https://linkedin.com/company/barrana-ai",
+    "https://instagram.com/barrana.ai",
+    "https://tiktok.com/@barrana.ai",
+    "https://facebook.com/barranaai",
+  ],
 };
 
 // ─── Component ────────────────────────────────────────────────────────
