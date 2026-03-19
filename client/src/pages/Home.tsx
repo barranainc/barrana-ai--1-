@@ -246,16 +246,26 @@ const localBusinessSchema = {
   description:
     "AI automation consultancy for small businesses. We build systems that respond to leads in 90 seconds, recover 15+ staff hours per week, and increase operational capacity by 30%.",
   url: "https://barrana.ai",
+  telephone: "+1-647-367-6771",
+  email: "help@barrana.ai",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "50 Corstate Avenue, Unit 01",
     addressLocality: "Vaughan",
     addressRegion: "Ontario",
+    postalCode: "L4K 4X2",
     addressCountry: "CA",
   },
   areaServed: [
     "Toronto", "Vaughan", "Markham", "Richmond Hill", "Mississauga", "North York",
   ],
   serviceType: "AI Automation Consulting",
+  sameAs: [
+    "https://linkedin.com/company/barrana-ai",
+    "https://instagram.com/barrana.ai",
+    "https://tiktok.com/@barrana.ai",
+    "https://facebook.com/barranaai",
+  ],
 };
 
 // ─── Component ────────────────────────────────────────────────────────
@@ -645,7 +655,7 @@ export default function Home() {
           <div style={{
             background: OFFWHITE,
             borderRadius: "0.875rem",
-            padding: "2rem",
+            padding: "1.5rem 1.75rem 1.75rem",
             border: `1px solid ${BORDER}`,
           }}>
             <WorkflowDiagram
@@ -653,15 +663,17 @@ export default function Home() {
               steps={workflowTabs[activeTab].steps}
               resultBadge={workflowTabs[activeTab].badge}
             />
-            <p style={{
-              marginTop: "1.5rem",
-              fontSize: "0.9375rem",
-              color: GREY,
-              lineHeight: 1.7,
-              maxWidth: "72ch",
-            }}>
-              {workflowTabs[activeTab].description}
-            </p>
+            <div style={{ marginTop: "1.75rem", paddingTop: "1.5rem", borderTop: `1px solid ${BORDER}` }}>
+              <p style={{
+                fontSize: "0.9375rem",
+                color: GREY,
+                lineHeight: 1.7,
+                maxWidth: "72ch",
+                margin: 0,
+              }}>
+                {workflowTabs[activeTab].description}
+              </p>
+            </div>
           </div>
 
           <Reveal delay={0.1}>

@@ -55,26 +55,25 @@ export default function HeroSystemVisual() {
       {/* Team layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.875rem 0.5rem",
+        padding: "0.75rem 1rem",
         background: "rgba(22,163,74,0.06)",
         borderRadius: "0.75rem",
         border: "1px solid rgba(22,163,74,0.2)",
-        marginBottom: "0.5rem",
         opacity: phase >= 5 ? 1 : 0,
-        transform: phase >= 5 ? "translateY(0)" : "translateY(-12px)",
+        transform: phase >= 5 ? "translateY(0)" : "translateY(-10px)",
         transition: reduced ? "none" : "opacity 0.5s ease, transform 0.5s ease",
       }}>
-        <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--b-success)", marginRight: "0.5rem" }}>
+        <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-success)", marginRight: "0.75rem", whiteSpace: "nowrap" }}>
           Your Team
         </div>
         {TEAM.map(({ label, icon }) => (
-          <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.25rem" }}>
+          <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.3rem" }}>
             <div style={{
-              width: "2rem", height: "2rem", borderRadius: "50%",
+              width: "2.25rem", height: "2.25rem", borderRadius: "50%",
               background: "rgba(22,163,74,0.12)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--b-success)" strokeWidth="1.75" style={{ width: "1rem", height: "1rem" }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--b-success)" strokeWidth="1.75" style={{ width: "1.1rem", height: "1.1rem" }}>
                 <path d={icon} strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
@@ -85,16 +84,16 @@ export default function HeroSystemVisual() {
 
       {/* Connector lines top */}
       <div style={{
-        height: "1.5rem", position: "relative", overflow: "hidden",
+        height: "1.5rem", position: "relative",
         opacity: phase >= 4 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
-        <svg width="100%" height="100%" viewBox="0 0 400 24" preserveAspectRatio="none">
-          {[80, 160, 240, 320].map((x, i) => (
-            <line key={i} x1={x} y1="24" x2={200} y2="0"
-              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.25"
-              strokeDasharray="30" strokeDashoffset={phase >= 4 ? "0" : "30"}
-              style={{ transition: reduced ? "none" : `stroke-dashoffset 0.5s ease ${i * 0.08}s` }}
+        <svg width="100%" height="100%" viewBox="0 0 400 36" preserveAspectRatio="none">
+          {[70, 155, 245, 330].map((x, i) => (
+            <line key={i} x1={x} y1="36" x2={200} y2="0"
+              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.2"
+              strokeDasharray="40" strokeDashoffset={phase >= 4 ? "0" : "40"}
+              style={{ transition: reduced ? "none" : `stroke-dashoffset 0.55s ease ${i * 0.07}s` }}
             />
           ))}
         </svg>
@@ -103,27 +102,26 @@ export default function HeroSystemVisual() {
       {/* Automation layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "1rem 0.75rem",
+        padding: "0.625rem 0.875rem",
         background: "rgba(40,56,145,0.08)",
         borderRadius: "0.75rem",
-        border: "1.5px solid rgba(40,56,145,0.3)",
-        boxShadow: phase >= 3 ? "0 0 24px rgba(40,56,145,0.12)" : "none",
-        marginBottom: "0",
+        border: "1.5px solid rgba(40,56,145,0.25)",
+        boxShadow: phase >= 3 ? "0 0 20px rgba(40,56,145,0.1)" : "none",
         opacity: phase >= 3 ? 1 : 0,
         transform: phase >= 3 ? "scale(1)" : "scale(0.97)",
         transition: reduced ? "none" : "opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease",
       }}>
-        <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--b-navy)", marginRight: "0.25rem" }}>
+        <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-navy)", marginRight: "0.5rem", whiteSpace: "nowrap" }}>
           Automation
         </div>
         {AUTOMATION.map((label) => (
           <div key={label} style={{
-            padding: "0.3rem 0.5rem",
+            padding: "0.3rem 0.6rem",
             background: "white",
-            border: "1px solid rgba(40,56,145,0.2)",
+            border: "1px solid rgba(40,56,145,0.18)",
             borderRadius: "0.375rem",
-            fontSize: "0.65rem",
-            fontWeight: 700,
+            fontSize: "0.6875rem",
+            fontWeight: 600,
             color: "var(--b-navy)",
             whiteSpace: "nowrap",
           }}>
@@ -134,16 +132,16 @@ export default function HeroSystemVisual() {
 
       {/* Connector lines bottom */}
       <div style={{
-        height: "1.5rem", position: "relative", overflow: "hidden",
+        height: "1.5rem", position: "relative",
         opacity: phase >= 2 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
-        <svg width="100%" height="100%" viewBox="0 0 400 24" preserveAspectRatio="none">
-          {[80, 160, 240, 320].map((x, i) => (
-            <line key={i} x1={x} y1="0" x2={200} y2="24"
-              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.25"
-              strokeDasharray="30" strokeDashoffset={phase >= 2 ? "0" : "30"}
-              style={{ transition: reduced ? "none" : `stroke-dashoffset 0.5s ease ${i * 0.08}s` }}
+        <svg width="100%" height="100%" viewBox="0 0 400 36" preserveAspectRatio="none">
+          {[70, 155, 245, 330].map((x, i) => (
+            <line key={i} x1={x} y1="0" x2={200} y2="36"
+              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.2"
+              strokeDasharray="40" strokeDashoffset={phase >= 2 ? "0" : "40"}
+              style={{ transition: reduced ? "none" : `stroke-dashoffset 0.55s ease ${i * 0.07}s` }}
             />
           ))}
         </svg>
@@ -152,26 +150,25 @@ export default function HeroSystemVisual() {
       {/* Tools layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.875rem 0.5rem",
-        background: "rgba(40,56,145,0.04)",
+        padding: "0.75rem 1rem",
+        background: "rgba(40,56,145,0.03)",
         borderRadius: "0.75rem",
         border: "1px solid var(--b-border)",
-        marginTop: "0.5rem",
         opacity: phase >= 1 ? 1 : 0,
-        transform: phase >= 1 ? "translateY(0)" : "translateY(12px)",
+        transform: phase >= 1 ? "translateY(0)" : "translateY(10px)",
         transition: reduced ? "none" : "opacity 0.5s ease, transform 0.5s ease",
       }}>
-        <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--b-grey)", marginRight: "0.5rem" }}>
+        <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-grey)", marginRight: "0.75rem", whiteSpace: "nowrap" }}>
           Your Tools
         </div>
         {TOOLS.map(({ label, icon }) => (
-          <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.25rem" }}>
+          <div key={label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.3rem" }}>
             <div style={{
-              width: "2rem", height: "2rem", borderRadius: "0.4rem",
-              background: "rgba(40,56,145,0.08)",
+              width: "2.25rem", height: "2.25rem", borderRadius: "0.4rem",
+              background: "rgba(40,56,145,0.07)",
               display: "flex", alignItems: "center", justifyContent: "center",
             }}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="var(--b-navy)" strokeWidth="1.75" style={{ width: "1rem", height: "1rem" }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--b-navy)" strokeWidth="1.75" style={{ width: "1.1rem", height: "1.1rem" }}>
                 <path d={icon} strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
@@ -180,7 +177,7 @@ export default function HeroSystemVisual() {
         ))}
       </div>
 
-      <div style={{ textAlign: "center", fontSize: "0.6875rem", color: "var(--b-grey)", marginTop: "0.75rem", opacity: 0.7 }}>
+      <div style={{ textAlign: "center", fontSize: "0.6875rem", color: "var(--b-grey)", marginTop: "0.625rem", opacity: 0.6 }}>
         Your tools stay the same. We automate the coordination layer between them.
       </div>
     </div>
