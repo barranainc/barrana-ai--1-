@@ -71,6 +71,14 @@
   --b-border:   #E2E4ED;
   --b-dark:     #1A1A2E;  /* Very dark navy-tinted black for headings */
 
+  /* ─── Semantic utility colors (used in diagrams/before-after) ─── */
+  --b-success:  #16a34a;  /* After/improvement state */
+  --b-warning:  #dc2626;  /* Before/problem state */
+  --b-amber:    #d97706;  /* Trigger/attention */
+  --b-success-bg: #f0fdf4;
+  --b-warning-bg: #fef2f2;
+  --b-amber-bg:   #fffbeb;
+
   /* ─── Shadcn/Tailwind tokens ─── */
   --radius: 0.75rem;
   --background: oklch(1 0 0);
