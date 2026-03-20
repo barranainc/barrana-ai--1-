@@ -12,10 +12,17 @@ import { Menu, X, ChevronDown, Zap, Users, FileText, Phone, Settings, Building2,
 
 const serviceItems = [
   { label: "AI Agents", href: "/services/ai-agents", icon: Zap, desc: "Purpose-built agents for intake, follow-up, and reporting" },
-  { label: "Workflow Automation", href: "/services/workflow-automation", icon: Settings, desc: "Connect your tools through trigger-action logic" },
   { label: "AI Receptionist", href: "/services/ai-receptionist", icon: Phone, desc: "24/7 inbound call and message handling" },
   { label: "Lead Response Automation", href: "/services/lead-response-automation", icon: Users, desc: "Respond, qualify, and book leads in under 90 seconds" },
-  { label: "Operations Reporting", href: "/services/operations-reporting", icon: FileText, desc: "Invoicing, scheduling, reporting, and coordination" },
+  { label: "Client Intake Automation", href: "/services/client-intake-automation", icon: FileText, desc: "Onboard clients without manual data entry" },
+  { label: "Document Collection", href: "/services/document-collection", icon: FileText, desc: "Stop chasing documents — automate the whole process" },
+  { label: "Appointment Automation", href: "/services/appointment-automation", icon: Settings, desc: "Booked, confirmed, and reminded automatically" },
+  { label: "Invoice Automation", href: "/services/invoice-automation", icon: FileText, desc: "Invoices sent, payments tracked, follow-ups handled" },
+  { label: "Workflow Automation", href: "/services/workflow-automation", icon: Settings, desc: "Connect your tools through trigger-action logic" },
+  { label: "CRM Automation", href: "/services/crm-automation", icon: Users, desc: "Your CRM stays current with zero manual entry" },
+  { label: "Operations Reporting", href: "/services/operations-reporting", icon: FileText, desc: "Automated dashboards and performance reports" },
+  { label: "After-Hours Automation", href: "/services/after-hours-automation", icon: Phone, desc: "Capture and qualify leads while your team sleeps" },
+  { label: "Custom AI Systems", href: "/services/custom-ai-systems", icon: Zap, desc: "Your whole operation automated end-to-end" },
 ];
 
 const industryItems = [
@@ -160,7 +167,7 @@ export default function Navigation() {
           style={{ animation: "fade-up 0.15s ease" }}
         >
           <div className="container py-6">
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-4 gap-3">
               {serviceItems.map((svc) => {
                 const Icon = svc.icon;
                 return (
