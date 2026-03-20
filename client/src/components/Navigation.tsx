@@ -14,8 +14,8 @@ const serviceItems = [
   { label: "AI Agents", href: "/services/ai-agents", icon: Zap, desc: "Purpose-built agents for intake, follow-up, and reporting" },
   { label: "Workflow Automation", href: "/services/workflow-automation", icon: Settings, desc: "Connect your tools through trigger-action logic" },
   { label: "AI Receptionist", href: "/services/ai-receptionist", icon: Phone, desc: "24/7 inbound call and message handling" },
-  { label: "Lead Automation", href: "/services/lead-automation", icon: Users, desc: "Respond, qualify, and book leads in under 90 seconds" },
-  { label: "Operations Automation", href: "/services/operations-automation", icon: FileText, desc: "Invoicing, scheduling, reporting, and coordination" },
+  { label: "Lead Response Automation", href: "/services/lead-response-automation", icon: Users, desc: "Respond, qualify, and book leads in under 90 seconds" },
+  { label: "Operations Reporting", href: "/services/operations-reporting", icon: FileText, desc: "Invoicing, scheduling, reporting, and coordination" },
 ];
 
 const industryItems = [
