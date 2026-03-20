@@ -44,12 +44,12 @@ export default function PipelineDiagram({ steps, title }: PipelineDiagramProps) 
       {title && (
         <p className="text-xs text-gray-400 text-center mb-5 font-semibold uppercase tracking-widest">{title}</p>
       )}
-      <div className="flex items-start justify-between gap-2 overflow-x-auto pb-2">
+      <div className="flex items-start justify-between gap-1">
         {steps.map((step, i) => (
-          <div key={step.id} className="flex items-center gap-2 flex-shrink-0">
+          <div key={step.id} className="flex items-center gap-1 min-w-0 flex-1">
             {/* Step node */}
             <div
-              className="flex flex-col items-center"
+              className="flex flex-col items-center flex-1 min-w-0"
               style={{
                 opacity: visibleCount > i ? 1 : 0,
                 transform: visibleCount > i ? "translateY(0) scale(1)" : "translateY(12px) scale(0.85)",
@@ -58,22 +58,22 @@ export default function PipelineDiagram({ steps, title }: PipelineDiagramProps) 
             >
               {/* Icon box */}
               <div
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-3 relative"
+                className="w-11 h-11 rounded-xl flex items-center justify-center mb-2 relative flex-shrink-0"
                 style={{
                   backgroundColor: visibleCount > i ? step.color : "transparent",
                   border: `2px solid ${step.color}`,
-                  boxShadow: visibleCount > i ? `0 6px 20px ${step.color}30` : "none",
+                  boxShadow: visibleCount > i ? `0 4px 14px ${step.color}30` : "none",
                   transition: "background-color 0.35s ease, box-shadow 0.35s ease",
                 }}
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke={visibleCount > i ? "white" : step.color} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={visibleCount > i ? "white" : step.color} strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
                   <path d={step.icon} />
                 </svg>
                 {/* Step number badge */}
                 <div
-                  className="absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center text-white font-bold"
+                  className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full flex items-center justify-center text-white font-bold"
                   style={{
-                    fontSize: "9px",
+                    fontSize: "8px",
                     backgroundColor: step.color === "#7E0F4A" ? "#283891" : "#7E0F4A",
                     opacity: visibleCount > i ? 1 : 0,
                     transition: "opacity 0.3s ease",
@@ -82,21 +82,20 @@ export default function PipelineDiagram({ steps, title }: PipelineDiagramProps) 
                   {i + 1}
                 </div>
               </div>
-              <p className="text-xs font-bold text-gray-800 text-center leading-tight" style={{ maxWidth: 80 }}>{step.label}</p>
-              <p className="text-[10px] text-gray-400 text-center leading-tight mt-1" style={{ maxWidth: 80 }}>{step.sublabel}</p>
+              <p className="text-[10px] font-bold text-gray-800 text-center leading-tight w-full px-1">{step.label}</p>
+              <p className="text-[9px] text-gray-400 text-center leading-tight mt-0.5 w-full px-1">{step.sublabel}</p>
             </div>
 
             {/* Arrow connector */}
             {i < steps.length - 1 && (
               <div
-                className="flex flex-col items-center gap-1 pb-8"
+                className="flex items-center pb-7 flex-shrink-0"
                 style={{
                   opacity: visibleCount > i ? 1 : 0,
                   transition: `opacity 0.3s ease ${0.1 + i * 0.12}s`,
                 }}
               >
-                <div className="w-8 h-px" style={{ backgroundColor: "#283891", opacity: 0.35 }} />
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="#283891" opacity="0.4">
+                <svg width="8" height="8" viewBox="0 0 10 10" fill="#283891" opacity="0.4">
                   <path d="M0 0 L10 5 L0 10 Z" />
                 </svg>
               </div>
