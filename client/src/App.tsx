@@ -9,6 +9,18 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
+import LeadResponseAutomation from "./pages/services/LeadResponseAutomation";
+import ClientIntakeAutomation from "./pages/services/ClientIntakeAutomation";
+import AIReceptionist from "./pages/services/AIReceptionist";
+import DocumentCollectionAutomation from "./pages/services/DocumentCollectionAutomation";
+import AppointmentAutomation from "./pages/services/AppointmentAutomation";
+import InvoiceAutomation from "./pages/services/InvoiceAutomation";
+import WorkflowAutomation from "./pages/services/WorkflowAutomation";
+import CRMAutomation from "./pages/services/CRMAutomation";
+import OperationsReportingAutomation from "./pages/services/OperationsReportingAutomation";
+import AfterHoursAutomation from "./pages/services/AfterHoursAutomation";
+import AIAgents from "./pages/services/AIAgents";
+import CustomAISystems from "./pages/services/CustomAISystems";
 import Industries from "./pages/Industries";
 import IndustryDetail from "./pages/IndustryDetail";
 import Locations from "./pages/Locations";
@@ -53,6 +65,18 @@ function Router() {
         {/* Core Pages */}
         <Route path="/" component={Home} />
         <Route path="/services" component={Services} />
+        <Route path="/services/lead-response-automation" component={LeadResponseAutomation} />
+        <Route path="/services/client-intake-automation" component={ClientIntakeAutomation} />
+        <Route path="/services/ai-receptionist" component={AIReceptionist} />
+        <Route path="/services/document-collection" component={DocumentCollectionAutomation} />
+        <Route path="/services/appointment-automation" component={AppointmentAutomation} />
+        <Route path="/services/invoice-automation" component={InvoiceAutomation} />
+        <Route path="/services/workflow-automation" component={WorkflowAutomation} />
+        <Route path="/services/crm-automation" component={CRMAutomation} />
+        <Route path="/services/operations-reporting" component={OperationsReportingAutomation} />
+        <Route path="/services/after-hours-automation" component={AfterHoursAutomation} />
+        <Route path="/services/ai-agents" component={AIAgents} />
+        <Route path="/services/custom-ai-systems" component={CustomAISystems} />
         <Route path="/services/:slug" component={ServiceDetail} />
         <Route path="/industries" component={Industries} />
         <Route path="/industries/:slug" component={IndustryDetail} />
