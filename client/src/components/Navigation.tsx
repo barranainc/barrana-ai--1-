@@ -64,8 +64,6 @@ export default function Navigation() {
     : "bg-white border-b border-gray-100";
 
   const textColor = "text-gray-700";
-  const logoColor = "#283891";
-  const logoDotColor = "#7E0F4A";
 
   return (
     <nav
@@ -77,22 +75,24 @@ export default function Navigation() {
       <div className="container">
         <div className="flex items-center justify-between h-16 lg:h-[70px]">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 group">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:scale-105"
-              style={{ backgroundColor: scrolled || !isDarkHeroPage ? "#283891" : "rgba(255,255,255,0.15)" }}
-            >
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M3 14L7 4L11 10L13 7L15 14H3Z" fill="white" opacity="0.95"/>
-                <circle cx="13.5" cy="6" r="1.8" fill="#7E0F4A"/>
-              </svg>
-            </div>
-            <span
-              className="font-bold text-xl tracking-tight transition-colors duration-300"
-              style={{ color: logoColor }}
-            >
-              Barrana<span style={{ color: logoDotColor }}>.ai</span>
-            </span>
+          <Link
+            href="/"
+            className="flex items-center flex-shrink-0 group transition-opacity duration-200 hover:opacity-85"
+            aria-label="Barrana.ai — Home"
+          >
+            <img
+              src="/barrana-logo.png"
+              alt="Barrana.ai logo"
+              height={38}
+              style={{
+                height: "38px",
+                width: "auto",
+                display: "block",
+                /* slight scale on hover via the group */
+                transition: "transform 0.2s ease",
+              }}
+              className="group-hover:scale-[1.03]"
+            />
           </Link>
 
           {/* Desktop Navigation */}

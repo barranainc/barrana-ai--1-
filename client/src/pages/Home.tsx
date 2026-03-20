@@ -292,8 +292,8 @@ export default function Home() {
         <div className="container">
           <div
             ref={heroReveal.ref}
-            className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-center"
-            style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
+            className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start"
+            style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
           >
             {/* Left: copy */}
             <div>
@@ -392,10 +392,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: system visual */}
+            {/* Right: system visual — sticky card so it sits snug against the headline */}
             <div style={{
+              position: "sticky",
+              top: "7rem",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.8s ease 0.5s",
+              background: "rgba(255,255,255,0.72)",
+              backdropFilter: "blur(8px)",
+              border: "1px solid rgba(40,56,145,0.1)",
+              borderRadius: "1.25rem",
+              padding: "1.25rem 1.25rem 1rem",
+              boxShadow: "0 4px 24px rgba(40,56,145,0.07)",
             }}>
               <HeroSystemVisual />
             </div>
