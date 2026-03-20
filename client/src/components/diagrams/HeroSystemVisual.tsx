@@ -55,7 +55,7 @@ export default function HeroSystemVisual() {
       {/* Team layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.75rem 1rem",
+        padding: "0.625rem 0.875rem",
         background: "rgba(22,163,74,0.06)",
         borderRadius: "0.75rem",
         border: "1px solid rgba(22,163,74,0.2)",
@@ -84,7 +84,7 @@ export default function HeroSystemVisual() {
 
       {/* Connector lines top */}
       <div style={{
-        height: "1.5rem", position: "relative",
+        height: "1rem", position: "relative",
         opacity: phase >= 4 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
@@ -132,7 +132,7 @@ export default function HeroSystemVisual() {
 
       {/* Connector lines bottom */}
       <div style={{
-        height: "1.5rem", position: "relative",
+        height: "1rem", position: "relative",
         opacity: phase >= 2 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
       }}>
@@ -150,7 +150,7 @@ export default function HeroSystemVisual() {
       {/* Tools layer */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.75rem 1rem",
+        padding: "0.625rem 0.875rem",
         background: "rgba(40,56,145,0.03)",
         borderRadius: "0.75rem",
         border: "1px solid var(--b-border)",

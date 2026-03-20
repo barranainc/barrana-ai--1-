@@ -57,12 +57,11 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
     <div ref={containerRef}>
       {/* Desktop: scrollable horizontal chip flow — never wraps */}
       <div
-        className={isMobile ? "hidden" : "block"}
         style={{
+          display: isMobile ? "none" : "block",
           overflowX: "auto",
           overflowY: "visible",
           paddingBottom: "4px", // prevent clipping box-shadow on chips
-          /* hide scrollbar visually but keep scroll functional */
           scrollbarWidth: "none",
         }}
       >
@@ -116,8 +115,7 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
 
       {/* Mobile: compact vertical list */}
       <div
-        className={isMobile ? "block" : "hidden"}
-        style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}
+        style={{ display: isMobile ? "flex" : "none", flexDirection: "column", gap: "0.4rem" }}
       >
         {steps.map((step, i) => {
           const s = typeStyle[step.type];
