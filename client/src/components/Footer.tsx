@@ -53,16 +53,20 @@ export default function Footer() {
 
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#283891" }}>
-                <svg width="20" height="20" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 14L7 4L11 10L13 7L15 14H3Z" fill="white" opacity="0.95"/>
-                  <circle cx="13.5" cy="6" r="1.8" fill="#7E0F4A"/>
-                </svg>
-              </div>
-              <span className="font-bold text-xl tracking-tight">
-                Barrana<span style={{ color: "#7E0F4A" }}>.ai</span>
-              </span>
+            {/* Logo — white version on dark navy footer */}
+            <div className="mb-5">
+              <img
+                src="/barrana-logo-white.png"
+                alt="Barrana.ai"
+                style={{
+                  height: "44px",
+                  width: "auto",
+                  display: "block",
+                  filter: "brightness(0) invert(1)",   /* forces pure white */
+                  opacity: 0.92,
+                }}
+              />
+              <span className="sr-only">Barrana.ai</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-xs">
               AI automation systems for small and medium businesses in Toronto and the GTA. We build the operational backbone that lets your team grow without burning out.
