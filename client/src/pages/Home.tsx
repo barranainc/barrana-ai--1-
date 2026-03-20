@@ -496,18 +496,16 @@ export default function Home() {
                 key={p.title}
                 className="bg-white p-7 group transition-colors"
                 style={{
-                  borderLeft: "3px solid transparent",
+                  borderLeft: "4px solid var(--b-warning)",
                   borderTopLeftRadius: i === 0 ? "0.75rem" : 0,
                   opacity: problemsReveal.visible ? 1 : 0,
                   transform: problemsReveal.visible ? "translateY(0)" : "translateY(20px)",
                   transition: `opacity 0.5s ease ${0.1 + i * 0.07}s, transform 0.5s ease ${0.1 + i * 0.07}s`,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = "var(--b-warning)";
                   (e.currentTarget as HTMLDivElement).style.background = "var(--b-warning-bg)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.borderLeftColor = "transparent";
                   (e.currentTarget as HTMLDivElement).style.background = "white";
                 }}
               >
