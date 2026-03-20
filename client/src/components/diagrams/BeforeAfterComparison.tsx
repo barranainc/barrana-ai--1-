@@ -47,7 +47,7 @@ export default function BeforeAfterComparison() {
           background: "var(--b-warning-bg)",
           borderLeft: "4px solid var(--b-warning)",
           borderRadius: "0 0.75rem 0.75rem 0",
-          padding: "1.75rem",
+          padding: "2rem",
           opacity: show ? 1 : 0,
           transform: show ? "translateX(0)" : "translateX(-40px)",
           transition: reduced ? "none" : "opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1)",
@@ -63,12 +63,12 @@ export default function BeforeAfterComparison() {
                 <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--b-dark)" }}>{m.label}</span>
                 <span style={{ fontSize: "0.8125rem", fontWeight: 700, color: "var(--b-warning)" }}>{m.before}</span>
               </div>
-              <div style={{ height: "8px", background: "rgba(220,38,38,0.12)", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ height: "16px", background: "rgba(220,38,38,0.15)", borderRadius: "6px", overflow: "hidden" }}>
                 <div
                   style={{
                     height: "100%",
                     background: "var(--b-warning)",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     width: show ? `${m.beforeW}%` : "0%",
                     transition: reduced ? "none" : `width 0.8s cubic-bezier(0.16,1,0.3,1) ${0.1 + i * 0.1}s`,
                   }}
@@ -85,7 +85,7 @@ export default function BeforeAfterComparison() {
           background: "var(--b-success-bg)",
           borderLeft: "4px solid var(--b-success)",
           borderRadius: "0 0.75rem 0.75rem 0",
-          padding: "1.75rem",
+          padding: "2rem",
           opacity: show ? 1 : 0,
           transform: show ? "translateX(0)" : "translateX(40px)",
           transition: reduced ? "none" : "opacity 0.7s ease 0.15s, transform 0.7s cubic-bezier(0.16,1,0.3,1) 0.15s",
@@ -101,12 +101,12 @@ export default function BeforeAfterComparison() {
                 <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--b-dark)" }}>{m.label}</span>
                 <span style={{ fontSize: "0.8125rem", fontWeight: 700, color: "var(--b-success)" }}>{m.after}</span>
               </div>
-              <div style={{ height: "8px", background: "rgba(22,163,74,0.12)", borderRadius: "4px", overflow: "hidden" }}>
+              <div style={{ height: "16px", background: "rgba(22,163,74,0.15)", borderRadius: "6px", overflow: "hidden" }}>
                 <div
                   style={{
                     height: "100%",
                     background: "var(--b-success)",
-                    borderRadius: "4px",
+                    borderRadius: "6px",
                     width: show ? `${m.afterW}%` : "0%",
                     transition: reduced ? "none" : `width 0.8s cubic-bezier(0.16,1,0.3,1) ${0.3 + i * 0.1}s`,
                   }}

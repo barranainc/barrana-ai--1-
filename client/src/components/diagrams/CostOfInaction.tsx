@@ -43,6 +43,25 @@ const costs = [
   },
 ];
 
+function CountUp({ target, show, reduced }: { target: number; show: boolean; reduced: boolean }) {
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (!show || reduced) { setVal(target); return; }
+    let start: number | null = null;
+    const duration = 2200;
+    const raf = (ts: number) => {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setVal(Math.round(eased * target));
+      if (p < 1) requestAnimationFrame(raf);
+      else setVal(target);
+    };
+    requestAnimationFrame(raf);
+  }, [show, target, reduced]);
+  return <>{val.toLocaleString()}</>;
+}
+
 export default function CostOfInaction() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -88,7 +107,11 @@ export default function CostOfInaction() {
               </div>
             </div>
             <div style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, letterSpacing: "-0.03em", color: "var(--b-warning)", lineHeight: 1, marginBottom: "0.25rem" }}>
-              {prefix}{figure}{period}
+              {figure === "19,500" ? (
+                <>$<CountUp target={19500} show={show} reduced={reduced} />/year</>
+              ) : (
+                <>{prefix}{figure}{period}</>
+              )}
             </div>
             <div style={{ fontWeight: 700, fontSize: "0.9375rem", color: "var(--b-dark)", marginBottom: "0.5rem" }}>{label}</div>
             <div style={{ fontSize: "0.8125rem", color: "var(--b-grey)", lineHeight: 1.6 }}>{desc}</div>
