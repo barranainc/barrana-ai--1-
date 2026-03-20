@@ -114,9 +114,10 @@ export default function Footer() {
               {[
                 { label: "AI Agents", href: "/services/ai-agents" },
                 { label: "Workflow Automation", href: "/services/workflow-automation" },
-                { label: "Lead Automation", href: "/services/lead-automation" },
-                { label: "Operations Automation", href: "/services/operations-automation" },
+                { label: "Lead Response Automation", href: "/services/lead-response-automation" },
+                { label: "Operations Reporting", href: "/services/operations-reporting" },
                 { label: "AI Receptionist", href: "/services/ai-receptionist" },
+                { label: "Client Intake Automation", href: "/services/client-intake-automation" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
