@@ -86,6 +86,21 @@ import AutomateClientIntake from "./pages/resources/AutomateClientIntake";
 import AutomationROI from "./pages/resources/AutomationROI";
 import ProfessionalServicesGuide from "./pages/resources/ProfessionalServicesGuide";
 import IntegrationPriorityMatrix from "./pages/resources/IntegrationPriorityMatrix";
+import HumanInTheLoop from "./pages/HumanInTheLoop";
+import AiAutomationIndustries from "./pages/AiAutomationIndustries";
+import AiAutomationVaughan from "./pages/AiAutomationVaughan";
+import AiAdoptionSmallBusiness from "./pages/AiAdoptionSmallBusiness";
+import WorkflowAutomationSMB from "./pages/WorkflowAutomationSMB";
+import AiReceptionistPage from "./pages/AiReceptionistPage";
+import WhatToAutomateFirst from "./pages/insights/WhatToAutomateFirst";
+import AutomationReadiness from "./pages/insights/AutomationReadiness";
+import BuildVsBuy from "./pages/insights/BuildVsBuy";
+import WhenAiIsNotTheAnswer from "./pages/insights/WhenAiIsNotTheAnswer";
+import AutomationVsDelegation from "./pages/insights/AutomationVsDelegation";
+import LeadIntakeWorkflow from "./pages/workflows/LeadIntakeWorkflow";
+import AppointmentBookingWorkflow from "./pages/workflows/AppointmentBookingWorkflow";
+import ClientOnboardingWorkflow from "./pages/workflows/ClientOnboardingWorkflow";
+import DocumentCollectionWorkflow from "./pages/workflows/DocumentCollectionWorkflow";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -187,6 +202,29 @@ function Router() {
         <Route path="/integrations" component={Integrations} />
         <Route path="/integrations/:slug" component={IntegrationDetail} />
         <Route path="/automation-roi-calculator" component={ROICalculator} />
+
+        {/* Foundation Content Pages */}
+        <Route path="/human-in-the-loop-ai" component={HumanInTheLoop} />
+        <Route path="/ai-automation-industries" component={AiAutomationIndustries} />
+        <Route path="/ai-automation-vaughan" component={AiAutomationVaughan} />
+
+        {/* Pillar Pages */}
+        <Route path="/ai-adoption-small-business" component={AiAdoptionSmallBusiness} />
+        <Route path="/workflow-automation-smb" component={WorkflowAutomationSMB} />
+        <Route path="/ai-receptionist" component={AiReceptionistPage} />
+
+        {/* Insights Pages */}
+        <Route path="/insights/what-to-automate-first" component={WhatToAutomateFirst} />
+        <Route path="/insights/automation-readiness" component={AutomationReadiness} />
+        <Route path="/insights/build-vs-buy" component={BuildVsBuy} />
+        <Route path="/insights/when-ai-is-not-the-answer" component={WhenAiIsNotTheAnswer} />
+        <Route path="/insights/automation-vs-delegation" component={AutomationVsDelegation} />
+
+        {/* Workflow Pages */}
+        <Route path="/workflows/lead-intake" component={LeadIntakeWorkflow} />
+        <Route path="/workflows/appointment-booking" component={AppointmentBookingWorkflow} />
+        <Route path="/workflows/client-onboarding" component={ClientOnboardingWorkflow} />
+        <Route path="/workflows/document-collection" component={DocumentCollectionWorkflow} />
 
         {/* Local SEO Matrix */}
         <Route path="/ai-automation/:city" component={LocalSEOPage} />
