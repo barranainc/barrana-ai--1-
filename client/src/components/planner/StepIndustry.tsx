@@ -54,6 +54,7 @@ const INDUSTRY_EMOJI: Record<string, string> = {
   insurance: "🛡️",
   "property-management": "🏢",
   ecommerce: "🛒",
+  solopreneur: "🎯",
   "professional-other": "💼",
   other: "➕",
 };
@@ -72,6 +73,7 @@ const INDUSTRY_TEASER: Record<string, string> = {
   insurance: "40% of quotes get zero follow-up. Every lapsed renewal is lost.",
   "property-management": "65 units at capacity? Automation gets you to 120 with the same team.",
   ecommerce: "Order follow-up, returns, support tickets. Volume problems.",
+  solopreneur: "Every admin minute is a billable minute lost. Let's fix that.",
   "professional-other": "If your business runs on clients and follow-ups.",
   other: "Tell us what you do.",
 };

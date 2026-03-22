@@ -74,6 +74,12 @@ export const INDUSTRIES: IndustryDefinition[] = [
     preweightedWorkflows: ['customer-support', 'invoicing-payments', 'follow-up'],
   },
   {
+    id: 'solopreneur',
+    label: 'Solopreneur / Coach / Consultant',
+    terms: { client: 'client', enquiry: 'enquiry', appointment: 'session', file: 'client record', intake: 'discovery call', document: 'intake forms and resources', staff: 'you', tool: 'Calendly', compliance: 'PIPEDA requirements' },
+    preweightedWorkflows: ['inbound-enquiries', 'appointment-booking', 'follow-up', 'client-onboarding', 'invoicing-payments'],
+  },
+  {
     id: 'professional-other',
     label: 'Professional Services (Other)',
     terms: { client: 'client', enquiry: 'enquiry', appointment: 'meeting', file: 'file', intake: 'client intake', document: 'client documents', staff: 'team member', tool: 'CRM', compliance: 'industry regulations' },
