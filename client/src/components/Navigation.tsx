@@ -8,7 +8,7 @@
  */
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Zap, Users, FileText, Phone, Settings, Building2, Scale, Hammer, Stethoscope, Home, Briefcase } from "lucide-react";
+import { Menu, X, ChevronDown, Zap, Users, FileText, Phone, Settings, Building2, Scale, Hammer, Stethoscope, Home, Briefcase, Car, Leaf, Dog, GraduationCap, Wrench, HeartPulse, BarChart3 } from "lucide-react";
 
 const serviceItems = [
   { label: "AI Agents", href: "/services/ai-agents", icon: Zap, desc: "Purpose-built agents for intake, follow-up, and reporting" },
@@ -29,10 +29,23 @@ const industryItems = [
   { label: "Immigration Consultants", href: "/industries/immigration-consultants", icon: FileText },
   { label: "Accounting Firms", href: "/industries/accounting-firms", icon: Briefcase },
   { label: "Law Firms", href: "/industries/law-firms", icon: Scale },
-  { label: "Contractors", href: "/industries/contractors", icon: Hammer },
+  { label: "Contractors & Trades", href: "/industries/contractors", icon: Hammer },
   { label: "Physiotherapy Clinics", href: "/industries/physiotherapy-clinics", icon: Stethoscope },
   { label: "Real Estate Teams", href: "/industries/real-estate-teams", icon: Home },
   { label: "Service Businesses", href: "/industries/service-businesses", icon: Building2 },
+  { label: "Dental Offices", href: "/industries/dental-offices", icon: HeartPulse },
+  { label: "Insurance Brokers", href: "/industries/insurance-brokers", icon: Briefcase },
+  { label: "Mortgage Brokers", href: "/industries/mortgage-brokers", icon: BarChart3 },
+  { label: "Financial Advisors", href: "/industries/financial-advisors", icon: BarChart3 },
+  { label: "Marketing Agencies", href: "/industries/marketing-agencies", icon: Zap },
+  { label: "Cleaning Companies", href: "/industries/cleaning-companies", icon: Settings },
+  { label: "Property Management", href: "/industries/property-management", icon: Building2 },
+  { label: "Home Services (HVAC, Plumbing)", href: "/industries/home-services", icon: Wrench },
+  { label: "Medical Clinics", href: "/industries/medical-clinics", icon: HeartPulse },
+  { label: "Veterinary Clinics", href: "/industries/veterinary-clinics", icon: Dog },
+  { label: "Tutoring Centers", href: "/industries/tutoring-education", icon: GraduationCap },
+  { label: "Auto Repair Shops", href: "/industries/auto-repair", icon: Car },
+  { label: "Landscaping & Snow Removal", href: "/industries/landscaping", icon: Leaf },
 ];
 
 const mainNavItems = [
