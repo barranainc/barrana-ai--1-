@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateScalingCapacityBar from "@/components/hero-visuals/TemplateScalingCapacityBar";
 
 const data: ServicePageData = {
   title: "CRM Automation | A CRM That Updates Itself | Barrana.ai",
@@ -151,5 +152,5 @@ export default function CRMAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={200} newCapacity={800} unit="contacts managed" adminOverhead={55} />} />;
 }

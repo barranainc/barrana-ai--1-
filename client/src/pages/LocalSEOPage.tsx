@@ -49,12 +49,12 @@ export default function LocalSEOPage() {
               <div className="grid md:grid-cols-2 gap-3 mb-10">
                 {cityData.industries.map((ind) => (
                   <div key={ind} className="p-4 rounded-xl flex items-center gap-3" style={{ backgroundColor: "#F7F9FC", border: "1px solid rgba(26,82,118,0.08)" }}>
-                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#00B4D8" }} />
+                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: "#7E0F4A" }} />
                     <span className="text-sm font-medium" style={{ color: "#374151" }}>{ind}</span>
                   </div>
                 ))}
               </div>
-              <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}>
+              <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
                 <h3 className="text-xl font-bold text-white mb-3">Free Automation Audit for {cityData.city} Businesses</h3>
                 <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit. We will map your current workflows and show you exactly what automation would look like for your business.</p>
                 <Link href="/contact" className="btn-primary">Book Free Audit</Link>
@@ -86,12 +86,12 @@ export default function LocalSEOPage() {
               <div className="space-y-3 mb-10">
                 {industryCityData.workflows.map((wf, i) => (
                   <div key={i} className="p-4 rounded-xl flex items-start gap-3" style={{ backgroundColor: "#F7F9FC", border: "1px solid rgba(26,82,118,0.08)" }}>
-                    <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white" style={{ backgroundColor: "#1A5276" }}>{i + 1}</span>
+                    <span className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white" style={{ backgroundColor: "#283891" }}>{i + 1}</span>
                     <span className="text-sm" style={{ color: "#374151" }}>{wf}</span>
                   </div>
                 ))}
               </div>
-              <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}>
+              <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
                 <h3 className="text-xl font-bold text-white mb-3">Free Automation Audit for {industryCityData.city} {industryCityData.industry}s</h3>
                 <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit and we will map your specific workflows.</p>
                 <Link href="/contact" className="btn-primary">Book Free Audit</Link>

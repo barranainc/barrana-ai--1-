@@ -22,8 +22,8 @@ export default function OperatorInsightArticle() {
         <div className="container">
           <div className="max-w-3xl">
             <div className="aeo-block mb-10"><div className="aeo-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Summary</div><p>{article.intro}</p></div>
-            {article.sections.map((s, i) => <div key={i} className="mb-8"><h2 className="text-xl font-bold mb-3" style={{ color: "#1A5276" }}>{s.heading}</h2><p className="leading-relaxed" style={{ color: "#374151" }}>{s.body}</p></div>)}
-            <div className="mt-12 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}><h3 className="text-xl font-bold text-white mb-3">Ready to Implement This?</h3><p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will map this for your specific business.</p><Link href="/contact" className="btn-primary">Book Free Audit</Link></div>
+            {article.sections.map((s, i) => <div key={i} className="mb-8"><h2 className="text-xl font-bold mb-3" style={{ color: "#283891" }}>{s.heading}</h2><p className="leading-relaxed" style={{ color: "#374151" }}>{s.body}</p></div>)}
+            <div className="mt-12 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}><h3 className="text-xl font-bold text-white mb-3">Ready to Implement This?</h3><p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will map this for your specific business.</p><Link href="/contact" className="btn-primary">Book Free Audit</Link></div>
           </div>
         </div>
       </section>

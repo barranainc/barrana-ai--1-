@@ -96,7 +96,7 @@ function useReveal(threshold = 0.15) {
 }
 
 const NAVY = "#283891";
-const TEAL = "#00C9A7";
+const TEAL = "#7E0F4A";
 
 const sec = (bg: string): React.CSSProperties => ({ background: bg, padding: "4rem 0" });
 const h2Style: React.CSSProperties = { fontWeight: 800, color: "#111827", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", marginBottom: "1rem", lineHeight: 1.25 };

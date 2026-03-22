@@ -60,14 +60,14 @@ export default function ControlLayerCard({ items }: ControlLayerCardProps) {
         >
           <path
             d="M20 4L6 10v10c0 8.84 5.96 17.12 14 19.16C28.04 37.12 34 28.84 34 20V10L20 4z"
-            fill="rgba(0,180,216,0.18)"
-            stroke="#00B4D8"
+            fill="rgba(126,15,74,0.18)"
+            stroke="#7E0F4A"
             strokeWidth="2"
             strokeLinejoin="round"
           />
           <path
             d="M14 20l4 4 8-8"
-            stroke="#00B4D8"
+            stroke="#7E0F4A"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -93,7 +93,7 @@ export default function ControlLayerCard({ items }: ControlLayerCardProps) {
           <div
             key={i}
             style={{
-              borderLeft: "3px solid #00B4D8",
+              borderLeft: "3px solid #7E0F4A",
               paddingLeft: "1rem",
               opacity: show ? 1 : 0,
               transform: show ? "translateX(0)" : "translateX(-16px)",

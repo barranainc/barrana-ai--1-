@@ -80,7 +80,7 @@ export default function FAQ() {
           <div className="max-w-3xl mx-auto space-y-12">
             {faqCategories.map((cat) => (
               <div key={cat.category}>
-                <h2 className="text-xl font-bold mb-6 pb-3 border-b" style={{ color: "#1A5276", borderColor: "#E8ECF1" }}>
+                <h2 className="text-xl font-bold mb-6 pb-3 border-b" style={{ color: "#283891", borderColor: "#E8ECF1" }}>
                   {cat.category}
                 </h2>
                 <div className="space-y-3">
@@ -98,7 +98,7 @@ export default function FAQ() {
                             className="flex-shrink-0 transition-transform duration-200"
                             style={{ transform: openItem === key ? "rotate(180deg)" : "rotate(0deg)" }}
                           >
-                            <path d="M3 6l5 5 5-5" stroke="#1A5276" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            <path d="M3 6l5 5 5-5" stroke="#283891" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                           </svg>
                         </button>
                         {openItem === key && (
@@ -115,7 +115,7 @@ export default function FAQ() {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 text-center p-10 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}>
+          <div className="mt-16 text-center p-10 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
             <h3 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
             <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit and we will answer every question specific to your business.</p>
             <Link href="/contact" className="btn-primary">Book Free Audit</Link>

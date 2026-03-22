@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import ImmigrationHeroVisual from "@/components/hero-visuals/ImmigrationHeroVisual";
 
 const data: IndustryPageData = {
   title: "AI Automation for Immigration Consultants | Intake to Filing | Barrana.ai",
@@ -225,5 +226,5 @@ export default function ImmigrationConsultants() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<ImmigrationHeroVisual />} />;
 }

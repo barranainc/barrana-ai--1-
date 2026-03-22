@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 
 const data: ServicePageData = {
   title: "Invoice Automation | Bill on Completion, Not When Someone Remembers | Barrana.ai",
@@ -152,5 +153,5 @@ export default function InvoiceAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Invoice Automation" />} />;
 }

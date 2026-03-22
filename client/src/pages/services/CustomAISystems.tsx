@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateScalingCapacityBar from "@/components/hero-visuals/TemplateScalingCapacityBar";
 
 const data: ServicePageData = {
   title: "Custom AI Systems | Enterprise-Grade Automation for Growing Businesses | Barrana.ai",
@@ -151,5 +152,5 @@ export default function CustomAISystems() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={3} newCapacity={12} unit="systems running" adminOverhead={60} />} />;
 }

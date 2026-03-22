@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import PhysiotherapyHeroVisual from "@/components/hero-visuals/PhysiotherapyHeroVisual";
 
 const data: IndustryPageData = {
   title:
@@ -221,5 +222,5 @@ export default function PhysiotherapyClinics() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<PhysiotherapyHeroVisual />} />;
 }

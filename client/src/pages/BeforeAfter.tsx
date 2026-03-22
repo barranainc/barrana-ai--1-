@@ -33,7 +33,7 @@ export default function BeforeAfter() {
                 </div>
               </div>
               <div className="grid grid-cols-3 gap-4">
-                {s.metrics.map((m) => <div key={m.label} className="p-4 rounded-xl text-center" style={{ backgroundColor: "#F7F9FC", border: "1px solid rgba(26,82,118,0.08)" }}><div className="text-2xl font-extrabold mb-1" style={{ color: "#1A5276" }}>{m.value}</div><div className="text-xs" style={{ color: "#6B7280" }}>{m.label}</div></div>)}
+                {s.metrics.map((m) => <div key={m.label} className="p-4 rounded-xl text-center" style={{ backgroundColor: "#F7F9FC", border: "1px solid rgba(26,82,118,0.08)" }}><div className="text-2xl font-extrabold mb-1" style={{ color: "#283891" }}>{m.value}</div><div className="text-xs" style={{ color: "#6B7280" }}>{m.label}</div></div>)}
               </div>
             </div>
           ))}

@@ -73,10 +73,10 @@
 
   /* ─── Semantic utility colors (used in diagrams/before-after) ─── */
   --b-success:  #16a34a;  /* After/improvement state */
-  --b-warning:  #dc2626;  /* Before/problem state */
+  --b-warning:  #7E0F4A;  /* Before/problem state — brand burgundy */
   --b-amber:    #d97706;  /* Trigger/attention */
   --b-success-bg: #f0fdf4;
-  --b-warning-bg: #fef2f2;
+  --b-warning-bg: #FCE4F0;  /* Burgundy wash */
   --b-amber-bg:   #fffbeb;
 
   /* ─── Shadcn/Tailwind tokens ─── */

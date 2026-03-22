@@ -56,7 +56,7 @@ export default function KnowledgeBase() {
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "#6B7280" }}>{article.description}</p>
                 <div className="flex items-center justify-between mt-auto pt-4 border-t" style={{ borderColor: "#E8ECF1" }}>
                   <span className="text-xs" style={{ color: "#6B7280" }}>{article.readTime}</span>
-                  <span className="text-xs font-semibold flex items-center gap-1" style={{ color: "#1A5276" }}>Read guide<svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
+                  <span className="text-xs font-semibold flex items-center gap-1" style={{ color: "#283891" }}>Read guide<svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg></span>
                 </div>
               </Link>
             ))}

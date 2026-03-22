@@ -152,9 +152,10 @@ function ProblemsGrid({ problems }: { problems: { title: string; desc: string }[
 
 interface IndustryPageLayoutProps {
   data: IndustryPageData;
+  heroVisual?: React.ReactNode;
 }
 
-export default function IndustryPageLayout({ data }: IndustryPageLayoutProps) {
+export default function IndustryPageLayout({ data, heroVisual }: IndustryPageLayoutProps) {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -193,13 +194,15 @@ export default function IndustryPageLayout({ data }: IndustryPageLayoutProps) {
         ctaText={data.ctaText}
         ctaMicro={data.ctaMicro}
         visual={
-          <HeroVisualCard
-            show={true}
-            stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
-              value: m.after.split(" ")[0] ?? m.after,
-              label: m.label,
-            })))}
-          />
+          heroVisual ?? (
+            <HeroVisualCard
+              show={true}
+              stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
+                value: m.after.split(" ")[0] ?? m.after,
+                label: m.label,
+              })))}
+            />
+          )
         }
       />
 

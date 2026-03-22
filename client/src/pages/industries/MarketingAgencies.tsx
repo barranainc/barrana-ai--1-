@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateTimeDrainWaterfall from "@/components/hero-visuals/TemplateTimeDrainWaterfall";
 
 const data: IndustryPageData = {
   title: "AI Automation for Marketing Agencies Toronto | Barrana.ai",
@@ -169,5 +170,5 @@ export default function MarketingAgencies() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateTimeDrainWaterfall industry="Marketing Agencies" drains={[{label:"Client reporting",hours:12},{label:"Onboarding tasks",hours:5},{label:"Invoice follow-up",hours:4},{label:"Status updates",hours:3}]} />} />;
 }

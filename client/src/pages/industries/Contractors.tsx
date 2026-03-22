@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import ContractorsHeroVisual from "@/components/hero-visuals/ContractorsHeroVisual";
 
 const data: IndustryPageData = {
   title: "AI Automation for Contractors Toronto | Win More Jobs Without Missing Calls | Barrana.ai",
@@ -216,5 +217,5 @@ export default function Contractors() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<ContractorsHeroVisual />} />;
 }

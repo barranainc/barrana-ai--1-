@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateTimeDrainWaterfall from "@/components/hero-visuals/TemplateTimeDrainWaterfall";
 
 const data: IndustryPageData = {
   title: "AI Automation for Mortgage Brokers Toronto | Win the Application Before Competitors | Barrana.ai",
@@ -109,5 +110,5 @@ export default function MortgageBrokers() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateTimeDrainWaterfall industry="Mortgage Brokers" drains={[{label:"Document collection",hours:11},{label:"Status update calls",hours:7},{label:"CRM entry",hours:4},{label:"Compliance admin",hours:3}]} />} />;
 }

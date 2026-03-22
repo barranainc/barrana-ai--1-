@@ -27,15 +27,15 @@ export default function IntegrationDetail() {
         <div className="container">
           <div className="max-w-3xl grid md:grid-cols-2 gap-8">
             <div className="p-6 rounded-2xl border" style={{ borderColor: "rgba(26,82,118,0.1)", backgroundColor: "#F7F9FC" }}>
-              <h2 className="font-bold mb-4" style={{ color: "#1A5276" }}>Common Use Cases</h2>
-              <ul className="space-y-2">{int.useCases.map((uc, i) => <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "#374151" }}><span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: "#00B4D8" }} />{uc}</li>)}</ul>
+              <h2 className="font-bold mb-4" style={{ color: "#283891" }}>Common Use Cases</h2>
+              <ul className="space-y-2">{int.useCases.map((uc, i) => <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "#374151" }}><span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: "#7E0F4A" }} />{uc}</li>)}</ul>
             </div>
             <div className="p-6 rounded-2xl border" style={{ borderColor: "rgba(26,82,118,0.1)", backgroundColor: "#F7F9FC" }}>
-              <h2 className="font-bold mb-4" style={{ color: "#1A5276" }}>Why We Use It</h2>
+              <h2 className="font-bold mb-4" style={{ color: "#283891" }}>Why We Use It</h2>
               <ul className="space-y-2">{int.benefits.map((b, i) => <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "#374151" }}><span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: "#059669" }} />{b}</li>)}</ul>
             </div>
           </div>
-          <div className="max-w-3xl mt-10 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}>
+          <div className="max-w-3xl mt-10 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
             <h3 className="text-xl font-bold text-white mb-3">Want to Integrate {int.name} with Your Business?</h3>
             <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will design an integration plan for your specific workflows.</p>
             <Link href="/contact" className="btn-primary">Book Free Audit</Link>

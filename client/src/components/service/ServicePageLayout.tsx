@@ -114,9 +114,10 @@ const subheadingStyle: React.CSSProperties = {
 
 interface ServicePageLayoutProps {
   data: ServicePageData;
+  heroVisual?: React.ReactNode;
 }
 
-export default function ServicePageLayout({ data }: ServicePageLayoutProps) {
+export default function ServicePageLayout({ data, heroVisual }: ServicePageLayoutProps) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -177,13 +178,15 @@ export default function ServicePageLayout({ data }: ServicePageLayoutProps) {
         ctaText={data.ctaText}
         ctaMicro={data.ctaMicro}
         visual={
-          <HeroVisualCard
-            show={true}
-            stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
-              value: m.after.split(" ")[0] ?? m.after,
-              label: m.label,
-            })))}
-          />
+          heroVisual ?? (
+            <HeroVisualCard
+              show={true}
+              stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
+                value: m.after.split(" ")[0] ?? m.after,
+                label: m.label,
+              })))}
+            />
+          )
         }
       />
 

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 
 const data: IndustryPageData = {
   title: "AI Automation for Service Businesses Toronto | Systematize the Client Lifecycle | Barrana.ai",
@@ -108,5 +109,5 @@ export default function ServiceBusinesses() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Service Businesses" />} />;
 }

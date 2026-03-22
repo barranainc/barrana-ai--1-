@@ -39,7 +39,7 @@ export default function Glossary() {
           <div className="max-w-3xl space-y-4">
             {filtered.map((t) => (
               <div key={t.term} className="p-5 rounded-xl border" style={{ borderColor: "rgba(26,82,118,0.08)", backgroundColor: "#F7F9FC" }}>
-                <h3 className="font-bold mb-2" style={{ color: "#1A5276" }}>{t.term}</h3>
+                <h3 className="font-bold mb-2" style={{ color: "#283891" }}>{t.term}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>{t.definition}</p>
               </div>
             ))}

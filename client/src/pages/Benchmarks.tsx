@@ -30,8 +30,8 @@ export default function Benchmarks() {
           </div>
           <div className="overflow-x-auto rounded-2xl border" style={{ borderColor: "rgba(26,82,118,0.1)" }}>
             <table className="w-full text-sm">
-              <thead><tr style={{ backgroundColor: "#0A1628" }}><th className="text-left p-4 font-semibold text-white">Metric</th><th className="text-left p-4 font-semibold text-white">Manual</th><th className="text-left p-4 font-semibold text-white">Automated</th><th className="text-left p-4 font-semibold text-white">Improvement</th></tr></thead>
-              <tbody>{benchmarks.map((b, i) => (<tr key={b.metric} style={{ backgroundColor: i % 2 === 0 ? "white" : "#F7F9FC" }}><td className="p-4"><div className="font-semibold" style={{ color: "#1F2937" }}>{b.metric}</div><div className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>{b.note}</div></td><td className="p-4" style={{ color: "#DC2626" }}>{b.manual}</td><td className="p-4" style={{ color: "#059669" }}>{b.automated}</td><td className="p-4 font-bold" style={{ color: "#1A5276" }}>{b.improvement}</td></tr>))}</tbody>
+              <thead><tr style={{ backgroundColor: "#1E2B6E" }}><th className="text-left p-4 font-semibold text-white">Metric</th><th className="text-left p-4 font-semibold text-white">Manual</th><th className="text-left p-4 font-semibold text-white">Automated</th><th className="text-left p-4 font-semibold text-white">Improvement</th></tr></thead>
+              <tbody>{benchmarks.map((b, i) => (<tr key={b.metric} style={{ backgroundColor: i % 2 === 0 ? "white" : "#F7F9FC" }}><td className="p-4"><div className="font-semibold" style={{ color: "#1F2937" }}>{b.metric}</div><div className="text-xs mt-0.5" style={{ color: "#9CA3AF" }}>{b.note}</div></td><td className="p-4" style={{ color: "#DC2626" }}>{b.manual}</td><td className="p-4" style={{ color: "#059669" }}>{b.automated}</td><td className="p-4 font-bold" style={{ color: "#283891" }}>{b.improvement}</td></tr>))}</tbody>
             </table>
           </div>
         </div>

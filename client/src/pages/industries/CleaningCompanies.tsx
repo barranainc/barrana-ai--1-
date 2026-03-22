@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 
 const data: IndustryPageData = {
   title: "AI Automation for Cleaning Companies Toronto | Barrana.ai",
@@ -171,5 +172,5 @@ export default function CleaningCompanies() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Cleaning Companies" leaks={[{label:"Slow lead response",amount:"$3,800/mo"},{label:"No follow-up",amount:"$5,200/mo"},{label:"Missed reminders",amount:"$2,100/mo"},{label:"Late invoicing",amount:"$1,600/mo"}]} />} />;
 }
