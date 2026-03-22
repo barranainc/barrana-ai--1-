@@ -21,6 +21,7 @@ import OperationsReportingAutomation from "./pages/services/OperationsReportingA
 import AfterHoursAutomation from "./pages/services/AfterHoursAutomation";
 import AIAgents from "./pages/services/AIAgents";
 import CustomAISystems from "./pages/services/CustomAISystems";
+import FullStackServices from "./pages/services/FullStackServices";
 import Industries from "./pages/Industries";
 import IndustryDetail from "./pages/IndustryDetail";
 import ImmigrationConsultants from "./pages/industries/ImmigrationConsultants";
@@ -98,6 +99,7 @@ import BuildVsBuy from "./pages/insights/BuildVsBuy";
 import WhenAiIsNotTheAnswer from "./pages/insights/WhenAiIsNotTheAnswer";
 import AutomationVsDelegation from "./pages/insights/AutomationVsDelegation";
 import LeadIntakeWorkflow from "./pages/workflows/LeadIntakeWorkflow";
+import Solopreneurs from "./pages/Solopreneurs";
 import AppointmentBookingWorkflow from "./pages/workflows/AppointmentBookingWorkflow";
 import ClientOnboardingWorkflow from "./pages/workflows/ClientOnboardingWorkflow";
 import DocumentCollectionWorkflow from "./pages/workflows/DocumentCollectionWorkflow";
@@ -131,6 +133,7 @@ function Router() {
         <Route path="/services/after-hours-automation" component={AfterHoursAutomation} />
         <Route path="/services/ai-agents" component={AIAgents} />
         <Route path="/services/custom-ai-systems" component={CustomAISystems} />
+        <Route path="/services/full-stack" component={FullStackServices} />
         <Route path="/services/:slug" component={ServiceDetail} />
         <Route path="/industries" component={Industries} />
         <Route path="/industries/immigration-consultants" component={ImmigrationConsultants} />
@@ -219,6 +222,9 @@ function Router() {
         <Route path="/insights/build-vs-buy" component={BuildVsBuy} />
         <Route path="/insights/when-ai-is-not-the-answer" component={WhenAiIsNotTheAnswer} />
         <Route path="/insights/automation-vs-delegation" component={AutomationVsDelegation} />
+
+        {/* Hub Pages */}
+        <Route path="/solopreneurs" component={Solopreneurs} />
 
         {/* Workflow Pages */}
         <Route path="/workflows/lead-intake" component={LeadIntakeWorkflow} />

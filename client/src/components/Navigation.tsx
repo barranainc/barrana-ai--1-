@@ -23,9 +23,11 @@ const serviceItems = [
   { label: "Operations Reporting", href: "/services/operations-reporting", icon: FileText, desc: "Automated dashboards and performance reports" },
   { label: "After-Hours Automation", href: "/services/after-hours-automation", icon: Phone, desc: "Capture and qualify leads while your team sleeps" },
   { label: "Custom AI Systems", href: "/services/custom-ai-systems", icon: Zap, desc: "Your whole operation automated end-to-end" },
+  { label: "Full-Stack Services", href: "/services/full-stack", icon: Zap, desc: "Custom software, websites, social media, and acquisition — one partner" },
 ];
 
 const industryItems = [
+  { label: "Solopreneurs & Experts", href: "/solopreneurs", icon: Users },
   { label: "Immigration Consultants", href: "/industries/immigration-consultants", icon: FileText },
   { label: "Accounting Firms", href: "/industries/accounting-firms", icon: Briefcase },
   { label: "Law Firms", href: "/industries/law-firms", icon: Scale },

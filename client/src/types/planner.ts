@@ -11,6 +11,7 @@ export type Industry =
   | 'insurance'
   | 'property-management'
   | 'ecommerce'
+  | 'solopreneur'
   | 'professional-other'
   | 'other';
 

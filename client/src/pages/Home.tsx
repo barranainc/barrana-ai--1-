@@ -767,6 +767,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Beyond Automation: Full-Stack Positioning ─────────────────────── */}
+      <section className="section" style={{ background: NAVY }}>
+        <div className="container">
+          <Reveal>
+            <div className="section-divider mb-4" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
+              <span className="section-label" style={{ color: "rgba(255,255,255,0.6)", background: "transparent", border: "1px solid rgba(255,255,255,0.2)" }}>FULL-STACK BUSINESS PARTNER</span>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }} className="lg-grid-2col">
+              <div>
+                <h2 style={{ fontSize: "clamp(1.75rem,3.5vw,2.5rem)", fontWeight: 800, color: "white", marginBottom: "1.25rem", lineHeight: 1.2 }}>
+                  Automation Is the Core.<br />But We Build Everything Around It.
+                </h2>
+                <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
+                  Most automation consultancies stop at workflows. We don't. If your automation needs a custom application, we build it. If your website isn't converting, we rebuild it. If your social media isn't bringing clients, we fix that too.
+                </p>
+                <p style={{ color: "rgba(255,255,255,0.6)", lineHeight: 1.75, marginBottom: "2rem", fontSize: "0.95rem" }}>
+                  Barrana handles the full operational stack so you don't need five different vendors.
+                </p>
+                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                  <Link href="/services/full-stack" style={{ background: MAGENTA, color: "white", padding: "0.75rem 1.5rem", borderRadius: "8px", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none", display: "inline-block" }}>
+                    See Full-Stack Services →
+                  </Link>
+                  <Link href="/automation-planner" style={{ background: "transparent", color: "white", padding: "0.75rem 1.5rem", borderRadius: "8px", fontWeight: 600, fontSize: "0.9rem", textDecoration: "none", display: "inline-block", border: "1px solid rgba(255,255,255,0.3)" }}>
+                    Start the Planner
+                  </Link>
+                </div>
+              </div>
+              <div>
+                {[
+                  { emoji: "💻", title: "Custom Software & AI", desc: "Bespoke applications, AI agents, client portals, and internal tools built on your automation layer." },
+                  { emoji: "🌐", title: "Websites That Convert", desc: "Website design and rebuilds optimised to feed your automated systems with qualified enquiries." },
+                  { emoji: "📣", title: "Social Media & Acquisition", desc: "Social media systems, content frameworks, and acquisition funnels that fill your pipeline." },
+                  { emoji: "🗺️", title: "Operational Consulting", desc: "Process mapping and workflow redesign — strategy before systems, every time." },
+                ].map((card) => (
+                  <div key={card.title} style={{
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    borderRadius: "12px",
+                    padding: "1rem 1.25rem",
+                    marginBottom: "0.75rem",
+                    display: "flex",
+                    gap: "1rem",
+                    alignItems: "flex-start",
+                  }}>
+                    <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{card.emoji}</span>
+                    <div>
+                      <div style={{ fontWeight: 700, color: "white", fontSize: "0.9rem", marginBottom: "0.25rem" }}>{card.title}</div>
+                      <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.5 }}>{card.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      <style>{`.lg-grid-2col { } @media (max-width: 768px) { .lg-grid-2col { grid-template-columns: 1fr !important; } }`}</style>
+
       {/* ─── CASE STUDIES ─────────────────────────────────────────────── */}
       <section className="section" style={{ background: OFFWHITE }}>
         <div className="container">

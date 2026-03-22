@@ -118,6 +118,7 @@ export default function Footer() {
                 { label: "Operations Reporting", href: "/services/operations-reporting" },
                 { label: "AI Receptionist", href: "/services/ai-receptionist" },
                 { label: "Client Intake Automation", href: "/services/client-intake-automation" },
+                { label: "Full-Stack Services", href: "/services/full-stack" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
@@ -130,6 +131,7 @@ export default function Footer() {
             <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4 mt-7">Industries</h4>
             <ul className="space-y-2.5">
               {[
+                { label: "Solopreneurs & Experts", href: "/solopreneurs" },
                 { label: "Immigration Consultants", href: "/industries/immigration-consultants" },
                 { label: "Accounting Firms", href: "/industries/accounting-firms" },
                 { label: "Law Firms", href: "/industries/law-firms" },
