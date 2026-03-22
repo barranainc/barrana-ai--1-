@@ -40,6 +40,12 @@ function useCountUp(target: number, duration = 1400, trigger = false) {
   return count;
 }
 
+// ── Animated counter component ────────────────────────────────────────────────
+function AnimCount({ value, trigger }: { value: number; trigger: boolean }) {
+  const count = useCountUp(value, 1200, trigger);
+  return <>{count}</>;
+}
+
 // ── Intersection observer ─────────────────────────────────────────────────────
 function useInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);

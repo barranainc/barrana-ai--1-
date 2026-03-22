@@ -159,6 +159,76 @@ const workflowTabs: {
     description:
       "Every call, form, and email is captured and screened. Conflict checks run automatically. Qualified leads are assigned and receive intake forms before they've talked to anyone. No leads fall through.",
   },
+  {
+    id: "real-estate",
+    label: "Real Estate",
+    steps: [
+      { label: "Listing Inquiry",    type: "trigger" },
+      { label: "AI Qualifies Lead",  type: "ai"      },
+      { label: "CRM Record",         type: "action"  },
+      { label: "Showing Scheduled",  type: "action"  },
+      { label: "Follow-up Sent",     type: "action"  },
+      { label: "Offer Submitted",    type: "outcome" },
+    ],
+    badge: "Response time: 4 hrs → 90 sec",
+    description: "Every listing inquiry — web form, email, or DM — is qualified in 90 seconds, added to CRM, and a showing is booked. Follow-up sequences run automatically until the lead converts or opts out. Your agents spend time on showings, not inbox management.",
+  },
+  {
+    id: "dental",
+    label: "Dental Offices",
+    steps: [
+      { label: "Patient Inquiry",    type: "trigger" },
+      { label: "AI Screens",         type: "ai"      },
+      { label: "Appointment Booked", type: "action"  },
+      { label: "Forms Sent",         type: "action"  },
+      { label: "Reminder + Confirm", type: "action"  },
+      { label: "Patient Arrives",    type: "outcome" },
+    ],
+    badge: "No-shows down 35%. Front desk freed.",
+    description: "New patient inquiries are screened, booked, and sent intake forms automatically. 24-hour reminders fire with a confirmation link. Cancellations trigger immediate waitlist backfill. Your front desk handles arrivals, not phone tag.",
+  },
+  {
+    id: "insurance",
+    label: "Insurance Brokers",
+    steps: [
+      { label: "Quote Request",      type: "trigger" },
+      { label: "AI Captures Data",   type: "ai"      },
+      { label: "CRM Record",         type: "action"  },
+      { label: "Renewal Reminder",   type: "action"  },
+      { label: "Follow-up Sequence", type: "action"  },
+      { label: "Policy Renewed",     type: "outcome" },
+    ],
+    badge: "Renewal rate +28%. Zero manual tracking.",
+    description: "Quote requests are captured and logged instantly. Renewal reminders fire automatically 90 days out, then 60, then 30. Follow-up sequences run until the client responds. No spreadsheet tracking. No renewals slipping through.",
+  },
+  {
+    id: "physio",
+    label: "Physiotherapy",
+    steps: [
+      { label: "Referral Arrives",   type: "trigger" },
+      { label: "AI Triages",         type: "ai"      },
+      { label: "Book Initial Appt",  type: "action"  },
+      { label: "Intake Form Sent",   type: "action"  },
+      { label: "Treatment Planned",  type: "action"  },
+      { label: "Ongoing Bookings",   type: "outcome" },
+    ],
+    badge: "Admin time cut by 12 hrs/week",
+    description: "Referrals and self-referrals are triaged, booked, and sent intake forms before the first appointment. Ongoing visit reminders fire automatically. Discharge follow-ups check in at 2 weeks and 6 weeks. No manual scheduling or chasing.",
+  },
+  {
+    id: "cleaning",
+    label: "Cleaning Companies",
+    steps: [
+      { label: "Service Request",    type: "trigger" },
+      { label: "AI Qualifies",       type: "ai"      },
+      { label: "Quote Generated",    type: "action"  },
+      { label: "Job Scheduled",      type: "action"  },
+      { label: "Invoice Sent",       type: "action"  },
+      { label: "Review Requested",   type: "outcome" },
+    ],
+    badge: "Invoicing automated. Reviews up 3×.",
+    description: "Service requests are qualified and quoted instantly. Jobs are scheduled, confirmed the day before, and invoiced automatically on completion. A review request goes out 2 hours after the job closes. No manual follow-up. No forgotten invoices.",
+  },
 ];
 
 // ─── FAQ data ─────────────────────────────────────────────────────────
@@ -633,7 +703,7 @@ export default function Home() {
                 What Automation Looks Like in Practice
               </h2>
               <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Each workflow is built specifically for your business — not a template. These are the patterns we implement most often across five industries.
+                Each workflow is built specifically for your business — not a template. These are the patterns we implement most often across ten industries.
               </p>
             </div>
           </div>
