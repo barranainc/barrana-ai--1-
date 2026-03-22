@@ -167,13 +167,15 @@ export default function Footer() {
               ))}
             </ul>
 
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Knowledge</h4>
+            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Workflow Guides</h4>
             <ul className="space-y-2.5">
               {[
-                { label: "Lead Response Automation", href: "/knowledge/lead-automation" },
-                { label: "Client Intake Automation", href: "/knowledge/client-intake-automation" },
-                { label: "AI Agents Explained", href: "/knowledge/ai-agents-for-small-business" },
-                { label: "Workflow Automation", href: "/knowledge/workflow-automation-explained" },
+                { label: "Lead Intake Automation", href: "/workflows/lead-intake" },
+                { label: "Appointment Booking", href: "/workflows/appointment-booking" },
+                { label: "Client Onboarding", href: "/workflows/client-onboarding" },
+                { label: "Document Collection", href: "/workflows/document-collection" },
+                { label: "What to Automate First", href: "/insights/what-to-automate-first" },
+                { label: "Build vs Buy Guide", href: "/insights/build-vs-buy" },
               ].map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
@@ -186,12 +188,30 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
+            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Foundation Guides</h4>
+            <ul className="space-y-2.5 mb-7">
+              {[
+                { label: "AI Adoption Guide", href: "/ai-adoption-small-business" },
+                { label: "Workflow Automation Guide", href: "/workflow-automation-smb" },
+                { label: "AI Receptionist Guide", href: "/ai-receptionist" },
+                { label: "Human-in-the-Loop AI", href: "/human-in-the-loop-ai" },
+                { label: "Automation by Industry", href: "/ai-automation-industries" },
+                { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Resources</h4>
             <ul className="space-y-2.5 mb-7">
               {[
                 { label: "Case Studies", href: "/case-studies" },
                 { label: "Resources Hub", href: "/resources" },
-                { label: "Automation Playbooks", href: "/playbooks/immigration-client-intake" },
+                { label: "Automation Playbooks", href: "/playbooks" },
                 { label: "AI Automation Glossary", href: "/glossary" },
                 { label: "Workflow Templates", href: "/templates" },
                 { label: "Automation Benchmarks", href: "/benchmarks" },
