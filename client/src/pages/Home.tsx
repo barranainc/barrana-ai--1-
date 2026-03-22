@@ -364,7 +364,7 @@ export default function Home() {
           <div
             ref={heroReveal.ref}
             className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start"
-            style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
+            style={{ paddingTop: "2.5rem", paddingBottom: "4rem" }}
           >
             {/* Left: copy */}
             <div>

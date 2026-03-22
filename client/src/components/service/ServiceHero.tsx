@@ -52,7 +52,7 @@ export default function ServiceHero({
     <section
       style={{
         background: "#F7F9FC",
-        paddingTop: "6rem",
+        paddingTop: "3rem",
         paddingBottom: "4rem",
       }}
     >

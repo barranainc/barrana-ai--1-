@@ -85,7 +85,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navigation />
-      <main>{children}</main>
+      <main style={{ paddingTop: "70px" }}>{children}</main>
       <Footer />
     </>
   );
