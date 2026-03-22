@@ -9,6 +9,50 @@ interface StepProps {
   onBack: () => void;
 }
 
+const WORKFLOW_EMOJIS: Record<string, string> = {
+  "inbound-enquiries": "📥",
+  "phone-calls": "📞",
+  "lead-qualification": "🔍",
+  "appointment-booking": "📅",
+  "follow-up": "💬",
+  "client-onboarding": "👋",
+  "document-collection": "📄",
+  "estimates-proposals": "📝",
+  "invoicing-payments": "💰",
+  "customer-support": "🎧",
+  "internal-updates": "🔄",
+  "reporting": "📊",
+  "review-requests": "⭐",
+  "scheduling-reminders": "🔔",
+};
+
+const QUESTION_INSIGHTS: Record<string, Record<string, string>> = {
+  "inbound-enquiries": {
+    default:
+      "Research shows responding within 5 minutes is 21x more effective than responding within 30 minutes. Most businesses do not know where they fall on this spectrum.",
+  },
+  "appointment-booking": {
+    default:
+      "The average booking process takes 2-3 back-and-forth exchanges over 1-2 days. Automated booking cuts this to under 3 minutes.",
+  },
+  "document-collection": {
+    default:
+      "On average, firms spend 15 hours per week chasing missing documents. Automated 48-hour reminders cut collection time in half.",
+  },
+  "follow-up": {
+    default:
+      "80% of sales require 5+ follow-up contacts. Most businesses give up after 1-2. Automation handles the persistence so you do not have to.",
+  },
+  "scheduling-reminders": {
+    default:
+      "Automated appointment reminders reduce no-shows by 40-60% on average. Two reminders (48hr + 2hr) work better than one.",
+  },
+  "invoicing-payments": {
+    default:
+      "Businesses that automate invoice sending get paid 15 days faster on average. Consistent follow-up at 7, 14, and 21 days dramatically improves collection.",
+  },
+};
+
 function getDeepDiveWorkflows(state: PlannerState): WorkflowId[] {
   if (state.painPoints.length === 0) {
     return state.selectedWorkflows.slice(0, 3) as WorkflowId[];
@@ -19,14 +63,12 @@ function getDeepDiveWorkflows(state: PlannerState): WorkflowId[] {
   });
   const intersection = state.selectedWorkflows.filter((w) => painMapped.has(w));
   const result = intersection.slice(0, 3);
-  // If intersection is empty, fall back to top 3 selected workflows
   return (result.length > 0 ? result : state.selectedWorkflows.slice(0, 3)) as WorkflowId[];
 }
 
 export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepProps) {
   const deepDiveWorkflows = getDeepDiveWorkflows(state);
 
-  // canNext: at least the first question of each workflow has an answer
   const canNext = deepDiveWorkflows.every((wId) => {
     const wDef = WORKFLOW_MAP[wId];
     if (!wDef || wDef.questions.length === 0) return true;
@@ -47,6 +89,14 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
     dispatch({ type: "SET_WORKFLOW_ANSWER", workflowId, questionId, answer: newVal });
   };
 
+  const hasFirstQuestionAnswer = (wId: WorkflowId): boolean => {
+    const wDef = WORKFLOW_MAP[wId];
+    if (!wDef || wDef.questions.length === 0) return false;
+    const firstQ = wDef.questions[0];
+    const answer = state.workflowAnswers[wId]?.[firstQ.id];
+    return answer !== undefined && answer !== null && answer !== "" && !(Array.isArray(answer) && answer.length === 0);
+  };
+
   if (deepDiveWorkflows.length === 0) {
     return (
       <div style={{ maxWidth: 640, margin: "0 auto", padding: "40px 24px" }}>
@@ -59,27 +109,46 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
             marginTop: 0,
           }}
         >
-          Let us dig into the workflows that matter most.
+          Let us dig into what matters most.
         </h2>
         <p style={{ color: "#7B7B7B", fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
           No workflows were selected. Please go back and select some workflows first.
         </p>
-        <button
-          type="button"
-          onClick={onBack}
-          style={{
-            padding: "13px 24px",
-            borderRadius: 8,
-            border: "2px solid #E2E4ED",
-            background: "white",
-            color: "#1A1A2E",
-            fontSize: 15,
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
-        >
-          Back
-        </button>
+        <div style={{ display: "flex", gap: 12 }}>
+          <button
+            type="button"
+            onClick={onBack}
+            style={{
+              padding: "13px 24px",
+              borderRadius: 8,
+              border: "2px solid #E2E4ED",
+              background: "white",
+              color: "#1A1A2E",
+              fontSize: 15,
+              fontWeight: 600,
+              cursor: "pointer",
+            }}
+          >
+            Back
+          </button>
+          <button
+            type="button"
+            onClick={onNext}
+            style={{
+              flex: 1,
+              padding: "13px 24px",
+              borderRadius: 8,
+              border: "none",
+              background: "#283891",
+              color: "white",
+              fontSize: 15,
+              fontWeight: 700,
+              cursor: "pointer",
+            }}
+          >
+            Skip this step
+          </button>
+        </div>
       </div>
     );
   }
@@ -97,72 +166,68 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
           lineHeight: 1.2,
         }}
       >
-        Let us dig into the workflows that matter most.
+        Let us dig into what matters most.
       </h2>
       <p
         style={{
           fontSize: 15,
           color: "#7B7B7B",
           lineHeight: 1.6,
-          marginBottom: 36,
+          marginBottom: 8,
           marginTop: 0,
         }}
       >
-        We will ask a few focused questions about each.
+        We are focusing on the{" "}
+        <strong style={{ color: "#1A1A2E" }}>{deepDiveWorkflows.length}</strong>{" "}
+        {deepDiveWorkflows.length === 1 ? "area" : "areas"} causing you the most friction. Quick focused questions for each.
       </p>
 
       {/* Workflow sections */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 40 }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {deepDiveWorkflows.map((wId, wIndex) => {
           const wDef = WORKFLOW_MAP[wId];
           if (!wDef) return null;
+          const emoji = WORKFLOW_EMOJIS[wId] ?? "⚙️";
+          const insightMap = QUESTION_INSIGHTS[wId];
+          const showInsight = hasFirstQuestionAnswer(wId) && insightMap;
+          const insightText = insightMap?.default;
 
           return (
             <div key={wId}>
-              {/* Workflow heading */}
+              {/* Workflow section header */}
               <div
                 style={{
+                  background: "#F7F9FC",
+                  border: "1.5px solid #E2E4ED",
+                  borderRadius: 12,
+                  padding: "14px 18px",
+                  marginBottom: 16,
+                  marginTop: wIndex === 0 ? 24 : 24,
                   display: "flex",
                   alignItems: "center",
-                  gap: 10,
-                  marginBottom: 20,
-                  paddingBottom: 12,
-                  borderBottom: "2px solid #E2E4ED",
                 }}
               >
-                <div
+                <span style={{ fontSize: 22, marginRight: 10 }}>{emoji}</span>
+                <span
                   style={{
-                    width: 28,
-                    height: 28,
-                    borderRadius: "50%",
-                    background: "#283891",
-                    color: "white",
-                    fontSize: 13,
-                    fontWeight: 700,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  {wIndex + 1}
-                </div>
-                <h3
-                  style={{
-                    margin: 0,
-                    fontSize: 17,
-                    fontWeight: 700,
+                    fontSize: 16,
+                    fontWeight: 800,
                     color: "#1A1A2E",
                   }}
                 >
                   {wDef.label}
-                </h3>
+                </span>
               </div>
 
               {/* Questions */}
-              <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-                {wDef.questions.map((q) => {
+              <div style={{ display: "flex", flexDirection: "column", gap: 28, paddingLeft: 4, paddingRight: 4 }}>
+                {wDef.questions.map((q, qIndex) => {
                   const currentAnswer = state.workflowAnswers[wId]?.[q.id];
+                  const hasAnswer =
+                    currentAnswer !== undefined &&
+                    currentAnswer !== null &&
+                    currentAnswer !== "" &&
+                    !(Array.isArray(currentAnswer) && currentAnswer.length === 0);
 
                   return (
                     <div key={q.id}>
@@ -192,7 +257,13 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
                       </p>
 
                       {q.type === "single" ? (
-                        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        <div
+                          style={{
+                            display: "grid",
+                            gridTemplateColumns: "repeat(2, 1fr)",
+                            gap: 10,
+                          }}
+                        >
                           {q.options.map((opt) => {
                             const isSelected = currentAnswer === opt;
                             return (
@@ -203,27 +274,26 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
                                 style={{
                                   display: "flex",
                                   alignItems: "center",
-                                  gap: 12,
-                                  padding: "11px 14px",
-                                  border: isSelected
-                                    ? "2px solid #283891"
-                                    : "2px solid #E2E4ED",
-                                  borderRadius: 8,
-                                  background: isSelected ? "#EEF1FA" : "#FFFFFF",
+                                  gap: 10,
+                                  padding: "14px 16px",
+                                  borderRadius: 10,
+                                  border: isSelected ? "2px solid #283891" : "2px solid #E2E4ED",
+                                  background: isSelected ? "#EEF0FB" : "white",
                                   cursor: "pointer",
                                   textAlign: "left",
+                                  fontSize: 14,
+                                  fontWeight: isSelected ? 700 : 500,
+                                  color: isSelected ? "#283891" : "#1A1A2E",
                                   transition: "all 0.15s",
                                 }}
                               >
-                                {/* Radio indicator */}
+                                {/* Radio dot */}
                                 <div
                                   style={{
-                                    width: 18,
-                                    height: 18,
+                                    width: 20,
+                                    height: 20,
                                     borderRadius: "50%",
-                                    border: isSelected
-                                      ? "2px solid #283891"
-                                      : "2px solid #C5C8D6",
+                                    border: isSelected ? "2px solid #283891" : "2px solid #C5C8D6",
                                     background: "white",
                                     flexShrink: 0,
                                     display: "flex",
@@ -234,29 +304,21 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
                                   {isSelected && (
                                     <div
                                       style={{
-                                        width: 8,
-                                        height: 8,
+                                        width: 9,
+                                        height: 9,
                                         borderRadius: "50%",
                                         background: "#283891",
                                       }}
                                     />
                                   )}
                                 </div>
-                                <span
-                                  style={{
-                                    fontSize: 14,
-                                    fontWeight: isSelected ? 600 : 400,
-                                    color: isSelected ? "#283891" : "#1A1A2E",
-                                  }}
-                                >
-                                  {opt}
-                                </span>
+                                <span>{opt}</span>
                               </button>
                             );
                           })}
                         </div>
                       ) : (
-                        <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                           {q.options.map((opt) => {
                             const multiAnswer = (currentAnswer as string[]) ?? [];
                             const isSelected = multiAnswer.includes(opt);
@@ -266,60 +328,49 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
                                 type="button"
                                 onClick={() => handleMultiAnswer(wId, q.id, opt)}
                                 style={{
-                                  display: "flex",
-                                  alignItems: "center",
-                                  gap: 12,
-                                  padding: "11px 14px",
-                                  border: isSelected
-                                    ? "2px solid #283891"
-                                    : "2px solid #E2E4ED",
-                                  borderRadius: 8,
-                                  background: isSelected ? "#EEF1FA" : "#FFFFFF",
+                                  padding: "8px 16px",
+                                  borderRadius: 20,
+                                  border: isSelected ? "2px solid #283891" : "2px solid #E2E4ED",
+                                  background: isSelected ? "#EEF0FB" : "white",
                                   cursor: "pointer",
-                                  textAlign: "left",
+                                  fontSize: 13,
+                                  fontWeight: 500,
+                                  color: isSelected ? "#283891" : "#1A1A2E",
                                   transition: "all 0.15s",
                                 }}
                               >
-                                {/* Checkbox indicator */}
-                                <div
-                                  style={{
-                                    width: 18,
-                                    height: 18,
-                                    borderRadius: 4,
-                                    border: isSelected
-                                      ? "2px solid #283891"
-                                      : "2px solid #C5C8D6",
-                                    background: isSelected ? "#283891" : "white",
-                                    flexShrink: 0,
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                  }}
-                                >
-                                  {isSelected && (
-                                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                                      <path
-                                        d="M2 6L4.5 8.5L10 3"
-                                        stroke="white"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                      />
-                                    </svg>
-                                  )}
-                                </div>
-                                <span
-                                  style={{
-                                    fontSize: 14,
-                                    fontWeight: isSelected ? 600 : 400,
-                                    color: isSelected ? "#283891" : "#1A1A2E",
-                                  }}
-                                >
-                                  {opt}
-                                </span>
+                                {opt}
                               </button>
                             );
                           })}
+                        </div>
+                      )}
+
+                      {/* Micro-insight after first question when answered */}
+                      {qIndex === 0 && hasAnswer && showInsight && insightText && (
+                        <div
+                          style={{
+                            marginTop: 14,
+                            background: "#FFF9F0",
+                            border: "1.5px solid #FED7AA",
+                            borderRadius: 10,
+                            padding: "12px 14px",
+                            display: "flex",
+                            gap: 10,
+                            alignItems: "flex-start",
+                          }}
+                        >
+                          <span style={{ fontSize: 16, flexShrink: 0, marginTop: 1 }}>💡</span>
+                          <p
+                            style={{
+                              margin: 0,
+                              fontSize: 13,
+                              color: "#92400E",
+                              lineHeight: 1.6,
+                            }}
+                          >
+                            {insightText}
+                          </p>
                         </div>
                       )}
                     </div>
@@ -366,7 +417,7 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
             transition: "background 0.15s",
           }}
         >
-          Continue
+          {canNext ? "Continue" : "Answer the highlighted questions"}
         </button>
       </div>
     </div>

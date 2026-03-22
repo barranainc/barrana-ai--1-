@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePlannerState } from "@/hooks/usePlannerState";
 import type { Industry, PlannerState } from "@/types/planner";
@@ -42,9 +42,109 @@ const stepVariants = {
   exit: { opacity: 0, x: -20 },
 };
 
+function AnalysisLoader() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "80px 24px",
+        textAlign: "center",
+        maxWidth: 400,
+        margin: "0 auto",
+      }}
+    >
+      {/* Animated circular stroke around lightbulb */}
+      <div style={{ position: "relative", width: 80, height: 80, marginBottom: 28 }}>
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 80 80"
+          style={{ position: "absolute", top: 0, left: 0 }}
+        >
+          <circle cx="40" cy="40" r="35" fill="none" stroke="#E2E4ED" strokeWidth="4" />
+          <circle
+            cx="40"
+            cy="40"
+            r="35"
+            fill="none"
+            stroke="#283891"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeDasharray="220"
+            strokeDashoffset="220"
+            style={{
+              animation: "analysisStroke 1.5s ease-out forwards",
+              transformOrigin: "center",
+              transform: "rotate(-90deg)",
+            }}
+          />
+        </svg>
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            fontSize: 28,
+          }}
+        >
+          💡
+        </div>
+      </div>
+
+      <p
+        style={{
+          fontSize: 11,
+          fontWeight: 700,
+          color: "#7E0F4A",
+          textTransform: "uppercase",
+          letterSpacing: "0.12em",
+          marginBottom: 10,
+          marginTop: 0,
+        }}
+      >
+        One moment
+      </p>
+      <h3
+        style={{
+          fontSize: 22,
+          fontWeight: 800,
+          color: "#1A1A2E",
+          marginBottom: 8,
+          marginTop: 0,
+        }}
+      >
+        Analysing your workflows...
+      </h3>
+      <p
+        style={{
+          fontSize: 14,
+          color: "#7B7B7B",
+          lineHeight: 1.6,
+          margin: 0,
+          maxWidth: 300,
+        }}
+      >
+        We are mapping your inputs against automation patterns from similar businesses.
+      </p>
+
+      <style>{`
+        @keyframes analysisStroke {
+          from { stroke-dashoffset: 220; }
+          to { stroke-dashoffset: 0; }
+        }
+      `}</style>
+    </div>
+  );
+}
+
 export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
   const { state, dispatch, nextStep, prevStep } = usePlannerState(initialIndustry);
   const { currentStep } = state;
+  const [showAnalysis, setShowAnalysis] = useState(false);
 
   // Check for ?industry= query param on mount
   useEffect(() => {
@@ -66,6 +166,13 @@ export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
   const showProgress = currentStep > 0;
 
   function handleNext() {
+    if (currentStep === 8) {
+      // Show analysis loader, then move to results
+      dispatch({ type: "SET_STEP", step: 9 });
+      setShowAnalysis(true);
+      setTimeout(() => setShowAnalysis(false), 1500);
+      return;
+    }
     nextStep();
   }
 
@@ -162,6 +269,8 @@ export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
           />
         );
       case 9:
+        // If still showing analysis, show loader instead
+        if (showAnalysis) return <AnalysisLoader key="analysis" />;
         return <PlannerResults key="results" state={state} />;
       default:
         return null;
@@ -188,7 +297,7 @@ export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
       {/* Step content with transition */}
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
-          key={currentStep}
+          key={showAnalysis ? "analysis-loader" : currentStep}
           variants={stepVariants}
           initial="enter"
           animate="center"

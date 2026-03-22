@@ -11,79 +11,100 @@ interface StepProps {
 const READINESS_OPTIONS = [
   {
     value: "ready" as const,
-    label: "Ready to start",
-    sublabel: "I want to implement within 30 days",
+    icon: "🚀",
+    label: "Ready to Go",
+    sublabel: "I want to start implementing within 30 days. Show me the plan.",
+    microInsight:
+      "Great. Your results will include a clear action plan and a direct path to book a strategy call.",
   },
   {
     value: "interested" as const,
-    label: "Interested",
-    sublabel: "I want to understand my options",
+    icon: "🧭",
+    label: "Exploring Options",
+    sublabel: "I want to understand what is possible before committing.",
+    microInsight:
+      "Perfect. Your results will focus on opportunities and a phased approach so you can evaluate without pressure.",
   },
   {
     value: "exploring" as const,
-    label: "Just exploring",
-    sublabel: "I am researching what is possible",
+    icon: "📖",
+    label: "Just Researching",
+    sublabel: "I am learning about automation and want to see what applies to me.",
+    microInsight:
+      "That is a smart approach. Your results will explain what is possible and what it looks like in your specific industry.",
   },
 ];
 
-const VOLUME_FIELDS: {
-  field: keyof PlannerState["volume"];
-  label: string;
-  placeholder: string;
-}[] = [
-  {
-    field: "enquiriesPerWeek",
-    label: "Approximate enquiries or leads per week",
-    placeholder: "e.g. 20",
-  },
-  {
-    field: "appointmentsPerWeek",
-    label: "Appointments per week",
-    placeholder: "e.g. 30",
-  },
-  {
-    field: "activeClientsPerMonth",
-    label: "Active clients or files per month",
-    placeholder: "e.g. 50",
-  },
-  {
-    field: "adminHoursPerWeek",
-    label: "Hours your team spends on repetitive admin per week",
-    placeholder: "e.g. 15",
-  },
-];
+function formatWithCommas(n: number): string {
+  return n.toLocaleString("en-US");
+}
 
 export default function StepVolume({ state, dispatch, onNext, onBack }: StepProps) {
-  const [showVolumeHint, setShowVolumeHint] = useState(false);
+  const [localValues, setLocalValues] = useState<Record<string, number>>({
+    enquiriesPerWeek: state.volume.enquiriesPerWeek ?? 0,
+    appointmentsPerWeek: state.volume.appointmentsPerWeek ?? 0,
+    activeClientsPerMonth: state.volume.activeClientsPerMonth ?? 0,
+    adminHoursPerWeek: state.volume.adminHoursPerWeek ?? 0,
+  });
 
   const canNext = state.readiness !== null;
 
-  const allVolumeEmpty =
-    state.volume.enquiriesPerWeek === null &&
-    state.volume.appointmentsPerWeek === null &&
-    state.volume.activeClientsPerMonth === null &&
-    state.volume.adminHoursPerWeek === null;
-
-  const handleVolumeChange = (
-    field: keyof PlannerState["volume"],
-    rawValue: string
-  ) => {
-    const parsed = parseInt(rawValue, 10);
-    if (!isNaN(parsed) && parsed >= 0) {
-      dispatch({ type: "SET_VOLUME", field, value: parsed });
-    } else if (rawValue === "") {
-      // Allow clearing — treat as null by dispatching 0 then checking display
-      dispatch({ type: "SET_VOLUME", field, value: 0 });
-    }
+  const handleSliderChange = (field: keyof PlannerState["volume"], rawValue: number) => {
+    setLocalValues((prev) => ({ ...prev, [field]: rawValue }));
+    dispatch({ type: "SET_VOLUME", field, value: rawValue });
   };
 
-  const getDisplayValue = (val: number | null): string => {
-    if (val === null || val === 0) return "";
-    return String(val);
-  };
+  const enq = localValues.enquiriesPerWeek;
+  const appt = localValues.appointmentsPerWeek;
+  const clients = localValues.activeClientsPerMonth;
+  const admin = localValues.adminHoursPerWeek;
+
+  const hasAppointmentWorkflow =
+    state.selectedWorkflows.includes("appointment-booking") ||
+    state.selectedWorkflows.includes("scheduling-reminders");
+
+  const selectedReadiness = READINESS_OPTIONS.find((o) => o.value === state.readiness);
 
   return (
     <div style={{ maxWidth: 600, margin: "0 auto", padding: "40px 24px" }}>
+      <style>{`
+        .planner-slider {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 100%;
+          height: 6px;
+          border-radius: 3px;
+          outline: none;
+          cursor: pointer;
+          background: linear-gradient(to right, #283891 0%, #283891 var(--val, 0%), #E2E4ED var(--val, 0%), #E2E4ED 100%);
+        }
+        .planner-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #7E0F4A;
+          cursor: pointer;
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+        }
+        .planner-slider::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #7E0F4A;
+          cursor: pointer;
+          border: 2px solid white;
+          box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+        }
+        .planner-slider::-moz-range-track {
+          height: 6px;
+          border-radius: 3px;
+          background: #E2E4ED;
+        }
+      `}</style>
+
       {/* Header */}
       <h2
         style={{
@@ -95,7 +116,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
           lineHeight: 1.2,
         }}
       >
-        A few numbers to help us size the opportunity.
+        A few numbers to size the opportunity.
       </h2>
       <p
         style={{
@@ -106,73 +127,250 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
           marginTop: 0,
         }}
       >
-        Approximate numbers are fine. This helps us estimate the impact
-        automation could have.
+        Approximate is fine. These help us estimate the real impact automation could have for your business.
       </p>
 
-      {/* Volume inputs */}
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
-        {VOLUME_FIELDS.map(({ field, label, placeholder }) => (
-          <div key={field}>
-            <label
+      {/* Sliders */}
+      <div style={{ display: "flex", flexDirection: "column", gap: 32, marginBottom: 40 }}>
+
+        {/* Slider 1: Enquiries per week */}
+        <div>
+          <label
+            style={{
+              display: "block",
+              fontSize: 14,
+              fontWeight: 600,
+              color: "#1A1A2E",
+              marginBottom: 8,
+            }}
+          >
+            Approximate enquiries or leads per week
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            step={1}
+            value={enq}
+            onChange={(e) => handleSliderChange("enquiriesPerWeek", parseInt(e.target.value, 10))}
+            className="planner-slider"
+            style={{ "--val": `${(enq / 100) * 100}%` } as React.CSSProperties}
+          />
+          <div
+            style={{
+              fontSize: 24,
+              fontWeight: 800,
+              color: "#283891",
+              marginTop: 8,
+              lineHeight: 1,
+            }}
+          >
+            {enq === 0 ? "Unknown" : `${enq} enquiries/week`}
+          </div>
+          {enq > 0 && (
+            <div
               style={{
-                display: "block",
-                fontSize: 14,
-                fontWeight: 600,
-                color: "#1A1A2E",
-                marginBottom: 6,
+                background: "#EEF1FA",
+                border: "1.5px solid #C4CCE8",
+                borderRadius: 10,
+                padding: "10px 14px",
+                fontSize: 13,
+                color: "#4B5563",
+                lineHeight: 1.6,
+                marginTop: 8,
               }}
             >
-              {label}
-            </label>
-            <input
-              type="number"
-              min="0"
-              placeholder={placeholder}
-              value={getDisplayValue(state.volume[field])}
-              onChange={(e) => handleVolumeChange(field, e.target.value)}
-              onFocus={() => setShowVolumeHint(false)}
-              style={{
-                width: "100%",
-                padding: "12px 14px",
-                borderRadius: 8,
-                border: "2px solid #E2E4ED",
-                fontSize: 15,
-                color: "#1A1A2E",
-                outline: "none",
-                boxSizing: "border-box",
-                transition: "border-color 0.15s",
-                background: "white",
-              }}
-              onFocusCapture={(e) => {
-                e.currentTarget.style.borderColor = "#283891";
-              }}
-              onBlurCapture={(e) => {
-                e.currentTarget.style.borderColor = "#E2E4ED";
-              }}
-            />
-          </div>
-        ))}
-      </div>
-
-      {/* Gentle hint if all volume fields empty */}
-      {allVolumeEmpty && showVolumeHint && (
-        <div
-          style={{
-            background: "#FFF8E7",
-            border: "1px solid #F59E0B",
-            borderRadius: 8,
-            padding: "12px 16px",
-            marginBottom: 24,
-            fontSize: 13,
-            color: "#92400E",
-            lineHeight: 1.5,
-          }}
-        >
-          Adding even rough numbers helps us personalise your impact estimates.
-          These are optional but recommended.
+              At {enq} enquiries per week, if even 20% get a slow or no response, that is{" "}
+              <strong>{Math.round(enq * 0.2 * 4)}</strong> potential clients lost per month.
+            </div>
+          )}
         </div>
-      )}
+
+        {/* Slider 2: Appointments per week */}
+        <div>
+          <label
+            style={{
+              display: "block",
+              fontSize: 14,
+              fontWeight: 600,
+              color: hasAppointmentWorkflow ? "#1A1A2E" : "#9CA3AF",
+              marginBottom: 8,
+            }}
+          >
+            Appointments or sessions per week
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={100}
+            step={1}
+            value={appt}
+            onChange={(e) => handleSliderChange("appointmentsPerWeek", parseInt(e.target.value, 10))}
+            className="planner-slider"
+            disabled={!hasAppointmentWorkflow}
+            style={{
+              "--val": `${(appt / 100) * 100}%`,
+              opacity: hasAppointmentWorkflow ? 1 : 0.4,
+              cursor: hasAppointmentWorkflow ? "pointer" : "not-allowed",
+            } as React.CSSProperties}
+          />
+          <div
+            style={{
+              fontSize: 24,
+              fontWeight: 800,
+              color: hasAppointmentWorkflow ? "#283891" : "#9CA3AF",
+              marginTop: 8,
+              lineHeight: 1,
+            }}
+          >
+            {hasAppointmentWorkflow ? (appt === 0 ? "Unknown" : `${appt} appointments/week`) : "—"}
+          </div>
+          {!hasAppointmentWorkflow ? (
+            <div
+              style={{
+                background: "#F9FAFB",
+                border: "1.5px solid #E5E7EB",
+                borderRadius: 10,
+                padding: "10px 14px",
+                fontSize: 13,
+                color: "#9CA3AF",
+                lineHeight: 1.6,
+                marginTop: 8,
+              }}
+            >
+              Not applicable based on your workflows.
+            </div>
+          ) : appt > 0 ? (
+            <div
+              style={{
+                background: "#EEF1FA",
+                border: "1.5px solid #C4CCE8",
+                borderRadius: 10,
+                padding: "10px 14px",
+                fontSize: 13,
+                color: "#4B5563",
+                lineHeight: 1.6,
+                marginTop: 8,
+              }}
+            >
+              At {appt} appointments with a typical 15-20% no-show rate, that is{" "}
+              <strong>{Math.round(appt * 0.175)}</strong> empty slots per week — recoverable with automated reminders.
+            </div>
+          ) : null}
+        </div>
+
+        {/* Slider 3: Active clients per month */}
+        <div>
+          <label
+            style={{
+              display: "block",
+              fontSize: 14,
+              fontWeight: 600,
+              color: "#1A1A2E",
+              marginBottom: 8,
+            }}
+          >
+            Active clients or open files per month
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={200}
+            step={1}
+            value={clients}
+            onChange={(e) => handleSliderChange("activeClientsPerMonth", parseInt(e.target.value, 10))}
+            className="planner-slider"
+            style={{ "--val": `${(clients / 200) * 100}%` } as React.CSSProperties}
+          />
+          <div
+            style={{
+              fontSize: 24,
+              fontWeight: 800,
+              color: "#283891",
+              marginTop: 8,
+              lineHeight: 1,
+            }}
+          >
+            {clients === 0 ? "Unknown" : `${clients} clients/month`}
+          </div>
+          {clients > 0 && (
+            <div
+              style={{
+                background: "#EEF1FA",
+                border: "1.5px solid #C4CCE8",
+                borderRadius: 10,
+                padding: "10px 14px",
+                fontSize: 13,
+                color: "#4B5563",
+                lineHeight: 1.6,
+                marginTop: 8,
+              }}
+            >
+              With {clients} active clients and a 20-30% capacity increase from automation, your team could handle{" "}
+              <strong>{Math.round(clients * 1.25)}</strong> clients without adding headcount.
+            </div>
+          )}
+        </div>
+
+        {/* Slider 4: Admin hours per week — THE AHA MOMENT */}
+        <div>
+          <label
+            style={{
+              display: "block",
+              fontSize: 14,
+              fontWeight: 600,
+              color: "#1A1A2E",
+              marginBottom: 8,
+            }}
+          >
+            Hours your team spends on repetitive admin per week
+          </label>
+          <input
+            type="range"
+            min={0}
+            max={60}
+            step={1}
+            value={admin}
+            onChange={(e) => handleSliderChange("adminHoursPerWeek", parseInt(e.target.value, 10))}
+            className="planner-slider"
+            style={{ "--val": `${(admin / 60) * 100}%` } as React.CSSProperties}
+          />
+          <div
+            style={{
+              fontSize: 24,
+              fontWeight: 800,
+              color: "#283891",
+              marginTop: 8,
+              lineHeight: 1,
+            }}
+          >
+            {admin === 0 ? "Unknown" : `${admin} hours/week`}
+          </div>
+          {admin > 0 && (
+            <div
+              style={{
+                background: "#FFF5F5",
+                border: "1.5px solid #FECACA",
+                borderRadius: 12,
+                padding: "14px 16px",
+                marginTop: 10,
+              }}
+            >
+              <p style={{ margin: "0 0 6px", fontSize: 14, fontWeight: 700, color: "#991B1B", lineHeight: 1.5 }}>
+                {formatWithCommas(admin * 52)} hours per year on tasks that generate zero revenue.
+              </p>
+              <p style={{ margin: "0 0 6px", fontSize: 13, color: "#7F1D1D", lineHeight: 1.6 }}>
+                At $30/hr staff cost, that is{" "}
+                <strong>${formatWithCommas(admin * 52 * 30)}</strong> per year.
+              </p>
+              <p style={{ margin: 0, fontSize: 13, color: "#7F1D1D", lineHeight: 1.6 }}>
+                Automation typically recovers 40-60% of this — that is{" "}
+                <strong>${formatWithCommas(Math.round(admin * 52 * 30 * 0.5))}</strong> in recovered productivity.
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
 
       {/* Readiness question */}
       <div style={{ marginBottom: 36 }}>
@@ -181,92 +379,103 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
             fontSize: 15,
             fontWeight: 700,
             color: "#1A1A2E",
-            marginBottom: 14,
+            marginBottom: 16,
             marginTop: 0,
           }}
         >
-          How ready are you to explore automation?
+          Where are you in your automation journey?
         </p>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+            gap: 12,
+          }}
+        >
           {READINESS_OPTIONS.map((opt) => {
             const isSelected = state.readiness === opt.value;
             return (
               <button
                 key={opt.value}
                 type="button"
-                onClick={() => {
-                  dispatch({ type: "SET_READINESS", readiness: opt.value });
-                  if (allVolumeEmpty) setShowVolumeHint(true);
-                }}
+                onClick={() => dispatch({ type: "SET_READINESS", readiness: opt.value })}
                 style={{
                   display: "flex",
-                  alignItems: "flex-start",
-                  gap: 14,
-                  padding: "14px 16px",
-                  border: isSelected
-                    ? "2px solid #283891"
-                    : "2px solid #E2E4ED",
-                  borderRadius: 10,
-                  background: isSelected ? "#EEF1FA" : "#FFFFFF",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  padding: "20px 18px",
+                  borderRadius: 14,
+                  border: isSelected ? "2px solid #283891" : "2px solid #E2E4ED",
+                  background: isSelected ? "#EEF0FB" : "white",
                   cursor: "pointer",
-                  textAlign: "left",
+                  textAlign: "center",
                   transition: "all 0.15s",
                 }}
               >
-                {/* Radio indicator */}
-                <div
+                <span
                   style={{
-                    width: 20,
-                    height: 20,
-                    borderRadius: "50%",
-                    border: isSelected
-                      ? "2px solid #283891"
-                      : "2px solid #C5C8D6",
-                    background: "white",
-                    flexShrink: 0,
-                    marginTop: 2,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    fontSize: 28,
+                    display: "block",
+                    textAlign: "center",
+                    marginBottom: 10,
                   }}
                 >
-                  {isSelected && (
-                    <div
-                      style={{
-                        width: 10,
-                        height: 10,
-                        borderRadius: "50%",
-                        background: "#283891",
-                      }}
-                    />
-                  )}
+                  {opt.icon}
+                </span>
+                <div
+                  style={{
+                    fontSize: 15,
+                    fontWeight: 800,
+                    textAlign: "center",
+                    color: isSelected ? "#283891" : "#1A1A2E",
+                    marginBottom: 6,
+                  }}
+                >
+                  {opt.label}
                 </div>
-
-                <div>
-                  <div
-                    style={{
-                      fontSize: 15,
-                      fontWeight: isSelected ? 700 : 500,
-                      color: isSelected ? "#283891" : "#1A1A2E",
-                      marginBottom: 2,
-                    }}
-                  >
-                    {opt.label}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: 13,
-                      color: isSelected ? "#4B61B8" : "#7B7B7B",
-                    }}
-                  >
-                    {opt.sublabel}
-                  </div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    color: "#7B7B7B",
+                    textAlign: "center",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {opt.sublabel}
                 </div>
               </button>
             );
           })}
         </div>
+
+        {/* Micro-insight for selected readiness */}
+        {selectedReadiness && (
+          <div
+            style={{
+              marginTop: 14,
+              background: "#FFF9F0",
+              border: "1.5px solid #FED7AA",
+              borderRadius: 10,
+              padding: "12px 14px",
+              display: "flex",
+              gap: 10,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 16, flexShrink: 0, marginTop: 1 }}>💡</span>
+            <p
+              style={{
+                margin: 0,
+                fontSize: 13,
+                color: "#92400E",
+                lineHeight: 1.6,
+              }}
+            >
+              {selectedReadiness.microInsight}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Navigation */}
@@ -289,20 +498,14 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
         </button>
         <button
           type="button"
-          onClick={() => {
-            if (!canNext) return;
-            if (allVolumeEmpty) {
-              setShowVolumeHint(true);
-            }
-            onNext();
-          }}
+          onClick={onNext}
           disabled={!canNext}
           style={{
             flex: 1,
             padding: "13px 24px",
             borderRadius: 8,
             border: "none",
-            background: canNext ? "#283891" : "#C5C8D6",
+            background: canNext ? "#7E0F4A" : "#C5C8D6",
             color: "white",
             fontSize: 15,
             fontWeight: 700,

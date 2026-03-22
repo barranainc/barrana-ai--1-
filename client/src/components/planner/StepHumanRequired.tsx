@@ -1,6 +1,10 @@
 import type { PlannerState, PlannerAction } from "@/types/planner";
 import { HUMAN_REQUIRED_OPTIONS } from "@/config/planner/humanRequired";
 
+const NAVY = "#283891";
+const GREY = "#7B7B7B";
+const DARK = "#1A1A2E";
+
 interface StepProps {
   state: PlannerState;
   dispatch: React.Dispatch<PlannerAction>;
@@ -8,7 +12,61 @@ interface StepProps {
   onBack: () => void;
 }
 
-export default function StepHumanRequired({ state, dispatch, onNext, onBack }: StepProps) {
+const OPTION_EMOJIS: Record<string, string> = {
+  "professional-judgement": "🧠",
+  "legal-regulated": "⚖️",
+  "pricing-decisions": "💰",
+  "sensitive-documents": "🔒",
+  "comms-approval": "💬",
+  "payment-approval": "💳",
+  "edge-cases": "⚠️",
+  "complex-escalation": "🔺",
+  "relationship-conversations": "🤝",
+  "final-signoff": "✅",
+};
+
+interface ToggleSwitchProps {
+  isSelected: boolean;
+}
+
+function ToggleSwitch({ isSelected }: ToggleSwitchProps) {
+  return (
+    <div style={{ position: "relative", width: 44, height: 24, flexShrink: 0 }}>
+      <div
+        style={{
+          width: 44,
+          height: 24,
+          borderRadius: 12,
+          background: isSelected ? NAVY : "#E2E4ED",
+          transition: "background 0.2s",
+          cursor: "pointer",
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            width: 18,
+            height: 18,
+            borderRadius: "50%",
+            background: "white",
+            top: 3,
+            left: isSelected ? 23 : 3,
+            transition: "left 0.2s",
+            boxShadow: "0 1px 3px rgba(0,0,0,0.2)",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default function StepHumanRequired({
+  state,
+  dispatch,
+  onNext,
+  onBack,
+}: StepProps) {
   const selected = state.humanRequired;
 
   const toggle = (id: string) => {
@@ -22,38 +80,33 @@ export default function StepHumanRequired({ state, dispatch, onNext, onBack }: S
         style={{
           fontSize: "clamp(22px, 4vw, 28px)",
           fontWeight: 800,
-          color: "#283891",
+          color: NAVY,
           marginBottom: 10,
           marginTop: 0,
           lineHeight: 1.2,
         }}
       >
-        What should stay in human hands?
+        What should stay in your hands?
       </h2>
       <p
         style={{
           fontSize: 15,
-          color: "#7B7B7B",
+          color: GREY,
           lineHeight: 1.6,
           marginBottom: 28,
           marginTop: 0,
         }}
       >
-        Automation works best when boundaries are clear. Select anything that
-        should not be fully automated in your business.
+        Good automation has clear boundaries. Select anything that should not be
+        fully automated. We will build these as control points.
       </p>
 
-      {/* Options grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          gap: 10,
-          marginBottom: 24,
-        }}
-      >
+      {/* Toggle card list */}
+      <div style={{ marginBottom: 16 }}>
         {HUMAN_REQUIRED_OPTIONS.map((option) => {
           const isSelected = selected.includes(option.id);
+          const emoji = OPTION_EMOJIS[option.id] ?? "•";
+
           return (
             <button
               key={option.id}
@@ -61,95 +114,124 @@ export default function StepHumanRequired({ state, dispatch, onNext, onBack }: S
               onClick={() => toggle(option.id)}
               style={{
                 display: "flex",
-                alignItems: "flex-start",
-                gap: 12,
-                padding: "14px 16px",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+                padding: "16px 18px",
                 border: isSelected
-                  ? "2px solid #283891"
+                  ? `2px solid ${NAVY}`
                   : "2px solid #E2E4ED",
-                borderRadius: 10,
-                background: isSelected ? "#EEF1FA" : "#FFFFFF",
+                borderRadius: 12,
+                background: isSelected ? "#EEF0FB" : "white",
                 cursor: "pointer",
                 textAlign: "left",
+                width: "100%",
                 transition: "all 0.15s",
+                marginBottom: 10,
               }}
             >
-              {/* Checkbox indicator */}
+              {/* Left: emoji + text */}
               <div
                 style={{
-                  width: 20,
-                  height: 20,
-                  borderRadius: 5,
-                  border: isSelected ? "2px solid #283891" : "2px solid #C5C8D6",
-                  background: isSelected ? "#283891" : "white",
-                  flexShrink: 0,
-                  marginTop: 1,
                   display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
+                  gap: 12,
+                  alignItems: "flex-start",
+                  flex: 1,
+                  minWidth: 0,
                 }}
               >
-                {isSelected && (
-                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                    <path
-                      d="M2 6L4.5 8.5L10 3"
-                      stroke="white"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                )}
+                <span
+                  style={{
+                    fontSize: 20,
+                    flexShrink: 0,
+                    marginTop: 2,
+                    lineHeight: 1,
+                  }}
+                >
+                  {emoji}
+                </span>
+                <div style={{ minWidth: 0 }}>
+                  <div
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 700,
+                      color: isSelected ? NAVY : DARK,
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {option.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: GREY,
+                      lineHeight: 1.5,
+                      marginTop: 3,
+                    }}
+                  >
+                    {option.impactDescription}
+                  </div>
+                </div>
               </div>
 
-              <span
-                style={{
-                  fontSize: 14,
-                  fontWeight: isSelected ? 600 : 500,
-                  color: isSelected ? "#283891" : "#1A1A2E",
-                  lineHeight: 1.4,
-                }}
-              >
-                {option.label}
-              </span>
+              {/* Right: toggle */}
+              <ToggleSwitch isSelected={isSelected} />
             </button>
           );
         })}
       </div>
 
-      {/* Helper text */}
-      <div
-        style={{
-          background: "#F7F8FC",
-          border: "1px solid #E2E4ED",
-          borderRadius: 10,
-          padding: "14px 18px",
-          marginBottom: 32,
-          display: "flex",
-          gap: 12,
-          alignItems: "flex-start",
-        }}
-      >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 20 20"
-          fill="none"
-          style={{ flexShrink: 0, marginTop: 1 }}
+      {/* Shield visual — shown when >= 1 selected */}
+      {selected.length >= 1 && (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "10px 16px",
+            background: "#F0F4FF",
+            border: "1.5px solid #C4CCE8",
+            borderRadius: 10,
+            fontSize: 13,
+            fontWeight: 600,
+            color: NAVY,
+            marginBottom: selected.length >= 3 ? 10 : 32,
+          }}
         >
-          <circle cx="10" cy="10" r="9" stroke="#283891" strokeWidth="1.5" />
-          <path
-            d="M10 9v5M10 6.5v.5"
-            stroke="#283891"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-          />
-        </svg>
-        <p style={{ fontSize: 13, color: "#7B7B7B", margin: 0, lineHeight: 1.5 }}>
-          We build automation with these boundaries in mind. Sensitive steps get
-          human approval gates, not full automation.
-        </p>
-      </div>
+          🛡️{" "}
+          <span>
+            {selected.length} control {selected.length === 1 ? "point" : "points"} set
+          </span>
+        </div>
+      )}
+
+      {/* Reassurance message — shown when >= 3 selected */}
+      {selected.length >= 3 && (
+        <div
+          style={{
+            display: "flex",
+            gap: 10,
+            background: "#FFF9F0",
+            border: "1.5px solid #FED7AA",
+            borderRadius: 10,
+            padding: "12px 16px",
+            fontSize: 13,
+            color: "#92400E",
+            lineHeight: 1.6,
+            marginBottom: 32,
+          }}
+        >
+          <span style={{ flexShrink: 0 }}>💡</span>
+          <span>
+            You have set {selected.length} control points. That is good. The
+            automation handles everything around these boundaries while keeping
+            you in charge of the decisions that matter.
+          </span>
+        </div>
+      )}
+
+      {/* Spacer when no shield or reassurance shown */}
+      {selected.length === 0 && <div style={{ marginBottom: 32 }} />}
 
       {/* Navigation */}
       <div style={{ display: "flex", gap: 12 }}>
@@ -161,7 +243,7 @@ export default function StepHumanRequired({ state, dispatch, onNext, onBack }: S
             borderRadius: 8,
             border: "2px solid #E2E4ED",
             background: "white",
-            color: "#1A1A2E",
+            color: DARK,
             fontSize: 15,
             fontWeight: 600,
             cursor: "pointer",
@@ -177,7 +259,7 @@ export default function StepHumanRequired({ state, dispatch, onNext, onBack }: S
             padding: "13px 24px",
             borderRadius: 8,
             border: "none",
-            background: "#283891",
+            background: NAVY,
             color: "white",
             fontSize: 15,
             fontWeight: 700,
