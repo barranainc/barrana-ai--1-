@@ -1,9 +1,10 @@
 /**
  * HeroSystemVisual.tsx
  * 3-layer system diagram for the hero section.
- * Layer 1 (bottom): Your Tools — draws in first
+ * Rendered top-to-bottom: YOUR TEAM → connector → AUTOMATION → connector → YOUR TOOLS
+ * Layer 1 (top): Your Team — fades in first
  * Layer 2 (middle): Automation Layer — glows in
- * Layer 3 (top): Your Team — fades in last
+ * Layer 3 (bottom): Your Tools — draws in last
  * Hidden on mobile (<768px).
  */
 
@@ -29,6 +30,15 @@ const TEAM = [
   { label: "Relationships",  icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" },
 ];
 
+// Floating dot animation keyframes injected once
+const floatKeyframes = `
+@keyframes floatDot {
+  0%   { transform: translateY(0px);   opacity: 0.55; }
+  50%  { transform: translateY(-6px);  opacity: 0.9;  }
+  100% { transform: translateY(0px);   opacity: 0.55; }
+}
+`;
+
 export default function HeroSystemVisual() {
   const reduced = useReducedMotion();
   const [phase, setPhase] = useState(0);
@@ -36,11 +46,11 @@ export default function HeroSystemVisual() {
   useEffect(() => {
     if (reduced) { setPhase(5); return; }
     const timers = [
-      setTimeout(() => setPhase(1), 200),   // tools appear
-      setTimeout(() => setPhase(2), 900),   // lines draw to middle
+      setTimeout(() => setPhase(1), 200),   // team appears
+      setTimeout(() => setPhase(2), 900),   // lines draw down to middle
       setTimeout(() => setPhase(3), 1400),  // automation layer glows in
-      setTimeout(() => setPhase(4), 2000),  // lines draw to top
-      setTimeout(() => setPhase(5), 2500),  // team appears + dots flow
+      setTimeout(() => setPhase(4), 2000),  // lines draw down to tools
+      setTimeout(() => setPhase(5), 2500),  // tools appear + dots flow
     ];
     return () => timers.forEach(clearTimeout);
   }, [reduced]);
@@ -49,18 +59,21 @@ export default function HeroSystemVisual() {
     <div
       className="hidden md:block"
       role="img"
-      aria-label="System diagram showing automation layer connecting your tools to your team"
+      aria-label="System diagram showing automation layer connecting your team to your tools"
       style={{ width: "100%", userSelect: "none" }}
     >
-      {/* Team layer */}
+      {/* Inject float animation */}
+      {!reduced && <style>{floatKeyframes}</style>}
+
+      {/* YOUR TEAM — top row */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.625rem 0.875rem",
+        padding: "0.875rem 1rem",
         background: "rgba(22,163,74,0.06)",
         borderRadius: "0.75rem",
         border: "1px solid rgba(22,163,74,0.2)",
-        opacity: phase >= 5 ? 1 : 0,
-        transform: phase >= 5 ? "translateY(0)" : "translateY(-10px)",
+        opacity: phase >= 1 ? 1 : 0,
+        transform: phase >= 1 ? "translateY(0)" : "translateY(-10px)",
         transition: reduced ? "none" : "opacity 0.5s ease, transform 0.5s ease",
       }}>
         <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-success)", marginRight: "0.75rem", whiteSpace: "nowrap" }}>
@@ -82,80 +95,101 @@ export default function HeroSystemVisual() {
         ))}
       </div>
 
-      {/* Connector lines top */}
+      {/* Connector — team to automation */}
       <div style={{
-        height: "1rem", position: "relative",
-        opacity: phase >= 4 ? 1 : 0,
+        height: "1.5rem", position: "relative",
+        opacity: phase >= 2 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
+        display: "flex", alignItems: "center", justifyContent: "center",
       }}>
-        <svg width="100%" height="100%" viewBox="0 0 400 36" preserveAspectRatio="none">
+        <svg width="100%" height="100%" viewBox="0 0 400 54" preserveAspectRatio="none" style={{ position: "absolute", inset: 0 }}>
           {[70, 155, 245, 330].map((x, i) => (
-            <line key={i} x1={x} y1="36" x2={200} y2="0"
-              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.2"
-              strokeDasharray="40" strokeDashoffset={phase >= 4 ? "0" : "40"}
+            <line key={i} x1={x} y1="0" x2={200} y2="54"
+              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.18"
+              strokeDasharray="60" strokeDashoffset={phase >= 2 ? "0" : "60"}
               style={{ transition: reduced ? "none" : `stroke-dashoffset 0.55s ease ${i * 0.07}s` }}
             />
           ))}
         </svg>
+        {/* Animated floating dot */}
+        {phase >= 5 && (
+          <div style={{
+            width: "6px", height: "6px", borderRadius: "50%",
+            background: "#283891", opacity: 0.55,
+            position: "relative", zIndex: 1,
+            animation: reduced ? "none" : "floatDot 1.8s ease-in-out infinite",
+          }} />
+        )}
       </div>
 
-      {/* Automation layer */}
+      {/* AUTOMATION — middle row */}
       <div style={{
-        display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.625rem 0.875rem",
-        background: "rgba(40,56,145,0.08)",
+        padding: "0.875rem 1rem",
+        background: "rgba(40,56,145,0.10)",
         borderRadius: "0.75rem",
-        border: "1.5px solid rgba(40,56,145,0.25)",
-        boxShadow: phase >= 3 ? "0 0 20px rgba(40,56,145,0.1)" : "none",
+        border: "1.5px solid rgba(40,56,145,0.30)",
+        boxShadow: phase >= 3 ? "0 0 24px rgba(40,56,145,0.12)" : "none",
         opacity: phase >= 3 ? 1 : 0,
         transform: phase >= 3 ? "scale(1)" : "scale(0.97)",
         transition: reduced ? "none" : "opacity 0.6s ease, transform 0.6s ease, box-shadow 0.6s ease",
       }}>
-        <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-navy)", marginRight: "0.5rem", whiteSpace: "nowrap" }}>
+        <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-navy)", marginBottom: "0.5rem", textAlign: "center" }}>
           Automation
         </div>
-        {AUTOMATION.map((label) => (
-          <div key={label} style={{
-            padding: "0.3rem 0.6rem",
-            background: "white",
-            border: "1px solid rgba(40,56,145,0.18)",
-            borderRadius: "0.375rem",
-            fontSize: "0.6875rem",
-            fontWeight: 600,
-            color: "var(--b-navy)",
-            whiteSpace: "nowrap",
-          }}>
-            {label}
-          </div>
-        ))}
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.375rem" }}>
+          {AUTOMATION.map((label) => (
+            <div key={label} style={{
+              padding: "0.3rem 0.6rem",
+              background: "white",
+              border: "1px solid rgba(40,56,145,0.18)",
+              borderRadius: "0.375rem",
+              fontSize: "0.6875rem",
+              fontWeight: 600,
+              color: "var(--b-navy)",
+              whiteSpace: "nowrap",
+            }}>
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Connector lines bottom */}
+      {/* Connector — automation to tools */}
       <div style={{
-        height: "1rem", position: "relative",
-        opacity: phase >= 2 ? 1 : 0,
+        height: "1.5rem", position: "relative",
+        opacity: phase >= 4 ? 1 : 0,
         transition: reduced ? "none" : "opacity 0.4s ease",
+        display: "flex", alignItems: "center", justifyContent: "center",
       }}>
-        <svg width="100%" height="100%" viewBox="0 0 400 36" preserveAspectRatio="none">
+        <svg width="100%" height="100%" viewBox="0 0 400 54" preserveAspectRatio="none" style={{ position: "absolute", inset: 0 }}>
           {[70, 155, 245, 330].map((x, i) => (
-            <line key={i} x1={x} y1="0" x2={200} y2="36"
-              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.2"
-              strokeDasharray="40" strokeDashoffset={phase >= 2 ? "0" : "40"}
+            <line key={i} x1={200} y1="0" x2={x} y2="54"
+              stroke="#283891" strokeWidth="1.5" strokeOpacity="0.18"
+              strokeDasharray="60" strokeDashoffset={phase >= 4 ? "0" : "60"}
               style={{ transition: reduced ? "none" : `stroke-dashoffset 0.55s ease ${i * 0.07}s` }}
             />
           ))}
         </svg>
+        {/* Animated floating dot */}
+        {phase >= 5 && (
+          <div style={{
+            width: "6px", height: "6px", borderRadius: "50%",
+            background: "#283891", opacity: 0.55,
+            position: "relative", zIndex: 1,
+            animation: reduced ? "none" : "floatDot 1.8s ease-in-out 0.9s infinite",
+          }} />
+        )}
       </div>
 
-      {/* Tools layer */}
+      {/* YOUR TOOLS — bottom row */}
       <div style={{
         display: "flex", justifyContent: "space-around", alignItems: "center",
-        padding: "0.625rem 0.875rem",
+        padding: "0.875rem 1rem",
         background: "rgba(40,56,145,0.03)",
         borderRadius: "0.75rem",
         border: "1px solid var(--b-border)",
-        opacity: phase >= 1 ? 1 : 0,
-        transform: phase >= 1 ? "translateY(0)" : "translateY(10px)",
+        opacity: phase >= 5 ? 1 : 0,
+        transform: phase >= 5 ? "translateY(0)" : "translateY(10px)",
         transition: reduced ? "none" : "opacity 0.5s ease, transform 0.5s ease",
       }}>
         <div style={{ fontSize: "0.6rem", fontWeight: 700, letterSpacing: "0.09em", textTransform: "uppercase", color: "var(--b-grey)", marginRight: "0.75rem", whiteSpace: "nowrap" }}>
