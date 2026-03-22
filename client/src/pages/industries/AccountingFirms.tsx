@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import AccountingHeroVisual from "@/components/hero-visuals/AccountingHeroVisual";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Accounting Firms | Tax Season Without the Chaos | Barrana.ai",
@@ -222,5 +223,9 @@ export default function AccountingFirms() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<AccountingHeroVisual />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<AccountingHeroVisual />}>
+      <IndustryPlannerCTA industryName="Accounting Firms" industrySlug="accountant" />
+    </IndustryPageLayout>
+  );
 }

@@ -51,6 +51,7 @@ const industryItems = [
 const mainNavItems = [
   { label: "Services", href: "/services", mega: "services" },
   { label: "Industries", href: "/industries", mega: "industries" },
+  { label: "Automation Planner", href: "/automation-planner" },
   { label: "Locations", href: "/locations" },
   { label: "Resources", href: "/resources" },
   { label: "Case Studies", href: "/case-studies" },
@@ -290,6 +291,7 @@ export default function Navigation() {
             </div>
 
             {[
+              { label: "Automation Planner", href: "/automation-planner" },
               { label: "Locations", href: "/locations" },
               { label: "Resources", href: "/resources" },
               { label: "Case Studies", href: "/case-studies" },

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import LawFirmsHeroVisual from "@/components/hero-visuals/LawFirmsHeroVisual";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Law Firms Toronto | Protect Billable Hours | Barrana.ai",
@@ -216,5 +217,9 @@ export default function LawFirms() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<LawFirmsHeroVisual />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<LawFirmsHeroVisual />}>
+      <IndustryPlannerCTA industryName="Law Firms" industrySlug="law-firm" />
+    </IndustryPageLayout>
+  );
 }

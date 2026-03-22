@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Landscaping Companies Toronto | Barrana.ai",
@@ -192,5 +193,9 @@ export default function Landscaping() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Landscaping" leaks={[{label:"After-hours leads missed",amount:"$6,500/mo"},{label:"Quote follow-up dropped",amount:"$4,200/mo"},{label:"No seasonal reminders",amount:"$3,100/mo"},{label:"Late invoicing",amount:"$1,800/mo"}]} />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Landscaping" leaks={[{label:"After-hours leads missed",amount:"$6,500/mo"},{label:"Quote follow-up dropped",amount:"$4,200/mo"},{label:"No seasonal reminders",amount:"$3,100/mo"},{label:"Late invoicing",amount:"$1,800/mo"}]} />}>
+      <IndustryPlannerCTA industryName="Landscaping" industrySlug="contractor" />
+    </IndustryPageLayout>
+  );
 }
