@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -169,7 +168,7 @@ export default function HomeServices() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Home Services" />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Home Services" industrySlug="contractor" />
     </IndustryPageLayout>
   );

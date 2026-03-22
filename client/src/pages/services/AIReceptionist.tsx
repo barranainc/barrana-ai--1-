@@ -7,7 +7,6 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
-import AIReceptionistHeroVisual from "@/components/hero-visuals/AIReceptionistHeroVisual";
 
 const data: ServicePageData = {
   title: "AI Receptionist | Every Call Answered 24/7 | Barrana.ai",
@@ -176,5 +175,5 @@ export default function AIReceptionist() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} heroVisual={<AIReceptionistHeroVisual />} />;
+  return <ServicePageLayout data={data} />;
 }

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import PhysiotherapyHeroVisual from "@/components/hero-visuals/PhysiotherapyHeroVisual";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -224,7 +223,7 @@ export default function PhysiotherapyClinics() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<PhysiotherapyHeroVisual />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Physiotherapy Clinics" industrySlug="clinic" />
     </IndustryPageLayout>
   );

@@ -5,7 +5,6 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
-import TemplateCoverageGapTimeline from "@/components/hero-visuals/TemplateCoverageGapTimeline";
 
 const data: ServicePageData = {
   title: "After-Hours Automation | Your Business Does Not Close at 5pm Anymore | Barrana.ai",
@@ -152,5 +151,5 @@ export default function AfterHoursAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} heroVisual={<TemplateCoverageGapTimeline businessStart={9} businessEnd={17} />} />;
+  return <ServicePageLayout data={data} />;
 }
