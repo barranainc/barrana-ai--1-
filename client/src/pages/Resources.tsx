@@ -6,7 +6,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
-import { toast } from "sonner";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,6 +28,7 @@ const guides = [
     description: "A plain-language explanation of what AI automation actually means in a small business context, how it differs from software subscriptions, and what it can realistically do for your operations.",
     readTime: "8 min read",
     color: "#283891",
+    href: "/resources/what-is-ai-automation",
   },
   {
     category: "Framework",
@@ -36,6 +36,7 @@ const guides = [
     description: "A structured framework for identifying the highest-impact automation opportunities in your business. Covers workflow mapping, friction scoring, and prioritization methodology.",
     readTime: "12 min read",
     color: "#7E0F4A",
+    href: "/resources/operational-friction-map",
   },
   {
     category: "Implementation",
@@ -43,6 +44,7 @@ const guides = [
     description: "A step-by-step guide to building an automated client intake system using tools your business already has. Covers form design, CRM integration, and follow-up sequences.",
     readTime: "15 min read",
     color: "#283891",
+    href: "/resources/automate-client-intake",
   },
   {
     category: "ROI",
@@ -50,6 +52,7 @@ const guides = [
     description: "The Automation ROI Stack: a framework for calculating the real financial and operational value of automation investments. Includes benchmarks from GTA businesses.",
     readTime: "10 min read",
     color: "#7E0F4A",
+    href: "/resources/automation-roi",
   },
   {
     category: "Industry Guide",
@@ -57,6 +60,7 @@ const guides = [
     description: "A comprehensive guide to automation for law firms, accounting firms, and immigration consultants. Covers the specific workflows that benefit most from automation in each sector.",
     readTime: "20 min read",
     color: "#283891",
+    href: "/resources/professional-services-guide",
   },
   {
     category: "Strategy",
@@ -64,6 +68,7 @@ const guides = [
     description: "How to decide which systems to connect first when building an automation stack. Covers the relationship between tool maturity, data quality, and automation potential.",
     readTime: "9 min read",
     color: "#7E0F4A",
+    href: "/resources/integration-priority-matrix",
   },
 ];
 
@@ -175,14 +180,16 @@ export default function Resources() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {guides.map((guide, i) => (
-              <div
+              <Link
                 key={guide.title}
-                className="group bg-white rounded-2xl p-6 border hover:shadow-md transition-all cursor-pointer flex flex-col"
+                href={guide.href}
+                className="group bg-white rounded-2xl p-6 border hover:shadow-md transition-all flex flex-col"
                 style={{
                   borderColor: "rgba(40,56,145,0.08)",
                   opacity: guidesSection.visible ? 1 : 0,
                   transform: guidesSection.visible ? "translateY(0)" : "translateY(20px)",
                   transition: `opacity 0.4s ease ${i * 0.07}s, transform 0.4s ease ${i * 0.07}s, box-shadow 0.2s ease`,
+                  textDecoration: "none",
                 }}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -198,15 +205,15 @@ export default function Resources() {
                   {guide.title}
                 </h3>
                 <p className="text-xs text-gray-500 leading-relaxed mb-4">{guide.description}</p>
-                <button
+                <Link
+                  href={guide.href}
                   className="flex items-center gap-1.5 text-xs font-semibold mt-auto"
                   style={{ color: guide.color }}
-                  onClick={() => toast("Full guides coming soon — book an audit for personalized insights.")}
                 >
                   Read guide
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                </button>
-              </div>
+                </Link>
+              </Link>
             ))}
           </div>
         </div>

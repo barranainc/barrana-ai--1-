@@ -1,45 +1,214 @@
 import { Link } from "wouter";
-const scenarios = [
-  { industry: "Immigration Consultant", before: { title: "Before Automation", points: ["New client inquiry arrives by email at 6pm", "Consultant sees it the next morning at 9am — 15 hours later", "Manually creates a client record in the CRM", "Sends a welcome email and intake form link", "Follows up manually when forms are not completed", "Copies form responses into the CRM and document tracker", "Schedules the initial consultation by email back-and-forth", "Total time per new client intake: 45 to 60 minutes"] }, after: { title: "After Automation", points: ["New client inquiry arrives by email at 6pm", "Automated acknowledgment sent within 90 seconds", "Intake form automatically delivered with visa-type-specific document checklist", "CRM record created automatically from form responses", "Document reminders sent automatically every 48 hours for outstanding items", "Consultation scheduled automatically via calendar link", "Consultant notified when intake is complete and ready to review", "Total time per new client intake: under 5 minutes"] }, metrics: [{ label: "Intake time reduction", value: "87%" }, { label: "Manual data entry steps", value: "0" }, { label: "ROI recovery", value: "45 days" }] },
-  { industry: "Residential Contractor", before: { title: "Before Automation", points: ["Lead submits a quote request form at 9pm", "Owner is on a job site the next day and sees it at 5pm — 20 hours later", "Calls the lead back — no answer", "Sends a manual email follow-up", "Lead has already booked with a competitor", "8 to 12 qualified leads lost per month to slow response", "Owner spends 2 to 3 hours per week on manual lead follow-up"] }, after: { title: "After Automation", points: ["Lead submits a quote request form at 9pm", "Automated acknowledgment sent within 90 seconds", "Qualification questions sent automatically", "Lead books a site visit via calendar link", "Owner receives a notification with lead details and booking confirmation", "Quote follow-up sequence runs automatically if lead does not book", "0 leads lost to slow response time"] }, metrics: [{ label: "Lead response time", value: "90 sec" }, { label: "Quote conversion increase", value: "+22%" }, { label: "After-hours leads captured", value: "100%" }] },
-  { industry: "Accounting Firm", before: { title: "Before Automation", points: ["New tax season engagement confirmed by email", "Staff manually sends engagement letter for signature", "Manually creates a document checklist and emails it to the client", "Follows up manually when documents are not received", "Copies received documents into the client folder", "Manually updates the project management tool", "Staff spends 8 to 12 hours per week on document chasing"] }, after: { title: "After Automation", points: ["New engagement confirmed — automation triggers immediately", "Engagement letter automatically sent for e-signature", "Document checklist automatically delivered based on service type", "Automated reminders sent every 48 hours for outstanding documents", "Document receipt automatically logged in the project management tool", "Staff notified when all documents are received and ready for review", "Staff time on document chasing: near zero"] }, metrics: [{ label: "Staff hours saved per week", value: "8–12 hrs" }, { label: "Document tracking accuracy", value: "100%" }, { label: "ROI recovery", value: "60 days" }] },
+import BeforeAfterSection from "@/components/service/BeforeAfterSection";
+
+const NAVY = "#283891";
+const DARK = "#1A1A2E";
+
+const sectionHeadingStyle: React.CSSProperties = {
+  fontSize: "1.375rem",
+  fontWeight: 800,
+  color: DARK,
+  marginBottom: "1.5rem",
+};
+
+const sectionLabelStyle: React.CSSProperties = {
+  display: "inline-block",
+  fontSize: "0.7rem",
+  fontWeight: 700,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase",
+  color: NAVY,
+  background: "rgba(40,56,145,0.08)",
+  border: "1px solid rgba(40,56,145,0.18)",
+  borderRadius: "9999px",
+  padding: "0.25rem 0.8rem",
+  marginBottom: "0.75rem",
+};
+
+const sections = [
+  {
+    label: "Lead Response",
+    heading: "Lead Response",
+    bg: "white",
+    metrics: [
+      { label: "Response Time", before: "4–8 hours", after: "Under 90 seconds", beforeW: 88, afterW: 8 },
+      { label: "After-Hours Coverage", before: "0% captured", after: "100% captured", beforeW: 100, afterW: 5 },
+      { label: "Follow-Up Rate", before: "40% of leads", after: "100% of leads", beforeW: 40, afterW: 100 },
+    ],
+  },
+  {
+    label: "Client Intake",
+    heading: "Client Intake",
+    bg: "#F7F9FC",
+    metrics: [
+      { label: "Intake Process Time", before: "30–45 minutes manual", after: "Under 5 minutes", beforeW: 90, afterW: 10 },
+      { label: "Staff Touchpoints", before: "7 manual steps", after: "1 review only", beforeW: 90, afterW: 12 },
+      { label: "CRM Record Accuracy", before: "60–70% complete", after: "100% complete", beforeW: 65, afterW: 100 },
+    ],
+  },
+  {
+    label: "Document Collection",
+    heading: "Document Collection",
+    bg: "white",
+    metrics: [
+      { label: "Average Collection Time", before: "18–21 days", after: "9–11 days", beforeW: 90, afterW: 50 },
+      { label: "Collection Completion Rate", before: "65%", after: "93%", beforeW: 65, afterW: 93 },
+      { label: "Staff Chase Time/Week", before: "6–8 hours", after: "30 minutes", beforeW: 80, afterW: 8 },
+    ],
+  },
+  {
+    label: "Appointment Reminders",
+    heading: "Appointment Reminders",
+    bg: "#F7F9FC",
+    metrics: [
+      { label: "No-Show Rate", before: "18–25%", after: "6–10%", beforeW: 25, afterW: 10 },
+      { label: "Reminder Completion", before: "60% receive reminders", after: "100% automated", beforeW: 60, afterW: 100 },
+      { label: "Rebooking on Cancellation", before: "50% rebooked", after: "85% rebooked", beforeW: 50, afterW: 85 },
+    ],
+  },
+  {
+    label: "Invoicing",
+    heading: "Invoicing",
+    bg: "white",
+    metrics: [
+      { label: "Invoice Delivery", before: "2–4 weeks after completion", after: "Same day, automatic", beforeW: 85, afterW: 5 },
+      { label: "Payment Collection Time", before: "45–60 days average", after: "28–35 days average", beforeW: 85, afterW: 50 },
+      { label: "Overdue Rate", before: "25–35%", after: "12–18%", beforeW: 35, afterW: 18 },
+    ],
+  },
+  {
+    label: "After-Hours Coverage",
+    heading: "After-Hours Lead Coverage",
+    bg: "#F7F9FC",
+    metrics: [
+      { label: "After-5pm Lead Capture", before: "0% (voicemail)", after: "100% responded", beforeW: 100, afterW: 5 },
+      { label: "Qualified by Morning", before: "0%", after: "100% in CRM", beforeW: 100, afterW: 5 },
+      { label: "Lead Loss Rate", before: "High — 40%+ after hours", after: "Under 5%", beforeW: 40, afterW: 5 },
+    ],
+  },
+  {
+    label: "Quote Follow-Up",
+    heading: "Quote Follow-Up",
+    bg: "white",
+    metrics: [
+      { label: "Follow-Up Completion", before: "35–40% of quotes", after: "100% automated", beforeW: 40, afterW: 100 },
+      { label: "Conversion Rate", before: "Baseline", after: "+15–25% improvement", beforeW: 50, afterW: 72 },
+      { label: "Follow-Up Speed", before: "Next day (if remembered)", after: "Auto at 48hr, 5d, 10d", beforeW: 70, afterW: 5 },
+    ],
+  },
+  {
+    label: "Client Status Updates",
+    heading: "Client Status Updates",
+    bg: "#F7F9FC",
+    metrics: [
+      { label: "Outbound Status Calls/Week", before: "25–30 calls", after: "Under 5 calls", beforeW: 90, afterW: 18 },
+      { label: "Client Satisfaction (status info)", before: "60% satisfied", after: "90%+ satisfied", beforeW: 60, afterW: 90 },
+      { label: "Staff time on updates/week", before: "4–6 hours", after: "30 minutes", beforeW: 80, afterW: 8 },
+    ],
+  },
 ];
+
 export default function BeforeAfter() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="hero-light pt-24 pb-16">
+      {/* Hero */}
+      <section
+        style={{
+          background: `linear-gradient(135deg, ${DARK} 0%, ${NAVY} 100%)`,
+          paddingTop: "6rem",
+          paddingBottom: "4rem",
+        }}
+      >
         <div className="container">
-          <div className="breadcrumb"><Link href="/">Home</Link><span className="breadcrumb-sep">/</span><span>Before & After</span></div>
+          <div className="breadcrumb" style={{ marginBottom: "1.5rem" }}>
+            <Link href="/" style={{ color: "rgba(255,255,255,0.55)" }}>Home</Link>
+            <span className="breadcrumb-sep" style={{ color: "rgba(255,255,255,0.3)" }}>/</span>
+            <span style={{ color: "rgba(255,255,255,0.8)" }}>Before vs After</span>
+          </div>
           <div className="max-w-3xl">
-            <div className="eyebrow">Before & After Automation</div>
-            <h1 className="font-extrabold mb-4" style={{ color: "#1F2937" }}>What Operations Look Like Before and After Automation</h1>
-            <p className="text-lg leading-relaxed" style={{ color: "#6B7280" }}>Side-by-side comparisons of real operational workflows before and after automation implementation. These are representative examples based on GTA service businesses.</p>
+            <div
+              style={{
+                display: "inline-block",
+                fontSize: "0.75rem",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                color: "#60A5FA",
+                background: "rgba(96,165,250,0.12)",
+                borderRadius: "9999px",
+                padding: "0.3rem 0.9rem",
+                marginBottom: "1.25rem",
+                border: "1px solid rgba(96,165,250,0.25)",
+              }}
+            >
+              Workflow Comparisons
+            </div>
+            <h1
+              style={{
+                fontSize: "clamp(2rem, 4vw, 3rem)",
+                fontWeight: 900,
+                color: "white",
+                lineHeight: 1.15,
+                marginBottom: "1.25rem",
+              }}
+            >
+              Before vs After Automation
+            </h1>
+            <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.72)", lineHeight: 1.65, maxWidth: "600px" }}>
+              Real workflow comparisons showing what changes when coordination tasks are automated.
+              Eight common business workflows — side by side.
+            </p>
           </div>
         </div>
       </section>
-      <section className="py-12">
-        <div className="container space-y-16">
-          {scenarios.map((s) => (
-            <div key={s.industry}>
-              <h2 className="text-2xl font-bold mb-6" style={{ color: "#1F2937" }}>{s.industry}</h2>
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div className="p-6 rounded-2xl border" style={{ borderColor: "rgba(239,68,68,0.2)", backgroundColor: "#FFF5F5" }}>
-                  <h3 className="font-bold mb-4 flex items-center gap-2" style={{ color: "#DC2626" }}><span className="w-5 h-5 rounded-full bg-red-100 flex items-center justify-center text-xs">✗</span>{s.before.title}</h3>
-                  <ul className="space-y-2">{s.before.points.map((p, i) => <li key={i} className="text-sm flex items-start gap-2" style={{ color: "#374151" }}><span className="w-1.5 h-1.5 rounded-full mt-1.5 bg-red-300 flex-shrink-0" />{p}</li>)}</ul>
-                </div>
-                <div className="p-6 rounded-2xl border" style={{ borderColor: "rgba(16,185,129,0.2)", backgroundColor: "#F0FDF4" }}>
-                  <h3 className="font-bold mb-4 flex items-center gap-2" style={{ color: "#059669" }}><span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-xs">✓</span>{s.after.title}</h3>
-                  <ul className="space-y-2">{s.after.points.map((p, i) => <li key={i} className="text-sm flex items-start gap-2" style={{ color: "#374151" }}><span className="w-1.5 h-1.5 rounded-full mt-1.5 bg-green-400 flex-shrink-0" />{p}</li>)}</ul>
-                </div>
-              </div>
-              <div className="grid grid-cols-3 gap-4">
-                {s.metrics.map((m) => <div key={m.label} className="p-4 rounded-xl text-center" style={{ backgroundColor: "#F7F9FC", border: "1px solid rgba(26,82,118,0.08)" }}><div className="text-2xl font-extrabold mb-1" style={{ color: "#283891" }}>{m.value}</div><div className="text-xs" style={{ color: "#6B7280" }}>{m.label}</div></div>)}
-              </div>
-            </div>
-          ))}
+
+      {/* Sections */}
+      {sections.map((sec) => (
+        <section
+          key={sec.label}
+          style={{
+            paddingTop: "3.5rem",
+            paddingBottom: "3.5rem",
+            background: sec.bg,
+          }}
+        >
+          <div className="container">
+            <span style={sectionLabelStyle}>{sec.label}</span>
+            <h2 style={sectionHeadingStyle}>{sec.heading}</h2>
+            <BeforeAfterSection metrics={sec.metrics} />
+          </div>
+        </section>
+      ))}
+
+      {/* CTA */}
+      <section
+        style={{
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
+          background: `linear-gradient(135deg, ${DARK} 0%, ${NAVY} 100%)`,
+        }}
+      >
+        <div className="container" style={{ textAlign: "center" }}>
+          <h2 style={{ fontSize: "2rem", fontWeight: 800, color: "white", marginBottom: "1rem" }}>
+            Ready to See Your Before &amp; After?
+          </h2>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.68)",
+              fontSize: "1.0625rem",
+              maxWidth: "540px",
+              margin: "0 auto 2rem",
+              lineHeight: 1.65,
+            }}
+          >
+            Book a free Automation Audit and we will map your current workflows, identify the highest-impact
+            automations, and show you what the after state looks like for your specific business.
+          </p>
+          <Link href="/contact" className="btn-primary">
+            Book Free Audit
+          </Link>
         </div>
       </section>
-      <section className="cta-section py-20"><div className="container text-center"><h2 className="text-3xl font-extrabold text-white mb-4">Ready to See Your Before & After?</h2><p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>Book a free Automation Audit and we will map your current workflows and show you what automation would look like for your specific business.</p><Link href="/contact" className="btn-primary">Book Free Audit</Link></div></section>
     </div>
   );
 }

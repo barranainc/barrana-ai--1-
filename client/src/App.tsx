@@ -80,12 +80,18 @@ import IntegrationDetail from "./pages/IntegrationDetail";
 import ROICalculator from "./pages/ROICalculator";
 import LocalSEOPage from "./pages/LocalSEOPage";
 import FAQ from "./pages/FAQ";
+import WhatIsAIAutomation from "./pages/resources/WhatIsAIAutomation";
+import OperationalFrictionMap from "./pages/resources/OperationalFrictionMap";
+import AutomateClientIntake from "./pages/resources/AutomateClientIntake";
+import AutomationROI from "./pages/resources/AutomationROI";
+import ProfessionalServicesGuide from "./pages/resources/ProfessionalServicesGuide";
+import IntegrationPriorityMatrix from "./pages/resources/IntegrationPriorityMatrix";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navigation />
-      <main>{children}</main>
+      <main style={{ paddingTop: "70px" }}>{children}</main>
       <Footer />
     </>
   );
@@ -136,6 +142,18 @@ function Router() {
         <Route path="/locations" component={Locations} />
         <Route path="/locations/:slug" component={LocationDetail} />
         <Route path="/resources" component={Resources} />
+        <Route path="/resources/what-is-ai-automation" component={WhatIsAIAutomation} />
+        <Route path="/resources/operational-friction-map" component={OperationalFrictionMap} />
+        <Route path="/resources/automate-client-intake" component={AutomateClientIntake} />
+        <Route path="/resources/automation-roi" component={AutomationROI} />
+        <Route path="/resources/professional-services-guide" component={ProfessionalServicesGuide} />
+        <Route path="/resources/integration-priority-matrix" component={IntegrationPriorityMatrix} />
+        <Route path="/resources/automation-playbooks" component={Playbooks} />
+        <Route path="/resources/ai-automation-glossary" component={Glossary} />
+        <Route path="/resources/workflow-templates" component={WorkflowTemplates} />
+        <Route path="/resources/automation-benchmarks" component={Benchmarks} />
+        <Route path="/resources/before-and-after" component={BeforeAfter} />
+        <Route path="/resources/roi-calculator" component={ROICalculator} />
         <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route path="/case-studies/immigration-firm-north-york" component={ImmigrationFirmNorthYork} />
