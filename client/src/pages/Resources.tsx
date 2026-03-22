@@ -21,6 +21,33 @@ function useReveal(threshold = 0.15) {
   return { ref, visible };
 }
 
+// ── Pillar guides (6) ────────────────────────────────────────────────────────
+const pillarGuides = [
+  { emoji: "🚀", category: "Getting Started", title: "AI Adoption for Small Businesses: A Practical Guide", desc: "What AI adoption actually means for an SMB, the five stages, what to automate, and what to keep human. Includes cost ranges and common mistakes.", readTime: "15 min read", href: "/ai-adoption-small-business", color: "#283891" },
+  { emoji: "⚙️", category: "Framework", title: "Business Workflow Automation for SMBs: The Complete Guide", desc: "The 8 highest-impact workflows to automate, how they connect into a system, and a phased approach to building your automation stack.", readTime: "12 min read", href: "/workflow-automation-smb", color: "#7E0F4A" },
+  { emoji: "📞", category: "Service Guide", title: "AI Receptionist for Small Businesses and Professional Services", desc: "How AI receptionists work, what they cost vs a human, when to escalate calls, and honest coverage comparisons by industry.", readTime: "10 min read", href: "/ai-receptionist", color: "#283891" },
+  { emoji: "🧑‍💼", category: "Governance", title: "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge", desc: "How to design automation systems with approval gates, escalation paths, and human decision points — the Control Layer explained.", readTime: "12 min read", href: "/human-in-the-loop-ai", color: "#7E0F4A" },
+  { emoji: "🏭", category: "Industry Guide", title: "AI Automation by Industry: What Works for Your Business", desc: "Hub page linking to industry-specific automation playbooks for accountants, immigration consultants, law firms, clinics, contractors, and agencies.", readTime: "8 min read", href: "/ai-automation-industries", color: "#283891" },
+  { emoji: "📍", category: "Local", title: "AI Automation for Small Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and free Automation Audit for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
+];
+
+// ── Decision / insights pages (5) ────────────────────────────────────────────
+const decisionGuides = [
+  { category: "Decision Guide", title: "What Should a Small Business Automate First?", desc: "The 5 highest-ROI starting points ranked, with a priority pyramid and before/after metrics for lead response.", readTime: "10 min read", href: "/insights/what-to-automate-first", color: "#283891" },
+  { category: "Assessment", title: "How to Know If Your Business Is Automation-Ready", desc: "The 5 readiness signals, a live readiness checker, and what to fix before you start automating.", readTime: "8 min read", href: "/insights/automation-readiness", color: "#7E0F4A" },
+  { category: "Decision Guide", title: "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools", desc: "Why the hybrid approach — off-the-shelf tools connected by a custom automation layer — wins for most SMBs.", readTime: "9 min read", href: "/insights/build-vs-buy", color: "#283891" },
+  { category: "Trust Builder", title: "When AI Is Not the Answer: 7 Signs You're Not Ready", desc: "The 7 signs that automation won't solve your problem yet, and what to fix first before you build.", readTime: "7 min read", href: "/insights/when-ai-is-not-the-answer", color: "#7E0F4A" },
+  { category: "Decision Guide", title: "Automation vs Delegation: What Business Owners Get Wrong", desc: "A 2×2 decision matrix for knowing when to automate, when to delegate, and when to do both with AI assist.", readTime: "8 min read", href: "/insights/automation-vs-delegation", color: "#283891" },
+];
+
+// ── Workflow deep-dives (4) ───────────────────────────────────────────────────
+const workflowGuides = [
+  { emoji: "⚡", title: "How to Automate Lead Intake", desc: "Trigger → qualify → route → CRM record → book. Response time chart and complete before/after for lead response.", readTime: "10 min read", href: "/workflows/lead-intake" },
+  { emoji: "📅", title: "How to Automate Appointment Booking & Reduce No-Shows", desc: "Dual-reminder system (48hr + 2hr SMS), waitlist auto-fill, and no-show impact calculations.", readTime: "9 min read", href: "/workflows/appointment-booking" },
+  { emoji: "🤝", title: "How to Automate Client Onboarding Using Your Current Tools", desc: "Manual vs automated timeline comparison. Works with existing CRM, forms, and calendar.", readTime: "10 min read", href: "/workflows/client-onboarding" },
+  { emoji: "📋", title: "How to Automate Document Collection and Stop Chasing Clients", desc: "Dynamic checklists, 48-hour auto-reminders, secure upload portal, completion notifications.", readTime: "9 min read", href: "/workflows/document-collection" },
+];
+
 const guides = [
   {
     category: "Getting Started",
@@ -119,6 +146,9 @@ const faqs = [
 export default function Resources() {
   const hero = useReveal(0.05);
   const guidesSection = useReveal();
+  const pillarSection = useReveal();
+  const decisionSection = useReveal();
+  const workflowSection = useReveal();
   const frameworksSection = useReveal();
   const faqSection = useReveal();
   const cta = useReveal(0.2);
@@ -213,6 +243,100 @@ export default function Resources() {
                   Read guide
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </Link>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pillar Guides */}
+      <section className="py-20" style={{ backgroundColor: "#F7F8FB" }}>
+        <div className="container">
+          <div
+            ref={pillarSection.ref}
+            style={{ opacity: pillarSection.visible ? 1 : 0, transform: pillarSection.visible ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}
+          >
+            <div className="section-divider mb-4"><span className="section-label">Pillar Guides</span></div>
+            <div className="grid lg:grid-cols-2 gap-4 items-end mb-10">
+              <h2 className="text-3xl font-extrabold" style={{ color: "#111827" }}>Foundation Guides</h2>
+              <p className="text-gray-500 leading-relaxed">Comprehensive guides to AI adoption, workflow automation, and governance for small businesses.</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {pillarGuides.map((g, i) => (
+              <Link key={g.href} href={g.href} className="group bg-white rounded-2xl p-6 border hover:shadow-md transition-all flex flex-col" style={{ borderColor: "rgba(40,56,145,0.08)", textDecoration: "none", opacity: pillarSection.visible ? 1 : 0, transform: pillarSection.visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.4s ease ${i * 0.07}s, transform 0.4s ease ${i * 0.07}s, box-shadow 0.2s ease` }}>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ backgroundColor: `${g.color}12`, color: g.color }}>{g.category}</span>
+                  <span className="text-xs text-gray-400">{g.readTime}</span>
+                </div>
+                <div className="text-2xl mb-3">{g.emoji}</div>
+                <h3 className="font-bold text-gray-900 mb-2 leading-snug group-hover:text-[#283891] transition-colors text-sm flex-1">{g.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-4">{g.desc}</p>
+                <span className="flex items-center gap-1.5 text-xs font-semibold mt-auto" style={{ color: g.color }}>
+                  Read guide <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Decision Guides */}
+      <section className="py-20" style={{ backgroundColor: "#FFFFFF" }}>
+        <div className="container">
+          <div
+            ref={decisionSection.ref}
+            style={{ opacity: decisionSection.visible ? 1 : 0, transform: decisionSection.visible ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}
+          >
+            <div className="section-divider mb-4"><span className="section-label">Insights</span></div>
+            <div className="grid lg:grid-cols-2 gap-4 items-end mb-10">
+              <h2 className="text-3xl font-extrabold" style={{ color: "#111827" }}>Decision Guides</h2>
+              <p className="text-gray-500 leading-relaxed">Five pages to help you decide what to automate, when to automate, and when not to.</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {decisionGuides.map((g, i) => (
+              <Link key={g.href} href={g.href} className="group bg-white rounded-2xl p-6 border hover:shadow-md transition-all flex flex-col" style={{ borderColor: "rgba(40,56,145,0.08)", textDecoration: "none", opacity: decisionSection.visible ? 1 : 0, transform: decisionSection.visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.4s ease ${i * 0.07}s, transform 0.4s ease ${i * 0.07}s, box-shadow 0.2s ease` }}>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full" style={{ backgroundColor: `${g.color}12`, color: g.color }}>{g.category}</span>
+                  <span className="text-xs text-gray-400">{g.readTime}</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2 leading-snug group-hover:text-[#283891] transition-colors text-sm flex-1">{g.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-4">{g.desc}</p>
+                <span className="flex items-center gap-1.5 text-xs font-semibold mt-auto" style={{ color: g.color }}>
+                  Read guide <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workflow Deep Dives */}
+      <section className="py-20" style={{ backgroundColor: "#F7F8FB" }}>
+        <div className="container">
+          <div
+            ref={workflowSection.ref}
+            style={{ opacity: workflowSection.visible ? 1 : 0, transform: workflowSection.visible ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}
+          >
+            <div className="section-divider mb-4"><span className="section-label">Workflow Guides</span></div>
+            <div className="grid lg:grid-cols-2 gap-4 items-end mb-10">
+              <h2 className="text-3xl font-extrabold" style={{ color: "#111827" }}>Workflow Deep Dives</h2>
+              <p className="text-gray-500 leading-relaxed">Step-by-step operational guides for the four highest-impact workflows in any service business.</p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {workflowGuides.map((g, i) => (
+              <Link key={g.href} href={g.href} className="group bg-white rounded-2xl p-6 border hover:shadow-md transition-all flex flex-col" style={{ borderColor: "rgba(40,56,145,0.08)", borderTopWidth: "3px", borderTopColor: "#283891", textDecoration: "none", opacity: workflowSection.visible ? 1 : 0, transform: workflowSection.visible ? "translateY(0)" : "translateY(20px)", transition: `opacity 0.4s ease ${i * 0.08}s, transform 0.4s ease ${i * 0.08}s, box-shadow 0.2s ease` }}>
+                <div className="text-3xl mb-4">{g.emoji}</div>
+                <h3 className="font-bold text-gray-900 mb-2 leading-snug group-hover:text-[#283891] transition-colors text-sm flex-1">{g.title}</h3>
+                <p className="text-xs text-gray-500 leading-relaxed mb-4">{g.desc}</p>
+                <div className="flex items-center justify-between mt-auto">
+                  <span className="text-xs text-gray-400">{g.readTime}</span>
+                  <span className="flex items-center gap-1 text-xs font-semibold" style={{ color: "#283891" }}>
+                    Read <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
