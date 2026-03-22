@@ -153,9 +153,10 @@ function ProblemsGrid({ problems }: { problems: { title: string; desc: string }[
 interface IndustryPageLayoutProps {
   data: IndustryPageData;
   heroVisual?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-export default function IndustryPageLayout({ data, heroVisual }: IndustryPageLayoutProps) {
+export default function IndustryPageLayout({ data, heroVisual, children }: IndustryPageLayoutProps) {
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -253,8 +254,9 @@ export default function IndustryPageLayout({ data, heroVisual }: IndustryPageLay
         </div>
       </section>
 
-      {/* Optional custom slot */}
+      {/* Optional custom slot — from data.children or JSX children prop */}
       {data.children}
+      {children}
 
       {/* 7. Control Layer — off-white */}
       <section style={sectionStyle("#F7F9FC")}>

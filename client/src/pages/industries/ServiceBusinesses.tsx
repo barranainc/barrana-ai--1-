@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Service Businesses Toronto | Systematize the Client Lifecycle | Barrana.ai",
@@ -109,5 +110,9 @@ export default function ServiceBusinesses() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Service Businesses" />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Service Businesses" />}>
+      <IndustryPlannerCTA industryName="Service Businesses" industrySlug="professional-other" />
+    </IndustryPageLayout>
+  );
 }

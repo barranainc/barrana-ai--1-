@@ -12,6 +12,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, ChevronDown, Search } from "lucide-react";
+import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
 
 // Schema
 import JsonLd from "@/components/JsonLd";
@@ -530,6 +531,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── AUTOMATION PLANNER CTA ───────────────────────────────────── */}
+      <HomepagePlannerCTA />
 
       {/* ─── SOLUTION / BEFORE–AFTER ──────────────────────────────────── */}
       <section id="solution" className="section" style={{ background: "white" }}>

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import TemplateEmptySlotGrid from "@/components/hero-visuals/TemplateEmptySlotGrid";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Medical Clinics Toronto | Barrana.ai",
@@ -222,5 +223,9 @@ export default function MedicalClinics() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<TemplateEmptySlotGrid industry="Medical Clinics" totalSlots={16} emptySlots={3} slotValue={180} />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<TemplateEmptySlotGrid industry="Medical Clinics" totalSlots={16} emptySlots={3} slotValue={180} />}>
+      <IndustryPlannerCTA industryName="Medical Clinics" industrySlug="clinic" />
+    </IndustryPageLayout>
+  );
 }

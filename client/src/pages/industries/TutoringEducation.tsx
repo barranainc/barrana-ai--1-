@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Tutoring Centers Toronto | Barrana.ai",
@@ -234,5 +235,9 @@ export default function TutoringEducation() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Tutoring & Education" leaks={[{label:"Inquiry response delay",amount:"$3,200/mo"},{label:"No enrollment follow-up",amount:"$4,500/mo"},{label:"No session reminders",amount:"$1,800/mo"},{label:"Manual scheduling",amount:"$2,100/mo"}]} />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Tutoring & Education" leaks={[{label:"Inquiry response delay",amount:"$3,200/mo"},{label:"No enrollment follow-up",amount:"$4,500/mo"},{label:"No session reminders",amount:"$1,800/mo"},{label:"Manual scheduling",amount:"$2,100/mo"}]} />}>
+      <IndustryPlannerCTA industryName="Tutoring & Education" industrySlug="education" />
+    </IndustryPageLayout>
+  );
 }

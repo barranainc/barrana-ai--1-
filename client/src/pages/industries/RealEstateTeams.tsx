@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import RealEstateHeroVisual from "@/components/hero-visuals/RealEstateHeroVisual";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Real Estate Teams Toronto | Never Lose a Lead to Slow Follow-Up | Barrana.ai",
@@ -108,5 +109,9 @@ export default function RealEstateTeams() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<RealEstateHeroVisual />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<RealEstateHeroVisual />}>
+      <IndustryPlannerCTA industryName="Real Estate Teams" industrySlug="real-estate" />
+    </IndustryPageLayout>
+  );
 }

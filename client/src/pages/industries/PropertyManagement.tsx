@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
 import TemplateScalingCapacityBar from "@/components/hero-visuals/TemplateScalingCapacityBar";
+import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Property Management Companies Toronto | Barrana.ai",
@@ -170,5 +171,9 @@ export default function PropertyManagement() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={65} newCapacity={120} unit="units" adminOverhead={45} />} />;
+  return (
+    <IndustryPageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={65} newCapacity={120} unit="units" adminOverhead={45} />}>
+      <IndustryPlannerCTA industryName="Property Management" industrySlug="property-management" />
+    </IndustryPageLayout>
+  );
 }

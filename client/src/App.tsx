@@ -58,6 +58,7 @@ import MarketingAgencyLibertyVillage from "./pages/case-studies/MarketingAgencyL
 import Locations from "./pages/Locations";
 import LocationDetail from "./pages/LocationDetail";
 import Resources from "./pages/Resources";
+import AutomationPlanner from "./pages/AutomationPlanner";
 import CaseStudies from "./pages/CaseStudies";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -135,6 +136,7 @@ function Router() {
         <Route path="/locations" component={Locations} />
         <Route path="/locations/:slug" component={LocationDetail} />
         <Route path="/resources" component={Resources} />
+        <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route path="/case-studies/immigration-firm-north-york" component={ImmigrationFirmNorthYork} />
         <Route path="/case-studies/accounting-firm-vaughan" component={AccountingFirmVaughan} />
