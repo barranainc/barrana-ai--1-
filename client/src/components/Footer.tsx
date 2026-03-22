@@ -62,7 +62,6 @@ export default function Footer() {
                   height: "44px",
                   width: "auto",
                   display: "block",
-                  filter: "brightness(0) invert(1)",   /* forces pure white */
                   opacity: 0.92,
                 }}
               />
