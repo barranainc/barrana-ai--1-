@@ -10,6 +10,7 @@ import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import ServiceHero from "./ServiceHero";
+import HeroVisualCard from "./HeroVisualCard";
 import CostOfInactionCards from "./CostOfInactionCards";
 import BeforeAfterSection from "./BeforeAfterSection";
 import ControlLayerCard from "./ControlLayerCard";
@@ -82,6 +83,9 @@ export interface ServicePageData {
 
   // Internal links
   internalLinks: { label: string; href: string; desc?: string }[];
+
+  // Hero visual stats (shown in right column of hero — pulled from roiMetrics if not provided)
+  heroStats?: { value: string; label: string }[];
 
   // Custom children slot (rendered between workflow and control layer)
   children?: React.ReactNode;
@@ -172,6 +176,15 @@ export default function ServicePageLayout({ data }: ServicePageLayoutProps) {
         body={data.body}
         ctaText={data.ctaText}
         ctaMicro={data.ctaMicro}
+        visual={
+          <HeroVisualCard
+            show={true}
+            stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
+              value: m.after.split(" ")[0] ?? m.after,
+              label: m.label,
+            })))}
+          />
+        }
       />
 
       {/* 2. Trust Badges — white bg */}
