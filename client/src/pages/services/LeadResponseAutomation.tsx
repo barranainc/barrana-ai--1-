@@ -7,6 +7,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import LeadResponseHeroVisual from "@/components/hero-visuals/LeadResponseHeroVisual";
 
 const data: ServicePageData = {
   title: "Lead Response Automation | Respond in 90 Seconds | Barrana.ai",
@@ -160,5 +161,5 @@ export default function LeadResponseAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<LeadResponseHeroVisual />} />;
 }

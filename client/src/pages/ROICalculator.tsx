@@ -30,8 +30,8 @@ export default function ROICalculator() {
     { label: "Monthly admin cost (current)", value: `$${Math.round(monthlyAdminCost).toLocaleString()}`, sub: `${staff} staff x ${adminHours} hrs/week x $${hourlyRate}/hr`, color: "#DC2626", bold: false },
     { label: "Monthly admin savings from automation", value: `$${Math.round(savedCostPerMonth).toLocaleString()}`, sub: "~80% reduction in admin hours", color: "#059669", bold: false },
     { label: "Additional monthly revenue from faster lead response", value: `$${Math.round(additionalRevenue).toLocaleString()}`, sub: `+${additionalConversions.toFixed(1)} conversions/month at $${avgDealValue.toLocaleString()} avg`, color: "#059669", bold: false },
-    { label: "Total monthly ROI", value: `$${Math.round(totalMonthlyROI).toLocaleString()}`, sub: "Admin savings + additional revenue", color: "#1A5276", bold: true },
-    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Based on ~$3,500 implementation", color: "#1A5276", bold: true },
+    { label: "Total monthly ROI", value: `$${Math.round(totalMonthlyROI).toLocaleString()}`, sub: "Admin savings + additional revenue", color: "#283891", bold: true },
+    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Based on ~$3,500 implementation", color: "#283891", bold: true },
   ];
 
   return (
@@ -58,12 +58,12 @@ export default function ROICalculator() {
                   <div key={inp.label}>
                     <div className="flex justify-between mb-2">
                       <label className="text-sm font-medium" style={{ color: "#374151" }}>{inp.label}</label>
-                      <span className="text-sm font-bold" style={{ color: "#1A5276" }}>{inp.fmt(inp.value)}</span>
+                      <span className="text-sm font-bold" style={{ color: "#283891" }}>{inp.fmt(inp.value)}</span>
                     </div>
                     <input type="range" min={inp.min} max={inp.max} step={inp.step} value={inp.value}
                       onChange={e => inp.setter(Number(e.target.value))}
                       className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                      style={{ accentColor: "#1A5276" }} />
+                      style={{ accentColor: "#283891" }} />
                   </div>
                 ))}
               </div>

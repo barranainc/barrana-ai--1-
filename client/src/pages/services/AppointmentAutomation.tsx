@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateEmptySlotGrid from "@/components/hero-visuals/TemplateEmptySlotGrid";
 
 const data: ServicePageData = {
   title: "Appointment Automation | Reduce No-Shows by 25-40% | Barrana.ai",
@@ -157,5 +158,5 @@ export default function AppointmentAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateEmptySlotGrid industry="Appointment Business" totalSlots={10} emptySlots={2} slotValue={120} />} />;
 }

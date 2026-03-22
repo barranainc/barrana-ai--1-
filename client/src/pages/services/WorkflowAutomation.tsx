@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateScalingCapacityBar from "@/components/hero-visuals/TemplateScalingCapacityBar";
 
 const data: ServicePageData = {
   title: "Workflow Automation | Connect Your Tools, Eliminate Hand-Offs | Barrana.ai",
@@ -151,5 +152,5 @@ export default function WorkflowAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={8} newCapacity={40} unit="workflows/week" adminOverhead={65} />} />;
 }

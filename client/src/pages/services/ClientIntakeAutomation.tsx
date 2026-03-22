@@ -7,6 +7,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import ClientIntakeHeroVisual from "@/components/hero-visuals/ClientIntakeHeroVisual";
 
 const data: ServicePageData = {
   title: "Client Intake Automation | 45 Minutes to Under 5 | Barrana.ai",
@@ -175,5 +176,5 @@ export default function ClientIntakeAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<ClientIntakeHeroVisual />} />;
 }

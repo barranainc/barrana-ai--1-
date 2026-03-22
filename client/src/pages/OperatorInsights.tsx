@@ -30,7 +30,7 @@ export default function OperatorInsights() {
                   <p className="text-sm leading-relaxed" style={{ color: "#6B7280" }}>{ins.description}</p>
                   <span className="text-xs mt-3 inline-block" style={{ color: "#9CA3AF" }}>{ins.readTime}</span>
                 </div>
-                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-1 opacity-30 group-hover:opacity-70 transition-opacity"><path d="M3 8h10M9 4l4 4-4 4" stroke="#1A5276" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" className="flex-shrink-0 mt-1 opacity-30 group-hover:opacity-70 transition-opacity"><path d="M3 8h10M9 4l4 4-4 4" stroke="#283891" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </Link>
             ))}
           </div>

@@ -20,7 +20,7 @@ interface HeroVisualCardProps {
   show: boolean;  // tied to parent mounted state
 }
 
-const TEAL = "#00C9A7";
+const TEAL = "#7E0F4A";
 const NAVY = "#283891";
 
 export default function HeroVisualCard({ stats, badge = "Typical Outcomes", show }: HeroVisualCardProps) {

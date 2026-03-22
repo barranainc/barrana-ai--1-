@@ -43,6 +43,18 @@ import VeterinaryClinics from "./pages/industries/VeterinaryClinics";
 import TutoringEducation from "./pages/industries/TutoringEducation";
 import AutoRepair from "./pages/industries/AutoRepair";
 import Landscaping from "./pages/industries/Landscaping";
+import ImmigrationFirmNorthYork from "./pages/case-studies/ImmigrationFirmNorthYork";
+import AccountingFirmVaughan from "./pages/case-studies/AccountingFirmVaughan";
+import ContractorMississauga from "./pages/case-studies/ContractorMississauga";
+import PhysioClinicRichmondHill from "./pages/case-studies/PhysioClinicRichmondHill";
+import LawFirmToronto from "./pages/case-studies/LawFirmToronto";
+import RealEstateTeamMarkham from "./pages/case-studies/RealEstateTeamMarkham";
+import DentalOfficeScarborough from "./pages/case-studies/DentalOfficeScarborough";
+import CleaningCompanyEtobicoke from "./pages/case-studies/CleaningCompanyEtobicoke";
+import HVACCompanyBrampton from "./pages/case-studies/HVACCompanyBrampton";
+import PropertyManagementToronto from "./pages/case-studies/PropertyManagementToronto";
+import InsuranceBrokerageVaughan from "./pages/case-studies/InsuranceBrokerageVaughan";
+import MarketingAgencyLibertyVillage from "./pages/case-studies/MarketingAgencyLibertyVillage";
 import Locations from "./pages/Locations";
 import LocationDetail from "./pages/LocationDetail";
 import Resources from "./pages/Resources";
@@ -124,6 +136,18 @@ function Router() {
         <Route path="/locations/:slug" component={LocationDetail} />
         <Route path="/resources" component={Resources} />
         <Route path="/case-studies" component={CaseStudies} />
+        <Route path="/case-studies/immigration-firm-north-york" component={ImmigrationFirmNorthYork} />
+        <Route path="/case-studies/accounting-firm-vaughan" component={AccountingFirmVaughan} />
+        <Route path="/case-studies/contractor-mississauga" component={ContractorMississauga} />
+        <Route path="/case-studies/physio-clinic-richmond-hill" component={PhysioClinicRichmondHill} />
+        <Route path="/case-studies/law-firm-toronto" component={LawFirmToronto} />
+        <Route path="/case-studies/real-estate-team-markham" component={RealEstateTeamMarkham} />
+        <Route path="/case-studies/dental-office-scarborough" component={DentalOfficeScarborough} />
+        <Route path="/case-studies/cleaning-company-etobicoke" component={CleaningCompanyEtobicoke} />
+        <Route path="/case-studies/hvac-company-brampton" component={HVACCompanyBrampton} />
+        <Route path="/case-studies/property-management-toronto" component={PropertyManagementToronto} />
+        <Route path="/case-studies/insurance-brokerage-vaughan" component={InsuranceBrokerageVaughan} />
+        <Route path="/case-studies/marketing-agency-liberty-village" component={MarketingAgencyLibertyVillage} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/faq" component={FAQ} />

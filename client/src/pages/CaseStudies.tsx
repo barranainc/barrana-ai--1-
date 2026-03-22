@@ -1,7 +1,7 @@
 /**
- * CaseStudies.tsx — Barrana.ai Case Studies
- * Design: Premium Systems Consultancy
- * Narrative-first layout, result callouts, scroll reveal
+ * CaseStudies.tsx — Barrana.ai Case Studies Index
+ * 12-card filterable grid. Each card: industry badge + title + key metric + location.
+ * Cards link to individual case study pages.
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -21,180 +21,286 @@ function useReveal(threshold = 0.15) {
   return { ref, visible };
 }
 
-const caseStudies = [
+interface CaseStudyCard {
+  slug: string;
+  industry: string;
+  industryTag: string; // filter tag
+  location: string;
+  title: string;
+  keyMetric: string;
+  metricLabel: string;
+  summary: string;
+  color: string;
+}
+
+const CARDS: CaseStudyCard[] = [
   {
-    id: "contractor-mississauga",
-    industry: "General Contractor",
-    location: "Mississauga, ON",
-    title: "How a Mississauga Contractor Cut Lead Response Time and Increased Quote Conversion",
-    summary: "A residential renovation contractor was generating 40 to 60 inbound leads per month but losing 8 to 12 qualified leads per month to slow response time. Barrana.ai built a 24/7 lead automation system that reduced response time from 4–6 hours to 90 seconds.",
-    challenge: "The owner was on job sites from 7am to 5pm most days. Lead inquiries came in throughout the day but meaningful follow-up only happened during breaks or after hours. An estimated 8 to 12 qualified leads were being lost per month to slow response time alone. The business had no systematic way to capture after-hours inquiries.",
-    solution: [
-      "24/7 lead capture form with immediate 90-second automated response",
-      "AI qualification questionnaire to assess job type and budget",
-      "Automatic Jobber entry for qualified leads",
-      "Scheduling link for site visit booking",
-      "After-hours voice AI for phone inquiries",
-      "Quote follow-up sequence at 3, 7, and 14 days",
-    ],
-    results: [
-      { metric: "90 sec", label: "Lead response time (from 4–6 hrs)" },
-      { metric: "+22%", label: "Quote conversion rate in 60 days" },
-      { metric: "100%", label: "After-hours leads captured" },
-      { metric: "30 days", label: "Projected ROI recovery" },
-    ],
-    quote: "I used to lose jobs because I was on a ladder when someone called. Now every lead gets a response before I even know they reached out.",
+    slug: "immigration-firm-north-york",
+    industry: "Immigration Consulting",
+    industryTag: "Professional Services",
+    location: "North York, Toronto",
+    title: "Immigration Firm Recovers 14 Hours Per Week and Grows Capacity by 25%",
+    keyMetric: "14 hrs",
+    metricLabel: "Recovered per week",
+    summary: "Intake time cut from 45 min to under 5. Document collection from 3-week chase to 9-day automated system.",
     color: "#283891",
   },
   {
-    id: "immigration-north-york",
-    industry: "Immigration Consulting Firm",
-    location: "North York, ON",
-    title: "Client Intake Time Reduced by an Estimated 87% for North York Immigration Firm",
-    summary: "A North York immigration consulting firm was spending 45 minutes per new client on manual intake processing. Barrana.ai built an automated intake system that reduced this to approximately 4 minutes while improving data quality.",
-    challenge: "The firm was processing 15 to 20 new client inquiries per week. Each intake required a consultant to manually collect information, create a CRM record, send a document checklist, and schedule a consultation. This consumed approximately 12 hours of consultant time per week — time that should have been spent on file work.",
-    solution: [
-      "Automated intake questionnaire triggered by initial inquiry",
-      "Automatic CRM record creation with visa type tagging",
-      "Consultant assignment based on case type and capacity",
-      "Document checklist sent automatically with tracking",
-      "Consultation scheduling link with 48-hour reminder",
-      "File status dashboard updated automatically",
-    ],
-    results: [
-      { metric: "87%", label: "Reduction in intake processing time" },
-      { metric: "45→4 min", label: "Intake time per new client" },
-      { metric: "+11 hrs", label: "Billable capacity recovered per week" },
-      { metric: "100%", label: "Intake data completeness" },
-    ],
-    quote: "We went from spending half our week chasing documents to having them arrive automatically. Our team now focuses on the actual immigration work.",
+    slug: "accounting-firm-vaughan",
+    industry: "Accounting Firm",
+    industryTag: "Professional Services",
+    location: "Vaughan, Ontario",
+    title: "Accounting Firm Increases Tax Season Capacity by 30% Without New Hires",
+    keyMetric: "+30%",
+    metricLabel: "Tax season capacity",
+    summary: "Document chase eliminated. Invoice payment cycle accelerated by 11 days. Same team, 30% more clients.",
     color: "#7E0F4A",
   },
   {
-    id: "accounting-vaughan",
-    industry: "Accounting Firm",
-    location: "Vaughan, ON",
-    title: "Tax Season Capacity Increased by an Estimated 30% for Vaughan Accounting Firm",
-    summary: "A Vaughan accounting firm was hitting capacity limits every tax season due to manual document collection and administrative overhead. Barrana.ai built an automation system that eliminated document chase and accelerated the invoice payment cycle.",
-    challenge: "During tax season, staff were spending 3 to 4 hours per day chasing clients for documents, sending reminders, and organizing submissions. Invoice generation was manual and often delayed by 1 to 2 weeks. The firm was turning away new clients during peak season due to capacity constraints.",
-    solution: [
-      "Automated document request sent at engagement start",
-      "48-hour reminder sequences for outstanding documents",
-      "Automatic document organization and tagging",
-      "Invoice generation triggered at engagement milestones",
-      "Payment reminder sequences at 7, 14, and 21 days",
-      "Client onboarding standardization across all engagements",
-    ],
-    results: [
-      { metric: "+30%", label: "Tax season capacity increase" },
-      { metric: "0 hrs", label: "Document chase time (eliminated)" },
-      { metric: "11 days", label: "Invoice payment cycle acceleration" },
-      { metric: "0", label: "New hires required" },
-    ],
-    quote: "We handled 30% more clients this tax season with the same team. The system just runs — we don't think about document collection anymore.",
+    slug: "contractor-mississauga",
+    industry: "General Contractor",
+    industryTag: "Trades & Home Services",
+    location: "Mississauga, Ontario",
+    title: "Contractor Cuts Lead Response to 90 Seconds and Increases Quote Conversion 22%",
+    keyMetric: "90 sec",
+    metricLabel: "Lead response time",
+    summary: "From 4-6 hour response delays to 90-second automated follow-up. 100% after-hours lead capture.",
+    color: "#D97706",
+  },
+  {
+    slug: "physio-clinic-richmond-hill",
+    industry: "Physiotherapy Clinic",
+    industryTag: "Healthcare",
+    location: "Richmond Hill, Ontario",
+    title: "Physio Clinic Cuts No-Shows by 40% and Recovers 10 Admin Hours Per Week",
+    keyMetric: "−40%",
+    metricLabel: "No-show rate",
+    summary: "Automated appointment reminders and intake forms. 10 admin hours per week recovered. Wait list activated.",
+    color: "#059669",
+  },
+  {
+    slug: "law-firm-toronto",
+    industry: "Law Firm",
+    industryTag: "Professional Services",
+    location: "Toronto, Ontario",
+    title: "Toronto Law Firm Eliminates Intake Bottleneck and Recovers 12 Billable Hours Per Week",
+    keyMetric: "12 hrs",
+    metricLabel: "Billable hours recovered",
+    summary: "New matter intake automated end-to-end. Conflict check, engagement letter, and document request all triggered automatically.",
     color: "#283891",
+  },
+  {
+    slug: "real-estate-team-markham",
+    industry: "Real Estate Team",
+    industryTag: "Real Estate",
+    location: "Markham, Ontario",
+    title: "Real Estate Team Triples Lead Follow-Up Capacity Without Adding Staff",
+    keyMetric: "3×",
+    metricLabel: "Lead follow-up capacity",
+    summary: "Lead nurture sequences running 90 days automatically. Buyer and seller pipelines fully automated. Response time under 2 minutes.",
+    color: "#7E0F4A",
+  },
+  {
+    slug: "dental-office-scarborough",
+    industry: "Dental Office",
+    industryTag: "Healthcare",
+    location: "Scarborough, Ontario",
+    title: "Dental Office Reduces No-Shows by 35% and Fills Cancellations Within Hours",
+    keyMetric: "−35%",
+    metricLabel: "No-show reduction",
+    summary: "Automated recall campaigns, waitlist activation, and hygiene reactivation sequences. Front desk time freed for patient care.",
+    color: "#0EA5E9",
+  },
+  {
+    slug: "cleaning-company-etobicoke",
+    industry: "Cleaning Company",
+    industryTag: "Trades & Home Services",
+    location: "Etobicoke, Ontario",
+    title: "Cleaning Company Automates Quoting, Scheduling, and Follow-Up Across 200 Clients",
+    keyMetric: "200",
+    metricLabel: "Clients automated",
+    summary: "Quoting, scheduling, recurring reminders, and review requests all running automatically. Owner off the phone.",
+    color: "#10B981",
+  },
+  {
+    slug: "hvac-company-brampton",
+    industry: "HVAC Company",
+    industryTag: "Trades & Home Services",
+    location: "Brampton, Ontario",
+    title: "HVAC Company Fills 300 Seasonal Maintenance Slots in 10 Days Instead of 6 Weeks",
+    keyMetric: "10 days",
+    metricLabel: "To fill seasonal schedule",
+    summary: "Fall maintenance campaign automated. Emergency dispatch live 24/7. Maintenance agreement renewal rate up 28%.",
+    color: "#D97706",
+  },
+  {
+    slug: "property-management-toronto",
+    industry: "Property Management",
+    industryTag: "Real Estate",
+    location: "Toronto, Ontario",
+    title: "Property Manager Automates Lease Renewals and Recovers 15 Admin Hours Per Week",
+    keyMetric: "15 hrs",
+    metricLabel: "Admin hours recovered",
+    summary: "Lease renewal outreach, tenant maintenance requests, and monthly owner reporting all automated. Zero staff increase.",
+    color: "#283891",
+  },
+  {
+    slug: "insurance-brokerage-vaughan",
+    industry: "Insurance Brokerage",
+    industryTag: "Financial Services",
+    location: "Vaughan, Ontario",
+    title: "Insurance Brokerage Drops Renewal Lapse Rate from 18% to Under 5%",
+    keyMetric: "−72%",
+    metricLabel: "Renewal lapse reduction",
+    summary: "Policy renewal outreach running 90 days in advance. Lead response time 90 seconds. Quote follow-up 100% consistent.",
+    color: "#7E0F4A",
+  },
+  {
+    slug: "marketing-agency-liberty-village",
+    industry: "Marketing Agency",
+    industryTag: "Professional Services",
+    location: "Liberty Village, Toronto",
+    title: "Marketing Agency Grows from 12 to 17 Clients Without Adding Operations Staff",
+    keyMetric: "+40%",
+    metricLabel: "Client capacity increase",
+    summary: "Client onboarding, monthly reporting, and invoice follow-up fully automated. Agency grew without ops overhead.",
+    color: "#0EA5E9",
   },
 ];
 
-function CaseStudySection({ cs, idx }: { cs: typeof caseStudies[0]; idx: number }) {
-  const reveal = useReveal();
-  const isEven = idx % 2 === 0;
+const ALL_TAGS = ["All", "Professional Services", "Healthcare", "Trades & Home Services", "Real Estate", "Financial Services"];
+
+function CardItem({ card, idx }: { card: CaseStudyCard; idx: number }) {
+  const { ref, visible } = useReveal(0.1);
 
   return (
-    <section
-      className="py-20 lg:py-24"
-      style={{ backgroundColor: isEven ? "#FFFFFF" : "#F2F4F8" }}
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 0.5s ease ${(idx % 3) * 0.08}s, transform 0.5s ease ${(idx % 3) * 0.08}s`,
+      }}
     >
-      <div className="container">
+      <Link href={`/case-studies/${card.slug}`} style={{ textDecoration: "none", display: "block", height: "100%" }}>
         <div
-          ref={reveal.ref}
           style={{
-            opacity: reveal.visible ? 1 : 0,
-            transform: reveal.visible ? "translateY(0)" : "translateY(24px)",
-            transition: "opacity 0.7s ease, transform 0.7s ease",
+            background: "white",
+            borderRadius: "16px",
+            border: "1px solid rgba(40,56,145,0.08)",
+            boxShadow: "0 2px 12px rgba(40,56,145,0.06)",
+            overflow: "hidden",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+            transition: "box-shadow 0.2s ease, transform 0.2s ease",
+            cursor: "pointer",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 32px rgba(40,56,145,0.14)";
+            (e.currentTarget as HTMLDivElement).style.transform = "translateY(-2px)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLDivElement).style.boxShadow = "0 2px 12px rgba(40,56,145,0.06)";
+            (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
           }}
         >
-          {/* Header */}
-          <div className="flex flex-wrap items-center gap-3 mb-5">
-            <span
-              className="text-xs font-semibold px-3 py-1.5 rounded-full"
-              style={{ backgroundColor: `${cs.color}15`, color: cs.color }}
-            >
-              {cs.industry}
-            </span>
-            <span className="text-xs text-gray-400">&mdash; {cs.location}</span>
-          </div>
-          <h2 className="text-2xl lg:text-3xl font-extrabold mb-4 max-w-3xl" style={{ color: "#111827" }}>
-            {cs.title}
-          </h2>
-          <p className="text-gray-500 leading-relaxed mb-8 max-w-2xl">{cs.summary}</p>
+          {/* Top accent */}
+          <div style={{ height: "4px", background: `linear-gradient(90deg, ${card.color} 0%, ${card.color}80 100%)` }} />
 
-          {/* Results row */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {cs.results.map((r, i) => (
-              <div
-                key={r.label}
-                className="rounded-2xl p-5 text-center"
+          <div style={{ padding: "1.5rem", flex: 1, display: "flex", flexDirection: "column" }}>
+            {/* Tags row */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1rem", flexWrap: "wrap" }}>
+              <span
                 style={{
-                  backgroundColor: isEven ? "#F7F8FB" : "#FFFFFF",
-                  border: "1px solid rgba(40,56,145,0.08)",
-                  opacity: reveal.visible ? 1 : 0,
-                  transform: reveal.visible ? "translateY(0)" : "translateY(16px)",
-                  transition: `opacity 0.4s ease ${i * 0.1 + 0.2}s, transform 0.4s ease ${i * 0.1 + 0.2}s`,
+                  fontSize: "0.6875rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: card.color,
+                  background: `${card.color}12`,
+                  borderRadius: "999px",
+                  padding: "0.2rem 0.625rem",
                 }}
               >
-                <div className="text-xl lg:text-2xl font-extrabold mb-1" style={{ color: cs.color }}>{r.metric}</div>
-                <div className="text-xs text-gray-500 leading-tight">{r.label}</div>
-              </div>
-            ))}
+                {card.industry}
+              </span>
+              <span style={{ fontSize: "0.6875rem", color: "#94A3B8" }}>{card.location}</span>
+            </div>
+
+            {/* Key metric */}
+            <div
+              style={{
+                background: "#F7F9FC",
+                borderRadius: "12px",
+                padding: "1rem 1.25rem",
+                marginBottom: "1rem",
+                display: "flex",
+                alignItems: "baseline",
+                gap: "0.75rem",
+              }}
+            >
+              <span style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: card.color, lineHeight: 1 }}>
+                {card.keyMetric}
+              </span>
+              <span style={{ fontSize: "0.8125rem", color: "#64748B", lineHeight: 1.3 }}>{card.metricLabel}</span>
+            </div>
+
+            {/* Title */}
+            <h2
+              style={{
+                fontSize: "0.9375rem",
+                fontWeight: 700,
+                color: "#111827",
+                lineHeight: 1.4,
+                marginBottom: "0.625rem",
+                flex: 1,
+              }}
+            >
+              {card.title}
+            </h2>
+
+            {/* Summary */}
+            <p style={{ fontSize: "0.8125rem", color: "#64748B", lineHeight: 1.6, margin: 0 }}>
+              {card.summary}
+            </p>
           </div>
 
-          {/* Narrative */}
-          <div className="grid lg:grid-cols-2 gap-10 mb-8">
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">The Challenge</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">{cs.challenge}</p>
-            </div>
-            <div>
-              <h3 className="font-bold text-gray-900 mb-3 text-xs uppercase tracking-wider">The Solution</h3>
-              <div className="space-y-2">
-                {cs.solution.map((s) => (
-                  <div key={s} className="flex items-start gap-2.5 text-sm text-gray-600">
-                    <div className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-2" style={{ backgroundColor: cs.color }} />
-                    {s}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Quote */}
+          {/* Footer link */}
           <div
-            className="rounded-2xl p-6"
-            style={{ backgroundColor: cs.color }}
+            style={{
+              borderTop: "1px solid rgba(40,56,145,0.07)",
+              padding: "0.75rem 1.5rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
           >
-            <svg width="24" height="18" viewBox="0 0 24 18" fill="none" className="mb-3 opacity-40">
-              <path d="M0 18V10.8C0 7.8 0.7 5.3 2.1 3.3C3.5 1.1 5.6 0 8.4 0L9.6 2.4C8 2.8 6.7 3.7 5.7 5.1C4.9 6.3 4.5 7.6 4.5 9H9V18H0ZM15 18V10.8C15 7.8 15.7 5.3 17.1 3.3C18.5 1.1 20.6 0 23.4 0L24.6 2.4C23 2.8 21.7 3.7 20.7 5.1C19.9 6.3 19.5 7.6 19.5 9H24V18H15Z" fill="white"/>
+            <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: card.color }}>
+              Read Case Study
+            </span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={card.color} strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-            <p className="text-white font-medium leading-relaxed italic">{cs.quote}</p>
           </div>
         </div>
-      </div>
-    </section>
+      </Link>
+    </div>
   );
 }
 
 export default function CaseStudies() {
   const hero = useReveal(0.05);
-  const disclaimer = useReveal();
   const cta = useReveal(0.2);
+  const [activeTag, setActiveTag] = useState("All");
+
+  const filtered = activeTag === "All" ? CARDS : CARDS.filter((c) => c.industryTag === activeTag);
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: "#F7F8FB" }}>
-        <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />
-        <div className="container relative z-10">
+      <section style={{ background: "#F7F9FC", paddingTop: "6rem", paddingBottom: "3.5rem" }}>
+        <div className="container">
           <div
             ref={hero.ref}
             style={{
@@ -206,55 +312,110 @@ export default function CaseStudies() {
             <div className="section-divider mb-4">
               <span className="section-label">Case Studies</span>
             </div>
-            <div className="max-w-3xl">
-              <h1 className="text-4xl lg:text-5xl font-extrabold mb-6" style={{ color: "#111827" }}>
+            <div style={{ maxWidth: "640px" }}>
+              <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#111827", marginBottom: "1rem", lineHeight: 1.15 }}>
                 Real Businesses.<br />Measurable Results.
               </h1>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Every case study represents a real automation system we built for a real GTA business. The results are measured, not estimated.
+              <p style={{ fontSize: "1.0625rem", color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+                Every case study is a real automation system built for a real GTA business. Results are measured 30–90 days post-deployment.
               </p>
+              {/* Stats row */}
+              <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
+                {[
+                  { v: "12", l: "Case Studies" },
+                  { v: "6", l: "Industries" },
+                  { v: "14+", l: "Hours Recovered Avg" },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#283891" }}>{s.v}</div>
+                    <div style={{ fontSize: "0.75rem", color: "#94A3B8", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.l}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      {caseStudies.map((cs, idx) => (
-        <CaseStudySection key={cs.id} cs={cs} idx={idx} />
-      ))}
+      {/* Filter tabs */}
+      <section style={{ background: "white", borderBottom: "1px solid rgba(40,56,145,0.08)", position: "sticky", top: 0, zIndex: 10 }}>
+        <div className="container" style={{ paddingTop: "0.875rem", paddingBottom: "0.875rem" }}>
+          <div style={{ display: "flex", gap: "0.5rem", overflowX: "auto", paddingBottom: "2px" }}>
+            {ALL_TAGS.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => setActiveTag(tag)}
+                style={{
+                  padding: "0.375rem 1rem",
+                  borderRadius: "999px",
+                  border: "1.5px solid",
+                  borderColor: activeTag === tag ? "#283891" : "rgba(40,56,145,0.2)",
+                  background: activeTag === tag ? "#283891" : "transparent",
+                  color: activeTag === tag ? "white" : "#283891",
+                  fontSize: "0.8125rem",
+                  fontWeight: 600,
+                  cursor: "pointer",
+                  whiteSpace: "nowrap",
+                  transition: "all 0.15s ease",
+                }}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Card grid */}
+      <section style={{ background: "#F7F9FC", padding: "3.5rem 0 4.5rem" }}>
+        <div className="container">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+              gap: "1.5rem",
+            }}
+          >
+            {filtered.map((card, idx) => (
+              <CardItem key={card.slug} card={card} idx={idx} />
+            ))}
+          </div>
+
+          {filtered.length === 0 && (
+            <p style={{ textAlign: "center", color: "#94A3B8", padding: "3rem 0" }}>
+              No case studies for this filter yet.
+            </p>
+          )}
+        </div>
+      </section>
 
       {/* Disclaimer */}
-      <section className="py-8" style={{ backgroundColor: "#F7F8FB" }}>
-        <div
-          ref={disclaimer.ref}
-          className="container"
-          style={{
-            opacity: disclaimer.visible ? 1 : 0,
-            transition: "opacity 0.5s ease",
-          }}
-        >
-          <p className="text-xs text-gray-400 max-w-3xl">
-            <strong>Note on Results:</strong> All metrics are based on client-reported operational data and measurements taken 30 to 90 days after automation deployment. Individual results will vary based on business size, industry, workflow complexity, and implementation scope.
+      <section style={{ background: "white", padding: "1.5rem 0" }}>
+        <div className="container">
+          <p style={{ fontSize: "0.75rem", color: "#9CA3AF", maxWidth: "640px" }}>
+            <strong>Note on Results:</strong> All metrics are based on client-reported operational data measured 30–90 days after deployment. Individual results vary based on business size, industry, workflow complexity, and implementation scope.
           </p>
         </div>
       </section>
 
       {/* CTA */}
       <section
-        className="py-20"
-        style={{ background: "linear-gradient(135deg, #283891 0%, #1e2d7a 50%, #7E0F4A 100%)" }}
+        style={{ padding: "5rem 0", background: "linear-gradient(135deg, #283891 0%, #1e2d7a 50%, #7E0F4A 100%)" }}
       >
         <div
           ref={cta.ref}
-          className="container text-center"
+          className="container"
           style={{
+            textAlign: "center",
             opacity: cta.visible ? 1 : 0,
             transform: cta.visible ? "translateY(0)" : "translateY(24px)",
             transition: "opacity 0.7s ease, transform 0.7s ease",
           }}
         >
-          <h2 className="text-3xl font-extrabold text-white mb-4">Want Results Like These?</h2>
-          <p className="text-blue-200 mb-8 max-w-xl mx-auto">
+          <h2 style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", fontWeight: 800, color: "white", marginBottom: "1rem" }}>
+            Want Results Like These?
+          </h2>
+          <p style={{ color: "rgba(255,255,255,0.75)", marginBottom: "2rem", maxWidth: "480px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
             Book a free 60-minute Automation Audit. We map your workflows, identify the highest-impact opportunities, and give you a prioritized plan.
           </p>
           <Link href="/contact" className="btn-accent">

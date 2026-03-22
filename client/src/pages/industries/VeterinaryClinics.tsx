@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateEmptySlotGrid from "@/components/hero-visuals/TemplateEmptySlotGrid";
 
 const data: IndustryPageData = {
   title: "AI Automation for Veterinary Clinics Toronto | Barrana.ai",
@@ -225,5 +226,5 @@ export default function VeterinaryClinics() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateEmptySlotGrid industry="Veterinary Clinics" totalSlots={12} emptySlots={2} slotValue={95} />} />;
 }

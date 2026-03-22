@@ -5,6 +5,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import TemplateScalingCapacityBar from "@/components/hero-visuals/TemplateScalingCapacityBar";
 
 const data: ServicePageData = {
   title: "Operations Automation | See Everything, Chase Nothing | Barrana.ai",
@@ -151,5 +152,5 @@ export default function OperationsReportingAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<TemplateScalingCapacityBar currentCapacity={5} newCapacity={20} unit="reports/month" adminOverhead={70} />} />;
 }

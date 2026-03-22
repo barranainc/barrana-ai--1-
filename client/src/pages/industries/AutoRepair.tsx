@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 
 const data: IndustryPageData = {
   title: "AI Automation for Auto Repair Shops Toronto | Barrana.ai",
@@ -191,5 +192,5 @@ export default function AutoRepair() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Auto Repair" leaks={[{label:"Missed service reminders",amount:"$4,100/mo"},{label:"No follow-up on estimates",amount:"$3,800/mo"},{label:"After-hours calls missed",amount:"$2,700/mo"},{label:"Late invoicing",amount:"$1,200/mo"}]} />} />;
 }

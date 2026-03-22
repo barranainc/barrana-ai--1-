@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import TemplateTimeDrainWaterfall from "@/components/hero-visuals/TemplateTimeDrainWaterfall";
 
 const data: IndustryPageData = {
   title: "AI Automation for Insurance Brokers Toronto | Never Miss a Renewal | Barrana.ai",
@@ -109,5 +110,5 @@ export default function InsuranceBrokers() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<TemplateTimeDrainWaterfall industry="Insurance Brokers" drains={[{label:"Policy renewal follow-up",hours:9},{label:"Quote data entry",hours:6},{label:"Client status calls",hours:5},{label:"Reporting",hours:3}]} />} />;
 }

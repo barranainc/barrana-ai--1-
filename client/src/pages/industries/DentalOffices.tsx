@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
+import DentalHeroVisual from "@/components/hero-visuals/DentalHeroVisual";
 
 const data: IndustryPageData = {
   title: "AI Automation for Dental Offices Toronto | Fill Chairs, Clear Recall Lists | Barrana.ai",
@@ -110,5 +111,5 @@ export default function DentalOffices() {
   useEffect(() => {
     document.title = data.title;
   }, []);
-  return <IndustryPageLayout data={data} />;
+  return <IndustryPageLayout data={data} heroVisual={<DentalHeroVisual />} />;
 }

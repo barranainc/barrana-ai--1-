@@ -25,7 +25,7 @@ interface WorkflowDiagramProps {
 const typeStyle: Record<WorkflowStepType, { bg: string; border: string; text: string; label: string }> = {
   trigger: { bg: "var(--b-amber-bg)",   border: "var(--b-amber)",   text: "var(--b-amber)",   label: "Trigger" },
   action:  { bg: "rgba(40,56,145,0.07)", border: "var(--b-navy)",    text: "var(--b-navy)",    label: "Action"  },
-  ai:      { bg: "rgba(124,58,237,0.07)",border: "#7c3aed",          text: "#7c3aed",          label: "AI"      },
+  ai:      { bg: "rgba(196,75,136,0.07)", border: "#C44B88",          text: "#C44B88",          label: "AI"      },
   outcome: { bg: "var(--b-success-bg)",  border: "var(--b-success)", text: "var(--b-success)", label: "Result"  },
 };
 

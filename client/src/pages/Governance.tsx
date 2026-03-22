@@ -28,11 +28,11 @@ export default function Governance() {
               { title: "Audit Trail", body: "Automation platforms like Make and n8n maintain execution logs for every automation run. You can see exactly what happened, when, and with what data. This audit trail is important for both operational troubleshooting and compliance documentation." },
             ].map((section) => (
               <div key={section.title} className="p-6 rounded-2xl border" style={{ borderColor: "rgba(26,82,118,0.1)", backgroundColor: "#F7F9FC" }}>
-                <h2 className="text-lg font-bold mb-3" style={{ color: "#1A5276" }}>{section.title}</h2>
+                <h2 className="text-lg font-bold mb-3" style={{ color: "#283891" }}>{section.title}</h2>
                 <p className="text-sm leading-relaxed" style={{ color: "#374151" }}>{section.body}</p>
               </div>
             ))}
-            <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #0A1628, #1A5276)" }}>
+            <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
               <h3 className="text-xl font-bold text-white mb-3">Questions About Governance?</h3>
               <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will walk through our governance approach for your specific business context.</p>
               <Link href="/contact" className="btn-primary">Book Free Audit</Link>

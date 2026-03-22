@@ -7,6 +7,7 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
+import DocumentCollectionHeroVisual from "@/components/hero-visuals/DocumentCollectionHeroVisual";
 
 const data: ServicePageData = {
   title: "Document Collection Automation | Stop Chasing Clients | Barrana.ai",
@@ -175,5 +176,5 @@ export default function DocumentCollectionAutomation() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} />;
+  return <ServicePageLayout data={data} heroVisual={<DocumentCollectionHeroVisual />} />;
 }

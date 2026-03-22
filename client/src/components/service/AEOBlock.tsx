@@ -14,7 +14,7 @@ export default function AEOBlock({ question, answer }: AEOBlockProps) {
     <div
       style={{
         background: "#F7F9FC",
-        borderLeft: "4px solid #00B4D8",
+        borderLeft: "4px solid #283891",
         borderRadius: "0 0.75rem 0.75rem 0",
         padding: "2rem 2.5rem",
       }}
@@ -35,14 +35,14 @@ export default function AEOBlock({ question, answer }: AEOBlockProps) {
           fill="none"
           aria-hidden="true"
         >
-          <circle cx="6" cy="6" r="5" stroke="#00B4D8" strokeWidth="1.5" />
+          <circle cx="6" cy="6" r="5" stroke="#283891" strokeWidth="1.5" />
           <path
             d="M6 11h2M11 6a5 5 0 00-5-5"
-            stroke="#00B4D8"
+            stroke="#283891"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
-          <circle cx="11" cy="11" r="2.5" fill="#00B4D8" />
+          <circle cx="11" cy="11" r="2.5" fill="#283891" />
           <path d="M10 10l2 2" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
         </svg>
         <span
@@ -50,7 +50,7 @@ export default function AEOBlock({ question, answer }: AEOBlockProps) {
             fontSize: "0.75rem",
             textTransform: "uppercase",
             letterSpacing: "0.08em",
-            color: "#00B4D8",
+            color: "#283891",
             fontWeight: 700,
           }}
         >
