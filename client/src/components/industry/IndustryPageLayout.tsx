@@ -10,7 +10,7 @@ import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import ServiceHero from "@/components/service/ServiceHero";
-import HeroVisualCard from "@/components/service/HeroVisualCard";
+import HeroBeforeAfterCard from "@/components/service/HeroBeforeAfterCard";
 import CostOfInactionCards from "@/components/service/CostOfInactionCards";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
@@ -196,12 +196,9 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         ctaMicro={data.ctaMicro}
         visual={
           heroVisual ?? (
-            <HeroVisualCard
+            <HeroBeforeAfterCard
+              metrics={data.beforeAfterMetrics}
               show={true}
-              stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
-                value: m.after.split(" ")[0] ?? m.after,
-                label: m.label,
-              })))}
             />
           )
         }

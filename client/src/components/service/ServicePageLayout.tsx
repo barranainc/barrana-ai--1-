@@ -10,7 +10,7 @@ import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import ServiceHero from "./ServiceHero";
-import HeroVisualCard from "./HeroVisualCard";
+import HeroBeforeAfterCard from "./HeroBeforeAfterCard";
 import CostOfInactionCards from "./CostOfInactionCards";
 import BeforeAfterSection from "./BeforeAfterSection";
 import ControlLayerCard from "./ControlLayerCard";
@@ -179,12 +179,9 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         ctaMicro={data.ctaMicro}
         visual={
           heroVisual ?? (
-            <HeroVisualCard
+            <HeroBeforeAfterCard
+              metrics={data.beforeAfterMetrics}
               show={true}
-              stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
-                value: m.after.split(" ")[0] ?? m.after,
-                label: m.label,
-              })))}
             />
           )
         }
