@@ -61,7 +61,30 @@ const BEFORE_AFTER = [
   { label: "Drop-off due to slow follow-up", before: "High", after: "Minimal" },
 ];
 
+// ─── Graphic 3: ImplementationTimeline using WorkflowDiagram ─────────────────
+
+function ImplementationTimeline() {
+  return (
+    <div style={{ margin: "1.5rem 0 2rem" }}>
+      <WorkflowDiagram
+        steps={[
+          { label: "Map Current Process", type: "trigger" },
+          { label: "Configure Logic", type: "action" },
+          { label: "Connect Tools", type: "action" },
+          { label: "Test Scenarios", type: "ai" },
+          { label: "Deploy + Monitor", type: "outcome" },
+        ]}
+        resultBadge="Live in 2–4 weeks"
+      />
+    </div>
+  );
+}
+
 export default function AutomateClientIntake() {
+  useEffect(() => {
+    document.title = "How to Automate Client Intake Without Switching Software | Barrana AI";
+  }, []);
+
   return (
     <div style={{ background: "white", minHeight: "100vh" }}>
       {/* Hero */}
@@ -232,6 +255,14 @@ export default function AutomateClientIntake() {
               </div>
             ))}
           </div>
+        </RevealSection>
+
+        <RevealSection>
+          <SectionHeading>Implementation Timeline</SectionHeading>
+          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1rem" }}>
+            A complete intake automation goes live in 2–4 weeks following five sequential steps:
+          </p>
+          <ImplementationTimeline />
         </RevealSection>
 
         {/* CTA */}
