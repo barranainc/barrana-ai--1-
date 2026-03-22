@@ -1,11 +1,12 @@
 /**
  * AutomateClientIntake.tsx
- * Resource guide: How to Automate Your Client Intake Process
+ * Resource guide: "How to Automate Client Intake Without Switching Software"
  * Route: /resources/automate-client-intake
  */
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -73,11 +74,19 @@ export default function AutomateClientIntake() {
             <span>/</span>
             <span style={{ color: "#1A1A2E", fontWeight: 600 }}>Automate Client Intake</span>
           </nav>
-          <p style={{ fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#7E0F4A", marginBottom: "0.75rem" }}>
-            Implementation Guide
-          </p>
+          <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap" }}>
+            <span style={{
+              background: "#F0FDF4", color: "#16A34A",
+              fontWeight: 700, fontSize: "0.75rem",
+              letterSpacing: "0.07em", textTransform: "uppercase",
+              borderRadius: "999px", padding: "0.3rem 0.85rem",
+            }}>
+              Implementation
+            </span>
+            <span style={{ fontSize: "0.8125rem", color: "#7B7B7B" }}>⏱ 15 min read</span>
+          </div>
           <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.75rem)", fontWeight: 800, color: "#1A1A2E", lineHeight: 1.2, marginBottom: "1.25rem" }}>
-            How to Automate Your Client Intake Process
+            How to Automate Client Intake Without Switching Software
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
             Your intake process sets the tone for every client relationship — yet most service businesses are still handling it manually. This guide walks through a complete automated intake system: from first form submission to a fully briefed team member, with zero data entry.
