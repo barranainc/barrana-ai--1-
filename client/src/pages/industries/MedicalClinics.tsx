@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import TemplateEmptySlotGrid from "@/components/hero-visuals/TemplateEmptySlotGrid";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -224,7 +223,7 @@ export default function MedicalClinics() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<TemplateEmptySlotGrid industry="Medical Clinics" totalSlots={16} emptySlots={3} slotValue={180} />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Medical Clinics" industrySlug="clinic" />
     </IndustryPageLayout>
   );

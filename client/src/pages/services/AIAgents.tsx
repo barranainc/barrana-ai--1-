@@ -5,7 +5,6 @@
 
 import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
-import AIAgentsHeroVisual from "@/components/hero-visuals/AIAgentsHeroVisual";
 
 const data: ServicePageData = {
   title: "AI Agents for Business | Beyond Chatbots | Barrana.ai",
@@ -151,5 +150,5 @@ export default function AIAgents() {
     document.title = data.title;
   }, []);
 
-  return <ServicePageLayout data={data} heroVisual={<AIAgentsHeroVisual />} />;
+  return <ServicePageLayout data={data} />;
 }

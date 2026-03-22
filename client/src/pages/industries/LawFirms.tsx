@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import LawFirmsHeroVisual from "@/components/hero-visuals/LawFirmsHeroVisual";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -218,7 +217,7 @@ export default function LawFirms() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<LawFirmsHeroVisual />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Law Firms" industrySlug="law-firm" />
     </IndustryPageLayout>
   );

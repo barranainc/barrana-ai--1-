@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import TemplateTimeDrainWaterfall from "@/components/hero-visuals/TemplateTimeDrainWaterfall";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -112,7 +111,7 @@ export default function MortgageBrokers() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<TemplateTimeDrainWaterfall industry="Mortgage Brokers" drains={[{label:"Document collection",hours:11},{label:"Status update calls",hours:7},{label:"CRM entry",hours:4},{label:"Compliance admin",hours:3}]} />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Mortgage Brokers" industrySlug="insurance" />
     </IndustryPageLayout>
   );

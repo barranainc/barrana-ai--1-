@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import IndustryPageLayout, { IndustryPageData } from "@/components/industry/IndustryPageLayout";
-import TemplateMoneyLeakPipeline from "@/components/hero-visuals/TemplateMoneyLeakPipeline";
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
@@ -194,7 +193,7 @@ export default function AutoRepair() {
     document.title = data.title;
   }, []);
   return (
-    <IndustryPageLayout data={data} heroVisual={<TemplateMoneyLeakPipeline industry="Auto Repair" leaks={[{label:"Missed service reminders",amount:"$4,100/mo"},{label:"No follow-up on estimates",amount:"$3,800/mo"},{label:"After-hours calls missed",amount:"$2,700/mo"},{label:"Late invoicing",amount:"$1,200/mo"}]} />}>
+    <IndustryPageLayout data={data}>
       <IndustryPlannerCTA industryName="Auto Repair" industrySlug="contractor" />
     </IndustryPageLayout>
   );
