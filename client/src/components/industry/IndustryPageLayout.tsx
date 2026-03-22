@@ -10,6 +10,7 @@ import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import ServiceHero from "@/components/service/ServiceHero";
+import HeroVisualCard from "@/components/service/HeroVisualCard";
 import CostOfInactionCards from "@/components/service/CostOfInactionCards";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
@@ -87,6 +88,9 @@ export interface IndustryPageData {
 
   // Internal links
   internalLinks: { label: string; href: string; desc?: string }[];
+
+  // Hero visual stats (right column of hero — auto-derived from roiMetrics if not set)
+  heroStats?: { value: string; label: string }[];
 
   // Optional custom slot (rendered after workflow, before control)
   children?: React.ReactNode;
@@ -182,11 +186,21 @@ export default function IndustryPageLayout({ data }: IndustryPageLayoutProps) {
       {/* 1. Hero */}
       <ServiceHero
         breadcrumb={data.breadcrumb}
+        breadcrumbParent={{ label: "Industries", href: "/industries" }}
         h1={data.h1}
         subheadline={data.subheadline}
         body={data.body}
         ctaText={data.ctaText}
         ctaMicro={data.ctaMicro}
+        visual={
+          <HeroVisualCard
+            show={true}
+            stats={(data.heroStats ?? data.roiMetrics.slice(0, 4).map((m) => ({
+              value: m.after.split(" ")[0] ?? m.after,
+              label: m.label,
+            })))}
+          />
+        }
       />
 
       {/* 2. Trust Badges */}
