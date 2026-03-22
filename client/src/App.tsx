@@ -23,6 +23,26 @@ import AIAgents from "./pages/services/AIAgents";
 import CustomAISystems from "./pages/services/CustomAISystems";
 import Industries from "./pages/Industries";
 import IndustryDetail from "./pages/IndustryDetail";
+import ImmigrationConsultants from "./pages/industries/ImmigrationConsultants";
+import AccountingFirms from "./pages/industries/AccountingFirms";
+import LawFirms from "./pages/industries/LawFirms";
+import Contractors from "./pages/industries/Contractors";
+import PhysiotherapyClinics from "./pages/industries/PhysiotherapyClinics";
+import RealEstateTeams from "./pages/industries/RealEstateTeams";
+import ServiceBusinesses from "./pages/industries/ServiceBusinesses";
+import DentalOffices from "./pages/industries/DentalOffices";
+import InsuranceBrokers from "./pages/industries/InsuranceBrokers";
+import MortgageBrokers from "./pages/industries/MortgageBrokers";
+import FinancialAdvisors from "./pages/industries/FinancialAdvisors";
+import MarketingAgencies from "./pages/industries/MarketingAgencies";
+import CleaningCompanies from "./pages/industries/CleaningCompanies";
+import PropertyManagement from "./pages/industries/PropertyManagement";
+import HomeServices from "./pages/industries/HomeServices";
+import MedicalClinics from "./pages/industries/MedicalClinics";
+import VeterinaryClinics from "./pages/industries/VeterinaryClinics";
+import TutoringEducation from "./pages/industries/TutoringEducation";
+import AutoRepair from "./pages/industries/AutoRepair";
+import Landscaping from "./pages/industries/Landscaping";
 import Locations from "./pages/Locations";
 import LocationDetail from "./pages/LocationDetail";
 import Resources from "./pages/Resources";
@@ -79,6 +99,26 @@ function Router() {
         <Route path="/services/custom-ai-systems" component={CustomAISystems} />
         <Route path="/services/:slug" component={ServiceDetail} />
         <Route path="/industries" component={Industries} />
+        <Route path="/industries/immigration-consultants" component={ImmigrationConsultants} />
+        <Route path="/industries/accounting-firms" component={AccountingFirms} />
+        <Route path="/industries/law-firms" component={LawFirms} />
+        <Route path="/industries/contractors" component={Contractors} />
+        <Route path="/industries/physiotherapy-clinics" component={PhysiotherapyClinics} />
+        <Route path="/industries/real-estate-teams" component={RealEstateTeams} />
+        <Route path="/industries/service-businesses" component={ServiceBusinesses} />
+        <Route path="/industries/dental-offices" component={DentalOffices} />
+        <Route path="/industries/insurance-brokers" component={InsuranceBrokers} />
+        <Route path="/industries/mortgage-brokers" component={MortgageBrokers} />
+        <Route path="/industries/financial-advisors" component={FinancialAdvisors} />
+        <Route path="/industries/marketing-agencies" component={MarketingAgencies} />
+        <Route path="/industries/cleaning-companies" component={CleaningCompanies} />
+        <Route path="/industries/property-management" component={PropertyManagement} />
+        <Route path="/industries/home-services" component={HomeServices} />
+        <Route path="/industries/medical-clinics" component={MedicalClinics} />
+        <Route path="/industries/veterinary-clinics" component={VeterinaryClinics} />
+        <Route path="/industries/tutoring-education" component={TutoringEducation} />
+        <Route path="/industries/auto-repair" component={AutoRepair} />
+        <Route path="/industries/landscaping" component={Landscaping} />
         <Route path="/industries/:slug" component={IndustryDetail} />
         <Route path="/locations" component={Locations} />
         <Route path="/locations/:slug" component={LocationDetail} />
