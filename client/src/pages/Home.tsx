@@ -495,13 +495,13 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "linear-gradient(135deg, #1f2c85 0%, #283891 50%, #2c3fa0 100%)", paddingTop: "3rem", paddingBottom: "4rem", position: "relative" }}>
+      <section style={{ background: "linear-gradient(135deg, #1f2c85 0%, #283891 50%, #2c3fa0 100%)", paddingTop: "5rem", paddingBottom: "7rem", minHeight: "85vh", position: "relative" }}>
         {/* Ambient glows behind right diagram */}
         <div style={{ position: "absolute", top: "5%", right: "2%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 68%)", pointerEvents: "none", zIndex: 0 }} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div
             ref={heroReveal.ref}
-            style={{ display: "grid", gap: "3rem", alignItems: "start" }}
+            style={{ display: "grid", gap: "4rem", alignItems: "start" }}
             className="hero-grid"
           >
             <style>{`
@@ -510,7 +510,7 @@ export default function Home() {
             `}</style>
 
             {/* Left: copy */}
-            <div>
+            <div style={{ maxWidth: "36rem" }}>
               <div
                 style={{
                   display: "inline-block",
@@ -537,8 +537,9 @@ export default function Home() {
                 style={{
                   color: "white",
                   marginBottom: "1.25rem",
-                  lineHeight: 1.2,
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  lineHeight: 1.08,
+                  fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                  letterSpacing: "-0.025em",
                   fontWeight: 800,
                   opacity: heroReveal.visible ? 1 : 0,
                   transform: heroReveal.visible ? "translateY(0)" : "translateY(16px)",
@@ -752,11 +753,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 3: THREE THINGS TO KNOW (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE }}>
+      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">Before You Scroll</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Before You Scroll</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               Three Things to Know Before You Scroll
             </h2>
             <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "3rem" }}>
@@ -769,17 +770,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── START HERE BANNER ─── */}
+      <div style={{ background: "rgba(40,56,145,0.06)", padding: "1rem 1.5rem", textAlign: "center" }}>
+        <p style={{ fontSize: "0.9375rem", color: GREY, margin: 0 }}>
+          New to AI automation? Not sure if this applies to your business?{" "}
+          <Link href="/start-here" style={{ color: NAVY, fontWeight: 600, marginLeft: "0.5rem", textDecoration: "none" }}>
+            Start Here →
+          </Link>
+        </p>
+      </div>
+
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 4: THE MONEY LEAK (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white" }}>
+      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">The Real Cost</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Real Cost</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               You Are Losing Money in 4 Places Right Now.
             </h2>
-            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "72ch", marginBottom: "2.5rem" }}>
+            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "72ch", marginBottom: "3rem" }}>
               Most business owners know they are busy. Few have calculated what that busyness actually costs. Here is the math for a typical service business with 5\u201315 staff:
             </p>
           </Reveal>
@@ -788,7 +799,7 @@ export default function Home() {
             style={{
               display: "grid",
               gridTemplateColumns: "1fr",
-              gap: "1.25rem",
+              gap: "1.5rem",
             }}
             className="money-leak-grid"
           >
@@ -826,11 +837,11 @@ export default function Home() {
               <Reveal key={card.title} delay={i * 0.08}>
                 <div style={{
                   background: "white",
-                  borderRadius: "0.875rem",
-                  border: `1px solid ${BORDER}`,
+                  borderRadius: "1rem",
+                  border: "1px solid rgba(226,228,237,0.6)",
                   borderLeft: `4px solid ${MAGENTA}`,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
-                  padding: "1.75rem",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  padding: "2rem",
                   height: "100%",
                 }}>
                   <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.625rem", lineHeight: 1.2, marginBottom: "0.625rem" }}>
@@ -860,7 +871,7 @@ export default function Home() {
 
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-              <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.5rem" }}>
+              <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.75rem" }}>
                 Add it up: a typical 5\u201315 person service business loses
               </p>
               <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "2.5rem", lineHeight: 1.1, marginBottom: "0.5rem" }}>
@@ -891,6 +902,7 @@ export default function Home() {
         className="section"
         style={{
           background: "linear-gradient(145deg, #1D2F8D 0%, #2438A6 38%, #2B3FB3 72%, #2438A6 100%)",
+          padding: "6rem 0",
           position: "relative",
           overflow: "hidden",
         }}
@@ -963,8 +975,8 @@ export default function Home() {
 
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <Reveal>
-            <h2 style={{ color: "#F7F8FC", marginBottom: "0.75rem" }}>
-              What Is Costing You the Most?
+            <h2 style={{ color: "#F7F8FC", marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
+              Which of These Is Costing Your Business the Most?
             </h2>
             <p style={{ color: "rgba(247,248,252,0.82)", lineHeight: 1.7, marginBottom: "3rem", maxWidth: "52ch" }}>
               Choose what matters most. We will show you how it works for your business.
@@ -1037,11 +1049,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 6: SIX PROBLEMS (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE }}>
+      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">Common Operational Problems</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Common Operational Problems</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               The Six Problems Every Growing Service Business Hits
             </h2>
             <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "3rem" }}>
@@ -1054,6 +1066,11 @@ export default function Home() {
               display: grid;
               grid-template-columns: 1fr;
               gap: 1.25rem;
+            }
+            @media (min-width: 1024px) {
+              .problems-grid {
+                gap: 1.25rem;
+              }
             }
             @media (min-width: 768px) {
               .problems-grid {
@@ -1074,12 +1091,11 @@ export default function Home() {
                   onMouseEnter={() => setHoveredProblem(i)}
                   onMouseLeave={() => setHoveredProblem(null)}
                   style={{
-                    background: "white",
-                    border: `1px solid ${BORDER}`,
-                    borderLeft: hoveredProblem === i ? `4px solid #E8850C` : `1px solid ${BORDER}`,
-                    borderRadius: "0.875rem",
-                    padding: "1.75rem",
-                    boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
+                    background: "rgba(245,246,250,0.5)",
+                    border: "none",
+                    borderLeft: hoveredProblem === i ? `4px solid #E8850C` : "4px solid transparent",
+                    borderRadius: "0.75rem",
+                    padding: "2rem",
                     height: "100%",
                     transition: "border-color 0.2s ease, border-left 0.2s ease",
                   }}
@@ -1114,20 +1130,20 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 7: THE FIX (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white" }}>
+      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">The Fix</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Fix</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               Here Is How You Get That Money Back.
             </h2>
-            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "2.5rem" }}>
+            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "3rem" }}>
               Barrana automation systems eliminate the 4 money leaks above by connecting your existing tools into automated workflows. Nothing gets replaced. Everything gets connected.
             </p>
           </Reveal>
 
           <div
-            style={{ display: "grid", gap: "1.25rem" }}
+            style={{ display: "grid", gap: "1.5rem" }}
             className="fix-cards-grid"
           >
             <style>{`
@@ -1172,15 +1188,16 @@ export default function Home() {
               <Reveal key={card.title} delay={i * 0.08}>
                 <div style={{
                   background: "white",
-                  borderRadius: "0.875rem",
-                  border: `1px solid ${BORDER}`,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
-                  padding: "1.75rem",
+                  borderRadius: "1rem",
+                  border: "1px solid rgba(226,228,237,0.6)",
+                  borderLeft: "4px solid #0D9668",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  padding: "2rem",
                   height: "100%",
                 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
                     <card.icon size={18} color={NAVY} strokeWidth={2} />
-                    <span style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.0625rem" }}>
+                    <span style={{ color: "#0D9668", fontWeight: 700, fontSize: "1.0625rem" }}>
                       {card.recovery}
                     </span>
                   </div>
@@ -1201,12 +1218,12 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <div style={{ background: "rgba(40,56,145,0.05)", borderRadius: "0.5rem", padding: "0.75rem 0.875rem", border: "1px solid rgba(40,56,145,0.12)" }}>
-                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: NAVY, marginBottom: "0.375rem" }}>After</div>
+                    <div style={{ background: "rgba(13,150,104,0.05)", borderRadius: "0.5rem", padding: "0.75rem 0.875rem", border: "1px solid rgba(13,150,104,0.12)" }}>
+                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#0D9668", marginBottom: "0.375rem" }}>After</div>
                       {card.after.map((row) => (
                         <div key={row.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.8125rem" }}>
                           <span style={{ color: GREY }}>{row.label}</span>
-                          <span style={{ fontWeight: 700, color: NAVY }}>{row.val}</span>
+                          <span style={{ fontWeight: 700, color: "#0D9668" }}>{row.val}</span>
                         </div>
                       ))}
                     </div>
@@ -1235,11 +1252,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 9: AUTOMATION METHOD (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white" }}>
+      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">The Process</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Process</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               How It Works: The Barrana Automation Method
             </h2>
             <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "3rem" }}>
@@ -1266,7 +1283,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 10: HOW AUTOMATION FITS YOUR WORKFLOW (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE }}>
+      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <style>{`
           @keyframes tabContentIn {
             from { opacity: 0; transform: translateY(12px); }
@@ -1297,8 +1314,8 @@ export default function Home() {
               maxWidth: "640px",
             }}
           >
-            <div className="eyebrow">Example Workflows</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Example Workflows</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               How Automation Fits Your Workflow
             </h2>
             <p style={{ color: GREY, lineHeight: 1.75, margin: 0, fontSize: "1.0625rem" }}>
@@ -1638,7 +1655,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 11: AUTOMATION IS THE CORE (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: NAVY }}>
+      <section className="section" style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="section-divider mb-4" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
@@ -1646,7 +1663,7 @@ export default function Home() {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }} className="lg-grid-2col">
               <div>
-                <h2 style={{ fontSize: "clamp(1.75rem,3.5vw,2.5rem)", fontWeight: 800, color: "white", marginBottom: "1.25rem", lineHeight: 1.2 }}>
+                <h2 style={{ fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", fontWeight: 800, color: "white", marginBottom: "1.25rem", lineHeight: 1.2, letterSpacing: "-0.02em" }}>
                   Automation Is the Core.<br />But We Build Everything Around It.
                 </h2>
                 <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.75, marginBottom: "1.5rem" }}>
@@ -1672,14 +1689,15 @@ export default function Home() {
                   { Icon: Map, title: "Operational Consulting", desc: "Process mapping and workflow redesign \u2014 strategy before systems, every time." },
                 ].map((card) => (
                   <div key={card.title} style={{
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.12)",
+                    background: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.10)",
                     borderRadius: "12px",
                     padding: "1rem 1.25rem",
                     marginBottom: "0.75rem",
                     display: "flex",
                     gap: "1rem",
                     alignItems: "flex-start",
+                    backdropFilter: "blur(8px)",
                   }}>
                     <card.Icon size={20} color={MAGENTA} strokeWidth={1.75} style={{ flexShrink: 0, marginTop: "2px" }} aria-hidden="true" />
                     <div>
@@ -1698,17 +1716,17 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 12: CASE STUDIES (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white" }}>
+      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">Real Results</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Real Results</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               What Automation Actually Saved These Businesses.
             </h2>
           </Reveal>
 
           <div
-            style={{ display: "grid", gap: "1.25rem", marginTop: "2rem" }}
+            style={{ display: "grid", gap: "1.5rem", marginTop: "3rem" }}
             className="case-study-grid"
           >
             <style>{`
@@ -1753,9 +1771,9 @@ export default function Home() {
               <Reveal key={card.industry} delay={i * 0.08}>
                 <div style={{
                   background: "white",
-                  borderRadius: "0.875rem",
-                  border: `1px solid ${BORDER}`,
-                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                  borderRadius: "1rem",
+                  border: "1px solid rgba(226,228,237,0.6)",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                   overflow: "hidden",
                   height: "100%",
                 }}>
@@ -1764,7 +1782,7 @@ export default function Home() {
                       {card.industry} \u00B7 {card.location}
                     </span>
                   </div>
-                  <div style={{ padding: "1.5rem" }}>
+                  <div style={{ padding: "2rem" }}>
                     <div style={{ marginBottom: "0.875rem" }}>
                       <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: GREY, marginBottom: "0.25rem" }}>The problem</div>
                       <div style={{ fontSize: "0.9rem", color: DARK, lineHeight: 1.5 }}>{card.pain}</div>
@@ -1773,12 +1791,12 @@ export default function Home() {
                       <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: GREY, marginBottom: "0.25rem" }}>The solution</div>
                       <div style={{ fontSize: "0.9rem", color: DARK, lineHeight: 1.5 }}>{card.fix}</div>
                     </div>
-                    <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.625rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
-                      {card.result}
-                    </div>
-                    <div style={{ fontSize: "0.875rem", color: DARK, lineHeight: 1.6 }}>
-                      {card.desc}
-                    </div>
+                    <p style={{ fontSize: "0.9375rem", color: DARK, lineHeight: 1.6, margin: 0 }}>
+                      {card.desc} {" "}
+                      <span style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.125rem" }}>
+                        {card.result}
+                      </span>
+                    </p>
                   </div>
                 </div>
               </Reveal>
@@ -1803,16 +1821,16 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 13: INDUSTRY GRID (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE }}>
+      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <h2 style={{ color: DARK, marginBottom: "2.5rem" }}>
+            <h2 style={{ color: DARK, marginBottom: "3rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               Built for the Businesses That Lose the Most to Manual Operations.
             </h2>
           </Reveal>
 
           <div
-            style={{ display: "grid", gap: "0.875rem" }}
+            style={{ display: "grid", gap: "1.25rem" }}
             className="industry-selector-grid"
           >
             <style>{`
@@ -1838,13 +1856,13 @@ export default function Home() {
                   className="industry-selector-card"
                   style={{
                     display: "block",
-                    background: "white",
-                    border: `1px solid ${BORDER}`,
-                    borderRadius: "0.875rem",
-                    padding: "1.25rem 1.5rem",
+                    background: "rgba(245,246,250,0.5)",
+                    border: "none",
+                    borderRadius: "0.75rem",
+                    padding: "2rem",
                     cursor: "pointer",
                     textDecoration: "none",
-                    transition: "border-color 0.18s ease, box-shadow 0.18s ease",
+                    transition: "background 0.18s ease, box-shadow 0.18s ease",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "0.625rem", marginBottom: "0.5rem" }}>
@@ -1864,11 +1882,11 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 14: TIMELINE (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white" }}>
+      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">The Process</div>
-            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Process</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               From Money Leak to Money Recovered in 4 Weeks.
             </h2>
           </Reveal>
@@ -1984,17 +2002,17 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 15: OBJECTION FAQ — MERGED (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE }}>
+      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow">Before You Decide</div>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Before You Decide</div>
             <div style={{ display: "grid", gap: "3rem", alignItems: "start" }} className="objection-grid">
               <style>{`
                 .objection-grid { grid-template-columns: 1fr !important; }
                 @media (min-width: 1024px) { .objection-grid { grid-template-columns: 1fr 1fr !important; } }
               `}</style>
               <div>
-                <h2 style={{ color: DARK, marginBottom: "0.75rem" }}>
+                <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
                   The Questions Every Business Owner Asks Before Automating.
                 </h2>
                 <p style={{ color: GREY, lineHeight: 1.7, marginBottom: "1.5rem" }}>
@@ -2034,7 +2052,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 18: FINAL CTA (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#1E2B6E", paddingTop: "5rem", paddingBottom: "5rem" }}>
+      <section style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", paddingTop: "5rem", paddingBottom: "5rem" }}>
         <div className="container">
           <div
             ref={ctaReveal.ref}
@@ -2047,7 +2065,7 @@ export default function Home() {
               margin: "0 auto",
             }}
           >
-            <h2 style={{ color: "white", marginBottom: "1rem" }}>
+            <h2 style={{ color: "white", marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               Your Operations Will Not Fix Themselves. The Audit Takes 60 Minutes.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem" }}>
