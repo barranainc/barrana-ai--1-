@@ -834,26 +834,94 @@ export default function Home() {
       </section>
 
       {/* ─── SECTION 3: BUYER PATH SELECTOR ──────────────────────────── */}
-      <section className="section" style={{ background: NAVY }}>
-        <div className="container">
+      <section
+        className="section"
+        style={{
+          background: "linear-gradient(145deg, #1D2F8D 0%, #2438A6 38%, #2B3FB3 72%, #2438A6 100%)",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        {/* Ambient glows */}
+        <div style={{ position: "absolute", top: "8%", left: "3%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(142,162,255,0.10) 0%, transparent 65%)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", bottom: "8%", right: "3%", width: "380px", height: "380px", background: "radial-gradient(circle, rgba(214,26,127,0.08) 0%, transparent 65%)", pointerEvents: "none", zIndex: 0 }} />
+
+        <style>{`
+          .buyer-path-grid { grid-template-columns: 1fr !important; }
+          @media (min-width: 768px) { .buyer-path-grid { grid-template-columns: 1fr 1fr !important; } }
+
+          .buyer-card {
+            display: block;
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 1rem;
+            padding: 1.875rem 1.875rem 1.625rem;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            box-shadow: 0 4px 24px rgba(10,16,35,0.22);
+            transition:
+              background  0.24s ease,
+              border-color 0.24s ease,
+              transform   0.26s cubic-bezier(0.16,1,0.3,1),
+              box-shadow  0.26s ease;
+          }
+          .buyer-card:hover,
+          .buyer-card:focus-visible {
+            background: rgba(255,255,255,0.10);
+            border-color: rgba(255,255,255,0.24);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(10,16,35,0.32), 0 0 0 1px rgba(142,162,255,0.18);
+            outline: none;
+          }
+          .buyer-card-icon-wrap {
+            display: inline-flex;
+            padding: 0.625rem;
+            background: rgba(142,162,255,0.12);
+            border: 1px solid rgba(142,162,255,0.20);
+            border-radius: 0.625rem;
+            margin-bottom: 1.125rem;
+            transition: transform 0.26s cubic-bezier(0.16,1,0.3,1), box-shadow 0.26s ease;
+          }
+          .buyer-card:hover .buyer-card-icon-wrap {
+            transform: scale(1.07);
+            box-shadow: 0 0 12px rgba(214,26,127,0.22);
+          }
+          .buyer-card-arrow {
+            position: absolute;
+            bottom: 1.375rem;
+            right: 1.5rem;
+            opacity: 0.45;
+            transition: transform 0.26s cubic-bezier(0.16,1,0.3,1), opacity 0.24s ease;
+          }
+          .buyer-card:hover .buyer-card-arrow {
+            transform: translateX(5px);
+            opacity: 0.90;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .buyer-card,
+            .buyer-card-icon-wrap,
+            .buyer-card-arrow {
+              transition: none !important;
+              transform: none !important;
+            }
+          }
+        `}</style>
+
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <Reveal>
-            <h2 style={{ color: "white", marginBottom: "0.75rem" }}>
+            <h2 style={{ color: "#F7F8FC", marginBottom: "0.75rem" }}>
               What Is Costing You the Most?
             </h2>
-            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "52ch" }}>
+            <p style={{ color: "rgba(247,248,252,0.82)", lineHeight: 1.7, marginBottom: "3rem", maxWidth: "52ch" }}>
               Choose what matters most. We will show you how it works for your business.
             </p>
           </Reveal>
 
           <div
-            style={{ display: "grid", gap: "1rem" }}
+            style={{ display: "grid", gap: "1.125rem" }}
             className="buyer-path-grid"
           >
-            <style>{`
-              .buyer-path-grid { grid-template-columns: 1fr !important; }
-              @media (min-width: 768px) { .buyer-path-grid { grid-template-columns: 1fr 1fr !important; } }
-            `}</style>
-
             {[
               {
                 icon: PhoneCall,
@@ -880,33 +948,32 @@ export default function Home() {
                 href: "/automation-planner",
               },
             ].map((card, i) => (
-              <Reveal key={card.title} delay={i * 0.07}>
-                <Link
-                  href={card.href}
-                  style={{
-                    display: "block",
-                    background: "rgba(255,255,255,0.06)",
-                    border: "1px solid rgba(255,255,255,0.12)",
-                    borderRadius: "0.875rem",
-                    padding: "1.5rem",
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    transition: "background 0.18s ease",
-                    position: "relative",
-                  }}
-                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.1)"; }}
-                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.06)"; }}
-                >
-                  <card.icon size={24} color={MAGENTA} strokeWidth={2} style={{ marginBottom: "0.875rem" }} />
-                  <div style={{ color: "white", fontWeight: 700, fontSize: "1rem", marginBottom: "0.5rem", lineHeight: 1.4 }}>
+              <Reveal key={card.title} delay={i * 0.09}>
+                <Link href={card.href} className="buyer-card">
+                  <span className="buyer-card-icon-wrap">
+                    <card.icon size={20} color="#D61A7F" strokeWidth={2} />
+                  </span>
+                  <div style={{
+                    color: "#F7F8FC",
+                    fontWeight: 700,
+                    fontSize: "1rem",
+                    lineHeight: 1.45,
+                    marginBottom: "0.5rem",
+                  }}>
                     {card.title}
                   </div>
-                  <div style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
+                  <div style={{
+                    color: "#D61A7F",
+                    fontWeight: 700,
+                    fontSize: "0.9375rem",
+                    letterSpacing: "0.01em",
+                    paddingBottom: "1.75rem",
+                  }}>
                     {card.dollar}
                   </div>
-                  <div style={{ position: "absolute", bottom: "1.25rem", right: "1.25rem" }}>
-                    <ArrowRight size={18} color="rgba(255,255,255,0.4)" />
-                  </div>
+                  <span className="buyer-card-arrow">
+                    <ArrowRight size={17} color="#F7F8FC" />
+                  </span>
                 </Link>
               </Reveal>
             ))}
