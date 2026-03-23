@@ -11,7 +11,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
-import { ArrowRight, ChevronDown, Search } from "lucide-react";
+import {
+  ArrowRight, ChevronDown, Search,
+  FileText,      // Immigration
+  HardHat,       // Contractors
+  Calculator,    // Accounting
+  Stethoscope,   // Medical Clinics
+  Scale,         // Law Firms
+  Building2,     // Real Estate
+  Smile,         // Dental Offices
+  Shield,        // Insurance Brokers
+  Activity,      // Physiotherapy
+  Sparkles,      // Cleaning Companies
+  type LucideIcon,
+} from "lucide-react";
 import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
 
 // Schema
@@ -76,11 +89,18 @@ function Reveal({ children, delay = 0, className = "" }: {
 }
 
 // ─── Industry workflow data ───────────────────────────────────────────
-const INDUSTRY_TABS = [
+type IndustryTab = {
+  id: string; label: string; icon: LucideIcon;
+  headline: string; steps: string[];
+  badgeLabel: string; badgeBefore: string; badgeAfter: string;
+  copy: string; tasks: string[];
+};
+
+const INDUSTRY_TABS: IndustryTab[] = [
   {
     id: "immigration",
     label: "Immigration",
-    icon: "📋",
+    icon: FileText,
     headline: "From inquiry to consultation without manual intake chaos",
     steps: [
       "A new inquiry comes in by phone, form, or email",
@@ -100,7 +120,7 @@ const INDUSTRY_TABS = [
   {
     id: "contractor",
     label: "Contractors",
-    icon: "🔨",
+    icon: HardHat,
     headline: "Turn job inquiries into organised estimates faster",
     steps: [
       "New lead comes in from form, call, or message",
@@ -119,7 +139,7 @@ const INDUSTRY_TABS = [
   {
     id: "accounting",
     label: "Accounting",
-    icon: "📊",
+    icon: Calculator,
     headline: "Reduce time spent chasing clients for basic intake and documents",
     steps: [
       "A new client inquiry comes in",
@@ -139,7 +159,7 @@ const INDUSTRY_TABS = [
   {
     id: "clinic",
     label: "Medical Clinics",
-    icon: "🏥",
+    icon: Stethoscope,
     headline: "Handle inquiries and bookings without front-desk overload",
     steps: [
       "Patient inquiry comes in",
@@ -159,7 +179,7 @@ const INDUSTRY_TABS = [
   {
     id: "law",
     label: "Law Firms",
-    icon: "⚖️",
+    icon: Scale,
     headline: "Route new matters properly before staff spend time on them",
     steps: [
       "New inquiry comes in",
@@ -179,7 +199,7 @@ const INDUSTRY_TABS = [
   {
     id: "real-estate",
     label: "Real Estate",
-    icon: "🏡",
+    icon: Building2,
     headline: "Capture buyer and seller inquiries before they go cold",
     steps: [
       "Inquiry comes in from site, ad, or form",
@@ -199,7 +219,7 @@ const INDUSTRY_TABS = [
   {
     id: "dental",
     label: "Dental Offices",
-    icon: "🦷",
+    icon: Smile,
     headline: "Reduce missed calls and booking friction for new patients",
     steps: [
       "Patient inquiry comes in",
@@ -219,7 +239,7 @@ const INDUSTRY_TABS = [
   {
     id: "insurance",
     label: "Insurance Brokers",
-    icon: "🛡️",
+    icon: Shield,
     headline: "Speed up intake and follow-up for policy inquiries",
     steps: [
       "New inquiry comes in",
@@ -239,7 +259,7 @@ const INDUSTRY_TABS = [
   {
     id: "physio",
     label: "Physiotherapy",
-    icon: "💪",
+    icon: Activity,
     headline: "Move patients from inquiry to assessment with less admin friction",
     steps: [
       "Patient inquiry comes in",
@@ -259,7 +279,7 @@ const INDUSTRY_TABS = [
   {
     id: "cleaning",
     label: "Cleaning Companies",
-    icon: "🧹",
+    icon: Sparkles,
     headline: "Convert service requests into scheduled jobs faster",
     steps: [
       "New service request comes in",
@@ -793,7 +813,12 @@ export default function Home() {
                   whiteSpace: "nowrap",
                 }}
               >
-                <span aria-hidden="true">{tab.icon}</span>
+                <tab.icon
+                  size={14}
+                  strokeWidth={2}
+                  color={activeTab === i ? "white" : NAVY}
+                  aria-hidden="true"
+                />
                 {tab.label}
               </button>
             ))}
