@@ -27,7 +27,7 @@ const VH = 398;
 
 // ── Box geometry ─────────────────────────────────────────────────────
 const TEAM_BOX  = { x: 10, y: 10,  w: 540, h: 98,  rx: 12 };
-const AUTO_BOX  = { x: 10, y: 162, w: 540, h: 78,  rx: 12 };
+const AUTO_BOX  = { x: 10, y: 162, w: 540, h: 84,  rx: 12 };
 const TOOLS_BOX = { x: 10, y: 284, w: 540, h: 98,  rx: 12 };
 
 const TEAM_BOTTOM  = TEAM_BOX.y  + TEAM_BOX.h;   // 108
@@ -60,16 +60,14 @@ const TEAM_ICONS = [
 // ── Automation pills ──────────────────────────────────────────────────
 // Pre-computed x positions so pills are evenly distributed inside AUTO_BOX
 const PILL_Y  = AUTO_BOX.y + 34;
-const PILL_H  = 22;
+const PILL_H  = 26;
 const AUTO_PILLS: { label: string; x: number; w: number }[] = [
-  { label: "Lead Response",  x: 22,  w: 96  },
-  { label: "Intake",         x: 144, w: 56  },
-  { label: "Doc Collection", x: 226, w: 100 },
-  { label: "352",            x: 352, w: 78  }, // placeholder — overridden below
-  { label: "Invoicing",      x: 456, w: 72  },
+  { label: "Lead Response",  x: 18,  w: 100 },
+  { label: "Intake",         x: 138, w: 60  },
+  { label: "Doc Collection", x: 218, w: 106 },
+  { label: "Scheduling",     x: 344, w: 86  },
+  { label: "Invoicing",      x: 450, w: 78  },
 ];
-// Correct the Scheduling entry
-AUTO_PILLS[3] = { label: "Scheduling", x: 352, w: 80 };
 
 // ── Tools row ─────────────────────────────────────────────────────────
 const TOOL_ICY = TOOLS_BOX.y + 36;  // icon centre y = 320
@@ -197,8 +195,8 @@ export default function HeroSystemVisual() {
             strokeWidth="1"
           />
           {/* "YOUR TEAM" label */}
-          <text x={30} y={TEAM_ICY + 2}  fontSize="8.5" fontWeight="700" letterSpacing="1.4" fill={NAVY} style={{ textTransform: "uppercase" }}>YOUR</text>
-          <text x={30} y={TEAM_ICY + 13} fontSize="8.5" fontWeight="700" letterSpacing="1.4" fill={NAVY} style={{ textTransform: "uppercase" }}>TEAM</text>
+          <text x={30} y={TEAM_ICY}      fontSize="12" fontWeight="700" letterSpacing="1.4" fill={NAVY} style={{ textTransform: "uppercase" }}>YOUR</text>
+          <text x={30} y={TEAM_ICY + 15} fontSize="12" fontWeight="700" letterSpacing="1.4" fill={NAVY} style={{ textTransform: "uppercase" }}>TEAM</text>
 
           {/* Icons + labels */}
           {TEAM_ITEMS.map((item, i) => (
@@ -217,7 +215,7 @@ export default function HeroSystemVisual() {
               />
               <text
                 x={item.x} y={TEAM_LBY}
-                fontSize="8.5" fontWeight="600" textAnchor="middle" fill={NAVY}
+                fontSize="12" fontWeight="600" textAnchor="middle" fill={NAVY}
               >
                 {item.label}
               </text>
@@ -285,7 +283,7 @@ export default function HeroSystemVisual() {
           <text
             x={AUTO_BOX.x + AUTO_BOX.w / 2}
             y={AUTO_BOX.y + 22}
-            fontSize="10" fontWeight="800" letterSpacing="2.5" textAnchor="middle" fill={BURGUN}
+            fontSize="14" fontWeight="800" letterSpacing="2.5" textAnchor="middle" fill={BURGUN}
           >
             AUTOMATION
           </text>
@@ -302,8 +300,8 @@ export default function HeroSystemVisual() {
               />
               <text
                 x={AUTO_BOX.x + pill.x + pill.w / 2}
-                y={PILL_Y + 14.5}
-                fontSize="8.5" fontWeight="600" textAnchor="middle" fill={NAVY}
+                y={PILL_Y + 17}
+                fontSize="12" fontWeight="600" textAnchor="middle" fill={NAVY}
               >
                 {pill.label}
               </text>
@@ -358,8 +356,8 @@ export default function HeroSystemVisual() {
             strokeWidth="1"
           />
           {/* "YOUR TOOLS" label */}
-          <text x={30} y={TOOL_ICY + 2}  fontSize="8.5" fontWeight="700" letterSpacing="1.4" fill={GREY} style={{ textTransform: "uppercase" }}>YOUR</text>
-          <text x={30} y={TOOL_ICY + 13} fontSize="8.5" fontWeight="700" letterSpacing="1.4" fill={GREY} style={{ textTransform: "uppercase" }}>TOOLS</text>
+          <text x={30} y={TOOL_ICY}      fontSize="12" fontWeight="700" letterSpacing="1.4" fill={GREY} style={{ textTransform: "uppercase" }}>YOUR</text>
+          <text x={30} y={TOOL_ICY + 15} fontSize="12" fontWeight="700" letterSpacing="1.4" fill={GREY} style={{ textTransform: "uppercase" }}>TOOLS</text>
 
           {/* Icons + labels */}
           {TOOL_ITEMS.map((item, i) => (
@@ -379,7 +377,7 @@ export default function HeroSystemVisual() {
               />
               <text
                 x={item.x} y={TOOL_LBY}
-                fontSize="8.5" fontWeight="600" textAnchor="middle" fill={GREY}
+                fontSize="12" fontWeight="600" textAnchor="middle" fill={GREY}
               >
                 {item.label}
               </text>
@@ -424,7 +422,7 @@ export default function HeroSystemVisual() {
         ══════════════════════════════════════════════════════════ */}
         <text
           x={VW / 2} y={VH - 2}
-          fontSize="10.5" textAnchor="middle" fill={GREY}
+          fontSize="13" textAnchor="middle" fill={GREY}
           style={{
             opacity: phase >= 5 ? 0.65 : 0,
             transition: reduced ? "none" : tr("opacity", 0.6, 0.2),
