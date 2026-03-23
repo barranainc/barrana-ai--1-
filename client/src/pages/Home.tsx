@@ -12,7 +12,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import {
-  ArrowRight, ChevronDown, Search, CheckCircle, Clock,
+  ArrowRight, Search, CheckCircle, Clock,
   FileText,
   HardHat,
   Calculator,
@@ -489,12 +489,13 @@ export default function Home() {
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: "rgba(255,255,255,0.6)",
-                  background: "rgba(255,255,255,0.08)",
-                  border: "1px solid rgba(255,255,255,0.15)",
+                  color: MAGENTA,
+                  background: "rgba(126,15,74,0.15)",
+                  border: `1px solid ${MAGENTA}`,
                   borderRadius: "2rem",
                   padding: "0.375rem 1rem",
                   marginBottom: "1.5rem",
+                  display: "inline-block",
                   opacity: heroReveal.visible ? 1 : 0,
                   transition: "opacity 0.5s ease 0.1s",
                 }}
@@ -645,11 +646,12 @@ export default function Home() {
                       padding: "0.875rem 1.75rem",
                       borderRadius: "0.5rem",
                       textDecoration: "none",
-                      border: "1.5px solid rgba(255,255,255,0.4)",
+                      border: "1.5px solid rgba(255,255,255,0.5)",
+                      transition: "border-color 0.2s, background 0.2s",
                     }}
                   >
                     Book a Free Automation Audit
-                    <ChevronDown size={16} />
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
               </div>
