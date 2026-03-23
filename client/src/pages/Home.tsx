@@ -12,7 +12,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import {
-  ArrowRight, ChevronDown, Search,
+  ArrowRight, ChevronDown, Search, CheckCircle, Clock,
   FileText,      // Immigration
   HardHat,       // Contractors
   Calculator,    // Accounting
@@ -752,42 +752,59 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── HOW IT WORKS FOR YOUR INDUSTRY ─────────────────────────── */}
-      <section className="section" style={{ background: "white" }}>
+      {/* ─── HOW AUTOMATION FITS YOUR WORKFLOW ───────────────────────── */}
+      <section className="section" style={{ background: OFFWHITE }}>
         <style>{`
           @keyframes tabContentIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(12px); }
             to   { opacity: 1; transform: translateY(0); }
+          }
+          .industry-tab-bar::-webkit-scrollbar { display: none; }
+          .industry-tab-bar { -ms-overflow-style: none; scrollbar-width: none; }
+          .workflow-step-dot {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: ${NAVY}; flex-shrink: 0; margin-top: 5px;
+            box-shadow: 0 0 0 3px rgba(40,56,145,0.12);
+          }
+          .workflow-step-dot.last {
+            background: ${MAGENTA};
+            box-shadow: 0 0 0 3px rgba(126,15,74,0.15);
           }
         `}</style>
         <div className="container">
 
-          {/* Section header */}
+          {/* ── Section header ── */}
           <div
             ref={workflowReveal.ref}
             style={{
               opacity: workflowReveal.visible ? 1 : 0,
               transform: workflowReveal.visible ? "translateY(0)" : "translateY(24px)",
               transition: "opacity 0.6s ease, transform 0.6s ease",
-              marginBottom: "2.5rem",
+              marginBottom: "2.75rem",
+              maxWidth: "640px",
             }}
           >
-            <div className="eyebrow">How It Works</div>
-            <div className="grid lg:grid-cols-2 gap-6 items-end">
-              <h2 style={{ color: DARK }}>
-                See How This Works in Your Business
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Choose your industry to see how repetitive admin gets handled faster, more accurately, and with less manual work from your team.
-              </p>
-            </div>
+            <div className="eyebrow">Example Workflows</div>
+            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+              How Automation Fits Your Workflow
+            </h2>
+            <p style={{ color: GREY, lineHeight: 1.75, margin: 0, fontSize: "1.0625rem" }}>
+              Choose your industry to see exactly what gets handled automatically — and what your team no longer needs to do manually.
+            </p>
           </div>
 
-          {/* Industry tab buttons */}
+          {/* ── Tab bar ── */}
           <div
+            className="industry-tab-bar"
             role="tablist"
             aria-label="Industry workflows"
-            style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2rem" }}
+            style={{
+              display: "flex",
+              overflowX: "auto",
+              gap: "0.5rem",
+              marginBottom: "2rem",
+              paddingBottom: "4px",
+            }}
           >
             {INDUSTRY_TABS.map((tab, i) => (
               <button
@@ -800,22 +817,27 @@ export default function Home() {
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
-                  gap: "0.375rem",
-                  padding: "0.5rem 1.125rem",
+                  gap: "0.4375rem",
+                  padding: "0.5625rem 1.25rem",
                   borderRadius: "2rem",
-                  fontWeight: 600,
+                  fontWeight: activeTab === i ? 700 : 500,
                   fontSize: "0.875rem",
                   border: `1.5px solid ${activeTab === i ? NAVY : BORDER}`,
                   background: activeTab === i ? NAVY : "white",
-                  color: activeTab === i ? "white" : DARK,
+                  color: activeTab === i ? "white" : "#444",
                   cursor: "pointer",
-                  transition: "all 0.2s ease",
+                  transition: "all 0.18s ease",
                   whiteSpace: "nowrap",
+                  flexShrink: 0,
+                  letterSpacing: activeTab === i ? "0.01em" : "0",
+                  boxShadow: activeTab === i
+                    ? "0 4px 14px rgba(40,56,145,0.22)"
+                    : "0 1px 3px rgba(0,0,0,0.06)",
                 }}
               >
                 <tab.icon
                   size={14}
-                  strokeWidth={2}
+                  strokeWidth={2.2}
                   color={activeTab === i ? "white" : NAVY}
                   aria-hidden="true"
                 />
@@ -824,182 +846,278 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Tab content panel — re-mounts on tab switch to trigger animation */}
+          {/* ── Tab panel ── */}
           <div
             key={activeTab}
             role="tabpanel"
             id={`tab-panel-${INDUSTRY_TABS[activeTab].id}`}
             aria-labelledby={`tab-btn-${INDUSTRY_TABS[activeTab].id}`}
-            style={{ animation: "tabContentIn 0.35s ease" }}
+            style={{ animation: "tabContentIn 0.32s ease" }}
           >
-            <div className="grid md:grid-cols-2 gap-6">
+            {/* Two-column layout */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: "1.25rem",
+            }}
+              className="workflow-grid"
+            >
+              <style>{`
+                @media (min-width: 768px) {
+                  .workflow-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+                }
+                @media (min-width: 1024px) {
+                  .workflow-grid { grid-template-columns: 55% 45% !important; }
+                }
+              `}</style>
 
-              {/* ── Left: plain-English workflow card ── */}
+              {/* ── LEFT: Workflow journey card ── */}
               <div style={{
                 background: "white",
-                borderRadius: "1rem",
+                borderRadius: "1.25rem",
                 border: `1px solid ${BORDER}`,
-                padding: "1.75rem 2rem",
-                boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
+                overflow: "hidden",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
               }}>
-                <h3 style={{
-                  fontSize: "1.0625rem",
-                  fontWeight: 700,
-                  color: DARK,
-                  marginBottom: "1.75rem",
-                  lineHeight: 1.45,
-                }}>
-                  {INDUSTRY_TABS[activeTab].headline}
-                </h3>
-
-                <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
-                  {INDUSTRY_TABS[activeTab].steps.map((step, si) => {
-                    const isLast = si === INDUSTRY_TABS[activeTab].steps.length - 1;
-                    return (
-                      <li key={si} style={{ display: "flex", gap: "0.875rem" }}>
-                        {/* Numbered circle + vertical connector line */}
-                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
-                          <div style={{
-                            width: "26px",
-                            height: "26px",
-                            borderRadius: "50%",
-                            background: isLast ? MAGENTA : NAVY,
-                            color: "white",
-                            fontSize: "0.6875rem",
-                            fontWeight: 700,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            flexShrink: 0,
-                          }}>
-                            {si + 1}
-                          </div>
-                          {!isLast && (
-                            <div style={{
-                              width: "2px",
-                              flex: 1,
-                              minHeight: "20px",
-                              background: "linear-gradient(to bottom, rgba(40,56,145,0.18), rgba(40,56,145,0.04))",
-                              margin: "3px 0",
-                            }} />
-                          )}
-                        </div>
-                        {/* Step text */}
-                        <p style={{
-                          paddingTop: "3px",
-                          paddingBottom: isLast ? 0 : "16px",
-                          margin: 0,
-                          fontSize: "0.9rem",
-                          lineHeight: 1.5,
-                          color: isLast ? NAVY : DARK,
-                          fontWeight: isLast ? 600 : 400,
-                        }}>
-                          {step}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ol>
-              </div>
-
-              {/* ── Right: outcome value card ── */}
-              <div style={{
-                background: "rgba(40,56,145,0.03)",
-                borderRadius: "1rem",
-                border: `1px solid rgba(40,56,145,0.10)`,
-                padding: "1.75rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "1.5rem",
-              }}>
-
-                {/* Time-saved badge */}
+                {/* Card header bar */}
                 <div style={{
-                  background: "white",
-                  borderRadius: "0.75rem",
-                  border: `1px solid rgba(40,56,145,0.12)`,
-                  padding: "1.25rem 1.5rem",
-                  textAlign: "center",
+                  padding: "1.375rem 1.75rem",
+                  borderBottom: `1px solid ${BORDER}`,
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "0.875rem",
                 }}>
-                  <p style={{
-                    fontSize: "0.6875rem",
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: GREY,
-                    margin: "0 0 0.625rem",
+                  {/* Industry icon badge */}
+                  <div style={{
+                    width: "42px",
+                    height: "42px",
+                    borderRadius: "0.625rem",
+                    background: `rgba(40,56,145,0.07)`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
                   }}>
-                    {INDUSTRY_TABS[activeTab].badgeLabel}
-                  </p>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.875rem" }}>
-                    <span style={{ fontSize: "1.375rem", fontWeight: 700, color: GREY, textDecoration: "line-through", opacity: 0.45 }}>
-                      {INDUSTRY_TABS[activeTab].badgeBefore}
-                    </span>
-                    <ArrowRight size={18} color={MAGENTA} />
-                    <span style={{ fontSize: "1.875rem", fontWeight: 800, color: NAVY }}>
-                      {INDUSTRY_TABS[activeTab].badgeAfter}
-                    </span>
+                    {(() => {
+                      const TabIcon = INDUSTRY_TABS[activeTab].icon;
+                      return <TabIcon size={20} strokeWidth={1.75} color={NAVY} aria-hidden="true" />;
+                    })()}
+                  </div>
+                  <div>
+                    <p style={{
+                      fontSize: "0.6875rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.09em",
+                      textTransform: "uppercase",
+                      color: MAGENTA,
+                      margin: "0 0 0.25rem",
+                    }}>
+                      {INDUSTRY_TABS[activeTab].label}
+                    </p>
+                    <h3 style={{
+                      fontSize: "1.0625rem",
+                      fontWeight: 700,
+                      color: DARK,
+                      margin: 0,
+                      lineHeight: 1.4,
+                    }}>
+                      {INDUSTRY_TABS[activeTab].headline}
+                    </h3>
                   </div>
                 </div>
 
-                {/* Automated tasks list */}
-                <div>
+                {/* Workflow steps */}
+                <div style={{ padding: "1.625rem 1.75rem" }}>
                   <p style={{
                     fontSize: "0.6875rem",
                     fontWeight: 700,
                     letterSpacing: "0.09em",
                     textTransform: "uppercase",
-                    color: NAVY,
-                    margin: "0 0 0.875rem",
+                    color: GREY,
+                    margin: "0 0 1.25rem",
                   }}>
-                    What gets handled automatically
+                    What happens, step by step
                   </p>
-                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                  <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    {INDUSTRY_TABS[activeTab].steps.map((step, si) => {
+                      const isLast = si === INDUSTRY_TABS[activeTab].steps.length - 1;
+                      return (
+                        <li key={si} style={{
+                          display: "flex",
+                          gap: "1rem",
+                          paddingBottom: isLast ? 0 : "0.125rem",
+                        }}>
+                          {/* Track: dot + connector line */}
+                          <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            flexShrink: 0,
+                            width: "10px",
+                          }}>
+                            <div className={`workflow-step-dot${isLast ? " last" : ""}`} />
+                            {!isLast && (
+                              <div style={{
+                                width: "2px",
+                                flex: 1,
+                                minHeight: "28px",
+                                background: "linear-gradient(to bottom, rgba(40,56,145,0.15), rgba(40,56,145,0.04))",
+                                margin: "4px 0",
+                              }} />
+                            )}
+                          </div>
+                          {/* Step text */}
+                          <div style={{ paddingBottom: isLast ? 0 : "1.125rem" }}>
+                            <p style={{
+                              margin: 0,
+                              fontSize: "0.9375rem",
+                              lineHeight: 1.55,
+                              color: isLast ? NAVY : DARK,
+                              fontWeight: isLast ? 600 : 400,
+                            }}>
+                              {step}
+                            </p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+              </div>
+
+              {/* ── RIGHT: Business outcome card ── */}
+              <div style={{
+                background: NAVY,
+                borderRadius: "1.25rem",
+                overflow: "hidden",
+                boxShadow: "0 4px 28px rgba(40,56,145,0.28)",
+                display: "flex",
+                flexDirection: "column",
+              }}>
+                {/* Time-saved banner */}
+                <div style={{
+                  padding: "1.5rem 1.75rem",
+                  borderBottom: "1px solid rgba(255,255,255,0.1)",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}>
+                  <div style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "0.625rem",
+                    background: "rgba(255,255,255,0.1)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                  }}>
+                    <Clock size={20} strokeWidth={1.75} color="white" aria-hidden="true" />
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <p style={{
+                      fontSize: "0.6875rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.09em",
+                      textTransform: "uppercase",
+                      color: "rgba(255,255,255,0.55)",
+                      margin: "0 0 0.3rem",
+                    }}>
+                      {INDUSTRY_TABS[activeTab].badgeLabel}
+                    </p>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                      <span style={{
+                        fontSize: "1.25rem",
+                        fontWeight: 700,
+                        color: "rgba(255,255,255,0.38)",
+                        textDecoration: "line-through",
+                      }}>
+                        {INDUSTRY_TABS[activeTab].badgeBefore}
+                      </span>
+                      <ArrowRight size={16} color={MAGENTA} aria-hidden="true" />
+                      <span style={{
+                        fontSize: "1.875rem",
+                        fontWeight: 800,
+                        color: "white",
+                        letterSpacing: "-0.01em",
+                      }}>
+                        {INDUSTRY_TABS[activeTab].badgeAfter}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* What gets handled automatically */}
+                <div style={{
+                  padding: "1.5rem 1.75rem",
+                  flex: 1,
+                  borderBottom: "1px solid rgba(255,255,255,0.1)",
+                }}>
+                  <p style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.09em",
+                    textTransform: "uppercase",
+                    color: "rgba(255,255,255,0.55)",
+                    margin: "0 0 1rem",
+                  }}>
+                    Handled automatically
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.625rem" }}>
                     {INDUSTRY_TABS[activeTab].tasks.map((task) => (
                       <li key={task} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
-                        <span style={{
-                          width: "18px",
-                          height: "18px",
-                          borderRadius: "50%",
-                          background: "rgba(126,15,74,0.1)",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          flexShrink: 0,
-                          fontSize: "0.6rem",
-                          color: MAGENTA,
-                          fontWeight: 800,
-                        }}>✓</span>
-                        <span style={{ fontSize: "0.9rem", color: DARK }}>{task}</span>
+                        <CheckCircle
+                          size={16}
+                          strokeWidth={2}
+                          color={MAGENTA}
+                          aria-hidden="true"
+                          style={{ flexShrink: 0 }}
+                        />
+                        <span style={{ fontSize: "0.9375rem", color: "rgba(255,255,255,0.88)", fontWeight: 500 }}>
+                          {task}
+                        </span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Supporting copy */}
-                <p style={{ fontSize: "0.875rem", color: GREY, lineHeight: 1.7, margin: 0, flexGrow: 1 }}>
-                  {INDUSTRY_TABS[activeTab].copy}
-                </p>
-
-                {/* CTA */}
-                <Link
-                  href="/contact"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.5rem",
-                    fontSize: "0.875rem",
-                    fontWeight: 600,
-                    color: NAVY,
-                    textDecoration: "none",
-                    paddingTop: "1rem",
-                    borderTop: `1px solid rgba(40,56,145,0.1)`,
-                  }}
-                >
-                  See how this works for your business
-                  <ArrowRight size={14} />
-                </Link>
+                {/* Supporting copy + CTA */}
+                <div style={{ padding: "1.5rem 1.75rem" }}>
+                  <p style={{
+                    fontSize: "0.9rem",
+                    color: "rgba(255,255,255,0.65)",
+                    lineHeight: 1.7,
+                    margin: "0 0 1.25rem",
+                  }}>
+                    {INDUSTRY_TABS[activeTab].copy}
+                  </p>
+                  <Link
+                    href="/contact"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "0.5rem",
+                      fontSize: "0.9rem",
+                      fontWeight: 700,
+                      color: "white",
+                      background: MAGENTA,
+                      textDecoration: "none",
+                      padding: "0.75rem 1.5rem",
+                      borderRadius: "0.5rem",
+                      width: "100%",
+                      boxSizing: "border-box",
+                      letterSpacing: "0.01em",
+                      boxShadow: "0 4px 14px rgba(126,15,74,0.35)",
+                      transition: "opacity 0.2s",
+                    }}
+                  >
+                    See how this works for your business
+                    <ArrowRight size={15} aria-hidden="true" />
+                  </Link>
+                </div>
               </div>
+
             </div>
           </div>
 
