@@ -51,6 +51,7 @@ const industryItems = [
 ];
 
 const mainNavItems = [
+  { label: "Start Here", href: "/start-here" },
   { label: "Services", href: "/services", mega: "services" },
   { label: "Industries", href: "/industries", mega: "industries" },
   { label: "Automation Planner", href: "/automation-planner" },
@@ -140,11 +141,12 @@ export default function Navigation() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`block px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                    className={`block px-3 py-2 text-sm rounded-md transition-colors ${
                       location === item.href
                         ? "text-[#283891] font-semibold"
                         : `${textColor} ${!scrolled && isDarkHeroPage ? "hover:text-white hover:bg-white/10" : "hover:text-[#283891] hover:bg-gray-50"}`
-                    }`}
+                    } ${item.label === "Start Here" ? "font-bold" : "font-medium"}`}
+                    style={item.label === "Start Here" ? { color: location === item.href ? "#283891" : "#7E0F4A" } : undefined}
                   >
                     {item.label}
                   </Link>
@@ -293,6 +295,7 @@ export default function Navigation() {
             </div>
 
             {[
+              { label: "Start Here", href: "/start-here" },
               { label: "Automation Planner", href: "/automation-planner" },
               { label: "Locations", href: "/locations" },
               { label: "Resources", href: "/resources" },

@@ -99,6 +99,7 @@ import BuildVsBuy from "./pages/insights/BuildVsBuy";
 import WhenAiIsNotTheAnswer from "./pages/insights/WhenAiIsNotTheAnswer";
 import AutomationVsDelegation from "./pages/insights/AutomationVsDelegation";
 import LeadIntakeWorkflow from "./pages/workflows/LeadIntakeWorkflow";
+import StartHere from "./pages/StartHere";
 import Solopreneurs from "./pages/Solopreneurs";
 import AppointmentBookingWorkflow from "./pages/workflows/AppointmentBookingWorkflow";
 import ClientOnboardingWorkflow from "./pages/workflows/ClientOnboardingWorkflow";
@@ -119,6 +120,7 @@ function Router() {
     <Layout>
       <Switch>
         {/* Core Pages */}
+        <Route path="/start-here" component={StartHere} />
         <Route path="/" component={Home} />
         <Route path="/services" component={Services} />
         <Route path="/services/lead-response-automation" component={LeadResponseAutomation} />

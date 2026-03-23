@@ -210,6 +210,7 @@ export default function Footer() {
             <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Resources</h4>
             <ul className="space-y-2.5 mb-7">
               {[
+                { label: "Start Here", href: "/start-here" },
                 { label: "Case Studies", href: "/case-studies" },
                 { label: "Resources Hub", href: "/resources" },
                 { label: "Automation Playbooks", href: "/playbooks" },
