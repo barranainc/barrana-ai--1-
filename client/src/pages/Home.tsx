@@ -24,7 +24,7 @@ import ObjectionCards from "@/components/diagrams/ObjectionCards";
 import CostOfInaction from "@/components/diagrams/CostOfInaction";
 import BeforeAfterComparison from "@/components/diagrams/BeforeAfterComparison";
 import MethodTimeline from "@/components/diagrams/MethodTimeline";
-import WorkflowDiagram, { WorkflowStep } from "@/components/diagrams/WorkflowDiagram";
+// WorkflowDiagram replaced by inline industry workflow section
 import CaseStudyDashboard from "@/components/diagrams/CaseStudyDashboard";
 import IndustryCards from "@/components/diagrams/IndustryCards";
 import SocialProofToast from "@/components/diagrams/SocialProofToast";
@@ -75,159 +75,206 @@ function Reveal({ children, delay = 0, className = "" }: {
   );
 }
 
-// ─── Workflow tab data ────────────────────────────────────────────────
-const workflowTabs: {
-  id: string;
-  label: string;
-  steps: WorkflowStep[];
-  badge: string;
-  description: string;
-}[] = [
+// ─── Industry workflow data ───────────────────────────────────────────
+const INDUSTRY_TABS = [
   {
     id: "immigration",
     label: "Immigration",
+    icon: "📋",
+    headline: "From inquiry to consultation without manual intake chaos",
     steps: [
-      { label: "Inquiry Arrives",   type: "trigger" },
-      { label: "AI Qualifies (90s)",type: "ai"      },
-      { label: "Categorize Visa",   type: "ai"      },
-      { label: "CRM Record",        type: "action"  },
-      { label: "Assign Consultant", type: "action"  },
-      { label: "Send Checklist",    type: "action"  },
-      { label: "Book Consultation", type: "outcome" },
+      "A new inquiry comes in by phone, form, or email",
+      "Key client intake details are collected automatically",
+      "The inquiry is tagged by service or visa type",
+      "A client record is created in the CRM",
+      "The right consultant is notified",
+      "A checklist or next-steps email is sent",
+      "The client is prompted to book a consultation",
     ],
-    badge: "Intake: 45 min → 5 min",
-    description:
-      "Every inquiry — web form, email, or phone — is captured, categorized by visa type, logged in your CRM, and assigned to the right consultant with a document checklist sent automatically. No manual sorting. No missed inquiries.",
+    badgeLabel: "Intake admin",
+    badgeBefore: "45 min",
+    badgeAfter: "5 min",
+    copy: "Reduce back-and-forth during intake, keep inquiries organised, and help your team respond faster without manually sorting every new lead.",
+    tasks: ["Intake collection", "Inquiry routing", "CRM updates", "Checklist delivery", "Booking prompts"],
   },
   {
     id: "contractor",
     label: "Contractors",
+    icon: "🔨",
+    headline: "Turn job inquiries into organised estimates faster",
     steps: [
-      { label: "After-Hours Call",  type: "trigger" },
-      { label: "AI Responds",       type: "ai"      },
-      { label: "Qualifies Job",     type: "ai"      },
-      { label: "CRM Record",        type: "action"  },
-      { label: "Schedule Estimate", type: "action"  },
-      { label: "Estimate Booked",   type: "outcome" },
+      "New lead comes in from form, call, or message",
+      "Service type and job details are captured",
+      "Lead is logged in your system",
+      "Request is routed to the right estimator or team member",
+      "Estimate request or follow-up is sent automatically",
+      "Site visit or call is booked",
     ],
-    badge: "Zero missed leads",
-    description:
-      "Inquiries at 11pm get responded to in 90 seconds. The AI qualifies the job, logs it, and books the estimate — before your competitor's voicemail even picks up.",
+    badgeLabel: "Lead handling",
+    badgeBefore: "30 min",
+    badgeAfter: "7 min",
+    copy: "Stop losing leads in texts, emails, and missed calls. Capture job requests quickly and move prospects toward an estimate without admin delays.",
+    tasks: ["Lead capture", "Job-type tagging", "Team routing", "Follow-up messages", "Estimate booking"],
   },
   {
     id: "accounting",
     label: "Accounting",
+    icon: "📊",
+    headline: "Reduce time spent chasing clients for basic intake and documents",
     steps: [
-      { label: "Season Opens",       type: "trigger" },
-      { label: "Doc Request Sent",   type: "action"  },
-      { label: "Reminder System",    type: "ai"      },
-      { label: "Files Tracked",      type: "action"  },
-      { label: "Review Ready",       type: "action"  },
-      { label: "Client Complete",    type: "outcome" },
+      "A new client inquiry comes in",
+      "Intake details are collected automatically",
+      "Service type is tagged",
+      "Client record is created",
+      "Required document list is sent",
+      "Follow-up reminders are triggered automatically",
+      "Discovery call or appointment is booked",
     ],
-    badge: "Chase time eliminated. Capacity +30%",
-    description:
-      "Automated document requests go out on day one of tax season. The system tracks what's received, sends intelligent follow-ups, and flags incomplete files. Your staff reviews work, not chasing paper.",
+    badgeLabel: "Admin follow-up",
+    badgeBefore: "40 min",
+    badgeAfter: "8 min",
+    copy: "Spend less time repeating the same intake and document requests. Keep client onboarding moving without constant manual follow-up.",
+    tasks: ["New client intake", "Service tagging", "CRM entry", "Document request emails", "Reminder sequences"],
   },
   {
     id: "clinic",
     label: "Medical Clinics",
+    icon: "🏥",
+    headline: "Handle inquiries and bookings without front-desk overload",
     steps: [
-      { label: "Waitlist Entry",    type: "trigger" },
-      { label: "Slot Opens",        type: "trigger" },
-      { label: "AI Matches + Texts",type: "ai"      },
-      { label: "Patient Confirms",  type: "action"  },
-      { label: "Reminder Sent",     type: "action"  },
-      { label: "Appointment Kept",  type: "outcome" },
+      "Patient inquiry comes in",
+      "Contact and visit details are collected",
+      "Request type is identified",
+      "Record is updated or created",
+      "Staff are notified when needed",
+      "Booking link or next steps are sent",
+      "Appointment gets scheduled faster",
     ],
-    badge: "No-shows down 25–40%",
-    description:
-      "When a slot opens, the system matches it to the highest-priority waitlist patient, sends a text, books the confirmation, and sends a reminder 24 hours before. No staff intervention required.",
+    badgeLabel: "Front-desk admin",
+    badgeBefore: "25 min",
+    badgeAfter: "5 min",
+    copy: "Reduce repetitive front-desk work, improve response speed, and make it easier for patients to move from inquiry to appointment.",
+    tasks: ["Inquiry capture", "Request routing", "Patient record updates", "Appointment prompts", "Reminder messages"],
   },
   {
     id: "law",
     label: "Law Firms",
+    icon: "⚖️",
+    headline: "Route new matters properly before staff spend time on them",
     steps: [
-      { label: "Inquiry Arrives",  type: "trigger" },
-      { label: "AI Screens",       type: "ai"      },
-      { label: "Conflict Check",   type: "action"  },
-      { label: "Assign Attorney",  type: "action"  },
-      { label: "Intake Form Sent", type: "action"  },
-      { label: "Retained",         type: "outcome" },
+      "New inquiry comes in",
+      "Initial matter details are collected",
+      "Request is tagged by practice area",
+      "Contact record is created",
+      "The right staff member is notified",
+      "Intake instructions or next steps are sent",
+      "Consultation request moves forward",
     ],
-    badge: "Every inquiry captured",
-    description:
-      "Every call, form, and email is captured and screened. Conflict checks run automatically. Qualified leads are assigned and receive intake forms before they've talked to anyone. No leads fall through.",
+    badgeLabel: "Intake handling",
+    badgeBefore: "35 min",
+    badgeAfter: "6 min",
+    copy: "Keep inquiries organised, reduce manual intake work, and ensure the right people see the right matters sooner.",
+    tasks: ["New matter intake", "Practice-area tagging", "CRM record creation", "Team notification", "Consultation follow-up"],
   },
   {
     id: "real-estate",
     label: "Real Estate",
+    icon: "🏡",
+    headline: "Capture buyer and seller inquiries before they go cold",
     steps: [
-      { label: "Listing Inquiry",    type: "trigger" },
-      { label: "AI Qualifies Lead",  type: "ai"      },
-      { label: "CRM Record",         type: "action"  },
-      { label: "Showing Scheduled",  type: "action"  },
-      { label: "Follow-up Sent",     type: "action"  },
-      { label: "Offer Submitted",    type: "outcome" },
+      "Inquiry comes in from site, ad, or form",
+      "Contact and property interest details are collected",
+      "Lead is tagged by intent",
+      "CRM is updated automatically",
+      "Agent or team member is notified",
+      "Follow-up message is sent",
+      "Viewing or consultation is booked",
     ],
-    badge: "Response time: 4 hrs → 90 sec",
-    description: "Every listing inquiry — web form, email, or DM — is qualified in 90 seconds, added to CRM, and a showing is booked. Follow-up sequences run automatically until the lead converts or opts out. Your agents spend time on showings, not inbox management.",
+    badgeLabel: "Lead response setup",
+    badgeBefore: "20 min",
+    badgeAfter: "4 min",
+    copy: "Respond faster, reduce lead leakage, and keep your pipeline cleaner without manually managing every first touch.",
+    tasks: ["Lead capture", "Buyer or seller tagging", "CRM updates", "Agent notification", "Booking prompts"],
   },
   {
     id: "dental",
     label: "Dental Offices",
+    icon: "🦷",
+    headline: "Reduce missed calls and booking friction for new patients",
     steps: [
-      { label: "Patient Inquiry",    type: "trigger" },
-      { label: "AI Screens",         type: "ai"      },
-      { label: "Appointment Booked", type: "action"  },
-      { label: "Forms Sent",         type: "action"  },
-      { label: "Reminder + Confirm", type: "action"  },
-      { label: "Patient Arrives",    type: "outcome" },
+      "Patient inquiry comes in",
+      "Contact and appointment details are collected",
+      "Request type is identified",
+      "Front-desk system is updated",
+      "Booking link or next steps are sent",
+      "Staff are notified if needed",
+      "Appointment gets scheduled",
     ],
-    badge: "No-shows down 35%. Front desk freed.",
-    description: "New patient inquiries are screened, booked, and sent intake forms automatically. 24-hour reminders fire with a confirmation link. Cancellations trigger immediate waitlist backfill. Your front desk handles arrivals, not phone tag.",
+    badgeLabel: "Booking admin",
+    badgeBefore: "20 min",
+    badgeAfter: "4 min",
+    copy: "Make it easier for patients to book while reducing repetitive front-desk tasks that slow your team down.",
+    tasks: ["New patient intake", "Appointment request handling", "System updates", "Booking messages", "Reminder follow-ups"],
   },
   {
     id: "insurance",
     label: "Insurance Brokers",
+    icon: "🛡️",
+    headline: "Speed up intake and follow-up for policy inquiries",
     steps: [
-      { label: "Quote Request",      type: "trigger" },
-      { label: "AI Captures Data",   type: "ai"      },
-      { label: "CRM Record",         type: "action"  },
-      { label: "Renewal Reminder",   type: "action"  },
-      { label: "Follow-up Sequence", type: "action"  },
-      { label: "Policy Renewed",     type: "outcome" },
+      "New inquiry comes in",
+      "Contact and policy need details are collected",
+      "Request is tagged by product line",
+      "Record is created in the system",
+      "Broker or staff member is notified",
+      "Required next steps are sent",
+      "Consultation or call is booked",
     ],
-    badge: "Renewal rate +28%. Zero manual tracking.",
-    description: "Quote requests are captured and logged instantly. Renewal reminders fire automatically 90 days out, then 60, then 30. Follow-up sequences run until the client responds. No spreadsheet tracking. No renewals slipping through.",
+    badgeLabel: "Inquiry processing",
+    badgeBefore: "30 min",
+    badgeAfter: "6 min",
+    copy: "Reduce delays in intake and follow-up so your team can focus on client conversations instead of repetitive admin.",
+    tasks: ["Intake capture", "Product-line tagging", "CRM updates", "Staff routing", "Booking follow-up"],
   },
   {
     id: "physio",
     label: "Physiotherapy",
+    icon: "💪",
+    headline: "Move patients from inquiry to assessment with less admin friction",
     steps: [
-      { label: "Referral Arrives",   type: "trigger" },
-      { label: "AI Triages",         type: "ai"      },
-      { label: "Book Initial Appt",  type: "action"  },
-      { label: "Intake Form Sent",   type: "action"  },
-      { label: "Treatment Planned",  type: "action"  },
-      { label: "Ongoing Bookings",   type: "outcome" },
+      "Patient inquiry comes in",
+      "Contact and visit reason details are collected",
+      "Request type is identified",
+      "Record is updated or created",
+      "Booking options are sent",
+      "Staff are notified when necessary",
+      "Assessment is booked",
     ],
-    badge: "Admin time cut by 12 hrs/week",
-    description: "Referrals and self-referrals are triaged, booked, and sent intake forms before the first appointment. Ongoing visit reminders fire automatically. Discharge follow-ups check in at 2 weeks and 6 weeks. No manual scheduling or chasing.",
+    badgeLabel: "Admin handling",
+    badgeBefore: "25 min",
+    badgeAfter: "5 min",
+    copy: "Reduce time spent on repetitive intake and help patients book faster without adding pressure to your front desk.",
+    tasks: ["Intake collection", "Visit-type routing", "Record updates", "Booking links", "Staff notifications"],
   },
   {
     id: "cleaning",
     label: "Cleaning Companies",
+    icon: "🧹",
+    headline: "Convert service requests into scheduled jobs faster",
     steps: [
-      { label: "Service Request",    type: "trigger" },
-      { label: "AI Qualifies",       type: "ai"      },
-      { label: "Quote Generated",    type: "action"  },
-      { label: "Job Scheduled",      type: "action"  },
-      { label: "Invoice Sent",       type: "action"  },
-      { label: "Review Requested",   type: "outcome" },
+      "New service request comes in",
+      "Property and service details are collected",
+      "Job type is tagged",
+      "Lead record is created",
+      "Team follow-up is triggered",
+      "Quote or booking prompt is sent",
+      "Job gets scheduled faster",
     ],
-    badge: "Invoicing automated. Reviews up 3×.",
-    description: "Service requests are qualified and quoted instantly. Jobs are scheduled, confirmed the day before, and invoiced automatically on completion. A review request goes out 2 hours after the job closes. No manual follow-up. No forgotten invoices.",
+    badgeLabel: "Lead-to-booking admin",
+    badgeBefore: "25 min",
+    badgeAfter: "5 min",
+    copy: "Keep service requests organised, reduce manual follow-up, and move leads toward quotes and bookings faster.",
+    tasks: ["Request capture", "Job-type tagging", "Lead record creation", "Follow-up messages", "Booking prompts"],
   },
 ];
 
@@ -685,9 +732,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── WORKFLOW TABS ────────────────────────────────────────────── */}
+      {/* ─── HOW IT WORKS FOR YOUR INDUSTRY ─────────────────────────── */}
       <section className="section" style={{ background: "white" }}>
+        <style>{`
+          @keyframes tabContentIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+          }
+        `}</style>
         <div className="container">
+
+          {/* Section header */}
           <div
             ref={workflowReveal.ref}
             style={{
@@ -697,67 +752,234 @@ export default function Home() {
               marginBottom: "2.5rem",
             }}
           >
-            <div className="eyebrow">Example Workflows</div>
+            <div className="eyebrow">How It Works</div>
             <div className="grid lg:grid-cols-2 gap-6 items-end">
               <h2 style={{ color: DARK }}>
-                What Automation Looks Like in Practice
+                See How This Works in Your Business
               </h2>
               <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Each workflow is built specifically for your business — not a template. These are the patterns we implement most often across ten industries.
+                Choose your industry to see how repetitive admin gets handled faster, more accurately, and with less manual work from your team.
               </p>
             </div>
           </div>
 
-          {/* Tab buttons */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2rem" }}>
-            {workflowTabs.map((tab, i) => (
+          {/* Industry tab buttons */}
+          <div
+            role="tablist"
+            aria-label="Industry workflows"
+            style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2rem" }}
+          >
+            {INDUSTRY_TABS.map((tab, i) => (
               <button
                 key={tab.id}
+                role="tab"
+                id={`tab-btn-${tab.id}`}
+                aria-selected={activeTab === i}
+                aria-controls={`tab-panel-${tab.id}`}
                 onClick={() => setActiveTab(i)}
                 style={{
-                  padding: "0.5rem 1.25rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.375rem",
+                  padding: "0.5rem 1.125rem",
                   borderRadius: "2rem",
                   fontWeight: 600,
                   fontSize: "0.875rem",
                   border: `1.5px solid ${activeTab === i ? NAVY : BORDER}`,
                   background: activeTab === i ? NAVY : "white",
-                  color: activeTab === i ? "white" : GREY,
+                  color: activeTab === i ? "white" : DARK,
                   cursor: "pointer",
                   transition: "all 0.2s ease",
+                  whiteSpace: "nowrap",
                 }}
               >
+                <span aria-hidden="true">{tab.icon}</span>
                 {tab.label}
               </button>
             ))}
           </div>
 
-          {/* Active tab content */}
-          <div style={{
-            background: OFFWHITE,
-            borderRadius: "0.875rem",
-            padding: "1.5rem 1.75rem 1.75rem",
-            border: `1px solid ${BORDER}`,
-          }}>
-            <WorkflowDiagram
-              key={activeTab}
-              steps={workflowTabs[activeTab].steps}
-              resultBadge={workflowTabs[activeTab].badge}
-            />
-            <div style={{ marginTop: "1.75rem", paddingTop: "1.5rem", borderTop: `1px solid ${BORDER}` }}>
-              <p style={{
-                fontSize: "0.9375rem",
-                color: GREY,
-                lineHeight: 1.7,
-                maxWidth: "72ch",
-                margin: 0,
+          {/* Tab content panel — re-mounts on tab switch to trigger animation */}
+          <div
+            key={activeTab}
+            role="tabpanel"
+            id={`tab-panel-${INDUSTRY_TABS[activeTab].id}`}
+            aria-labelledby={`tab-btn-${INDUSTRY_TABS[activeTab].id}`}
+            style={{ animation: "tabContentIn 0.35s ease" }}
+          >
+            <div className="grid md:grid-cols-2 gap-6">
+
+              {/* ── Left: plain-English workflow card ── */}
+              <div style={{
+                background: "white",
+                borderRadius: "1rem",
+                border: `1px solid ${BORDER}`,
+                padding: "1.75rem 2rem",
+                boxShadow: "0 2px 20px rgba(0,0,0,0.04)",
               }}>
-                {workflowTabs[activeTab].description}
-              </p>
+                <h3 style={{
+                  fontSize: "1.0625rem",
+                  fontWeight: 700,
+                  color: DARK,
+                  marginBottom: "1.75rem",
+                  lineHeight: 1.45,
+                }}>
+                  {INDUSTRY_TABS[activeTab].headline}
+                </h3>
+
+                <ol style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                  {INDUSTRY_TABS[activeTab].steps.map((step, si) => {
+                    const isLast = si === INDUSTRY_TABS[activeTab].steps.length - 1;
+                    return (
+                      <li key={si} style={{ display: "flex", gap: "0.875rem" }}>
+                        {/* Numbered circle + vertical connector line */}
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
+                          <div style={{
+                            width: "26px",
+                            height: "26px",
+                            borderRadius: "50%",
+                            background: isLast ? MAGENTA : NAVY,
+                            color: "white",
+                            fontSize: "0.6875rem",
+                            fontWeight: 700,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexShrink: 0,
+                          }}>
+                            {si + 1}
+                          </div>
+                          {!isLast && (
+                            <div style={{
+                              width: "2px",
+                              flex: 1,
+                              minHeight: "20px",
+                              background: "linear-gradient(to bottom, rgba(40,56,145,0.18), rgba(40,56,145,0.04))",
+                              margin: "3px 0",
+                            }} />
+                          )}
+                        </div>
+                        {/* Step text */}
+                        <p style={{
+                          paddingTop: "3px",
+                          paddingBottom: isLast ? 0 : "16px",
+                          margin: 0,
+                          fontSize: "0.9rem",
+                          lineHeight: 1.5,
+                          color: isLast ? NAVY : DARK,
+                          fontWeight: isLast ? 600 : 400,
+                        }}>
+                          {step}
+                        </p>
+                      </li>
+                    );
+                  })}
+                </ol>
+              </div>
+
+              {/* ── Right: outcome value card ── */}
+              <div style={{
+                background: "rgba(40,56,145,0.03)",
+                borderRadius: "1rem",
+                border: `1px solid rgba(40,56,145,0.10)`,
+                padding: "1.75rem",
+                display: "flex",
+                flexDirection: "column",
+                gap: "1.5rem",
+              }}>
+
+                {/* Time-saved badge */}
+                <div style={{
+                  background: "white",
+                  borderRadius: "0.75rem",
+                  border: `1px solid rgba(40,56,145,0.12)`,
+                  padding: "1.25rem 1.5rem",
+                  textAlign: "center",
+                }}>
+                  <p style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    color: GREY,
+                    margin: "0 0 0.625rem",
+                  }}>
+                    {INDUSTRY_TABS[activeTab].badgeLabel}
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.875rem" }}>
+                    <span style={{ fontSize: "1.375rem", fontWeight: 700, color: GREY, textDecoration: "line-through", opacity: 0.45 }}>
+                      {INDUSTRY_TABS[activeTab].badgeBefore}
+                    </span>
+                    <ArrowRight size={18} color={MAGENTA} />
+                    <span style={{ fontSize: "1.875rem", fontWeight: 800, color: NAVY }}>
+                      {INDUSTRY_TABS[activeTab].badgeAfter}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Automated tasks list */}
+                <div>
+                  <p style={{
+                    fontSize: "0.6875rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.09em",
+                    textTransform: "uppercase",
+                    color: NAVY,
+                    margin: "0 0 0.875rem",
+                  }}>
+                    What gets handled automatically
+                  </p>
+                  <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                    {INDUSTRY_TABS[activeTab].tasks.map((task) => (
+                      <li key={task} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
+                        <span style={{
+                          width: "18px",
+                          height: "18px",
+                          borderRadius: "50%",
+                          background: "rgba(126,15,74,0.1)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                          fontSize: "0.6rem",
+                          color: MAGENTA,
+                          fontWeight: 800,
+                        }}>✓</span>
+                        <span style={{ fontSize: "0.9rem", color: DARK }}>{task}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Supporting copy */}
+                <p style={{ fontSize: "0.875rem", color: GREY, lineHeight: 1.7, margin: 0, flexGrow: 1 }}>
+                  {INDUSTRY_TABS[activeTab].copy}
+                </p>
+
+                {/* CTA */}
+                <Link
+                  href="/contact"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    fontSize: "0.875rem",
+                    fontWeight: 600,
+                    color: NAVY,
+                    textDecoration: "none",
+                    paddingTop: "1rem",
+                    borderTop: `1px solid rgba(40,56,145,0.1)`,
+                  }}
+                >
+                  See how this works for your business
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
 
           <Reveal delay={0.1}>
-            <div style={{ textAlign: "center", marginTop: "2rem" }}>
+            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <Link href="/services" className="btn-secondary">
                 View All Services
                 <ArrowRight size={16} />
