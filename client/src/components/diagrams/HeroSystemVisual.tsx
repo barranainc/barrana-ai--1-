@@ -14,7 +14,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 // ── Colour tokens ────────────────────────────────────────────────────
 const BLUE    = "#4B6BFF";   // connectors, hub dots, icon bg
-const MAG     = "#D61A7F";   // AUTOMATION label, pill accent
+const MAG     = "#7E0F4A";   // AUTOMATION label, pill accent (official Barrana Magenta)
 const PANEL   = "#26304F";   // inner section backgrounds
 const LABEL   = "#C7D0EA";   // primary text / icon strokes
 const MUTED   = "#9BA7C7";   // secondary text
@@ -111,8 +111,8 @@ const KF = `
   50%      { r:7.5; opacity:0.45; }
 }
 @keyframes autoPulse {
-  0%,100% { filter: drop-shadow(0 0 12px rgba(214,26,127,0.25)); }
-  50%      { filter: drop-shadow(0 0 28px rgba(214,26,127,0.5)); }
+  0%,100% { filter: drop-shadow(0 0 12px rgba(126,15,74,0.30)); }
+  50%      { filter: drop-shadow(0 0 28px rgba(126,15,74,0.55)); }
 }
 `;
 
@@ -234,7 +234,7 @@ export default function HeroSystemVisual() {
             stroke={MAG}
             strokeWidth="1.5"
             style={{
-              filter: phase >= 3 ? "drop-shadow(0 0 14px rgba(214,26,127,0.25))" : "none",
+              filter: phase >= 3 ? "drop-shadow(0 0 14px rgba(126,15,74,0.30))" : "none",
               transition: reduced ? "none" : "filter 1s ease",
               animation: (!reduced && phase >= 5) ? "autoPulse 3s ease-in-out infinite" : "none",
             }}
