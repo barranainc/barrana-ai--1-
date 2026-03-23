@@ -466,8 +466,11 @@ export default function Home() {
       <JsonLd data={faqSchema} />
 
       {/* ─── SECTION 1: HERO ──────────────────────────────────────────── */}
-      <section style={{ background: "linear-gradient(135deg, #1A1A2E 0%, #0f1428 100%)", paddingTop: "3rem", paddingBottom: "4rem" }}>
-        <div className="container">
+      <section style={{ background: "linear-gradient(150deg, #0A1023 0%, #0e1530 55%, #111936 100%)", paddingTop: "3rem", paddingBottom: "4rem", position: "relative", overflow: "hidden" }}>
+        {/* Ambient glows behind right diagram */}
+        <div style={{ position: "absolute", top: "5%", right: "2%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(75,107,255,0.13) 0%, transparent 68%)", pointerEvents: "none", zIndex: 0 }} />
+        <div style={{ position: "absolute", top: "35%", right: "8%", width: "320px", height: "320px", background: "radial-gradient(circle, rgba(214,26,127,0.07) 0%, transparent 65%)", pointerEvents: "none", zIndex: 0 }} />
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div
             ref={heroReveal.ref}
             style={{ display: "grid", gap: "3rem", alignItems: "start" }}
@@ -516,14 +519,14 @@ export default function Home() {
                 }}
               >
                 Your Manual Operations Are Costing You{" "}
-                <span style={{ color: MAGENTA, display: "block" }}>$40,000 to $180,000 Per Year.</span>
+                <span style={{ color: "#D61A7F", display: "block" }}>$40,000 to $180,000 Per Year.</span>
                 AI Automation Stops the Bleeding.
               </h1>
 
               <p
                 style={{
                   fontSize: "1.0625rem",
-                  color: "rgba(255,255,255,0.7)",
+                  color: "#C7D0EA",
                   marginBottom: "2rem",
                   lineHeight: 1.7,
                   maxWidth: "52ch",
@@ -553,48 +556,48 @@ export default function Home() {
 
                 {/* Card 1 — range, no counter */}
                 <div style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  background: "#1B223D",
+                  border: "1px solid rgba(255,255,255,0.12)",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  backdropFilter: "blur(8px)",
+                  boxShadow: "0 2px 14px rgba(4,8,20,0.35)",
                 }}>
-                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: "#D61A7F", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     $3,000–$8,000
                   </div>
-                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     What one missed lead costs you
                   </div>
                 </div>
 
                 {/* Card 2 — animated */}
                 <div style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  background: "#1B223D",
+                  border: "1px solid rgba(255,255,255,0.12)",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  backdropFilter: "blur(8px)",
+                  boxShadow: "0 2px 14px rgba(4,8,20,0.35)",
                 }}>
-                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: "#D61A7F", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     <AnimatedCounter target={40000} prefix="$" suffix="–$180K/yr" />
                   </div>
-                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     Lost to slow response and manual follow-up
                   </div>
                 </div>
 
                 {/* Card 3 — animated */}
                 <div style={{
-                  background: "rgba(255,255,255,0.05)",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  background: "#1B223D",
+                  border: "1px solid rgba(255,255,255,0.12)",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  backdropFilter: "blur(8px)",
+                  boxShadow: "0 2px 14px rgba(4,8,20,0.35)",
                 }}>
-                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: "#D61A7F", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     <AnimatedCounter target={52000} prefix="$" suffix="/yr" />
                   </div>
-                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     What 20 hrs/wk of admin costs at $50/hr
                   </div>
                 </div>
@@ -618,14 +621,14 @@ export default function Home() {
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "0.5rem",
-                      background: MAGENTA,
+                      background: "#D61A7F",
                       color: "white",
                       fontWeight: 700,
                       fontSize: "0.9375rem",
                       padding: "0.875rem 1.75rem",
                       borderRadius: "0.5rem",
                       textDecoration: "none",
-                      boxShadow: "0 4px 20px rgba(126,15,74,0.4)",
+                      boxShadow: "0 4px 20px rgba(214,26,127,0.4)",
                     }}
                   >
                     Calculate What Your Operations Are Costing You
@@ -666,12 +669,11 @@ export default function Home() {
               top: "7rem",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.8s ease 0.5s",
-              background: "rgba(255,255,255,0.06)",
-              backdropFilter: "blur(8px)",
-              border: "1px solid rgba(255,255,255,0.12)",
+              background: "#1B223D",
+              border: "1px solid rgba(255,255,255,0.14)",
               borderRadius: "1.25rem",
-              padding: "1.25rem 1.25rem 1rem",
-              boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
+              padding: "1.5rem 1.5rem 1.25rem",
+              boxShadow: "0 8px 40px rgba(4,8,20,0.5), 0 0 80px rgba(75,107,255,0.12), 0 0 50px rgba(214,26,127,0.05)",
             }}>
               <HeroSystemVisual />
             </div>
