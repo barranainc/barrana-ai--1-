@@ -1,28 +1,43 @@
 /*
- * Home.tsx — Barrana.ai Homepage (v2)
+ * Home.tsx — Barrana.ai Homepage (V5 — Money-Framed Rewrite)
  * Brand Colors (OFFICIAL):
  *   Navy:    #283891  (primary — nav, headings, CTAs, dark sections)
- *   Magenta: #7E0F4A  (accent — underlines, highlights, badges, hover)
+ *   Magenta: #7E0F4A  (accent — dollar amounts, highlights, badges)
  *   Grey:    #7B7B7B  (body text, secondary labels)
- *
- * Rewritten with 10 animated diagram components, 3 new sections,
- * JSON-LD schema, and full prefers-reduced-motion support.
+ *   Dark:    #1A1A2E  (headings on light backgrounds)
+ *   Offwhite: #F5F6FA (section backgrounds)
+ *   Border:  #E2E4ED
  */
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import {
   ArrowRight, ChevronDown, Search, CheckCircle, Clock,
-  FileText,      // Immigration
-  HardHat,       // Contractors
-  Calculator,    // Accounting
-  Stethoscope,   // Medical Clinics
-  Scale,         // Law Firms
-  Building2,     // Real Estate
-  Smile,         // Dental Offices
-  Shield,        // Insurance Brokers
-  Activity,      // Physiotherapy
-  Sparkles,      // Cleaning Companies
+  FileText,
+  HardHat,
+  Calculator,
+  Stethoscope,
+  Scale,
+  Building2,
+  Smile,
+  Shield,
+  Activity,
+  Sparkles,
+  PhoneCall,
+  CalendarX,
+  DollarSign,
+  Zap,
+  Receipt,
+  Award,
+  Tag,
+  Plug,
+  MapPin,
+  Monitor,
+  Globe,
+  Megaphone,
+  Map,
+  Settings,
+  Calendar,
   type LucideIcon,
 } from "lucide-react";
 import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
@@ -30,16 +45,8 @@ import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
 // Schema
 import JsonLd from "@/components/JsonLd";
 
-// New diagram components
+// Diagram components (kept from previous)
 import HeroSystemVisual from "@/components/diagrams/HeroSystemVisual";
-import TrustBadges from "@/components/diagrams/TrustBadges";
-import ObjectionCards from "@/components/diagrams/ObjectionCards";
-import CostOfInaction from "@/components/diagrams/CostOfInaction";
-import BeforeAfterComparison from "@/components/diagrams/BeforeAfterComparison";
-import MethodTimeline from "@/components/diagrams/MethodTimeline";
-// WorkflowDiagram replaced by inline industry workflow section
-import CaseStudyDashboard from "@/components/diagrams/CaseStudyDashboard";
-import IndustryCards from "@/components/diagrams/IndustryCards";
 import SocialProofToast from "@/components/diagrams/SocialProofToast";
 
 // UI components
@@ -85,6 +92,30 @@ function Reveal({ children, delay = 0, className = "" }: {
     >
       {children}
     </div>
+  );
+}
+
+// ─── Animated Counter ─────────────────────────────────────────────────
+function AnimatedCounter({ target, prefix = "", suffix = "", duration = 1800 }: {
+  target: number; prefix?: string; suffix?: string; duration?: number;
+}) {
+  const [count, setCount] = useState(0);
+  const { ref, visible } = useReveal(0.1);
+  useEffect(() => {
+    if (!visible) return;
+    const start = performance.now();
+    const step = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }, [visible, target, duration]);
+  return (
+    <span ref={ref}>
+      {prefix}{count.toLocaleString()}{suffix}
+    </span>
   );
 }
 
@@ -298,81 +329,81 @@ const INDUSTRY_TABS: IndustryTab[] = [
   },
 ];
 
-// ─── FAQ data ─────────────────────────────────────────────────────────
+// ─── FAQ data (updated 8 questions) ──────────────────────────────────
 const faqItems: FAQItem[] = [
   {
-    question: "How much does AI automation cost?",
+    question: "How much does automation cost?",
     answer:
-      "A single workflow automation typically costs $1,500–$4,000 CAD. Multi-system implementations range from $5,000–$15,000 CAD depending on scope. Pricing is always fixed — agreed after the free audit, before any work begins. No hourly billing. No scope creep invoices.",
+      "Single workflow: $1,500–$4,000 CAD. Multi-workflow system: $5,000–$12,000. Full operational automation: $10,000–$20,000. All fixed pricing after a free audit. Most businesses see full ROI within 30–60 days. Monthly maintenance: $200–$500.",
   },
   {
-    question: "How long until I see results?",
+    question: "How fast will I see results?",
     answer:
-      "The first automation is typically live within 2–3 weeks of the audit. Most clients see measurable improvement in lead response time, intake speed, or admin hours within the first 30 days. The free audit identifies which workflow delivers the fastest return.",
+      "First automated workflow goes live in 1–2 weeks. Measurable results visible within the first week of operation. Full system payback typically 30–60 days.",
   },
   {
-    question: "Do I need to replace my current software?",
+    question: "Will this replace my staff?",
     answer:
-      "No. We build automation on top of the tools you already use — your CRM, calendar, email platform, and accounting system. Your team keeps working exactly how they work today. We add a coordination layer that connects those tools automatically.",
+      "No. Automation replaces coordination tasks. Your staff are freed for higher-value work: advising clients, closing deals, building relationships. Most businesses find their team is more productive and less stressed, not smaller.",
   },
   {
-    question: "Will this replace my employees?",
+    question: "Do I need to change my current software?",
     answer:
-      "No. Automation handles coordination work: data entry, follow-up messages, reminders, document routing, and status updates. Your staff handles judgment, professional expertise, and client relationships — the work that actually requires a person. Most clients find their team has more time for billable work, not less.",
+      "No. We integrate with QuickBooks, HubSpot, Zoho, Clio, Jane App, Jobber, Go High Level, Google Workspace, Microsoft 365, and dozens more. If you use spreadsheets, we can set up a lightweight CRM as part of implementation.",
   },
   {
-    question: "Is my client data secure?",
+    question: "Is this safe for regulated industries like law, healthcare, or immigration?",
     answer:
-      "Yes. All implementations are PIPEDA-aware. Client data stays within your existing systems — we do not move data to new platforms or third-party services without your explicit approval. We document every data flow in the system design phase before build begins.",
+      "Yes. Every automation includes approval gates for sensitive actions, human review for regulated decisions, full audit logging, and PIPEDA-aware data handling. Your professional judgement stays in your hands. Automation handles the coordination around it.",
   },
   {
-    question: "What if something breaks?",
+    question: "What if the AI gets something wrong?",
     answer:
-      "Every system is built with error handling, failure alerts, retry logic, and human escalation paths. If an automation encounters an exception, it fails safely and notifies the right person rather than silently dropping a task. Nothing in your operations fails without someone knowing about it.",
+      "Every system includes our Control Layer: stop-loss triggers, retry logic, approval gates, audit logging, and human escalation paths. If something unexpected happens, the system stops and alerts a human with full context.",
   },
   {
-    question: "What happens in the free audit?",
+    question: "What should I automate first?",
     answer:
-      "The audit is a 60-minute working session — not a sales call. We map your current workflows, identify the highest-friction manual tasks, calculate the time and revenue cost, and produce a prioritized automation roadmap. You receive the workflow map, friction analysis, and ROI projection to keep, regardless of whether you engage us.",
+      "For most service businesses: lead response automation. It has the highest ROI, lowest complexity, and fastest implementation. If you are not sure, the free Automation Audit maps your workflows and tells you exactly where to start.",
   },
   {
-    question: "What if automation is not right for my business?",
+    question: "What areas do you serve?",
     answer:
-      "We will tell you honestly. The audit exists specifically to make that determination. If your operation is too small, too inconsistent, or does not yet have the workflow volume to justify automation investment, we will say so clearly and tell you what needs to be in place first.",
+      "We serve small businesses across the Greater Toronto Area: Vaughan, Toronto, Markham, Richmond Hill, Mississauga, Brampton, North York, Scarborough, Etobicoke, and surrounding areas. Our office is at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2.",
   },
 ];
 
-// ─── Problems list ────────────────────────────────────────────────────
-const problemsList = [
+// ─── Objection items ──────────────────────────────────────────────────
+const objectionItems: FAQItem[] = [
   {
-    icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
-    title: "Leads Going Cold",
-    desc: "A prospect inquires at 6pm. Your team sees it at 9am. By then, they have booked with the first business that responded. You never even knew you lost them.",
+    question: "How much does this cost?",
+    answer:
+      "Single workflow automation: $1,500–$4,000 CAD. Multi-workflow system: $5,000–$12,000. Fixed pricing after a free audit. No hourly billing. No surprise invoices. Most businesses see full ROI within 30–60 days.",
   },
   {
-    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
-    title: "Staff Buried in Coordination",
-    desc: "Your team spends 2–3 hours per day copying data between systems, sending reminders, and chasing documents. That is 15+ hours per week of zero-revenue work.",
+    question: "Will this replace my staff?",
+    answer:
+      "No. Automation handles coordination tasks: scheduling, reminders, data entry, follow-up. Your staff handles expert work — advice, sales, client relationships. Automation makes your team more productive, not smaller.",
   },
   {
-    icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z",
-    title: "Invisible Operations",
-    desc: "You cannot tell which files are complete, which invoices are overdue, or who is overloaded. You discover dropped tasks when the client complains.",
+    question: "How long does setup take?",
+    answer:
+      "First workflow: 1–2 weeks. Full multi-workflow system: 4–8 weeks. You start seeing results from Week 1, not Month 3.",
   },
   {
-    icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
-    title: "Calls Falling Through",
-    desc: "Phone goes to voicemail during busy hours. Instagram DMs sit for days. Website forms get answered tomorrow. No single system captures everything.",
+    question: "Do I need to change my current software?",
+    answer:
+      "No. We integrate with QuickBooks, HubSpot, Zoho, Clio, Jane App, Google Workspace, spreadsheets, or nothing at all. Automation connects your existing tools.",
   },
   {
-    icon: "M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z",
-    title: "Cash Flow Delayed",
-    desc: "Invoices go out 2 weeks late. Payment reminders depend on someone remembering. Cash flow problems caused by inconsistent billing, not bad clients.",
+    question: "Is this safe for my regulated industry?",
+    answer:
+      "Every system includes human approval gates, stop-loss logic, and escalation paths. Sensitive decisions stay in human hands. All data stays in your controlled systems. PIPEDA-aware design for Canadian businesses.",
   },
   {
-    icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6",
-    title: "Growth Blocked",
-    desc: "Your team is good at their work. But 40% of their time goes to admin instead of clients. You cannot grow without more people or fewer manual tasks.",
+    question: "What if the automation makes a mistake?",
+    answer:
+      "Every automation includes a Control Layer: stop-loss triggers, retry logic, approval gates for sensitive actions, full logging, and escalation to humans when something unexpected happens. Nothing runs without boundaries.",
   },
 ];
 
@@ -406,41 +437,66 @@ const localBusinessSchema = {
   ],
 };
 
+// ─── FAQ Schema ───────────────────────────────────────────────────────
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
+
 // ─── Component ────────────────────────────────────────────────────────
 export default function Home() {
   const heroReveal       = useReveal(0.01);
-  const problemsReveal   = useReveal(0.1);
-  const solutionReveal   = useReveal(0.1);
-  const methodReveal     = useReveal(0.1);
   const workflowReveal   = useReveal(0.1);
-  const casesReveal      = useReveal(0.1);
-  const industriesReveal = useReveal(0.1);
-  const faqReveal        = useReveal(0.1);
   const ctaReveal        = useReveal(0.15);
 
   const [activeTab, setActiveTab] = useState(0);
 
   return (
     <>
-      {/* ─── JSON-LD: LocalBusiness ─── */}
+      {/* ─── JSON-LD schemas ─── */}
       <JsonLd data={localBusinessSchema} />
+      <JsonLd data={faqSchema} />
 
-      {/* ─── HERO ─────────────────────────────────────────────────────── */}
-      <section className="hero-home">
+      {/* ─── SECTION 1: HERO ──────────────────────────────────────────── */}
+      <section style={{ background: "linear-gradient(135deg, #1A1A2E 0%, #0f1428 100%)", paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div className="container">
           <div
             ref={heroReveal.ref}
-            className="grid lg:grid-cols-[55%_45%] gap-12 lg:gap-16 items-start"
-            style={{ paddingTop: "2.5rem", paddingBottom: "4rem" }}
+            style={{ display: "grid", gap: "3rem", alignItems: "start" }}
+            className="hero-grid"
           >
+            <style>{`
+              .hero-grid { grid-template-columns: 1fr; }
+              @media (min-width: 1024px) { .hero-grid { grid-template-columns: 55% 45%; gap: 4rem; } }
+            `}</style>
+
             {/* Left: copy */}
             <div>
               <div
-                className="eyebrow"
                 style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.6)",
+                  background: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.15)",
+                  borderRadius: "2rem",
+                  padding: "0.375rem 1rem",
+                  marginBottom: "1.5rem",
                   opacity: heroReveal.visible ? 1 : 0,
-                  transform: heroReveal.visible ? "translateY(0)" : "translateY(12px)",
-                  transition: "opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s",
+                  transition: "opacity 0.5s ease 0.1s",
                 }}
               >
                 AI Automation for Toronto Businesses
@@ -448,57 +504,102 @@ export default function Home() {
 
               <h1
                 style={{
-                  color: DARK,
+                  color: "white",
                   marginBottom: "1.25rem",
+                  lineHeight: 1.2,
+                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontWeight: 800,
                   opacity: heroReveal.visible ? 1 : 0,
                   transform: heroReveal.visible ? "translateY(0)" : "translateY(16px)",
                   transition: "opacity 0.65s ease 0.2s, transform 0.65s cubic-bezier(0.16,1,0.3,1) 0.2s",
                 }}
               >
-                Respond to Every Lead in 90 Seconds.{" "}
-                <span style={{ position: "relative", display: "inline-block" }}>
-                  Recover 15+ Hours
-                  <span style={{
-                    position: "absolute", bottom: "2px", left: 0, right: 0,
-                    height: "3px", background: MAGENTA, borderRadius: "2px",
-                    transformOrigin: "left",
-                    transform: heroReveal.visible ? "scaleX(1)" : "scaleX(0)",
-                    transition: "transform 0.8s cubic-bezier(0.16,1,0.3,1) 0.8s",
-                  }} />
-                </span>{" "}
-                of Admin Per Week.{" "}
-                <span style={{ color: NAVY }}>Grow Without Hiring.</span>
+                Your Manual Operations Are Costing You{" "}
+                <span style={{ color: MAGENTA, display: "block" }}>$40,000 to $180,000 Per Year.</span>
+                AI Automation Stops the Bleeding.
               </h1>
 
               <p
                 style={{
-                  fontSize: "1.125rem",
-                  color: GREY,
-                  marginBottom: "1rem",
-                  lineHeight: 1.7,
-                  maxWidth: "52ch",
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transform: heroReveal.visible ? "translateY(0)" : "translateY(12px)",
-                  transition: "opacity 0.65s ease 0.4s, transform 0.65s ease 0.4s",
-                }}
-              >
-                Barrana.ai builds AI automation systems that run your operations while your team does the work that actually generates revenue. Not tools. Not chatbots. Working systems with governance built in.
-              </p>
-
-              <p
-                style={{
-                  fontSize: "0.9375rem",
-                  color: GREY,
+                  fontSize: "1.0625rem",
+                  color: "rgba(255,255,255,0.7)",
                   marginBottom: "2rem",
                   lineHeight: 1.7,
                   maxWidth: "52ch",
                   opacity: heroReveal.visible ? 1 : 0,
-                  transition: "opacity 0.65s ease 0.5s",
+                  transition: "opacity 0.65s ease 0.4s",
                 }}
               >
-                Right now, your business is losing leads to 4-hour response times, burning staff hours on manual data entry, and sending invoices weeks late because someone forgot. Each of these problems has a systematic fix that works inside your existing tools, requires no technical knowledge from your team, and pays for itself within 30 to 90 days.
+                Barrana builds AI automation systems for Toronto and GTA service businesses. We automate intake, follow-up, scheduling, invoicing, and repetitive admin — without replacing your current team or software.
               </p>
 
+              {/* Counter cards */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "0.875rem",
+                  marginBottom: "2rem",
+                  opacity: heroReveal.visible ? 1 : 0,
+                  transition: "opacity 0.65s ease 0.5s",
+                }}
+                className="counter-cards-grid"
+              >
+                <style>{`
+                  .counter-cards-grid { grid-template-columns: 1fr !important; }
+                  @media (min-width: 640px) { .counter-cards-grid { grid-template-columns: repeat(3, 1fr) !important; } }
+                `}</style>
+
+                {/* Card 1 — range, no counter */}
+                <div style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "0.875rem",
+                  padding: "1.25rem 1rem",
+                  backdropFilter: "blur(8px)",
+                }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                    $3,000–$8,000
+                  </div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                    What one missed lead costs you
+                  </div>
+                </div>
+
+                {/* Card 2 — animated */}
+                <div style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "0.875rem",
+                  padding: "1.25rem 1rem",
+                  backdropFilter: "blur(8px)",
+                }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                    <AnimatedCounter target={40000} prefix="$" suffix="–$180K/yr" />
+                  </div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                    Lost to slow response and manual follow-up
+                  </div>
+                </div>
+
+                {/* Card 3 — animated */}
+                <div style={{
+                  background: "rgba(255,255,255,0.05)",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                  borderRadius: "0.875rem",
+                  padding: "1.25rem 1rem",
+                  backdropFilter: "blur(8px)",
+                }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                    <AnimatedCounter target={52000} prefix="$" suffix="/yr" />
+                  </div>
+                  <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                    What 20 hrs/wk of admin costs at $50/hr
+                  </div>
+                </div>
+              </div>
+
+              {/* CTAs */}
               <div
                 style={{
                   display: "flex",
@@ -506,42 +607,69 @@ export default function Home() {
                   gap: "1rem",
                   alignItems: "flex-start",
                   opacity: heroReveal.visible ? 1 : 0,
-                  transform: heroReveal.visible ? "translateY(0)" : "translateY(12px)",
-                  transition: "opacity 0.65s ease 0.6s, transform 0.65s ease 0.6s",
+                  transition: "opacity 0.65s ease 0.6s",
                 }}
               >
                 <div>
-                  <Link href="/contact" className="btn-primary">
-                    Get Your Free 60-Minute Automation Audit
+                  <Link
+                    href="/automation-planner"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      background: MAGENTA,
+                      color: "white",
+                      fontWeight: 700,
+                      fontSize: "0.9375rem",
+                      padding: "0.875rem 1.75rem",
+                      borderRadius: "0.5rem",
+                      textDecoration: "none",
+                      boxShadow: "0 4px 20px rgba(126,15,74,0.4)",
+                    }}
+                  >
+                    Calculate What Your Operations Are Costing You
                     <ArrowRight size={16} />
                   </Link>
-                  <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem", paddingLeft: "0.25rem" }}>
-                    Walk away with a clear plan. No pitch. No obligation.
-                  </p>
                 </div>
-                <a
-                  href="#solution"
-                  className="btn-secondary"
-                  style={{ marginTop: "0" }}
-                >
-                  See How It Works
-                  <ChevronDown size={16} />
-                </a>
+                <div>
+                  <Link
+                    href="/contact"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.5rem",
+                      background: "transparent",
+                      color: "white",
+                      fontWeight: 700,
+                      fontSize: "0.9375rem",
+                      padding: "0.875rem 1.75rem",
+                      borderRadius: "0.5rem",
+                      textDecoration: "none",
+                      border: "1.5px solid rgba(255,255,255,0.4)",
+                    }}
+                  >
+                    Book a Free Automation Audit
+                    <ChevronDown size={16} />
+                  </Link>
+                </div>
               </div>
+              <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", marginTop: "0.875rem", opacity: heroReveal.visible ? 1 : 0, transition: "opacity 0.65s ease 0.7s" }}>
+                60 minutes. We will show you exactly where the money is leaking.
+              </p>
             </div>
 
-            {/* Right: system visual — sticky card so it sits snug against the headline */}
+            {/* Right: system visual */}
             <div style={{
               position: "sticky",
               top: "7rem",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.8s ease 0.5s",
-              background: "rgba(255,255,255,0.72)",
+              background: "rgba(255,255,255,0.06)",
               backdropFilter: "blur(8px)",
-              border: "1px solid rgba(40,56,145,0.1)",
+              border: "1px solid rgba(255,255,255,0.12)",
               borderRadius: "1.25rem",
               padding: "1.25rem 1.25rem 1rem",
-              boxShadow: "0 4px 24px rgba(40,56,145,0.07)",
+              boxShadow: "0 4px 24px rgba(0,0,0,0.3)",
             }}>
               <HeroSystemVisual />
             </div>
@@ -549,208 +677,355 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TRUST BADGES ─────────────────────────────────────────────── */}
-      <section style={{ background: "white", borderBottom: `1px solid ${BORDER}` }}>
-        <div className="container py-0">
-          <TrustBadges />
-        </div>
-        <div style={{ textAlign: "center", padding: "0.875rem 1.5rem", fontSize: "0.8125rem", color: GREY, borderTop: `1px solid ${BORDER}`, background: OFFWHITE }}>
-          Serving Toronto, Vaughan, Markham, Mississauga, Richmond Hill, and North York.{" "}
-          <span style={{ color: NAVY, fontWeight: 600 }}>PIPEDA-aware implementations.</span>
-        </div>
-      </section>
-
-      {/* ─── OBJECTION HANDLING (NEW) ─────────────────────────────────── */}
-      <section style={{ background: OFFWHITE }} className="section-sm">
-        <div className="container">
-          <Reveal>
-            <div className="eyebrow">Before You Scroll</div>
-            <h2 style={{ color: DARK, marginBottom: "2.5rem", maxWidth: "40ch" }}>
-              Three Things to Know Before You Scroll
-            </h2>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <ObjectionCards />
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── COST OF INACTION (NEW) ───────────────────────────────────── */}
-      <section style={{ background: "white" }} className="section-sm">
-        <div className="container">
-          <Reveal>
-            <div className="eyebrow">The Real Cost</div>
-            <div className="grid lg:grid-cols-2 gap-8 items-end mb-10">
-              <h2 style={{ color: DARK }}>
-                What Manual Operations Are Costing You Right Now
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                The math most business owners have never done. These are not hypothetical — they are the documented costs of businesses operating without automation at current capacity.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <CostOfInaction />
-          </Reveal>
-          <Reveal delay={0.15}>
-            <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-              <Link href="/contact" className="btn-primary">
-                Get Your Free Automation Audit
-                <ArrowRight size={16} />
-              </Link>
-              <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                Find out exactly what automation would recover for your business.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── PROBLEMS ─────────────────────────────────────────────────── */}
-      <section className="py-20 lg:py-28" style={{ background: OFFWHITE }}>
+      {/* ─── TRUST STRIP ──────────────────────────────────────────────── */}
+      <section style={{ background: "#141828", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
         <div className="container">
           <div
-            ref={problemsReveal.ref}
             style={{
-              opacity: problemsReveal.visible ? 1 : 0,
-              transform: problemsReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "0",
+              padding: "1rem 0",
             }}
+            className="trust-strip"
           >
-            <div className="eyebrow">Common Operational Problems</div>
-            <div className="grid lg:grid-cols-2 gap-4 lg:gap-8 items-end mb-12">
-              <h2 style={{ color: DARK }}>
-                If Your Business Has a Team,<br />It Has These Problems
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                These are not unique to your industry. They are symptoms of manual operations running at capacity.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-px rounded-2xl overflow-hidden" style={{ background: BORDER }}>
-            {problemsList.map((p, i) => (
-              <div
-                key={p.title}
-                className="bg-white p-7 group transition-colors"
-                style={{
-                  borderLeft: "4px solid var(--b-warning)",
-                  borderTopLeftRadius: i === 0 ? "0.75rem" : 0,
-                  opacity: problemsReveal.visible ? 1 : 0,
-                  transform: problemsReveal.visible ? "translateY(0)" : "translateY(20px)",
-                  transition: `opacity 0.5s ease ${0.1 + i * 0.07}s, transform 0.5s ease ${0.1 + i * 0.07}s`,
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.background = "var(--b-warning-bg)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLDivElement).style.background = "white";
-                }}
-              >
-                <div style={{ width: "2.5rem", height: "2.5rem", marginBottom: "1rem", borderRadius: "0.5rem", background: "rgba(220,38,38,0.08)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="var(--b-warning)" strokeWidth="1.75" style={{ width: "1.25rem", height: "1.25rem" }}>
-                    <path d={p.icon} strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+            <style>{`
+              .trust-strip-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.5rem; }
+              .trust-strip-divider { width: 1px; height: 1.25rem; background: rgba(255,255,255,0.12); }
+              @media (max-width: 640px) { .trust-strip-divider { display: none; } .trust-strip-item { width: 100%; justify-content: center; } }
+            `}</style>
+            {[
+              { icon: Award, label: "10+ Years Building Business Systems" },
+              { icon: Tag, label: "Fixed Pricing — Never Hourly" },
+              { icon: Plug, label: "Works With Your Existing Tools" },
+              { icon: MapPin, label: "Toronto · Vaughan · Markham · Mississauga · GTA" },
+            ].map((item, i) => (
+              <div key={item.label} style={{ display: "flex", alignItems: "center" }}>
+                {i > 0 && <div className="trust-strip-divider" />}
+                <div className="trust-strip-item">
+                  <item.icon size={15} color={MAGENTA} strokeWidth={2} />
+                  <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: "rgba(255,255,255,0.65)", whiteSpace: "nowrap" }}>
+                    {item.label}
+                  </span>
                 </div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: DARK, marginBottom: "0.625rem" }}>{p.title}</h3>
-                <p style={{ fontSize: "0.9rem", color: GREY, lineHeight: 1.65 }}>{p.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-            <Reveal delay={0.2}>
-              <Link href="/contact" className="btn-primary">
-                Fix These Problems — Free Audit
+      {/* ─── SECTION 2: THE MONEY LEAK ────────────────────────────────── */}
+      <section className="section" style={{ background: "white" }}>
+        <div className="container">
+          <Reveal>
+            <div className="eyebrow">The Real Cost</div>
+            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+              You Are Losing Money in 4 Places Right Now.
+            </h2>
+            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "72ch", marginBottom: "2.5rem" }}>
+              Most business owners know they are busy. Few have calculated what that busyness actually costs. Here is the math for a typical service business with 5–15 staff:
+            </p>
+          </Reveal>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gap: "1.25rem",
+            }}
+            className="money-leak-grid"
+          >
+            <style>{`
+              .money-leak-grid { grid-template-columns: 1fr !important; }
+              @media (min-width: 768px) { .money-leak-grid { grid-template-columns: 1fr 1fr !important; } }
+            `}</style>
+
+            {[
+              {
+                amount: "$36,000 – $180,000 / year",
+                title: "Missed and Slow Leads",
+                body: "If you respond to enquiries in 4–8 hours instead of 5 minutes, you lose 30–50% of them to faster competitors. At $3,000–$15,000 per client, losing 1–3 leads per month adds up fast.",
+                calc: "2 missed leads/month × $5,000 avg client value × 12 months = $120,000/year",
+              },
+              {
+                amount: "$26,000 – $78,000 / year",
+                title: "Admin Hours Burned",
+                body: "Your team spends 10–30 hours per week on data entry, follow-up emails, scheduling, document chasing, and manual CRM updates. None of it requires their expertise.",
+                calc: "15 hrs/week × $35/hr × 52 weeks = $27,300/year in staff time on tasks that generate zero revenue",
+              },
+              {
+                amount: "$15,000 – $150,000 / year",
+                title: "No-Shows and Empty Slots",
+                body: "If you run on appointments (clinic, consulting, coaching), a 15–20% no-show rate means 3–10 empty slots per week. At $80–$300 per visit, that is real revenue disappearing.",
+                calc: "5 no-shows/week × $150 avg × 50 weeks = $37,500/year sitting in empty chairs",
+              },
+              {
+                amount: "$10,000 – $50,000 / year",
+                title: "Invoice Delays",
+                body: "If invoices go out 2–4 weeks after work completion instead of the same day, your cash flow lags. Late reminders mean some invoices never get paid.",
+                calc: "Average 2.5 weeks delay × $8,000/month in invoicing = $5,000/month constantly floating",
+              },
+            ].map((card, i) => (
+              <Reveal key={card.title} delay={i * 0.08}>
+                <div style={{
+                  background: "white",
+                  borderRadius: "0.875rem",
+                  border: `1px solid ${BORDER}`,
+                  borderLeft: `4px solid ${MAGENTA}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                  padding: "1.75rem",
+                  height: "100%",
+                }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.625rem", lineHeight: 1.2, marginBottom: "0.625rem" }}>
+                    {card.amount}
+                  </div>
+                  <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.0625rem", marginBottom: "0.75rem" }}>
+                    {card.title}
+                  </h3>
+                  <p style={{ color: GREY, lineHeight: 1.65, fontSize: "0.9375rem", marginBottom: "1rem" }}>
+                    {card.body}
+                  </p>
+                  <div style={{
+                    background: OFFWHITE,
+                    borderRadius: "0.5rem",
+                    padding: "0.875rem 1rem",
+                    fontFamily: "monospace",
+                    fontSize: "0.8125rem",
+                    color: DARK,
+                    lineHeight: 1.5,
+                  }}>
+                    {card.calc}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.15}>
+            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+              <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.5rem" }}>
+                Add it up: a typical 5–15 person service business loses
+              </p>
+              <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "2.5rem", lineHeight: 1.1, marginBottom: "0.5rem" }}>
+                $80,000 to $200,000 per year
+              </p>
+              <p style={{ color: GREY, fontSize: "1rem", marginBottom: "0.5rem" }}>
+                to operational friction.
+              </p>
+              <p style={{ color: GREY, fontSize: "0.875rem", maxWidth: "64ch", margin: "0 auto 1.75rem" }}>
+                These are not theoretical numbers. They are calculated from real-world patterns across immigration firms, accounting practices, law firms, clinics, and contractors in the GTA.
+              </p>
+              <Link href="/automation-planner" className="btn-primary">
+                Calculate Your Specific Number
                 <ArrowRight size={16} />
               </Link>
-            </Reveal>
+              <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
+                Enter your numbers. See your annual cost in 60 seconds.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── SECTION 3: BUYER PATH SELECTOR ──────────────────────────── */}
+      <section className="section" style={{ background: NAVY }}>
+        <div className="container">
+          <Reveal>
+            <h2 style={{ color: "white", marginBottom: "0.75rem" }}>
+              What Is Costing You the Most?
+            </h2>
+            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.7, marginBottom: "2.5rem", maxWidth: "52ch" }}>
+              Choose what matters most. We will show you how it works for your business.
+            </p>
+          </Reveal>
+
+          <div
+            style={{ display: "grid", gap: "1rem" }}
+            className="buyer-path-grid"
+          >
+            <style>{`
+              .buyer-path-grid { grid-template-columns: 1fr !important; }
+              @media (min-width: 768px) { .buyer-path-grid { grid-template-columns: 1fr 1fr !important; } }
+            `}</style>
+
+            {[
+              {
+                icon: PhoneCall,
+                title: "I am losing leads to slow response",
+                dollar: "$36K–$180K/yr at risk",
+                href: "/services",
+              },
+              {
+                icon: Clock,
+                title: "My team is buried in admin work",
+                dollar: "$26K–$78K/yr in staff time wasted",
+                href: "/services",
+              },
+              {
+                icon: CalendarX,
+                title: "No-shows and scheduling are killing my revenue",
+                dollar: "$15K–$150K/yr in empty slots",
+                href: "/services",
+              },
+              {
+                icon: DollarSign,
+                title: "I just want to know what automation costs",
+                dollar: "Fixed pricing from $1,500 CAD",
+                href: "/automation-planner",
+              },
+            ].map((card, i) => (
+              <Reveal key={card.title} delay={i * 0.07}>
+                <Link
+                  href={card.href}
+                  style={{
+                    display: "block",
+                    background: "rgba(255,255,255,0.06)",
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    borderRadius: "0.875rem",
+                    padding: "1.5rem",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "background 0.18s ease",
+                    position: "relative",
+                  }}
+                  onMouseEnter={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.1)"; }}
+                  onMouseLeave={(e) => { (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.06)"; }}
+                >
+                  <card.icon size={24} color={MAGENTA} strokeWidth={2} style={{ marginBottom: "0.875rem" }} />
+                  <div style={{ color: "white", fontWeight: 700, fontSize: "1rem", marginBottom: "0.5rem", lineHeight: 1.4 }}>
+                    {card.title}
+                  </div>
+                  <div style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.0625rem", marginBottom: "1.25rem" }}>
+                    {card.dollar}
+                  </div>
+                  <div style={{ position: "absolute", bottom: "1.25rem", right: "1.25rem" }}>
+                    <ArrowRight size={18} color="rgba(255,255,255,0.4)" />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── SECTION 4: THE FIX ───────────────────────────────────────── */}
+      <section className="section" style={{ background: OFFWHITE }}>
+        <div className="container">
+          <Reveal>
+            <div className="eyebrow">The Fix</div>
+            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+              Here Is How You Get That Money Back.
+            </h2>
+            <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "2.5rem" }}>
+              Barrana automation systems eliminate the 4 money leaks above by connecting your existing tools into automated workflows. Nothing gets replaced. Everything gets connected.
+            </p>
+          </Reveal>
+
+          <div
+            style={{ display: "grid", gap: "1.25rem" }}
+            className="fix-cards-grid"
+          >
+            <style>{`
+              .fix-cards-grid { grid-template-columns: 1fr !important; }
+              @media (min-width: 768px) { .fix-cards-grid { grid-template-columns: 1fr 1fr !important; } }
+            `}</style>
+
+            {[
+              {
+                icon: Zap,
+                recovery: "Recover $36K–$180K/yr",
+                title: "Lead Response Automation",
+                body: "Every enquiry gets a response in under 90 seconds, 24/7. Prospect is qualified, CRM record created, consultation booked. Even at 11pm on a Sunday.",
+                before: [{ label: "Response time", val: "4–8 hrs" }, { label: "Lost leads", val: "8–12/mo" }],
+                after: [{ label: "Response time", val: "90 sec" }, { label: "Lost leads", val: "1–2/mo" }],
+              },
+              {
+                icon: Settings,
+                recovery: "Recover $26K–$78K/yr",
+                title: "Admin Automation",
+                body: "Intake, data entry, follow-up emails, CRM updates, and document collection run automatically. Your team does the expert work. The system does the coordination.",
+                before: [{ label: "Admin hours", val: "15–20/wk" }, { label: "Staff focus", val: "admin" }],
+                after: [{ label: "Admin hours", val: "3–5/wk" }, { label: "Staff focus", val: "revenue work" }],
+              },
+              {
+                icon: Calendar,
+                recovery: "Recover $15K–$150K/yr",
+                title: "Booking and Reminders",
+                body: "Dual reminders (48hr email + 2hr SMS) reduce no-shows 25–40%. Cancellations auto-fill from waitlist. Online booking reduces phone volume 40–50%.",
+                before: [{ label: "No-show rate", val: "15–20%" }, { label: "Empty slots", val: "manual fill" }],
+                after: [{ label: "No-show rate", val: "8–12%" }, { label: "Empty slots", val: "filled from waitlist" }],
+              },
+              {
+                icon: Receipt,
+                recovery: "Recover $10K–$50K/yr",
+                title: "Invoice Automation",
+                body: "Invoices trigger the day work completes. Payment reminders at 7/14/21 days. Reconciliation automated. Cash flow stabilised.",
+                before: [{ label: "Invoice delay", val: "2–4 weeks" }, { label: "Collections", val: "manual" }],
+                after: [{ label: "Invoice delay", val: "Same day" }, { label: "Collections", val: "accelerated" }],
+              },
+            ].map((card, i) => (
+              <Reveal key={card.title} delay={i * 0.08}>
+                <div style={{
+                  background: "white",
+                  borderRadius: "0.875rem",
+                  border: `1px solid ${BORDER}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                  padding: "1.75rem",
+                  height: "100%",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+                    <card.icon size={18} color={NAVY} strokeWidth={2} />
+                    <span style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.0625rem" }}>
+                      {card.recovery}
+                    </span>
+                  </div>
+                  <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.0625rem", marginBottom: "0.75rem" }}>
+                    {card.title}
+                  </h3>
+                  <p style={{ color: GREY, lineHeight: 1.65, fontSize: "0.9375rem", marginBottom: "1.25rem" }}>
+                    {card.body}
+                  </p>
+                  {/* Before/After mini-bar */}
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
+                    <div style={{ background: "rgba(220,38,38,0.05)", borderRadius: "0.5rem", padding: "0.75rem 0.875rem", border: "1px solid rgba(220,38,38,0.12)" }}>
+                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: GREY, marginBottom: "0.375rem" }}>Before</div>
+                      {card.before.map((row) => (
+                        <div key={row.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.8125rem" }}>
+                          <span style={{ color: GREY }}>{row.label}</span>
+                          <span style={{ fontWeight: 700, color: "#dc2626" }}>{row.val}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ background: "rgba(40,56,145,0.05)", borderRadius: "0.5rem", padding: "0.75rem 0.875rem", border: "1px solid rgba(40,56,145,0.12)" }}>
+                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: NAVY, marginBottom: "0.375rem" }}>After</div>
+                      {card.after.map((row) => (
+                        <div key={row.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", fontSize: "0.8125rem" }}>
+                          <span style={{ color: GREY }}>{row.label}</span>
+                          <span style={{ fontWeight: 700, color: NAVY }}>{row.val}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal delay={0.15}>
+            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
+              <Link href="/automation-planner" className="btn-primary">
+                Start the Automation Planner — See which fix delivers the most for your business
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       {/* ─── AUTOMATION PLANNER CTA ───────────────────────────────────── */}
       <HomepagePlannerCTA />
-
-      {/* ─── SOLUTION / BEFORE–AFTER ──────────────────────────────────── */}
-      <section id="solution" className="section" style={{ background: "white" }}>
-        <div className="container">
-          <div
-            ref={solutionReveal.ref}
-            style={{
-              opacity: solutionReveal.visible ? 1 : 0,
-              transform: solutionReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-              marginBottom: "2.5rem",
-            }}
-          >
-            <div className="eyebrow">The Solution</div>
-            <div className="grid lg:grid-cols-2 gap-6 items-end">
-              <h2 style={{ color: DARK }}>
-                We Build Systems That Do the Operational Work for You
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Not software subscriptions. Not chatbot installs. Working automation systems built around your actual workflows — deployed, tested, and monitored.
-              </p>
-            </div>
-          </div>
-
-          <Reveal delay={0.1}>
-            <BeforeAfterComparison />
-          </Reveal>
-
-          <Reveal delay={0.2}>
-            <p style={{ marginTop: "2rem", textAlign: "center", fontSize: "0.9375rem", color: GREY, maxWidth: "60ch", margin: "2rem auto 0" }}>
-              Your tools stay the same. What changes is the coordination layer between them. That layer is now automated, monitored, and reliable.
-            </p>
-            <div style={{ textAlign: "center", marginTop: "1.75rem" }}>
-              <Link href="/contact" className="btn-primary">
-                Book Your Free Audit
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ─── METHOD ───────────────────────────────────────────────────── */}
-      <section className="section" style={{ background: OFFWHITE }}>
-        <div className="container">
-          <div
-            ref={methodReveal.ref}
-            style={{
-              opacity: methodReveal.visible ? 1 : 0,
-              transform: methodReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-              marginBottom: "3rem",
-            }}
-          >
-            <div className="eyebrow">The Process</div>
-            <div className="grid lg:grid-cols-2 gap-6 items-end">
-              <h2 style={{ color: DARK }}>
-                How It Works: The Barrana Automation Method
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Five stages. Fixed pricing. Your first automation live in 2–3 weeks.
-              </p>
-            </div>
-          </div>
-          <Reveal delay={0.1}>
-            <MethodTimeline />
-          </Reveal>
-          <Reveal delay={0.2}>
-            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-              <Link href="/contact" className="btn-primary">
-                Start with a Free Friction Mapping Session
-                <ArrowRight size={16} />
-              </Link>
-              <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                60 minutes. No pitch. Workflow map and ROI projection included.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ─── HOW AUTOMATION FITS YOUR WORKFLOW ───────────────────────── */}
       <section className="section" style={{ background: OFFWHITE }}>
@@ -773,7 +1048,7 @@ export default function Home() {
         `}</style>
         <div className="container">
 
-          {/* ── Section header ── */}
+          {/* Section header */}
           <div
             ref={workflowReveal.ref}
             style={{
@@ -793,7 +1068,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* ── Tab bar ── */}
+          {/* Tab bar */}
           <div
             className="industry-tab-bar"
             role="tablist"
@@ -846,7 +1121,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* ── Tab panel ── */}
+          {/* Tab panel */}
           <div
             key={activeTab}
             role="tabpanel"
@@ -854,7 +1129,6 @@ export default function Home() {
             aria-labelledby={`tab-btn-${INDUSTRY_TABS[activeTab].id}`}
             style={{ animation: "tabContentIn 0.32s ease" }}
           >
-            {/* Two-column layout */}
             <div style={{
               display: "grid",
               gridTemplateColumns: "1fr",
@@ -871,7 +1145,7 @@ export default function Home() {
                 }
               `}</style>
 
-              {/* ── LEFT: Workflow journey card ── */}
+              {/* LEFT: Workflow journey card */}
               <div style={{
                 background: "white",
                 borderRadius: "1.25rem",
@@ -879,7 +1153,6 @@ export default function Home() {
                 overflow: "hidden",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.05)",
               }}>
-                {/* Card header bar */}
                 <div style={{
                   padding: "1.375rem 1.75rem",
                   borderBottom: `1px solid ${BORDER}`,
@@ -887,7 +1160,6 @@ export default function Home() {
                   alignItems: "flex-start",
                   gap: "0.875rem",
                 }}>
-                  {/* Industry icon badge */}
                   <div style={{
                     width: "42px",
                     height: "42px",
@@ -926,7 +1198,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* Workflow steps */}
                 <div style={{ padding: "1.625rem 1.75rem" }}>
                   <p style={{
                     fontSize: "0.6875rem",
@@ -947,7 +1218,6 @@ export default function Home() {
                           gap: "1rem",
                           paddingBottom: isLast ? 0 : "0.125rem",
                         }}>
-                          {/* Track: dot + connector line */}
                           <div style={{
                             display: "flex",
                             flexDirection: "column",
@@ -966,7 +1236,6 @@ export default function Home() {
                               }} />
                             )}
                           </div>
-                          {/* Step text */}
                           <div style={{ paddingBottom: isLast ? 0 : "1.125rem" }}>
                             <p style={{
                               margin: 0,
@@ -985,7 +1254,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* ── RIGHT: Business outcome card ── */}
+              {/* RIGHT: Business outcome card */}
               <div style={{
                 background: NAVY,
                 borderRadius: "1.25rem",
@@ -994,7 +1263,6 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
               }}>
-                {/* Time-saved banner */}
                 <div style={{
                   padding: "1.5rem 1.75rem",
                   borderBottom: "1px solid rgba(255,255,255,0.1)",
@@ -1047,7 +1315,6 @@ export default function Home() {
                   </div>
                 </div>
 
-                {/* What gets handled automatically */}
                 <div style={{
                   padding: "1.5rem 1.75rem",
                   flex: 1,
@@ -1081,7 +1348,6 @@ export default function Home() {
                   </ul>
                 </div>
 
-                {/* Supporting copy + CTA */}
                 <div style={{ padding: "1.5rem 1.75rem" }}>
                   <p style={{
                     fontSize: "0.9rem",
@@ -1117,7 +1383,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -1161,10 +1426,10 @@ export default function Home() {
               </div>
               <div>
                 {[
-                  { emoji: "💻", title: "Custom Software & AI", desc: "Bespoke applications, AI agents, client portals, and internal tools built on your automation layer." },
-                  { emoji: "🌐", title: "Websites That Convert", desc: "Website design and rebuilds optimised to feed your automated systems with qualified enquiries." },
-                  { emoji: "📣", title: "Social Media & Acquisition", desc: "Social media systems, content frameworks, and acquisition funnels that fill your pipeline." },
-                  { emoji: "🗺️", title: "Operational Consulting", desc: "Process mapping and workflow redesign — strategy before systems, every time." },
+                  { Icon: Monitor, title: "Custom Software & AI", desc: "Bespoke applications, AI agents, client portals, and internal tools built on your automation layer." },
+                  { Icon: Globe, title: "Websites That Convert", desc: "Website design and rebuilds optimised to feed your automated systems with qualified enquiries." },
+                  { Icon: Megaphone, title: "Social Media & Acquisition", desc: "Social media systems, content frameworks, and acquisition funnels that fill your pipeline." },
+                  { Icon: Map, title: "Operational Consulting", desc: "Process mapping and workflow redesign — strategy before systems, every time." },
                 ].map((card) => (
                   <div key={card.title} style={{
                     background: "rgba(255,255,255,0.06)",
@@ -1176,7 +1441,7 @@ export default function Home() {
                     gap: "1rem",
                     alignItems: "flex-start",
                   }}>
-                    <span style={{ fontSize: "1.5rem", flexShrink: 0 }}>{card.emoji}</span>
+                    <card.Icon size={20} color={MAGENTA} strokeWidth={1.75} style={{ flexShrink: 0, marginTop: "2px" }} aria-hidden="true" />
                     <div>
                       <div style={{ fontWeight: 700, color: "white", fontSize: "0.9rem", marginBottom: "0.25rem" }}>{card.title}</div>
                       <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", lineHeight: 1.5 }}>{card.desc}</div>
@@ -1190,63 +1455,283 @@ export default function Home() {
       </section>
       <style>{`.lg-grid-2col { } @media (max-width: 768px) { .lg-grid-2col { grid-template-columns: 1fr !important; } }`}</style>
 
-      {/* ─── CASE STUDIES ─────────────────────────────────────────────── */}
+      {/* ─── SECTION 6: PROOF / CASE STUDIES ─────────────────────────── */}
       <section className="section" style={{ background: OFFWHITE }}>
         <div className="container">
+          <Reveal>
+            <div className="eyebrow">Real Results</div>
+            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+              What Automation Actually Saved These Businesses.
+            </h2>
+          </Reveal>
+
           <div
-            ref={casesReveal.ref}
-            style={{
-              opacity: casesReveal.visible ? 1 : 0,
-              transform: casesReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-              marginBottom: "2.5rem",
-            }}
+            style={{ display: "grid", gap: "1.25rem", marginTop: "2rem" }}
+            className="case-study-grid"
           >
-            <div className="eyebrow">Results</div>
-            <div className="grid lg:grid-cols-2 gap-6 items-end">
-              <h2 style={{ color: DARK }}>
-                Operational Results From Real Implementations
-              </h2>
-              <p style={{ color: GREY, lineHeight: 1.7 }}>
-                Measured outcomes from deployed automation systems for service businesses across the GTA.
-              </p>
-            </div>
+            <style>{`
+              .case-study-grid { grid-template-columns: 1fr !important; }
+              @media (min-width: 768px) { .case-study-grid { grid-template-columns: 1fr 1fr !important; } }
+            `}</style>
+
+            {[
+              {
+                industry: "Immigration Firm",
+                location: "North York",
+                pain: "Staff spent 18 hrs/week on intake and document chasing",
+                fix: "AI intake + document collection + status updates automated",
+                result: "$86,400+ recovered",
+                desc: "14 staff hours/week recovered = $36,400/yr in capacity. 25% more client files handled. $50,000+ in captured evening leads.",
+              },
+              {
+                industry: "Accounting Firm",
+                location: "Vaughan",
+                pain: "Tax season at capacity. Turning away clients.",
+                fix: "Document collection + invoicing + onboarding automated",
+                result: "$82,000+ in new revenue",
+                desc: "65 additional clients at avg $800 = $52,000 new revenue. Invoice delays eliminated = $30,000–$50,000 accelerated cash flow.",
+              },
+              {
+                industry: "Physiotherapy Clinic",
+                location: "Richmond Hill",
+                pain: "22% no-show rate across 6 practitioners",
+                fix: "Dual reminders + waitlist + digital intake",
+                result: "$85,000/yr recovered",
+                desc: "No-shows dropped to 13.6%. Revenue from reduced empty slots + filled cancellations.",
+              },
+              {
+                industry: "Contractor",
+                location: "Mississauga",
+                pain: "Losing 10+ leads/month to slow response",
+                fix: "90-second lead response + after-hours AI + quote follow-up",
+                result: "$24K–$100K/yr recaptured",
+                desc: "Quote conversion up 22%. 3–4 more jobs/month at $8,000–$25,000 per job captured from competitors.",
+              },
+            ].map((card, i) => (
+              <Reveal key={card.industry} delay={i * 0.08}>
+                <div style={{
+                  background: "white",
+                  borderRadius: "0.875rem",
+                  border: `1px solid ${BORDER}`,
+                  boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                  overflow: "hidden",
+                  height: "100%",
+                }}>
+                  <div style={{ background: NAVY, padding: "0.75rem 1rem" }}>
+                    <span style={{ color: "white", fontSize: "0.8125rem", fontWeight: 600 }}>
+                      {card.industry} · {card.location}
+                    </span>
+                  </div>
+                  <div style={{ padding: "1.5rem" }}>
+                    <div style={{ marginBottom: "0.875rem" }}>
+                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: GREY, marginBottom: "0.25rem" }}>The problem</div>
+                      <div style={{ fontSize: "0.9rem", color: DARK, lineHeight: 1.5 }}>{card.pain}</div>
+                    </div>
+                    <div style={{ marginBottom: "1rem" }}>
+                      <div style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: GREY, marginBottom: "0.25rem" }}>The solution</div>
+                      <div style={{ fontSize: "0.9rem", color: DARK, lineHeight: 1.5 }}>{card.fix}</div>
+                    </div>
+                    <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.625rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                      {card.result}
+                    </div>
+                    <div style={{ fontSize: "0.875rem", color: DARK, lineHeight: 1.6 }}>
+                      {card.desc}
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
           </div>
 
-          <CaseStudyDashboard />
-
-          <Reveal delay={0.2}>
-            <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-              <Link href="/contact" className="btn-primary">
-                Get Your Free Audit
+          <Reveal delay={0.15}>
+            <div style={{ textAlign: "center", marginTop: "2.5rem", display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
+              <Link href="/case-studies" className="btn-secondary">
+                View All Case Studies
                 <ArrowRight size={16} />
               </Link>
-              <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                Walk away with a clear plan — regardless of whether you engage us.
-              </p>
+              <Link href="/contact" className="btn-primary">
+                Book a Free Audit — See what these numbers look like for your business
+                <ArrowRight size={16} />
+              </Link>
             </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ─── INDUSTRIES ───────────────────────────────────────────────── */}
+      {/* ─── SECTION 7: INDUSTRY SELECTOR ────────────────────────────── */}
       <section className="section" style={{ background: "white" }}>
         <div className="container">
-          <div
-            ref={industriesReveal.ref}
-            style={{
-              opacity: industriesReveal.visible ? 1 : 0,
-              transform: industriesReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-              marginBottom: "2.5rem",
-            }}
-          >
-            <div className="eyebrow">Industries We Serve</div>
-            <h2 style={{ color: DARK, maxWidth: "40ch" }}>
-              Built for the Businesses That Need It Most
+          <Reveal>
+            <h2 style={{ color: DARK, marginBottom: "2.5rem" }}>
+              Built for the Businesses That Lose the Most to Manual Operations.
             </h2>
+          </Reveal>
+
+          <div
+            style={{ display: "grid", gap: "0.875rem" }}
+            className="industry-selector-grid"
+          >
+            <style>{`
+              .industry-selector-grid { grid-template-columns: 1fr !important; }
+              @media (min-width: 768px) { .industry-selector-grid { grid-template-columns: 1fr 1fr !important; } }
+              @media (min-width: 1024px) { .industry-selector-grid { grid-template-columns: repeat(4, 1fr) !important; } }
+              .industry-selector-card:hover { border-color: ${NAVY} !important; box-shadow: 0 4px 16px rgba(40,56,145,0.12) !important; }
+            `}</style>
+
+            {[
+              { icon: Calculator, name: "Accounting Firms", pain: "Tax season costs 40–60 hrs/wk in doc chasing. $30,000+ in staff time.", href: "/industries/accounting-firms" },
+              { icon: FileText, name: "Immigration Consultants", pain: "Your consultants lose 18 hrs/wk to intake admin. $70,000+/yr at $75/hr.", href: "/industries/immigration-consultants" },
+              { icon: Scale, name: "Law Firms", pain: "Every non-billable hour costs $300–$500. Your lawyers lose 2 hrs/day. Do the math.", href: "/industries/law-firms" },
+              { icon: Activity, name: "Physiotherapy Clinics", pain: "A 20% no-show rate at $80/visit = $150,000/yr in empty chairs.", href: "/industries/physiotherapy-clinics" },
+              { icon: HardHat, name: "Contractors", pain: "Slow response loses 8–12 leads/month. At $8K avg job, that is $96,000+/yr.", href: "/industries/contractors" },
+              { icon: Smile, name: "Dental Offices", pain: "300 overdue recall patients x $200 = $60,000 sitting in your recall list.", href: "/industries/dental-offices" },
+              { icon: Building2, name: "Real Estate Teams", pain: "Abandoned 12-month leads. Each one a $15,000+ commission lost.", href: "/industries/real-estate-teams" },
+              { icon: Sparkles, name: "Solopreneurs", pain: "15 hrs/wk on admin at $100/hr = $78,000/yr not spent on clients.", href: "/solopreneurs" },
+            ].map((card, i) => (
+              <Reveal key={card.name} delay={i * 0.05}>
+                <Link
+                  href={card.href}
+                  className="industry-selector-card"
+                  style={{
+                    display: "block",
+                    background: "white",
+                    border: `1px solid ${BORDER}`,
+                    borderRadius: "0.875rem",
+                    padding: "1.25rem 1.5rem",
+                    cursor: "pointer",
+                    textDecoration: "none",
+                    transition: "border-color 0.18s ease, box-shadow 0.18s ease",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.625rem", marginBottom: "0.5rem" }}>
+                    <card.icon size={20} color={NAVY} strokeWidth={1.75} />
+                    <span style={{ color: DARK, fontWeight: 700, fontSize: "0.9375rem" }}>{card.name}</span>
+                  </div>
+                  <div style={{ color: MAGENTA, fontSize: "0.8125rem", fontWeight: 700, lineHeight: 1.4 }}>
+                    {card.pain}
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
-          <IndustryCards />
+        </div>
+      </section>
+
+      {/* ─── SECTION 8: HOW IT WORKS (4-Week Timeline) ───────────────── */}
+      <section className="section" style={{ background: OFFWHITE }}>
+        <div className="container">
+          <Reveal>
+            <div className="eyebrow">The Process</div>
+            <h2 style={{ color: DARK, marginBottom: "0.875rem" }}>
+              From Money Leak to Money Recovered in 4 Weeks.
+            </h2>
+          </Reveal>
+
+          <div
+            style={{ display: "flex", gap: "0", alignItems: "stretch", marginTop: "2.5rem" }}
+            className="timeline-container"
+          >
+            <style>{`
+              .timeline-container { flex-direction: column !important; }
+              @media (min-width: 1024px) { .timeline-container { flex-direction: row !important; } }
+              .timeline-arrow { display: none; }
+              @media (min-width: 1024px) { .timeline-arrow { display: flex !important; align-items: center; flex-shrink: 0; padding: 0 0.25rem; } }
+            `}</style>
+
+            {[
+              {
+                badge: "Week 1",
+                title: "Free Audit",
+                body: "We map your workflows and calculate exactly what your operations are costing you. You leave with a number.",
+                dollar: "Identify $X in annual operational waste — at no cost",
+                tag: "Free · 60 min · No obligation",
+              },
+              {
+                badge: "Weeks 2–3",
+                title: "Build",
+                body: "We connect your existing tools into automated workflows. Fixed pricing agreed upfront. No scope creep.",
+                dollar: "Fixed price. Agreed before work begins.",
+                tag: null,
+              },
+              {
+                badge: "Week 4",
+                title: "Live",
+                body: "Your first automated workflow goes live. You see results within days, not months.",
+                dollar: "Begin recovering the money immediately.",
+                tag: null,
+              },
+              {
+                badge: "Ongoing",
+                title: "Expand",
+                body: "Prove ROI on Phase 1. Decide what to automate next based on real data.",
+                dollar: "Stack automations. Compound the savings.",
+                tag: null,
+              },
+            ].map((step, i) => (
+              <div key={step.title} style={{ display: "flex", flex: 1, alignItems: "stretch" }}>
+                {i > 0 && (
+                  <div className="timeline-arrow">
+                    <ArrowRight size={20} color={GREY} strokeWidth={1.5} />
+                  </div>
+                )}
+                <Reveal delay={i * 0.1} className="timeline-step-wrapper" style={{ flex: 1 }}>
+                  <div style={{
+                    background: "white",
+                    borderRadius: "0.875rem",
+                    border: `1px solid ${BORDER}`,
+                    boxShadow: "0 2px 12px rgba(0,0,0,0.05)",
+                    padding: "1.5rem",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.75rem",
+                  }}>
+                    <div style={{
+                      display: "inline-flex",
+                      alignSelf: "flex-start",
+                      background: NAVY,
+                      color: "white",
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
+                      padding: "0.3rem 0.75rem",
+                      borderRadius: "2rem",
+                      letterSpacing: "0.04em",
+                    }}>
+                      {step.badge}
+                    </div>
+                    <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.125rem", margin: 0 }}>
+                      {step.title}
+                    </h3>
+                    <p style={{ color: GREY, fontSize: "0.9rem", lineHeight: 1.65, margin: 0, flex: 1 }}>
+                      {step.body}
+                    </p>
+                    <div style={{ color: MAGENTA, fontWeight: 700, fontSize: "0.875rem" }}>
+                      {step.dollar}
+                    </div>
+                    {step.tag && (
+                      <div style={{
+                        fontSize: "0.75rem",
+                        color: GREY,
+                        background: OFFWHITE,
+                        borderRadius: "0.375rem",
+                        padding: "0.375rem 0.625rem",
+                        display: "inline-flex",
+                        alignSelf: "flex-start",
+                      }}>
+                        {step.tag}
+                      </div>
+                    )}
+                  </div>
+                </Reveal>
+              </div>
+            ))}
+          </div>
+
+          <Reveal delay={0.2}>
+            <p style={{ textAlign: "center", fontStyle: "italic", color: GREY, fontSize: "0.9375rem", marginTop: "2rem", maxWidth: "60ch", margin: "2rem auto 0" }}>
+              "You do not commit to everything at once. Start with one workflow. See the ROI. Then decide."
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -1268,22 +1753,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FAQ ──────────────────────────────────────────────────────── */}
+      {/* ─── SECTION 5: OBJECTION HANDLING ───────────────────────────── */}
       <section className="section" style={{ background: "white" }}>
         <div className="container">
-          <div
-            ref={faqReveal.ref}
-            style={{
-              opacity: faqReveal.visible ? 1 : 0,
-              transform: faqReveal.visible ? "translateY(0)" : "translateY(24px)",
-              transition: "opacity 0.6s ease, transform 0.6s ease",
-            }}
-          >
-            <div className="eyebrow">FAQ</div>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <Reveal>
+            <div className="eyebrow">Before You Decide</div>
+            <div style={{ display: "grid", gap: "3rem", alignItems: "start" }} className="objection-grid">
+              <style>{`
+                .objection-grid { grid-template-columns: 1fr !important; }
+                @media (min-width: 1024px) { .objection-grid { grid-template-columns: 1fr 1fr !important; } }
+              `}</style>
               <div>
                 <h2 style={{ color: DARK, marginBottom: "0.75rem" }}>
-                  Common Questions
+                  The Questions Every Business Owner Asks Before Automating.
+                </h2>
+                <p style={{ color: GREY, lineHeight: 1.7, marginBottom: "1.5rem" }}>
+                  Honest answers. No fluff. If automation is not right for your business, we will tell you.
+                </p>
+                <Link href="/contact" className="btn-primary" style={{ display: "inline-flex" }}>
+                  Book a Free Audit
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+              <FAQAccordion items={objectionItems} />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ─── SECTION 9: FAQ ───────────────────────────────────────────── */}
+      <section className="section" style={{ background: "white", borderTop: `1px solid ${BORDER}` }}>
+        <div className="container">
+          <Reveal>
+            <div className="eyebrow">FAQ</div>
+            <div style={{ display: "grid", gap: "3rem", alignItems: "start" }} className="faq-section-grid">
+              <style>{`
+                .faq-section-grid { grid-template-columns: 1fr !important; }
+                @media (min-width: 1024px) { .faq-section-grid { grid-template-columns: 1fr 1fr !important; } }
+              `}</style>
+              <div>
+                <h2 style={{ color: DARK, marginBottom: "0.75rem" }}>
+                  Common Questions About Automation
                 </h2>
                 <p style={{ color: GREY, lineHeight: 1.7, marginBottom: "1.5rem" }}>
                   Everything you need to know before booking an audit.
@@ -1295,12 +1805,12 @@ export default function Home() {
               </div>
               <FAQAccordion items={faqItems} />
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* ─── FINAL CTA ────────────────────────────────────────────────── */}
-      <section className="cta-section section">
+      {/* ─── SECTION 10: FINAL CTA ────────────────────────────────────── */}
+      <section style={{ background: "#1E2B6E", paddingTop: "5rem", paddingBottom: "5rem" }}>
         <div className="container">
           <div
             ref={ctaReveal.ref}
@@ -1313,35 +1823,58 @@ export default function Home() {
               margin: "0 auto",
             }}
           >
-            <div className="eyebrow" style={{ color: "rgba(255,255,255,0.6)", justifyContent: "center" }}>
-              <span style={{ background: "rgba(255,255,255,0.15)" }} />
-              Ready to Start
-            </div>
             <h2 style={{ color: "white", marginBottom: "1rem" }}>
               Your Operations Will Not Fix Themselves. The Audit Takes 60 Minutes.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-              Every week you wait, your business loses leads to slow response, burns staff hours on admin, and delays revenue through inconsistent processes.
+              We will map your workflows, calculate what your manual operations cost per year, and show you exactly where automation recovers that money. Free. No obligation.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", alignItems: "flex-start" }}>
               <div>
-                <Link href="/contact" className="btn-primary" style={{ background: "white", color: NAVY }}>
-                  Get Your Free 60-Minute Automation Audit
+                <Link
+                  href="/contact"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: MAGENTA,
+                    color: "white",
+                    fontWeight: 700,
+                    fontSize: "0.9375rem",
+                    padding: "0.875rem 1.75rem",
+                    borderRadius: "0.5rem",
+                    textDecoration: "none",
+                    boxShadow: "0 4px 20px rgba(126,15,74,0.4)",
+                  }}
+                >
+                  Book Your Free Automation Audit
                   <ArrowRight size={16} />
                 </Link>
-                <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.55)", marginTop: "0.5rem" }}>
-                  Walk away with a clear plan to automate your business in 30 days.
-                </p>
               </div>
               <div>
-                <Link href="/resources" className="btn-ghost-white">
-                  Download: 5 Workflows to Automate First
+                <Link
+                  href="/automation-planner"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    background: "transparent",
+                    color: "white",
+                    fontWeight: 700,
+                    fontSize: "0.9375rem",
+                    padding: "0.875rem 1.75rem",
+                    borderRadius: "0.5rem",
+                    textDecoration: "none",
+                    border: "1.5px solid rgba(255,255,255,0.4)",
+                  }}
+                >
+                  Start the Automation Planner
                 </Link>
-                <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.55)", marginTop: "0.5rem" }}>
-                  A free guide for business owners researching automation.
-                </p>
               </div>
             </div>
+            <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", marginTop: "1.25rem" }}>
+              Serving Toronto and GTA service businesses with 2–50 staff. Fixed pricing. Works with your existing tools.
+            </p>
           </div>
         </div>
       </section>
