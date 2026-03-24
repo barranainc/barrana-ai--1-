@@ -49,7 +49,7 @@ export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#283891" }} className="text-white">
       <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10" style={{ padding: "4rem 0", borderTop: "1px solid rgba(255,255,255,0.10)" }}>
 
           {/* Brand Column */}
           <div className="lg:col-span-2">
@@ -108,7 +108,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Services</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Services</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "AI Agents", href: "/services/ai-agents" },
@@ -120,14 +120,14 @@ export default function Footer() {
                 { label: "Full-Stack Services", href: "/services/full-stack" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4 mt-7">Industries</h4>
+            <h4 className="font-semibold uppercase mb-4 mt-7" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Industries</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "Solopreneurs & Experts", href: "/solopreneurs" },
@@ -140,7 +140,7 @@ export default function Footer() {
                 { label: "Service Businesses", href: "/industries/service-businesses" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
@@ -150,7 +150,7 @@ export default function Footer() {
 
           {/* Locations Column */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Locations</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Locations</h4>
             <ul className="space-y-2.5 mb-7">
               {[
                 { label: "Toronto", href: "/locations/toronto" },
@@ -161,14 +161,14 @@ export default function Footer() {
                 { label: "North York", href: "/locations/north-york" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Workflow Guides</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Workflow Guides</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "Lead Intake Automation", href: "/workflows/lead-intake" },
@@ -179,7 +179,7 @@ export default function Footer() {
                 { label: "Build vs Buy Guide", href: "/insights/build-vs-buy" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
@@ -189,7 +189,7 @@ export default function Footer() {
 
           {/* Resources Column */}
           <div>
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Foundation Guides</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Foundation Guides</h4>
             <ul className="space-y-2.5 mb-7">
               {[
                 { label: "AI Adoption Guide", href: "/ai-adoption-small-business" },
@@ -200,16 +200,17 @@ export default function Footer() {
                 { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Resources</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Resources</h4>
             <ul className="space-y-2.5 mb-7">
               {[
+                { label: "Start Here", href: "/start-here" },
                 { label: "Case Studies", href: "/case-studies" },
                 { label: "Resources Hub", href: "/resources" },
                 { label: "Automation Playbooks", href: "/playbooks" },
@@ -220,14 +221,14 @@ export default function Footer() {
                 { label: "ROI Calculator", href: "/automation-roi-calculator" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
 
-            <h4 className="font-semibold text-xs uppercase tracking-widest text-gray-400 mb-4">Company</h4>
+            <h4 className="font-semibold uppercase mb-4" style={{ letterSpacing: "0.1em", fontSize: "0.6875rem", textTransform: "uppercase", color: "rgba(255,255,255,0.5)" }}>Company</h4>
             <ul className="space-y-2.5">
               {[
                 { label: "About Barrana.ai", href: "/about" },
@@ -237,7 +238,7 @@ export default function Footer() {
                 { label: "Operator Insights", href: "/operator-insights" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors">
+                  <Link href={item.href} className="text-sm text-gray-300 hover:text-white transition-colors" style={{ paddingTop: "0.375rem", paddingBottom: "0.375rem", display: "inline-block" }}>
                     {item.label}
                   </Link>
                 </li>

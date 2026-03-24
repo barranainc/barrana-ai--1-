@@ -6,9 +6,13 @@
  */
 
 import React from "react";
+import { useLocation } from "wouter";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
+import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
+import { internalLinks } from "@/config/internal-links";
 import ServiceHero from "@/components/service/ServiceHero";
 import HeroBeforeAfterCard from "@/components/service/HeroBeforeAfterCard";
 import CostOfInactionCards from "@/components/service/CostOfInactionCards";
@@ -157,6 +161,10 @@ interface IndustryPageLayoutProps {
 }
 
 export default function IndustryPageLayout({ data, heroVisual, children }: IndustryPageLayoutProps) {
+  const [location] = useLocation();
+  const pagePath = location || `/industries/${data.route}`;
+  const pageConfig = internalLinks[pagePath];
+
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -184,6 +192,19 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       {/* JSON-LD Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
+      {/* Breadcrumb Nav */}
+      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+        <div className="container">
+          <BreadcrumbNav
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Industries", href: "/industries" },
+              { label: data.breadcrumb },
+            ]}
+          />
+        </div>
+      </div>
 
       {/* 1. Hero */}
       <ServiceHero
@@ -289,6 +310,18 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
           <AEOBlock question={data.aeoQuestion} answer={data.aeoAnswer} />
         </div>
       </section>
+
+      {/* Service Crosslinks */}
+      {pageConfig && pageConfig.services.length > 0 && (
+        <section style={sectionStyle("white")}>
+          <div className="container">
+            <IndustryServiceCrosslinks
+              items={pageConfig.services}
+              heading="Services We Provide"
+            />
+          </div>
+        </section>
+      )}
 
       {/* 11. FAQ — off-white */}
       <section style={sectionStyle("#F7F9FC")}>
