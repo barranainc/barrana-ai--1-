@@ -631,7 +631,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const missedLeads = Math.round(enquiries * 0.2);
   const additionalCapacity = Math.round(clients * 0.25);
 
-  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/4b59da85-f0fb-407a-b246-d7aaf7fac10e";
+  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/b3af7557-ff3f-4c10-a88e-d95fb0b78b0f";
 
   const handleLeadSubmit = async (email: string, businessName: string, name: string, notes: string) => {
     setIsLeadSubmitted(true);

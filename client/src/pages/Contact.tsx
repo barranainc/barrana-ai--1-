@@ -77,7 +77,7 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/4b59da85-f0fb-407a-b246-d7aaf7fac10e";
+  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/b3af7557-ff3f-4c10-a88e-d95fb0b78b0f";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
