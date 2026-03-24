@@ -20,21 +20,21 @@ const GREEN = "#22C55E";
 const NAVY = "#283891";
 
 const topTasks = [
-  { Icon: Mail, text: "Reply to enquiry from last night" },
-  { Icon: Phone, text: "Call back missed lead (3rd attempt)" },
-  { Icon: FileText, text: "Copy form data into CRM" },
-  { Icon: Calendar, text: "Reschedule Tuesday appointment" },
-  { Icon: Clock, text: "Send appointment reminders (7 clients)" },
-  { Icon: Send, text: "Chase invoice \u2014 14 days overdue" },
-  { Icon: FileSearch, text: "Follow up on missing documents" },
-  { Icon: ClipboardList, text: "Update spreadsheet with today\u2019s numbers" },
+  { Icon: Mail, text: "Reply to enquiry" },
+  { Icon: Phone, text: "Call back missed lead" },
+  { Icon: FileText, text: "Copy data into CRM" },
+  { Icon: Calendar, text: "Reschedule appointment" },
+  { Icon: Clock, text: "Send reminders (7)" },
+  { Icon: Send, text: "Chase overdue invoice" },
+  { Icon: FileSearch, text: "Follow up documents" },
+  { Icon: ClipboardList, text: "Update spreadsheet" },
 ];
 
 const bottomItems = [
-  { Icon: Users, text: "Client consultations and meetings" },
-  { Icon: TrendingUp, text: "Business development and sales" },
-  { Icon: Coffee, text: "Lunch that is not at your desk" },
-  { Icon: Home, text: "Home before your kids go to bed" },
+  { Icon: Users, label: "Clients" },
+  { Icon: TrendingUp, label: "Growth" },
+  { Icon: Coffee, label: "Lunch" },
+  { Icon: Home, label: "Home" },
 ];
 
 export default function HeroYourDayVisual() {
@@ -58,27 +58,21 @@ export default function HeroYourDayVisual() {
 
     const timers: ReturnType<typeof setTimeout>[] = [];
 
-    // Stagger top 8 items at 100ms intervals
     for (let i = 1; i <= 8; i++) {
-      timers.push(
-        setTimeout(() => setVisibleItems(i), i * 100)
-      );
+      timers.push(setTimeout(() => setVisibleItems(i), i * 80));
     }
 
-    // After all 8: 300ms pause then show badge
-    const badgeDelay = 8 * 100 + 300;
+    const badgeDelay = 8 * 80 + 250;
     timers.push(setTimeout(() => setBadgeVisible(true), badgeDelay));
 
-    // Then stagger bottom 4 at 120ms intervals
     for (let i = 1; i <= 4; i++) {
       timers.push(
-        setTimeout(() => setBottomVisible(i), badgeDelay + 200 + i * 120)
+        setTimeout(() => setBottomVisible(i), badgeDelay + 150 + i * 100)
       );
     }
 
-    // Then footer
     timers.push(
-      setTimeout(() => setFooterVisible(true), badgeDelay + 200 + 4 * 120 + 200)
+      setTimeout(() => setFooterVisible(true), badgeDelay + 150 + 4 * 100 + 150)
     );
 
     return () => timers.forEach(clearTimeout);
@@ -103,72 +97,83 @@ export default function HeroYourDayVisual() {
         }
       `}</style>
 
-      {/* TOP HALF - YOUR DAY NOW */}
+      {/* TOP — YOUR DAY NOW */}
       <div
         style={{
           background: "#FEF2F2",
-          padding: "0.75rem 1.5rem",
+          padding: "0.5rem 1.25rem",
           borderBottom: "1px solid #FECACA",
         }}
       >
         <span
           style={{
             color: "#F87171",
-            fontSize: "0.6875rem",
+            fontSize: "0.625rem",
             fontWeight: 600,
             textTransform: "uppercase" as const,
             letterSpacing: "0.1em",
           }}
         >
-          YOUR DAY NOW
+          Your Day Now
         </span>
       </div>
 
-      <div style={{ padding: "1rem 1.5rem" }}>
-        {topTasks.map(({ Icon, text }, i) => (
-          <div
-            key={i}
-            className="yourday-task"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.75rem",
-              padding: "0.5rem 0",
-              cursor: "pointer",
-              opacity: i < visibleItems ? 1 : 0,
-              transform: i < visibleItems ? "translateX(0)" : "translateX(-10px)",
-              transition: "opacity 0.3s ease, transform 0.3s ease",
-            }}
-          >
-            <Icon size={16} color={RED_LIGHT} style={{ flexShrink: 0 }} />
-            <span
-              className="yourday-task-text"
+      <div style={{ padding: "0.75rem 1.25rem 0.625rem" }}>
+        {/* 2-column grid: 8 items in 4 rows */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "0.25rem 1rem",
+          }}
+        >
+          {topTasks.map(({ Icon, text }, i) => (
+            <div
+              key={i}
+              className="yourday-task"
               style={{
-                fontSize: "0.875rem",
-                color: "#4A4A4A",
-                transition: "color 0.2s, text-decoration 0.2s",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                padding: "0.25rem 0",
+                cursor: "pointer",
+                opacity: i < visibleItems ? 1 : 0,
+                transform: i < visibleItems ? "translateX(0)" : "translateX(-8px)",
+                transition: "opacity 0.25s ease, transform 0.25s ease",
               }}
             >
-              {text}
-            </span>
-          </div>
-        ))}
+              <Icon size={13} color={RED_LIGHT} style={{ flexShrink: 0 }} />
+              <span
+                className="yourday-task-text"
+                style={{
+                  fontSize: "0.75rem",
+                  color: "#4A4A4A",
+                  lineHeight: 1.3,
+                  transition: "color 0.2s, text-decoration 0.2s",
+                }}
+              >
+                {text}
+              </span>
+            </div>
+          ))}
+        </div>
 
         <div
           style={{
-            marginTop: "0.75rem",
-            paddingTop: "0.75rem",
+            marginTop: "0.5rem",
+            paddingTop: "0.5rem",
             borderTop: "1px solid #F3F4F6",
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
             opacity: visibleItems >= 8 ? 1 : 0,
             transition: "opacity 0.3s ease",
           }}
         >
-          <span style={{ color: "#F87171", fontSize: "0.75rem", fontWeight: 500 }}>
+          <span style={{ color: "#F87171", fontSize: "0.625rem", fontWeight: 500 }}>
             4+ hours on tasks that earn $0
           </span>
-          <span style={{ color: RED_LIGHT, fontSize: "0.75rem" }}>
+          <span style={{ color: RED_LIGHT, fontSize: "0.625rem" }}>
             Every. Single. Day.
           </span>
         </div>
@@ -179,16 +184,16 @@ export default function HeroYourDayVisual() {
         style={{
           borderTop: "2px dashed rgba(40,56,145,0.2)",
           position: "relative",
-          margin: "0",
+          height: "1px",
         }}
       >
         <div
           style={{
             background: NAVY,
             color: "white",
-            fontSize: "0.75rem",
+            fontSize: "0.6875rem",
             fontWeight: 600,
-            padding: "0.25rem 0.875rem",
+            padding: "0.2rem 0.75rem",
             borderRadius: "2rem",
             position: "absolute",
             top: "50%",
@@ -202,59 +207,89 @@ export default function HeroYourDayVisual() {
             gap: "0.25rem",
             opacity: badgeVisible ? 1 : 0,
             transition: "opacity 0.2s ease, transform 0.2s ease",
+            zIndex: 1,
           }}
         >
-          <Zap size={12} />
+          <Zap size={11} />
           After Barrana
         </div>
       </div>
 
-      {/* BOTTOM HALF - YOUR DAY AFTER */}
+      {/* BOTTOM — YOUR DAY AFTER */}
       <div
         style={{
           background: "#F0FDF4",
-          padding: "0.75rem 1.5rem",
+          padding: "0.5rem 1.25rem",
           borderBottom: "1px solid #BBF7D0",
+          marginTop: "1px",
         }}
       >
         <span
           style={{
             color: GREEN,
-            fontSize: "0.6875rem",
+            fontSize: "0.625rem",
             fontWeight: 600,
             textTransform: "uppercase" as const,
             letterSpacing: "0.1em",
           }}
         >
-          YOUR DAY AFTER
+          Your Day After
         </span>
       </div>
 
-      <div style={{ padding: "1rem 1.5rem" }}>
-        {bottomItems.map(({ Icon, text }, i) => (
-          <div
-            key={i}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "0.75rem",
-              padding: "0.5rem 0",
-              opacity: i < bottomVisible ? 1 : 0,
-              transform: i < bottomVisible ? "translateX(0)" : "translateX(-10px)",
-              transition: "opacity 0.3s ease, transform 0.3s ease",
-            }}
-          >
-            <Icon size={16} color={GREEN} style={{ flexShrink: 0 }} />
-            <span style={{ fontSize: "0.875rem", color: "#4A4A4A", fontWeight: 500 }}>
-              {text}
-            </span>
-          </div>
-        ))}
+      <div style={{ padding: "0.875rem 1.25rem 0.625rem" }}>
+        {/* Single row of 4 icons */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gap: "0.5rem",
+            textAlign: "center" as const,
+          }}
+        >
+          {bottomItems.map(({ Icon, label }, i) => (
+            <div
+              key={i}
+              style={{
+                display: "flex",
+                flexDirection: "column" as const,
+                alignItems: "center",
+                gap: "0.375rem",
+                opacity: i < bottomVisible ? 1 : 0,
+                transform: i < bottomVisible ? "translateY(0)" : "translateY(8px)",
+                transition: "opacity 0.3s ease, transform 0.3s ease",
+              }}
+            >
+              <div
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: "0.5rem",
+                  background: "rgba(34,197,94,0.1)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Icon size={18} color={GREEN} />
+              </div>
+              <span
+                style={{
+                  fontSize: "0.6875rem",
+                  color: "#4A4A4A",
+                  fontWeight: 500,
+                }}
+              >
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
 
         <div
           style={{
-            marginTop: "0.75rem",
-            paddingTop: "0.75rem",
+            marginTop: "0.625rem",
+            paddingTop: "0.5rem",
             borderTop: "1px solid #F3F4F6",
             display: "flex",
             justifyContent: "space-between",
@@ -262,10 +297,10 @@ export default function HeroYourDayVisual() {
             transition: "opacity 0.3s ease",
           }}
         >
-          <span style={{ color: GREEN, fontSize: "0.75rem", fontWeight: 500 }}>
+          <span style={{ color: GREEN, fontSize: "0.625rem", fontWeight: 500 }}>
             {"\u2713"} The busywork runs itself
           </span>
-          <span style={{ color: GREEN, fontSize: "0.75rem", fontWeight: 500 }}>
+          <span style={{ color: GREEN, fontSize: "0.625rem", fontWeight: 500 }}>
             {"\u2713"} 4+ hours recovered
           </span>
         </div>
@@ -275,14 +310,14 @@ export default function HeroYourDayVisual() {
       <div
         style={{
           background: "#F9FAFB",
-          padding: "0.75rem 1.5rem",
+          padding: "0.5rem 1.25rem",
           borderTop: "1px solid #F3F4F6",
           textAlign: "center" as const,
           opacity: footerVisible ? 1 : 0,
           transition: "opacity 0.3s ease",
         }}
       >
-        <span style={{ color: "#7B7B7B", fontSize: "0.75rem" }}>
+        <span style={{ color: "#7B7B7B", fontSize: "0.6875rem" }}>
           Same tools. Same team. Different day.
         </span>
       </div>
