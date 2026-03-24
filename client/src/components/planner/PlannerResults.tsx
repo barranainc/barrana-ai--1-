@@ -631,15 +631,40 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const missedLeads = Math.round(enquiries * 0.2);
   const additionalCapacity = Math.round(clients * 0.25);
 
+  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/4b59da85-f0fb-407a-b246-d7aaf7fac10e";
+
   const handleLeadSubmit = async (email: string, businessName: string, name: string, notes: string) => {
     setIsLeadSubmitted(true);
     try {
-      await fetch("/api/planner-lead", {
+      await fetch(GHL_WEBHOOK, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, businessName, name, notes, state }),
+        body: JSON.stringify({
+          first_name: name.split(" ")[0] || "",
+          last_name: name.split(" ").slice(1).join(" ") || "",
+          full_name: name,
+          email,
+          company_name: businessName,
+          // Planner results summary
+          industry: state.industry || "",
+          role: state.role || "",
+          workflows: (state.workflows || []).join(", "),
+          pain_points: (state.painPoints || []).join(", "),
+          tools: (state.tools || []).join(", "),
+          notes: notes || "",
+          // Computed results
+          top_opportunity: results?.opportunities?.[0]?.name || "",
+          estimated_annual_savings: `$${Math.round((results?.totalAnnualSavings || 0) / 1000)}K`,
+          estimated_hours_saved: `${results?.totalWeeklyHours || 0} hrs/week`,
+          // Tracking
+          source: "barrana.ai",
+          form_name: "Automation Planner Results",
+          page_url: window.location.href,
+          submitted_at: new Date().toISOString(),
+          tags: ["website-lead", "planner-completion", (state.industry || "").toLowerCase().replace(/\s+/g, "-")],
+        }),
       });
-    } catch { /* silent */ }
+    } catch { /* silent — don't block UX */ }
   };
 
   const scrollToLeadForm = () => {
