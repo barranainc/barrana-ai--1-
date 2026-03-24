@@ -46,7 +46,7 @@ import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
 import JsonLd from "@/components/JsonLd";
 
 // Diagram components
-import HeroSystemVisual from "@/components/diagrams/HeroSystemVisual";
+import HeroArchitectureVisual from "@/components/diagrams/HeroArchitectureVisual";
 import SocialProofToast from "@/components/diagrams/SocialProofToast";
 import ObjectionCards from "@/components/diagrams/ObjectionCards";
 import MethodTimeline from "@/components/diagrams/MethodTimeline";
@@ -495,10 +495,8 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "linear-gradient(135deg, #1f2c85 0%, #283891 50%, #2c3fa0 100%)", paddingTop: "5rem", paddingBottom: "7rem", minHeight: "85vh", position: "relative" }}>
-        {/* Ambient glows behind right diagram */}
-        <div style={{ position: "absolute", top: "5%", right: "2%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 68%)", pointerEvents: "none", zIndex: 0 }} />
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+      <section style={{ background: "#F5F5F5", paddingTop: "5rem", paddingBottom: "7rem", minHeight: "85vh" }}>
+        <div className="container">
           <div
             ref={heroReveal.ref}
             style={{ display: "grid", gap: "4rem", alignItems: "start" }}
@@ -520,9 +518,9 @@ export default function Home() {
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   textTransform: "uppercase",
-                  color: MAGENTA,
-                  background: "rgba(126,15,74,0.15)",
-                  border: `1px solid ${MAGENTA}`,
+                  color: NAVY,
+                  background: "rgba(40,56,145,0.10)",
+                  border: "1px solid rgba(40,56,145,0.2)",
                   borderRadius: "2rem",
                   padding: "0.375rem 1rem",
                   marginBottom: "1.5rem",
@@ -535,7 +533,7 @@ export default function Home() {
 
               <h1
                 style={{
-                  color: "white",
+                  color: DARK,
                   marginBottom: "1.25rem",
                   lineHeight: 1.08,
                   fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
@@ -548,13 +546,13 @@ export default function Home() {
               >
                 Your Manual Operations Are Costing You{" "}
                 <span style={{ color: MAGENTA, display: "block" }}>$40,000 to $180,000 Per Year.</span>
-                AI Automation Stops the Bleeding.
+                <span style={{ color: NAVY }}>AI Automation Stops the Bleeding.</span>
               </h1>
 
               <p
                 style={{
                   fontSize: "1.0625rem",
-                  color: "#C7D0EA",
+                  color: "#4A4A4A",
                   marginBottom: "2rem",
                   lineHeight: 1.7,
                   maxWidth: "52ch",
@@ -584,48 +582,48 @@ export default function Home() {
 
                 {/* Card 1 — range, no counter */}
                 <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
+                  background: "white",
+                  border: "1px solid #E2E4ED",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                 }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     $3,000–$8,000
                   </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#4A4A4A", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     What one missed lead costs you
                   </div>
                 </div>
 
                 {/* Card 2 — animated */}
                 <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
+                  background: "white",
+                  border: "1px solid #E2E4ED",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                 }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     <AnimatedCounter target={40000} prefix="$" suffix="–$180K/yr" />
                   </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#4A4A4A", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     Lost to slow response and manual follow-up
                   </div>
                 </div>
 
                 {/* Card 3 — animated */}
                 <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
+                  background: "white",
+                  border: "1px solid #E2E4ED",
                   borderRadius: "0.875rem",
                   padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                 }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     <AnimatedCounter target={52000} prefix="$" suffix="/yr" />
                   </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
+                  <div style={{ color: "#4A4A4A", fontSize: "0.8rem", lineHeight: 1.4 }}>
                     What 20 hrs/wk of admin costs at $50/hr
                   </div>
                 </div>
@@ -671,13 +669,13 @@ export default function Home() {
                       alignItems: "center",
                       gap: "0.5rem",
                       background: "transparent",
-                      color: "white",
+                      color: NAVY,
                       fontWeight: 700,
                       fontSize: "0.9375rem",
                       padding: "0.875rem 1.75rem",
                       borderRadius: "0.5rem",
                       textDecoration: "none",
-                      border: "1.5px solid rgba(255,255,255,0.5)",
+                      border: `2px solid ${NAVY}`,
                       transition: "border-color 0.2s, background 0.2s",
                     }}
                   >
@@ -686,24 +684,19 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", marginTop: "0.875rem", opacity: heroReveal.visible ? 1 : 0, transition: "opacity 0.65s ease 0.7s" }}>
+              <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.875rem", opacity: heroReveal.visible ? 1 : 0, transition: "opacity 0.65s ease 0.7s" }}>
                 60 minutes. We will show you exactly where the money is leaking.
               </p>
             </div>
 
-            {/* Right: system visual */}
+            {/* Right: architecture visual */}
             <div style={{
               position: "sticky",
               top: "7rem",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.8s ease 0.5s",
-              background: "rgba(0,0,0,0.22)",
-              border: "1px solid rgba(255,255,255,0.18)",
-              borderRadius: "1.25rem",
-              padding: "1.5rem 1.5rem 1.25rem",
-              boxShadow: "0 8px 40px rgba(0,0,0,0.30), 0 0 60px rgba(255,255,255,0.04)",
             }}>
-              <HeroSystemVisual />
+              <HeroArchitectureVisual />
             </div>
           </div>
         </div>
@@ -712,7 +705,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 2: TRUST STRIP (#1a2473)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#1a2473", borderBottom: "1px solid rgba(255,255,255,0.10)" }}>
+      <section style={{ background: "#EDEDEF", borderBottom: "1px solid #E2E4ED" }}>
         <div className="container">
           <div
             style={{
@@ -727,7 +720,7 @@ export default function Home() {
           >
             <style>{`
               .trust-strip-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.5rem; }
-              .trust-strip-divider { width: 1px; height: 1.25rem; background: rgba(255,255,255,0.12); }
+              .trust-strip-divider { width: 1px; height: 1.25rem; background: rgba(0,0,0,0.12); }
               @media (max-width: 640px) { .trust-strip-divider { display: none; } .trust-strip-item { width: 100%; justify-content: center; } }
             `}</style>
             {[
@@ -740,7 +733,7 @@ export default function Home() {
                 {i > 0 && <div className="trust-strip-divider" />}
                 <div className="trust-strip-item">
                   <item.icon size={15} color={MAGENTA} strokeWidth={2} />
-                  <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: "rgba(255,255,255,0.65)", whiteSpace: "nowrap" }}>
+                  <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: GREY, whiteSpace: "nowrap" }}>
                     {item.label}
                   </span>
                 </div>
