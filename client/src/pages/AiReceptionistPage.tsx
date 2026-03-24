@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
@@ -280,6 +283,7 @@ export default function AiReceptionistPage() {
 
   return (
     <>
+      <SEOHead title="AI Receptionist for Small Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically — without replacing your team." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -497,6 +501,13 @@ export default function AiReceptionistPage() {
             For most service businesses receiving 30+ inbound calls per month, an AI receptionist pays for its setup cost within the first 1–2 months — before accounting for after-hours leads that would previously have been missed entirely.
           </p>
 
+          <ContextualCTA
+            label="See This in Action"
+            description="Read how a dental office automated after-hours calls and recovered missed leads using"
+            linkText="AI Receptionist"
+            linkHref="/case-studies/dental-office-scarborough"
+          />
+
           {/* FAQ */}
           <SectionHeading>Frequently Asked Questions</SectionHeading>
           <div style={{ marginBottom: "2.5rem" }}>
@@ -521,22 +532,7 @@ export default function AiReceptionistPage() {
             </div>
           </div>
 
-          {/* Related Links */}
-          <div>
-            <div style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "1rem" }}>Related Resources</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {[
-                { label: "AI Receptionist Service", href: "/services/ai-receptionist" },
-                { label: "After-Hours Automation", href: "/services/after-hours-automation" },
-                { label: "AI Adoption for Small Businesses", href: "/ai-adoption-small-business" },
-                { label: "What to Automate First", href: "/insights/what-to-automate-first" },
-              ].map(l => (
-                <Link key={l.href} href={l.href} style={{ background: "#F0F4FF", color: "#283891", border: "1px solid #C7D2FE", borderRadius: 8, padding: "0.4rem 0.875rem", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <RelatedResources pagePath="/ai-receptionist" />
 
         </div>
       </main>

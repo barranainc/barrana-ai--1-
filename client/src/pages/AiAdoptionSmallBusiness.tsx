@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
@@ -258,6 +261,7 @@ export default function AiAdoptionSmallBusiness() {
 
   return (
     <>
+      <SEOHead title="AI Adoption for Small Businesses: A Practical Guide | Barrana AI" description="AI adoption for a small business means systematically identifying repetitive operational tasks and automating them. Learn the 5-stage method, costs, and what to automate first." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -395,6 +399,13 @@ export default function AiAdoptionSmallBusiness() {
           </ol>
 
           {/* FAQ */}
+          <ContextualCTA
+            label="See This in Action"
+            description="Read how a real estate team adopted AI automation and recovered 20+ hours per week using"
+            linkText="CRM Automation"
+            linkHref="/case-studies/real-estate-team-markham"
+          />
+
           <SectionHeading>Frequently Asked Questions</SectionHeading>
           <div style={{ marginBottom: "2.5rem" }}>
             {faqs.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
@@ -418,26 +429,7 @@ export default function AiAdoptionSmallBusiness() {
             </div>
           </div>
 
-          {/* Related Links */}
-          <div>
-            <div style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "1rem" }}>Related Resources</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {[
-                { label: "What to Automate First", href: "/insights/what-to-automate-first" },
-                { label: "Automation Readiness", href: "/insights/automation-readiness" },
-                { label: "Build vs Buy", href: "/insights/build-vs-buy" },
-                { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },
-                { label: "Lead Intake Workflow", href: "/workflows/lead-intake" },
-                { label: "Client Onboarding Workflow", href: "/workflows/client-onboarding" },
-                { label: "Automation Planner", href: "/automation-planner" },
-                { label: "Lead Response Automation", href: "/services/lead-response-automation" },
-              ].map(l => (
-                <Link key={l.href} href={l.href} style={{ background: "#F0F4FF", color: "#283891", border: "1px solid #C7D2FE", borderRadius: 8, padding: "0.4rem 0.875rem", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <RelatedResources pagePath="/ai-adoption-small-business" />
 
         </div>
       </main>

@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
@@ -100,6 +103,7 @@ export default function WhenAiIsNotTheAnswer() {
 
   return (
     <>
+      <SEOHead title="When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana AI" description="AI automation is not the right solution when you don't have a repeatable process, your problem is a people issue, your volume is too low, or you haven't diagnosed the root problem." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -209,6 +213,13 @@ export default function WhenAiIsNotTheAnswer() {
               <li><strong style={{ color: "#1A1A2E" }}>Then automate</strong> — with a defined problem, clean data, and measurable success criteria</li>
             </ol>
 
+            <ContextualCTA
+              label="Check Your Readiness"
+              description="Not sure where you stand? Take the assessment and find out if you are ready for"
+              linkText="Automation Readiness"
+              linkHref="/insights/automation-readiness"
+            />
+
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="What if I'm not sure whether my problem is a people issue or systems issue?" a="Run an experiment: have the person follow the ideal process manually for 2 weeks. If results improve with manual effort, it's a process issue. If the person can't sustain it, it's a systems issue." />
@@ -225,6 +236,7 @@ export default function WhenAiIsNotTheAnswer() {
                 <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a></Link>
               </div>
             </div>
+            <RelatedResources pagePath="/insights/when-ai-is-not-the-answer" />
           </div>
         </section>
       </main>

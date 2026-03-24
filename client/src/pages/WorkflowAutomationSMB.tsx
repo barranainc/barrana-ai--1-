@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
@@ -219,6 +222,7 @@ export default function WorkflowAutomationSMB() {
 
   return (
     <>
+      <SEOHead title="Workflow Automation for Small and Mid-Size Businesses | Barrana AI" description="A practical guide to workflow automation for SMBs: how to identify, prioritise, and build automated workflows that save 15-30 hours per week." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -371,6 +375,13 @@ export default function WorkflowAutomationSMB() {
             <li><strong>No monitoring post-launch.</strong> Automation fails silently. Without error monitoring and regular performance review, broken workflows go unnoticed until a client complains.</li>
           </ol>
 
+          <ContextualCTA
+            label="See This in Action"
+            description="Read how a cleaning company built automated workflows and saved 20+ hours per week using"
+            linkText="Workflow Automation"
+            linkHref="/case-studies/cleaning-company-etobicoke"
+          />
+
           {/* FAQ */}
           <SectionHeading>Frequently Asked Questions</SectionHeading>
           <div style={{ marginBottom: "2.5rem" }}>
@@ -395,24 +406,7 @@ export default function WorkflowAutomationSMB() {
             </div>
           </div>
 
-          {/* Related Links */}
-          <div>
-            <div style={{ fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#7B7B7B", marginBottom: "1rem" }}>Related Resources</div>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {[
-                { label: "Lead Intake Workflow", href: "/workflows/lead-intake" },
-                { label: "Appointment Booking Workflow", href: "/workflows/appointment-booking" },
-                { label: "Client Onboarding Workflow", href: "/workflows/client-onboarding" },
-                { label: "Document Collection Workflow", href: "/workflows/document-collection" },
-                { label: "AI Adoption for Small Businesses", href: "/ai-adoption-small-business" },
-                { label: "What Is AI Automation?", href: "/resources/what-is-ai-automation" },
-              ].map(l => (
-                <Link key={l.href} href={l.href} style={{ background: "#F0F4FF", color: "#283891", border: "1px solid #C7D2FE", borderRadius: 8, padding: "0.4rem 0.875rem", fontSize: "0.8rem", fontWeight: 600, textDecoration: "none" }}>
-                  {l.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+          <RelatedResources pagePath="/workflow-automation-smb" />
 
         </div>
       </main>

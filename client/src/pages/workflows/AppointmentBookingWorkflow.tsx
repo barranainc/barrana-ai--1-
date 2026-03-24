@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography } from "@/styles/design-tokens";
@@ -134,6 +137,7 @@ const jsonLd = {
 export default function AppointmentBookingWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
+      <SEOHead title="How to Automate Appointment Booking and Reduce No-Shows" description="A step-by-step guide to building an automated booking workflow with smart reminders that reduces no-shows by 40-50%." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -254,6 +258,13 @@ export default function AppointmentBookingWorkflow() {
         { label: "Admin Time on Scheduling", before: "30-40% of day", after: "-70-80%", beforeW: 80, afterW: 15 },
       ]} />
 
+      <ContextualCTA
+        label="See This in Action"
+        description="Read how a physio clinic reduced no-shows by 40% with automated reminders using"
+        linkText="Appointment Automation"
+        linkHref="/case-studies/physio-clinic-richmond-hill"
+      />
+
       {/* FAQ */}
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
@@ -278,21 +289,7 @@ export default function AppointmentBookingWorkflow() {
         </div>
       </div>
 
-      {/* Related Links */}
-      <div>
-        <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1A1A2E", marginBottom: "0.75rem" }}>Related</h3>
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Appointment Automation", href: "/services/appointment-automation" },
-            { label: "What to Automate First", href: "/insights/what-to-automate-first" },
-            { label: "Booking Reminders Playbook", href: "/playbooks/booking-reminders" },
-          ].map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a style={{ background: "#F0F4FF", color: "#283891", padding: "0.5rem 1rem", borderRadius: 20, fontSize: "0.875rem", fontWeight: 600, textDecoration: "none" }}>{link.label}</a>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <RelatedResources pagePath="/workflows/appointment-booking" />
     </div>
   );
 }

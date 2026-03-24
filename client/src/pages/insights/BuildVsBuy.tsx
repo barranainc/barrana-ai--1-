@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
@@ -168,6 +171,7 @@ export default function BuildVsBuy() {
 
   return (
     <>
+      <SEOHead title="Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI" description="For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -267,6 +271,13 @@ export default function BuildVsBuy() {
               We only recommend a new platform if there is a genuine gap — something no existing tool can fill. And we never recommend enterprise software to a 5-person firm.
             </p>
 
+            <ContextualCTA
+              label="See the Hybrid Approach"
+              description="Read how an accounting firm connected their existing tools with custom automation using"
+              linkText="Workflow Automation"
+              linkHref="/case-studies/accounting-firm-vaughan"
+            />
+
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Do I need to replace my current software?" a="Almost never. The hybrid approach connects what you have. We only recommend new tools when there is a clear gap that existing tools cannot fill." />
@@ -283,6 +294,7 @@ export default function BuildVsBuy() {
                 <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a></Link>
               </div>
             </div>
+            <RelatedResources pagePath="/insights/build-vs-buy" />
           </div>
         </section>
       </main>

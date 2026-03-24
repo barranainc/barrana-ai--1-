@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography } from "@/styles/design-tokens";
@@ -194,6 +197,7 @@ const jsonLd = {
 export default function DocumentCollectionWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
+      <SEOHead title="How to Automate Document Collection for Service Businesses" description="A step-by-step guide to building an automated document collection workflow that cuts collection time from weeks to days." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -315,6 +319,13 @@ export default function DocumentCollectionWorkflow() {
         { label: "Collection Rate (30 days)", before: "60-70%", after: "90-95%", beforeW: 65, afterW: 92 },
       ]} />
 
+      <ContextualCTA
+        label="See This in Action"
+        description="Read how an accounting firm eliminated document chasing and saved 15 hours per week using"
+        linkText="Document Collection Automation"
+        linkHref="/case-studies/accounting-firm-vaughan"
+      />
+
       {/* FAQ */}
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
@@ -339,21 +350,7 @@ export default function DocumentCollectionWorkflow() {
         </div>
       </div>
 
-      {/* Related Links */}
-      <div>
-        <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1A1A2E", marginBottom: "0.75rem" }}>Related</h3>
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Document Collection Service", href: "/services/document-collection" },
-            { label: "Document Collection Playbook", href: "/playbooks/document-collection" },
-            { label: "What to Automate First", href: "/insights/what-to-automate-first" },
-          ].map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a style={{ background: "#F0F4FF", color: "#283891", padding: "0.5rem 1rem", borderRadius: 20, fontSize: "0.875rem", fontWeight: 600, textDecoration: "none" }}>{link.label}</a>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <RelatedResources pagePath="/workflows/document-collection" />
     </div>
   );
 }

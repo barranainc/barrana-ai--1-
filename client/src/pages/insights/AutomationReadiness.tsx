@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
@@ -115,6 +118,7 @@ export default function AutomationReadiness() {
 
   return (
     <>
+      <SEOHead title="How to Know If Your Business Is Automation-Ready | Barrana AI" description="A business is ready for automation when it has repeatable workflows, 20+ client interactions per month, identifiable time drains, basic digital tools, and willingness to start small." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -229,6 +233,13 @@ export default function AutomationReadiness() {
               ))}
             </div>
 
+            <ContextualCTA
+              label="See This in Action"
+              description="Read how a physio clinic went from manual scheduling to full automation using"
+              linkText="Appointment Automation"
+              linkHref="/case-studies/physio-clinic-richmond-hill"
+            />
+
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="We're a solo operator with 2 clients — are we ready?" a="Probably not yet for workflow automation. Focus on landing more clients. But start preparing: use a proper CRM and document your intake process." />
@@ -245,6 +256,7 @@ export default function AutomationReadiness() {
                 <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a></Link>
               </div>
             </div>
+            <RelatedResources pagePath="/insights/automation-readiness" />
           </div>
         </section>
       </main>
