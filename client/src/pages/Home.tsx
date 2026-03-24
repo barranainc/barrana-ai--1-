@@ -496,25 +496,8 @@ type HeroState = {
 
 const HERO_STATES: HeroState[] = [
   {
-    id: "new-to-ai",
-    tabLabel: "New to AI",
-    icon: Layers,
-    headlineBefore: "Your Manual Operations Are Costing You",
-    emphasisText: "$40,000 to $180,000 Per Year.",
-    emphasisColor: MAGENTA,
-    afterText: "AI Automation Stops the Bleeding.",
-    sub: "Barrana builds AI automation systems for Toronto and GTA service businesses. We automate intake, follow-up, scheduling, invoicing, and repetitive admin \u2014 without replacing your current team or software.",
-    primaryCTA: { text: "See What You Can Automate", href: "/automation-planner" },
-    secondaryCTA: { text: "Start Here: AI Explained in 60 Seconds", href: "/start-here" },
-    metrics: [
-      { value: "$3K\u2013$8K", label: "Cost of one missed lead" },
-      { value: "$40K\u2013$180K/yr", label: "Lost to slow response" },
-      { value: "$52K/yr", label: "20 hrs/week admin at $50/hr" },
-    ],
-  },
-  {
-    id: "know-costs",
-    tabLabel: "Know My Costs",
+    id: "the-problem",
+    tabLabel: "The Problem",
     icon: DollarSign,
     headlineBefore: "You Already Know Something Is Wrong.",
     emphasisText: "Here Is What It Is Costing You.",
@@ -600,8 +583,9 @@ export default function Home() {
   }
 
   function handleTabKeyDown(e: React.KeyboardEvent, index: number) {
-    if (e.key === "ArrowRight") { e.preventDefault(); switchHeroTab((index + 1) % 4); }
-    if (e.key === "ArrowLeft") { e.preventDefault(); switchHeroTab((index - 1 + 4) % 4); }
+    const len = HERO_STATES.length;
+    if (e.key === "ArrowRight") { e.preventDefault(); switchHeroTab((index + 1) % len); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); switchHeroTab((index - 1 + len) % len); }
   }
 
   // Hover state for Six Problems cards
@@ -646,18 +630,26 @@ export default function Home() {
             AI Automation for Toronto Businesses
           </div>
 
-          {/* Tab selector row — stays fixed */}
+          {/* Tab selector row + New to AI link */}
           <div
-            role="tablist"
             style={{
               display: "flex",
-              gap: "0.5rem",
+              alignItems: "center",
+              gap: "1rem",
               marginBottom: "2.5rem",
               flexWrap: "wrap",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.5s ease 0.2s",
             }}
           >
+            <div
+              role="tablist"
+              style={{
+                display: "flex",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+              }}
+            >
             {HERO_STATES.map((state, i) => {
               const Icon = state.icon;
               return (
@@ -689,6 +681,37 @@ export default function Home() {
                 </button>
               );
             })}
+            </div>
+
+            {/* New to AI — separate link to /start-here */}
+            <Link
+              href="/start-here"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.375rem",
+                fontSize: "0.8125rem",
+                fontWeight: 600,
+                color: MAGENTA,
+                textDecoration: "none",
+                padding: "0.5rem 0.875rem",
+                borderRadius: "2rem",
+                background: "rgba(126,15,74,0.08)",
+                border: `1px solid rgba(126,15,74,0.15)`,
+                transition: "all 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(126,15,74,0.14)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(126,15,74,0.3)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(126,15,74,0.08)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(126,15,74,0.15)";
+              }}
+            >
+              New to AI? Start Here <ArrowRight size={13} />
+            </Link>
           </div>
 
           {/* Transforming content */}
@@ -814,10 +837,9 @@ export default function Home() {
 
               {/* Right column: visual */}
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {displayTab === 0 && <HeroArchitectureVisual />}
-                {displayTab === 1 && <HeroMoneyLeakVisual />}
-                {displayTab === 2 && <HeroPlannerPreview />}
-                {displayTab === 3 && <HeroAuditCard />}
+                {displayTab === 0 && <HeroMoneyLeakVisual />}
+                {displayTab === 1 && <HeroPlannerPreview />}
+                {displayTab === 2 && <HeroAuditCard />}
               </div>
             </div>
 
