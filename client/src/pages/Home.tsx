@@ -505,7 +505,7 @@ const HERO_STATES: HeroState[] = [
     emphasisColor: MAGENTA,
     afterText: "",
     sub: "You did not build this business to chase follow-ups, send reminders, and manually type things into 3 different systems. We fix that. Your tools learn to talk to each other. The busywork runs itself. You go back to doing the work that actually pays.",
-    microcopy: "No, you do not need to \u201Clearn AI.\u201D No, we will not replace your team. No, this is not another app you will never open.",
+    microcopy: "No, you do not need to \u201Clearn AI.\u201D\nNo, we will not replace your team.\nNo, this is not another app you will never open.",
     primaryCTA: { text: "Show Me What I Can Stop Doing Manually", href: "/automation-planner" },
     secondaryCTA: { text: "See What This Looks Like for My Industry", href: "/ai-automation-industries" },
     metrics: [
@@ -785,20 +785,26 @@ export default function Home() {
                       borderRadius: "0 0.5rem 0.5rem 0",
                       padding: "0.75rem 1rem",
                       marginBottom: "0.5rem",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
                     }}
                   >
-                    <p
-                      style={{
-                        color: DARK,
-                        fontSize: "0.875rem",
-                        fontStyle: "italic",
-                        lineHeight: 1.6,
-                        fontWeight: 500,
-                        margin: 0,
-                      }}
-                    >
-                      {HERO_STATES[displayTab].microcopy}
-                    </p>
+                    {HERO_STATES[displayTab].microcopy!.split("\n").map((line, idx) => (
+                      <p
+                        key={idx}
+                        style={{
+                          color: DARK,
+                          fontSize: "0.875rem",
+                          fontStyle: "italic",
+                          lineHeight: 1.4,
+                          fontWeight: 500,
+                          margin: 0,
+                        }}
+                      >
+                        {line}
+                      </p>
+                    ))}
                   </div>
                 )}
 
