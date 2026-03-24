@@ -45,7 +45,7 @@ import {
 import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
 
 // Hero tab visuals
-import HeroMoneyLeakVisual from "@/components/diagrams/HeroMoneyLeakVisual";
+import HeroYourDayVisual from "@/components/diagrams/HeroYourDayVisual";
 import HeroPlannerPreview from "@/components/diagrams/HeroPlannerPreview";
 import HeroAuditCard from "@/components/diagrams/HeroAuditCard";
 
@@ -872,8 +872,8 @@ export default function Home() {
 
               {/* Right column: visual */}
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {displayTab === 0 && <HeroArchitectureVisual />}
-                {displayTab === 1 && <HeroMoneyLeakVisual />}
+                {displayTab === 0 && <HeroYourDayVisual />}
+                {displayTab === 1 && <HeroArchitectureVisual />}
                 {displayTab === 2 && <HeroPlannerPreview />}
                 {displayTab === 3 && <HeroAuditCard />}
               </div>
