@@ -489,12 +489,31 @@ type HeroState = {
   emphasisColor: string;
   afterText: string;
   sub: string;
+  microcopy?: string;
   primaryCTA: { text: string; href: string };
   secondaryCTA: { text: string; href: string };
   metrics: { value: string; label: string }[];
 };
 
 const HERO_STATES: HeroState[] = [
+  {
+    id: "what-we-do",
+    tabLabel: "What We Do",
+    icon: Sparkles,
+    headlineBefore: "Your Most Expensive Employee Is Doing Data Entry.",
+    emphasisText: "That Employee Is You.",
+    emphasisColor: MAGENTA,
+    afterText: "",
+    sub: "You did not build this business to chase follow-ups, send reminders, and manually type things into 3 different systems. We fix that. Your tools learn to talk to each other. The busywork runs itself. You go back to doing the work that actually pays.",
+    microcopy: "No, you do not need to \u201Clearn AI.\u201D No, we will not replace your team. No, this is not another app you will never open.",
+    primaryCTA: { text: "Show Me What I Can Stop Doing Manually", href: "/automation-planner" },
+    secondaryCTA: { text: "See What This Looks Like for My Industry", href: "/ai-automation-industries" },
+    metrics: [
+      { value: "10+ Years", label: "Building business systems" },
+      { value: "2\u201350 Staff", label: "The businesses we serve" },
+      { value: "Fixed Pricing", label: "Never hourly. No surprises." },
+    ],
+  },
   {
     id: "the-problem",
     tabLabel: "The Problem",
@@ -757,6 +776,22 @@ export default function Home() {
                   {HERO_STATES[displayTab].sub}
                 </p>
 
+                {/* Microcopy — the knowing wink (only on Tab 0) */}
+                {HERO_STATES[displayTab].microcopy && (
+                  <p
+                    style={{
+                      color: GREY,
+                      fontSize: "0.9375rem",
+                      fontStyle: "italic",
+                      lineHeight: 1.65,
+                      marginTop: "1rem",
+                      maxWidth: "32rem",
+                    }}
+                  >
+                    {HERO_STATES[displayTab].microcopy}
+                  </p>
+                )}
+
                 {/* CTAs */}
                 <div
                   style={{
@@ -837,9 +872,10 @@ export default function Home() {
 
               {/* Right column: visual */}
               <div style={{ display: "flex", justifyContent: "center" }}>
-                {displayTab === 0 && <HeroMoneyLeakVisual />}
-                {displayTab === 1 && <HeroPlannerPreview />}
-                {displayTab === 2 && <HeroAuditCard />}
+                {displayTab === 0 && <HeroArchitectureVisual />}
+                {displayTab === 1 && <HeroMoneyLeakVisual />}
+                {displayTab === 2 && <HeroPlannerPreview />}
+                {displayTab === 3 && <HeroAuditCard />}
               </div>
             </div>
 
@@ -863,7 +899,7 @@ export default function Home() {
                     boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
                   }}
                 >
-                  <div style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                  <div style={{ color: displayTab === 0 ? NAVY : MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
                     {m.value}
                   </div>
                   <div style={{ color: "#4A4A4A", fontSize: "0.8125rem", lineHeight: 1.4 }}>
