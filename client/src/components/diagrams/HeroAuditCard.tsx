@@ -1,12 +1,14 @@
 /**
- * HeroAuditCard.tsx — Audit Checklist Card for "Ready to Talk" hero tab
- * Clean white card with 5 checkmark items.
+ * HeroAuditCard.tsx — Compact Audit Checklist Card for "Ready to Talk" hero tab
  */
 
 import { CheckCircle } from "lucide-react";
 
 const DARK = "#1A1A2E";
 const GREEN = "#0D9668";
+const GREY = "#7B7B7B";
+const NAVY = "#283891";
+const BORDER = "#E2E4ED";
 
 const ITEMS = [
   "Full workflow map of your operations",
@@ -20,46 +22,53 @@ export default function HeroAuditCard() {
   return (
     <div
       style={{
-        maxWidth: 480,
+        maxWidth: 540,
+        width: "100%",
         background: "white",
         borderRadius: "1rem",
-        border: "1px solid #E2E4ED",
-        boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-        padding: "2rem",
+        border: `1px solid ${BORDER}`,
+        boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+        padding: "1.25rem 1.5rem",
       }}
     >
       <div
         style={{
-          fontSize: "1.0625rem",
-          fontWeight: 600,
+          fontSize: "0.9375rem",
+          fontWeight: 700,
           color: DARK,
-          marginBottom: "1.5rem",
+          marginBottom: "1rem",
         }}
       >
         What You Get in the Free Audit
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
         {ITEMS.map((item) => (
           <div
             key={item}
             style={{
               display: "flex",
-              alignItems: "flex-start",
-              gap: "0.75rem",
+              alignItems: "center",
+              gap: "0.625rem",
             }}
           >
             <CheckCircle
-              size={20}
+              size={17}
               color={GREEN}
-              strokeWidth={2}
-              style={{ flexShrink: 0, marginTop: 2 }}
+              strokeWidth={2.2}
+              style={{ flexShrink: 0 }}
             />
-            <span style={{ fontSize: "0.9375rem", color: DARK, lineHeight: 1.5 }}>
+            <span style={{ fontSize: "0.8125rem", color: DARK, lineHeight: 1.4 }}>
               {item}
             </span>
           </div>
         ))}
+      </div>
+
+      <div style={{ borderTop: `1px solid ${BORDER}`, marginTop: "1rem", paddingTop: "0.625rem", textAlign: "center" as const }}>
+        <span style={{ fontSize: "0.6875rem", color: NAVY, fontWeight: 600 }}>
+          60 minutes. Free. No obligation.
+        </span>
       </div>
     </div>
   );
