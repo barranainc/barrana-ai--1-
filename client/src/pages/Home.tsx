@@ -523,6 +523,7 @@ const HERO_STATES: HeroState[] = [
     emphasisColor: MAGENTA,
     afterText: "",
     sub: "Most service businesses lose $80,000 to $200,000 per year to slow lead response, manual admin, no-shows, and invoice delays. The waste is calculable. So is the fix.",
+    microcopy: "These are not estimates.\nThey are calculated from real patterns across GTA service businesses.\nYour number is probably in this range.",
     primaryCTA: { text: "Calculate Your Annual Operational Cost", href: "/resources/roi-calculator" },
     secondaryCTA: { text: "See What Other Businesses Recovered", href: "/case-studies" },
     metrics: [
@@ -540,6 +541,7 @@ const HERO_STATES: HeroState[] = [
     emphasisColor: NAVY,
     afterText: "",
     sub: "The Barrana Automation Planner walks you through 8 guided questions about your business and gives you a personalised roadmap: what to automate first, what to keep human, and what it will cost. Takes 3 to 5 minutes.",
+    microcopy: "No account required.\nResults on screen immediately.\nYours to keep whether or not you work with us.",
     primaryCTA: { text: "Start the Automation Planner", href: "/automation-planner" },
     secondaryCTA: { text: "Read: What to Automate First", href: "/insights/what-to-automate-first" },
     metrics: [
@@ -557,6 +559,7 @@ const HERO_STATES: HeroState[] = [
     emphasisColor: NAVY,
     afterText: "",
     sub: "Book a free 60-minute Automation Audit. We map your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first. You keep the audit even if you do nothing.",
+    microcopy: "60 minutes. No sales pitch.\nYou keep the full audit report.\nIf automation is not the right answer, we will tell you that.",
     primaryCTA: { text: "Book Your Free Automation Audit", href: "/contact" },
     secondaryCTA: { text: "Call Us: +1 647 367 6771", href: "tel:+16473676771" },
     metrics: [
