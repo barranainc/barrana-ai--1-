@@ -80,6 +80,7 @@ import Integrations from "./pages/Integrations";
 import IntegrationDetail from "./pages/IntegrationDetail";
 import ROICalculator from "./pages/ROICalculator";
 import LocalSEOPage from "./pages/LocalSEOPage";
+import LocationIndustryPage from "./pages/LocationIndustryPage";
 import FAQ from "./pages/FAQ";
 import WhatIsAIAutomation from "./pages/resources/WhatIsAIAutomation";
 import OperationalFrictionMap from "./pages/resources/OperationalFrictionMap";
@@ -233,6 +234,9 @@ function Router() {
         <Route path="/workflows/appointment-booking" component={AppointmentBookingWorkflow} />
         <Route path="/workflows/client-onboarding" component={ClientOnboardingWorkflow} />
         <Route path="/workflows/document-collection" component={DocumentCollectionWorkflow} />
+
+        {/* Location + Industry Pages (30 local pages) */}
+        <Route path="/locations/:city/:industry" component={LocationIndustryPage} />
 
         {/* Local SEO Matrix */}
         <Route path="/ai-automation/:city" component={LocalSEOPage} />
