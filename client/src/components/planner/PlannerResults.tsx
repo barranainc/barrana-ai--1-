@@ -12,6 +12,7 @@ import { INDUSTRY_MAP } from "@/config/planner/industries";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import LeadCaptureForm from "./LeadCaptureForm";
 import ShareResults from "./ShareResults";
+import { submitLead } from "@/lib/ghl";
 
 // ── Brand ─────────────────────────────────────────────────────────────────────
 const NAVY = "#283891";
@@ -634,12 +635,28 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const handleLeadSubmit = async (email: string, businessName: string, name: string, notes: string) => {
     setIsLeadSubmitted(true);
     try {
-      await fetch("/api/planner-lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, businessName, name, notes, state }),
+      const industrySlug = (state.industry || "").toLowerCase().replace(/\s+/g, "-");
+      await submitLead({
+        firstName: name.split(" ")[0] || "",
+        lastName: name.split(" ").slice(1).join(" ") || undefined,
+        email,
+        companyName: businessName,
+        industry: state.industry || undefined,
+        message: notes || undefined,
+        formName: "Automation Planner Results",
+        pageUrl: window.location.href,
+        tags: ["website-lead", "planner-completed", industrySlug].filter(Boolean),
+        customFields: [
+          { key: "role", field_value: state.role || "" },
+          { key: "workflows", field_value: (state.selectedWorkflows || []).join(", ") },
+          { key: "pain_points", field_value: (state.painPoints || []).join(", ") },
+          { key: "tools", field_value: (state.tools || []).join(", ") },
+          { key: "top_opportunity", field_value: results?.opportunities?.[0]?.name || "" },
+          { key: "estimated_annual_savings", field_value: `$${annualAdminCost}` },
+          { key: "estimated_hours_saved", field_value: `${adminHrs} hrs/week` },
+        ],
       });
-    } catch { /* silent */ }
+    } catch { /* silent — don't block UX */ }
   };
 
   const scrollToLeadForm = () => {

@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import { toast } from "sonner";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { colors } from "@/styles/design-tokens";
+import { submitLead } from "@/lib/ghl";
 
 // Social icons
 function IconLinkedIn() {
@@ -84,10 +85,39 @@ export default function Contact() {
       return;
     }
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
-    toast.success("Audit request received! We'll be in touch within 1 business day.");
+    try {
+      const result = await submitLead({
+        firstName: formData.name.split(" ")[0],
+        lastName: formData.name.split(" ").slice(1).join(" ") || "",
+        email: formData.email,
+        phone: formData.phone || undefined,
+        companyName: formData.business,
+        industry: formData.industry,
+        message: formData.challenge || undefined,
+        formName: "Contact Form - Audit Request",
+        pageUrl: window.location.href,
+        tags: [
+          "website-lead",
+          "audit-request",
+          formData.industry.toLowerCase().replace(/\s+/g, "-"),
+        ],
+        customFields: [
+          { key: "city", field_value: formData.city || "" },
+          { key: "team_size", field_value: formData.employees || "" },
+        ],
+      });
+      if (!result.success) {
+        console.error("Lead submit error:", result.error);
+      }
+      setSubmitted(true);
+      toast.success("Audit request received! We'll be in touch within 1 business day.");
+    } catch {
+      // Show success even on failure to avoid blocking UX
+      setSubmitted(true);
+      toast.success("Audit request received! We'll be in touch within 1 business day.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass = "w-full px-4 py-3 rounded-xl border text-sm outline-none bg-[#F7F8FB] transition-all";
