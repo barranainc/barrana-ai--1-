@@ -8,6 +8,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { colors, spacing, typography, cards, surfaces } from "@/styles/design-tokens";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
@@ -96,11 +97,11 @@ function useReveal(threshold = 0.15) {
   return { ref, visible };
 }
 
-const NAVY = "#283891";
-const TEAL = "#7E0F4A";
+const NAVY = colors.navy;
+const TEAL = colors.magenta;
 
-const sec = (bg: string): React.CSSProperties => ({ background: bg, padding: "4rem 0" });
-const h2Style: React.CSSProperties = { fontWeight: 800, color: "#111827", fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)", marginBottom: "1rem", lineHeight: 1.25 };
+const sec = (bg: string): React.CSSProperties => ({ background: bg, padding: `${spacing.sectionPadding} 0` });
+const h2Style: React.CSSProperties = { ...typography.sectionHeading, marginBottom: "1rem", lineHeight: 1.25 };
 
 // ── sub-components ───────────────────────────────────────────────────────────
 
@@ -113,7 +114,7 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
   });
 
   return (
-    <section style={{ background: "#F7F9FC", paddingTop: "6rem", paddingBottom: "4rem" }}>
+    <section style={{ background: colors.surfaceLight, paddingTop: "6rem", paddingBottom: "4rem" }}>
       <div className="container">
         {/* Breadcrumb */}
         <nav style={{ display: "flex", gap: "0.375rem", fontSize: "0.8125rem", color: "var(--b-grey)", marginBottom: "2rem", alignItems: "center", ...st(0) }}>
@@ -165,13 +166,12 @@ function BeforeMetrics({ metrics, color }: { metrics: { label: string; value: st
     <div ref={ref} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))", gap: "1rem", marginTop: "1.5rem" }}>
       {metrics.map((m, i) => (
         <div key={i} style={{
-          background: "white", borderRadius: 14, padding: "1.25rem", borderLeft: `3px solid ${color}`,
-          boxShadow: "0 1px 6px rgba(0,0,0,0.06)",
+          ...cards.typeA, borderLeft: `3px solid ${color}`,
           opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(12px)",
           transition: `opacity 0.4s ease ${i * 0.08}s, transform 0.4s ease ${i * 0.08}s`,
         }}>
-          <p style={{ fontWeight: 800, fontSize: "1.25rem", color, marginBottom: "0.375rem" }}>{m.value}</p>
-          <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", lineHeight: 1.4, margin: 0 }}>{m.label}</p>
+          <p style={{ fontWeight: 800, fontSize: "1.25rem", color: colors.magenta, marginBottom: "0.375rem" }}>{m.value}</p>
+          <p style={{ ...typography.metricLabel, lineHeight: 1.4, margin: 0 }}>{m.label}</p>
         </div>
       ))}
     </div>
@@ -210,9 +210,9 @@ function CrossIndustry({ items }: { items: { industry: string; note: string }[] 
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "0.875rem", marginTop: "1.25rem" }}>
       {items.map((item, i) => (
-        <div key={i} style={{ background: "white", borderRadius: 12, padding: "1.125rem", border: "1px solid rgba(40,56,145,0.08)", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
-          <p style={{ fontWeight: 700, color: NAVY, fontSize: "0.875rem", marginBottom: "0.375rem" }}>{item.industry}</p>
-          <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", lineHeight: 1.5, margin: 0 }}>{item.note}</p>
+        <div key={i} style={{ ...cards.typeA, padding: "1.125rem" }}>
+          <p style={{ fontWeight: 700, color: colors.navy, fontSize: "0.875rem", marginBottom: "0.375rem" }}>{item.industry}</p>
+          <p style={{ ...typography.cardBody, lineHeight: 1.5, margin: 0 }}>{item.note}</p>
         </div>
       ))}
     </div>
@@ -229,8 +229,8 @@ function ImplementationBox({ timeline, investment, payback }: { timeline?: strin
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem", marginTop: "1.5rem" }}>
       {items.map((item) => (
-        <div key={item.label} style={{ background: "#F7F9FC", borderRadius: 12, padding: "1.25rem", border: "1px solid rgba(40,56,145,0.07)" }}>
-          <p style={{ fontSize: "0.6875rem", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: TEAL, marginBottom: "0.375rem" }}>{item.label}</p>
+        <div key={item.label} style={{ background: colors.surfaceLight, borderRadius: 12, padding: "1.25rem", border: "1px solid rgba(40,56,145,0.07)" }}>
+          <p style={{ ...typography.eyebrow, marginBottom: "0.375rem" }}>{item.label}</p>
           <p style={{ fontWeight: 700, color: "#111827", fontSize: "0.9375rem", margin: 0 }}>{item.value}</p>
         </div>
       ))}
@@ -277,7 +277,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
       {/* Breadcrumb Nav */}
-      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+      <div style={{ background: colors.surfaceLight, paddingTop: "3rem", paddingBottom: 0 }}>
         <div className="container">
           <BreadcrumbNav
             items={[
@@ -301,7 +301,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       </section>
 
       {/* 3. The Problem */}
-      <section style={sec("#F7F9FC")}>
+      <section style={sec(colors.surfaceLight)}>
         <div className="container">
           <h2 style={h2Style}>{data.problemHeading ?? "The Problem"}</h2>
           {data.problemBody.map((p, i) => (
@@ -322,7 +322,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       </section>
 
       {/* 5. Control Layer */}
-      <section style={sec("#F7F9FC")}>
+      <section style={sec(colors.surfaceLight)}>
         <div className="container">
           <h2 style={h2Style}>Governance &amp; Control Layer</h2>
           <ControlLayerCard items={data.controlItems} />
@@ -338,7 +338,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       </section>
 
       {/* 7. Before / After Results */}
-      <section style={sec("#F7F9FC")}>
+      <section style={sec(colors.surfaceLight)}>
         <div className="container">
           <h2 style={h2Style}>Before vs After Results</h2>
           <BeforeAfterSection metrics={data.results} />
@@ -355,7 +355,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       </section>
 
       {/* 9. Why This Matters */}
-      <section style={sec("#F7F9FC")}>
+      <section style={sec(colors.surfaceLight)}>
         <div className="container" style={{ maxWidth: 800 }}>
           <h2 style={h2Style}>Why This Matters for Your Business</h2>
           <p style={{ color: "var(--b-grey)", lineHeight: 1.75, fontSize: "0.9375rem", marginBottom: "1.5rem" }}>{data.whyItMatters}</p>
@@ -393,7 +393,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       />
 
       {/* 12. Internal Links */}
-      <section style={sec("#F7F9FC")}>
+      <section style={sec(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
         </div>

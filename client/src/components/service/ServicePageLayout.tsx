@@ -7,6 +7,7 @@
 
 import React from "react";
 import { useLocation } from "wouter";
+import { colors, spacing, typography, cards, surfaces } from "@/styles/design-tokens";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -97,21 +98,17 @@ export interface ServicePageData {
 
 const sectionStyle = (bg: string): React.CSSProperties => ({
   background: bg,
-  padding: "4.5rem 0",
+  padding: `${spacing.sectionPadding} 0`,
 });
 
 const headingStyle: React.CSSProperties = {
-  fontWeight: 800,
-  color: "var(--b-dark)",
-  fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)",
+  ...typography.sectionHeading,
   marginBottom: "1rem",
   lineHeight: 1.25,
 };
 
 const subheadingStyle: React.CSSProperties = {
-  color: "var(--b-grey)",
-  fontSize: "0.9375rem",
-  lineHeight: 1.65,
+  ...typography.sectionSubheading,
   marginBottom: "2rem",
   maxWidth: "56ch",
 };
@@ -178,7 +175,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       />
 
       {/* Breadcrumb Nav */}
-      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+      <div style={{ background: colors.surfaceLight, paddingTop: "3rem", paddingBottom: 0 }}>
         <div className="container">
           <BreadcrumbNav
             items={[
@@ -214,7 +211,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       </section>
 
       {/* 3. Cost of Inaction — off-white bg */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
           <CostOfInactionCards items={data.costItems} />
@@ -233,7 +230,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       </section>
 
       {/* 5. How the System Works — off-white bg */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>
             {data.workflowHeading ?? "How the System Works"}
@@ -262,7 +259,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       </section>
 
       {/* 7. ROI & Impact — off-white bg */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>ROI &amp; Impact</h2>
           <p style={subheadingStyle}>
@@ -288,7 +285,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       </section>
 
       {/* 9. Quick Answer — off-white bg */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container" style={{ maxWidth: "720px" }}>
           <AEOBlock question={data.aeoQuestion} answer={data.aeoAnswer} />
         </div>
@@ -296,7 +293,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
 
       {/* Industry Crosslinks */}
       {pageConfig && pageConfig.industries.length > 0 && (
-        <section style={sectionStyle("#F7F9FC")}>
+        <section style={sectionStyle(colors.surfaceLight)}>
           <div className="container">
             <IndustryServiceCrosslinks
               items={pageConfig.industries}
@@ -327,7 +324,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       />
 
       {/* 12. Related Resources — off-white bg */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
         </div>
