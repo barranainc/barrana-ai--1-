@@ -3,16 +3,17 @@ import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
+import { colors, spacing, typography } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ borderLeft: "4px solid #283891", background: "#F0F4FF", borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
+    <div style={{ borderLeft: `4px solid ${colors.navy}`, background: colors.navyWash, borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
       {children}
     </div>
   );
 }
 function SectionHeading({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: "clamp(1.25rem,2.5vw,1.625rem)", fontWeight: 800, color: "#283891", marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
+  return <h2 style={{ ...typography.sectionHeading, marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
 }
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -192,7 +193,7 @@ const jsonLd = {
 
 export default function DocumentCollectionWorkflow() {
   return (
-    <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: "3rem 1.25rem" }}>
+    <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -201,7 +202,7 @@ export default function DocumentCollectionWorkflow() {
           <span style={{ background: "#EEF2FF", color: "#283891", fontWeight: 600, fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>Workflow Guide</span>
           <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>9 min read</span>
         </div>
-        <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.5rem)", fontWeight: 900, color: "#1A1A2E", lineHeight: 1.2, marginBottom: "1rem" }}>
+        <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
           How to Automate Document Collection and Stop Chasing Clients
         </h1>
         <SummaryBox>

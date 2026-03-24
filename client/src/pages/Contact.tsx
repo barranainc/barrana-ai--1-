@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { colors } from "@/styles/design-tokens";
 
 // Social icons
 function IconLinkedIn() {
@@ -95,7 +96,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: "#F7F8FB" }}>
+      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />
         <div className="container relative z-10">
           <div
@@ -150,7 +151,7 @@ export default function Contact() {
       </section>
 
       {/* Form + Trust */}
-      <section className="py-16 lg:py-20" style={{ backgroundColor: "#F2F4F8" }}>
+      <section className="py-16 lg:py-20" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="container">
           <div
             ref={formSection.ref}
@@ -290,7 +291,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: "#F7F8FB" }}>
+              <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: colors.surfaceLight }}>
                 <h3 className="font-bold text-gray-900 mb-3 text-sm">Who This Is For</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
                   Small and medium businesses in Toronto and the GTA with 2 to 50 staff who are losing time to manual coordination, slow lead response, or disconnected tools.

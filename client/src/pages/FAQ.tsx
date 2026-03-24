@@ -4,6 +4,7 @@
  */
 import { useState } from "react";
 import { Link } from "wouter";
+import { colors } from "@/styles/design-tokens";
 
 const faqCategories = [
   {
@@ -80,7 +81,7 @@ export default function FAQ() {
           <div className="max-w-3xl mx-auto space-y-12">
             {faqCategories.map((cat) => (
               <div key={cat.category}>
-                <h2 className="text-xl font-bold mb-6 pb-3 border-b" style={{ color: "#283891", borderColor: "#E8ECF1" }}>
+                <h2 className="text-xl font-bold mb-6 pb-3 border-b" style={{ color: colors.navy, borderColor: colors.border }}>
                   {cat.category}
                 </h2>
                 <div className="space-y-3">

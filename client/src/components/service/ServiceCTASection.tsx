@@ -25,7 +25,7 @@ export default function ServiceCTASection({
   return (
     <section
       style={{
-        background: "var(--b-navy)",
+        background: "linear-gradient(to bottom, #1a2d6e, #162358)",
         padding: "5rem 0",
         textAlign: "center",
       }}
@@ -68,7 +68,7 @@ export default function ServiceCTASection({
         >
           {/* Primary CTA */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-            <Link href="/contact" className="btn-primary">
+            <Link href="/contact" className="btn-magenta">
               {primaryCTA}
             </Link>
             {primaryMicro && (
@@ -87,26 +87,7 @@ export default function ServiceCTASection({
 
           {/* Secondary CTA */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-            <Link
-              href="/contact"
-              style={{
-                display: "inline-block",
-                border: "2px solid rgba(255,255,255,0.3)",
-                color: "white",
-                padding: "0.75rem 1.5rem",
-                borderRadius: "0.5rem",
-                fontWeight: 600,
-                fontSize: "0.9375rem",
-                textDecoration: "none",
-                transition: "border-color 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.6)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,255,255,0.3)";
-              }}
-            >
+            <Link href="/contact" className="btn-ghost-white">
               {secondaryCTA}
             </Link>
             {secondaryMicro && (

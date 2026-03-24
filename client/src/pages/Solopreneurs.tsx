@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import JsonLd from "@/components/JsonLd";
+import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -28,7 +29,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#1A1A2E", marginBottom: "1.25rem" }}>{children}</h2>;
+  return <h2 style={{ ...typography.sectionHeading, marginBottom: "1.25rem" }}>{children}</h2>;
 }
 
 function SolopreneurWeekCalendar() {
@@ -416,7 +417,7 @@ export default function Solopreneurs() {
       <JsonLd data={faqSchema} />
 
       {/* HERO */}
-      <section style={{ background: "#1A1A2E", padding: "5rem 0 4rem" }}>
+      <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 0 " + spacing.sectionPaddingSm }}>
         <div className="container">
           <div ref={heroReveal.ref} style={{ maxWidth: 780, margin: "0 auto", textAlign: "center", opacity: heroReveal.visible ? 1 : 0, transform: heroReveal.visible ? "translateY(0)" : "translateY(24px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}>
             <span style={{ display: "inline-block", background: "rgba(126,15,74,0.2)", border: "1px solid rgba(126,15,74,0.5)", borderRadius: 20, padding: "0.35rem 1rem", fontSize: "0.8rem", fontWeight: 700, color: "#E879A8", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
@@ -449,7 +450,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 1: The Trap */}
-      <section style={{ background: "#fff", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceWhite, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={trap.ref} style={{ opacity: trap.visible ? 1 : 0, transform: trap.visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}>
             <SectionHeading>You Hit a Ceiling. Not Because You're Not Good Enough. Because There's Only One of You.</SectionHeading>
@@ -480,7 +481,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 2: 8 Workflows */}
-      <section style={{ background: "#F7F9FC", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceLight, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={workflows.ref} style={{ opacity: workflows.visible ? 1 : 0, transform: workflows.visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}>
             <SectionHeading>The 8 Workflows That Eat Your Week</SectionHeading>
@@ -513,7 +514,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 3: Tool Stack */}
-      <section style={{ background: "#fff", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceWhite, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={toolSection.ref} style={{ opacity: toolSection.visible ? 1 : 0, transition: "opacity 0.5s ease" }}>
             <SectionHeading>Tools That Work for One-Person Businesses</SectionHeading>
@@ -526,7 +527,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 4: What Should Stay You */}
-      <section style={{ background: "#F7F9FC", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceLight, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={zonesReveal.ref}>
             <SectionHeading>Your Expertise Is Not Automatable. Everything Around It Is.</SectionHeading>
@@ -592,7 +593,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 5: Before & After */}
-      <section style={{ background: "#fff", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceWhite, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <SectionHeading>Before and After: A Solopreneur's Week</SectionHeading>
           <BeforeAfterSection metrics={[
@@ -608,7 +609,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 6: Three Growth Levers */}
-      <section style={{ background: "linear-gradient(135deg, #1A1A2E 0%, #283891 100%)", padding: "5rem 0" }}>
+      <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <h2 style={{ fontSize: "clamp(1.5rem,3vw,2rem)", fontWeight: 800, color: "#fff", marginBottom: "0.5rem" }}>
             Three Growth Levers Automation Unlocks for Solopreneurs
@@ -621,7 +622,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 7: Investment */}
-      <section style={{ background: "#F7F9FC", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceLight, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={pricingReveal.ref} style={{ opacity: pricingReveal.visible ? 1 : 0, transform: pricingReveal.visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}>
             <SectionHeading>Investment and What to Expect</SectionHeading>
@@ -661,7 +662,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* SECTION 8: Expert Types */}
-      <section style={{ background: "#fff", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceWhite, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={expertReveal.ref} style={{ opacity: expertReveal.visible ? 1 : 0, transform: expertReveal.visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}>
             <SectionHeading>Built for Every Kind of Expert-Led Business</SectionHeading>
@@ -689,7 +690,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: "#F7F9FC", padding: "5rem 0" }}>
+      <section style={{ background: colors.surfaceLight, padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div ref={faqReveal.ref} style={{ maxWidth: 720, margin: "0 auto", opacity: faqReveal.visible ? 1 : 0, transform: faqReveal.visible ? "translateY(0)" : "translateY(20px)", transition: "opacity 0.5s ease, transform 0.5s ease" }}>
             <SectionHeading>Frequently Asked Questions</SectionHeading>
@@ -699,7 +700,7 @@ export default function Solopreneurs() {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "#1A1A2E", padding: "5rem 0" }}>
+      <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 0" }}>
         <div className="container" style={{ textAlign: "center" }}>
           <h2 style={{ fontSize: "clamp(1.5rem,3.5vw,2.25rem)", fontWeight: 900, color: "#fff", marginBottom: "1rem", maxWidth: 700, margin: "0 auto 1rem" }}>
             You Didn't Become an Expert to Spend Half Your Week on Admin.

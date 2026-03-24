@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ borderLeft: "4px solid #283891", background: "#F0F4FF", borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
+    <div style={{ borderLeft: `4px solid ${colors.navy}`, background: colors.navyWash, borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
       {children}
     </div>
   );
 }
 function SectionHeading({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: "clamp(1.25rem,2.5vw,1.625rem)", fontWeight: 800, color: "#283891", marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
+  return <h2 style={{ ...typography.sectionHeading, marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
 }
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -116,13 +117,13 @@ export default function AutomationReadiness() {
     <>
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
-        <section style={{ background: "linear-gradient(135deg,#283891 0%,#1A1A2E 100%)", padding: "4rem 1.5rem 3rem" }}>
+        <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
           <div className="container" style={{ maxWidth: 760 }}>
             <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
               <span style={{ background: "rgba(255,255,255,0.15)", color: "#fff", borderRadius: 20, padding: "0.3rem 0.9rem", fontSize: "0.8rem", fontWeight: 600 }}>Decision Guide</span>
               <span style={{ background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.75)", borderRadius: 20, padding: "0.3rem 0.9rem", fontSize: "0.8rem" }}>7 min read</span>
             </div>
-            <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.75rem)", fontWeight: 900, color: "#fff", lineHeight: 1.2, marginBottom: "1.25rem" }}>
+            <h1 style={{ ...typography.pageTitle, color: "#fff", marginBottom: "1.25rem" }}>
               How to Know If Your Business Is Automation-Ready
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
@@ -131,7 +132,7 @@ export default function AutomationReadiness() {
           </div>
         </section>
 
-        <section style={{ padding: "3rem 1.5rem" }}>
+        <section style={{ padding: spacing.sectionPadding + " 1.5rem" }}>
           <div className="container" style={{ maxWidth: 760 }}>
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
@@ -236,7 +237,7 @@ export default function AutomationReadiness() {
               <FAQItem q="We tried automation before and it failed. Does readiness help?" a="Yes. Most automation failures happen because either the workflow wasn't defined or the wrong thing was automated first. The readiness framework prevents both." />
             </div>
 
-            <div style={{ background: "linear-gradient(135deg,#283891 0%,#1A1A2E 100%)", borderRadius: 16, padding: "2.5rem", textAlign: "center", marginBottom: "2rem" }}>
+            <div style={{ ...surfaces.darkGradient, borderRadius: 16, padding: "2.5rem", textAlign: "center", marginBottom: "2rem" }}>
               <h3 style={{ color: "#fff", fontWeight: 800, fontSize: "1.35rem", marginBottom: "0.75rem" }}>Find out where you stand</h3>
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner maps your readiness and identifies your best starting point in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>

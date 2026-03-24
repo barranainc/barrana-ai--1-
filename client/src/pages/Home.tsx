@@ -38,15 +38,22 @@ import {
   Map,
   Settings,
   Calendar,
+  Layers,
+  ClipboardList,
   type LucideIcon,
 } from "lucide-react";
 import HomepagePlannerCTA from "@/components/planner-cta/HomepagePlannerCTA";
+
+// Hero tab visuals
+import HeroYourDayVisual from "@/components/diagrams/HeroYourDayVisual";
+import HeroPlannerPreview from "@/components/diagrams/HeroPlannerPreview";
+import HeroAuditCard from "@/components/diagrams/HeroAuditCard";
 
 // Schema
 import JsonLd from "@/components/JsonLd";
 
 // Diagram components
-import HeroSystemVisual from "@/components/diagrams/HeroSystemVisual";
+import HeroArchitectureVisual from "@/components/diagrams/HeroArchitectureVisual";
 import SocialProofToast from "@/components/diagrams/SocialProofToast";
 import ObjectionCards from "@/components/diagrams/ObjectionCards";
 import MethodTimeline from "@/components/diagrams/MethodTimeline";
@@ -472,6 +479,97 @@ const faqSchema = {
 };
 
 // ─── Component ────────────────────────────────────────────────────────
+// ─── Hero tab states ─────────────────────────────────────────────────
+type HeroState = {
+  id: string;
+  tabLabel: string;
+  icon: LucideIcon;
+  headlineBefore: string;
+  emphasisText: string;
+  emphasisColor: string;
+  afterText: string;
+  sub: string;
+  microcopy?: string;
+  primaryCTA: { text: string; href: string };
+  secondaryCTA: { text: string; href: string };
+  metrics: { value: string; label: string }[];
+};
+
+const HERO_STATES: HeroState[] = [
+  {
+    id: "what-we-do",
+    tabLabel: "What We Do",
+    icon: Sparkles,
+    headlineBefore: "Your Most Expensive Employee Is Doing Data Entry.",
+    emphasisText: "That Employee Is You.",
+    emphasisColor: MAGENTA,
+    afterText: "",
+    sub: "You did not build this business to chase follow-ups, send reminders, and manually type things into 3 different systems. We fix that. Your tools learn to talk to each other. The busywork runs itself. You go back to doing the work that actually pays.",
+    microcopy: "No, you do not need to \u201Clearn AI.\u201D\nNo, we will not replace your team.\nNo, this is not another app you will never open.",
+    primaryCTA: { text: "Show Me What I Can Stop Doing Manually", href: "/automation-planner" },
+    secondaryCTA: { text: "See What This Looks Like for My Industry", href: "/ai-automation-industries" },
+    metrics: [
+      { value: "10+ Years", label: "Building business systems" },
+      { value: "2\u201350 Staff", label: "The businesses we serve" },
+      { value: "Fixed Pricing", label: "Never hourly. No surprises." },
+    ],
+  },
+  {
+    id: "the-problem",
+    tabLabel: "The Problem",
+    icon: DollarSign,
+    headlineBefore: "You Already Know Something Is Wrong.",
+    emphasisText: "Here Is What It Is Costing You.",
+    emphasisColor: MAGENTA,
+    afterText: "",
+    sub: "Most service businesses lose $80,000 to $200,000 per year to slow lead response, manual admin, no-shows, and invoice delays. The waste is calculable. So is the fix.",
+    microcopy: "These are not estimates.\nThey are calculated from real patterns across GTA service businesses.\nYour number is probably in this range.",
+    primaryCTA: { text: "Calculate Your Annual Operational Cost", href: "/resources/roi-calculator" },
+    secondaryCTA: { text: "See What Other Businesses Recovered", href: "/case-studies" },
+    metrics: [
+      { value: "$80K\u2013$200K/yr", label: "Average annual loss" },
+      { value: "30\u201360 days", label: "Typical ROI timeline" },
+      { value: "$3K\u2013$12K", label: "Fixed-price implementation" },
+    ],
+  },
+  {
+    id: "ready-to-plan",
+    tabLabel: "Ready to Plan",
+    icon: ClipboardList,
+    headlineBefore: "You Know You Need to Automate.",
+    emphasisText: "Let Us Find Your Starting Point.",
+    emphasisColor: NAVY,
+    afterText: "",
+    sub: "The Barrana Automation Planner walks you through 8 guided questions about your business and gives you a personalised roadmap: what to automate first, what to keep human, and what it will cost. Takes 3 to 5 minutes.",
+    microcopy: "No account required.\nResults on screen immediately.\nYours to keep whether or not you work with us.",
+    primaryCTA: { text: "Start the Automation Planner", href: "/automation-planner" },
+    secondaryCTA: { text: "Read: What to Automate First", href: "/insights/what-to-automate-first" },
+    metrics: [
+      { value: "3\u20135 min", label: "Time to complete" },
+      { value: "Top 3\u20135", label: "Opportunities ranked" },
+      { value: "Free", label: "No account required" },
+    ],
+  },
+  {
+    id: "ready-to-talk",
+    tabLabel: "Ready to Talk",
+    icon: PhoneCall,
+    headlineBefore: "You Are Ready.",
+    emphasisText: "Let Us Look at Your Business.",
+    emphasisColor: NAVY,
+    afterText: "",
+    sub: "Book a free 60-minute Automation Audit. We map your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first. You keep the audit even if you do nothing.",
+    microcopy: "60 minutes. No sales pitch.\nYou keep the full audit report.\nIf automation is not the right answer, we will tell you that.",
+    primaryCTA: { text: "Book Your Free Automation Audit", href: "/contact" },
+    secondaryCTA: { text: "Call Us: +1 647 367 6771", href: "tel:+16473676771" },
+    metrics: [
+      { value: "60 min", label: "The audit takes one hour" },
+      { value: "Free", label: "No charge, no obligation" },
+      { value: "Yours to keep", label: "Full report whether or not you hire us" },
+    ],
+  },
+];
+
 export default function Home() {
   // Hero is always above the fold — use mount-trigger instead of IntersectionObserver
   const heroRef                    = useRef<HTMLDivElement>(null);
@@ -483,6 +581,35 @@ export default function Home() {
 
   const [activeTab, setActiveTab] = useState(0);
 
+  // Hero tab transition state
+  const [heroTransitioning, setHeroTransitioning] = useState(false);
+  const [displayTab, setDisplayTab] = useState(0);
+  const reducedMotion = useRef(false);
+  useEffect(() => {
+    reducedMotion.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  function switchHeroTab(newTab: number) {
+    if (newTab === activeTab || heroTransitioning) return;
+    if (reducedMotion.current) {
+      setDisplayTab(newTab);
+      setActiveTab(newTab);
+      return;
+    }
+    setHeroTransitioning(true);
+    setTimeout(() => {
+      setDisplayTab(newTab);
+      setActiveTab(newTab);
+      setTimeout(() => setHeroTransitioning(false), 50);
+    }, 200);
+  }
+
+  function handleTabKeyDown(e: React.KeyboardEvent, index: number) {
+    const len = HERO_STATES.length;
+    if (e.key === "ArrowRight") { e.preventDefault(); switchHeroTab((index + 1) % len); }
+    if (e.key === "ArrowLeft") { e.preventDefault(); switchHeroTab((index - 1 + len) % len); }
+  }
+
   // Hover state for Six Problems cards
   const [hoveredProblem, setHoveredProblem] = useState<number | null>(null);
 
@@ -493,226 +620,322 @@ export default function Home() {
       <JsonLd data={faqSchema} />
 
       {/* ═══════════════════════════════════════════════════════════════════
-          SECTION 1: HERO (NAVY gradient)
+          SECTION 1: HERO — 4-Tab Interactive Hero
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "linear-gradient(135deg, #1f2c85 0%, #283891 50%, #2c3fa0 100%)", paddingTop: "5rem", paddingBottom: "7rem", minHeight: "85vh", position: "relative" }}>
-        {/* Ambient glows behind right diagram */}
-        <div style={{ position: "absolute", top: "5%", right: "2%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 68%)", pointerEvents: "none", zIndex: 0 }} />
+      <section style={{ background: "#F5F5F5", paddingTop: "1.25rem", paddingBottom: "2.5rem", minHeight: "90vh" }}>
+        <style>{`
+          .hero-grid { grid-template-columns: 1fr; }
+          @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+          .hero-metrics { grid-template-columns: repeat(3, 1fr); }
+          @media (max-width: 600px) { .hero-metrics { grid-template-columns: 1fr; } }
+        `}</style>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
+
+          {/* Badge — stays fixed */}
           <div
-            ref={heroReveal.ref}
-            style={{ display: "grid", gap: "4rem", alignItems: "start" }}
-            className="hero-grid"
+            style={{
+              display: "inline-block",
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              letterSpacing: "0.1em",
+              textTransform: "uppercase",
+              color: NAVY,
+              background: "rgba(40,56,145,0.10)",
+              border: "1px solid rgba(40,56,145,0.2)",
+              borderRadius: "2rem",
+              padding: "0.375rem 1rem",
+              marginBottom: "0.875rem",
+              opacity: heroReveal.visible ? 1 : 0,
+              transition: "opacity 0.5s ease 0.1s",
+            }}
           >
-            <style>{`
-              .hero-grid { grid-template-columns: 1fr; }
-              @media (min-width: 1024px) { .hero-grid { grid-template-columns: 55% 45%; gap: 4rem; } }
-            `}</style>
+            AI Automation for Toronto Businesses
+          </div>
 
-            {/* Left: copy */}
-            <div style={{ maxWidth: "36rem" }}>
-              <div
-                style={{
-                  display: "inline-block",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
-                  color: MAGENTA,
-                  background: "rgba(126,15,74,0.15)",
-                  border: `1px solid ${MAGENTA}`,
-                  borderRadius: "2rem",
-                  padding: "0.375rem 1rem",
-                  marginBottom: "1.5rem",
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transition: "opacity 0.5s ease 0.1s",
-                }}
-              >
-                AI Automation for Toronto Businesses
-              </div>
-
-              <h1
-                style={{
-                  color: "white",
-                  marginBottom: "1.25rem",
-                  lineHeight: 1.08,
-                  fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
-                  letterSpacing: "-0.025em",
-                  fontWeight: 800,
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transform: heroReveal.visible ? "translateY(0)" : "translateY(16px)",
-                  transition: "opacity 0.65s ease 0.2s, transform 0.65s cubic-bezier(0.16,1,0.3,1) 0.2s",
-                }}
-              >
-                Your Manual Operations Are Costing You{" "}
-                <span style={{ color: MAGENTA, display: "block" }}>$40,000 to $180,000 Per Year.</span>
-                AI Automation Stops the Bleeding.
-              </h1>
-
-              <p
-                style={{
-                  fontSize: "1.0625rem",
-                  color: "#C7D0EA",
-                  marginBottom: "2rem",
-                  lineHeight: 1.7,
-                  maxWidth: "52ch",
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transition: "opacity 0.65s ease 0.4s",
-                }}
-              >
-                Barrana builds AI automation systems for Toronto and GTA service businesses. We automate intake, follow-up, scheduling, invoicing, and repetitive admin — without replacing your current team or software.
-              </p>
-
-              {/* Counter cards */}
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(3, 1fr)",
-                  gap: "0.875rem",
-                  marginBottom: "2rem",
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transition: "opacity 0.65s ease 0.5s",
-                }}
-                className="counter-cards-grid"
-              >
-                <style>{`
-                  .counter-cards-grid { grid-template-columns: 1fr !important; }
-                  @media (min-width: 640px) { .counter-cards-grid { grid-template-columns: repeat(3, 1fr) !important; } }
-                `}</style>
-
-                {/* Card 1 — range, no counter */}
-                <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
-                  borderRadius: "0.875rem",
-                  padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
-                }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
-                    $3,000–$8,000
-                  </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
-                    What one missed lead costs you
-                  </div>
-                </div>
-
-                {/* Card 2 — animated */}
-                <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
-                  borderRadius: "0.875rem",
-                  padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
-                }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
-                    <AnimatedCounter target={40000} prefix="$" suffix="–$180K/yr" />
-                  </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
-                    Lost to slow response and manual follow-up
-                  </div>
-                </div>
-
-                {/* Card 3 — animated */}
-                <div style={{
-                  background: "rgba(255,255,255,0.14)",
-                  border: "1px solid rgba(255,255,255,0.20)",
-                  borderRadius: "0.875rem",
-                  padding: "1.25rem 1rem",
-                  boxShadow: "0 2px 14px rgba(0,0,0,0.20)",
-                }}>
-                  <div style={{ color: "white", fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
-                    <AnimatedCounter target={52000} prefix="$" suffix="/yr" />
-                  </div>
-                  <div style={{ color: "#C7D0EA", fontSize: "0.8rem", lineHeight: 1.4 }}>
-                    What 20 hrs/wk of admin costs at $50/hr
-                  </div>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div
-                style={{
-                  display: "flex",
-                  flexWrap: "wrap",
-                  gap: "1rem",
-                  alignItems: "flex-start",
-                  opacity: heroReveal.visible ? 1 : 0,
-                  transition: "opacity 0.65s ease 0.6s",
-                }}
-              >
-                <div>
-                  <Link
-                    href="/automation-planner"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "0.5rem",
-                      background: MAGENTA,
-                      color: "white",
-                      fontWeight: 700,
-                      fontSize: "0.9375rem",
-                      padding: "0.875rem 1.75rem",
-                      borderRadius: "0.5rem",
-                      textDecoration: "none",
-                      boxShadow: "0 4px 20px rgba(126,15,74,0.40)",
-                    }}
-                  >
-                    Calculate What Your Operations Are Costing You
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-                <div>
-                  <Link
-                    href="/contact"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "0.5rem",
-                      background: "transparent",
-                      color: "white",
-                      fontWeight: 700,
-                      fontSize: "0.9375rem",
-                      padding: "0.875rem 1.75rem",
-                      borderRadius: "0.5rem",
-                      textDecoration: "none",
-                      border: "1.5px solid rgba(255,255,255,0.5)",
-                      transition: "border-color 0.2s, background 0.2s",
-                    }}
-                  >
-                    Book a Free Automation Audit
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </div>
-              <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", marginTop: "0.875rem", opacity: heroReveal.visible ? 1 : 0, transition: "opacity 0.65s ease 0.7s" }}>
-                60 minutes. We will show you exactly where the money is leaking.
-              </p>
+          {/* Tab selector row + New to AI link */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
+              marginBottom: "1.75rem",
+              flexWrap: "wrap",
+              opacity: heroReveal.visible ? 1 : 0,
+              transition: "opacity 0.5s ease 0.2s",
+            }}
+          >
+            <div
+              role="tablist"
+              style={{
+                display: "flex",
+                gap: "0.5rem",
+                flexWrap: "wrap",
+              }}
+            >
+            {HERO_STATES.map((state, i) => {
+              const Icon = state.icon;
+              return (
+                <button
+                  key={state.id}
+                  role="tab"
+                  aria-selected={activeTab === i}
+                  tabIndex={activeTab === i ? 0 : -1}
+                  onClick={() => switchHeroTab(i)}
+                  onKeyDown={(e) => handleTabKeyDown(e, i)}
+                  style={{
+                    background: activeTab === i ? "white" : "transparent",
+                    border: activeTab === i ? `1px solid ${BORDER}` : "1px solid transparent",
+                    borderBottom: activeTab === i ? `2px solid ${MAGENTA}` : "2px solid transparent",
+                    borderRadius: "0.75rem",
+                    padding: "0.625rem 1.25rem",
+                    color: activeTab === i ? NAVY : GREY,
+                    fontWeight: activeTab === i ? 600 : 500,
+                    fontSize: "0.875rem",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.375rem",
+                    boxShadow: activeTab === i ? "0 1px 4px rgba(0,0,0,0.04)" : "none",
+                    transition: "all 0.2s ease",
+                  }}
+                >
+                  <Icon size={16} /> {state.tabLabel}
+                </button>
+              );
+            })}
             </div>
 
-            {/* Right: system visual */}
-            <div style={{
-              position: "sticky",
-              top: "7rem",
-              opacity: heroReveal.visible ? 1 : 0,
-              transition: "opacity 0.8s ease 0.5s",
-              background: "rgba(0,0,0,0.22)",
-              border: "1px solid rgba(255,255,255,0.18)",
-              borderRadius: "1.25rem",
-              padding: "1.5rem 1.5rem 1.25rem",
-              boxShadow: "0 8px 40px rgba(0,0,0,0.30), 0 0 60px rgba(255,255,255,0.04)",
-            }}>
-              <HeroSystemVisual />
+            {/* New to AI — separate link to /start-here */}
+            <Link
+              href="/start-here"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.375rem",
+                fontSize: "0.8125rem",
+                fontWeight: 600,
+                color: MAGENTA,
+                textDecoration: "none",
+                padding: "0.5rem 0.875rem",
+                borderRadius: "2rem",
+                background: "rgba(126,15,74,0.08)",
+                border: `1px solid rgba(126,15,74,0.15)`,
+                transition: "all 0.2s ease",
+                whiteSpace: "nowrap",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(126,15,74,0.14)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(126,15,74,0.3)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.background = "rgba(126,15,74,0.08)";
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(126,15,74,0.15)";
+              }}
+            >
+              New to AI? Start Here <ArrowRight size={13} />
+            </Link>
+          </div>
+
+          {/* Transforming content */}
+          <div
+            role="tabpanel"
+            style={{
+              opacity: heroTransitioning ? 0 : 1,
+              transform: heroTransitioning ? "translateY(-8px)" : "translateY(0)",
+              transition: "opacity 0.25s ease, transform 0.25s ease",
+            }}
+          >
+            <div className="hero-grid" style={{ display: "grid", gap: "3rem", alignItems: "center" }}>
+              {/* Left column: headline + sub + CTAs */}
+              <div style={{ maxWidth: "36rem" }}>
+                <h1
+                  style={{
+                    color: DARK,
+                    marginBottom: "1rem",
+                    lineHeight: 1.08,
+                    fontSize: "clamp(2rem, 4.5vw, 3rem)",
+                    letterSpacing: "-0.025em",
+                    fontWeight: 800,
+                  }}
+                >
+                  {HERO_STATES[displayTab].headlineBefore}{" "}
+                  <span style={{ color: HERO_STATES[displayTab].emphasisColor, display: "block" }}>
+                    {HERO_STATES[displayTab].emphasisText}
+                  </span>
+                  {HERO_STATES[displayTab].afterText && (
+                    <span style={{ color: NAVY }}>{HERO_STATES[displayTab].afterText}</span>
+                  )}
+                </h1>
+
+                <p
+                  style={{
+                    fontSize: "1rem",
+                    color: "#4A4A4A",
+                    marginBottom: "0.75rem",
+                    lineHeight: 1.7,
+                    maxWidth: "52ch",
+                  }}
+                >
+                  {HERO_STATES[displayTab].sub}
+                </p>
+
+                {/* Microcopy — the knowing wink (only on Tab 0) */}
+                {HERO_STATES[displayTab].microcopy && (
+                  <div
+                    style={{
+                      background: "rgba(40,56,145,0.05)",
+                      borderLeft: `3px solid ${NAVY}`,
+                      borderRadius: "0 0.5rem 0.5rem 0",
+                      padding: "0.75rem 1rem",
+                      marginBottom: "0.5rem",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.375rem",
+                    }}
+                  >
+                    {HERO_STATES[displayTab].microcopy!.split("\n").map((line, idx) => (
+                      <p
+                        key={idx}
+                        style={{
+                          color: DARK,
+                          fontSize: "0.875rem",
+                          fontStyle: "italic",
+                          lineHeight: 1.4,
+                          fontWeight: 500,
+                          margin: 0,
+                        }}
+                      >
+                        {line}
+                      </p>
+                    ))}
+                  </div>
+                )}
+
+                {/* CTAs */}
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "1rem",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <div>
+                    <Link
+                      href={HERO_STATES[displayTab].primaryCTA.href}
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "0.5rem",
+                        background: MAGENTA,
+                        color: "white",
+                        fontWeight: 700,
+                        fontSize: "0.9375rem",
+                        padding: "0.875rem 1.75rem",
+                        borderRadius: "0.5rem",
+                        textDecoration: "none",
+                        boxShadow: "0 4px 20px rgba(126,15,74,0.40)",
+                      }}
+                    >
+                      {HERO_STATES[displayTab].primaryCTA.text}
+                      <ArrowRight size={16} />
+                    </Link>
+                  </div>
+                  <div>
+                    {HERO_STATES[displayTab].secondaryCTA.href.startsWith("tel:") ? (
+                      <a
+                        href={HERO_STATES[displayTab].secondaryCTA.href}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                          background: "transparent",
+                          color: NAVY,
+                          fontWeight: 700,
+                          fontSize: "0.9375rem",
+                          padding: "0.875rem 1.75rem",
+                          borderRadius: "0.5rem",
+                          textDecoration: "none",
+                          border: `2px solid ${NAVY}`,
+                          transition: "border-color 0.2s, background 0.2s",
+                        }}
+                      >
+                        {HERO_STATES[displayTab].secondaryCTA.text}
+                        <ArrowRight size={16} />
+                      </a>
+                    ) : (
+                      <Link
+                        href={HERO_STATES[displayTab].secondaryCTA.href}
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          gap: "0.5rem",
+                          background: "transparent",
+                          color: NAVY,
+                          fontWeight: 700,
+                          fontSize: "0.9375rem",
+                          padding: "0.875rem 1.75rem",
+                          borderRadius: "0.5rem",
+                          textDecoration: "none",
+                          border: `2px solid ${NAVY}`,
+                          transition: "border-color 0.2s, background 0.2s",
+                        }}
+                      >
+                        {HERO_STATES[displayTab].secondaryCTA.text}
+                        <ArrowRight size={16} />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Right column: visual */}
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {displayTab === 0 && <HeroYourDayVisual />}
+                {displayTab === 1 && <HeroArchitectureVisual />}
+                {displayTab === 2 && <HeroPlannerPreview />}
+                {displayTab === 3 && <HeroAuditCard />}
+              </div>
+            </div>
+
+            {/* Metric cards */}
+            <div
+              className="hero-metrics"
+              style={{
+                display: "grid",
+                gap: "0.875rem",
+                marginTop: "1.75rem",
+              }}
+            >
+              {HERO_STATES[displayTab].metrics.map((m) => (
+                <div
+                  key={m.label}
+                  style={{
+                    background: "white",
+                    border: `1px solid ${BORDER}`,
+                    borderRadius: "0.875rem",
+                    padding: "1.25rem 1rem",
+                    boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+                  }}
+                >
+                  <div style={{ color: displayTab === 0 ? NAVY : MAGENTA, fontWeight: 800, fontSize: "1.25rem", lineHeight: 1.2, marginBottom: "0.5rem" }}>
+                    {m.value}
+                  </div>
+                  <div style={{ color: "#4A4A4A", fontSize: "0.8125rem", lineHeight: 1.4 }}>
+                    {m.label}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 2: TRUST STRIP (#1a2473)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#1a2473", borderBottom: "1px solid rgba(255,255,255,0.10)" }}>
+      <section style={{ background: "#EDEDEF", borderBottom: "1px solid #E2E4ED" }}>
         <div className="container">
           <div
             style={{
@@ -727,7 +950,7 @@ export default function Home() {
           >
             <style>{`
               .trust-strip-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.625rem 1.5rem; }
-              .trust-strip-divider { width: 1px; height: 1.25rem; background: rgba(255,255,255,0.12); }
+              .trust-strip-divider { width: 1px; height: 1.25rem; background: rgba(0,0,0,0.12); }
               @media (max-width: 640px) { .trust-strip-divider { display: none; } .trust-strip-item { width: 100%; justify-content: center; } }
             `}</style>
             {[
@@ -740,7 +963,7 @@ export default function Home() {
                 {i > 0 && <div className="trust-strip-divider" />}
                 <div className="trust-strip-item">
                   <item.icon size={15} color={MAGENTA} strokeWidth={2} />
-                  <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: "rgba(255,255,255,0.65)", whiteSpace: "nowrap" }}>
+                  <span style={{ fontSize: "0.8125rem", fontWeight: 500, color: GREY, whiteSpace: "nowrap" }}>
                     {item.label}
                   </span>
                 </div>
@@ -901,30 +1124,24 @@ export default function Home() {
       <section
         className="section"
         style={{
-          background: "linear-gradient(145deg, #1D2F8D 0%, #2438A6 38%, #2B3FB3 72%, #2438A6 100%)",
+          background: OFFWHITE,
           padding: "6rem 0",
-          position: "relative",
-          overflow: "hidden",
         }}
       >
-        {/* Ambient glows */}
-        <div style={{ position: "absolute", top: "8%", left: "3%", width: "480px", height: "480px", background: "radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 65%)", pointerEvents: "none", zIndex: 0 }} />
-        <div style={{ position: "absolute", bottom: "8%", right: "3%", width: "380px", height: "380px", background: "radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 65%)", pointerEvents: "none", zIndex: 0 }} />
-
         <style>{`
           .buyer-path-grid { grid-template-columns: 1fr !important; }
           @media (min-width: 768px) { .buyer-path-grid { grid-template-columns: 1fr 1fr !important; } }
 
           .buyer-card {
             display: block;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.14);
+            background: white;
+            border: 1px solid ${BORDER};
             border-radius: 1rem;
-            padding: 1.875rem 1.875rem 1.625rem;
+            padding: 2rem 2rem 1.75rem;
             cursor: pointer;
             text-decoration: none;
             position: relative;
-            box-shadow: 0 4px 24px rgba(10,16,35,0.22);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
             transition:
               background  0.24s ease,
               border-color 0.24s ease,
@@ -933,35 +1150,35 @@ export default function Home() {
           }
           .buyer-card:hover,
           .buyer-card:focus-visible {
-            background: rgba(255,255,255,0.10);
-            border-color: rgba(255,255,255,0.24);
+            background: white;
+            border-color: rgba(40,56,145,0.3);
             transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(10,16,35,0.32), 0 0 0 1px rgba(142,162,255,0.18);
+            box-shadow: 0 8px 32px rgba(40,56,145,0.10);
             outline: none;
           }
           .buyer-card-icon-wrap {
             display: inline-flex;
             padding: 0.625rem;
-            background: rgba(142,162,255,0.12);
-            border: 1px solid rgba(142,162,255,0.20);
+            background: rgba(40,56,145,0.08);
+            border: 1px solid rgba(40,56,145,0.12);
             border-radius: 0.625rem;
-            margin-bottom: 1.125rem;
+            margin-bottom: 1.25rem;
             transition: transform 0.26s cubic-bezier(0.16,1,0.3,1), box-shadow 0.26s ease;
           }
           .buyer-card:hover .buyer-card-icon-wrap {
             transform: scale(1.07);
-            box-shadow: 0 0 12px rgba(126,15,74,0.30);
+            box-shadow: 0 0 12px rgba(40,56,145,0.15);
           }
           .buyer-card-arrow {
             position: absolute;
             bottom: 1.375rem;
             right: 1.5rem;
-            opacity: 0.45;
+            opacity: 0.35;
             transition: transform 0.26s cubic-bezier(0.16,1,0.3,1), opacity 0.24s ease;
           }
           .buyer-card:hover .buyer-card-arrow {
             transform: translateX(5px);
-            opacity: 0.90;
+            opacity: 0.85;
           }
           @media (prefers-reduced-motion: reduce) {
             .buyer-card,
@@ -973,18 +1190,19 @@ export default function Home() {
           }
         `}</style>
 
-        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+        <div className="container">
           <Reveal>
-            <h2 style={{ color: "#F7F8FC", marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Find Your Priority</div>
+            <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
               Which of These Is Costing Your Business the Most?
             </h2>
-            <p style={{ color: "rgba(247,248,252,0.82)", lineHeight: 1.7, marginBottom: "3rem", maxWidth: "52ch" }}>
+            <p style={{ color: GREY, lineHeight: 1.7, marginBottom: "3rem", maxWidth: "52ch" }}>
               Choose what matters most. We will show you how it works for your business.
             </p>
           </Reveal>
 
           <div
-            style={{ display: "grid", gap: "1.125rem" }}
+            style={{ display: "grid", gap: "1.25rem" }}
             className="buyer-path-grid"
           >
             {[
@@ -1016,12 +1234,12 @@ export default function Home() {
               <Reveal key={card.title} delay={i * 0.09}>
                 <Link href={card.href} className="buyer-card">
                   <span className="buyer-card-icon-wrap">
-                    <card.icon size={20} color={MAGENTA} strokeWidth={2} />
+                    <card.icon size={20} color={NAVY} strokeWidth={2} />
                   </span>
                   <div style={{
-                    color: "#F7F8FC",
+                    color: DARK,
                     fontWeight: 700,
-                    fontSize: "1rem",
+                    fontSize: "1.0625rem",
                     lineHeight: 1.45,
                     marginBottom: "0.5rem",
                   }}>
@@ -1029,15 +1247,15 @@ export default function Home() {
                   </div>
                   <div style={{
                     color: MAGENTA,
-                    fontWeight: 700,
-                    fontSize: "0.9375rem",
+                    fontWeight: 800,
+                    fontSize: "1rem",
                     letterSpacing: "0.01em",
                     paddingBottom: "1.75rem",
                   }}>
                     {card.dollar}
                   </div>
                   <span className="buyer-card-arrow">
-                    <ArrowRight size={17} color="#F7F8FC" />
+                    <ArrowRight size={17} color={NAVY} />
                   </span>
                 </Link>
               </Reveal>

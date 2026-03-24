@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { colors } from "@/styles/design-tokens";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -158,7 +159,7 @@ export default function Resources() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: "#F7F8FB" }}>
+      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />
         <div className="container relative z-10">
           <div
@@ -250,7 +251,7 @@ export default function Resources() {
       </section>
 
       {/* Pillar Guides */}
-      <section className="py-20" style={{ backgroundColor: "#F7F8FB" }}>
+      <section className="py-20" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="container">
           <div
             ref={pillarSection.ref}
@@ -313,7 +314,7 @@ export default function Resources() {
       </section>
 
       {/* Workflow Deep Dives */}
-      <section className="py-20" style={{ backgroundColor: "#F7F8FB" }}>
+      <section className="py-20" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="container">
           <div
             ref={workflowSection.ref}
@@ -344,7 +345,7 @@ export default function Resources() {
       </section>
 
       {/* Frameworks */}
-      <section className="py-20" style={{ backgroundColor: "#F2F4F8" }}>
+      <section className="py-20" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="container">
           <div
             ref={frameworksSection.ref}

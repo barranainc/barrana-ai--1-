@@ -7,6 +7,7 @@
 
 import React from "react";
 import { useLocation } from "wouter";
+import { colors, spacing, typography, cards, surfaces } from "@/styles/design-tokens";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -102,21 +103,17 @@ export interface IndustryPageData {
 
 const sectionStyle = (bg: string): React.CSSProperties => ({
   background: bg,
-  padding: "4.5rem 0",
+  padding: `${spacing.sectionPadding} 0`,
 });
 
 const headingStyle: React.CSSProperties = {
-  fontWeight: 800,
-  color: "var(--b-dark)",
-  fontSize: "clamp(1.375rem, 2.5vw, 1.875rem)",
+  ...typography.sectionHeading,
   marginBottom: "1rem",
   lineHeight: 1.25,
 };
 
 const subheadingStyle: React.CSSProperties = {
-  color: "var(--b-grey)",
-  fontSize: "0.9375rem",
-  lineHeight: 1.65,
+  ...typography.sectionSubheading,
   marginBottom: "2rem",
   maxWidth: "56ch",
 };
@@ -135,17 +132,14 @@ function ProblemsGrid({ problems }: { problems: { title: string; desc: string }[
         <div
           key={i}
           style={{
-            background: "white",
-            borderRadius: "12px",
-            padding: "1.5rem",
-            borderLeft: "4px solid var(--b-warning)",
-            boxShadow: "0 1px 6px rgba(0,0,0,0.06)",
+            ...cards.typeA,
+            borderLeft: `4px solid ${colors.warning}`,
           }}
         >
-          <p style={{ fontWeight: 700, color: "var(--b-dark)", marginBottom: "0.5rem", fontSize: "1rem" }}>
+          <p style={{ ...typography.cardTitle, marginBottom: "0.5rem" }}>
             {p.title}
           </p>
-          <p style={{ color: "var(--b-grey)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>
+          <p style={{ ...typography.cardBody, margin: 0 }}>
             {p.desc}
           </p>
         </div>
@@ -194,7 +188,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb Nav */}
-      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+      <div style={{ background: colors.surfaceLight, paddingTop: "3rem", paddingBottom: 0 }}>
         <div className="container">
           <BreadcrumbNav
             items={[
@@ -231,7 +225,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       </section>
 
       {/* 3. Cost of Inaction — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
           <CostOfInactionCards items={data.costItems} />
@@ -249,7 +243,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       </section>
 
       {/* 5. Before vs After — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>Before vs After Automation</h2>
           <p style={subheadingStyle}>
@@ -277,7 +271,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       {children}
 
       {/* 7. Control Layer — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={{ ...headingStyle, marginBottom: "1.5rem" }}>Built-In Governance &amp; Control</h2>
           <ControlLayerCard items={data.controlItems} />
@@ -294,7 +288,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       </section>
 
       {/* 9. Who This Is For — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>Who This Is For</h2>
           <p style={subheadingStyle}>
@@ -313,7 +307,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
 
       {/* Service Crosslinks */}
       {pageConfig && pageConfig.services.length > 0 && (
-        <section style={sectionStyle("white")}>
+        <section style={sectionStyle(colors.surfaceLight)}>
           <div className="container">
             <IndustryServiceCrosslinks
               items={pageConfig.services}
@@ -323,8 +317,8 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </section>
       )}
 
-      {/* 11. FAQ — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      {/* 11. FAQ — white */}
+      <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>Frequently Asked Questions</h2>
           <div style={{ maxWidth: "720px" }}>
@@ -344,7 +338,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       />
 
       {/* 13. Related Resources — off-white */}
-      <section style={sectionStyle("#F7F9FC")}>
+      <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
         </div>

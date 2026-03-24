@@ -8,19 +8,20 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
+import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 // ─── Shared helpers ────────────────────────────────────────────────────────────
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ borderLeft: "4px solid #283891", background: "#F0F4FF", borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
+    <div style={{ borderLeft: `4px solid ${colors.navy}`, background: colors.navyWash, borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
       {children}
     </div>
   );
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: "clamp(1.25rem,2.5vw,1.625rem)", fontWeight: 800, color: "#283891", marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
+  return <h2 style={{ ...typography.sectionHeading, marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
 }
 
 function useReveal() {
@@ -171,7 +172,7 @@ export default function HumanInTheLoop() {
     <div style={{ background: "#F8FAFC", minHeight: "100vh" }}>
 
       {/* Hero */}
-      <section style={{ background: "#1A1A2E", padding: "3.5rem 0 3rem" }}>
+      <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 0 " + spacing.sectionPaddingSm }}>
         <div className="container" style={{ maxWidth: "860px" }}>
           <nav style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.6)", marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center", flexWrap: "wrap" }}>
             <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link>
@@ -186,14 +187,14 @@ export default function HumanInTheLoop() {
             </span>
             <span style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.6)" }}>⏱ 12 min read</span>
           </div>
-          <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.875rem)", fontWeight: 900, color: "#fff", lineHeight: 1.15, margin: 0 }}>
+          <h1 style={{ ...typography.pageTitle, color: "#fff", margin: 0 }}>
             Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge
           </h1>
         </div>
       </section>
 
       {/* Body */}
-      <section style={{ padding: "2.5rem 0 5rem" }}>
+      <section style={{ padding: spacing.sectionPadding + " 0" }}>
         <div className="container">
           <div style={{ maxWidth: "860px", margin: "0 auto" }}>
 
@@ -365,7 +366,7 @@ export default function HumanInTheLoop() {
             </div>
 
             {/* CTA */}
-            <div style={{ background: "#1A1A2E", borderRadius: "20px", padding: "3rem 2.5rem", textAlign: "center", marginTop: "3rem" }}>
+            <div style={{ ...surfaces.darkGradient, borderRadius: "20px", padding: "3rem 2.5rem", textAlign: "center", marginTop: "3rem" }}>
               <h2 style={{ color: "#fff", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 900, marginBottom: "0.75rem" }}>
                 Design Automation That Keeps You in Control
               </h2>

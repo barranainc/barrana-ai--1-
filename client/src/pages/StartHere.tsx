@@ -30,14 +30,15 @@ import {
 } from "lucide-react";
 
 import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
+import { colors } from "@/styles/design-tokens";
 
 // Brand color constants
-const NAVY = "#283891";
-const MAGENTA = "#7E0F4A";
-const GREY = "#7B7B7B";
-const DARK = "#1A1A2E";
-const OFFWHITE = "#F5F6FA";
-const BORDER = "#E2E4ED";
+const NAVY = colors.navy;
+const MAGENTA = colors.magenta;
+const GREY = colors.textSecondary;
+const DARK = colors.textPrimary;
+const OFFWHITE = colors.surfaceLight;
+const BORDER = colors.border;
 
 // ─── Scroll reveal hook ───────────────────────────────────────────────
 function useReveal(threshold = 0.15) {
