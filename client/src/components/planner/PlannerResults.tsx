@@ -12,6 +12,7 @@ import { INDUSTRY_MAP } from "@/config/planner/industries";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import LeadCaptureForm from "./LeadCaptureForm";
 import ShareResults from "./ShareResults";
+import { submitLead } from "@/lib/ghl";
 
 // ── Brand ─────────────────────────────────────────────────────────────────────
 const NAVY = "#283891";
@@ -631,38 +632,29 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const missedLeads = Math.round(enquiries * 0.2);
   const additionalCapacity = Math.round(clients * 0.25);
 
-  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/b3af7557-ff3f-4c10-a88e-d95fb0b78b0f";
-
   const handleLeadSubmit = async (email: string, businessName: string, name: string, notes: string) => {
     setIsLeadSubmitted(true);
     try {
-      await fetch(GHL_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          first_name: name.split(" ")[0] || "",
-          last_name: name.split(" ").slice(1).join(" ") || "",
-          full_name: name,
-          email,
-          company_name: businessName,
-          // Planner results summary
-          industry: state.industry || "",
-          role: state.role || "",
-          workflows: (state.workflows || []).join(", "),
-          pain_points: (state.painPoints || []).join(", "),
-          tools: (state.tools || []).join(", "),
-          notes: notes || "",
-          // Computed results
-          top_opportunity: results?.opportunities?.[0]?.name || "",
-          estimated_annual_savings: `$${Math.round((results?.totalAnnualSavings || 0) / 1000)}K`,
-          estimated_hours_saved: `${results?.totalWeeklyHours || 0} hrs/week`,
-          // Tracking
-          source: "barrana.ai",
-          form_name: "Automation Planner Results",
-          page_url: window.location.href,
-          submitted_at: new Date().toISOString(),
-          tags: ["website-lead", "planner-completion", (state.industry || "").toLowerCase().replace(/\s+/g, "-")],
-        }),
+      const industrySlug = (state.industry || "").toLowerCase().replace(/\s+/g, "-");
+      await submitLead({
+        firstName: name.split(" ")[0] || "",
+        lastName: name.split(" ").slice(1).join(" ") || undefined,
+        email,
+        companyName: businessName,
+        industry: state.industry || undefined,
+        message: notes || undefined,
+        formName: "Automation Planner Results",
+        pageUrl: window.location.href,
+        tags: ["website-lead", "planner-completed", industrySlug].filter(Boolean),
+        customFields: [
+          { key: "role", field_value: state.role || "" },
+          { key: "workflows", field_value: (state.selectedWorkflows || []).join(", ") },
+          { key: "pain_points", field_value: (state.painPoints || []).join(", ") },
+          { key: "tools", field_value: (state.tools || []).join(", ") },
+          { key: "top_opportunity", field_value: results?.opportunities?.[0]?.name || "" },
+          { key: "estimated_annual_savings", field_value: `$${annualAdminCost}` },
+          { key: "estimated_hours_saved", field_value: `${adminHrs} hrs/week` },
+        ],
       });
     } catch { /* silent — don't block UX */ }
   };

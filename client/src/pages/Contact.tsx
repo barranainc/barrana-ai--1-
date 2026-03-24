@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import { toast } from "sonner";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { colors } from "@/styles/design-tokens";
+import { submitLead } from "@/lib/ghl";
 
 // Social icons
 function IconLinkedIn() {
@@ -77,8 +78,6 @@ export default function Contact() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const GHL_WEBHOOK = "https://services.leadconnectorhq.com/hooks/TJN9sRuDhSQqi5ra6peh/webhook-trigger/b3af7557-ff3f-4c10-a88e-d95fb0b78b0f";
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.business || !formData.industry) {
@@ -87,35 +86,33 @@ export default function Contact() {
     }
     setLoading(true);
     try {
-      await fetch(GHL_WEBHOOK, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          // GHL standard contact fields
-          first_name: formData.name.split(" ")[0],
-          last_name: formData.name.split(" ").slice(1).join(" ") || "",
-          full_name: formData.name,
-          email: formData.email,
-          phone: formData.phone || "",
-          company_name: formData.business,
-          // Custom fields for GHL
-          industry: formData.industry,
-          city: formData.city || "",
-          team_size: formData.employees || "",
-          challenge: formData.challenge || "",
-          // Tracking
-          source: "barrana.ai",
-          form_name: "Free Automation Audit Request",
-          page_url: window.location.href,
-          submitted_at: new Date().toISOString(),
-          tags: ["website-lead", "audit-request", formData.industry.toLowerCase().replace(/\s+/g, "-")],
-        }),
+      const result = await submitLead({
+        firstName: formData.name.split(" ")[0],
+        lastName: formData.name.split(" ").slice(1).join(" ") || "",
+        email: formData.email,
+        phone: formData.phone || undefined,
+        companyName: formData.business,
+        industry: formData.industry,
+        message: formData.challenge || undefined,
+        formName: "Contact Form - Audit Request",
+        pageUrl: window.location.href,
+        tags: [
+          "website-lead",
+          "audit-request",
+          formData.industry.toLowerCase().replace(/\s+/g, "-"),
+        ],
+        customFields: [
+          { key: "city", field_value: formData.city || "" },
+          { key: "team_size", field_value: formData.employees || "" },
+        ],
       });
+      if (!result.success) {
+        console.error("Lead submit error:", result.error);
+      }
       setSubmitted(true);
       toast.success("Audit request received! We'll be in touch within 1 business day.");
     } catch {
-      // Even if webhook fails, show success (data captured client-side)
-      // This prevents CORS issues from blocking the UX
+      // Show success even on failure to avoid blocking UX
       setSubmitted(true);
       toast.success("Audit request received! We'll be in touch within 1 business day.");
     } finally {
