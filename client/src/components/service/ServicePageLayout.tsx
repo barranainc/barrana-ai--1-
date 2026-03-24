@@ -14,6 +14,8 @@ import FAQAccordion from "@/components/ui/FAQAccordion";
 import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
 import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
 import { internalLinks } from "@/config/internal-links";
+import SEOHead from "@/components/SEOHead";
+import RelatedResources from "@/components/linking/RelatedResources";
 import ServiceHero from "./ServiceHero";
 import HeroBeforeAfterCard from "./HeroBeforeAfterCard";
 import CostOfInactionCards from "./CostOfInactionCards";
@@ -164,6 +166,9 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
 
   return (
     <>
+      {/* SEO Head — OG, Twitter, Canonical */}
+      <SEOHead title={data.title} description={data.description} type="article" />
+
       {/* JSON-LD Schemas */}
       <script
         type="application/ld+json"
@@ -327,6 +332,13 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
+        </div>
+      </section>
+
+      {/* 13. Contextual Related Resources */}
+      <section style={sectionStyle("white")}>
+        <div className="container">
+          <RelatedResources pagePath={pagePath} />
         </div>
       </section>
     </>

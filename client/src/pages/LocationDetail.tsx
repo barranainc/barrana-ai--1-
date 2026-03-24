@@ -2,6 +2,7 @@
  * BARRANA.AI LOCATION DETAIL PAGE — Premium Hub
  * 8-section design linking to 30 Tier 1/Tier 2 local industry pages
  */
+import { useState } from "react";
 import { Link, useParams } from "wouter";
 import {
   ArrowRight,
@@ -25,6 +26,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
 import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
+import SEOHead from "@/components/SEOHead";
 import { colors, spacing, typography, cards, surfaces, buttons } from "@/styles/design-tokens";
 import { localPages } from "@/data/local-pages";
 
@@ -495,8 +497,31 @@ export default function LocationDetail() {
     },
   };
 
+  /* FAQ items — generic to all locations */
+  const locationFaqs = [
+    { q: `What types of businesses in ${location.name} do you work with?`, a: `We work with professional services firms, healthcare clinics, contractors, and service-based operators across ${location.name}. Common clients include immigration consultants, accounting firms, dental offices, physiotherapy clinics, law firms, and home service businesses.` },
+    { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
+    { q: `How quickly can automation be implemented?`, a: `Most single-workflow automations are live within 1-2 weeks. A full multi-workflow system typically takes 4-6 weeks. You will see measurable results from Week 1 of each deployment.` },
+    { q: `Do you work on-site in ${location.name}?`, a: `Our headquarters are at 50 Corstate Avenue in Vaughan. We conduct initial audits and onboarding sessions in person across the GTA when requested, and handle implementation and support remotely for efficiency.` },
+    { q: `What is the typical ROI timeline?`, a: `Most businesses see a full return on investment within 1-3 months. Lead response automation often pays for itself in the first month by converting leads that would otherwise be lost to slow follow-up.` },
+  ];
+
+  /* FAQPage schema */
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: locationFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
+  const [openFaqIdx, setOpenFaqIdx] = useState<number | null>(null);
+
   return (
     <div style={{ minHeight: "100vh", background: colors.surfaceWhite }}>
+      <SEOHead title={location.metaTitle} description={`AI automation for small businesses in ${location.name}. Fixed pricing. No retainers. Results from Week 1.`} />
       <Navigation />
 
       {/* ── 1. HERO ─────────────────────────────────────────── */}
@@ -779,7 +804,56 @@ export default function LocationDetail() {
         </div>
       </section>
 
-      {/* ── 8. CTA ───────────────────────────────────────── */}
+      {/* ── 8. FAQ ─────────────────────────────────────── */}
+      <section style={{ ...surfaces.white, padding: `${spacing.sectionPadding} 0` }}>
+        <div className="container" style={{ maxWidth: "48rem", margin: "0 auto" }}>
+          <h2 style={{ ...typography.sectionHeading, marginBottom: spacing.headingToBody }}>
+            Frequently Asked Questions
+          </h2>
+          <div>
+            {locationFaqs.map((faq, i) => (
+              <div key={i} style={{ borderBottom: `1px solid ${colors.border}` }}>
+                <button
+                  onClick={() => setOpenFaqIdx(openFaqIdx === i ? null : i)}
+                  style={{
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "1.25rem 0",
+                    background: "none",
+                    border: "none",
+                    cursor: "pointer",
+                    textAlign: "left",
+                  }}
+                >
+                  <span style={{ ...typography.cardTitle, flex: 1, paddingRight: "1rem" }}>{faq.q}</span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke={colors.navy}
+                    strokeWidth="2"
+                    style={{ transition: "transform 0.2s", transform: openFaqIdx === i ? "rotate(180deg)" : "rotate(0deg)", flexShrink: 0 }}
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                {openFaqIdx === i && (
+                  <div style={{ paddingBottom: "1.25rem", ...typography.body }}>
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* FAQPage Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      </section>
+
+      {/* ── 9. CTA ───────────────────────────────────────── */}
       <section style={{ ...surfaces.darkGradient, padding: `${spacing.sectionPadding} 0` }}>
         <div className="container" style={{ textAlign: "center", maxWidth: "40rem", margin: "0 auto" }}>
           <h2

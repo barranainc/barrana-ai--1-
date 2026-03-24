@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography } from "@/styles/design-tokens";
@@ -92,6 +95,7 @@ const jsonLd = {
 export default function LeadIntakeWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
+      <SEOHead title="How to Automate Lead Intake for Small Businesses" description="A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -241,6 +245,13 @@ export default function LeadIntakeWorkflow() {
         { label: "Staff Time (first response)", before: "10 hrs/week", after: "< 30 min/week", beforeW: 90, afterW: 5 },
       ]} />
 
+      <ContextualCTA
+        label="See This in Action"
+        description="Read how an immigration firm automated lead intake and cut response time to 90 seconds using"
+        linkText="Lead Response Automation"
+        linkHref="/case-studies/immigration-firm-north-york"
+      />
+
       {/* FAQ */}
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
@@ -265,22 +276,7 @@ export default function LeadIntakeWorkflow() {
         </div>
       </div>
 
-      {/* Related Links */}
-      <div>
-        <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1A1A2E", marginBottom: "0.75rem" }}>Related</h3>
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-          {[
-            { label: "Lead Response Automation", href: "/services/lead-response-automation" },
-            { label: "After-Hours Automation", href: "/services/after-hours-automation" },
-            { label: "What to Automate First", href: "/insights/what-to-automate-first" },
-            { label: "AI Receptionist", href: "/ai-receptionist" },
-          ].map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a style={{ background: "#F0F4FF", color: "#283891", padding: "0.5rem 1rem", borderRadius: 20, fontSize: "0.875rem", fontWeight: 600, textDecoration: "none" }}>{link.label}</a>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <RelatedResources pagePath="/workflows/lead-intake" />
     </div>
   );
 }

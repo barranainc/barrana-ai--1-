@@ -15,6 +15,8 @@ import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import ServiceCTASection from "@/components/service/ServiceCTASection";
 import InternalLinksGrid from "@/components/service/InternalLinksGrid";
 import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
+import SEOHead from "@/components/SEOHead";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 import type { WorkflowStep } from "@/components/diagrams/WorkflowDiagram";
@@ -273,6 +275,9 @@ export default function CaseStudyPageLayout({ data }: Props) {
 
   return (
     <>
+      {/* SEO Head — OG, Twitter, Canonical */}
+      <SEOHead title={data.title} description={data.description} type="article" />
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
@@ -396,6 +401,13 @@ export default function CaseStudyPageLayout({ data }: Props) {
       <section style={sec(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
+        </div>
+      </section>
+
+      {/* 13. Contextual Related Resources */}
+      <section style={sec("white")}>
+        <div className="container">
+          <RelatedResources pagePath={`/case-studies/${data.slug}`} />
         </div>
       </section>
     </>

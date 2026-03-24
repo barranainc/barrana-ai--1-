@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
@@ -172,6 +175,7 @@ export default function AutomationVsDelegation() {
 
   return (
     <>
+      <SEOHead title="Automation vs Delegation: What Business Owners Get Wrong | Barrana AI" description="Automation and delegation solve different problems. If a task follows the same rules every time and requires no judgement, automate it. If it requires context, creativity, or relationships, delegate it." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -279,6 +283,13 @@ export default function AutomationVsDelegation() {
               The best-run service businesses use both: automation for everything rule-based and repeatable, delegation for everything that requires context, creativity, accountability, or relationship. The two work in concert — automation creates capacity, delegation uses it wisely.
             </p>
 
+            <ContextualCTA
+              label="See This in Action"
+              description="Read how a contractor eliminated manual follow-ups and freed 15 hours per week using"
+              linkText="Workflow Automation"
+              linkHref="/case-studies/contractor-mississauga"
+            />
+
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Is there anything that should never be automated?" a="Yes — tasks involving professional liability, emotional support, creative judgement, and regulated advice should not be automated. They can be supported by automation but must remain human-led." />
@@ -296,19 +307,7 @@ export default function AutomationVsDelegation() {
               </div>
             </div>
 
-            <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: "1.5rem" }}>
-              <p style={{ color: "#7B7B7B", fontSize: "0.85rem", marginBottom: "0.75rem", fontWeight: 600 }}>Related reading</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-                {[
-                  { href: "/ai-adoption-small-business", label: "AI Adoption for Small Business" },
-                  { href: "/insights/what-to-automate-first", label: "What to Automate First" },
-                  { href: "/insights/automation-readiness", label: "Automation Readiness" },
-                  { href: "/insights/when-ai-is-not-the-answer", label: "When AI Is Not the Answer" },
-                ].map((link) => (
-                  <Link key={link.href} href={link.href}><a style={{ color: "#283891", fontSize: "0.88rem", textDecoration: "underline" }}>{link.label}</a></Link>
-                ))}
-              </div>
-            </div>
+            <RelatedResources pagePath="/insights/automation-vs-delegation" />
           </div>
         </section>
       </main>

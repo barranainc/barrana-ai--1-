@@ -1,6 +1,7 @@
 import { Link, useParams } from "wouter";
 import { useEffect } from "react";
 import { getLocalPage } from "../data/local-pages";
+import SEOHead from "@/components/SEOHead";
 import { colors, typography, spacing, surfaces, buttons, cards } from "../styles/design-tokens";
 
 /* ─── Inline SVG icons ─────────────────────────────────────── */
@@ -153,9 +154,8 @@ export default function LocationIndustryPage() {
 
   return (
     <>
-      {/* SEO Head */}
-      <title>{page.metaTitle}</title>
-      <meta name="description" content={page.metaDescription} />
+      {/* SEO Head — OG, Twitter, Canonical */}
+      <SEOHead title={page.metaTitle} description={page.metaDescription} />
 
       {/* Schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

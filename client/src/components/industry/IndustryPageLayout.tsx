@@ -14,6 +14,8 @@ import FAQAccordion from "@/components/ui/FAQAccordion";
 import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
 import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
 import { internalLinks } from "@/config/internal-links";
+import SEOHead from "@/components/SEOHead";
+import RelatedResources from "@/components/linking/RelatedResources";
 import ServiceHero from "@/components/service/ServiceHero";
 import HeroBeforeAfterCard from "@/components/service/HeroBeforeAfterCard";
 import CostOfInactionCards from "@/components/service/CostOfInactionCards";
@@ -183,6 +185,9 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
 
   return (
     <>
+      {/* SEO Head — OG, Twitter, Canonical */}
+      <SEOHead title={data.title} description={data.description} type="article" />
+
       {/* JSON-LD Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
@@ -341,6 +346,13 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
+        </div>
+      </section>
+
+      {/* 14. Contextual Related Resources */}
+      <section style={sectionStyle("white")}>
+        <div className="container">
+          <RelatedResources pagePath={pagePath} />
         </div>
       </section>
     </>

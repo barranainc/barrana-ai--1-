@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
+import ContextualCTA from "@/components/linking/ContextualCTA";
+import RelatedResources from "@/components/linking/RelatedResources";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
@@ -107,6 +110,7 @@ export default function WhatToAutomateFirst() {
 
   return (
     <>
+      <SEOHead title="What Should a Small Business Automate First? | Barrana AI" description="The best first automation for most small businesses is lead response — responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -264,6 +268,13 @@ export default function WhatToAutomateFirst() {
               <li><strong style={{ color: "#1A1A2E" }}>Trying to automate a broken manual process</strong> — automation amplifies whatever the process does, including its flaws. Fix the process first.</li>
             </ul>
 
+            <ContextualCTA
+              label="See This in Action"
+              description="Read how an immigration firm cut lead response from 4 hours to 90 seconds using"
+              linkText="Lead Response Automation"
+              linkHref="/case-studies/immigration-firm-north-york"
+            />
+
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Can I automate two things at once for Phase 1?" a="We recommend starting with one workflow and measuring results before adding the second. Two simultaneous implementations often lead to scope creep and delayed results." />
@@ -281,19 +292,7 @@ export default function WhatToAutomateFirst() {
               </div>
             </div>
 
-            <div style={{ borderTop: "1px solid #E2E8F0", paddingTop: "1.5rem" }}>
-              <p style={{ color: "#7B7B7B", fontSize: "0.85rem", marginBottom: "0.75rem", fontWeight: 600 }}>Related reading</p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
-                {[
-                  { href: "/ai-adoption-small-business", label: "AI Adoption for Small Business" },
-                  { href: "/insights/automation-readiness", label: "Automation Readiness" },
-                  { href: "/workflows/lead-intake", label: "Lead Intake Workflow" },
-                  { href: "/services/lead-response-automation", label: "Lead Response Automation" },
-                ].map((link) => (
-                  <Link key={link.href} href={link.href}><a style={{ color: "#283891", fontSize: "0.88rem", textDecoration: "underline" }}>{link.label}</a></Link>
-                ))}
-              </div>
-            </div>
+            <RelatedResources pagePath="/insights/what-to-automate-first" />
           </div>
         </section>
       </main>
