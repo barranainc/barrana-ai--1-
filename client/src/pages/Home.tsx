@@ -619,10 +619,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO — 4-Tab Interactive Hero
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#F5F5F5", paddingTop: "2.5rem", paddingBottom: "4rem", minHeight: "90vh" }}>
+      <section style={{ background: "#F5F5F5", paddingTop: "1.25rem", paddingBottom: "2.5rem", minHeight: "90vh" }}>
         <style>{`
           .hero-grid { grid-template-columns: 1fr; }
-          @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
+          @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
           .hero-metrics { grid-template-columns: repeat(3, 1fr); }
           @media (max-width: 600px) { .hero-metrics { grid-template-columns: 1fr; } }
         `}</style>
@@ -641,7 +641,7 @@ export default function Home() {
               border: "1px solid rgba(40,56,145,0.2)",
               borderRadius: "2rem",
               padding: "0.375rem 1rem",
-              marginBottom: "1.5rem",
+              marginBottom: "0.875rem",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.5s ease 0.1s",
             }}
@@ -655,7 +655,7 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               gap: "1rem",
-              marginBottom: "2.5rem",
+              marginBottom: "1.75rem",
               flexWrap: "wrap",
               opacity: heroReveal.visible ? 1 : 0,
               transition: "opacity 0.5s ease 0.2s",
@@ -742,15 +742,15 @@ export default function Home() {
               transition: "opacity 0.25s ease, transform 0.25s ease",
             }}
           >
-            <div className="hero-grid" style={{ display: "grid", gap: "4rem", alignItems: "center" }}>
+            <div className="hero-grid" style={{ display: "grid", gap: "3rem", alignItems: "center" }}>
               {/* Left column: headline + sub + CTAs */}
               <div style={{ maxWidth: "36rem" }}>
                 <h1
                   style={{
                     color: DARK,
-                    marginBottom: "1.25rem",
+                    marginBottom: "1rem",
                     lineHeight: 1.08,
-                    fontSize: "clamp(2rem, 4.5vw, 3.25rem)",
+                    fontSize: "clamp(2rem, 4.5vw, 3rem)",
                     letterSpacing: "-0.025em",
                     fontWeight: 800,
                   }}
@@ -766,9 +766,9 @@ export default function Home() {
 
                 <p
                   style={{
-                    fontSize: "1.0625rem",
+                    fontSize: "1rem",
                     color: "#4A4A4A",
-                    marginBottom: "2rem",
+                    marginBottom: "0.75rem",
                     lineHeight: 1.7,
                     maxWidth: "52ch",
                   }}
@@ -778,18 +778,28 @@ export default function Home() {
 
                 {/* Microcopy — the knowing wink (only on Tab 0) */}
                 {HERO_STATES[displayTab].microcopy && (
-                  <p
+                  <div
                     style={{
-                      color: GREY,
-                      fontSize: "0.9375rem",
-                      fontStyle: "italic",
-                      lineHeight: 1.65,
-                      marginTop: "1rem",
-                      maxWidth: "32rem",
+                      background: "rgba(40,56,145,0.05)",
+                      borderLeft: `3px solid ${NAVY}`,
+                      borderRadius: "0 0.5rem 0.5rem 0",
+                      padding: "0.75rem 1rem",
+                      marginBottom: "0.5rem",
                     }}
                   >
-                    {HERO_STATES[displayTab].microcopy}
-                  </p>
+                    <p
+                      style={{
+                        color: DARK,
+                        fontSize: "0.875rem",
+                        fontStyle: "italic",
+                        lineHeight: 1.6,
+                        fontWeight: 500,
+                        margin: 0,
+                      }}
+                    >
+                      {HERO_STATES[displayTab].microcopy}
+                    </p>
+                  </div>
                 )}
 
                 {/* CTAs */}
@@ -884,8 +894,8 @@ export default function Home() {
               className="hero-metrics"
               style={{
                 display: "grid",
-                gap: "1rem",
-                marginTop: "2.5rem",
+                gap: "0.875rem",
+                marginTop: "1.75rem",
               }}
             >
               {HERO_STATES[displayTab].metrics.map((m) => (
