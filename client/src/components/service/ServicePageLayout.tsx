@@ -6,9 +6,13 @@
  */
 
 import React from "react";
+import { useLocation } from "wouter";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
+import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
+import { internalLinks } from "@/config/internal-links";
 import ServiceHero from "./ServiceHero";
 import HeroBeforeAfterCard from "./HeroBeforeAfterCard";
 import CostOfInactionCards from "./CostOfInactionCards";
@@ -118,6 +122,10 @@ interface ServicePageLayoutProps {
 }
 
 export default function ServicePageLayout({ data, heroVisual }: ServicePageLayoutProps) {
+  const [location] = useLocation();
+  const pagePath = location || (data.breadcrumb ? `/services/${data.breadcrumb.toLowerCase().replace(/\s+/g, "-")}` : "");
+  const pageConfig = internalLinks[pagePath];
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -168,6 +176,19 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+
+      {/* Breadcrumb Nav */}
+      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+        <div className="container">
+          <BreadcrumbNav
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Services", href: "/services" },
+              { label: data.breadcrumb || "Service" },
+            ]}
+          />
+        </div>
+      </div>
 
       {/* 1. Hero — white/off-white bg */}
       <ServiceHero
@@ -272,6 +293,18 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
           <AEOBlock question={data.aeoQuestion} answer={data.aeoAnswer} />
         </div>
       </section>
+
+      {/* Industry Crosslinks */}
+      {pageConfig && pageConfig.industries.length > 0 && (
+        <section style={sectionStyle("#F7F9FC")}>
+          <div className="container">
+            <IndustryServiceCrosslinks
+              items={pageConfig.industries}
+              heading="Industries That Benefit Most"
+            />
+          </div>
+        </section>
+      )}
 
       {/* 10. FAQ — white bg */}
       <section style={sectionStyle("white")}>

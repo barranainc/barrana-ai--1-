@@ -13,6 +13,7 @@ import ControlLayerCard from "@/components/service/ControlLayerCard";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import ServiceCTASection from "@/components/service/ServiceCTASection";
 import InternalLinksGrid from "@/components/service/InternalLinksGrid";
+import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 import type { WorkflowStep } from "@/components/diagrams/WorkflowDiagram";
@@ -274,6 +275,19 @@ export default function CaseStudyPageLayout({ data }: Props) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
+
+      {/* Breadcrumb Nav */}
+      <div style={{ background: "#F7F9FC", paddingTop: "3rem", paddingBottom: 0 }}>
+        <div className="container">
+          <BreadcrumbNav
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Case Studies", href: "/case-studies" },
+              { label: data.industry },
+            ]}
+          />
+        </div>
+      </div>
 
       {/* 1. Hero */}
       <Hero data={data} show={mounted || reduced} />
