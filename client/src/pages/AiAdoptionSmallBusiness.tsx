@@ -1,19 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ borderLeft: "4px solid #283891", background: "#F0F4FF", borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
+    <div style={{ borderLeft: `4px solid ${colors.navy}`, background: colors.navyWash, borderRadius: "0 12px 12px 0", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
       {children}
     </div>
   );
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
-  return <h2 style={{ fontSize: "clamp(1.25rem,2.5vw,1.625rem)", fontWeight: 800, color: "#283891", marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
+  return <h2 style={{ ...typography.sectionHeading, marginBottom: "1rem", marginTop: "2.5rem" }}>{children}</h2>;
 }
 
 function useReveal() {
@@ -260,7 +261,7 @@ export default function AiAdoptionSmallBusiness() {
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
-      <section style={{ background: "#1A1A2E", color: "#fff", paddingTop: "3.5rem", paddingBottom: "3.5rem" }}>
+      <section style={{ ...surfaces.darkGradient, color: "#fff", paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPaddingSm }}>
         <div className="container">
           <nav style={{ display: "flex", gap: "0.4rem", alignItems: "center", fontSize: "0.8rem", color: "rgba(255,255,255,0.55)", marginBottom: "1.25rem", flexWrap: "wrap" }}>
             <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>Home</Link>
@@ -272,7 +273,7 @@ export default function AiAdoptionSmallBusiness() {
           <div style={{ display: "inline-block", background: "#283891", color: "#fff", borderRadius: 24, padding: "0.3rem 0.875rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "1rem" }}>
             Getting Started
           </div>
-          <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.75rem)", fontWeight: 900, lineHeight: 1.15, maxWidth: 740, marginBottom: "1rem" }}>
+          <h1 style={{ ...typography.pageTitle, color: "#fff", maxWidth: 740, marginBottom: "1rem" }}>
             AI Adoption for Small Businesses: A Practical Guide
           </h1>
           <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>15 min read</div>
@@ -281,7 +282,7 @@ export default function AiAdoptionSmallBusiness() {
 
       {/* ── Body ── */}
       <main style={{ background: "#fff" }}>
-        <div style={{ maxWidth: 860, margin: "0 auto", padding: "3rem 1.5rem" }}>
+        <div style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.5rem" }}>
 
           {/* AEO Summary */}
           <SummaryBox>
@@ -400,7 +401,7 @@ export default function AiAdoptionSmallBusiness() {
           </div>
 
           {/* CTA */}
-          <div style={{ background: "#1A1A2E", borderRadius: 20, padding: "3rem 2rem", textAlign: "center", marginBottom: "3rem" }}>
+          <div style={{ ...surfaces.darkGradient, borderRadius: 20, padding: "3rem 2rem", textAlign: "center", marginBottom: "3rem" }}>
             <h2 style={{ color: "#fff", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 800, marginBottom: "0.75rem" }}>
               Ready to eliminate the coordination overhead?
             </h2>

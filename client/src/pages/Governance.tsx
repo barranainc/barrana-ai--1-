@@ -1,9 +1,10 @@
 import { Link } from "wouter";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
+import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
-const NAVY = "#283891";
-const BURGUNDY = "#7E0F4A";
-const DARK = "#1A1A2E";
+const NAVY = colors.navy;
+const BURGUNDY = colors.magenta;
+const DARK = colors.textPrimary;
 
 const controlLayerItems = [
   {
@@ -76,9 +77,9 @@ export default function Governance() {
       {/* Hero */}
       <section
         style={{
-          background: `linear-gradient(135deg, ${DARK} 0%, ${NAVY} 100%)`,
-          paddingTop: "6rem",
-          paddingBottom: "4rem",
+          ...surfaces.darkGradient,
+          paddingTop: spacing.sectionPadding,
+          paddingBottom: spacing.sectionPaddingSm,
         }}
       >
         <div className="container">
@@ -125,7 +126,7 @@ export default function Governance() {
       </section>
 
       {/* Section 1 — How We Handle Your Data */}
-      <section style={{ paddingTop: "4rem", paddingBottom: "4rem", background: "white" }}>
+      <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "white" }}>
         <div className="container">
           <div style={{ maxWidth: "780px" }}>
             <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: DARK, marginBottom: "1.25rem" }}>
@@ -150,7 +151,7 @@ export default function Governance() {
       </section>
 
       {/* Section 2 — PIPEDA Awareness */}
-      <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem", background: "#F7F9FC" }}>
+      <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "#F7F9FC" }}>
         <div className="container">
           <h2
             style={{
@@ -197,7 +198,7 @@ export default function Governance() {
       </section>
 
       {/* Section 3 — The Control Layer */}
-      <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem", background: "white" }}>
+      <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "white" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
             <div>
@@ -222,7 +223,7 @@ export default function Governance() {
       </section>
 
       {/* Section 4 — Security Principles */}
-      <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem", background: "#F7F9FC" }}>
+      <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "#F7F9FC" }}>
         <div className="container">
           <div style={{ maxWidth: "720px" }}>
             <h2 style={{ fontSize: "1.75rem", fontWeight: 800, color: DARK, marginBottom: "1.5rem" }}>
@@ -271,9 +272,9 @@ export default function Governance() {
       {/* CTA */}
       <section
         style={{
-          paddingTop: "5rem",
-          paddingBottom: "5rem",
-          background: `linear-gradient(135deg, ${DARK} 0%, ${NAVY} 100%)`,
+          paddingTop: spacing.sectionPadding,
+          paddingBottom: spacing.sectionPadding,
+          ...surfaces.darkGradient,
         }}
       >
         <div className="container" style={{ textAlign: "center" }}>

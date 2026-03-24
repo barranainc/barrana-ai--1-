@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { colors, surfaces } from "@/styles/design-tokens";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -58,7 +59,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: "#F7F8FB" }}>
+      <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />
         <div className="container relative z-10">
           <div
@@ -130,7 +131,7 @@ export default function About() {
                   <div
                     key={stat.label}
                     className="p-5 rounded-2xl border"
-                    style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: "#F7F8FB" }}
+                    style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: colors.surfaceLight }}
                   >
                     <div className="text-2xl font-extrabold mb-1" style={{ color: "#283891" }}>{stat.value}</div>
                     <div className="text-xs text-gray-500">{stat.label}</div>
@@ -158,7 +159,7 @@ export default function About() {
       </section>
 
       {/* Core Principles */}
-      <section className="py-20 lg:py-28" style={{ backgroundColor: "#F2F4F8" }}>
+      <section className="py-20 lg:py-28" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="container">
           <div
             ref={principles.ref}
