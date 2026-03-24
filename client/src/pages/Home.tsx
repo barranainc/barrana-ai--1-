@@ -619,7 +619,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 1: HERO — 4-Tab Interactive Hero
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#F5F5F5", paddingTop: "5rem", paddingBottom: "5.5rem", minHeight: "90vh" }}>
+      <section style={{ background: "#F5F5F5", paddingTop: "2.5rem", paddingBottom: "4rem", minHeight: "90vh" }}>
         <style>{`
           .hero-grid { grid-template-columns: 1fr; }
           @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 4rem; } }
