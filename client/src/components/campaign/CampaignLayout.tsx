@@ -439,8 +439,12 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
           lineHeight: 1.8,
         }}
       >
-        <div>
-          <strong style={{ color: DARK }}>Barrana.ai</strong>
+        <div style={{ marginBottom: "0.5rem" }}>
+          <img
+            src="/barrana-logo.png"
+            alt="Barrana - Identify, Solve, Implement"
+            style={{ height: "36px", width: "auto" }}
+          />
         </div>
         <div>AI Automation for GTA Service Businesses</div>
         <div>50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2</div>
