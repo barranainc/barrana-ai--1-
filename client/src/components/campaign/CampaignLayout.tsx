@@ -182,7 +182,11 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
               cursor: "pointer",
             }}
           >
-            Barrana
+            <img
+              src="/barrana-logo.png"
+              alt="Barrana - Identify, Solve, Implement"
+              style={{ height: "40px", width: "auto" }}
+            />
           </span>
         </Link>
         <a
