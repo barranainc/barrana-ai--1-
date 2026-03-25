@@ -442,7 +442,8 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
         <div>
           <strong style={{ color: DARK }}>Barrana.ai</strong>
         </div>
-        <div>3300 Hwy 7 Suite 904, Concord, ON L4K 4M3</div>
+        <div>AI Automation for GTA Service Businesses</div>
+        <div>50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2</div>
         <div>
           <a
             href="tel:+16473676771"
