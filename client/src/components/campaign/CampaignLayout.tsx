@@ -169,7 +169,7 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
           alignItems: "center",
           justifyContent: "space-between",
           background: "white",
-          borderBottom: "1px solid #E2E4ED",
+          borderBottom: `3px solid ${NAVY}`,
         }}
       >
         <Link href="/">
@@ -235,7 +235,7 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
             style={{
               fontSize: "1.5rem",
               fontWeight: 700,
-              color: DARK,
+              color: NAVY,
               marginBottom: "2rem",
             }}
           >
@@ -286,7 +286,7 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
             style={{
               fontSize: "1.5rem",
               fontWeight: 700,
-              color: DARK,
+              color: NAVY,
               marginBottom: "1.5rem",
             }}
           >
@@ -329,7 +329,7 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
             style={{
               fontSize: "1.5rem",
               fontWeight: 700,
-              color: DARK,
+              color: NAVY,
               marginBottom: "1.5rem",
             }}
           >
@@ -360,7 +360,7 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
             style={{
               fontSize: "1.5rem",
               fontWeight: 700,
-              color: DARK,
+              color: NAVY,
               marginBottom: "1.5rem",
               textAlign: "center",
             }}
@@ -372,7 +372,8 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
               background: "white",
               borderRadius: "1rem",
               padding: "2rem",
-              boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+              border: `2px solid ${NAVY}`,
+              boxShadow: "0 2px 12px rgba(40,56,145,0.08)",
             }}
           >
             <p
@@ -430,18 +431,17 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
       {/* ── Footer ──────────────────────────────────────────────── */}
       <footer
         style={{
-          background: "white",
-          borderTop: "1px solid #E2E4ED",
-          padding: "2rem 1.5rem",
+          background: NAVY,
+          padding: "2.5rem 1.5rem",
           textAlign: "center",
           fontSize: "0.85rem",
-          color: GREY,
+          color: "rgba(255,255,255,0.7)",
           lineHeight: 1.8,
         }}
       >
-        <div style={{ marginBottom: "0.5rem" }}>
+        <div style={{ marginBottom: "0.75rem", display: "flex", justifyContent: "center" }}>
           <img
-            src="/barrana-logo.png"
+            src="/barrana-logo-white.png"
             alt="Barrana - Identify, Solve, Implement"
             style={{ height: "36px", width: "auto" }}
           />
@@ -451,17 +451,17 @@ export default function CampaignLayout({ page }: { page: CampaignPage }) {
         <div>
           <a
             href="tel:+16473676771"
-            style={{ color: GREY, textDecoration: "none" }}
+            style={{ color: "rgba(255,255,255,0.8)", textDecoration: "none" }}
           >
             +1 647 367 6771
           </a>
         </div>
         <div style={{ marginTop: "0.5rem" }}>
-          <a href="#" style={{ color: GREY, textDecoration: "underline" }}>
+          <a href="#" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "underline" }}>
             Unsubscribe
           </a>
           {" | "}
-          <a href="#" style={{ color: GREY, textDecoration: "underline" }}>
+          <a href="#" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "underline" }}>
             Privacy
           </a>
         </div>
