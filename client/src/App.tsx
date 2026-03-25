@@ -106,6 +106,12 @@ import AppointmentBookingWorkflow from "./pages/workflows/AppointmentBookingWork
 import ClientOnboardingWorkflow from "./pages/workflows/ClientOnboardingWorkflow";
 import DocumentCollectionWorkflow from "./pages/workflows/DocumentCollectionWorkflow";
 
+// Campaign landing pages (no nav/footer)
+import CampaignContractors from "./pages/campaign/CampaignContractors";
+import CampaignDental from "./pages/campaign/CampaignDental";
+import CampaignLawFirms from "./pages/campaign/CampaignLawFirms";
+import CampaignRealEstate from "./pages/campaign/CampaignRealEstate";
+
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
@@ -116,7 +122,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Router() {
+function LayoutRoutes() {
   return (
     <Layout>
       <Switch>
@@ -247,6 +253,21 @@ function Router() {
         <Route component={NotFound} />
       </Switch>
     </Layout>
+  );
+}
+
+function Router() {
+  return (
+    <Switch>
+      {/* Campaign landing pages — no nav/footer */}
+      <Route path="/campaign/contractors" component={CampaignContractors} />
+      <Route path="/campaign/dental" component={CampaignDental} />
+      <Route path="/campaign/law-firms" component={CampaignLawFirms} />
+      <Route path="/campaign/real-estate" component={CampaignRealEstate} />
+
+      {/* All other pages with Layout */}
+      <Route>{() => <LayoutRoutes />}</Route>
+    </Switch>
   );
 }
 
