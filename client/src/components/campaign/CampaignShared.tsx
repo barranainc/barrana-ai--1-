@@ -6,7 +6,7 @@
  * These pages are noindex and have NO main site navigation.
  */
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 
 // ─── Brand Constants ─────────────────────────────────────────────────────────
@@ -231,17 +231,16 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          first_name: form.name.split(" ")[0] || form.name,
-          last_name: form.name.split(" ").slice(1).join(" ") || "",
-          full_name: form.name,
+          firstName: form.name.split(" ")[0] || form.name,
+          lastName: form.name.split(" ").slice(1).join(" ") || "",
           email: form.email,
           phone: form.phone,
-          company_name: form.business,
+          companyName: form.business,
           industry,
-          challenge: form.challenge,
+          message: form.challenge,
           source: "barrana.ai",
-          form_name: `Campaign - ${industry} Audit Request`,
-          page_url: window.location.href,
+          formName: `Campaign - ${industry} Audit Request`,
+          pageUrl: window.location.href,
           tags: ["campaign-lead", "audit-request", industry.toLowerCase().replace(/\s+/g, "-"), utm],
         }),
       });
