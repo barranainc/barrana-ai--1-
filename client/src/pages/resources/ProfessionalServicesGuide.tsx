@@ -341,6 +341,16 @@ export default function ProfessionalServicesGuide() {
           When in doubt, engage your professional indemnity insurer and compliance counsel before deploying automation that touches regulated data. Most concerns are resolvable with appropriate platform selection and data architecture.
         </p>
 
+        {/* Related Resources */}
+        <div style={{ marginTop: "3rem", marginBottom: "2rem" }}>
+          <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1A2E", marginBottom: "1rem" }}>Continue Reading</h3>
+          <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <li><Link href="/resources/operational-friction-map" style={{ color: "#283891", textDecoration: "underline", fontSize: "0.95rem" }}>The Operational Friction Map</Link></li>
+            <li><Link href="/automation-planner" style={{ color: "#283891", textDecoration: "underline", fontSize: "0.95rem" }}>Try the Automation Planner</Link></li>
+            <li><Link href="/services" style={{ color: "#283891", textDecoration: "underline", fontSize: "0.95rem" }}>Browse Our Automation Services</Link></li>
+          </ul>
+        </div>
+
         {/* CTA */}
         <div style={{ background: "#283891", borderRadius: "20px", padding: "3rem 2.5rem", marginTop: "4rem", textAlign: "center" }}>
           <h2 style={{ color: "#fff", fontSize: "clamp(1.375rem,3vw,2rem)", fontWeight: 800, marginBottom: "0.875rem", letterSpacing: "-0.01em" }}>

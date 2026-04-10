@@ -51,6 +51,7 @@ import HeroAuditCard from "@/components/diagrams/HeroAuditCard";
 
 // Schema
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 
 // Diagram components
 import HeroArchitectureVisual from "@/components/diagrams/HeroArchitectureVisual";
@@ -615,6 +616,7 @@ export default function Home() {
 
   return (
     <>
+      <SEOHead title="Barrana.ai — AI Automation for Small Business | Toronto & GTA" description="AI automation systems that close response gaps, eliminate manual coordination, and give small businesses in Toronto and the GTA the operational backbone to grow without adding headcount." />
       {/* ─── JSON-LD schemas ─── */}
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />

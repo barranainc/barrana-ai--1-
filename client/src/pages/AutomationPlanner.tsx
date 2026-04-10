@@ -169,6 +169,13 @@ function LandingContent({ onStart }: { onStart: () => void }) {
             The Barrana Automation Planner walks you through your workflows and identifies the repetitive tasks that are costing you time, leads, and capacity. In about 3 to 5 minutes, you will see exactly where automation fits in your business and where to start.
           </p>
 
+          {/* Contextual links */}
+          <p style={{ fontSize: 14, color: GREY, lineHeight: 1.7, marginBottom: 28, maxWidth: 600 }}>
+            <Link href="/start-here" style={{ color: NAVY, textDecoration: "underline" }}>New to AI automation? Start here first</Link>.
+            You can also <Link href="/services" style={{ color: NAVY, textDecoration: "underline" }}>browse our automation services</Link> or
+            explore our <Link href="/resources" style={{ color: NAVY, textDecoration: "underline" }}>resource guides</Link>.
+          </p>
+
           {/* CTA */}
           <StartButton onStart={onStart} />
           <p style={{ fontSize: 13, color: GREY, marginTop: 12 }}>Free. No account required. Takes 3 to 5 minutes.</p>

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "Invoice Automation | Bill on Completion, Not When Someone Remembers | Barrana.ai",
+  title: "Invoice Automation for Small Business",
   description:
     "Automate invoice generation, delivery, and payment reminders. Invoices trigger on project completion. Reminders at 7/14/21 days. Integrated with QuickBooks.",
 

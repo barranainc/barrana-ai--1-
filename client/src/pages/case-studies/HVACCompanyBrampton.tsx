@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import CaseStudyPageLayout, { CaseStudyData } from "@/components/case-study/CaseStudyPageLayout";
 
 const data: CaseStudyData = {
-  title: "HVAC Automation Case Study | 300 Seasonal Slots Filled | Barrana.ai",
+  title: "HVAC Company Automation Case Study",
   description:
     "How a Brampton HVAC company automated seasonal maintenance campaigns, emergency dispatch, and agreement renewals. 300 slots filled in 10 days. Retention up 28%.",
   slug: "hvac-company-brampton",

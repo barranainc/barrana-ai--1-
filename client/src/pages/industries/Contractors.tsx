@@ -3,7 +3,7 @@ import IndustryPageLayout, { IndustryPageData } from "@/components/industry/Indu
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
-  title: "AI Automation for Contractors Toronto | Win More Jobs Without Missing Calls | Barrana.ai",
+  title: "AI Automation for Contractors & Trades",
   description:
     "Automate lead capture, quote follow-up, site visit booking, after-hours calls, and invoicing for contractors. Jobber integrated. Free audit.",
   route: "contractors",

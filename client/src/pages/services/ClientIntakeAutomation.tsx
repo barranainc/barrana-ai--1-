@@ -9,9 +9,9 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "Client Intake Automation | 45 Minutes to Under 5 | Barrana.ai",
+  title: "Client Intake Automation | Save 15+ Hours Per Week",
   description:
-    "Automate client intake for your professional firm. AI collects, qualifies, categorizes, and routes new clients in under 5 minutes. Works with your existing CRM.",
+    "Automate your client intake process. Collect information, create CRM records, and send next steps automatically. Immigration, law, and accounting firms save 15+ hours per week.",
 
   breadcrumb: "Client Intake Automation",
   h1: "Your Intake Process Takes 45 Minutes Per Client. This System Reduces It to Under 5.",
