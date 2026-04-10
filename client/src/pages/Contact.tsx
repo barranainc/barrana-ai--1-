@@ -10,6 +10,8 @@ import { toast } from "sonner";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { colors } from "@/styles/design-tokens";
 import { submitLead } from "@/lib/ghl";
+import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 
 // Social icons
 function IconLinkedIn() {
@@ -123,8 +125,42 @@ export default function Contact() {
   const inputClass = "w-full px-4 py-3 rounded-xl border text-sm outline-none bg-[#F7F8FB] transition-all";
   const inputStyle = { borderColor: "rgba(40,56,145,0.15)" };
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Barrana.ai",
+    "url": "https://barrana.ai",
+    "telephone": "+16473676771",
+    "email": "help@barrana.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "50 Corstate Avenue, Unit 01",
+      "addressLocality": "Vaughan",
+      "addressRegion": "ON",
+      "postalCode": "L4K 4X2",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.7942,
+      "longitude": -79.5320
+    },
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+16473676771",
+      "contactType": "sales",
+      "availableLanguage": ["English"]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Contact Barrana.ai | Book a Free Automation Audit"
+        description="Book a free 60-minute Automation Audit for your business. We map your workflows, calculate your operational costs, and show you what to automate first. Vaughan office or Zoom."
+      />
+      <JsonLd data={contactSchema} />
       {/* Hero */}
       <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />

@@ -7,6 +7,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import PipelineDiagram, { PIPELINES } from "@/components/diagrams/PipelineDiagram";
+import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -215,8 +217,40 @@ function ServiceSection({ service, idx }: { service: typeof servicesList[0]; idx
 export default function Services() {
   const hero = useReveal(0.05);
 
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI Automation for Small Business",
+    "provider": {
+      "@type": "Organization",
+      "name": "Barrana.ai",
+      "url": "https://barrana.ai"
+    },
+    "areaServed": { "@type": "City", "name": "Toronto" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Automation Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead Response Automation", "url": "https://barrana.ai/services/lead-response-automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Client Intake Automation", "url": "https://barrana.ai/services/client-intake-automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Receptionist", "url": "https://barrana.ai/services/ai-receptionist" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Appointment Automation", "url": "https://barrana.ai/services/appointment-automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Document Collection Automation", "url": "https://barrana.ai/services/document-collection" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Invoice Automation", "url": "https://barrana.ai/services/invoice-automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow Automation", "url": "https://barrana.ai/services/workflow-automation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Agents", "url": "https://barrana.ai/services/ai-agents" } }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="AI Automation Services for Small Business | Barrana.ai"
+        description="Lead response, client intake, document collection, invoicing, and workflow automation for Toronto and GTA service businesses. Fixed pricing. No hourly billing."
+        type="website"
+      />
+      <JsonLd data={servicesSchema} />
       {/* Hero */}
       <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: "#F7F8FB" }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />
