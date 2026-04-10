@@ -219,7 +219,7 @@ function AutomateVsHumanGrid() {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function AiAdoptionSmallBusiness() {
-  useEffect(() => { document.title = "AI Adoption for Small Businesses: A Practical Guide | Barrana.ai"; }, []);
+  // document.title and meta description are set by SEOHead below
 
   const faqs = [
     { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
@@ -261,7 +261,7 @@ export default function AiAdoptionSmallBusiness() {
 
   return (
     <>
-      <SEOHead title="AI Adoption for Small Businesses: A Practical Guide | Barrana AI" description="AI adoption for a small business means systematically identifying repetitive operational tasks and automating them. Learn the 5-stage method, costs, and what to automate first." type="article" />
+      <SEOHead title="AI Adoption for Small Business: A Practical Guide" description="A no-jargon guide to adopting AI automation in your small business. Which workflows to automate first, what to keep human, and how to measure ROI in 30 to 60 days." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}

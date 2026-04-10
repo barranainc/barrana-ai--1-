@@ -105,12 +105,12 @@ const jsonLdData = {
 };
 
 export default function WhatToAutomateFirst() {
-  useEffect(() => { document.title = "What Should a Small Business Automate First? | Barrana AI"; }, []);
+  // document.title and meta description are set by SEOHead below
   const tableReveal = useReveal();
 
   return (
     <>
-      <SEOHead title="What Should a Small Business Automate First? | Barrana AI" description="The best first automation for most small businesses is lead response — responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations." type="article" />
+      <SEOHead title="What Should a Small Business Automate First? | Barrana.ai" description="A practical framework for choosing your first automation. Start with the workflow that costs the most time, touches the most clients, and has the clearest before-and-after." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>

@@ -11,6 +11,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 import {
   HelpCircle,
   DollarSign,
@@ -202,16 +203,11 @@ const costCards = [
 // ─── Component ───────────────────────────────────────────────────────
 
 export default function StartHere() {
-  useEffect(() => {
-    document.title = "Start Here: AI Automation for Your Business | Barrana.ai";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Not sure if AI automation is right for your business? Start here. No jargon. No pressure. Find out what it costs you to stay manual, what you can automate, and where to begin.");
-    }
-  }, []);
+  // document.title and meta description are set by SEOHead below
 
   return (
     <>
+      <SEOHead title="Start Here: AI Automation for Your Business | Barrana.ai" description="Not sure if AI automation is right for your business? Start here. No jargon. No pressure. Find out what it costs you to stay manual and where to begin." type="website" />
       <style>{responsiveStyles}</style>
 
       {/* ───── SECTION 1: HERO ───── */}

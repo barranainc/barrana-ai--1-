@@ -180,7 +180,7 @@ function TriggerConditionActionFlow() {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function WorkflowAutomationSMB() {
-  useEffect(() => { document.title = "Business Workflow Automation for SMBs: The Complete Guide | Barrana.ai"; }, []);
+  // document.title and meta description are set by SEOHead below
 
   const faqs = [
     { q: "What is the difference between workflow automation and AI?", a: "Workflow automation executes rules: if this happens, do that. AI makes decisions within those rules — for example, qualifying a lead or categorising an inquiry. Most SMB automation is rule-based, with AI used for specific decision points like lead qualification or document classification." },
@@ -222,7 +222,7 @@ export default function WorkflowAutomationSMB() {
 
   return (
     <>
-      <SEOHead title="Workflow Automation for Small and Mid-Size Businesses | Barrana AI" description="A practical guide to workflow automation for SMBs: how to identify, prioritise, and build automated workflows that save 15-30 hours per week." type="article" />
+      <SEOHead title="Workflow Automation for Small Business | Barrana.ai" description="Automate intake, follow-up, scheduling, and invoicing for your small business. Fixed pricing. No hourly billing. See which workflows save the most time and money." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}

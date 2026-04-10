@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import SEOHead from "@/components/SEOHead";
 import { colors, surfaces } from "@/styles/design-tokens";
 
 function useReveal(threshold = 0.15) {
@@ -58,6 +59,7 @@ export default function About() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead title="About Barrana.ai | AI Automation Consultancy, Toronto" description="10+ years building business systems for Toronto and GTA service businesses. Fixed pricing, your existing tools, humans in the loop. 50 Corstate Ave, Vaughan." />
       {/* Hero */}
       <section className="relative pt-28 pb-16 overflow-hidden" style={{ backgroundColor: colors.surfaceLight }}>
         <div className="absolute inset-0 dot-grid-bg opacity-50 pointer-events-none" />

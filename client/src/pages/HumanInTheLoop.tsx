@@ -7,6 +7,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
 
@@ -164,12 +165,11 @@ const controlLayerItems = [
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function HumanInTheLoop() {
-  useEffect(() => {
-    document.title = "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge | Barrana AI";
-  }, []);
+  // document.title and meta description are set by SEOHead below
 
   return (
     <div style={{ background: "#F8FAFC", minHeight: "100vh" }}>
+      <SEOHead title="Human-in-the-Loop AI: Keep Control of Your Automation" description="AI automation with human oversight built in. Approval gates, safety rails, and escalation triggers ensure your team stays in control of every decision that matters." type="article" />
 
       {/* Hero */}
       <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 0 " + spacing.sectionPaddingSm }}>

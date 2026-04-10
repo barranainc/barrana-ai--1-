@@ -50,6 +50,12 @@ export default function SEOHead({ title, description, type = "website", image }:
       el.setAttribute("href", href);
     }
 
+    // Page title (visible in browser tab and search results)
+    if (title) document.title = title;
+
+    // Meta description (visible in search results)
+    if (description) setMeta("description", description);
+
     // Canonical URL
     setLink("canonical", canonicalUrl);
 
