@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "After-Hours Automation | Your Business Does Not Close at 5pm Anymore | Barrana.ai",
+  title: "After-Hours AI Automation | Barrana.ai",
   description:
     "Capture and qualify every lead that arrives after business hours. AI receptionist, automated qualification, CRM records, and morning briefings.",
 

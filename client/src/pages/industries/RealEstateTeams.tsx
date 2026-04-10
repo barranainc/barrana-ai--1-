@@ -3,7 +3,7 @@ import IndustryPageLayout, { IndustryPageData } from "@/components/industry/Indu
 import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
-  title: "AI Automation for Real Estate Teams Toronto | Never Lose a Lead to Slow Follow-Up | Barrana.ai",
+  title: "AI Automation for Real Estate Teams",
   description: "Automate lead capture from all channels, buyer nurture sequences, listing follow-up, CRM management, and post-offer communication for real estate teams. Free audit.",
   route: "real-estate-teams",
   breadcrumb: "Real Estate Teams",

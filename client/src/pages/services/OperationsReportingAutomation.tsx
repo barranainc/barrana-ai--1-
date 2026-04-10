@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "Operations Automation | See Everything, Chase Nothing | Barrana.ai",
+  title: "Operations Reporting Automation",
   description:
     "Automate internal operations: document management, task routing, staff alerts, compliance logging, and weekly reporting. Operational visibility without manual work.",
 

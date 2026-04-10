@@ -331,6 +331,9 @@ export default function Contact() {
                         )}
                       </button>
                       <p className="text-xs text-gray-400 text-center">No spam. No obligation. We respond within 1 business day.</p>
+                      <p className="text-xs text-gray-500 text-center mt-3">
+                        Not sure where to start? <Link href="/start-here" className="underline" style={{ color: "#283891" }}>Learn what automation can do for your business</Link>, or <Link href="/services" className="underline" style={{ color: "#283891" }}>browse our services</Link>.
+                      </p>
                     </form>
                   </>
                 )}
@@ -370,6 +373,13 @@ export default function Contact() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: colors.surfaceLight }}>
+                <h3 className="font-bold text-gray-900 mb-3 text-sm">Learn More</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-2">
+                  <Link href="/about" className="underline" style={{ color: "#283891" }}>About Barrana</Link> — who we are and how we work with small businesses across the GTA.
+                </p>
               </div>
 
               <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)" }}>

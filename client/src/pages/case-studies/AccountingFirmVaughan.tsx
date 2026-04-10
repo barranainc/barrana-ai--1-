@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import CaseStudyPageLayout, { CaseStudyData } from "@/components/case-study/CaseStudyPageLayout";
 
 const data: CaseStudyData = {
-  title: "Accounting Firm Automation Case Study | 65 Additional Clients | Barrana.ai",
+  title: "Accounting Firm Automation Case Study",
   description:
     "How a 4-person accounting firm in Vaughan automated document collection, invoicing, and onboarding. Added 65 clients next season without new hires.",
   slug: "accounting-firm-vaughan",

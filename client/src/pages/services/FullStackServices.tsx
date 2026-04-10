@@ -248,7 +248,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 export default function FullStackServices() {
   useEffect(() => {
     document.title =
-      "Full-Stack Services | Automation, Software, Web & Growth | Barrana.ai";
+      "Full-Stack AI Automation | Barrana.ai";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute(

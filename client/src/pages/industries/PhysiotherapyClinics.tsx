@@ -4,7 +4,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title:
-    "AI Automation for Physiotherapy Clinics Toronto | Cut No-Shows 25-40% | Barrana.ai",
+    "AI Automation for Physiotherapy Clinics",
   description:
     "Reduce no-shows by 25-40%, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free audit.",
   route: "physiotherapy-clinics",

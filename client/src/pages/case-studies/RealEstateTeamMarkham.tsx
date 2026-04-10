@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import CaseStudyPageLayout, { CaseStudyData } from "@/components/case-study/CaseStudyPageLayout";
 
 const data: CaseStudyData = {
-  title: "Real Estate Team Automation Case Study | 12-Month Nurture System | Barrana.ai",
+  title: "Real Estate Automation Case Study",
   description:
     "How a 4-agent real estate team in Markham automated lead capture, 12-month buyer nurture, and CRM management. Pipeline value increased 40% in 6 months.",
   slug: "real-estate-team-markham",
