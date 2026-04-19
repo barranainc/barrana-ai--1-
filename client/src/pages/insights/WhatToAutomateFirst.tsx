@@ -98,8 +98,8 @@ const industryRows = [
 const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "What Should a Small Business Automate First?",
-  "description": "The best first automation for most small businesses is lead response — responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations.",
+  "headline": "What Should a Service Business Automate First?",
+  "description": "The best first automation for most service businesses is lead response — responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations.",
   "author": { "@type": "Organization", "name": "Barrana AI" },
   "publisher": { "@type": "Organization", "name": "Barrana AI" },
 };
@@ -110,7 +110,7 @@ export default function WhatToAutomateFirst() {
 
   return (
     <>
-      <SEOHead title="What Should a Small Business Automate First? | Barrana.ai" description="A practical framework for choosing your first automation. Start with the workflow that costs the most time, touches the most clients, and has the clearest before-and-after." type="article" />
+      <SEOHead title="What Should a Service Business Automate First? | Barrana.ai" description="A practical framework for choosing your first automation. Start with the workflow that costs the most time, touches the most clients, and has the clearest before-and-after." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -120,7 +120,7 @@ export default function WhatToAutomateFirst() {
               <span style={{ background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.75)", borderRadius: 20, padding: "0.3rem 0.9rem", fontSize: "0.8rem" }}>8 min read</span>
             </div>
             <h1 style={{ ...typography.pageTitle, color: "#fff", marginBottom: "1.25rem" }}>
-              What Should a Small Business Automate First?
+              What Should a Service Business Automate First?
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
               The highest-ROI first automation for most service businesses — and how to choose the right starting point for yours.
@@ -133,7 +133,7 @@ export default function WhatToAutomateFirst() {
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
               <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.7 }}>
-                The best first automation for most small businesses is <strong>lead response</strong> — responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and delivers measurable ROI within the first month.
+                The best first automation for most service businesses is <strong>lead response</strong> — responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and delivers measurable ROI within the first month.
               </p>
             </SummaryBox>
 

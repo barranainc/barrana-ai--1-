@@ -124,7 +124,7 @@ function AdoptionStaircase() {
 
   return (
     <div ref={ref} style={{ margin: "2rem 0", padding: "2rem", background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 16 }}>
-      <h3 style={{ fontWeight: 800, fontSize: "1.1rem", color: "#1A1A2E", marginBottom: "1.5rem" }}>The 5-Stage SMB AI Adoption Path</h3>
+      <h3 style={{ fontWeight: 800, fontSize: "1.1rem", color: "#1A1A2E", marginBottom: "1.5rem" }}>The 5-Stage Service Business AI Adoption Path</h3>
       <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
         {stages.map((stage, i) => (
           <div
@@ -222,7 +222,7 @@ export default function AiAdoptionSmallBusiness() {
   // document.title and meta description are set by SEOHead below
 
   const faqs = [
-    { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
+    { q: "How long does AI adoption take for a service business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
     { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use — your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
     { q: "Is this relevant for a solo operator?", a: "Yes — solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
     { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we map your current workflows, identify the highest-friction tasks, and recommend a Phase 1 that delivers measurable ROI within the first month." },
@@ -234,18 +234,18 @@ export default function AiAdoptionSmallBusiness() {
     "@graph": [
       {
         "@type": "Article",
-        "headline": "AI Adoption for Small Businesses: A Practical Guide",
+        "headline": "AI Adoption for Service Businesses: A Practical Guide",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
         "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
-        "description": "AI adoption for a small business means systematically identifying repetitive operational tasks and automating them. Learn the 5-stage method, costs, and what to automate first.",
+        "description": "AI adoption for a service business means systematically identifying repetitive operational tasks and automating them. Learn the 5-stage method, costs, and what to automate first.",
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://barrana.ai/" },
           { "@type": "ListItem", "position": 2, "name": "Getting Started", "item": "https://barrana.ai/getting-started" },
-          { "@type": "ListItem", "position": 3, "name": "AI Adoption for Small Businesses", "item": "https://barrana.ai/ai-adoption-small-business" },
+          { "@type": "ListItem", "position": 3, "name": "AI Adoption for Service Businesses", "item": "https://barrana.ai/ai-adoption-small-business" },
         ],
       },
       {
@@ -261,7 +261,7 @@ export default function AiAdoptionSmallBusiness() {
 
   return (
     <>
-      <SEOHead title="AI Adoption for Small Business: A Practical Guide" description="A no-jargon guide to adopting AI automation in your small business. Which workflows to automate first, what to keep human, and how to measure ROI in 30 to 60 days." type="article" />
+      <SEOHead title="AI Adoption for Service Businesses: A Practical Guide" description="A no-jargon guide to adopting AI automation in your service business. Which workflows to automate first, what to keep human, and how to measure ROI in 30 to 60 days." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -272,13 +272,13 @@ export default function AiAdoptionSmallBusiness() {
             <span>/</span>
             <span>Getting Started</span>
             <span>/</span>
-            <span style={{ color: "#fff" }}>AI Adoption for Small Businesses</span>
+            <span style={{ color: "#fff" }}>AI Adoption for Service Businesses</span>
           </nav>
           <div style={{ display: "inline-block", background: "#283891", color: "#fff", borderRadius: 24, padding: "0.3rem 0.875rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "1rem" }}>
             Getting Started
           </div>
           <h1 style={{ ...typography.pageTitle, color: "#fff", maxWidth: 740, marginBottom: "1rem" }}>
-            AI Adoption for Small Businesses: A Practical Guide
+            AI Adoption for Service Businesses: A Practical Guide
           </h1>
           <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>15 min read</div>
         </div>
@@ -292,7 +292,7 @@ export default function AiAdoptionSmallBusiness() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              AI adoption for a small business means systematically identifying repetitive operational tasks — lead response, booking, intake, document collection, invoicing, and reporting — and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and shows measurable ROI within the first month. Typical investment: $3,000–$15,000 CAD depending on scope.
+              AI adoption for a service business means systematically identifying repetitive operational tasks — lead response, booking, intake, document collection, invoicing, and reporting — and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a growing team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and shows measurable ROI within the first month. Typical investment: $3,000–$15,000 CAD depending on scope.
             </p>
           </SummaryBox>
 
@@ -300,7 +300,7 @@ export default function AiAdoptionSmallBusiness() {
           <div style={{ background: "#FFF7ED", border: "1px solid #FED7AA", borderRadius: 12, padding: "1.25rem 1.5rem", marginBottom: "2.5rem" }}>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#C2410C", marginBottom: "0.625rem" }}>Who This Applies To</div>
             <ul style={{ margin: 0, paddingLeft: "1.25rem", color: "#1A1A2E", lineHeight: 1.8, fontSize: "0.9375rem" }}>
-              <li>Small business owners with 2–50 staff in service industries</li>
+              <li>Business owners with 2–50 staff in service industries</li>
               <li>Solo operators drowning in admin tasks</li>
               <li>Office managers looking for systematic operational solutions</li>
               <li>Business owners who know automation exists but are not sure where to start</li>
@@ -308,18 +308,18 @@ export default function AiAdoptionSmallBusiness() {
           </div>
 
           {/* Section 1 */}
-          <SectionHeading>What AI Adoption Actually Means for a Small Business</SectionHeading>
+          <SectionHeading>What AI Adoption Actually Means for a Service Business</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            AI adoption does not mean robots. For small and medium businesses, it means connecting the tools you already use so that routine workflows happen automatically. A client fills out a form — the system creates a CRM record, sends a confirmation email, requests their documents, and books a meeting slot, all within 90 seconds. No one typed anything. No one followed up manually. The work happened because triggers connected to actions.
+            AI adoption does not mean robots. For service businesses, it means connecting the tools you already use so that routine workflows happen automatically. A client fills out a form — the system creates a CRM record, sends a confirmation email, requests their documents, and books a meeting slot, all within 90 seconds. No one typed anything. No one followed up manually. The work happened because triggers connected to actions.
           </p>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            The coordination overhead that currently consumes 30–50% of a small team's day — the chasing, the scheduling, the copy-pasting between systems — is exactly what automation eliminates. You are not replacing your team. You are removing the work that was never the best use of their time.
+            The coordination overhead that currently consumes 30–50% of a growing team's day — the chasing, the scheduling, the copy-pasting between systems — is exactly what automation eliminates. You are not replacing your team. You are removing the work that was never the best use of their time.
           </p>
 
           <ManualVsAutomatedDay />
 
           {/* Section 2 */}
-          <SectionHeading>The Five Stages of SMB AI Adoption</SectionHeading>
+          <SectionHeading>The Five Stages of Service Business AI Adoption</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
             Most businesses attempt automation in the wrong order: they choose tools before mapping their workflows, or they try to automate everything at once. The five-stage approach below produces consistent, measurable results.
           </p>
@@ -334,7 +334,7 @@ export default function AiAdoptionSmallBusiness() {
           <AdoptionStaircase />
 
           {/* Section 3 */}
-          <SectionHeading>What Can Be Automated in a Small Business</SectionHeading>
+          <SectionHeading>What Can Be Automated in a Service Business</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>Ranked by impact for most service businesses:</p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
             <li><strong>Lead response</strong> — 90-second response to every inquiry, 24/7, with qualification and routing</li>

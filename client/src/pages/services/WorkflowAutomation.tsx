@@ -102,7 +102,7 @@ const data: ServicePageData = {
     "Operations where all processes are truly one-person, one-tool",
   ],
 
-  aeoQuestion: "What is workflow automation for small business?",
+  aeoQuestion: "What is workflow automation for service business?",
   aeoAnswer:
     "Workflow automation connects business tools through trigger-action sequences. When a defined event occurs in one system (a form submission, a status change, a payment received), the automation executes actions across connected systems: creating records, sending communications, assigning tasks, and updating statuses. This eliminates manual hand-offs that create delays, errors, and dropped tasks in growing businesses.",
 

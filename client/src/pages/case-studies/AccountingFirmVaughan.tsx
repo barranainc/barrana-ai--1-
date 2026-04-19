@@ -21,7 +21,7 @@ const data: CaseStudyData = {
   intro:
     "This Vaughan accounting firm was hitting a capacity ceiling every tax season. Not because the CPAs were not capable, but because 2-3 hours per day per staff member were consumed by document chasing, invoice generation, and inconsistent onboarding. They were turning away clients while their team spent half the day on admin.",
   businessDescription:
-    "A general practice accounting firm on Highway 7 in Vaughan serving small businesses and individuals across the GTA. Two CPAs, two junior accountants. Services: T1 personal tax, T2 corporate, bookkeeping reviews, HST filing. Using QuickBooks Online and a basic CRM. Average 215 files processed per tax season.",
+    "A general practice accounting firm on Highway 7 in Vaughan serving service businesses and individuals across the GTA. Two CPAs, two junior accountants. Services: T1 personal tax, T2 corporate, bookkeeping reviews, HST filing. Using QuickBooks Online and a basic CRM. Average 215 files processed per tax season.",
   problemHeading: "What Was Breaking",
   problemBody: [
     "During tax season, every staff member spent 2-3 hours per day on document follow-up. For 4 staff members, that was 40-60 hours per week of non-preparation work.",

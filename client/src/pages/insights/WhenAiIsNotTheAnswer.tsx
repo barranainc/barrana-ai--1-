@@ -131,7 +131,7 @@ export default function WhenAiIsNotTheAnswer() {
             </SummaryBox>
 
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "2rem" }}>
-              Automation is one of the most powerful tools available to small businesses. But it is not a universal solution. Knowing when <em>not</em> to automate is as important as knowing what to automate. Building a system on a shaky foundation doesn't fix the foundation — it amplifies its flaws.
+              Automation is one of the most powerful tools available to service businesses. But it is not a universal solution. Knowing when <em>not</em> to automate is as important as knowing what to automate. Building a system on a shaky foundation doesn't fix the foundation — it amplifies its flaws.
             </p>
 
             <SectionHeading>The 7 Signs</SectionHeading>

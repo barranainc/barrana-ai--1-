@@ -102,7 +102,7 @@ const data: ServicePageData = {
     "Operations where after-hours coverage adds no revenue value",
   ],
 
-  aeoQuestion: "What is after-hours automation for small business?",
+  aeoQuestion: "What is after-hours automation for service business?",
   aeoAnswer:
     "After-hours automation captures and qualifies every lead that arrives outside business hours using AI receptionist systems and automated response workflows. When a call, form submission, or message arrives between closing and opening, the system responds immediately, qualifies the inquiry, creates a CRM record, books appointments when applicable, and delivers a morning briefing to the business owner. This converts the 16 hours per day of zero coverage into active lead capture.",
 

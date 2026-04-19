@@ -391,7 +391,7 @@ export default function StartHere() {
                 </div>
                 <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.875rem" }}>What It Costs</h3>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7 }}>
-                  For most small businesses: $3,000 to $12,000 to set up, depending on how many workflows you automate. Monthly costs: $200 to $500. Most businesses see the investment pay for itself within 30 to 60 days through saved time, captured leads, and faster billing.
+                  For most service businesses: $3,000 to $12,000 to set up, depending on how many workflows you automate. Monthly costs: $200 to $500. Most businesses see the investment pay for itself within 30 to 60 days through saved time, captured leads, and faster billing.
                 </p>
               </div>
             </Reveal>
@@ -600,7 +600,7 @@ export default function StartHere() {
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                   <Link href="/insights/what-to-automate-first" style={{ color: NAVY, fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
-                    What Should a Small Business Automate First? &rarr;
+                    What Should a Service Business Automate First? &rarr;
                   </Link>
                   <Link href="/ai-automation-industries" style={{ color: NAVY, fontWeight: 600, fontSize: "0.9rem", textDecoration: "none" }}>
                     AI Automation for Your Industry &rarr;
@@ -679,7 +679,7 @@ export default function StartHere() {
         <div className="container" style={{ maxWidth: "60ch", textAlign: "center" }}>
           <Reveal>
             <p style={{ color: GREY, fontSize: "1.0625rem", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-              Barrana.ai helps small businesses in Toronto and the GTA automate their operations. We have been building business technology systems for over 10 years. We use fixed pricing (never hourly), we work with your existing tools (never force you to change), and we keep humans in the loop for every decision that matters.
+              Barrana.ai helps service businesses in Toronto and the GTA automate their operations. We have been building business technology systems for over 10 years. We use fixed pricing (never hourly), we work with your existing tools (never force you to change), and we keep humans in the loop for every decision that matters.
             </p>
             <p style={{ color: GREY, fontSize: "1rem", lineHeight: 1.7 }}>
               Our office is at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2. Phone: +1 647 367 6771.

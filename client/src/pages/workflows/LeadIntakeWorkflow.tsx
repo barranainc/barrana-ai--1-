@@ -81,7 +81,7 @@ function ResponseTimeChart() {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Automate Lead Intake for Small Businesses",
+  "name": "How to Automate Lead Intake for Service Businesses",
   "description": "A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds.",
   "step": [
     { "@type": "HowToStep", "name": "Capture every lead channel in one system" },
@@ -95,7 +95,7 @@ const jsonLd = {
 export default function LeadIntakeWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
-      <SEOHead title="How to Automate Lead Intake for Small Businesses" description="A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds." type="article" />
+      <SEOHead title="How to Automate Lead Intake for Service Businesses" description="A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -105,7 +105,7 @@ export default function LeadIntakeWorkflow() {
           <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>10 min read</span>
         </div>
         <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
-          How to Automate Lead Intake for Small Businesses
+          How to Automate Lead Intake for Service Businesses
         </h1>
         <SummaryBox>
           <p style={{ margin: 0, color: "#283891", fontWeight: 600, fontSize: "0.95rem", lineHeight: 1.7 }}>

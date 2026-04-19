@@ -389,7 +389,7 @@ export default function HumanInTheLoop() {
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 {[
                   { label: "Governance Approach", href: "/governance" },
-                  { label: "AI Adoption for Small Business", href: "/ai-adoption-small-business" },
+                  { label: "AI Adoption for Service Businesses", href: "/ai-adoption-small-business" },
                   { label: "Custom AI Systems", href: "/services/custom-ai-systems" },
                   { label: "Automation by Industry", href: "/ai-automation-industries" },
                 ].map((link) => (

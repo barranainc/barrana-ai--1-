@@ -94,7 +94,7 @@ const TEAM_SIZE_INSIGHTS: Record<string, string> = {
   "just-me":
     "As a solo operator, every automated task is time returned directly to you. No coordination overhead — just results.",
   "2-5":
-    "Small teams benefit most from automating the coordination that currently depends on one person remembering to do it.",
+    "Growing teams benefit most from automating the coordination that currently depends on one person remembering to do it.",
   "6-15":
     "At this size, manual handoffs between team members become the primary bottleneck. Automation connects the gaps.",
   "16-50":

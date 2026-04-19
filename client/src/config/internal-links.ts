@@ -89,8 +89,8 @@ const D = {
 };
 
 const P = {
-  adoption:     { href: "/ai-adoption-small-business",       label: "AI Adoption for Small Business" },
-  workflowSmb:  { href: "/workflow-automation-smb",           label: "Workflow Automation for SMBs" },
+  adoption:     { href: "/ai-adoption-small-business",       label: "AI Adoption for Service Businesses" },
+  workflowSmb:  { href: "/workflow-automation-smb",           label: "Workflow Automation for Service Businesses" },
   receptionist: { href: "/ai-receptionist",                   label: "AI Receptionist" },
   humanLoop:    { href: "/human-in-the-loop-ai",              label: "Human-in-the-Loop AI" },
   industries:   { href: "/ai-automation-industries",          label: "AI Automation by Industry" },

@@ -31,7 +31,7 @@ export default function CampaignLawFirms() {
         <title>Barrana.ai — Law Firms Are Losing $120,000+ Per Year to Slow Intake | Vaughan</title>
         <meta
           name="description"
-          content="Small law firms in Vaughan and the GTA lose $120,000+ per year to slow intake, manual document collection, and missed follow-up. See how automation fixes it."
+          content="Law firms in Vaughan and the GTA lose $120,000+ per year to slow intake, manual document collection, and missed follow-up. See how automation fixes it."
         />
         <meta name="robots" content="noindex" />
       </Helmet>
@@ -47,7 +47,7 @@ export default function CampaignLawFirms() {
                 className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-5"
                 style={{ backgroundColor: "rgba(126,15,74,0.3)", color: "#F9A8D4" }}
               >
-                For Small Law Firms · Vaughan &amp; GTA
+                For Law Firms · Vaughan &amp; GTA
               </div>
               <h1 className="text-3xl md:text-5xl font-bold leading-tight text-white">
                 Your Intake Process Is Costing You{" "}
@@ -92,7 +92,7 @@ export default function CampaignLawFirms() {
         <FadeSection className="bg-white py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: NAVY }}>
-              The Numbers for a Small Law Firm in Vaughan & the GTA
+              The Numbers for a Law Firm in Vaughan & the GTA
             </h2>
             <p className="text-sm mb-8" style={{ color: GREY }}>Whether your firm is in Vaughan, Woodbridge, Concord, or Maple — every lost client is a system problem, not a quality problem.</p>
             <ProblemCounterGrid

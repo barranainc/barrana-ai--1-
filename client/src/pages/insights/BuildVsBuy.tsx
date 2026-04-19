@@ -59,7 +59,7 @@ function BuildVsBuyTable() {
       timeline: "2–6 weeks",
       flexibility: "High",
       maintenance: "Shared",
-      bestFor: "Multi-workflow SMBs",
+      bestFor: "Multi-workflow service businesses",
       highlight: true,
     },
     {
@@ -89,7 +89,7 @@ function BuildVsBuyTable() {
           <div key={col.name} style={{ border: col.highlight ? "2px solid #283891" : "1px solid #E2E8F0", borderRadius: 14, overflow: "hidden", position: "relative" }}>
             {col.highlight && (
               <div style={{ background: "#283891", color: "#fff", textAlign: "center", padding: "0.4rem", fontSize: "0.78rem", fontWeight: 700 }}>
-                Recommended for most SMBs
+                Recommended for most service businesses
               </div>
             )}
             <div style={{ background: col.highlight ? "#F0F4FF" : "#F8F9FC", padding: "1.25rem", textAlign: "center", borderBottom: "1px solid #E2E8F0" }}>
@@ -161,7 +161,7 @@ const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools",
-  "description": "For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier.",
+  "description": "For most service businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier.",
   "author": { "@type": "Organization", "name": "Barrana AI" },
   "publisher": { "@type": "Organization", "name": "Barrana AI" },
 };
@@ -171,7 +171,7 @@ export default function BuildVsBuy() {
 
   return (
     <>
-      <SEOHead title="Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI" description="For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier." type="article" />
+      <SEOHead title="Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI" description="For most service businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>
@@ -184,7 +184,7 @@ export default function BuildVsBuy() {
               Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
-              The honest guide to which approach fits your business — and why most SMBs end up in the middle.
+              The honest guide to which approach fits your business — and why most service businesses end up in the middle.
             </p>
           </div>
         </section>
@@ -194,7 +194,7 @@ export default function BuildVsBuy() {
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
               <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.7 }}>
-                For most small businesses with 2–50 staff, the best approach is a <strong>hybrid</strong>: use off-the-shelf tools (CRM, calendar, accounting) connected by a custom automation layer built on platforms like Make or Zapier. Pure off-the-shelf cannot adapt to your workflows. Fully custom costs 5–10x more. The hybrid delivers custom results at off-the-shelf speed.
+                For most service businesses with 2–50 staff, the best approach is a <strong>hybrid</strong>: use off-the-shelf tools (CRM, calendar, accounting) connected by a custom automation layer built on platforms like Make or Zapier. Pure off-the-shelf cannot adapt to your workflows. Fully custom costs 5–10x more. The hybrid delivers custom results at off-the-shelf speed.
               </p>
             </SummaryBox>
 
@@ -238,7 +238,7 @@ export default function BuildVsBuy() {
               <li>Your decision logic is complex enough that no platform can express it reliably</li>
               <li>You operate in a regulated industry with specific compliance requirements (e.g. AFSL, AHPRA)</li>
               <li>Your budget exceeds $50,000 and your timeline is 3–6 months</li>
-              <li>You are an enterprise, not an SMB — this path is rarely right for under 50 staff</li>
+              <li>You are an enterprise, not a service business — this path is rarely right for under 50 staff</li>
             </ul>
 
             <SectionHeading>The Real Cost of Each Option</SectionHeading>
@@ -249,13 +249,13 @@ export default function BuildVsBuy() {
               The hybrid approach has a moderate upfront investment ($3,000–$12,000) but low ongoing cost ($200–$500/month) and high ROI once built. The logic is custom to your business, which means fewer workarounds and more reliable operation.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For SMBs, this is rarely justified — the hybrid approach delivers 90% of the value at 20% of the cost.
+              Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For service businesses, this is rarely justified — the hybrid approach delivers 90% of the value at 20% of the cost.
             </p>
 
             <SectionHeading>Common Build vs Buy Mistakes</SectionHeading>
             <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li><strong style={{ color: "#1A1A2E" }}>Buying off-the-shelf because it's cheaper upfront</strong> — then paying more in staff time spent on workarounds over 12 months.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Thinking custom is the only way to get what they need</strong> — most SMB requirements are achievable with the hybrid approach.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Thinking custom is the only way to get what they need</strong> — most service business requirements are achievable with the hybrid approach.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Not factoring in integration costs</strong> — a tool that can't connect to your CRM has hidden costs that emerge over time.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Paying for a platform you barely use</strong> — buying enterprise software for a 5-person team wastes budget and creates complexity.</li>
             </ul>

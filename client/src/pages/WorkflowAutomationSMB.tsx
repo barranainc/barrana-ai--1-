@@ -183,7 +183,7 @@ export default function WorkflowAutomationSMB() {
   // document.title and meta description are set by SEOHead below
 
   const faqs = [
-    { q: "What is the difference between workflow automation and AI?", a: "Workflow automation executes rules: if this happens, do that. AI makes decisions within those rules — for example, qualifying a lead or categorising an inquiry. Most SMB automation is rule-based, with AI used for specific decision points like lead qualification or document classification." },
+    { q: "What is the difference between workflow automation and AI?", a: "Workflow automation executes rules: if this happens, do that. AI makes decisions within those rules — for example, qualifying a lead or categorising an inquiry. Most service business automation is rule-based, with AI used for specific decision points like lead qualification or document classification." },
     { q: "How long does it take to set up workflow automation?", a: "A single workflow takes 1–2 weeks to design, build, and test. A connected multi-workflow system covering 3–5 workflows takes 4–8 weeks. Timeline depends on the complexity of your existing tools and the number of integrations required." },
     { q: "Do I need a CRM to automate workflows?", a: "Not always, but a CRM is the backbone of most business automation. It is where client records live, where workflow history is stored, and where your team sees what is happening. If you do not have a CRM, we recommend adding one as part of Phase 1." },
     { q: "What happens when a workflow fails?", a: "Every system we build includes error monitoring, retry logic, and escalation paths to a human. If a workflow fails — for example, an integration goes down — the system flags the error, retries automatically, and alerts the relevant team member if the retry fails." },
@@ -195,18 +195,18 @@ export default function WorkflowAutomationSMB() {
     "@graph": [
       {
         "@type": "Article",
-        "headline": "Business Workflow Automation for SMBs: The Complete Guide",
+        "headline": "Business Workflow Automation for Service Businesses: The Complete Guide",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
         "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
-        "description": "Workflow automation for small businesses means connecting triggers to actions across existing tools. The 8 highest-impact workflows to automate: lead intake, missed call, booking, onboarding, document collection, invoicing, handoffs, and reporting.",
+        "description": "Workflow automation for service businesses means connecting triggers to actions across existing tools. The 8 highest-impact workflows to automate: lead intake, missed call, booking, onboarding, document collection, invoicing, handoffs, and reporting.",
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://barrana.ai/" },
           { "@type": "ListItem", "position": 2, "name": "Workflow Guide", "item": "https://barrana.ai/workflow-guide" },
-          { "@type": "ListItem", "position": 3, "name": "Business Workflow Automation for SMBs", "item": "https://barrana.ai/workflow-automation-smb" },
+          { "@type": "ListItem", "position": 3, "name": "Business Workflow Automation for Service Businesses", "item": "https://barrana.ai/workflow-automation-smb" },
         ],
       },
       {
@@ -222,7 +222,7 @@ export default function WorkflowAutomationSMB() {
 
   return (
     <>
-      <SEOHead title="Workflow Automation for Small Business | Barrana.ai" description="Automate intake, follow-up, scheduling, and invoicing for your small business. Fixed pricing. No hourly billing. See which workflows save the most time and money." type="article" />
+      <SEOHead title="Workflow Automation for Service Businesses | Barrana.ai" description="Automate intake, follow-up, scheduling, and invoicing for your service business. Fixed pricing. No hourly billing. See which workflows save the most time and money." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -233,13 +233,13 @@ export default function WorkflowAutomationSMB() {
             <span>/</span>
             <span>Workflow Guide</span>
             <span>/</span>
-            <span style={{ color: "#fff" }}>Workflow Automation for SMBs</span>
+            <span style={{ color: "#fff" }}>Workflow Automation for Service Businesses</span>
           </nav>
           <div style={{ display: "inline-block", background: "#283891", color: "#fff", borderRadius: 24, padding: "0.3rem 0.875rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", marginBottom: "1rem" }}>
             Workflow Guide
           </div>
           <h1 style={{ ...typography.pageTitle, color: "#fff", maxWidth: 740, marginBottom: "1rem" }}>
-            Business Workflow Automation for SMBs: The Complete Guide
+            Business Workflow Automation for Service Businesses: The Complete Guide
           </h1>
           <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>12 min read</div>
         </div>
@@ -253,7 +253,7 @@ export default function WorkflowAutomationSMB() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              Workflow automation for small businesses means connecting triggers to actions across your existing tools so that routine operational sequences happen automatically. When a client submits a form, the system creates their record, sends their confirmation, requests their documents, and books their appointment — without a human managing each step. The 8 highest-impact workflows to automate are: lead intake, missed call handling, appointment booking, client onboarding, document collection, invoicing, internal handoffs, and reporting.
+              Workflow automation for service businesses means connecting triggers to actions across your existing tools so that routine operational sequences happen automatically. When a client submits a form, the system creates their record, sends their confirmation, requests their documents, and books their appointment — without a human managing each step. The 8 highest-impact workflows to automate are: lead intake, missed call handling, appointment booking, client onboarding, document collection, invoicing, internal handoffs, and reporting.
             </p>
           </SummaryBox>
 
@@ -273,7 +273,7 @@ export default function WorkflowAutomationSMB() {
             Workflow automation is not robots. It is not AI assistants answering your emails. It is connecting your existing tools — your CRM, calendar, email platform, and accounting software — with logic: IF this happens, THEN do that. When a client books an appointment, the calendar triggers a confirmation email, a document request, and a CRM stage update. When an invoice is overdue by seven days, the system sends a reminder and notifies your accounts person. These are rules, not intelligence.
           </p>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            AI plays a role in specific decision points within these workflows — qualifying a lead, categorising a document, routing a call — but the backbone of SMB automation is rule-based logic. Understand this distinction and you will spend your budget in the right places.
+            AI plays a role in specific decision points within these workflows — qualifying a lead, categorising a document, routing a call — but the backbone of service business automation is rule-based logic. Understand this distinction and you will spend your budget in the right places.
           </p>
 
           {/* Section 2 */}

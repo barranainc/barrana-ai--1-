@@ -21,7 +21,7 @@ const data: CaseStudyData = {
   intro:
     "This Etobicoke residential cleaning company was generating 60+ quote requests per month. Approximately 45% arrived after 5pm when the office was closed. Those evening quotes sat until the next morning. By then, the homeowner had already booked with a competitor who responded at 9pm.",
   businessDescription:
-    "A residential and small commercial cleaning company in Etobicoke. Owner, part-time office manager (mornings), 8 cleaning staff. 60+ quote requests per month. 35 recurring weekly/bi-weekly clients. Using Housecall Pro for scheduling.",
+    "A residential and commercial cleaning company in Etobicoke. Owner, part-time office manager (mornings), 8 cleaning staff. 60+ quote requests per month. 35 recurring weekly/bi-weekly clients. Using Housecall Pro for scheduling.",
   problemBody: [
     "45% of quote requests arrived after 5pm. Zero responded to until next morning. By then, homeowners had booked with faster competitors.",
     "Quote follow-up depended on the owner doing it from home evenings. Actual follow-up rate: approximately 40%.",

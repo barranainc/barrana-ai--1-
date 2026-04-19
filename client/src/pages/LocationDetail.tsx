@@ -111,12 +111,12 @@ const locationData: Record<string, LocationEntry> = {
   toronto: {
     name: "Toronto",
     province: "Ontario",
-    title: "AI Automation for Small Business in Toronto",
-    metaTitle: "AI Automation for Small Business in Toronto | Barrana.ai",
+    title: "AI Automation for Service Business in Toronto",
+    metaTitle: "AI Automation for Service Business in Toronto | Barrana.ai",
     heroSubtitle:
       "Toronto is the most competitive small-business market in Canada. If your intake is manual, your follow-up is slow, and your operations depend on memory, you are losing clients to the firm down the street that automated six months ago.",
     overview: [
-      "Toronto is home to more than 400,000 small businesses. Professional services, healthcare clinics, contractors, and service-based operators compete in a market where response time, consistency, and client experience determine who wins.",
+      "Toronto is home to more than 400,000 businesses. Professional services, healthcare clinics, contractors, and service-based operators compete in a market where response time, consistency, and client experience determine who wins.",
       "Barrana.ai works with Toronto businesses to replace manual intake, document chasing, scheduling, and follow-up with systems that run 24/7. The result is lower overhead, faster response, and more capacity without more headcount.",
       "We serve businesses across every Toronto district: the downtown core, Midtown, the Yonge corridor, Scarborough, Etobicoke, and the inner suburbs. Whether you operate from a Bay Street office or a Danforth storefront, the operational problems are the same.",
       "1,800+ dental clinics. 500+ law firms. Thousands of contractors, consultants, and solo operators. If you are not automating, your competitor two blocks away is.",
@@ -136,7 +136,7 @@ const locationData: Record<string, LocationEntry> = {
       "Solopreneurs/Coaches",
     ],
     stats: [
-      { value: "400K+", label: "Small businesses in Toronto" },
+      { value: "400K+", label: "Businesses in Toronto" },
       { value: "$80K-$200K", label: "Avg operational waste/yr" },
       { value: "1,800+", label: "Dental clinics" },
       { value: "$1,500", label: "Fixed pricing from" },
@@ -160,8 +160,8 @@ const locationData: Record<string, LocationEntry> = {
   vaughan: {
     name: "Vaughan",
     province: "Ontario",
-    title: "AI Automation for Small Business in Vaughan",
-    metaTitle: "AI Automation for Small Business in Vaughan | Barrana.ai",
+    title: "AI Automation for Service Business in Vaughan",
+    metaTitle: "AI Automation for Service Business in Vaughan | Barrana.ai",
     heroSubtitle:
       "Barrana.ai is headquartered in Vaughan. Our office is at 50 Corstate Avenue. We know this market because we are in it every day. We build automation systems for Vaughan's professional services firms, contractors, clinics, and consultants.",
     overview: [
@@ -207,8 +207,8 @@ const locationData: Record<string, LocationEntry> = {
   mississauga: {
     name: "Mississauga",
     province: "Ontario",
-    title: "AI Automation for Small Business in Mississauga",
-    metaTitle: "AI Automation for Small Business in Mississauga | Barrana.ai",
+    title: "AI Automation for Service Business in Mississauga",
+    metaTitle: "AI Automation for Service Business in Mississauga | Barrana.ai",
     heroSubtitle:
       "Mississauga is the GTA's second-largest city and one of the busiest markets for professional services, contractors, and clinics. 560+ dental clinics. One of the most active contractor markets in the region. If your operations are still manual, you are leaving money on the table.",
     overview: [
@@ -258,8 +258,8 @@ const locationData: Record<string, LocationEntry> = {
   "richmond-hill": {
     name: "Richmond Hill",
     province: "Ontario",
-    title: "AI Automation for Small Business in Richmond Hill",
-    metaTitle: "AI Automation for Small Business in Richmond Hill | Barrana.ai",
+    title: "AI Automation for Service Business in Richmond Hill",
+    metaTitle: "AI Automation for Service Business in Richmond Hill | Barrana.ai",
     heroSubtitle:
       "Richmond Hill is York Region's professional services hub. 208 dental clinics along the Yonge Street corridor. Every physio clinic within 2 km of Mackenzie Health. If your competitors are automating and you are not, the gap is widening.",
     overview: [
@@ -299,8 +299,8 @@ const locationData: Record<string, LocationEntry> = {
   markham: {
     name: "Markham",
     province: "Ontario",
-    title: "AI Automation for Small Business in Markham",
-    metaTitle: "AI Automation for Small Business in Markham | Barrana.ai",
+    title: "AI Automation for Service Business in Markham",
+    metaTitle: "AI Automation for Service Business in Markham | Barrana.ai",
     heroSubtitle:
       "Markham is Canada's High-Tech Capital. Businesses here expect digital-first experiences from every vendor they work with. If your client intake still involves a phone call and a PDF, you are behind the curve in a market that rewards technology-forward operations.",
     overview: [
@@ -347,8 +347,8 @@ const locationData: Record<string, LocationEntry> = {
   "north-york": {
     name: "North York",
     province: "Ontario",
-    title: "AI Automation for Small Business in North York",
-    metaTitle: "AI Automation for Small Business in North York | Barrana.ai",
+    title: "AI Automation for Service Business in North York",
+    metaTitle: "AI Automation for Service Business in North York | Barrana.ai",
     heroSubtitle:
       "North York has the highest concentration of immigration consulting firms in the GTA. Dense professional services clusters along Yonge, Finch, and Sheppard mean intense competition. The firms automating intake and follow-up are pulling ahead.",
     overview: [
@@ -480,7 +480,7 @@ export default function LocationDetail() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Barrana.ai",
-    description: `AI automation for small businesses in ${location.name}`,
+    description: `AI automation for service businesses in ${location.name}`,
     url: `https://barrana.ai/locations/${slug}`,
     telephone: "+1-905-000-0000",
     address: {
@@ -500,7 +500,7 @@ export default function LocationDetail() {
   /* FAQ items — generic to all locations */
   const locationFaqs = [
     { q: `What types of businesses in ${location.name} do you work with?`, a: `We work with professional services firms, healthcare clinics, contractors, and service-based operators across ${location.name}. Common clients include immigration consultants, accounting firms, dental offices, physiotherapy clinics, law firms, and home service businesses.` },
-    { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
+    { q: `How much does AI automation cost for a ${location.name} service business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
     { q: `How quickly can automation be implemented?`, a: `Most single-workflow automations are live within 1-2 weeks. A full multi-workflow system typically takes 4-6 weeks. You will see measurable results from Week 1 of each deployment.` },
     { q: `Do you work on-site in ${location.name}?`, a: `Our headquarters are at 50 Corstate Avenue in Vaughan. We conduct initial audits and onboarding sessions in person across the GTA when requested, and handle implementation and support remotely for efficiency.` },
     { q: `What is the typical ROI timeline?`, a: `Most businesses see a full return on investment within 1-3 months. Lead response automation often pays for itself in the first month by converting leads that would otherwise be lost to slow follow-up.` },
@@ -521,7 +521,7 @@ export default function LocationDetail() {
 
   return (
     <div style={{ minHeight: "100vh", background: colors.surfaceWhite }}>
-      <SEOHead title={location.metaTitle} description={`AI automation for small businesses in ${location.name}. Fixed pricing. No retainers. Results from Week 1.`} />
+      <SEOHead title={location.metaTitle} description={`AI automation for service businesses in ${location.name}. Fixed pricing. No retainers. Results from Week 1.`} />
       <Navigation />
 
       {/* ── 1. HERO ─────────────────────────────────────────── */}

@@ -102,7 +102,7 @@ const data: ServicePageData = {
     "Businesses with no digital tools to pull data from",
   ],
 
-  aeoQuestion: "What is operations automation for small business?",
+  aeoQuestion: "What is operations automation for service business?",
   aeoAnswer:
     "Operations automation replaces manual internal business processes with triggered, rules-based systems. This includes automated task routing, document management, staff escalation alerts, compliance logging, and weekly operational reporting. The goal is to create real-time visibility into business operations and ensure that no task, deadline, or client interaction is missed because it depended on someone remembering to do it.",
 

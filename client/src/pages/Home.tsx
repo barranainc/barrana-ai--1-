@@ -389,7 +389,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve small businesses across the Greater Toronto Area: Vaughan, Toronto, Markham, Richmond Hill, Mississauga, Brampton, North York, Scarborough, Etobicoke, and surrounding areas. Our office is at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2.",
+      "We serve service businesses across the Greater Toronto Area: Vaughan, Toronto, Markham, Richmond Hill, Mississauga, Brampton, North York, Scarborough, Etobicoke, and surrounding areas. Our office is at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2.",
   },
 ];
 
@@ -441,7 +441,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Barrana.ai",
   description:
-    "AI automation consultancy for small businesses. We build systems that respond to leads in 90 seconds, recover 15+ staff hours per week, and increase operational capacity by 30%.",
+    "AI automation consultancy for service businesses. We build systems that respond to leads in 90 seconds, recover 15+ staff hours per week, and increase operational capacity by 30%.",
   url: "https://barrana.ai",
   telephone: "+1-647-367-6771",
   email: "help@barrana.ai",
@@ -616,7 +616,7 @@ export default function Home() {
 
   return (
     <>
-      <SEOHead title="Barrana.ai — AI Automation for Small Business | Toronto & GTA" description="AI automation systems that close response gaps, eliminate manual coordination, and give small businesses in Toronto and the GTA the operational backbone to grow without adding headcount." />
+      <SEOHead title="Barrana.ai — AI Automation for Service Businesses | Toronto & GTA" description="AI automation systems that close response gaps, eliminate manual coordination, and give service businesses in Toronto and the GTA the operational backbone to grow without adding headcount." />
       {/* ─── JSON-LD schemas ─── */}
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
@@ -2260,9 +2260,9 @@ export default function Home() {
                 <Search size={12} />
                 Quick Answer
               </div>
-              <h3>What is AI automation for small business?</h3>
+              <h3>What is AI automation for service businesses?</h3>
               <p>
-                AI automation for small business uses software to perform rule-based operational tasks without manual effort: responding to leads, qualifying inquiries, creating CRM records, collecting documents, scheduling appointments, generating invoices, and sending follow-up communications. The AI component adds language understanding, enabling systems to categorize inquiries, personalize responses, and extract information from unstructured inputs. The goal is to automate the coordination layer of business operations so teams focus on work that requires professional judgment and client relationships.
+                AI automation for service businesses uses software to perform rule-based operational tasks without manual effort: responding to leads, qualifying inquiries, creating CRM records, collecting documents, scheduling appointments, generating invoices, and sending follow-up communications. The AI component adds language understanding, enabling systems to categorize inquiries, personalize responses, and extract information from unstructured inputs. The goal is to automate the coordination layer of business operations so teams focus on work that requires professional judgment and client relationships.
               </p>
             </div>
           </Reveal>

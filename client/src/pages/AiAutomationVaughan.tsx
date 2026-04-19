@@ -219,7 +219,7 @@ function EngagementTimeline() {
 
 export default function AiAutomationVaughan() {
   useEffect(() => {
-    document.title = "AI Automation for Small Businesses in Vaughan and the GTA | Barrana AI";
+    document.title = "AI Automation for Service Businesses in Vaughan and the GTA | Barrana AI";
   }, []);
 
   return (
@@ -242,7 +242,7 @@ export default function AiAutomationVaughan() {
             <span style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.6)" }}>⏱ 8 min read</span>
           </div>
           <h1 style={{ ...typography.pageTitle, color: "#fff", margin: 0 }}>
-            AI Automation for Small Businesses in Vaughan and the GTA
+            AI Automation for Service Businesses in Vaughan and the GTA
           </h1>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9375rem", marginTop: "1rem", marginBottom: 0 }}>
             50 Corstate Avenue, Unit 01 — Vaughan, ON L4K 4X2
@@ -259,7 +259,7 @@ export default function AiAutomationVaughan() {
             <SummaryBox>
               <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
               <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-                Barrana.ai provides AI automation services for small businesses in Vaughan and the Greater Toronto Area. Based at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2, Barrana serves businesses with 2–50 staff across professional services, healthcare, trades, and agencies. Services include lead response automation, AI receptionists, client intake, document collection, invoicing, and workflow automation. All implementations are PIPEDA-aware, use fixed pricing, and integrate with existing tools. Free 60-minute Automation Audit available.
+                Barrana.ai provides AI automation services for service businesses in Vaughan and the Greater Toronto Area. Based at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2, Barrana serves businesses with 2–50 staff across professional services, healthcare, trades, and agencies. Services include lead response automation, AI receptionists, client intake, document collection, invoicing, and workflow automation. All implementations are PIPEDA-aware, use fixed pricing, and integrate with existing tools. Free 60-minute Automation Audit available.
               </p>
             </SummaryBox>
 
@@ -267,7 +267,7 @@ export default function AiAutomationVaughan() {
             <div style={{ background: "#F1F5F9", borderRadius: "12px", padding: "1.5rem 1.75rem", marginBottom: "2.5rem" }}>
               <p style={{ fontWeight: 800, color: "#1A1A2E", marginBottom: "0.5rem", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em" }}>Who This Applies To</p>
               <ul style={{ margin: 0, paddingLeft: "1.25rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 1.9 }}>
-                <li>Small business owners in Vaughan, the GTA, and across Ontario with 2–50 staff</li>
+                <li>Business owners in Vaughan, the GTA, and across Ontario with 2–50 staff</li>
                 <li>Professional services firms, clinics, contractors, real estate teams, and agencies</li>
                 <li>Businesses looking for a local automation partner with fixed pricing and no hourly billing</li>
               </ul>
@@ -288,7 +288,7 @@ export default function AiAutomationVaughan() {
             {/* Section 2 — Industries Grid */}
             <SectionHeading>Industries We Serve in the GTA</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-              We work with small businesses across eight industry categories in the GTA. Each has distinct workflow patterns and compliance requirements that shape how we design automation.
+              We work with service businesses across eight industry categories in the GTA. Each has distinct workflow patterns and compliance requirements that shape how we design automation.
             </p>
             <div style={{
               display: "grid",
@@ -426,7 +426,7 @@ export default function AiAutomationVaughan() {
                 {[
                   { label: "Our Services", href: "/services" },
                   { label: "Industries We Serve", href: "/industries" },
-                  { label: "AI Adoption for Small Business", href: "/ai-adoption-small-business" },
+                  { label: "AI Adoption for Service Businesses", href: "/ai-adoption-small-business" },
                   { label: "Automation Planner", href: "/automation-planner" },
                 ].map((link) => (
                   <Link
@@ -459,7 +459,7 @@ export default function AiAutomationVaughan() {
         },
         "telephone": "+1-905-555-0000",
         "url": "https://barrana.ai",
-        "description": "AI automation services for small businesses in Vaughan and the Greater Toronto Area.",
+        "description": "AI automation services for service businesses in Vaughan and the Greater Toronto Area.",
         "areaServed": ["Vaughan", "Toronto", "Markham", "Richmond Hill", "Mississauga", "North York", "Brampton", "Oakville", "Burlington", "Hamilton"],
         "serviceType": ["AI Automation", "Lead Response Automation", "Client Intake Automation", "Workflow Automation"]
       }} />

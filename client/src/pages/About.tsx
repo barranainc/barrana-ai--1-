@@ -80,7 +80,7 @@ export default function About() {
                 Built for Operators,<br />Not Just Optimists
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Barrana.ai is a Toronto-based AI automation consultancy that builds working operational systems for small and medium businesses in the GTA. We have been building software systems for over a decade. We started Barrana.ai because we kept seeing the same problem.
+                Barrana.ai is a Toronto-based AI automation consultancy that builds working operational systems for service businesses in the GTA. We have been building software systems for over a decade. We started Barrana.ai because we kept seeing the same problem.
               </p>
             </div>
           </div>
@@ -111,13 +111,13 @@ export default function About() {
                   We have spent over a decade building software systems for businesses across industries. We have built CRMs, client portals, scheduling systems, document management platforms, and custom integrations for companies ranging from solo operators to mid-market firms.
                 </p>
                 <p>
-                  In that time, we kept seeing the same pattern: small business owners were being sold AI tools with no plan for how those tools would actually fit into their day-to-day operations. They would buy a chatbot, a CRM, an AI writing tool — and none of it would connect. None of it would reduce the actual work their team was doing.
+                  In that time, we kept seeing the same pattern: business owners were being sold AI tools with no plan for how those tools would actually fit into their day-to-day operations. They would buy a chatbot, a CRM, an AI writing tool — and none of it would connect. None of it would reduce the actual work their team was doing.
                 </p>
                 <p>
                   Barrana.ai was created to solve that problem. We are not a software vendor. We are a systems integrator. We take the tools businesses already use and build automation layers that make them work together.
                 </p>
                 <p>
-                  Our focus is on the Toronto and GTA market because we know it. We understand the regulatory environment, the business culture, and the specific operational challenges that small professional service firms face here.
+                  Our focus is on the Toronto and GTA market because we know it. We understand the regulatory environment, the business culture, and the specific operational challenges that professional service firms face here.
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function About() {
               <div className="rounded-2xl p-6" style={{ backgroundColor: "#283891" }}>
                 <h3 className="font-bold text-white mb-3">Who We Work With</h3>
                 <p className="text-blue-200 text-sm leading-relaxed mb-4">
-                  Small and medium businesses in the Toronto and GTA area with 2 to 50 staff. Our clients are typically professional service firms who rely on client relationships and are losing time to manual coordination.
+                  Service businesses in the Toronto and GTA area with 2 to 50 staff. Our clients are typically professional service firms who rely on client relationships and are losing time to manual coordination.
                 </p>
                 <div className="space-y-2">
                   {["Immigration consultants", "Accounting firms", "Law firms", "Contractors", "Clinics", "Real estate teams"].map((item) => (

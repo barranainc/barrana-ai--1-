@@ -241,7 +241,7 @@ function CoverageTimeline() {
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
 export default function AiReceptionistPage() {
-  useEffect(() => { document.title = "AI Receptionist for Small Businesses and Professional Services | Barrana.ai"; }, []);
+  useEffect(() => { document.title = "AI Receptionist for Service Businesses and Professional Services | Barrana.ai"; }, []);
 
   const faqs = [
     { q: "Will callers know they're talking to an AI?", a: "The AI identifies itself as an automated assistant for your business. We do not recommend or build deceptive AI implementations. Transparency is both ethically correct and better for your brand — callers appreciate knowing what they are interacting with." },
@@ -256,7 +256,7 @@ export default function AiReceptionistPage() {
     "@graph": [
       {
         "@type": "Article",
-        "headline": "AI Receptionist for Small Businesses and Professional Services",
+        "headline": "AI Receptionist for Service Businesses and Professional Services",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
         "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
@@ -283,7 +283,7 @@ export default function AiReceptionistPage() {
 
   return (
     <>
-      <SEOHead title="AI Receptionist for Small Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically — without replacing your team." type="article" />
+      <SEOHead title="AI Receptionist for Service Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically — without replacing your team." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -300,7 +300,7 @@ export default function AiReceptionistPage() {
             AI Tools
           </div>
           <h1 style={{ ...typography.pageTitle, color: "#fff", maxWidth: 740, marginBottom: "1rem" }}>
-            AI Receptionist for Small Businesses and Professional Services
+            AI Receptionist for Service Businesses and Professional Services
           </h1>
           <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem" }}>10 min read</div>
         </div>

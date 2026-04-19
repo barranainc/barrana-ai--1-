@@ -363,7 +363,7 @@ export default function Contact() {
               <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: colors.surfaceLight }}>
                 <h3 className="font-bold text-gray-900 mb-3 text-sm">Who This Is For</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                  Small and medium businesses in Toronto and the GTA with 2 to 50 staff who are losing time to manual coordination, slow lead response, or disconnected tools.
+                  Service businesses in Toronto and the GTA with 2 to 50 staff who are losing time to manual coordination, slow lead response, or disconnected tools.
                 </p>
                 <div className="space-y-1.5">
                   {["Immigration consultants", "Accounting firms", "Law firms", "Contractors", "Clinics", "Real estate teams"].map((item) => (
@@ -378,7 +378,7 @@ export default function Contact() {
               <div className="rounded-2xl p-6 border" style={{ borderColor: "rgba(40,56,145,0.08)", backgroundColor: colors.surfaceLight }}>
                 <h3 className="font-bold text-gray-900 mb-3 text-sm">Learn More</h3>
                 <p className="text-xs text-gray-600 leading-relaxed mb-2">
-                  <Link href="/about" className="underline" style={{ color: "#283891" }}>About Barrana</Link> — who we are and how we work with small businesses across the GTA.
+                  <Link href="/about" className="underline" style={{ color: "#283891" }}>About Barrana</Link> — who we are and how we work with service businesses across the GTA.
                 </p>
               </div>
 

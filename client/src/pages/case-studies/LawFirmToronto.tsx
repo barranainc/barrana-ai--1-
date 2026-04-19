@@ -21,7 +21,7 @@ const data: CaseStudyData = {
   intro:
     "Three lawyers. One legal assistant. Family law, real estate closings, and corporate matters. Each lawyer was losing 1.5-2 hours per day to non-billable tasks. At $350/hour average billing rate, that was over $180,000 per year in lost billable capacity.",
   businessDescription:
-    "A boutique law firm in King West, Toronto handling family law, residential real estate closings, and small business corporate matters. Three lawyers (two partners, one associate) with one legal assistant. Using Clio for practice management. 15-20 new matters per month.",
+    "A boutique law firm in King West, Toronto handling family law, residential real estate closings, and business corporate matters. Three lawyers (two partners, one associate) with one legal assistant. Using Clio for practice management. 15-20 new matters per month.",
   problemBody: [
     "Intake was manual and inconsistent. Response times ranged from same-day to 3 days depending on who saw it first.",
     "Each lawyer built invoices manually from time entries. Monthly billing took 4-6 hours per lawyer.",
@@ -137,7 +137,7 @@ const data: CaseStudyData = {
   keyResultCallout:
     "500+ billable hours recovered per year. $175,000+ in billable capacity restored. Billing reduced from hours to minutes per lawyer per month. Client status calls down 65%. Intake response from days to minutes.",
   whyItMatters:
-    "For law firms, every non-billable hour is direct revenue loss. Protecting billable hours through automation has the highest dollar-for-dollar ROI of any investment a small law firm can make.",
+    "For law firms, every non-billable hour is direct revenue loss. Protecting billable hours through automation has the highest dollar-for-dollar ROI of any investment a law firm can make.",
   whyBullets: [
     "Your lawyers spend 1+ hour per day on non-billable admin",
     "Billing is a monthly headache that takes hours per lawyer",

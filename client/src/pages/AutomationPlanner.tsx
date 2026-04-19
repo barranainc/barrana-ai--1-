@@ -227,7 +227,7 @@ function LandingContent({ onStart }: { onStart: () => void }) {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             {[
-              "Small business owners (2–50 staff) who know they have operational bottlenecks but are not sure where to start",
+              "Business owners (2–50 staff) who know they have operational bottlenecks but are not sure where to start",
               "Solo operators drowning in admin who want to understand what can be automated",
               "Office managers and operations leads looking for a systematic approach to reducing manual work",
               "Business owners evaluating AI automation but not ready for a sales call",

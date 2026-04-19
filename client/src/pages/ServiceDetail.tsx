@@ -70,7 +70,7 @@ const serviceData: Record<string, {
     description: "Lead automation ensures that every inbound inquiry receives an immediate, personalized response — regardless of when it comes in.",
     longDescription: [
       "Lead automation ensures that every inbound inquiry receives an immediate, personalized response — regardless of when it comes in. The system captures lead information, qualifies the inquiry, routes it to the right person, and initiates a follow-up sequence without any manual intervention.",
-      "For most small businesses, the biggest revenue leak is not bad marketing or poor service — it is slow response time. Studies consistently show that leads contacted within 5 minutes are 21 times more likely to convert than those contacted after 30 minutes. Most small businesses respond in hours or days.",
+      "For most service businesses, the biggest revenue leak is not bad marketing or poor service — it is slow response time. Studies consistently show that leads contacted within 5 minutes are 21 times more likely to convert than those contacted after 30 minutes. Most service businesses respond in hours or days.",
       "We build lead automation systems that close this gap completely. Every lead gets an immediate, relevant response. Every qualified lead gets a follow-up sequence. Every unbooked lead gets a nurture sequence.",
     ],
     outcomes: [
@@ -94,7 +94,7 @@ const serviceData: Record<string, {
     description: "Operations automation targets the internal coordination tasks that consume staff time without creating client value.",
     longDescription: [
       "Operations automation targets the internal coordination tasks that consume staff time without creating client value: document collection, invoice generation, appointment scheduling, project status updates, and inter-team communication.",
-      "In most small businesses, a significant portion of staff time is spent on coordination — moving information between systems, chasing documents, sending reminders, updating statuses. This work is necessary but not valuable. It can be automated.",
+      "In most service businesses, a significant portion of staff time is spent on coordination — moving information between systems, chasing documents, sending reminders, updating statuses. This work is necessary but not valuable. It can be automated.",
       "We map your internal workflows, identify the highest-volume coordination tasks, and build automation systems that handle them systematically. Your team stops doing administrative work and starts doing the work they were actually hired to do.",
     ],
     outcomes: [

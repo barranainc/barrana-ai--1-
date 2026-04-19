@@ -364,7 +364,7 @@ function StartingPointCards() {
 
 export default function WhatIsAIAutomation() {
   useEffect(() => {
-    document.title = "What Is AI Automation for Small Business? | Barrana AI";
+    document.title = "What Is AI Automation for Service Businesses? | Barrana AI";
   }, []);
 
   return (
@@ -401,7 +401,7 @@ export default function WhatIsAIAutomation() {
             lineHeight: 1.18,
             marginBottom: "0",
           }}>
-            What Is AI Automation for Small Business?
+            What Is AI Automation for Service Businesses?
           </h1>
         </div>
       </section>
@@ -412,7 +412,7 @@ export default function WhatIsAIAutomation() {
           <SummaryBox>
             <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
             <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-              AI automation for small business means connecting your existing software tools — CRM, email, calendar, forms — with intelligent logic that handles repetitive tasks automatically.
+              AI automation for service businesses means connecting your existing software tools — CRM, email, calendar, forms — with intelligent logic that handles repetitive tasks automatically.
               It eliminates the manual middle layer between client actions and business outcomes. You don't need to change your software stack, hire a developer, or understand code.
               Most businesses see full ROI within 4–6 weeks of their first workflow going live.
             </p>
@@ -421,7 +421,7 @@ export default function WhatIsAIAutomation() {
           <SectionHeading>What AI Automation Actually Means</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             When most people hear "AI automation," they imagine robots replacing staff or enterprise-scale software transformations.
-            For small businesses — service firms, professional practices, independent operators — it means something far more practical:
+            For service businesses — service firms, professional practices, independent operators — it means something far more practical:
             getting your software to do the repetitive tasks your team currently does by hand.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
@@ -455,7 +455,7 @@ export default function WhatIsAIAutomation() {
             from <strong>$3,000 to $15,000 CAD</strong> depending on the number of workflows and integrations involved.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-            The ongoing monthly cost for automation platform licenses (Make, Zapier, or similar) is typically $50–$200/month for a small firm.
+            The ongoing monthly cost for automation platform licenses (Make, Zapier, or similar) is typically $50–$200/month for a growing firm.
             Compare that against the cost of a staff member spending 10 hours per week on tasks that automation would eliminate — the math resolves quickly.
           </p>
 

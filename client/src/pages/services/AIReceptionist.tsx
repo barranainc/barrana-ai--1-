@@ -105,7 +105,7 @@ const data: ServicePageData = {
     "Operations where every call requires immediate specialized human judgment",
   ],
 
-  aeoQuestion: "What is an AI receptionist for small business?",
+  aeoQuestion: "What is an AI receptionist for service business?",
   aeoAnswer:
     "An AI receptionist is an automated phone and messaging system that answers incoming calls using natural language, qualifies callers, collects information, books appointments, and routes complex inquiries to human staff. Unlike traditional IVR menus, it holds real conversations, understands context, and takes operational actions including CRM updates and calendar bookings. It operates 24/7 without staffing costs.",
 

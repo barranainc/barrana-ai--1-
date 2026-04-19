@@ -234,7 +234,7 @@ export default function AiAutomationIndustries() {
             <SummaryBox>
               <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
               <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-                The best AI automation for a small business depends on the industry. Accounting firms benefit most from document collection and invoice automation during tax season. Immigration consultants benefit from intake categorisation and document tracking. Law firms benefit from matter intake and billing automation. Clinics benefit from booking reminders and recall campaigns. Contractors benefit from lead response and after-hours capture. Each industry has unique workflows, compliance requirements, and client expectations that determine the right starting point.
+                The best AI automation for a service business depends on the industry. Accounting firms benefit most from document collection and invoice automation during tax season. Immigration consultants benefit from intake categorisation and document tracking. Law firms benefit from matter intake and billing automation. Clinics benefit from booking reminders and recall campaigns. Contractors benefit from lead response and after-hours capture. Each industry has unique workflows, compliance requirements, and client expectations that determine the right starting point.
               </p>
             </SummaryBox>
 
@@ -267,7 +267,7 @@ export default function AiAutomationIndustries() {
             {/* Accounting */}
             <SectionHeading>Accounting Firms</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Accounting firms face an acute seasonal problem: the months of January through April generate a concentrated volume of document requests, status questions, and invoice cycles that strains small teams. Staff spend disproportionate time chasing clients for T4s and receipts, sending the same follow-up messages, and manually updating tracking spreadsheets. This is the industry's signature friction point.
+              Accounting firms face an acute seasonal problem: the months of January through April generate a concentrated volume of document requests, status questions, and invoice cycles that strains growing teams. Staff spend disproportionate time chasing clients for T4s and receipts, sending the same follow-up messages, and manually updating tracking spreadsheets. This is the industry's signature friction point.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
               Automation directly addresses the document collection and follow-up loop. When a client is assigned a file, the system automatically sends a personalised document checklist, sequences follow-up reminders at defined intervals, and flags overdue responses to the assigned accountant — without manual intervention. Invoice generation and sending can also be automated once the engagement is complete, with approval gates ensuring no invoice goes out without CPA review.
@@ -394,7 +394,7 @@ export default function AiAutomationIndustries() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "AI Automation by Industry: What Works for Your Business",
-        "description": "The best AI automation for a small business depends on the industry. Accounting firms benefit most from document collection and invoice automation. Immigration consultants benefit from intake categorisation. Law firms benefit from matter intake and billing automation.",
+        "description": "The best AI automation for a service business depends on the industry. Accounting firms benefit most from document collection and invoice automation. Immigration consultants benefit from intake categorisation. Law firms benefit from matter intake and billing automation.",
         "author": {
           "@type": "Organization",
           "name": "Barrana.ai",

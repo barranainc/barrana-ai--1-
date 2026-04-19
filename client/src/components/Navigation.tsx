@@ -206,7 +206,7 @@ export default function Navigation() {
               })}
             </div>
             <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
-              <span className="text-xs text-gray-400">All automation services for GTA small businesses</span>
+              <span className="text-xs text-gray-400">All automation services for GTA service businesses</span>
               <Link href="/services" className="text-xs font-600 text-[#283891] hover:text-[#7E0F4A] transition-colors">
                 View all services →
               </Link>

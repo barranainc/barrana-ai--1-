@@ -39,7 +39,7 @@ const categories = [
     tools: [
       { name: "QuickBooks", emoji: "🟩", desc: "Automated invoicing and payment sync" },
       { name: "FreshBooks", emoji: "🟦", desc: "Invoice delivery and client billing flows" },
-      { name: "Wave", emoji: "🌊", desc: "SMB accounting with automated invoice triggers" },
+      { name: "Wave", emoji: "🌊", desc: "Service business accounting with automated invoice triggers" },
       { name: "Stripe", emoji: "💳", desc: "Payment collection and subscription management" },
     ],
   },

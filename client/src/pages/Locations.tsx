@@ -7,10 +7,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const locations = [
-  { slug: "toronto", name: "Toronto", description: "AI automation for small businesses across Toronto's diverse commercial districts and professional services sector." },
+  { slug: "toronto", name: "Toronto", description: "AI automation for service businesses across Toronto's diverse commercial districts and professional services sector." },
   { slug: "vaughan", name: "Vaughan", description: "Serving Vaughan's growing professional services community with AI-powered workflow automation." },
   { slug: "richmond-hill", name: "Richmond Hill", description: "AI automation for Richmond Hill's professional services firms and service-based businesses." },
-  { slug: "markham", name: "Markham", description: "Workflow automation for Markham's technology-forward small business community." },
+  { slug: "markham", name: "Markham", description: "Workflow automation for Markham's technology-forward business community." },
   { slug: "mississauga", name: "Mississauga", description: "AI automation systems for Mississauga's diverse professional services and contractor community." },
   { slug: "north-york", name: "North York", description: "Serving North York's professional services firms with AI-powered operational automation." },
 ];
@@ -28,7 +28,7 @@ export default function Locations() {
               AI Automation Services Across the GTA
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Barrana.ai is based in Vaughan and serves small and medium businesses across the Greater Toronto Area. We work on-site and remotely across all GTA cities.
+              Barrana.ai is based in Vaughan and serves service businesses across the Greater Toronto Area. We work on-site and remotely across all GTA cities.
             </p>
           </div>
         </div>

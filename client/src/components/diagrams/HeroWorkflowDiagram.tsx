@@ -52,7 +52,7 @@ export default function HeroWorkflowDiagram() {
         viewBox="0 0 800 420"
         className="w-full h-auto"
         style={{ minHeight: 260 }}
-        aria-label="AI automation workflow diagram for small business Toronto"
+        aria-label="AI automation workflow diagram for service businesses Toronto"
       >
         <defs>
           {edges.map((e, i) => {

@@ -359,7 +359,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/markham/accounting-firms",
     h1: "AI Automation for Accounting Firms in Markham",
     metaTitle: "AI Automation for Accounting Firms in Markham | Barrana.ai",
-    metaDescription: "Markham CPA firms serving the tech corridor\u2019s SMBs automate document collection, onboarding, and invoicing \u2014 recovering 40\u201360 hours per month in admin time.",
+    metaDescription: "Markham CPA firms serving the tech corridor\u2019s service businesses automate document collection, onboarding, and invoicing \u2014 recovering 40\u201360 hours per month in admin time.",
     targetKeyword: "AI automation accounting firm Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech companies expect instant everything from their service providers. Your accounting firm should not be the exception. Automate the admin, match the digital expectations of your tech corridor clients.",
@@ -367,7 +367,7 @@ export const localPages: LocalPageData[] = [
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Markham",
-      body: "A Markham CPA firm serving 50+ tech/SMB clients: document chasing $35,000/year. Client onboarding friction (tech clients expect instant portal access) $15,000/year in lost prospects. Manual reporting $12,000/year. Total: $62,000\u2013$75,000/year.",
+      body: "A Markham CPA firm serving 50+ tech/service business clients: document chasing $35,000/year. Client onboarding friction (tech clients expect instant portal access) $15,000/year in lost prospects. Manual reporting $12,000/year. Total: $62,000\u2013$75,000/year.",
     },
     automateSection: {
       title: "What We Automate for Accounting Firms in Markham",

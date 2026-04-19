@@ -220,7 +220,7 @@ export default function Services() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "AI Automation for Small Business",
+    "serviceType": "AI Automation for Service Businesses",
     "provider": {
       "@type": "Organization",
       "name": "Barrana.ai",
@@ -246,7 +246,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-white">
       <SEOHead
-        title="AI Automation Services for Small Business | Barrana.ai"
+        title="AI Automation Services for Service Businesses | Barrana.ai"
         description="Lead response, client intake, document collection, invoicing, and workflow automation for Toronto and GTA service businesses. Fixed pricing. No hourly billing."
         type="website"
       />

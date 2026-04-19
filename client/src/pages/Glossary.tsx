@@ -1,9 +1,9 @@
 import { Link } from "wouter";
 import { useState } from "react";
 const terms = [
-  { term: "AI Agent", definition: "A software system that can receive a goal, break it into steps, use tools to complete those steps, and adapt based on results. In a small business context, AI agents handle structured, repeatable interactions like lead response, intake, and scheduling." },
+  { term: "AI Agent", definition: "A software system that can receive a goal, break it into steps, use tools to complete those steps, and adapt based on results. In a service business context, AI agents handle structured, repeatable interactions like lead response, intake, and scheduling." },
   { term: "Automation Platform", definition: "Software that connects your business tools and executes automation logic. Common platforms include Make (Integromat), Zapier, and n8n. These platforms act as the 'glue' between your CRM, email, calendar, and other tools." },
-  { term: "CRM (Customer Relationship Management)", definition: "Software that stores and manages client and lead information. Common CRMs for small businesses include HubSpot, GoHighLevel, and Salesforce. Automation systems typically use the CRM as the central record of client data." },
+  { term: "CRM (Customer Relationship Management)", definition: "Software that stores and manages client and lead information. Common CRMs for service businesses include HubSpot, GoHighLevel, and Salesforce. Automation systems typically use the CRM as the central record of client data." },
   { term: "Document Collection Automation", definition: "An automated system that sends document request checklists to clients, tracks which documents have been received, sends reminders for outstanding items, and escalates overdue requests. Eliminates manual document chasing." },
   { term: "Fixed-Price Engagement", definition: "A project pricing model where the total cost is agreed upon before work begins. All Barrana.ai engagements are fixed-price, meaning you know exactly what you are getting and what it costs before we start." },
   { term: "Integration", definition: "A connection between two software tools that allows them to share data automatically. For example, an integration between your intake form and your CRM means that form submissions automatically create CRM records without manual data entry." },
@@ -28,8 +28,8 @@ export default function Glossary() {
           <div className="breadcrumb"><Link href="/">Home</Link><span className="breadcrumb-sep">/</span><span>Glossary</span></div>
           <div className="max-w-3xl">
             <div className="eyebrow">Glossary</div>
-            <h1 className="font-extrabold mb-4" style={{ color: "#1F2937" }}>AI Automation Glossary for Small Business</h1>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: "#6B7280" }}>Plain-language definitions of AI automation terms for small business owners. No jargon, no developer-speak.</p>
+            <h1 className="font-extrabold mb-4" style={{ color: "#1F2937" }}>AI Automation Glossary for Service Businesses</h1>
+            <p className="text-lg leading-relaxed mb-6" style={{ color: "#6B7280" }}>Plain-language definitions of AI automation terms for business owners. No jargon, no developer-speak.</p>
             <input type="text" placeholder="Search terms..." value={search} onChange={e => setSearch(e.target.value)} className="w-full max-w-md px-4 py-3 rounded-xl border text-sm" style={{ borderColor: "rgba(26,82,118,0.2)", outline: "none" }} />
           </div>
         </div>

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "Invoice Automation for Small Business",
+  title: "Invoice Automation for Service Business",
   description:
     "Automate invoice generation, delivery, and payment reminders. Invoices trigger on project completion. Reminders at 7/14/21 days. Integrated with QuickBooks.",
 
@@ -103,7 +103,7 @@ const data: ServicePageData = {
     "Companies with complex custom billing that cannot be standardized",
   ],
 
-  aeoQuestion: "What is invoice automation for small business?",
+  aeoQuestion: "What is invoice automation for service business?",
   aeoAnswer:
     "Invoice automation uses trigger-based logic to generate, send, and follow up on invoices without manual intervention. When a project status changes to complete in your management system, the automation generates an invoice in your accounting software (QuickBooks, Xero), sends it to the client with a payment link, and initiates reminder sequences at defined intervals for unpaid invoices. This eliminates billing delays caused by manual invoice creation.",
 

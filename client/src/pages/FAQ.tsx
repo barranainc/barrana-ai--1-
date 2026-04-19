@@ -10,8 +10,8 @@ const faqCategories = [
   {
     category: "About Barrana.ai",
     faqs: [
-      { q: "What does Barrana.ai do?", a: "Barrana.ai builds AI automation systems for small and medium businesses in Toronto and the GTA. We design, build, and deploy automation that handles lead response, client intake, document collection, appointment scheduling, invoicing, and operational reporting — so business owners and their teams can focus on client work instead of coordination." },
-      { q: "Who do you work with?", a: "We work with small and medium businesses in the Toronto and GTA area with 2 to 50 staff. Our clients are typically professional service firms — immigration consultants, accounting firms, law firms, contractors, physiotherapy clinics, and real estate teams — who rely on client relationships and are losing time to manual coordination." },
+      { q: "What does Barrana.ai do?", a: "Barrana.ai builds AI automation systems for service businesses in Toronto and the GTA. We design, build, and deploy automation that handles lead response, client intake, document collection, appointment scheduling, invoicing, and operational reporting — so business owners and their teams can focus on client work instead of coordination." },
+      { q: "Who do you work with?", a: "We work with service businesses in the Toronto and GTA area with 2 to 50 staff. Our clients are typically professional service firms — immigration consultants, accounting firms, law firms, contractors, physiotherapy clinics, and real estate teams — who rely on client relationships and are losing time to manual coordination." },
       { q: "Where are you based?", a: "We are based in Vaughan, Ontario, and serve businesses across the Greater Toronto Area including Toronto, Markham, Richmond Hill, Mississauga, and North York." },
     ],
   },
@@ -69,7 +69,7 @@ export default function FAQ() {
               Questions We Hear From Every Client
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: "#6B7280" }}>
-              Answers to the most common questions about AI automation for small businesses, our process, pricing, and results. If your question is not here, book a free audit and we will answer it directly.
+              Answers to the most common questions about AI automation for service businesses, our process, pricing, and results. If your question is not here, book a free audit and we will answer it directly.
             </p>
           </div>
         </div>

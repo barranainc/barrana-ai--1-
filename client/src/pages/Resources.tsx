@@ -24,19 +24,19 @@ function useReveal(threshold = 0.15) {
 
 // ── Pillar guides (6) ────────────────────────────────────────────────────────
 const pillarGuides = [
-  { emoji: "🚀", category: "Getting Started", title: "AI Adoption for Small Businesses: A Practical Guide", desc: "What AI adoption actually means for an SMB, the five stages, what to automate, and what to keep human. Includes cost ranges and common mistakes.", readTime: "15 min read", href: "/ai-adoption-small-business", color: "#283891" },
-  { emoji: "⚙️", category: "Framework", title: "Business Workflow Automation for SMBs: The Complete Guide", desc: "The 8 highest-impact workflows to automate, how they connect into a system, and a phased approach to building your automation stack.", readTime: "12 min read", href: "/workflow-automation-smb", color: "#7E0F4A" },
-  { emoji: "📞", category: "Service Guide", title: "AI Receptionist for Small Businesses and Professional Services", desc: "How AI receptionists work, what they cost vs a human, when to escalate calls, and honest coverage comparisons by industry.", readTime: "10 min read", href: "/ai-receptionist", color: "#283891" },
+  { emoji: "🚀", category: "Getting Started", title: "AI Adoption for Service Businesses: A Practical Guide", desc: "What AI adoption actually means for a service business, the five stages, what to automate, and what to keep human. Includes cost ranges and common mistakes.", readTime: "15 min read", href: "/ai-adoption-small-business", color: "#283891" },
+  { emoji: "⚙️", category: "Framework", title: "Business Workflow Automation for Service Businesses: The Complete Guide", desc: "The 8 highest-impact workflows to automate, how they connect into a system, and a phased approach to building your automation stack.", readTime: "12 min read", href: "/workflow-automation-smb", color: "#7E0F4A" },
+  { emoji: "📞", category: "Service Guide", title: "AI Receptionist for Service Businesses and Professional Services", desc: "How AI receptionists work, what they cost vs a human, when to escalate calls, and honest coverage comparisons by industry.", readTime: "10 min read", href: "/ai-receptionist", color: "#283891" },
   { emoji: "🧑‍💼", category: "Governance", title: "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge", desc: "How to design automation systems with approval gates, escalation paths, and human decision points — the Control Layer explained.", readTime: "12 min read", href: "/human-in-the-loop-ai", color: "#7E0F4A" },
   { emoji: "🏭", category: "Industry Guide", title: "AI Automation by Industry: What Works for Your Business", desc: "Hub page linking to industry-specific automation playbooks for accountants, immigration consultants, law firms, clinics, contractors, and agencies.", readTime: "8 min read", href: "/ai-automation-industries", color: "#283891" },
-  { emoji: "📍", category: "Local", title: "AI Automation for Small Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and free Automation Audit for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
+  { emoji: "📍", category: "Local", title: "AI Automation for Service Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and free Automation Audit for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
 ];
 
 // ── Decision / insights pages (5) ────────────────────────────────────────────
 const decisionGuides = [
-  { category: "Decision Guide", title: "What Should a Small Business Automate First?", desc: "The 5 highest-ROI starting points ranked, with a priority pyramid and before/after metrics for lead response.", readTime: "10 min read", href: "/insights/what-to-automate-first", color: "#283891" },
+  { category: "Decision Guide", title: "What Should a Service Business Automate First?", desc: "The 5 highest-ROI starting points ranked, with a priority pyramid and before/after metrics for lead response.", readTime: "10 min read", href: "/insights/what-to-automate-first", color: "#283891" },
   { category: "Assessment", title: "How to Know If Your Business Is Automation-Ready", desc: "The 5 readiness signals, a live readiness checker, and what to fix before you start automating.", readTime: "8 min read", href: "/insights/automation-readiness", color: "#7E0F4A" },
-  { category: "Decision Guide", title: "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools", desc: "Why the hybrid approach — off-the-shelf tools connected by a custom automation layer — wins for most SMBs.", readTime: "9 min read", href: "/insights/build-vs-buy", color: "#283891" },
+  { category: "Decision Guide", title: "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools", desc: "Why the hybrid approach — off-the-shelf tools connected by a custom automation layer — wins for most service businesses.", readTime: "9 min read", href: "/insights/build-vs-buy", color: "#283891" },
   { category: "Trust Builder", title: "When AI Is Not the Answer: 7 Signs You're Not Ready", desc: "The 7 signs that automation won't solve your problem yet, and what to fix first before you build.", readTime: "7 min read", href: "/insights/when-ai-is-not-the-answer", color: "#7E0F4A" },
   { category: "Decision Guide", title: "Automation vs Delegation: What Business Owners Get Wrong", desc: "A 2×2 decision matrix for knowing when to automate, when to delegate, and when to do both with AI assist.", readTime: "8 min read", href: "/insights/automation-vs-delegation", color: "#283891" },
 ];
@@ -52,8 +52,8 @@ const workflowGuides = [
 const guides = [
   {
     category: "Getting Started",
-    title: "What Is AI Automation for Small Business?",
-    description: "A plain-language explanation of what AI automation actually means in a small business context, how it differs from software subscriptions, and what it can realistically do for your operations.",
+    title: "What Is AI Automation for Service Businesses?",
+    description: "A plain-language explanation of what AI automation actually means in a service business context, how it differs from software subscriptions, and what it can realistically do for your operations.",
     readTime: "8 min read",
     color: "#283891",
     href: "/resources/what-is-ai-automation",
@@ -136,7 +136,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Every engagement is fixed-price. After the free Automation Audit, we provide a written proposal with a clear scope, timeline, and price. Most small business automation systems range from $2,500 to $12,000 depending on complexity.",
+    a: "Every engagement is fixed-price. After the free Automation Audit, we provide a written proposal with a clear scope, timeline, and price. Most service business automation systems range from $2,500 to $12,000 depending on complexity.",
   },
   {
     q: "Is my client data safe?",
@@ -260,7 +260,7 @@ export default function Resources() {
             <div className="section-divider mb-4"><span className="section-label">Pillar Guides</span></div>
             <div className="grid lg:grid-cols-2 gap-4 items-end mb-10">
               <h2 className="text-3xl font-extrabold" style={{ color: "#111827" }}>Foundation Guides</h2>
-              <p className="text-gray-500 leading-relaxed">Comprehensive guides to AI adoption, workflow automation, and governance for small businesses.</p>
+              <p className="text-gray-500 leading-relaxed">Comprehensive guides to AI adoption, workflow automation, and governance for service businesses.</p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

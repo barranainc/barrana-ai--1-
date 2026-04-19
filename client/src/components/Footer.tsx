@@ -68,7 +68,7 @@ export default function Footer() {
               <span className="sr-only">Barrana.ai</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-xs">
-              AI automation systems for small and medium businesses in Toronto and the GTA. We build the operational backbone that lets your team grow without burning out.
+              AI automation systems for service businesses in Toronto and the GTA. We build the operational backbone that lets your team grow without burning out.
             </p>
             {/* Contact details */}
             <div className="space-y-2.5 mb-6">
