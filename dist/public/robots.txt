@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /blog/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /tag/
+Disallow: /category/
+Disallow: /projects/
+Disallow: /2025/
+Disallow: /2026/
+Disallow: /neuros_case_study_tag/
 Sitemap: https://barrana.ai/sitemap.xml

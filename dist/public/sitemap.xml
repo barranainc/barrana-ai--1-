@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://barrana.ai/</loc>
@@ -271,7 +271,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/case-studies/law-firm-toronto</loc>
+    <loc>https://barrana.ai/case-studies/law-firm-canadian</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -301,7 +301,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/case-studies/property-management-toronto</loc>
+    <loc>https://barrana.ai/case-studies/property-management-canadian</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -325,7 +325,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto</loc>
+    <loc>https://barrana.ai/locations/canadian</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -403,7 +403,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto/dental-clinics</loc>
+    <loc>https://barrana.ai/locations/canadian/dental-clinics</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -439,7 +439,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto/law-firms</loc>
+    <loc>https://barrana.ai/locations/canadian/law-firms</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -451,7 +451,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto/immigration-consultants</loc>
+    <loc>https://barrana.ai/locations/canadian/immigration-consultants</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -475,7 +475,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto/accounting-firms</loc>
+    <loc>https://barrana.ai/locations/canadian/accounting-firms</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -511,7 +511,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://barrana.ai/locations/toronto/contractors</loc>
+    <loc>https://barrana.ai/locations/canadian/contractors</loc>
     <lastmod>2026-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
