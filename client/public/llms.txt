@@ -1,0 +1,26 @@
+# Barrana.ai
+
+> Barrana is a Canadian AI automation company founded by Ikram Rana. We connect the tools your business already uses, so routine work gets done without someone remembering every step, copying every detail, or chasing every follow-up.
+
+## Start here
+
+- [Homepage](https://barrana.ai/): Workflow-first overview and operating principles.
+- [Start Here](https://barrana.ai/start-here): Orientation for choosing a useful first workflow.
+- [Services](https://barrana.ai/services): Automation capabilities and implementation areas.
+- [Industries](https://barrana.ai/industries): Workflow patterns by business context.
+- [Contact](https://barrana.ai/contact): Request an initial workflow conversation.
+
+## Practical guidance
+
+- [What to Automate First](https://barrana.ai/insights/what-to-automate-first)
+- [When AI Is Not the Answer](https://barrana.ai/insights/when-ai-is-not-the-answer)
+- [Human in the Loop AI](https://barrana.ai/human-in-the-loop-ai)
+- [Governance](https://barrana.ai/governance)
+- [Lead Intake Workflow](https://barrana.ai/workflows/lead-intake)
+- [Client Onboarding Workflow](https://barrana.ai/workflows/client-onboarding)
+
+## Content boundaries
+
+- Illustrative scenarios are not client results.
+- Outcomes depend on the workflow, data, tools, adoption, and operating context.
+- The initial conversation is for fit and scope. It is not a promise of a free strategy, solution design, implementation plan, audit deliverable, or price quote.

@@ -16,6 +16,7 @@ import PlannerProgress from "./PlannerProgress";
 
 interface Props {
   initialIndustry?: Industry;
+  initialState?: PlannerState;
   onComplete?: (state: PlannerState) => void;
 }
 
@@ -38,8 +39,8 @@ function getProgressStep(currentStep: number): number {
 
 const stepVariants = {
   enter: { opacity: 0, x: 20 },
-  center: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -20 },
+  center: { opacity: 1, x: 0, transition: { duration: 0.3, ease: "easeOut" as const } },
+  exit: { opacity: 0, x: -20, transition: { duration: 0.2, ease: "easeIn" as const } },
 };
 
 function AnalysisLoader() {
@@ -141,8 +142,8 @@ function AnalysisLoader() {
   );
 }
 
-export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
-  const { state, dispatch, nextStep, prevStep } = usePlannerState(initialIndustry);
+export default function PlannerWizard({ initialIndustry, initialState, onComplete }: Props) {
+  const { state, dispatch, nextStep, prevStep } = usePlannerState(initialIndustry, initialState);
   const { currentStep } = state;
   const [showAnalysis, setShowAnalysis] = useState(false);
 
@@ -302,10 +303,6 @@ export default function PlannerWizard({ initialIndustry, onComplete }: Props) {
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{
-            enter: { duration: 0.3, ease: "easeOut" },
-            exit: { duration: 0.2, ease: "easeIn" },
-          }}
         >
           {renderStep()}
         </motion.div>

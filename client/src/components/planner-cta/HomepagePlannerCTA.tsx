@@ -61,7 +61,7 @@ function PlannerPreviewCard({ visible }: { visible: boolean }) {
   const [stepIdx, setStepIdx] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [typed, setTyped] = useState("");
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
     if (!visible) return;

@@ -13,7 +13,11 @@ import { useIsMobile } from "@/hooks/useMobile";
 export type WorkflowStepType = "trigger" | "action" | "ai" | "outcome";
 
 export interface WorkflowStep {
+  id?: string;
   label: string;
+  sublabel?: string;
+  icon?: string;
+  color?: string;
   type: WorkflowStepType;
 }
 

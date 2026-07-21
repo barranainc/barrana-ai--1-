@@ -287,7 +287,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
   const industryLabel = getIndustryLabel(state.industry);
   const toolNames = state.tools.slice(0, 2).join(" and ") || "your existing tools";
 
-  const beforeAfterBullets: [string, string][] = {
+  const beforeAfterBullets: [string, string][] = ({
     "inbound-enquiries": [["Response time", "Hours/days → Under 90 seconds"], ["After-hours coverage", "0% → 100% automated"], ["Lead record creation", "Manual → Instant and automatic"]],
     "phone-calls": [["Missed call rate", "30–50% during busy periods → Near zero"], ["After-hours booking", "Unavailable → 24/7 self-service"]],
     "lead-qualification": [["Time on unqualified calls", "High → Near zero"], ["Response to qualified leads", "Days → Same day"]],
@@ -302,7 +302,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
     "reporting": [["Report preparation time", "4–8 hours → Under 30 minutes"], ["Delivery consistency", "Variable → Always on time"]],
     "review-requests": [["Review request coverage", "10–15% of clients → 80–90%"], ["Review volume", "Low → Consistent growth"]],
     "scheduling-reminders": [["No-show rate", "15–25% → 5–8%"], ["Revenue lost to no-shows", "Significant → Substantially reduced"]],
-  }[opp.workflowId] ?? [["Before automation", "Manual, time-consuming"], ["After automation", "Automated and consistent"]];
+  } as Record<string, [string, string][]>)[opp.workflowId] ?? [["Before automation", "Manual, time-consuming"], ["After automation", "Automated and consistent"]];
 
   return (
     <div

@@ -106,10 +106,10 @@ export function getDeepDiveWorkflows(state: PlannerState): WorkflowId[] {
   return intersection.slice(0, 3);
 }
 
-export function usePlannerState(initialIndustry?: Industry) {
-  const initial = initialIndustry
+export function usePlannerState(initialIndustry?: Industry, initialState?: PlannerState) {
+  const initial = initialState ?? (initialIndustry
     ? { ...INITIAL_STATE, industry: initialIndustry }
-    : INITIAL_STATE;
+    : INITIAL_STATE);
 
   const [state, dispatch] = useReducer(plannerReducer, initial);
 

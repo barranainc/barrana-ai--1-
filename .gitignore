@@ -1,5 +1,8 @@
 node_modules/
+.pnpm-store/
 dist/
+.DS_Store
+/barrana.ai.zip
 .env
 .env.local
 .env.*.local
