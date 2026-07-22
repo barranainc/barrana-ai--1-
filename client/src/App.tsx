@@ -6,6 +6,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import RouteMetadataFallback from "./components/RouteMetadataFallback";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
@@ -116,6 +117,7 @@ import CampaignRealEstate from "./pages/campaign/CampaignRealEstate";
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
+      <RouteMetadataFallback />
       <Navigation />
       <main id="main-content" className="site-main" tabIndex={-1} style={{ paddingTop: "70px" }}>{children}</main>
       <Footer />

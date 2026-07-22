@@ -16,7 +16,7 @@ interface SEOHeadProps {
 }
 
 const BASE_URL = "https://barrana.ai";
-const DEFAULT_IMAGE = BASE_URL + "/og-image.png";
+const DEFAULT_IMAGE = BASE_URL + "/barrana-logo.png";
 const SITE_NAME = "Barrana.ai";
 
 export default function SEOHead({ title, description, type = "website", image }: SEOHeadProps) {
