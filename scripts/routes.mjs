@@ -201,3 +201,89 @@ export const routes = [
   { path: "/workflows/client-onboarding", priority: 0.6, changefreq: "monthly" },
   { path: "/workflows/document-collection", priority: 0.6, changefreq: "monthly" },
 ];
+
+/**
+ * Valid application routes that should be emitted as static pages but should
+ * not be added to the sitemap. This preserves direct links and campaign URLs
+ * while keeping the existing indexable route inventory unchanged.
+ */
+export const prerenderOnlyRoutes = [
+  // Legacy detail pages backed by in-app content.
+  "/services/lead-automation",
+  "/services/operations-automation",
+  "/industries/clinics",
+  "/industries/real-estate",
+
+  // Knowledge articles.
+  "/knowledge/lead-automation",
+  "/knowledge/client-intake-automation",
+  "/knowledge/ai-agents-for-small-business",
+  "/knowledge/workflow-automation-explained",
+  "/knowledge/top-25-automated-workflows",
+
+  // Workflow and industry playbooks.
+  "/playbooks/lead-response",
+  "/playbooks/booking-reminders",
+  "/playbooks/client-onboarding",
+  "/playbooks/document-collection",
+  "/playbooks/invoice-automation",
+  "/playbooks/after-hours-capture",
+  "/playbooks/immigration-consultant",
+  "/playbooks/accounting-firm",
+  "/playbooks/contractor",
+  "/playbooks/physiotherapy-clinic",
+
+  // Published operator links plus data-backed archive articles.
+  "/operator-insights/response-time-systems-problem",
+  "/operator-insights/hidden-cost-manual-intake",
+  "/operator-insights/admin-hours-annual-cost",
+  "/operator-insights/why-follow-up-fails",
+  "/operator-insights/control-layer-boundaries",
+  "/operator-insights/immigration-intake-field-report",
+  "/operator-insights/immigration-consultant-automation",
+  "/operator-insights/accounting-firm-automation",
+  "/operator-insights/contractor-lead-automation",
+  "/operator-insights/physiotherapy-no-show-reduction",
+  "/operator-insights/law-firm-intake-automation",
+
+  // Integration detail pages.
+  "/integrations/make-integromat",
+  "/integrations/zapier",
+  "/integrations/hubspot",
+  "/integrations/jobber",
+  "/integrations/quickbooks",
+  "/integrations/calendly",
+  "/integrations/jotform",
+  "/integrations/gohighlevel",
+  "/integrations/twilio",
+  "/integrations/google-workspace",
+
+  // Local SEO matrix pages.
+  "/ai-automation/toronto",
+  "/ai-automation/vaughan",
+  "/ai-automation/markham",
+  "/ai-automation/richmond-hill",
+  "/ai-automation/mississauga",
+  "/ai-automation/north-york",
+  "/ai-automation/brampton",
+  "/ai-automation/scarborough",
+  "/ai-automation/oakville",
+  "/ai-automation/etobicoke",
+  "/ai-automation/toronto/immigration-consultants",
+  "/ai-automation/toronto/accounting-firms",
+  "/ai-automation/toronto/contractors",
+
+  // Noindex campaign landing pages.
+  "/campaign/contractors",
+  "/campaign/dental",
+  "/campaign/law-firms",
+  "/campaign/real-estate",
+];
+
+export const errorRoutes = ["/404"];
+
+export const prerenderPaths = [
+  ...routes.map((route) => route.path),
+  ...prerenderOnlyRoutes,
+  ...errorRoutes,
+];

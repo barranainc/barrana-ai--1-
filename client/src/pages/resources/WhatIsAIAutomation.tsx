@@ -300,10 +300,10 @@ function ROITimeline() {
 
 const startingPoints = [
   { emoji: "📥", title: "Client Intake", benefit: "Cut intake time from days to minutes", href: "/services/client-intake-automation" },
-  { emoji: "📧", title: "Email Follow-up", benefit: "Never miss a lead with automated sequences", href: "/services/email-automation" },
-  { emoji: "📅", title: "Appointment Booking", benefit: "Fill your calendar without back-and-forth", href: "/services/appointment-booking-automation" },
-  { emoji: "🧾", title: "Invoice & Payments", benefit: "Get paid faster with automated billing", href: "/services/invoice-payment-automation" },
-  { emoji: "📊", title: "Reporting & Dashboards", benefit: "Real-time insights without manual data pulls", href: "/services/reporting-dashboard-automation" },
+  { emoji: "📧", title: "Email Follow-up", benefit: "Never miss a lead with automated sequences", href: "/services/lead-response-automation" },
+  { emoji: "📅", title: "Appointment Booking", benefit: "Fill your calendar without back-and-forth", href: "/services/appointment-automation" },
+  { emoji: "🧾", title: "Invoice & Payments", benefit: "Get paid faster with automated billing", href: "/services/invoice-automation" },
+  { emoji: "📊", title: "Reporting & Dashboards", benefit: "Real-time insights without manual data pulls", href: "/services/operations-reporting" },
 ];
 
 function StartingPointCards() {

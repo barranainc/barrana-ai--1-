@@ -20,10 +20,12 @@ const INDUSTRY_CITY_DATA: Record<string, { industry: string; city: string; intro
 };
 
 export default function LocalSEOPage() {
-  const params = useParams<{ slug: string }>();
-  const slug = params.slug || "";
-  const cityData = CITY_DATA[slug];
-  const industryCityData = INDUSTRY_CITY_DATA[slug];
+  const params = useParams<{ city?: string; industry?: string }>();
+  const citySlug = params.city || "";
+  const industrySlug = params.industry || "";
+  const cityData = industrySlug ? undefined : CITY_DATA[`ai-automation-${citySlug}`];
+  const singularIndustry = industrySlug.endsWith("s") ? industrySlug.slice(0, -1) : industrySlug;
+  const industryCityData = INDUSTRY_CITY_DATA[`${singularIndustry}-automation-${citySlug}`];
 
   if (cityData) {
     return (
