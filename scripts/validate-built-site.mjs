@@ -5,6 +5,7 @@ import { routes } from "./routes.mjs";
 
 const root = "dist/public";
 const errors = [];
+const routeTitles = new Map();
 
 for (const required of ["index.html", "sitemap.xml", "robots.txt", "llms.txt"]) {
   if (!existsSync(join(root, required))) errors.push(`Built site is missing ${required}.`);
@@ -14,13 +15,43 @@ for (const route of routes) {
   const output = route.path === "/"
     ? join(root, "index.html")
     : join(root, route.path, "index.html");
-  if (!existsSync(output)) errors.push(`Missing prerendered route: ${route.path}`);
+  if (!existsSync(output)) {
+    errors.push(`Missing prerendered route: ${route.path}`);
+    continue;
+  }
+
+  const html = await readFile(output, "utf8");
+  const expectedCanonical = `https://barrana.ai${route.path}`;
+  const canonical = html.match(/<link[^>]+rel="canonical"[^>]+href="([^"]+)"/i)?.[1];
+  const title = html.match(/<title>([^<]+)<\/title>/i)?.[1]?.trim();
+  const description = html.match(/<meta[^>]+name="description"[^>]+content="([^"]*)"/i)?.[1]?.trim();
+
+  if (canonical !== expectedCanonical) {
+    errors.push(`Incorrect canonical for ${route.path}: ${canonical || "missing"}`);
+  }
+
+  if (!title) {
+    errors.push(`Missing title for ${route.path}`);
+  } else {
+    routeTitles.set(route.path, title);
+  }
+
+  if (!description) {
+    errors.push(`Missing meta description for ${route.path}`);
+  }
 }
 
 const home = await readFile(join(root, "index.html"), "utf8");
 const contact = await readFile(join(root, "contact/index.html"), "utf8");
 const llms = await readFile(join(root, "llms.txt"), "utf8");
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
+const homeTitle = routeTitles.get("/");
+
+for (const [routePath, title] of routeTitles) {
+  if (routePath !== "/" && title === homeTitle) {
+    errors.push(`Route reuses the homepage title: ${routePath}`);
+  }
+}
 
 if (!home.includes("Your Most Expensive Employee Is Doing Data Entry.")) {
   errors.push("Prerendered homepage is missing the approved headline.");
