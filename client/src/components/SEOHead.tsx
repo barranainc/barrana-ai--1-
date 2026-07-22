@@ -13,13 +13,14 @@ interface SEOHeadProps {
   description?: string;
   type?: "website" | "article";
   image?: string;
+  robots?: string;
 }
 
 const BASE_URL = "https://barrana.ai";
 const DEFAULT_IMAGE = BASE_URL + "/barrana-logo.png";
 const SITE_NAME = "Barrana.ai";
 
-export default function SEOHead({ title, description, type = "website", image }: SEOHeadProps) {
+export default function SEOHead({ title, description, type = "website", image, robots = "index, follow" }: SEOHeadProps) {
   const [location] = useLocation();
   const canonicalUrl = BASE_URL + location;
   const ogImage = image || DEFAULT_IMAGE;
@@ -55,6 +56,7 @@ export default function SEOHead({ title, description, type = "website", image }:
 
     // Meta description (visible in search results)
     if (description) setMeta("description", description);
+    setMeta("robots", robots);
 
     // Canonical URL
     setLink("canonical", canonicalUrl);
@@ -72,7 +74,7 @@ export default function SEOHead({ title, description, type = "website", image }:
     if (title) setMeta("twitter:title", title);
     if (description) setMeta("twitter:description", description);
     setMeta("twitter:image", ogImage);
-  }, [title, description, type, canonicalUrl, ogImage]);
+  }, [title, description, type, canonicalUrl, ogImage, robots]);
 
   return null;
 }

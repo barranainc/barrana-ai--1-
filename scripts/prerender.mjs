@@ -16,7 +16,7 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { routes } from "./routes.mjs";
+import { prerenderPaths } from "./routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "../dist/public");
@@ -153,7 +153,7 @@ async function main() {
     process.exit(1);
   }
 
-  const allRoutePaths = routes.map((r) => r.path);
+  const allRoutePaths = prerenderPaths;
   const routeStart = Math.max(0, Number(process.env.PRERENDER_START || 0));
   const routeLimit = Math.max(
     0,

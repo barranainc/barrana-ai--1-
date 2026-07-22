@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
-import { routes } from "./routes.mjs";
+import { errorRoutes, prerenderOnlyRoutes, prerenderPaths, routes } from "./routes.mjs";
 
 const root = "dist/public";
 const errors = [];
@@ -41,6 +41,11 @@ for (const route of routes) {
   }
 }
 
+for (const routePath of [...prerenderOnlyRoutes, ...errorRoutes]) {
+  const output = join(root, routePath, "index.html");
+  if (!existsSync(output)) errors.push(`Missing prerendered route: ${routePath}`);
+}
+
 const home = await readFile(join(root, "index.html"), "utf8");
 const contact = await readFile(join(root, "contact/index.html"), "utf8");
 const llms = await readFile(join(root, "llms.txt"), "utf8");
@@ -71,6 +76,51 @@ if (!llms.startsWith("# Barrana.ai")) {
 
 if ([...sitemap.matchAll(/<loc>/g)].length !== routes.length) {
   errors.push("Built sitemap URL count does not match the route inventory.");
+}
+
+for (const routePath of [...prerenderOnlyRoutes, ...errorRoutes]) {
+  if (sitemap.includes(`<loc>https://barrana.ai${routePath}</loc>`)) {
+    errors.push(`Non-indexable path is present in the built sitemap: ${routePath}`);
+  }
+}
+
+const notFound = await readFile(join(root, "404/index.html"), "utf8");
+const notFoundRobots = notFound.match(/<meta[^>]+name="robots"[^>]+content="([^"]+)"/i)?.[1] || "";
+if (!notFound.includes("<title>Page Not Found | Barrana.ai</title>")) {
+  errors.push("Prerendered 404 page has an incorrect title.");
+}
+if (!/noindex/i.test(notFoundRobots)) {
+  errors.push("Prerendered 404 page is missing a noindex robots directive.");
+}
+
+for (const routePath of [
+  "/campaign/contractors",
+  "/campaign/dental",
+  "/campaign/law-firms",
+  "/campaign/real-estate",
+]) {
+  const html = await readFile(join(root, routePath, "index.html"), "utf8");
+  const robotsDirectives = [...html.matchAll(/<meta[^>]+name="robots"[^>]+content="([^"]+)"/gi)]
+    .map((match) => match[1]);
+  if (!robotsDirectives.some((directive) => /noindex/i.test(directive))) {
+    errors.push(`Campaign route is missing noindex: ${routePath}`);
+  }
+}
+
+async function collectHtmlFiles(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const files = [];
+  for (const entry of entries) {
+    const fullPath = join(directory, entry.name);
+    if (entry.isDirectory()) files.push(...await collectHtmlFiles(fullPath));
+    if (entry.isFile() && entry.name.endsWith(".html")) files.push(fullPath);
+  }
+  return files;
+}
+
+for (const htmlPath of await collectHtmlFiles(root)) {
+  const html = await readFile(htmlPath, "utf8");
+  if (html.includes("—")) errors.push(`Built page contains an em dash: ${htmlPath}`);
 }
 
 for (const token of ["%VITE_ANALYTICS_", "maximum-scale", "Book Free Audit"]) {
@@ -104,5 +154,5 @@ if (errors.length > 0) {
   console.error(errors.join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(`Built Barrana site controls passed for ${routes.length} prerendered routes.`);
+  console.log(`Built Barrana site controls passed for ${prerenderPaths.length} prerendered routes.`);
 }

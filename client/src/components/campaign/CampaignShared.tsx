@@ -106,8 +106,8 @@ export function CampaignFooter() {
         <div className="w-full border-t" style={{ borderColor: "rgba(255,255,255,0.15)" }} />
         {/* Links */}
         <div className="flex gap-6 text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
-          <a href="/unsubscribe" className="hover:text-white transition-colors underline">Unsubscribe</a>
-          <a href="/privacy" className="hover:text-white transition-colors underline">Privacy Policy</a>
+          <span>Unsubscribe</span>
+          <a href="/governance" className="hover:text-white transition-colors underline">Privacy Policy</a>
           <a href="/" className="hover:text-white transition-colors">barrana.ai</a>
         </div>
       </div>

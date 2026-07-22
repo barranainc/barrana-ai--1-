@@ -61,6 +61,7 @@ export default function RouteMetadataFallback() {
     setCanonical(canonicalUrl);
 
     if (summary) setMeta("description", summary);
+    setMeta("robots", "index, follow");
     setMeta("og:title", title);
     if (summary) setMeta("og:description", summary);
     setMeta("og:url", canonicalUrl);
