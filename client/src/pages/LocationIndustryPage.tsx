@@ -154,7 +154,7 @@ export default function LocationIndustryPage() {
 
   return (
     <>
-      {/* SEO Head — OG, Twitter, Canonical */}
+      {/* SEO Head - OG, Twitter, Canonical */}
       <SEOHead title={page.metaTitle} description={page.metaDescription} />
 
       {/* Schema */}

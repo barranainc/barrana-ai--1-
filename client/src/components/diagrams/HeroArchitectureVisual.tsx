@@ -1,5 +1,5 @@
 /**
- * HeroArchitectureVisual.tsx — Compact 3-Layer Architecture Diagram
+ * HeroArchitectureVisual.tsx - Compact 3-Layer Architecture Diagram
  * Your Tools → Barrana Automation Layer → Your Team Freed
  */
 
@@ -79,7 +79,7 @@ export default function HeroArchitectureVisual() {
         @keyframes layerGlow { 0%, 100% { box-shadow: 0 6px 24px rgba(40,56,145,0.25); } 50% { box-shadow: 0 6px 32px rgba(40,56,145,0.35); } }
       `}</style>
 
-      {/* Layer 1 — YOUR EXISTING TOOLS */}
+      {/* Layer 1 - YOUR EXISTING TOOLS */}
       <div
         style={{
           background: "white",
@@ -111,7 +111,7 @@ export default function HeroArchitectureVisual() {
         <ArrowDown size={16} color={NAVY} />
       </div>
 
-      {/* Layer 2 — BARRANA AUTOMATION LAYER */}
+      {/* Layer 2 - BARRANA AUTOMATION LAYER */}
       <div
         style={{
           background: `linear-gradient(135deg, ${NAVY}, ${MAGENTA})`,
@@ -146,7 +146,7 @@ export default function HeroArchitectureVisual() {
         <ArrowDown size={16} color={NAVY} />
       </div>
 
-      {/* Layer 3 — YOUR TEAM (FREED) */}
+      {/* Layer 3 - YOUR TEAM (FREED) */}
       <div
         style={{
           background: "white",

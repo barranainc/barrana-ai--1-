@@ -22,12 +22,12 @@ const contact = await readFile(join(root, "contact/index.html"), "utf8");
 const llms = await readFile(join(root, "llms.txt"), "utf8");
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 
-if (!home.includes("Find the workflow AI should fix first.")) {
-  errors.push("Prerendered homepage is missing the controlled headline.");
+if (!home.includes("Your Most Expensive Employee Is Doing Data Entry.")) {
+  errors.push("Prerendered homepage is missing the approved headline.");
 }
 
-if (!home.includes("Find the Workflow AI Should Fix First")) {
-  errors.push("Prerendered homepage is missing the controlled CTA.");
+if (!home.includes("Show Me What I Can Stop Doing Manually")) {
+  errors.push("Prerendered homepage is missing the approved homepage CTA.");
 }
 
 if (!contact.includes('for="contact-name"') || !contact.includes('id="contact-name"')) {
@@ -48,9 +48,25 @@ for (const token of ["%VITE_ANALYTICS_", "maximum-scale", "Book Free Audit"]) {
   }
 }
 
-const homeSchemaCount = [...home.matchAll(/type="application\/ld\+json"/g)].length;
-if (homeSchemaCount !== 1) {
-  errors.push(`Prerendered homepage has ${homeSchemaCount} JSON-LD blocks; expected one controlled entity block.`);
+const homeSchemaTypes = [...home.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)]
+  .map((match) => {
+    try {
+      return JSON.parse(match[1])["@type"];
+    } catch {
+      errors.push("Prerendered homepage contains invalid JSON-LD.");
+      return null;
+    }
+  })
+  .filter(Boolean);
+
+for (const schemaType of ["Organization", "LocalBusiness", "FAQPage"]) {
+  if (!homeSchemaTypes.includes(schemaType)) {
+    errors.push(`Prerendered homepage is missing ${schemaType} JSON-LD.`);
+  }
+}
+
+if (homeSchemaTypes.filter((type) => type === "FAQPage").length !== 1) {
+  errors.push("Prerendered homepage must contain exactly one FAQPage JSON-LD block.");
 }
 
 if (errors.length > 0) {

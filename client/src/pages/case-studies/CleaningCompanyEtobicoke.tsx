@@ -26,7 +26,7 @@ const data: CaseStudyData = {
     "45% of quote requests arrived after 5pm. Zero responded to until next morning. By then, homeowners had booked with faster competitors.",
     "Quote follow-up depended on the owner doing it from home evenings. Actual follow-up rate: approximately 40%.",
     "Recurring client management was a spreadsheet. Cancellations required manual coordination. Schedule gaps not detected until cleaning day.",
-    "Invoicing after each clean was manual — the office manager spent 3-4 hours per week generating and sending invoices.",
+    "Invoicing after each clean was manual - the office manager spent 3-4 hours per week generating and sending invoices.",
   ],
   beforeMetrics: [
     { label: "After-hours quote response", value: "Zero" },
@@ -36,12 +36,12 @@ const data: CaseStudyData = {
     { label: "Google reviews (total)", value: "23 after 4 years" },
   ],
   solutionIntro:
-    "We built a system covering quote response, follow-up, booking, recurring management, invoicing, and review requests — integrated with Housecall Pro. After-hours response handled by AI, eliminating the owner's evening quote management.",
+    "We built a system covering quote response, follow-up, booking, recurring management, invoicing, and review requests - integrated with Housecall Pro. After-hours response handled by AI, eliminating the owner's evening quote management.",
   workflowSteps: [
     {
       id: "quote-request",
       label: "Quote Request (any time)",
-      sublabel: "Website form, Google, or referral — any hour of the day",
+      sublabel: "Website form, Google, or referral - any hour of the day",
       type: "trigger",
       icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
       color: "#F59E0B",
@@ -57,7 +57,7 @@ const data: CaseStudyData = {
     {
       id: "clean-completed",
       label: "Clean Completed in Housecall Pro",
-      sublabel: "Job marked complete — triggers invoice and review workflow automatically",
+      sublabel: "Job marked complete - triggers invoice and review workflow automatically",
       type: "action",
       icon: "M5 13l4 4L19 7",
       color: "#283891",

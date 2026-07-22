@@ -54,7 +54,7 @@ const RESULT = {
   rank: "#1 Opportunity",
   title: "Lead Response Automation",
   saving: "18 hrs/week recovered",
-  desc: "Respond to every inquiry in 90 seconds — 24 hrs a day.",
+  desc: "Respond to every inquiry in 90 seconds - 24 hrs a day.",
 };
 
 function PlannerPreviewCard({ visible }: { visible: boolean }) {

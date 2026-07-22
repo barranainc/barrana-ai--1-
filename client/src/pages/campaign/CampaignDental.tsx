@@ -28,7 +28,7 @@ export default function CampaignDental() {
   return (
     <>
       <Helmet>
-        <title>Barrana.ai — Your Empty Chairs Cost $150,000+ Per Year | Vaughan Dental</title>
+        <title>Barrana.ai - Your Empty Chairs Cost $150,000+ Per Year | Vaughan Dental</title>
         <meta
           name="description"
           content="Dental practices in Vaughan and York Region lose $377,000/year to no-shows, missed recall, and after-hours voicemail. See how automation fills your chairs."
@@ -36,10 +36,10 @@ export default function CampaignDental() {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="campaign-page min-h-screen flex flex-col bg-white">
         <CampaignHeader />
 
-        {/* Hero — Navy background */}
+        {/* Hero - Navy background */}
         <FadeSection style={{ backgroundColor: NAVY }}>
           <div className="py-16 md:py-20">
             <div className="max-w-3xl mx-auto px-4 md:px-6">
@@ -62,14 +62,14 @@ export default function CampaignDental() {
               <p className="text-base md:text-lg mt-6 max-w-2xl" style={{ color: "rgba(255,255,255,0.85)" }}>
                 A 20% no-show rate at $200 per visit. 300 patients overdue for recall.
                 After-hours enquiries from Vaughan and Woodbridge families going to voicemail.
-                This is revenue that belongs to your practice — it is just not being captured.
+                This is revenue that belongs to your practice - it is just not being captured.
               </p>
               <CampaignCTA utm={UTM} />
             </div>
           </div>
         </FadeSection>
 
-        {/* Animated: Response Race — After-hours leads */}
+        {/* Animated: Response Race - After-hours leads */}
         <FadeSection style={{ backgroundColor: "#EEF0F8" }} className="py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: NAVY }}>
@@ -77,7 +77,7 @@ export default function CampaignDental() {
             </h2>
             <p className="text-sm mb-6" style={{ color: GREY }}>
               60% of dental enquiries happen outside office hours. Vaughan families search for a dentist at 9pm.
-              Right now, those calls go to voicemail — and to your competitor.
+              Right now, those calls go to voicemail - and to your competitor.
             </p>
             <ResponseRaceGraphic
               withoutLabel="Your Practice (voicemail, call back next morning)"
@@ -85,7 +85,7 @@ export default function CampaignDental() {
               withLabel="Barrana Automation"
               withTime="90 Seconds"
               outcomeWithout="Patient booked with the clinic that answered"
-              outcomeWith="Appointment confirmed — patient on your calendar"
+              outcomeWith="Appointment confirmed - patient on your calendar"
             />
           </div>
         </FadeSection>
@@ -97,7 +97,7 @@ export default function CampaignDental() {
               The Numbers for a Vaughan Dental Practice
             </h2>
             <p className="text-sm mb-8" style={{ color: GREY }}>
-              Whether your practice is in Woodbridge, Maple, Concord, or Kleinburg — every empty chair is a system problem, not a patient problem.
+              Whether your practice is in Woodbridge, Maple, Concord, or Kleinburg - every empty chair is a system problem, not a patient problem.
             </p>
             <ProblemCounterGrid
               stats={[
@@ -108,9 +108,9 @@ export default function CampaignDental() {
               ]}
             />
             <div className="mt-8 flex flex-col gap-4">
-              <CampaignMathItem figure="$250,000/year" label="20% no-show rate × $200/visit × 25 patients per day — empty chairs every single day" />
-              <CampaignMathItem figure="$60,000/year" label="300 overdue recall patients × $200 — sitting in a list nobody is calling through" />
-              <CampaignMathItem figure="$36,000 – $72,000/year" label="After-hours enquiries lost to voicemail — new patients going to the clinic that answered" />
+              <CampaignMathItem figure="$250,000/year" label="20% no-show rate × $200/visit × 25 patients per day - empty chairs every single day" />
+              <CampaignMathItem figure="$60,000/year" label="300 overdue recall patients × $200 - sitting in a list nobody is calling through" />
+              <CampaignMathItem figure="$36,000 – $72,000/year" label="After-hours enquiries lost to voicemail - new patients going to the clinic that answered" />
               <CampaignMathItem figure="$31,200/year" label="Front desk spending 12 hours per week on phone booking and manual reminders" />
               <CampaignMathItem figure="$377,000/year at risk" label="Total operational revenue at risk from manual processes" isTotal />
             </div>
@@ -141,12 +141,12 @@ export default function CampaignDental() {
             <BeforeAfterWorkflow
               title="Your Patient Journey: Before vs. After"
               beforeSteps={[
-                { label: "No-show at 2pm — front desk scrambles", detail: "Chair sits empty. No automated fill system. Revenue gone." },
-                { label: "300 recall patients — nobody calling them", detail: "List sits in your PMS. Front desk too busy. $60K uncaptured." },
-                { label: "Vaughan family calls at 8pm — goes to voicemail", detail: "Patient calls 3 clinics. Books with whoever answers first." },
+                { label: "No-show at 2pm - front desk scrambles", detail: "Chair sits empty. No automated fill system. Revenue gone." },
+                { label: "300 recall patients - nobody calling them", detail: "List sits in your PMS. Front desk too busy. $60K uncaptured." },
+                { label: "Vaughan family calls at 8pm - goes to voicemail", detail: "Patient calls 3 clinics. Books with whoever answers first." },
               ]}
               afterSteps={[
-                { label: "No-show triggers auto-fill from waitlist", detail: "Waitlist patient gets SMS — chair filled within 2 hours." },
+                { label: "No-show triggers auto-fill from waitlist", detail: "Waitlist patient gets SMS - chair filled within 2 hours." },
                 { label: "Recall campaign runs automatically", detail: "300 patients get personalised reminders. 40%+ re-book." },
                 { label: "After-hours enquiry gets 90-second response", detail: "Auto-reply sent. Booking link included. Appointment confirmed." },
               ]}
@@ -168,7 +168,7 @@ export default function CampaignDental() {
                 </div>
                 <p className="text-base md:text-lg text-white leading-relaxed mb-4">
                   "A 3-chair dental practice in the Vaughan area had a 22% no-show rate and 400 patients overdue
-                  for recall. The front desk was spending 15 hours per week on the phone — and still not getting
+                  for recall. The front desk was spending 15 hours per week on the phone - and still not getting
                   through the recall list. Families in Woodbridge and Maple were booking elsewhere because nobody answered after 5pm."
                 </p>
                 <p className="text-base leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.85)" }}>
@@ -199,10 +199,10 @@ export default function CampaignDental() {
               <p className="font-semibold mb-4" style={{ color: NAVY }}>What you get in 60 minutes:</p>
               <ul className="flex flex-col gap-0">
                 {[
-                  "Your exact no-show cost calculated (per day, per week, per year — specific to your practice)",
-                  "Your recall list value — how much revenue is sitting dormant in your PMS",
-                  "Your after-hours booking opportunity — leads going to competitors after 5pm",
-                  "The full analysis is yours — whether or not you hire us",
+                  "Your exact no-show cost calculated (per day, per week, per year - specific to your practice)",
+                  "Your recall list value - how much revenue is sitting dormant in your PMS",
+                  "Your after-hours booking opportunity - leads going to competitors after 5pm",
+                  "The full analysis is yours - whether or not you hire us",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

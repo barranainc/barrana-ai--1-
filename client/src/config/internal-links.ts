@@ -16,7 +16,7 @@ export interface PageLinks {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Shorthand helpers — keep the map DRY                              */
+/*  Shorthand helpers - keep the map DRY                              */
 /* ------------------------------------------------------------------ */
 
 const S = {
@@ -66,18 +66,18 @@ const W = {
 };
 
 const CS = {
-  immigration:  { href: "/case-studies/immigration-firm-north-york",        label: "Immigration Firm — North York" },
-  accounting:   { href: "/case-studies/accounting-firm-vaughan",             label: "Accounting Firm — Vaughan" },
-  contractor:   { href: "/case-studies/contractor-mississauga",              label: "Contractor — Mississauga" },
-  physio:       { href: "/case-studies/physio-clinic-richmond-hill",         label: "Physio Clinic — Richmond Hill" },
-  law:          { href: "/case-studies/law-firm-toronto",                    label: "Law Firm — Toronto" },
-  realEstate:   { href: "/case-studies/real-estate-team-markham",            label: "Real Estate Team — Markham" },
-  dental:       { href: "/case-studies/dental-office-scarborough",           label: "Dental Office — Scarborough" },
-  cleaning:     { href: "/case-studies/cleaning-company-etobicoke",          label: "Cleaning Company — Etobicoke" },
-  hvac:         { href: "/case-studies/hvac-company-brampton",               label: "HVAC Company — Brampton" },
-  property:     { href: "/case-studies/property-management-toronto",         label: "Property Management — Toronto" },
-  insurance:    { href: "/case-studies/insurance-brokerage-vaughan",         label: "Insurance Brokerage — Vaughan" },
-  marketing:    { href: "/case-studies/marketing-agency-liberty-village",    label: "Marketing Agency — Liberty Village" },
+  immigration:  { href: "/case-studies/immigration-firm-north-york",        label: "Immigration Firm - North York" },
+  accounting:   { href: "/case-studies/accounting-firm-vaughan",             label: "Accounting Firm - Vaughan" },
+  contractor:   { href: "/case-studies/contractor-mississauga",              label: "Contractor - Mississauga" },
+  physio:       { href: "/case-studies/physio-clinic-richmond-hill",         label: "Physio Clinic - Richmond Hill" },
+  law:          { href: "/case-studies/law-firm-toronto",                    label: "Law Firm - Toronto" },
+  realEstate:   { href: "/case-studies/real-estate-team-markham",            label: "Real Estate Team - Markham" },
+  dental:       { href: "/case-studies/dental-office-scarborough",           label: "Dental Office - Scarborough" },
+  cleaning:     { href: "/case-studies/cleaning-company-etobicoke",          label: "Cleaning Company - Etobicoke" },
+  hvac:         { href: "/case-studies/hvac-company-brampton",               label: "HVAC Company - Brampton" },
+  property:     { href: "/case-studies/property-management-toronto",         label: "Property Management - Toronto" },
+  insurance:    { href: "/case-studies/insurance-brokerage-vaughan",         label: "Insurance Brokerage - Vaughan" },
+  marketing:    { href: "/case-studies/marketing-agency-liberty-village",    label: "Marketing Agency - Liberty Village" },
 };
 
 const D = {

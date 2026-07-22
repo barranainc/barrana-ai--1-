@@ -1,5 +1,5 @@
 /**
- * HeroPlannerPreview.tsx — Compact 4-Step Planner Preview
+ * HeroPlannerPreview.tsx - Compact 4-Step Planner Preview
  */
 
 import { useState, useEffect } from "react";
@@ -42,7 +42,7 @@ export default function HeroPlannerPreview() {
       }}
     >
       <div style={{ fontSize: "0.5625rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: GREY, marginBottom: "1rem" }}>
-        Automation Planner — 4 Steps
+        Automation Planner - 4 Steps
       </div>
 
       {STEPS.map((step, i) => {

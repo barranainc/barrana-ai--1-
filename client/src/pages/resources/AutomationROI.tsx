@@ -80,7 +80,7 @@ function ROIPyramid() {
         </div>
       ))}
       <div style={{ marginTop: "0.75rem", fontSize: "0.8125rem", color: "#7B7B7B", textAlign: "center" }}>
-        The Automation ROI Stack — value compounds as you move up
+        The Automation ROI Stack - value compounds as you move up
       </div>
     </div>
   );
@@ -120,7 +120,7 @@ function ROIPreviewCard() {
       }}
     >
       <div style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1.25rem" }}>
-        ROI SNAPSHOT — Example Business
+        ROI SNAPSHOT - Example Business
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
         <div>
@@ -190,36 +190,36 @@ export default function AutomationROI() {
             The Automation ROI Stack
           </div>
           <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.75, fontSize: "0.9375rem" }}>
-            Most ROI calculations only count time saved — and therefore understate the value of automation by 5–10×. The Automation ROI Stack is a four-layer framework that captures every dimension of value: direct time recovery, error elimination, revenue protection, and the compounding multiplier of scalability. This guide walks you through measuring each layer and building a defensible business case.
+            Most ROI calculations only count time saved - and therefore understate the value of automation by 5–10×. The Automation ROI Stack is a four-layer framework that captures every dimension of value: direct time recovery, error elimination, revenue protection, and the compounding multiplier of scalability. This guide walks you through measuring each layer and building a defensible business case.
           </p>
         </SummaryBox>
 
         <SectionHeading>The Four ROI Layers</SectionHeading>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          Business automation delivers value through four distinct mechanisms. Each layer builds on the one below it — and each is real, measurable money that your business is currently leaving on the table.
+          Business automation delivers value through four distinct mechanisms. Each layer builds on the one below it - and each is real, measurable money that your business is currently leaving on the table.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.75rem" }}>
-          <strong>Layer 1 — Time Saved</strong> is the most visible: hours of manual work your team no longer needs to do. Data entry, scheduling, follow-ups, report generation — these hours have a direct dollar value at your team's loaded cost rate.
+          <strong>Layer 1 - Time Saved</strong> is the most visible: hours of manual work your team no longer needs to do. Data entry, scheduling, follow-ups, report generation - these hours have a direct dollar value at your team's loaded cost rate.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.75rem" }}>
-          <strong>Layer 2 — Error Reduction</strong> captures the cost of rework, corrections, missed deadlines, and client complaints caused by human error in repetitive processes. Automated processes don't fat-finger numbers or forget to attach files.
+          <strong>Layer 2 - Error Reduction</strong> captures the cost of rework, corrections, missed deadlines, and client complaints caused by human error in repetitive processes. Automated processes don't fat-finger numbers or forget to attach files.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.75rem" }}>
-          <strong>Layer 3 — Revenue Captured</strong> is often the largest layer for client-facing businesses. Slow follow-up, dropped leads, missed renewals, and delayed proposals are revenue that evaporates silently. Automation closes that gap.
+          <strong>Layer 3 - Revenue Captured</strong> is often the largest layer for client-facing businesses. Slow follow-up, dropped leads, missed renewals, and delayed proposals are revenue that evaporates silently. Automation closes that gap.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1.5rem" }}>
-          <strong>Layer 4 — Scalability</strong> is the compounding multiplier. Once your workflows are automated, you can serve 2× the clients with the same headcount. The marginal cost of growth collapses. This is where automation transitions from cost-saving to business transformation.
+          <strong>Layer 4 - Scalability</strong> is the compounding multiplier. Once your workflows are automated, you can serve 2× the clients with the same headcount. The marginal cost of growth collapses. This is where automation transitions from cost-saving to business transformation.
         </p>
 
         <ROIPyramid />
 
         <SectionHeading>How to Calculate Each Layer</SectionHeading>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1.5rem" }}>
-          Use these formulas to build your ROI estimate. You don't need exact numbers — conservative estimates still produce compelling cases. The goal is to set a floor, not a ceiling.
+          Use these formulas to build your ROI estimate. You don't need exact numbers - conservative estimates still produce compelling cases. The goal is to set a floor, not a ceiling.
         </p>
 
         <FormulaBox
-          label="Layer 1 — Time Saved"
+          label="Layer 1 - Time Saved"
           formula={`Hours saved per week
 × Loaded hourly cost (salary + benefits + overhead)
 × 52 weeks
@@ -228,7 +228,7 @@ export default function AutomationROI() {
 Example: 15 hrs/week × $40/hr × 52 = $31,200/year`}
         />
         <FormulaBox
-          label="Layer 2 — Error Reduction"
+          label="Layer 2 - Error Reduction"
           formula={`Estimated rework hours per month
 × Hourly cost
 × 12 months
@@ -238,7 +238,7 @@ Example: 15 hrs/week × $40/hr × 52 = $31,200/year`}
 Example: 8 hrs/month × $40 × 12 = $3,840 + 1 client × $12,000 = $15,840/year`}
         />
         <FormulaBox
-          label="Layer 3 — Revenue Captured"
+          label="Layer 3 - Revenue Captured"
           formula={`Leads lost per month (slow follow-up, missed enquiries)
 × Average client lifetime value
 × 12 months
@@ -247,7 +247,7 @@ Example: 8 hrs/month × $40 × 12 = $3,840 + 1 client × $12,000 = $15,840/year`
 Example: 4 leads/month × $3,500 LTV × 12 = $168,000/year`}
         />
         <FormulaBox
-          label="Layer 4 — Scalability Multiplier"
+          label="Layer 4 - Scalability Multiplier"
           formula={`Current revenue per FTE
 × % capacity freed by automation
 × Team size
@@ -269,16 +269,16 @@ Example: $180,000/FTE × 25% × 4 FTEs = $180,000 incremental capacity`}
 
         <SectionHeading>Typical ROI Timeline</SectionHeading>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          Automation projects typically require an upfront investment in setup, configuration, and process mapping — usually 20–60 hours of professional services depending on complexity. This one-time cost is then weighed against recurring savings that compound every week.
+          Automation projects typically require an upfront investment in setup, configuration, and process mapping - usually 20–60 hours of professional services depending on complexity. This one-time cost is then weighed against recurring savings that compound every week.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
           For most small and mid-sized businesses, the payback period lands between <strong>30 and 90 days</strong>. Businesses with higher staff costs or larger lead pipelines often see payback within the first 2–4 weeks.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          Implementation costs typically range from $3,000–$15,000 for a comprehensive automation overhaul. Against an annual value creation of $50,000–$300,000 (across all four ROI layers), this represents a 5–30× return in year one alone — with zero incremental cost in subsequent years.
+          Implementation costs typically range from $3,000–$15,000 for a comprehensive automation overhaul. Against an annual value creation of $50,000–$300,000 (across all four ROI layers), this represents a 5–30× return in year one alone - with zero incremental cost in subsequent years.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.5rem" }}>
-          The key insight: <strong>the question is rarely "can we afford automation?"</strong> — it's "what is it costing us every month we delay?"
+          The key insight: <strong>the question is rarely "can we afford automation?"</strong> - it's "what is it costing us every month we delay?"
         </p>
 
         {/* CTA */}

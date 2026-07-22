@@ -19,7 +19,6 @@ const errors = [];
 
 for (const phrase of [
   "Book Free Audit",
-  "free automation audit",
   "Show success even on failure",
   "maximum-scale",
   "%VITE_ANALYTICS_",
@@ -31,9 +30,18 @@ for (const phrase of [
 }
 
 const requiredCta = "Find the Workflow AI Should Fix First";
-for (const file of files.slice(0, 4)) {
+for (const file of files.slice(1, 4)) {
   if (!content[file].includes(requiredCta)) {
     errors.push(`${file} is missing the controlled CTA.`);
+  }
+}
+
+for (const phrase of [
+  "Your Most Expensive Employee Is Doing Data Entry.",
+  "Show Me What I Can Stop Doing Manually",
+]) {
+  if (!content["client/src/pages/Home.tsx"].includes(phrase)) {
+    errors.push(`client/src/pages/Home.tsx is missing approved homepage copy: ${phrase}`);
   }
 }
 

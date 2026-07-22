@@ -1,7 +1,7 @@
 /**
  * HeroWorkflowDiagram.tsx
- * Design: Barrana.ai — Premium Systems Consultancy
- * Animated SVG workflow diagram — LARGE version for hero section.
+ * Design: Barrana.ai - Premium Systems Consultancy
+ * Animated SVG workflow diagram - LARGE version for hero section.
  * Lines draw themselves in on mount. Nodes pulse subtly.
  * Colors: Navy #283891, Magenta #7E0F4A
  */

@@ -25,7 +25,7 @@ const data: CaseStudyData = {
     "A multi-disciplinary physiotherapy clinic on Yonge Street in Richmond Hill offering physiotherapy, massage therapy, and chiropractic. 6 practitioners, 2 front desk staff. Using Jane App. 55+ patient visits per day. Serving families and athletes from Richmond Hill, Thornhill, and surrounding areas.",
   problemHeading: "What Was Breaking",
   problemBody: [
-    "22% no-show rate across all practitioners — 12 empty slots per day, 60 per week, over 3,000 per year. At $80 per visit, over $240,000 in annual revenue capacity going unfilled.",
+    "22% no-show rate across all practitioners - 12 empty slots per day, 60 per week, over 3,000 per year. At $80 per visit, over $240,000 in annual revenue capacity going unfilled.",
     "Front desk staff spent 55-60% of their day on phone calls: booking, confirming, rescheduling, answering insurance questions. During peak hours, 3-4 calls went to voicemail per hour.",
     "Paper intake forms took 15 minutes per new patient. With 8-10 new patients per week, that was 2-3 hours per week of data entry.",
     "When patients cancelled, slots went empty because there was no systematic way to notify waitlisted patients quickly enough.",

@@ -12,7 +12,7 @@ const data: IndustryPageData = {
   subheadline:
     "Vaccination and wellness reminders on schedule. Automated booking with confirmations. Prescription refill alerts. Post-surgery follow-up calls your staff does not have to make. Pet birthday greetings that build loyalty.",
   body: [
-    "Veterinary clinics share the operational challenges of human healthcare — no-shows, scheduling complexity, phone-heavy front desks — plus unique ones: vaccination schedules, multi-pet households, seasonal parasite prevention, and post-surgical monitoring. All of it managed manually in most practices.",
+    "Veterinary clinics share the operational challenges of human healthcare - no-shows, scheduling complexity, phone-heavy front desks - plus unique ones: vaccination schedules, multi-pet households, seasonal parasite prevention, and post-surgical monitoring. All of it managed manually in most practices.",
     "The practices that retain clients long-term are the ones that communicate proactively. Pet owners who receive timely vaccination reminders, refill alerts, and wellness check notifications stay loyal for the life of their pet.",
   ],
   ctaMicro:

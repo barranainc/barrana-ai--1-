@@ -7,7 +7,7 @@ const data: IndustryPageData = {
   description:
     "Automate emergency dispatch, seasonal maintenance reminders, lead capture, technician scheduling, and invoicing for HVAC, plumbing, and electrical companies. Free audit.",
   route: "home-services",
-  breadcrumb: "Home Services — HVAC, Plumbing, Electrical",
+  breadcrumb: "Home Services - HVAC, Plumbing, Electrical",
   h1: "Emergency Calls at 2am. Seasonal Maintenance Due for 300 Clients. Your Team Is Already Overbooked. Automate the Coordination.",
   subheadline:
     "Emergency dispatch with priority routing. Seasonal maintenance reminders for your entire client base. 24/7 lead capture and booking. Technician scheduling optimization. Invoice on completion.",
@@ -100,7 +100,7 @@ const data: IndustryPageData = {
 
   roiMetrics: [
     { label: "Emergency Dispatch", before: "Voicemail", after: "Immediate 24/7" },
-    { label: "Seasonal Maintenance", before: "60-70% contacted", after: "100% — automated campaign" },
+    { label: "Seasonal Maintenance", before: "60-70% contacted", after: "100% - automated campaign" },
     { label: "Agreement Retention", after: "Improved 20-30%" },
     { label: "Technician Efficiency", after: "Improved through geographic scheduling" },
     { label: "Invoicing", after: "Same-day, field-triggered" },

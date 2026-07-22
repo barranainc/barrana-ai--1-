@@ -87,7 +87,7 @@ export default function TemplateEmptySlotGrid({
     >
       <div style={{ textAlign: "center", marginBottom: "0.75rem" }}>
         <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#6B7280", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          {industry} — Appointment Slots
+          {industry} - Appointment Slots
         </span>
       </div>
 

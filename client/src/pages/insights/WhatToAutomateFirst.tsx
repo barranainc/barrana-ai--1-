@@ -53,7 +53,7 @@ function PriorityPyramid() {
   return (
     <div ref={ref} style={{ margin: "2.5rem 0", padding: "2rem", background: "#F8F9FC", borderRadius: 16 }}>
       <h3 style={{ textAlign: "center", fontWeight: 700, color: "#1A1A2E", marginBottom: "1.75rem", fontSize: "1.1rem" }}>
-        Automation Priority Pyramid — Start at the Bottom
+        Automation Priority Pyramid - Start at the Bottom
       </h3>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
         {[...levels].reverse().map((level, i) => {
@@ -80,7 +80,7 @@ function PriorityPyramid() {
         })}
       </div>
       <p style={{ textAlign: "center", color: "#7B7B7B", fontSize: "0.8rem", marginTop: "1rem" }}>
-        Start at the base — Lead Response delivers the fastest measurable ROI
+        Start at the base - Lead Response delivers the fastest measurable ROI
       </p>
     </div>
   );
@@ -99,7 +99,7 @@ const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "What Should a Small Business Automate First?",
-  "description": "The best first automation for most small businesses is lead response — responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations.",
+  "description": "The best first automation for most small businesses is lead response - responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations.",
   "author": { "@type": "Organization", "name": "Barrana AI" },
   "publisher": { "@type": "Organization", "name": "Barrana AI" },
 };
@@ -123,7 +123,7 @@ export default function WhatToAutomateFirst() {
               What Should a Small Business Automate First?
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
-              The highest-ROI first automation for most service businesses — and how to choose the right starting point for yours.
+              The highest-ROI first automation for most service businesses - and how to choose the right starting point for yours.
             </p>
           </div>
         </section>
@@ -133,13 +133,13 @@ export default function WhatToAutomateFirst() {
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
               <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.7 }}>
-                The best first automation for most small businesses is <strong>lead response</strong> — responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and delivers measurable ROI within the first month.
+                The best first automation for most small businesses is <strong>lead response</strong> - responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and delivers measurable ROI within the first month.
               </p>
             </SummaryBox>
 
             <SectionHeading>Why the First Automation Decision Matters Most</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              You are more likely to stall on automation entirely if your first project fails. A bad first experience creates scepticism that delays every subsequent initiative — often by months or years. This is why the selection of the first automation deserves careful thought, not just enthusiasm.
+              You are more likely to stall on automation entirely if your first project fails. A bad first experience creates scepticism that delays every subsequent initiative - often by months or years. This is why the selection of the first automation deserves careful thought, not just enthusiasm.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
               The first automation must meet three criteria: (a) <strong>high-ROI</strong> so you feel the impact quickly and can justify the effort, (b) <strong>low-complexity</strong> so implementation doesn't drag out and lose momentum, and (c) <strong>measurable</strong> so you can prove to yourself and your team that it worked.
@@ -150,7 +150,7 @@ export default function WhatToAutomateFirst() {
             {[
               {
                 rank: 1, title: "Lead Response Automation",
-                desc: "Automatically acknowledges every inbound enquiry within 90 seconds, qualifies the prospect with 2–3 questions, creates a CRM record, and offers a booking link. This is ranked first because slow response is the single highest-cost problem in most service businesses — measurable, immediate, and directly tied to revenue.",
+                desc: "Automatically acknowledges every inbound enquiry within 90 seconds, qualifies the prospect with 2–3 questions, creates a CRM record, and offers a booking link. This is ranked first because slow response is the single highest-cost problem in most service businesses - measurable, immediate, and directly tied to revenue.",
                 time: "1–2 weeks", result: "2–4x increase in contact rate"
               },
               {
@@ -165,7 +165,7 @@ export default function WhatToAutomateFirst() {
               },
               {
                 rank: 4, title: "Document Collection",
-                desc: "Automates the request, reminder, and receipt of client documents — eliminating the back-and-forth chase that costs professional service firms hours per client per week. Especially high-value in accounting, immigration, and law.",
+                desc: "Automates the request, reminder, and receipt of client documents - eliminating the back-and-forth chase that costs professional service firms hours per client per week. Especially high-value in accounting, immigration, and law.",
                 time: "2–3 weeks", result: "10–15 hrs/week saved"
               },
               {
@@ -205,7 +205,7 @@ export default function WhatToAutomateFirst() {
               ))}
             </div>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              Most service businesses have at least 5–10 missed or delayed leads per month — each worth $500–$5,000+. A single additional conversion per month from faster response often pays for the entire automation system in month one.
+              Most service businesses have at least 5–10 missed or delayed leads per month - each worth $500–$5,000+. A single additional conversion per month from faster response often pays for the entire automation system in month one.
             </p>
 
             <PriorityPyramid />
@@ -242,7 +242,7 @@ export default function WhatToAutomateFirst() {
 
             <SectionHeading>The Phased Approach: Do Not Automate Everything At Once</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              The most common mistake business owners make is trying to automate everything simultaneously. Phase 1 should be a single workflow — implemented, tested, and measured. Only once it is running reliably should you expand.
+              The most common mistake business owners make is trying to automate everything simultaneously. Phase 1 should be a single workflow - implemented, tested, and measured. Only once it is running reliably should you expand.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
               {[
@@ -262,10 +262,10 @@ export default function WhatToAutomateFirst() {
 
             <SectionHeading>Common Mistakes When Choosing What to Automate</SectionHeading>
             <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-              <li><strong style={{ color: "#1A1A2E" }}>Starting with the most complex workflow</strong> — complexity means longer timelines and more failure points, exactly what you don't want from a first project.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Choosing based on what's technically possible rather than ROI</strong> — impressive demos don't equal business value. Start where the money is.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Skipping measurement</strong> — if you don't define success metrics before you build, you'll never know if it worked.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Trying to automate a broken manual process</strong> — automation amplifies whatever the process does, including its flaws. Fix the process first.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Starting with the most complex workflow</strong> - complexity means longer timelines and more failure points, exactly what you don't want from a first project.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Choosing based on what's technically possible rather than ROI</strong> - impressive demos don't equal business value. Start where the money is.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Skipping measurement</strong> - if you don't define success metrics before you build, you'll never know if it worked.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Trying to automate a broken manual process</strong> - automation amplifies whatever the process does, including its flaws. Fix the process first.</li>
             </ul>
 
             <ContextualCTA

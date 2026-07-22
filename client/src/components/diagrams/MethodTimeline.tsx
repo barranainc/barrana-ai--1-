@@ -13,7 +13,7 @@ const steps = [
   {
     Icon: Search,
     label: "Friction Mapping",
-    sub: "60 min — Free",
+    sub: "60 min - Free",
     color: "var(--b-amber)",
     colorBg: "var(--b-amber-bg)",
     deliverables: "Workflow map, friction analysis, ROI projection. Yours to keep.",
@@ -103,8 +103,10 @@ export default function MethodTimeline() {
             <div key={s.label} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 2 }}>
               {/* Node */}
               <button
+                type="button"
                 onClick={() => setExpanded(expanded === i ? null : i)}
                 aria-expanded={expanded === i}
+                aria-label={s.label}
                 style={{
                   width: "3.5rem",
                   height: "3.5rem",
@@ -178,6 +180,7 @@ export default function MethodTimeline() {
             }}
           >
             <button
+              type="button"
               onClick={() => setExpanded(expanded === i ? null : i)}
               aria-expanded={expanded === i}
               style={{

@@ -79,7 +79,7 @@ function AutomationBoundaryMap() {
       }}
     >
       <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
-        Client Lifecycle — Automation Boundary Map
+        Client Lifecycle - Automation Boundary Map
       </div>
       <div style={{ display: "flex", gap: "0", alignItems: "center", flexWrap: "wrap", minWidth: "560px" }}>
         {nodes.map((node, i) => (
@@ -141,11 +141,11 @@ function AutomationBoundaryMap() {
       <div style={{ display: "flex", gap: "1.5rem", marginTop: "1.25rem", flexWrap: "wrap" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.78rem", color: "#374151" }}>
           <div style={{ width: "12px", height: "12px", borderRadius: "3px", background: "#ECFDF5", border: "1.5px solid #6EE7B7" }} />
-          Automated — runs without human input
+          Automated - runs without human input
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.78rem", color: "#374151" }}>
           <div style={{ width: "12px", height: "12px", borderRadius: "3px", background: "#EEF2FF", border: "2px solid #283891" }} />
-          Human Decision Point — requires professional judgement
+          Human Decision Point - requires professional judgement
         </div>
       </div>
     </div>
@@ -156,7 +156,7 @@ function AutomationBoundaryMap() {
 
 const controlLayerItems = [
   { title: "Stop-Loss Rules", desc: "Automation pauses and alerts a human if an action would exceed defined thresholds (e.g., invoice above $10,000, message to a flagged client)." },
-  { title: "Retry Logic", desc: "Failed automations retry up to 3 times before escalating. No silent failures — every error is logged and notified." },
+  { title: "Retry Logic", desc: "Failed automations retry up to 3 times before escalating. No silent failures - every error is logged and notified." },
   { title: "Approval Gates", desc: "High-stakes workflow steps require explicit human confirmation before proceeding. Approvals are logged with timestamp and approver identity." },
   { title: "Full Audit Logging", desc: "Every automated action is logged: what ran, when, on which record, triggered by what. Available for review at any time." },
   { title: "Escalation Paths", desc: "If the system cannot classify or handle a case, it routes to the assigned team member with full context and a clear action request." },
@@ -202,7 +202,7 @@ export default function HumanInTheLoop() {
             <SummaryBox>
               <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
               <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-                Human-in-the-loop AI automation means designing systems where AI handles repetitive coordination tasks while humans retain control over decisions that require professional judgement, emotional intelligence, regulatory compliance, or accountability. For service businesses, this means AI manages scheduling, reminders, data collection, and routing — while pricing, advice, approvals, exception handling, and sensitive communications stay in human hands. This approach builds client trust, reduces risk, and ensures quality without sacrificing the efficiency gains of automation.
+                Human-in-the-loop AI automation means designing systems where AI handles repetitive coordination tasks while humans retain control over decisions that require professional judgement, emotional intelligence, regulatory compliance, or accountability. For service businesses, this means AI manages scheduling, reminders, data collection, and routing - while pricing, advice, approvals, exception handling, and sensitive communications stay in human hands. This approach builds client trust, reduces risk, and ensures quality without sacrificing the efficiency gains of automation.
               </p>
             </SummaryBox>
 
@@ -225,7 +225,7 @@ export default function HumanInTheLoop() {
               Where you place approval steps and escalation paths is exactly where human oversight lives in your system. A workflow with no approval gates is fully automated. A workflow with three approval gates is human-in-the-loop. The architecture is the governance.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-              For professional services firms, human-in-the-loop design is not optional — it is the responsible default. Clients trust you with sensitive matters. Regulators hold you accountable. Your professional liability insurance covers your judgements, not your software's.
+              For professional services firms, human-in-the-loop design is not optional - it is the responsible default. Clients trust you with sensitive matters. Regulators hold you accountable. Your professional liability insurance covers your judgements, not your software's.
             </p>
 
             {/* Automation Boundary Map Graphic */}
@@ -237,15 +237,15 @@ export default function HumanInTheLoop() {
               Not every decision is equal. Some are safely delegated to automation; others carry risk, liability, or relational weight that only a human can manage. Here are the nine categories that should always have a human in the loop.
             </p>
             <ol style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2.1 }}>
-              <li><strong>Professional judgement and expert advice</strong> — Legal, medical, financial, or immigration advice requires a licensed professional. Automation can gather and present information; it cannot advise.</li>
-              <li><strong>Custom pricing and negotiation</strong> — Pricing decisions involving exceptions, relationships, or complex scope belong with the human who owns client relationships.</li>
-              <li><strong>Regulated decisions</strong> — Legal advice, medical recommendations, financial planning. These are governed by professional rules that cannot be delegated to software.</li>
-              <li><strong>Emotionally sensitive communications</strong> — Bad news, difficult situations, grief, or crisis. Automated messages in these contexts cause damage that no efficiency gain justifies.</li>
-              <li><strong>Handling exceptions and edge cases</strong> — When a situation falls outside the defined parameters of a workflow, escalate to a human. Automation is built for the normal path, not the abnormal one.</li>
-              <li><strong>Relationship-building and trust development</strong> — New client onboarding, high-value relationship maintenance, and conversations that determine long-term retention require a human touch.</li>
-              <li><strong>Final approval on high-value deliverables</strong> — Any document, plan, or recommendation going to a client under your professional name requires human review and approval before it leaves your firm.</li>
-              <li><strong>Dispute resolution and complaints</strong> — Client complaints handled entirely by automated systems generate escalating frustration. A human must own and resolve disputes.</li>
-              <li><strong>Anything your professional liability insurance covers</strong> — If your E&amp;O or professional liability policy covers it, a human is responsible for it. That responsibility cannot be automated away.</li>
+              <li><strong>Professional judgement and expert advice</strong> - Legal, medical, financial, or immigration advice requires a licensed professional. Automation can gather and present information; it cannot advise.</li>
+              <li><strong>Custom pricing and negotiation</strong> - Pricing decisions involving exceptions, relationships, or complex scope belong with the human who owns client relationships.</li>
+              <li><strong>Regulated decisions</strong> - Legal advice, medical recommendations, financial planning. These are governed by professional rules that cannot be delegated to software.</li>
+              <li><strong>Emotionally sensitive communications</strong> - Bad news, difficult situations, grief, or crisis. Automated messages in these contexts cause damage that no efficiency gain justifies.</li>
+              <li><strong>Handling exceptions and edge cases</strong> - When a situation falls outside the defined parameters of a workflow, escalate to a human. Automation is built for the normal path, not the abnormal one.</li>
+              <li><strong>Relationship-building and trust development</strong> - New client onboarding, high-value relationship maintenance, and conversations that determine long-term retention require a human touch.</li>
+              <li><strong>Final approval on high-value deliverables</strong> - Any document, plan, or recommendation going to a client under your professional name requires human review and approval before it leaves your firm.</li>
+              <li><strong>Dispute resolution and complaints</strong> - Client complaints handled entirely by automated systems generate escalating frustration. A human must own and resolve disputes.</li>
+              <li><strong>Anything your professional liability insurance covers</strong> - If your E&amp;O or professional liability policy covers it, a human is responsible for it. That responsibility cannot be automated away.</li>
             </ol>
 
             {/* Section 3 */}
@@ -257,10 +257,10 @@ export default function HumanInTheLoop() {
               Common approval gate examples for professional services firms:
             </p>
             <ul style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2 }}>
-              <li>Invoice above $5,000 — owner review required before the invoice is sent to the client</li>
-              <li>New client in a matter type the firm has not handled before — conflict check sign-off required before engagement proceeds</li>
-              <li>Outgoing communication containing legal terms — solicitor review before the message is dispatched</li>
-              <li>Document package above a defined complexity threshold — paralegal review before the system routes it to the client portal</li>
+              <li>Invoice above $5,000 - owner review required before the invoice is sent to the client</li>
+              <li>New client in a matter type the firm has not handled before - conflict check sign-off required before engagement proceeds</li>
+              <li>Outgoing communication containing legal terms - solicitor review before the message is dispatched</li>
+              <li>Document package above a defined complexity threshold - paralegal review before the system routes it to the client portal</li>
             </ul>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginTop: "1rem" }}>
               Approval gates are logged. When an approval is given, the system records who approved, when they approved, and from which device. This creates an audit trail that protects the firm in the event of a dispute.
@@ -278,7 +278,7 @@ export default function HumanInTheLoop() {
               When an escalation fires, the assigned team member receives a notification that includes: what triggered the escalation, the full context of the record, the last action taken, and a clear description of what action is needed. The human resolves the situation and, if appropriate, marks it resolved so the automation can continue.
             </p>
 
-            {/* Section 5 — Control Layer with ControlLayerCard component */}
+            {/* Section 5 - Control Layer with ControlLayerCard component */}
             <SectionHeading>The Control Layer</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.5rem" }}>
               Every automation system we build at Barrana includes five governance mechanisms that form the control layer. These mechanisms ensure the system cannot proceed in ways that would cause damage, lose data, or bypass human oversight.
@@ -292,7 +292,7 @@ export default function HumanInTheLoop() {
               <strong style={{ color: "#1A1A2E" }}>Immigration Consultants</strong>
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-              Automation handles intake categorisation, document checklists, status updates, and reminder sequences. The regulated human work — assessing eligibility, providing immigration advice, submitting applications, and handling IRCC correspondence — stays entirely with the licensed RCIC. Approval gates fire before any communication goes to a government authority or contains advice about a client's eligibility.
+              Automation handles intake categorisation, document checklists, status updates, and reminder sequences. The regulated human work - assessing eligibility, providing immigration advice, submitting applications, and handling IRCC correspondence - stays entirely with the licensed RCIC. Approval gates fire before any communication goes to a government authority or contains advice about a client's eligibility.
             </p>
 
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "0.5rem" }}>
@@ -322,22 +322,22 @@ export default function HumanInTheLoop() {
               The goal of automation is not to remove humans from your business. The goal is to remove the coordination overhead that prevents your humans from doing the work only humans can do.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              When a skilled professional spends three hours a week sending document request emails and chasing clients for signatures, that is three hours not spent on billable advice, relationship development, or complex problem solving. Automation reclaims that time. The professional's value is not displaced — it is amplified.
+              When a skilled professional spends three hours a week sending document request emails and chasing clients for signatures, that is three hours not spent on billable advice, relationship development, or complex problem solving. Automation reclaims that time. The professional's value is not displaced - it is amplified.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-              Firms that pursue full automation — removing humans from all customer touchpoints — often discover they have optimised away the thing clients valued most: the sense that a knowledgeable human is watching out for their interests. Human-in-the-loop design preserves that sense while capturing the efficiency gains that make the practice more profitable.
+              Firms that pursue full automation - removing humans from all customer touchpoints - often discover they have optimised away the thing clients valued most: the sense that a knowledgeable human is watching out for their interests. Human-in-the-loop design preserves that sense while capturing the efficiency gains that make the practice more profitable.
             </p>
 
             {/* Section 8 */}
             <SectionHeading>How to Design Automation That Builds Trust</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Clients notice when they are in an automated system. Most do not object to automation — they object to feeling deceived or abandoned. Designing transparent, human-feeling automation builds more trust than hiding the automation entirely.
+              Clients notice when they are in an automated system. Most do not object to automation - they object to feeling deceived or abandoned. Designing transparent, human-feeling automation builds more trust than hiding the automation entirely.
             </p>
             <ul style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2 }}>
-              <li><strong>Tell clients what is automated and what is not.</strong> A one-sentence disclosure in your welcome email — "Our intake process is handled automatically. Your file will be reviewed personally within 24 hours" — sets expectations and builds confidence.</li>
-              <li><strong>Use your actual name in automated emails.</strong> "From: Sarah Chen at Barrana Law" — not "From: notifications@yourfirm.com." The personal sender name signals that a real person owns the relationship.</li>
+              <li><strong>Tell clients what is automated and what is not.</strong> A one-sentence disclosure in your welcome email - "Our intake process is handled automatically. Your file will be reviewed personally within 24 hours" - sets expectations and builds confidence.</li>
+              <li><strong>Use your actual name in automated emails.</strong> "From: Sarah Chen at Barrana Law" - not "From: notifications@yourfirm.com." The personal sender name signals that a real person owns the relationship.</li>
               <li><strong>Make human escalation easy.</strong> Every automated message should include a clear path to reach a human: a direct phone number, a reply address that reaches a person, or a booking link for an immediate callback.</li>
-              <li><strong>Log everything.</strong> Full audit trails are not just for compliance. They are also for reassurance — yours and your client's. When a question arises about what happened, when, and why, the answer is always available.</li>
+              <li><strong>Log everything.</strong> Full audit trails are not just for compliance. They are also for reassurance - yours and your client's. When a question arises about what happened, when, and why, the answer is always available.</li>
             </ul>
 
             {/* FAQ */}
@@ -349,7 +349,7 @@ export default function HumanInTheLoop() {
               />
               <FAQItem
                 q="What happens if the human misses an approval step?"
-                a="The system escalates after a defined window — typically 4 to 24 hours depending on urgency — and notifies a backup reviewer. No workflow is left waiting indefinitely without an escalation trigger."
+                a="The system escalates after a defined window - typically 4 to 24 hours depending on urgency - and notifies a backup reviewer. No workflow is left waiting indefinitely without an escalation trigger."
               />
               <FAQItem
                 q="Is human-in-the-loop more expensive to implement?"
@@ -357,7 +357,7 @@ export default function HumanInTheLoop() {
               />
               <FAQItem
                 q="Can clients tell when they're in an automated workflow?"
-                a="Sometimes. We recommend designing automation to be transparent — using real sender names, clear and human-sounding language, and easy paths to reach a real person. Clients who know they are in a well-designed automated system are generally comfortable with it."
+                a="Sometimes. We recommend designing automation to be transparent - using real sender names, clear and human-sounding language, and easy paths to reach a real person. Clients who know they are in a well-designed automated system are generally comfortable with it."
               />
               <FAQItem
                 q="Is this approach PIPEDA-compliant?"
@@ -371,7 +371,7 @@ export default function HumanInTheLoop() {
                 Design Automation That Keeps You in Control
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 1.75rem" }}>
-                Book a free 60-minute Automation Audit. We'll map your workflows and show you exactly where to place approval gates and escalation paths — no obligation.
+                Book a free 60-minute Automation Audit. We'll map your workflows and show you exactly where to place approval gates and escalation paths - no obligation.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
@@ -432,7 +432,7 @@ export default function HumanInTheLoop() {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Does human-in-the-loop automation slow things down?", "acceptedAnswer": { "@type": "Answer", "text": "Only for the specific steps that require it. The automation handles everything else at full speed, so humans spend their time on decisions, not coordination." } },
-          { "@type": "Question", "name": "What happens if the human misses an approval step?", "acceptedAnswer": { "@type": "Answer", "text": "The system escalates after a defined window — typically 4 to 24 hours depending on urgency — and notifies a backup reviewer." } },
+          { "@type": "Question", "name": "What happens if the human misses an approval step?", "acceptedAnswer": { "@type": "Answer", "text": "The system escalates after a defined window - typically 4 to 24 hours depending on urgency - and notifies a backup reviewer." } },
           { "@type": "Question", "name": "Is this approach PIPEDA-compliant?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The human oversight layer is part of our PIPEDA-aware design standard for all Canadian business implementations." } }
         ]
       }} />

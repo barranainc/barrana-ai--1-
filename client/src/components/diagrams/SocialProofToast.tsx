@@ -2,7 +2,7 @@
  * SocialProofToast.tsx
  * Fixed bottom-left toast cycling through factual social proof messages.
  * Appears after 5s, dismissable, persists via localStorage.
- * Only uses factual statements — no fake real-time notifications.
+ * Only uses factual statements - no fake real-time notifications.
  */
 
 import { useEffect, useState } from "react";

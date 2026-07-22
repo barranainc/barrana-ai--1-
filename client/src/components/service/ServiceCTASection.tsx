@@ -24,6 +24,7 @@ export default function ServiceCTASection({
 }: ServiceCTASectionProps) {
   return (
     <section
+      className="template-cta"
       style={{
         background: "linear-gradient(to bottom, #1a2d6e, #162358)",
         padding: "5rem 0",

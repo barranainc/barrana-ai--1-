@@ -41,13 +41,13 @@ export default function Navigation() {
       >
         Skip to main content
       </a>
-      <nav className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur" aria-label="Main navigation">
-        <div className="container flex h-16 items-center justify-between lg:h-[70px]">
-          <Link href="/" className="shrink-0 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#283891]" aria-label="Barrana.ai home">
+      <nav className="site-nav fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur" aria-label="Main navigation">
+        <div className="site-nav__inner container flex h-16 items-center justify-between lg:h-[70px]">
+          <Link href="/" className="site-nav__logo shrink-0 rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#283891]" aria-label="Barrana.ai home">
             <img src="/barrana-logo.png" alt="Barrana.ai" width="181" height="38" className="h-[38px] w-auto" />
           </Link>
 
-          <div className="hidden items-center gap-1 lg:flex">
+          <div className="site-nav__links hidden items-center gap-1 lg:flex">
             {navItems.map((item) => {
               const active = location === item.href || (item.href !== "/start-here" && location.startsWith(`${item.href}/`));
               return (
@@ -63,7 +63,7 @@ export default function Navigation() {
             })}
           </div>
 
-          <Link href="/contact" className="hidden min-h-10 items-center gap-2 rounded-lg bg-[#283891] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#1F2D75] lg:inline-flex">
+          <Link href="/contact" className="site-nav__cta hidden min-h-10 items-center gap-2 rounded-lg bg-[#7E0F4A] px-4 py-2 text-xs font-bold text-white transition hover:bg-[#6A0C3E] lg:inline-flex">
             Find the Workflow
             <ArrowRight size={14} aria-hidden="true" />
           </Link>
@@ -71,7 +71,7 @@ export default function Navigation() {
           <button
             ref={menuButtonRef}
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#172865] transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#283891] lg:hidden"
+            className="site-nav__menu-button inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#172865] transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#283891] lg:hidden"
             onClick={() => setIsOpen((open) => !open)}
             aria-label={isOpen ? "Close main menu" : "Open main menu"}
             aria-expanded={isOpen}
@@ -81,7 +81,7 @@ export default function Navigation() {
           </button>
         </div>
 
-        <div id="mobile-main-menu" hidden={!isOpen} className="border-t border-slate-200 bg-white lg:hidden">
+        <div id="mobile-main-menu" hidden={!isOpen} className="site-nav__mobile border-t border-slate-200 bg-white lg:hidden">
           <div className="container py-4">
             <div className="grid gap-1">
               {navItems.map((item) => {

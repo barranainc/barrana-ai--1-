@@ -93,7 +93,7 @@ const INDUSTRY_INSIGHTS: Record<string, string> = {
   accountant:
     "Accounting firms that automate document collection cut average file completion time from 3 weeks to 5 days.",
   "real-estate":
-    "Real estate teams that automate lead follow-up contact 3x more leads within the first 5 minutes — when conversion is highest.",
+    "Real estate teams that automate lead follow-up contact 3x more leads within the first 5 minutes - when conversion is highest.",
   agency:
     "Agencies that automate onboarding and reporting handle 30–40% more clients without adding operations staff.",
   insurance:
@@ -198,7 +198,7 @@ export default function StepIndustry({ state, dispatch, onNext, onBack }: Props)
           marginTop: 0,
         }}
       >
-        We will tailor everything to your industry — the language, the examples, and the recommendations.
+        We will tailor everything to your industry - the language, the examples, and the recommendations.
       </p>
 
       {/* Industry grid */}

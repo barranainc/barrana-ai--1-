@@ -42,7 +42,7 @@ export default function KnowledgeBase() {
           <div className="aeo-block max-w-3xl">
             <div className="aeo-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Direct Answer</div>
             <h3>What is AI automation for small business?</h3>
-            <p>AI automation for small business means using software to automatically handle repetitive tasks like responding to leads, collecting client documents, sending appointment reminders, generating invoices, and updating CRM records — without manual effort from your team. For GTA service businesses, the most impactful automations typically address lead response time, client intake, document collection, and scheduling.</p>
+            <p>AI automation for small business means using software to automatically handle repetitive tasks like responding to leads, collecting client documents, sending appointment reminders, generating invoices, and updating CRM records - without manual effort from your team. For GTA service businesses, the most impactful automations typically address lead response time, client intake, document collection, and scheduling.</p>
           </div>
         </div>
       </section>

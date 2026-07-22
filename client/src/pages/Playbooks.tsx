@@ -25,7 +25,7 @@ const playbooks = [
   {
     emoji: "📋",
     title: "Document Collection Playbook",
-    desc: "Stop chasing documents — track and remind automatically",
+    desc: "Stop chasing documents - track and remind automatically",
     steps: 5,
     slug: "document-collection",
   },

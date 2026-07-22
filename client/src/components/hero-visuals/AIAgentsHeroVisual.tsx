@@ -102,7 +102,7 @@ export default function AIAgentsHeroVisual({ className }: { className?: string }
             CHATBOT
           </div>
 
-          {/* Blocks stacked from bottom — we render top to bottom but align to bottom via flex column-reverse trick */}
+          {/* Blocks stacked from bottom - we render top to bottom but align to bottom via flex column-reverse trick */}
           <div style={{
             display: "flex",
             flexDirection: "column-reverse",

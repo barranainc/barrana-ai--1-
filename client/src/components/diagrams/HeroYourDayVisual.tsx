@@ -102,7 +102,7 @@ export default function HeroYourDayVisual() {
         }
       `}</style>
 
-      {/* TOP — YOUR DAY NOW */}
+      {/* TOP - YOUR DAY NOW */}
       <div
         style={{
           background: "rgba(126,15,74,0.06)",
@@ -219,7 +219,7 @@ export default function HeroYourDayVisual() {
         </div>
       </div>
 
-      {/* BOTTOM — YOUR DAY AFTER */}
+      {/* BOTTOM - YOUR DAY AFTER */}
       <div
         style={{
           background: "rgba(13,150,104,0.05)",

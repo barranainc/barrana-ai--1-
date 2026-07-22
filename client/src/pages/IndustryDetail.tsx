@@ -23,33 +23,33 @@ const industryData: Record<string, {
     name: "Immigration Consultants",
     emoji: "🛂",
     heroTitle: "AI Automation for Immigration Consultants in Toronto and the GTA",
-    heroSubtitle: "Automate client intake, document collection, and file tracking — so your consultants can focus on the work that actually requires their expertise.",
+    heroSubtitle: "Automate client intake, document collection, and file tracking - so your consultants can focus on the work that actually requires their expertise.",
     overview: [
-      "Immigration consulting is one of the most document-intensive professional services in Canada. Every client file involves multiple government forms, supporting documents, identity verification, and correspondence — all managed across email, portals, and physical mail.",
+      "Immigration consulting is one of the most document-intensive professional services in Canada. Every client file involves multiple government forms, supporting documents, identity verification, and correspondence - all managed across email, portals, and physical mail.",
       "The operational problem is not a lack of expertise. It is the volume of administrative coordination required to move each file forward. Consultants spend hours per week chasing documents, sending status updates, and manually updating client records.",
       "Barrana.ai builds automation systems that handle this coordination work systematically, so your consultants can focus on the regulatory and advisory work that actually requires their expertise.",
     ],
     problems: [
       { title: "Intake Takes 30–45 Minutes Per New Client", description: "Manually collecting client information, creating records in your CRM, and sending the initial document checklist consumes consultant time that should be spent on file work." },
       { title: "Document Collection Is a Full-Time Chase", description: "Clients submit documents late, incompletely, or in the wrong format. Staff spend hours following up, re-requesting, and organizing submissions." },
-      { title: "File Status Is Invisible Without Manual Checks", description: "Without automated tracking, knowing the current status of each file requires manually checking each one — a process that does not scale." },
+      { title: "File Status Is Invisible Without Manual Checks", description: "Without automated tracking, knowing the current status of each file requires manually checking each one - a process that does not scale." },
       { title: "Consultation Booking Is Manual and Slow", description: "Back-and-forth scheduling for initial consultations and follow-ups consumes administrative time and creates delays in the client experience." },
     ],
     solutions: [
-      { title: "Automated Client Intake System", description: "A new client inquiry triggers an immediate confirmation, a structured intake questionnaire, automatic CRM record creation, and consultant assignment based on visa type — all without staff involvement." },
+      { title: "Automated Client Intake System", description: "A new client inquiry triggers an immediate confirmation, a structured intake questionnaire, automatic CRM record creation, and consultant assignment based on visa type - all without staff involvement." },
       { title: "Document Collection Workflow", description: "When a file is opened, a document request checklist is automatically sent to the client. The system tracks which documents have been received, sends reminders every 48 hours for outstanding items, and flags overdue files." },
       { title: "File Status Tracking Dashboard", description: "Every file has an automated status that updates as milestones are completed. Consultants see the current state of every active file without manual checking." },
       { title: "Consultation Scheduling Automation", description: "Clients receive a booking link immediately after intake. Reminders are sent automatically at 48 hours and 2 hours before the appointment." },
     ],
     outcomes: [
       "Intake processing time reduced from 45 minutes to approximately 4 minutes",
-      "Document chase eliminated — clients receive automated reminders",
+      "Document chase eliminated - clients receive automated reminders",
       "Consultant capacity increased by an estimated 11 billable hours per week",
       "No-show rate reduced through automated appointment reminders",
       "File status visible in real-time without manual checking",
     ],
     caseStudySnippet: {
-      title: "Immigration Firm, North York — Client Intake Automation",
+      title: "Immigration Firm, North York - Client Intake Automation",
       result: "Intake time per new client dropped from 45 minutes to approximately 4 minutes. Consultant capacity increased by an estimated 11 billable hours per week.",
     },
     relatedServices: ["AI Agents", "Workflow Automation", "Operations Automation"],
@@ -58,22 +58,22 @@ const industryData: Record<string, {
     name: "Accounting Firms",
     emoji: "📊",
     heroTitle: "AI Automation for Accounting Firms in Toronto and the GTA",
-    heroSubtitle: "Eliminate document chase, automate invoice generation, and increase capacity without adding staff — especially during tax season.",
+    heroSubtitle: "Eliminate document chase, automate invoice generation, and increase capacity without adding staff - especially during tax season.",
     overview: [
       "Accounting firms face a recurring operational challenge: the work volume during tax season and year-end is significantly higher than the rest of the year, but hiring additional staff for peak periods is not economically viable.",
-      "The solution is not more staff — it is removing the administrative overhead that consumes staff time during peak periods. Document collection, invoice generation, client reminders, and status updates can all be automated.",
+      "The solution is not more staff - it is removing the administrative overhead that consumes staff time during peak periods. Document collection, invoice generation, client reminders, and status updates can all be automated.",
       "Barrana.ai builds automation systems that give accounting firms the capacity to handle more clients during peak periods without increasing headcount.",
     ],
     problems: [
       { title: "Document Collection Consumes Hours Per Client", description: "Chasing clients for T4s, receipts, and financial statements is a manual, time-consuming process that repeats every engagement cycle." },
-      { title: "Invoices Go Out Late and Payment Follows Later", description: "Manual invoice generation means invoices are often delayed, and payment reminders are sent inconsistently — impacting cash flow." },
+      { title: "Invoices Go Out Late and Payment Follows Later", description: "Manual invoice generation means invoices are often delayed, and payment reminders are sent inconsistently - impacting cash flow." },
       { title: "Tax Season Capacity Is a Recurring Crisis", description: "Every year, the same capacity crunch occurs. Staff are overwhelmed, deadlines are tight, and client communication suffers." },
       { title: "Client Onboarding Is Inconsistent", description: "New client onboarding varies by who handles it, leading to inconsistent information collection and delayed engagement starts." },
     ],
     solutions: [
-      { title: "Document Collection Automation", description: "When an engagement starts, a structured document request is automatically sent. The system tracks submissions, sends reminders every 48 hours, and flags overdue items — no manual follow-up required." },
+      { title: "Document Collection Automation", description: "When an engagement starts, a structured document request is automatically sent. The system tracks submissions, sends reminders every 48 hours, and flags overdue items - no manual follow-up required." },
       { title: "Invoice Generation and Payment Workflow", description: "Invoices are generated automatically at defined milestones, sent to clients, and followed up with payment reminders at 7, 14, and 21 days." },
-      { title: "Client Onboarding Standardization", description: "Every new client receives the same onboarding sequence: welcome email, engagement letter, document checklist, and portal access — automatically." },
+      { title: "Client Onboarding Standardization", description: "Every new client receives the same onboarding sequence: welcome email, engagement letter, document checklist, and portal access - automatically." },
       { title: "Tax Season Capacity Management", description: "Automated document organization, client communication, and status tracking reduce the administrative burden during peak periods, allowing staff to focus on technical work." },
     ],
     outcomes: [
@@ -84,7 +84,7 @@ const industryData: Record<string, {
       "Staff time redirected from admin to billable technical work",
     ],
     caseStudySnippet: {
-      title: "Accounting Firm, Vaughan — Tax Season Capacity",
+      title: "Accounting Firm, Vaughan - Tax Season Capacity",
       result: "Tax season capacity increased by an estimated 30% without adding staff. Invoice automation accelerated average payment cycle by an estimated 11 days.",
     },
     relatedServices: ["Workflow Automation", "Operations Automation", "AI Agents"],
@@ -106,7 +106,7 @@ const industryData: Record<string, {
       { title: "Deadline Management Is a Manual Risk", description: "Court deadlines, filing deadlines, and client commitments are tracked manually, creating risk of missed deadlines." },
     ],
     solutions: [
-      { title: "Matter Intake Automation", description: "New matter inquiries trigger an immediate intake questionnaire, conflict check initiation, retainer agreement generation, and CRM record creation — all automated." },
+      { title: "Matter Intake Automation", description: "New matter inquiries trigger an immediate intake questionnaire, conflict check initiation, retainer agreement generation, and CRM record creation - all automated." },
       { title: "Billing Cycle Automation", description: "Time entries trigger invoice generation at defined intervals. Invoices are sent automatically and followed up with payment reminders." },
       { title: "Client Status Update Sequences", description: "Automated status updates are sent to clients at defined milestones, reducing inbound calls and improving client satisfaction." },
       { title: "Deadline Tracking and Alerts", description: "Deadlines are tracked automatically with escalating alerts to the responsible team member as deadlines approach." },
@@ -124,11 +124,11 @@ const industryData: Record<string, {
     name: "Contractors",
     emoji: "🔧",
     heroTitle: "AI Automation for Contractors in Toronto and the GTA",
-    heroSubtitle: "Capture every lead, respond in 90 seconds, and fill your schedule — even when you're on a job site.",
+    heroSubtitle: "Capture every lead, respond in 90 seconds, and fill your schedule - even when you're on a job site.",
     overview: [
       "Contractors face a fundamental operational challenge: the work that generates revenue happens on job sites, but the work that fills the schedule happens at a desk. When you are on a job site from 7am to 5pm, leads that come in during the day go unanswered.",
       "For most residential contractors in the GTA, an estimated 8 to 12 qualified leads are lost per month to slow response time alone. The homeowner fills out a quote request, waits a few hours, and books with the first contractor who responds.",
-      "Barrana.ai builds lead automation systems that ensure every inquiry receives an immediate, professional response — regardless of when it comes in or what you are doing.",
+      "Barrana.ai builds lead automation systems that ensure every inquiry receives an immediate, professional response - regardless of when it comes in or what you are doing.",
     ],
     problems: [
       { title: "Leads Come In While You Are on the Job Site", description: "Quote requests, calls, and form submissions arrive throughout the day while you are unavailable. By the time you respond, the homeowner has already booked with a competitor." },
@@ -137,9 +137,9 @@ const industryData: Record<string, {
       { title: "Invoicing and Payment Are Delayed", description: "Invoices go out late because generating them requires time at a desk. Payment reminders are sent inconsistently." },
     ],
     solutions: [
-      { title: "24/7 Lead Capture and Response", description: "Every quote request receives an immediate confirmation, a short qualification questionnaire, and a link to book a site visit — within 90 seconds of submission." },
+      { title: "24/7 Lead Capture and Response", description: "Every quote request receives an immediate confirmation, a short qualification questionnaire, and a link to book a site visit - within 90 seconds of submission." },
       { title: "Quote Follow-Up Automation", description: "After a quote is sent, a follow-up sequence begins automatically: a check-in at 3 days, a value-add message at 7 days, and a final follow-up at 14 days." },
-      { title: "Jobber Integration", description: "Qualified leads are automatically entered into Jobber with the right job type, location, and contact information — ready for scheduling." },
+      { title: "Jobber Integration", description: "Qualified leads are automatically entered into Jobber with the right job type, location, and contact information - ready for scheduling." },
       { title: "Invoice and Payment Workflow", description: "Invoices are generated automatically at job completion milestones and payment reminders are sent at 7, 14, and 21 days." },
     ],
     outcomes: [
@@ -150,7 +150,7 @@ const industryData: Record<string, {
       "Projected ROI recovery within 30 days",
     ],
     caseStudySnippet: {
-      title: "General Contractor, Mississauga — Lead Response Automation",
+      title: "General Contractor, Mississauga - Lead Response Automation",
       result: "Lead response time reduced from 4–6 hours to 90 seconds. Quote conversion rate increased by 22% in 60 days. After-hours leads captured automatically.",
     },
     relatedServices: ["Lead Automation", "AI Receptionist", "Operations Automation"],
@@ -167,12 +167,12 @@ const industryData: Record<string, {
     ],
     problems: [
       { title: "No-Shows Cost Revenue and Capacity", description: "Missed appointments represent lost revenue and wasted practitioner time. Manual reminder calls are inconsistent and time-consuming." },
-      { title: "Patient Intake Is a Paper-Based Bottleneck", description: "New patient intake forms are filled out in the waiting room, manually entered into the system, and filed — a process that delays appointments and consumes staff time." },
+      { title: "Patient Intake Is a Paper-Based Bottleneck", description: "New patient intake forms are filled out in the waiting room, manually entered into the system, and filed - a process that delays appointments and consumes staff time." },
       { title: "Follow-Up Care Communication Is Inconsistent", description: "Post-appointment instructions, follow-up reminders, and prescription notifications are sent manually and inconsistently." },
-      { title: "Front Desk Is Overwhelmed With Inbound Calls", description: "A significant portion of inbound calls are for appointment booking, rescheduling, and FAQ inquiries — all of which can be handled automatically." },
+      { title: "Front Desk Is Overwhelmed With Inbound Calls", description: "A significant portion of inbound calls are for appointment booking, rescheduling, and FAQ inquiries - all of which can be handled automatically." },
     ],
     solutions: [
-      { title: "Appointment Reminder Sequences", description: "Automated reminders are sent at 48 hours, 24 hours, and 2 hours before each appointment, with rescheduling options included — reducing no-shows by an estimated 40%." },
+      { title: "Appointment Reminder Sequences", description: "Automated reminders are sent at 48 hours, 24 hours, and 2 hours before each appointment, with rescheduling options included - reducing no-shows by an estimated 40%." },
       { title: "Digital Patient Intake", description: "New patients complete intake forms digitally before their appointment. Information is automatically entered into the patient management system." },
       { title: "Follow-Up Care Automation", description: "Post-appointment instructions, follow-up reminders, and prescription notifications are sent automatically based on appointment type." },
       { title: "AI Receptionist for After-Hours Booking", description: "After-hours calls and online inquiries are handled by the AI Receptionist, which books appointments, answers FAQs, and captures new patient information." },
@@ -192,9 +192,9 @@ const industryData: Record<string, {
     heroTitle: "AI Automation for Real Estate Teams in Toronto and the GTA",
     heroSubtitle: "Automate lead nurture, CRM management, and client communication so your agents can focus on relationships and closings.",
     overview: [
-      "Real estate teams manage large lead volumes with varying timelines — some buyers are ready to move in 30 days, others are 18 months away. Manual follow-up processes cannot maintain consistent contact across all leads at all stages.",
+      "Real estate teams manage large lead volumes with varying timelines - some buyers are ready to move in 30 days, others are 18 months away. Manual follow-up processes cannot maintain consistent contact across all leads at all stages.",
       "The agents who win in the GTA market are the ones who stay top-of-mind throughout the buying or selling journey. Automation makes this possible at scale without consuming agent time.",
-      "Barrana.ai builds automation systems for real estate teams that ensure every lead receives consistent, personalized communication — from first inquiry through closing.",
+      "Barrana.ai builds automation systems for real estate teams that ensure every lead receives consistent, personalized communication - from first inquiry through closing.",
     ],
     problems: [
       { title: "Long-Cycle Leads Fall Through the Cracks", description: "Buyers who are 6–18 months from purchasing require consistent nurturing. Manual follow-up processes cannot maintain this contact at scale." },
@@ -203,10 +203,10 @@ const industryData: Record<string, {
       { title: "Transaction Coordination Is a Manual Bottleneck", description: "Managing the documentation, deadlines, and communication involved in a transaction requires significant administrative effort." },
     ],
     solutions: [
-      { title: "Lead Nurture Automation by Buyer Stage", description: "Leads are tagged by timeline and buyer stage. Automated nurture sequences deliver relevant content and check-ins at appropriate intervals — keeping your team top-of-mind without manual effort." },
+      { title: "Lead Nurture Automation by Buyer Stage", description: "Leads are tagged by timeline and buyer stage. Automated nurture sequences deliver relevant content and check-ins at appropriate intervals - keeping your team top-of-mind without manual effort." },
       { title: "CRM Automation", description: "Lead information from web forms, open houses, and referrals is automatically entered into your CRM, tagged, and assigned to the appropriate agent." },
       { title: "Listing Alert Automation", description: "New listings that match buyer criteria trigger automatic alerts with property details and a direct link to book a showing." },
-      { title: "Transaction Coordination Workflows", description: "When a deal goes conditional, a transaction coordination workflow begins: document requests, deadline tracking, and stakeholder communication — all automated." },
+      { title: "Transaction Coordination Workflows", description: "When a deal goes conditional, a transaction coordination workflow begins: document requests, deadline tracking, and stakeholder communication - all automated." },
     ],
     outcomes: [
       "3x more leads nurtured per agent without additional time investment",

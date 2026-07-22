@@ -79,7 +79,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -145,7 +145,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -208,7 +208,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -271,7 +271,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -337,7 +337,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -359,7 +359,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/markham/accounting-firms",
     h1: "AI Automation for Accounting Firms in Markham",
     metaTitle: "AI Automation for Accounting Firms in Markham | Barrana.ai",
-    metaDescription: "Markham CPA firms serving the tech corridor\u2019s SMBs automate document collection, onboarding, and invoicing \u2014 recovering 40\u201360 hours per month in admin time.",
+    metaDescription: "Markham CPA firms serving the tech corridor\u2019s SMBs automate document collection, onboarding, and invoicing - recovering 40\u201360 hours per month in admin time.",
     targetKeyword: "AI automation accounting firm Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech companies expect instant everything from their service providers. Your accounting firm should not be the exception. Automate the admin, match the digital expectations of your tech corridor clients.",
@@ -400,7 +400,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -421,7 +421,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/mississauga/dental-clinics",
     h1: "AI Automation for Dental Clinics in Mississauga",
     metaTitle: "AI Automation for Dental Clinics in Mississauga | Barrana.ai",
-    metaDescription: "560+ dental clinics compete in Mississauga. AI automation handles booking, dual reminders, recall campaigns, and after-hours calls \u2014 filling chairs competitors leave empty.",
+    metaDescription: "560+ dental clinics compete in Mississauga. AI automation handles booking, dual reminders, recall campaigns, and after-hours calls - filling chairs competitors leave empty.",
     targetKeyword: "AI automation dental clinic Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "560 dental clinics in Mississauga. Your clinical skills are not the differentiator. Your responsiveness is. The practices filling every chair are the ones where booking, reminders, and recall run automatically.",
@@ -447,7 +447,7 @@ export const localPages: LocalPageData[] = [
       body: "Clinical decisions, treatment planning, patient consultations, and emergency assessments remain with dental professionals.",
     },
     localContext: {
-      body: "Mississauga\u2019s dental market density means patients have options. A 4-hour response to an enquiry means the patient already booked with the clinic that responded in 5 minutes. Automation is not a luxury in this market \u2014 it is the competitive baseline.",
+      body: "Mississauga\u2019s dental market density means patients have options. A 4-hour response to an enquiry means the patient already booked with the clinic that responded in 5 minutes. Automation is not a luxury in this market - it is the competitive baseline.",
     },
     resultsSection: {
       body: "Clinics report: no-shows reduced from 20% to 8\u201312%. Recall campaigns generate $40,000\u2013$60,000 in recovered hygiene revenue. After-hours booking captures 15\u201325 new patients per month.",
@@ -463,7 +463,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -528,7 +528,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -591,7 +591,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -639,7 +639,7 @@ export const localPages: LocalPageData[] = [
       body: "Assessment, treatment planning, manual therapy, exercise prescription, and all clinical decisions remain with registered physiotherapists.",
     },
     localContext: {
-      body: "Richmond Hill\u2019s proximity to Mackenzie Health drives referral volume for post-surgical rehab, MVA recovery, and workplace injuries. These referrals are time-sensitive \u2014 a clinic that can onboard a new patient in 24 hours instead of 3 days captures the referral. Automation makes that possible.",
+      body: "Richmond Hill\u2019s proximity to Mackenzie Health drives referral volume for post-surgical rehab, MVA recovery, and workplace injuries. These referrals are time-sensitive - a clinic that can onboard a new patient in 24 hours instead of 3 days captures the referral. Automation makes that possible.",
     },
     resultsSection: {
       body: "Richmond Hill physio clinics report: no-shows from 22% to 13.6%. Revenue recovered: $85,000/year. Waitlist fill rate: 60\u201370% of cancellation slots filled automatically. Intake time: 45 minutes to under 5 minutes.",
@@ -655,7 +655,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -719,7 +719,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -782,7 +782,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -847,7 +847,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -872,7 +872,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Toronto law firms spend 20+ hours per week on intake admin. AI automation handles client intake, document collection, and billing follow-up so lawyers focus on billable work.",
     targetKeyword: "AI automation law firm Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
-    heroBody: "Toronto\u2019s legal market is the most competitive in Canada. Your firm\u2019s edge is not just legal expertise \u2014 it is how fast you respond to new enquiries, how smoothly you onboard clients, and how reliably you collect retainers. Automation handles the operations so your lawyers handle the law.",
+    heroBody: "Toronto\u2019s legal market is the most competitive in Canada. Your firm\u2019s edge is not just legal expertise - it is how fast you respond to new enquiries, how smoothly you onboard clients, and how reliably you collect retainers. Automation handles the operations so your lawyers handle the law.",
     ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=toronto" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
@@ -910,7 +910,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -936,7 +936,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Mississauga law firms lose $100,000+ per year to intake admin and missed after-hours enquiries. AI automation handles intake, documents, and billing follow-up.",
     targetKeyword: "AI automation law firm Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
-    heroBody: "Mississauga law firms along the Hurontario corridor serve one of the fastest-growing populations in the GTA. More residents means more legal needs \u2014 and more competition for those clients. The firms winning are the ones that respond fastest and onboard smoothest.",
+    heroBody: "Mississauga law firms along the Hurontario corridor serve one of the fastest-growing populations in the GTA. More residents means more legal needs - and more competition for those clients. The firms winning are the ones that respond fastest and onboard smoothest.",
     ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=mississauga" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
@@ -974,7 +974,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets \u2014 automation connects what you already have.",
+        answer: "No. We integrate with your existing tools. Whether you use Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets - automation connects what you already have.",
       },
     ],
     internalLinks: [
@@ -1000,7 +1000,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/toronto/immigration-consultants",
     h1: "AI Automation for Immigration Consultants in Toronto",
     metaTitle: "AI Automation for Immigration Consultants in Toronto | Barrana.ai",
-    metaDescription: "Toronto immigration consultants automate intake, document collection, and status updates \u2014 recovering 18+ hours per week in consultant capacity.",
+    metaDescription: "Toronto immigration consultants automate intake, document collection, and status updates - recovering 18+ hours per week in consultant capacity.",
     targetKeyword: "AI automation immigration consultant Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto is home to one of the largest concentrations of immigration consultants in Canada. Automation handles the intake admin, document chasing, and status updates that consume 18+ hours per week so your RCICs focus on case strategy.",
@@ -1041,7 +1041,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1063,7 +1063,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/north-york/immigration-consultants",
     h1: "AI Automation for Immigration Consultants in North York",
     metaTitle: "AI Automation for Immigration Consultants in North York | Barrana.ai",
-    metaDescription: "North York immigration firms automate intake, document collection, and after-hours response \u2014 recovering $70,000+ per year in consultant capacity.",
+    metaDescription: "North York immigration firms automate intake, document collection, and after-hours response - recovering $70,000+ per year in consultant capacity.",
     targetKeyword: "AI automation immigration consultant North York",
     eyebrow: "AI AUTOMATION IN NORTH YORK",
     heroBody: "North York\u2019s dense professional service corridor includes a high concentration of immigration firms. Automation handles intake categorisation, document chasing, and after-hours enquiries so consultants focus on case strategy.",
@@ -1104,7 +1104,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1127,7 +1127,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/scarborough/immigration-consultants",
     h1: "AI Automation for Immigration Consultants in Scarborough",
     metaTitle: "AI Automation for Immigration Consultants in Scarborough | Barrana.ai",
-    metaDescription: "Scarborough immigration firms serving diverse communities automate intake and document collection \u2014 recovering 18+ hours per week.",
+    metaDescription: "Scarborough immigration firms serving diverse communities automate intake and document collection - recovering 18+ hours per week.",
     targetKeyword: "AI automation immigration consultant Scarborough",
     eyebrow: "AI AUTOMATION IN SCARBOROUGH",
     heroBody: "Scarborough\u2019s diverse immigration market demands responsive, multilingual service. Automation handles intake categorisation, document collection, and after-hours response so your consultants focus on the cases that matter.",
@@ -1168,7 +1168,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1190,7 +1190,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/brampton/accounting-firms",
     h1: "AI Automation for Accounting Firms in Brampton",
     metaTitle: "AI Automation for Accounting Firms in Brampton | Barrana.ai",
-    metaDescription: "Brampton CPA firms automate document collection, onboarding, and invoicing \u2014 handling 40\u201365 more clients per tax season without hiring.",
+    metaDescription: "Brampton CPA firms automate document collection, onboarding, and invoicing - handling 40\u201365 more clients per tax season without hiring.",
     targetKeyword: "AI automation accounting firm Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s growing business community keeps CPA firms busy year-round. Automation handles the document chasing, onboarding, and invoicing that consume your team\u2019s capacity during tax season and beyond.",
@@ -1231,7 +1231,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1253,7 +1253,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/toronto/accounting-firms",
     h1: "AI Automation for Accounting Firms in Toronto",
     metaTitle: "AI Automation for Accounting Firms in Toronto | Barrana.ai",
-    metaDescription: "Toronto CPA firms automate document collection, client onboarding, and invoicing \u2014 handling more returns per season without adding staff.",
+    metaDescription: "Toronto CPA firms automate document collection, client onboarding, and invoicing - handling more returns per season without adding staff.",
     targetKeyword: "AI automation accounting firm Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto\u2019s competitive accounting market demands efficiency. Automation handles document chasing, client onboarding, and invoicing so your CPAs focus on advisory work that commands higher fees.",
@@ -1294,7 +1294,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1319,7 +1319,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Brampton dental clinics reduce no-shows 25\u201340% with dual reminders. Automated recall fills hygiene schedules. AI receptionist captures after-hours patients.",
     targetKeyword: "AI automation dental clinic Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
-    heroBody: "Brampton\u2019s growing population means more patients seeking dental care. The clinics filling every chair are the ones where booking, reminders, and recall run automatically \u2014 not the ones where staff make 50 calls a day.",
+    heroBody: "Brampton\u2019s growing population means more patients seeking dental care. The clinics filling every chair are the ones where booking, reminders, and recall run automatically - not the ones where staff make 50 calls a day.",
     ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=brampton" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
@@ -1357,7 +1357,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1379,7 +1379,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/vaughan/dental-clinics",
     h1: "AI Automation for Dental Clinics in Vaughan",
     metaTitle: "AI Automation for Dental Clinics in Vaughan | Barrana.ai",
-    metaDescription: "Vaughan dental clinics automate booking, reminders, and recall \u2014 reducing no-shows and recovering $40,000+ in dormant hygiene revenue.",
+    metaDescription: "Vaughan dental clinics automate booking, reminders, and recall - reducing no-shows and recovering $40,000+ in dormant hygiene revenue.",
     targetKeyword: "AI automation dental clinic Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Vaughan\u2019s new communities bring new patients. But if your booking system requires a phone call during business hours, you lose those patients to the clinic that lets them book online at midnight.",
@@ -1420,7 +1420,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1443,7 +1443,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/markham/dental-clinics",
     h1: "AI Automation for Dental Clinics in Markham",
     metaTitle: "AI Automation for Dental Clinics in Markham | Barrana.ai",
-    metaDescription: "Markham dental clinics automate booking, reminders, and recall \u2014 matching the digital expectations of tech-savvy patients.",
+    metaDescription: "Markham dental clinics automate booking, reminders, and recall - matching the digital expectations of tech-savvy patients.",
     targetKeyword: "AI automation dental clinic Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech-savvy population expects digital-first healthcare. Automated booking, reminders, and recall give your dental practice the modern experience patients compare you on.",
@@ -1484,7 +1484,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1506,7 +1506,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/mississauga/physiotherapy",
     h1: "AI Automation for Physiotherapy Clinics in Mississauga",
     metaTitle: "AI Automation for Physiotherapy Clinics in Mississauga | Barrana.ai",
-    metaDescription: "Mississauga physio clinics reduce no-shows with dual reminders and waitlist auto-fill \u2014 recovering $50,000+ per year in empty appointment slots.",
+    metaDescription: "Mississauga physio clinics reduce no-shows with dual reminders and waitlist auto-fill - recovering $50,000+ per year in empty appointment slots.",
     targetKeyword: "AI automation physiotherapy clinic Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga physio clinics lose tens of thousands per year to no-shows and manual booking admin. Dual reminders and waitlist auto-fill recover empty slots automatically.",
@@ -1547,7 +1547,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1572,7 +1572,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Brampton contractors capture missed leads with 90-second AI response. Quote follow-up automation closes 22% more jobs.",
     targetKeyword: "AI automation contractor Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
-    heroBody: "Brampton\u2019s construction boom means more leads than you can answer while on the job. Automation responds in 90 seconds, follows up on quotes, and invoices on completion \u2014 so no opportunity walks to a competitor.",
+    heroBody: "Brampton\u2019s construction boom means more leads than you can answer while on the job. Automation responds in 90 seconds, follows up on quotes, and invoices on completion - so no opportunity walks to a competitor.",
     ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=brampton" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
@@ -1610,7 +1610,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1635,7 +1635,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Toronto contractors who respond in under 90 seconds close more quotes. AI lead response and follow-up automation give you the edge in the GTA\u2019s busiest market.",
     targetKeyword: "AI automation contractor Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
-    heroBody: "Toronto\u2019s renovation and construction market is the busiest in Canada. The contractor who responds first gets the job. Automation puts you first \u2014 every time, even when you are on a job site.",
+    heroBody: "Toronto\u2019s renovation and construction market is the busiest in Canada. The contractor who responds first gets the job. Automation puts you first - every time, even when you are on a job site.",
     ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=toronto" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
@@ -1657,7 +1657,7 @@ export const localPages: LocalPageData[] = [
       body: "All estimating, project execution, crew coordination, and trade work remain in contractor hands.",
     },
     localContext: {
-      body: "Toronto\u2019s diverse housing stock \u2014 from Victorian homes in the Annex to condos downtown \u2014 means contractors serve varied project types. Automation categorises and routes enquiries appropriately.",
+      body: "Toronto\u2019s diverse housing stock - from Victorian homes in the Annex to condos downtown - means contractors serve varied project types. Automation categorises and routes enquiries appropriately.",
     },
     resultsSection: {
       body: "22% quote conversion improvement. 100% after-hours capture. Invoice payment time significantly reduced.",
@@ -1673,7 +1673,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1695,7 +1695,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/vaughan/law-firms",
     h1: "AI Automation for Law Firms in Vaughan",
     metaTitle: "AI Automation for Law Firms in Vaughan | Barrana.ai",
-    metaDescription: "Vaughan law firms automate client intake, document collection, and billing follow-up \u2014 recovering 20+ hours per week in lawyer capacity.",
+    metaDescription: "Vaughan law firms automate client intake, document collection, and billing follow-up - recovering 20+ hours per week in lawyer capacity.",
     targetKeyword: "AI automation law firm Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Vaughan law firms serve the growing York Region community. Automation handles the intake admin, document collection, and billing follow-up that consume hours of lawyer time every week.",
@@ -1736,7 +1736,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1759,7 +1759,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/brampton/law-firms",
     h1: "AI Automation for Law Firms in Brampton",
     metaTitle: "AI Automation for Law Firms in Brampton | Barrana.ai",
-    metaDescription: "Brampton law firms automate client intake, document collection, and billing \u2014 handling more clients without adding staff.",
+    metaDescription: "Brampton law firms automate client intake, document collection, and billing - handling more clients without adding staff.",
     targetKeyword: "AI automation law firm Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s growing population means more legal needs. Automation handles intake, document collection, and billing follow-up so your lawyers focus on billable work.",
@@ -1800,7 +1800,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1822,7 +1822,7 @@ export const localPages: LocalPageData[] = [
     route: "/locations/markham/law-firms",
     h1: "AI Automation for Law Firms in Markham",
     metaTitle: "AI Automation for Law Firms in Markham | Barrana.ai",
-    metaDescription: "Markham law firms automate intake, documents, and billing \u2014 matching the digital expectations of tech corridor clients.",
+    metaDescription: "Markham law firms automate intake, documents, and billing - matching the digital expectations of tech corridor clients.",
     targetKeyword: "AI automation law firm Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech corridor clients expect digital-first service from their lawyers. Automation gives your firm the modern intake, document collection, and communication experience that tech-savvy clients compare you on.",
@@ -1863,7 +1863,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [
@@ -1888,7 +1888,7 @@ export const localPages: LocalPageData[] = [
     metaDescription: "Richmond Hill contractors capture missed leads with 90-second AI response. Quote follow-up automation closes more jobs in York Region.",
     targetKeyword: "AI automation contractor Richmond Hill",
     eyebrow: "AI AUTOMATION IN RICHMOND HILL",
-    heroBody: "Richmond Hill\u2019s residential market keeps contractors busy. Automation ensures you never miss a lead while on the job \u2014 responding in 90 seconds, following up on quotes, and invoicing on completion.",
+    heroBody: "Richmond Hill\u2019s residential market keeps contractors busy. Automation ensures you never miss a lead while on the job - responding in 90 seconds, following up on quotes, and invoicing on completion.",
     ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=richmond-hill" },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
@@ -1926,7 +1926,7 @@ export const localPages: LocalPageData[] = [
       },
       {
         question: "Do I need to change my current software?",
-        answer: "No. We integrate with your existing tools \u2014 Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
+        answer: "No. We integrate with your existing tools - Clio, QuickBooks, Jane App, Jobber, Go High Level, or spreadsheets.",
       },
     ],
     internalLinks: [

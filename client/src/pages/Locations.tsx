@@ -58,7 +58,7 @@ export default function Locations() {
       <section className="py-16" style={{ backgroundColor: "#283891" }}>
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Serving All of the GTA</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">We work with businesses across the Greater Toronto Area. If your city is not listed, contact us — we likely serve your area.</p>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">We work with businesses across the Greater Toronto Area. If your city is not listed, contact us - we likely serve your area.</p>
           <Link href="/contact" className="btn-accent">
             Book a Free Automation Audit <ArrowRight size={16} />
           </Link>

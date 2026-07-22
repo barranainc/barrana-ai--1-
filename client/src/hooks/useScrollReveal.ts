@@ -1,6 +1,6 @@
 /**
  * useScrollReveal.ts
- * Barrana.ai — Scroll-based reveal animation hook
+ * Barrana.ai - Scroll-based reveal animation hook
  * Returns a ref and a boolean indicating if the element is visible
  */
 

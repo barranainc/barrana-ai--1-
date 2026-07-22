@@ -271,7 +271,7 @@ export default function AIReceptionistHeroVisual({ className }: { className?: st
         {showOverlay ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
             <div style={{ fontSize: "0.875rem", fontWeight: 700, color: "#10B981" }}>
-              $0 missed — every call answered
+              $0 missed - every call answered
             </div>
             <div style={{ fontSize: "0.75rem", color: "#6B7280", marginTop: "2px" }}>
               AI receptionist active 24/7

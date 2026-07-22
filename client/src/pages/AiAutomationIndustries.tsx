@@ -138,7 +138,7 @@ function MaturityScale() {
       }}
     >
       <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
-        Industry Automation Maturity — Current vs Potential (Scale 1–5)
+        Industry Automation Maturity - Current vs Potential (Scale 1–5)
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
         {maturityData.map((row, i) => (
@@ -251,16 +251,16 @@ export default function AiAutomationIndustries() {
               AI automation is not one-size-fits-all. The workflows that consume a contractor's time look nothing like the workflows that consume an immigration consultant's time. The compliance constraints of a medical clinic are fundamentally different from those of an accounting firm. Getting the right automation starts with understanding your industry's specific pattern of friction.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "0.5rem" }}>
-              Below you'll find the eight industries we serve most frequently, with a direct link to the full automation guide for each. Following the industry grid, we walk through the top five industries in detail — covering the specific workflow problem, what automation addresses, and where to start.
+              Below you'll find the eight industries we serve most frequently, with a direct link to the full automation guide for each. Following the industry grid, we walk through the top five industries in detail - covering the specific workflow problem, what automation addresses, and where to start.
             </p>
 
-            {/* Industry Card Grid — main graphic */}
+            {/* Industry Card Grid - main graphic */}
             <IndustryGrid />
 
             {/* Maturity Scale */}
             <SectionHeading>Automation Maturity by Industry</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "0.5rem" }}>
-              Some industries have adopted automation widely; others are still in early stages. The chart below shows the current automation level across our key industries versus the achievable potential — illustrating where the largest gaps (and therefore the largest opportunities) exist.
+              Some industries have adopted automation widely; others are still in early stages. The chart below shows the current automation level across our key industries versus the achievable potential - illustrating where the largest gaps (and therefore the largest opportunities) exist.
             </p>
             <MaturityScale />
 
@@ -270,7 +270,7 @@ export default function AiAutomationIndustries() {
               Accounting firms face an acute seasonal problem: the months of January through April generate a concentrated volume of document requests, status questions, and invoice cycles that strains small teams. Staff spend disproportionate time chasing clients for T4s and receipts, sending the same follow-up messages, and manually updating tracking spreadsheets. This is the industry's signature friction point.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Automation directly addresses the document collection and follow-up loop. When a client is assigned a file, the system automatically sends a personalised document checklist, sequences follow-up reminders at defined intervals, and flags overdue responses to the assigned accountant — without manual intervention. Invoice generation and sending can also be automated once the engagement is complete, with approval gates ensuring no invoice goes out without CPA review.
+              Automation directly addresses the document collection and follow-up loop. When a client is assigned a file, the system automatically sends a personalised document checklist, sequences follow-up reminders at defined intervals, and flags overdue responses to the assigned accountant - without manual intervention. Invoice generation and sending can also be automated once the engagement is complete, with approval gates ensuring no invoice goes out without CPA review.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               The recommended starting point for accounting firms is document collection automation integrated with your CRM or practice management system. This single workflow typically recovers 5-8 hours of staff time per week during busy season.
@@ -279,10 +279,10 @@ export default function AiAutomationIndustries() {
             {/* Immigration */}
             <SectionHeading>Immigration Consultants</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Immigration consultants manage highly variable case types — each visa category requires a different document set, different processing timelines, and different government communication requirements. Without automation, intake is handled manually for every new client, document checklists are sent by hand, and status updates require staff to check government portals and then communicate findings to each client individually.
+              Immigration consultants manage highly variable case types - each visa category requires a different document set, different processing timelines, and different government communication requirements. Without automation, intake is handled manually for every new client, document checklists are sent by hand, and status updates require staff to check government portals and then communicate findings to each client individually.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Automation handles intake categorisation — routing each new inquiry to the right workflow based on visa type — and manages the document tracking process throughout the application lifecycle. Clients receive automated status updates at defined milestones, and the RCIC is notified of escalations that require their direct attention.
+              Automation handles intake categorisation - routing each new inquiry to the right workflow based on visa type - and manages the document tracking process throughout the application lifecycle. Clients receive automated status updates at defined milestones, and the RCIC is notified of escalations that require their direct attention.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               The recommended starting point is client intake automation with visa-type branching logic. This eliminates manual intake qualification and ensures every new client enters the right workflow from day one.
@@ -294,7 +294,7 @@ export default function AiAutomationIndustries() {
               Law firms face two major administrative friction points: new matter intake (capturing sufficient information to open a file and perform a conflict check) and billing (preparing, sending, and following up on invoices). Both require coordination between multiple staff members and generate significant administrative overhead relative to the value of the work involved.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Automation addresses both. New matter intake can be triggered by a form submission, which populates the practice management system, initiates a conflict check request, and queues the matter for solicitor review — all without a staff member manually processing each step. Billing automation generates invoices from time entries, sequences payment reminders at defined intervals, and escalates overdue accounts to the billing partner.
+              Automation addresses both. New matter intake can be triggered by a form submission, which populates the practice management system, initiates a conflict check request, and queues the matter for solicitor review - all without a staff member manually processing each step. Billing automation generates invoices from time entries, sequences payment reminders at defined intervals, and escalates overdue accounts to the billing partner.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               The recommended starting point for law firms is matter intake automation. It directly reduces the overhead on legal assistants and junior staff while improving the client experience from the first touchpoint.
@@ -303,10 +303,10 @@ export default function AiAutomationIndustries() {
             {/* Clinics */}
             <SectionHeading>Medical and Allied Health Clinics</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Clinics — whether medical, dental, physiotherapy, or allied health — share a common operational challenge: appointment management. No-shows and last-minute cancellations are costly. Recall management (bringing patients back for follow-up appointments or annual check-ins) is time-intensive when done manually. Front desk staff spend a significant portion of their time on phone-based booking and reminder calls that automation can handle entirely.
+              Clinics - whether medical, dental, physiotherapy, or allied health - share a common operational challenge: appointment management. No-shows and last-minute cancellations are costly. Recall management (bringing patients back for follow-up appointments or annual check-ins) is time-intensive when done manually. Front desk staff spend a significant portion of their time on phone-based booking and reminder calls that automation can handle entirely.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Automated appointment reminders — sent by SMS or email 48 hours and 24 hours before an appointment — consistently reduce no-show rates by 20-35%. Recall campaigns automatically contact patients at defined intervals after their last visit, bringing in appointment bookings that would otherwise fall through.
+              Automated appointment reminders - sent by SMS or email 48 hours and 24 hours before an appointment - consistently reduce no-show rates by 20-35%. Recall campaigns automatically contact patients at defined intervals after their last visit, bringing in appointment bookings that would otherwise fall through.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               The recommended starting point for clinics is appointment reminder automation. It requires minimal setup, integrates with most practice management systems, and delivers measurable ROI within the first month.
@@ -318,7 +318,7 @@ export default function AiAutomationIndustries() {
               Contractors lose business primarily through delayed lead response. When a homeowner submits an inquiry, they typically contact two or three contractors simultaneously. The first to respond credibly wins the call. Most contractors are on-site during the day and cannot respond to web inquiries within the critical first hour. This is the single highest-value automation opportunity for trades businesses.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              An AI receptionist or automated lead response system handles incoming inquiries instantly — acknowledging the request, gathering job details, and booking an estimate appointment — regardless of when the inquiry arrives. After-hours capture ensures that evening and weekend inquiries do not go cold overnight.
+              An AI receptionist or automated lead response system handles incoming inquiries instantly - acknowledging the request, gathering job details, and booking an estimate appointment - regardless of when the inquiry arrives. After-hours capture ensures that evening and weekend inquiries do not go cold overnight.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               The recommended starting point for contractors is lead response and after-hours capture automation. It directly addresses the highest point of lost revenue and typically pays for itself within the first month of operation.

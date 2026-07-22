@@ -486,7 +486,7 @@ export default function StepWorkflows({
 
       {/* Micro-insight when nothing is selected yet */}
       {count === 0 && (
-        <MicroInsight text="Tick every workflow that currently happens in your business — even if it is messy or manual. This shapes the entire plan we build for you." />
+        <MicroInsight text="Tick every workflow that currently happens in your business - even if it is messy or manual. This shapes the entire plan we build for you." />
       )}
 
       <PlannerNav

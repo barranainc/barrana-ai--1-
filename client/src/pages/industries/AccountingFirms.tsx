@@ -56,7 +56,7 @@ const data: IndustryPageData = {
     {
       label: "Document Follow-Up",
       before: "2-3 hrs/day per staff",
-      after: "Zero — system-managed",
+      after: "Zero - system-managed",
       beforeW: 90,
       afterW: 5,
     },

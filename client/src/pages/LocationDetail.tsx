@@ -1,5 +1,5 @@
 /**
- * BARRANA.AI LOCATION DETAIL PAGE — Premium Hub
+ * BARRANA.AI LOCATION DETAIL PAGE - Premium Hub
  * 8-section design linking to 30 Tier 1/Tier 2 local industry pages
  */
 import { useState } from "react";
@@ -497,7 +497,7 @@ export default function LocationDetail() {
     },
   };
 
-  /* FAQ items — generic to all locations */
+  /* FAQ items - generic to all locations */
   const locationFaqs = [
     { q: `What types of businesses in ${location.name} do you work with?`, a: `We work with professional services firms, healthcare clinics, contractors, and service-based operators across ${location.name}. Common clients include immigration consultants, accounting firms, dental offices, physiotherapy clinics, law firms, and home service businesses.` },
     { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },

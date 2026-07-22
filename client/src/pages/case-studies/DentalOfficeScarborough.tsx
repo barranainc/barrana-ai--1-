@@ -41,7 +41,7 @@ const data: CaseStudyData = {
     {
       id: "recall-trigger",
       label: "6-Month Recall Trigger",
-      sublabel: "Dentrix flags patient as due — system takes over from there",
+      sublabel: "Dentrix flags patient as due - system takes over from there",
       type: "trigger",
       icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
       color: "#F59E0B",

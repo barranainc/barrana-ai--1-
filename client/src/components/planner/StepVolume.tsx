@@ -223,7 +223,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
               lineHeight: 1,
             }}
           >
-            {hasAppointmentWorkflow ? (appt === 0 ? "Unknown" : `${appt} appointments/week`) : "—"}
+            {hasAppointmentWorkflow ? (appt === 0 ? "Unknown" : `${appt} appointments/week`) : "-"}
           </div>
           {!hasAppointmentWorkflow ? (
             <div
@@ -254,7 +254,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
               }}
             >
               At {appt} appointments with a typical 15-20% no-show rate, that is{" "}
-              <strong>{Math.round(appt * 0.175)}</strong> empty slots per week — recoverable with automated reminders.
+              <strong>{Math.round(appt * 0.175)}</strong> empty slots per week - recoverable with automated reminders.
             </div>
           ) : null}
         </div>
@@ -312,7 +312,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
           )}
         </div>
 
-        {/* Slider 4: Admin hours per week — THE AHA MOMENT */}
+        {/* Slider 4: Admin hours per week - THE AHA MOMENT */}
         <div>
           <label
             style={{
@@ -364,7 +364,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
                 <strong>${formatWithCommas(admin * 52 * 30)}</strong> per year.
               </p>
               <p style={{ margin: 0, fontSize: 13, color: "#7F1D1D", lineHeight: 1.6 }}>
-                Automation typically recovers 40-60% of this — that is{" "}
+                Automation typically recovers 40-60% of this - that is{" "}
                 <strong>${formatWithCommas(Math.round(admin * 52 * 30 * 0.5))}</strong> in recovered productivity.
               </p>
             </div>

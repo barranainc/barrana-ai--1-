@@ -91,7 +91,7 @@ export default function DocumentCollectionHeroVisual({ className }: { className?
   return (
     <div
       role="img"
-      aria-label="Circular spiral showing the email document chase cycle — send, wait, remind, wait, call, get partial docs, remind again — taking 18 days and 15 staff hours per week. Then collapses into a clean 9-day automated straight line."
+      aria-label="Circular spiral showing the email document chase cycle - send, wait, remind, wait, call, get partial docs, remind again - taking 18 days and 15 staff hours per week. Then collapses into a clean 9-day automated straight line."
       className={className}
       style={{
         background: "white",
@@ -205,7 +205,7 @@ export default function DocumentCollectionHeroVisual({ className }: { className?
             );
           })}
 
-          {/* Clean straight arrow — phase clean */}
+          {/* Clean straight arrow - phase clean */}
           {phase === "clean" && (
             <motion.g initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
               {/* Arrow line */}

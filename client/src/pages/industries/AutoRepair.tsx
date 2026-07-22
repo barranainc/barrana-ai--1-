@@ -61,7 +61,7 @@ const data: IndustryPageData = {
   ],
 
   beforeAfterMetrics: [
-    { label: "Service reminders", before: "None — customer remembers or does not", after: "Automated by mileage estimate and time", beforeW: 90, afterW: 15 },
+    { label: "Service reminders", before: "None - customer remembers or does not", after: "Automated by mileage estimate and time", beforeW: 90, afterW: 15 },
     { label: "Declined service follow-up", before: "Zero follow-up", after: "30-day and 60-day automated sequence", beforeW: 85, afterW: 10 },
     { label: "Seasonal campaigns", before: "Manual, usually late or skipped", after: "Automated 4 weeks before each season", beforeW: 80, afterW: 20 },
     { label: "Estimate follow-up", before: "Depends on who remembers", after: "48hr / 7d / 14d automated sequence", beforeW: 75, afterW: 15 },

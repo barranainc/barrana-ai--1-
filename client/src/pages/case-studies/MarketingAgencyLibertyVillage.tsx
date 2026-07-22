@@ -36,7 +36,7 @@ const data: CaseStudyData = {
     { label: "Client capacity", value: "12 (at limit)" },
   ],
   solutionIntro:
-    "We automated onboarding, reporting, handoffs, and invoicing — integrated with Monday.com and the agency's ad platforms. Goal: create enough operational capacity to take on 40% more clients without the $60K ops hire.",
+    "We automated onboarding, reporting, handoffs, and invoicing - integrated with Monday.com and the agency's ad platforms. Goal: create enough operational capacity to take on 40% more clients without the $60K ops hire.",
   workflowSteps: [
     {
       id: "step-1",
@@ -145,7 +145,7 @@ const data: CaseStudyData = {
   keyResultCallout:
     "40% more clients with same team. $60,000+ operations hire avoided. Monthly reporting reduced from 72 hours to 8 hours. Onboarding from 2 weeks to 48 hours. Zero missed handoffs.",
   whyItMatters:
-    "Agencies sell efficiency but often run on chaos internally. The constraint on agency growth is usually not creative talent or sales — it is operations overhead. Automating the coordination layer creates capacity to grow without proportional ops hiring.",
+    "Agencies sell efficiency but often run on chaos internally. The constraint on agency growth is usually not creative talent or sales - it is operations overhead. Automating the coordination layer creates capacity to grow without proportional ops hiring.",
   whyBullets: [
     "You are at capacity with current client count",
     "Onboarding new clients takes longer than it should",

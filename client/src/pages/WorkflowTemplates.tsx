@@ -5,7 +5,7 @@ const templates = [
   {
     title: "Lead Capture to Consultation Booking",
     description:
-      "Automate the full journey from an inbound form submission to a confirmed consultation booking — qualifying the lead and sending a calendar link without any manual intervention.",
+      "Automate the full journey from an inbound form submission to a confirmed consultation booking - qualifying the lead and sending a calendar link without any manual intervention.",
     steps: [
       { label: "Form Submitted", type: "trigger" as const },
       { label: "AI Qualifies", type: "ai" as const },
@@ -18,7 +18,7 @@ const templates = [
   {
     title: "Document Request to Completion",
     description:
-      "Send document checklists automatically when an engagement starts, track what has been received, and fire reminders until the file is complete — no staff follow-up required.",
+      "Send document checklists automatically when an engagement starts, track what has been received, and fire reminders until the file is complete - no staff follow-up required.",
     steps: [
       { label: "Engagement Started", type: "trigger" as const },
       { label: "Request Sent", type: "action" as const },
@@ -58,7 +58,7 @@ const templates = [
   {
     title: "Client Onboarding Sequence",
     description:
-      "From signed agreement to fully onboarded client in the same day — welcome email, intake form, document collection, and intro call booking all run automatically.",
+      "From signed agreement to fully onboarded client in the same day - welcome email, intake form, document collection, and intro call booking all run automatically.",
     steps: [
       { label: "Signed", type: "trigger" as const },
       { label: "Welcome Email", type: "action" as const },
@@ -86,7 +86,7 @@ const templates = [
   {
     title: "Quote Follow-Up Sequence (48hr/5d/10d)",
     description:
-      "Ensure 100% of quotes receive structured follow-up at 48 hours, 5 days, and 10 days — so no deal is ever lost to silence.",
+      "Ensure 100% of quotes receive structured follow-up at 48 hours, 5 days, and 10 days - so no deal is ever lost to silence.",
     steps: [
       { label: "Quote Sent", type: "trigger" as const },
       { label: "48hr Follow-Up", type: "action" as const },
@@ -99,7 +99,7 @@ const templates = [
   {
     title: "Monthly Client Reporting",
     description:
-      "Pull data automatically at month end, generate a formatted report, and email it to every client — eliminating 4 hours of manual reporting work.",
+      "Pull data automatically at month end, generate a formatted report, and email it to every client - eliminating 4 hours of manual reporting work.",
     steps: [
       { label: "Month End", type: "trigger" as const },
       { label: "Data Pulled", type: "ai" as const },

@@ -45,7 +45,7 @@ const serviceData: Record<string, {
     subtitle: "End-to-end process automation across your existing tools",
     description: "Workflow automation connects the tools your business already uses and creates automated sequences that run without manual intervention.",
     longDescription: [
-      "Workflow automation connects the tools your business already uses and creates automated sequences that run without manual intervention. When a trigger event occurs — a form submission, a payment received, a document uploaded — the system executes a defined sequence of actions across multiple platforms.",
+      "Workflow automation connects the tools your business already uses and creates automated sequences that run without manual intervention. When a trigger event occurs - a form submission, a payment received, a document uploaded - the system executes a defined sequence of actions across multiple platforms.",
       "We work with the tools you already have: HubSpot, Salesforce, Jobber, QuickBooks, Google Workspace, Microsoft 365, Calendly, Acuity, and dozens of others. We do not require you to switch platforms.",
       "The result is a business that operates consistently regardless of who is in the office, what time it is, or how many clients are active simultaneously.",
     ],
@@ -60,17 +60,17 @@ const serviceData: Record<string, {
     useCases: [
       { title: "CRM-to-Project Management Sync", description: "When a deal closes in your CRM, a project is automatically created in your project management tool with the right template, assigned to the right team, and the client receives an onboarding email." },
       { title: "Invoice Generation Workflow", description: "When a project milestone is marked complete, an invoice is automatically generated in QuickBooks, sent to the client, and a follow-up reminder is scheduled for 7 days later." },
-      { title: "New Client Onboarding Sequence", description: "When a new client is added to your CRM, a multi-step onboarding sequence begins: welcome email, intake form, document request, and calendar booking link — all automated." },
+      { title: "New Client Onboarding Sequence", description: "When a new client is added to your CRM, a multi-step onboarding sequence begins: welcome email, intake form, document request, and calendar booking link - all automated." },
     ],
     industries: ["Accounting Firms", "Law Firms", "Contractors", "Immigration Consultants", "Clinics"],
   },
   "lead-automation": {
     title: "Lead Automation",
     subtitle: "Capture, qualify, and follow up with every lead automatically",
-    description: "Lead automation ensures that every inbound inquiry receives an immediate, personalized response — regardless of when it comes in.",
+    description: "Lead automation ensures that every inbound inquiry receives an immediate, personalized response - regardless of when it comes in.",
     longDescription: [
-      "Lead automation ensures that every inbound inquiry receives an immediate, personalized response — regardless of when it comes in. The system captures lead information, qualifies the inquiry, routes it to the right person, and initiates a follow-up sequence without any manual intervention.",
-      "For most small businesses, the biggest revenue leak is not bad marketing or poor service — it is slow response time. Studies consistently show that leads contacted within 5 minutes are 21 times more likely to convert than those contacted after 30 minutes. Most small businesses respond in hours or days.",
+      "Lead automation ensures that every inbound inquiry receives an immediate, personalized response - regardless of when it comes in. The system captures lead information, qualifies the inquiry, routes it to the right person, and initiates a follow-up sequence without any manual intervention.",
+      "For most small businesses, the biggest revenue leak is not bad marketing or poor service - it is slow response time. Studies consistently show that leads contacted within 5 minutes are 21 times more likely to convert than those contacted after 30 minutes. Most small businesses respond in hours or days.",
       "We build lead automation systems that close this gap completely. Every lead gets an immediate, relevant response. Every qualified lead gets a follow-up sequence. Every unbooked lead gets a nurture sequence.",
     ],
     outcomes: [
@@ -82,7 +82,7 @@ const serviceData: Record<string, {
       "Conversion tracking and reporting",
     ],
     useCases: [
-      { title: "Website Lead Capture", description: "Form submissions trigger immediate confirmation, qualification questions, CRM entry, and team notification — all within 90 seconds of submission." },
+      { title: "Website Lead Capture", description: "Form submissions trigger immediate confirmation, qualification questions, CRM entry, and team notification - all within 90 seconds of submission." },
       { title: "Multi-Channel Lead Consolidation", description: "Leads from your website, Google Business Profile, Instagram, and phone calls are captured in a single system, deduplicated, and routed consistently." },
       { title: "Re-Engagement Sequences", description: "Leads that did not book after initial contact receive a structured follow-up sequence over 14 days, increasing conversion without manual effort." },
     ],
@@ -94,7 +94,7 @@ const serviceData: Record<string, {
     description: "Operations automation targets the internal coordination tasks that consume staff time without creating client value.",
     longDescription: [
       "Operations automation targets the internal coordination tasks that consume staff time without creating client value: document collection, invoice generation, appointment scheduling, project status updates, and inter-team communication.",
-      "In most small businesses, a significant portion of staff time is spent on coordination — moving information between systems, chasing documents, sending reminders, updating statuses. This work is necessary but not valuable. It can be automated.",
+      "In most small businesses, a significant portion of staff time is spent on coordination - moving information between systems, chasing documents, sending reminders, updating statuses. This work is necessary but not valuable. It can be automated.",
       "We map your internal workflows, identify the highest-volume coordination tasks, and build automation systems that handle them systematically. Your team stops doing administrative work and starts doing the work they were actually hired to do.",
     ],
     outcomes: [

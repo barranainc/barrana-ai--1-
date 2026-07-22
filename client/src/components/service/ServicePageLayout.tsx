@@ -91,7 +91,7 @@ export interface ServicePageData {
   // Internal links
   internalLinks: { label: string; href: string; desc?: string }[];
 
-  // Hero visual stats (shown in right column of hero — pulled from roiMetrics if not provided)
+  // Hero visual stats (shown in right column of hero - pulled from roiMetrics if not provided)
   heroStats?: { value: string; label: string }[];
 
   // Custom children slot (rendered between workflow and control layer)
@@ -165,8 +165,8 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
   };
 
   return (
-    <>
-      {/* SEO Head — OG, Twitter, Canonical */}
+    <div className="template-page service-template">
+      {/* SEO Head - OG, Twitter, Canonical */}
       <SEOHead title={data.title} description={data.description} type="article" />
 
       {/* JSON-LD Schemas */}
@@ -192,7 +192,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </div>
 
-      {/* 1. Hero — white/off-white bg */}
+      {/* 1. Hero - white/off-white bg */}
       <ServiceHero
         breadcrumb={data.breadcrumb}
         h1={data.h1}
@@ -210,12 +210,12 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         }
       />
 
-      {/* 2. Trust Badges — white bg */}
+      {/* 2. Trust Badges - white bg */}
       <section style={{ background: "white", paddingBottom: 0 }}>
         <TrustBadges />
       </section>
 
-      {/* 3. Cost of Inaction — off-white bg */}
+      {/* 3. Cost of Inaction - off-white bg */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
@@ -223,7 +223,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 4. Before vs After — white bg */}
+      {/* 4. Before vs After - white bg */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>Before vs After</h2>
@@ -234,14 +234,14 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 5. How the System Works — off-white bg */}
+      {/* 5. How the System Works - off-white bg */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>
             {data.workflowHeading ?? "How the System Works"}
           </h2>
           <p style={{ ...subheadingStyle, marginBottom: "1.5rem" }}>
-            A fully automated workflow runs end-to-end — no manual hand-offs required.
+            A fully automated workflow runs end-to-end - no manual hand-offs required.
           </p>
           <WorkflowDiagram
             steps={data.workflowSteps}
@@ -250,10 +250,10 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* Custom children slot — between workflow and control layer */}
+      {/* Custom children slot - between workflow and control layer */}
       {data.children}
 
-      {/* 6. Control Layer — white bg */}
+      {/* 6. Control Layer - white bg */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={{ ...headingStyle, marginBottom: "1.5rem" }}>
@@ -263,7 +263,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 7. ROI & Impact — off-white bg */}
+      {/* 7. ROI & Impact - off-white bg */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>ROI &amp; Impact</h2>
@@ -278,7 +278,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 8. Who This Is For — white bg */}
+      {/* 8. Who This Is For - white bg */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>Who This Is For</h2>
@@ -289,7 +289,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 9. Quick Answer — off-white bg */}
+      {/* 9. Quick Answer - off-white bg */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container" style={{ maxWidth: "720px" }}>
           <AEOBlock question={data.aeoQuestion} answer={data.aeoAnswer} />
@@ -308,7 +308,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </section>
       )}
 
-      {/* 10. FAQ — white bg */}
+      {/* 10. FAQ - white bg */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>Frequently Asked Questions</h2>
@@ -318,7 +318,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         </div>
       </section>
 
-      {/* 11. Final CTA — dark navy */}
+      {/* 11. Final CTA - dark navy */}
       <ServiceCTASection
         headline={data.ctaHeadline}
         body={data.ctaBody}
@@ -328,7 +328,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         secondaryMicro={data.secondaryMicro}
       />
 
-      {/* 12. Related Resources — off-white bg */}
+      {/* 12. Related Resources - off-white bg */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
@@ -341,6 +341,6 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
           <RelatedResources pagePath={pagePath} />
         </div>
       </section>
-    </>
+    </div>
   );
 }

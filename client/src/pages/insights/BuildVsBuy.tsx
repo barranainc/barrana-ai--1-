@@ -184,7 +184,7 @@ export default function BuildVsBuy() {
               Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
-              The honest guide to which approach fits your business — and why most SMBs end up in the middle.
+              The honest guide to which approach fits your business - and why most SMBs end up in the middle.
             </p>
           </div>
         </section>
@@ -201,20 +201,20 @@ export default function BuildVsBuy() {
             <SectionHeading>The Three Options</SectionHeading>
 
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              <strong style={{ color: "#1A1A2E" }}>Off-the-Shelf</strong> means buying a standalone product designed to handle a specific task out of the box — a chatbot, a booking tool, an email marketing platform. You configure it but don't customise the underlying logic. It works well for generic, standard use cases and requires no technical expertise to deploy.
+              <strong style={{ color: "#1A1A2E" }}>Off-the-Shelf</strong> means buying a standalone product designed to handle a specific task out of the box - a chatbot, a booking tool, an email marketing platform. You configure it but don't customise the underlying logic. It works well for generic, standard use cases and requires no technical expertise to deploy.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Hybrid / Connected</strong> means taking the off-the-shelf tools you already use (CRM, calendar, accounting, email) and building custom automation logic between them using a platform like Make or Zapier. The tools themselves are standard products, but the connections, conditions, and routing rules are built specifically for your workflows.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              <strong style={{ color: "#1A1A2E" }}>Fully Custom</strong> means commissioning bespoke software: custom code, custom AI models, custom integrations. Nothing is off-the-shelf. This offers maximum flexibility and is appropriate for organisations with proprietary data models, complex decision logic, or strict compliance requirements — but at significantly higher cost and timeline.
+              <strong style={{ color: "#1A1A2E" }}>Fully Custom</strong> means commissioning bespoke software: custom code, custom AI models, custom integrations. Nothing is off-the-shelf. This offers maximum flexibility and is appropriate for organisations with proprietary data models, complex decision logic, or strict compliance requirements - but at significantly higher cost and timeline.
             </p>
 
             <BuildVsBuyTable />
 
             <SectionHeading>When Off-the-Shelf Works</SectionHeading>
             <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-              <li>Your use case is simple and standard — generic booking, generic email sequences</li>
+              <li>Your use case is simple and standard - generic booking, generic email sequences</li>
               <li>You only need one tool for one task and don't need it to connect with others</li>
               <li>Your volume is low (under 20 interactions per month)</li>
               <li>Your budget is under $500/month and you're not ready to invest upfront</li>
@@ -225,7 +225,7 @@ export default function BuildVsBuy() {
             <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li>Multiple tools need to talk to each other (CRM + calendar + email + accounting)</li>
               <li>Your workflows are specific to your business model or service type</li>
-              <li>You need conditional logic — different actions depending on client type, service, or status</li>
+              <li>You need conditional logic - different actions depending on client type, service, or status</li>
               <li>Your budget is $3,000–$12,000 for implementation with $200–$500/month ongoing</li>
               <li>You want to avoid replacing tools you've already invested in</li>
             </ul>
@@ -238,37 +238,37 @@ export default function BuildVsBuy() {
               <li>Your decision logic is complex enough that no platform can express it reliably</li>
               <li>You operate in a regulated industry with specific compliance requirements (e.g. AFSL, AHPRA)</li>
               <li>Your budget exceeds $50,000 and your timeline is 3–6 months</li>
-              <li>You are an enterprise, not an SMB — this path is rarely right for under 50 staff</li>
+              <li>You are an enterprise, not an SMB - this path is rarely right for under 50 staff</li>
             </ul>
 
             <SectionHeading>The Real Cost of Each Option</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              Off-the-shelf tools appear cheapest upfront — $20–$500/month with no implementation cost. But the real cost is in the workarounds: manual steps you still have to do because the tool can't quite do what you need, or multiple tools that don't connect, or staff time spent compensating for the tool's limitations.
+              Off-the-shelf tools appear cheapest upfront - $20–$500/month with no implementation cost. But the real cost is in the workarounds: manual steps you still have to do because the tool can't quite do what you need, or multiple tools that don't connect, or staff time spent compensating for the tool's limitations.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
               The hybrid approach has a moderate upfront investment ($3,000–$12,000) but low ongoing cost ($200–$500/month) and high ROI once built. The logic is custom to your business, which means fewer workarounds and more reliable operation.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For SMBs, this is rarely justified — the hybrid approach delivers 90% of the value at 20% of the cost.
+              Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For SMBs, this is rarely justified - the hybrid approach delivers 90% of the value at 20% of the cost.
             </p>
 
             <SectionHeading>Common Build vs Buy Mistakes</SectionHeading>
             <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-              <li><strong style={{ color: "#1A1A2E" }}>Buying off-the-shelf because it's cheaper upfront</strong> — then paying more in staff time spent on workarounds over 12 months.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Thinking custom is the only way to get what they need</strong> — most SMB requirements are achievable with the hybrid approach.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Not factoring in integration costs</strong> — a tool that can't connect to your CRM has hidden costs that emerge over time.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Paying for a platform you barely use</strong> — buying enterprise software for a 5-person team wastes budget and creates complexity.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Buying off-the-shelf because it's cheaper upfront</strong> - then paying more in staff time spent on workarounds over 12 months.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Thinking custom is the only way to get what they need</strong> - most SMB requirements are achievable with the hybrid approach.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Not factoring in integration costs</strong> - a tool that can't connect to your CRM has hidden costs that emerge over time.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Paying for a platform you barely use</strong> - buying enterprise software for a 5-person team wastes budget and creates complexity.</li>
             </ul>
 
             <SectionHeading>How Barrana Approaches This Decision</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "0.75rem" }}>
-              We always start with your existing tools. Replacing software you already use is expensive and disruptive — and usually unnecessary. Our first step is understanding what you have and identifying which connections are missing.
+              We always start with your existing tools. Replacing software you already use is expensive and disruptive - and usually unnecessary. Our first step is understanding what you have and identifying which connections are missing.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "0.75rem" }}>
-              We build the logic connecting your existing tools — the conditions, routing rules, data mappings, and automation sequences that make your workflows run without manual intervention. This is the "custom" part: not the tools, but the intelligence between them.
+              We build the logic connecting your existing tools - the conditions, routing rules, data mappings, and automation sequences that make your workflows run without manual intervention. This is the "custom" part: not the tools, but the intelligence between them.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              We only recommend a new platform if there is a genuine gap — something no existing tool can fill. And we never recommend enterprise software to a 5-person firm.
+              We only recommend a new platform if there is a genuine gap - something no existing tool can fill. And we never recommend enterprise software to a 5-person firm.
             </p>
 
             <ContextualCTA
@@ -282,8 +282,8 @@ export default function BuildVsBuy() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Do I need to replace my current software?" a="Almost never. The hybrid approach connects what you have. We only recommend new tools when there is a clear gap that existing tools cannot fill." />
               <FAQItem q="Is Make or Zapier the same thing?" a="Similar purpose, different strengths. Make is more flexible for complex multi-step workflows. Zapier is simpler for straightforward triggers. We recommend based on your specific needs." />
-              <FAQItem q="What does 'custom' mean if you're using off-the-shelf tools?" a="The tools are off-the-shelf. The logic connecting them — the conditions, routing rules, data mappings, and sequences — is custom-built for your workflows." />
-              <FAQItem q="Can we start off-the-shelf and move to hybrid later?" a="Yes. Many clients start with a simple tool, outgrow it, and we then build proper integrations. Starting simple is fine — it's a good way to validate the workflow before investing in automation." />
+              <FAQItem q="What does 'custom' mean if you're using off-the-shelf tools?" a="The tools are off-the-shelf. The logic connecting them - the conditions, routing rules, data mappings, and sequences - is custom-built for your workflows." />
+              <FAQItem q="Can we start off-the-shelf and move to hybrid later?" a="Yes. Many clients start with a simple tool, outgrow it, and we then build proper integrations. Starting simple is fine - it's a good way to validate the workflow before investing in automation." />
             </div>
 
             <div style={{ ...surfaces.darkGradient, borderRadius: 16, padding: "2.5rem", textAlign: "center", marginBottom: "2rem" }}>

@@ -245,7 +245,7 @@ export default function AiAutomationVaughan() {
             AI Automation for Small Businesses in Vaughan and the GTA
           </h1>
           <p style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9375rem", marginTop: "1rem", marginBottom: 0 }}>
-            50 Corstate Avenue, Unit 01 — Vaughan, ON L4K 4X2
+            50 Corstate Avenue, Unit 01 - Vaughan, ON L4K 4X2
           </p>
         </div>
       </section>
@@ -276,16 +276,16 @@ export default function AiAutomationVaughan() {
             {/* Section 1 */}
             <SectionHeading>Why Vaughan Businesses Are Adopting AI Automation</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              The Greater Toronto Area has one of Canada's highest concentrations of small professional services firms. Vaughan alone is home to thousands of independent accounting practices, immigration consultancies, law firms, medical clinics, and trades businesses — many of them founded and run by first- and second-generation Canadians who built their practices through service quality and hard work.
+              The Greater Toronto Area has one of Canada's highest concentrations of small professional services firms. Vaughan alone is home to thousands of independent accounting practices, immigration consultancies, law firms, medical clinics, and trades businesses - many of them founded and run by first- and second-generation Canadians who built their practices through service quality and hard work.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              Competition in the GTA is fierce. A client in Woodbridge searching for an immigration consultant will find a dozen options within five kilometres. In this environment, response time and client experience are the differentiators that determine which firms grow and which plateau. The firm that responds to an inquiry in 60 seconds — at 11pm on a Tuesday — wins the consultation over the firm that responds at 9am the next morning.
+              Competition in the GTA is fierce. A client in Woodbridge searching for an immigration consultant will find a dozen options within five kilometres. In this environment, response time and client experience are the differentiators that determine which firms grow and which plateau. The firm that responds to an inquiry in 60 seconds - at 11pm on a Tuesday - wins the consultation over the firm that responds at 9am the next morning.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-              AI automation directly addresses this competitive dynamic. Barrana.ai builds systems that respond instantly, stay organised, and keep professionals focused on the work that builds their reputation — rather than the administrative overhead that consumes it.
+              AI automation directly addresses this competitive dynamic. Barrana.ai builds systems that respond instantly, stay organised, and keep professionals focused on the work that builds their reputation - rather than the administrative overhead that consumes it.
             </p>
 
-            {/* Section 2 — Industries Grid */}
+            {/* Section 2 - Industries Grid */}
             <SectionHeading>Industries We Serve in the GTA</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               We work with small businesses across eight industry categories in the GTA. Each has distinct workflow patterns and compliance requirements that shape how we design automation.
@@ -344,13 +344,13 @@ export default function AiAutomationVaughan() {
               We start every engagement with a free 60-minute Automation Audit. This is not a sales call. We map your actual workflows, identify where time is lost, and show you exactly what is automatable and what should stay manual. You leave with a clear picture of your automation opportunity regardless of whether we work together.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              All work is quoted at a fixed price before any build begins. No hourly billing, no scope creep invoicing, no surprises. We work with the tools you already use — your CRM, your email system, your practice management software — so you do not need to change your stack or learn a new platform.
+              All work is quoted at a fixed price before any build begins. No hourly billing, no scope creep invoicing, no surprises. We work with the tools you already use - your CRM, your email system, your practice management software - so you do not need to change your stack or learn a new platform.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               Implementations are phased. Phase 1 targets the single highest-value workflow in your business. Once that is working and delivering results, we map Phase 2. This approach keeps investment manageable and ensures you see ROI before committing to further build.
             </p>
 
-            {/* Section 4 — Engagement Timeline */}
+            {/* Section 4 - Engagement Timeline */}
             <SectionHeading>What a Typical Engagement Looks Like</SectionHeading>
             <EngagementTimeline />
 
@@ -360,13 +360,13 @@ export default function AiAutomationVaughan() {
               All automation systems we build for Canadian businesses are designed with PIPEDA compliance in mind. This means every data flow is documented, consent mechanisms are built into intake forms where required, and data is stored in Canadian-hosted systems or approved jurisdictions by default.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              We do not connect client data to third-party services that fall outside PIPEDA's requirements without explicit review. For regulated industries — immigration, law, healthcare — we apply additional care to ensure that automated communications and data handling align with the professional conduct standards of the relevant regulatory bodies.
+              We do not connect client data to third-party services that fall outside PIPEDA's requirements without explicit review. For regulated industries - immigration, law, healthcare - we apply additional care to ensure that automated communications and data handling align with the professional conduct standards of the relevant regulatory bodies.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
               Every engagement includes a data flow document: a complete map of what data moves, where it goes, how long it is retained, and who has access. This document is yours to keep and forms the basis of your compliance record.
             </p>
 
-            {/* Section 6 — Service Areas */}
+            {/* Section 6 - Service Areas */}
             <SectionHeading>Service Areas</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.25rem" }}>
               Our office is located in Vaughan. We serve businesses across the GTA and work remotely with businesses throughout Ontario.
@@ -407,7 +407,7 @@ export default function AiAutomationVaughan() {
                 60 minutes. No obligation. We'll map your workflows and tell you exactly what to automate and in what order.
               </p>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", marginBottom: "1.75rem" }}>
-                50 Corstate Avenue, Unit 01 — Vaughan, ON L4K 4X2
+                50 Corstate Avenue, Unit 01 - Vaughan, ON L4K 4X2
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>

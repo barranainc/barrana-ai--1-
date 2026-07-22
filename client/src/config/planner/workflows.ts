@@ -260,7 +260,7 @@ export const WORKFLOWS: WorkflowDefinition[] = [
         id: 'handoff-method',
         question: 'How does work get passed between team members?',
         type: 'single',
-        options: ['Verbal / in-person', 'Slack / email', 'Project management tool', 'It does not — things get dropped'],
+        options: ['Verbal / in-person', 'Slack / email', 'Project management tool', 'It does not - things get dropped'],
       },
       {
         id: 'stuck-tasks',

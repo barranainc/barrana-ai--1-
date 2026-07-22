@@ -88,6 +88,7 @@ import AutomateClientIntake from "./pages/resources/AutomateClientIntake";
 import AutomationROI from "./pages/resources/AutomationROI";
 import ProfessionalServicesGuide from "./pages/resources/ProfessionalServicesGuide";
 import IntegrationPriorityMatrix from "./pages/resources/IntegrationPriorityMatrix";
+import IndustryAutomationGuide from "./pages/resources/IndustryAutomationGuide";
 import HumanInTheLoop from "./pages/HumanInTheLoop";
 import AiAutomationIndustries from "./pages/AiAutomationIndustries";
 import AiAutomationVaughan from "./pages/AiAutomationVaughan";
@@ -116,7 +117,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navigation />
-      <main id="main-content" tabIndex={-1} style={{ paddingTop: "70px" }}>{children}</main>
+      <main id="main-content" className="site-main" tabIndex={-1} style={{ paddingTop: "70px" }}>{children}</main>
       <Footer />
     </>
   );
@@ -181,6 +182,7 @@ function LayoutRoutes() {
         <Route path="/resources/automation-benchmarks" component={Benchmarks} />
         <Route path="/resources/before-and-after" component={BeforeAfter} />
         <Route path="/resources/roi-calculator" component={ROICalculator} />
+        <Route path="/resources/:slug" component={IndustryAutomationGuide} />
         <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
         <Route path="/case-studies/immigration-firm-north-york" component={ImmigrationFirmNorthYork} />
@@ -259,7 +261,7 @@ function LayoutRoutes() {
 function Router() {
   return (
     <Switch>
-      {/* Campaign landing pages — no nav/footer */}
+      {/* Campaign landing pages - no nav/footer */}
       <Route path="/campaign/contractors" component={CampaignContractors} />
       <Route path="/campaign/dental" component={CampaignDental} />
       <Route path="/campaign/law-firms" component={CampaignLawFirms} />

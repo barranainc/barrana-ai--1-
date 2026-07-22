@@ -26,7 +26,7 @@ function AnimatedCounter({
   return <motion.span style={{ fontVariantNumeric: "tabular-nums", ...style }}>{display}</motion.span>;
 }
 
-// SVG gauge arc helper — returns an SVG path for a semi-circle arc segment
+// SVG gauge arc helper - returns an SVG path for a semi-circle arc segment
 function describeArc(cx: number, cy: number, r: number, startAngle: number, endAngle: number) {
   const toRad = (a: number) => (a * Math.PI) / 180;
   const x1 = cx + r * Math.cos(toRad(startAngle));
@@ -98,7 +98,7 @@ export default function AccountingHeroVisual({ className }: { className?: string
   return (
     <div
       role="img"
-      aria-label="Capacity gauge showing tax-season accounting firm at 95% capacity. Admin tasks consuming 45% of time. Then admin shrinks to 12%, preparation grows, and capacity opens to 80% — with 30% room to grow."
+      aria-label="Capacity gauge showing tax-season accounting firm at 95% capacity. Admin tasks consuming 45% of time. Then admin shrinks to 12%, preparation grows, and capacity opens to 80% - with 30% room to grow."
       className={className}
       style={{
         background: "white",
@@ -212,7 +212,7 @@ export default function AccountingHeroVisual({ className }: { className?: string
       >
         {phase === 0 ? (
           <span style={{ fontSize: "0.8rem", fontWeight: 800, color: "#EF4444", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-            AT CAPACITY — Turning Clients Away
+            AT CAPACITY - Turning Clients Away
           </span>
         ) : (
           <span style={{ fontSize: "0.8rem", fontWeight: 800, color: "#10B981", letterSpacing: "0.05em", textTransform: "uppercase" }}>

@@ -1,6 +1,6 @@
 /**
  * PipelineDiagram.tsx
- * Barrana.ai — Animated automation pipeline diagram (LARGE version)
+ * Barrana.ai - Animated automation pipeline diagram (LARGE version)
  * Shows trigger → AI processing → CRM update → follow-up
  * Steps animate in sequence on scroll
  */

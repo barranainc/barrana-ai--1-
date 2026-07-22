@@ -23,7 +23,7 @@ const data: CaseStudyData = {
   businessDescription:
     "An independent insurance brokerage on Highway 7 in Vaughan. Principal broker, 3 licensed brokers, 1 administrative assistant. Personal lines (auto, home, tenant) and commercial lines. 1,200 active policies. Serving Vaughan, Woodbridge, and the broader GTA.",
   problemBody: [
-    "18% annual renewal lapse rate — 216 policies per year lost. Renewal outreach was always late or never happened.",
+    "18% annual renewal lapse rate - 216 policies per year lost. Renewal outreach was always late or never happened.",
     "Quote follow-up at approximately 40%. Service calls and claims consumed broker days. More than half of all quotes received zero follow-up.",
     "Cross-sell opportunities were invisible. No systematic way to identify clients with coverage gaps.",
     "RIBO compliance logging was manual with documentation gaps.",
@@ -36,7 +36,7 @@ const data: CaseStudyData = {
     { label: "Renewal outreach timing", value: "2-4 wks before expiry" },
   ],
   solutionIntro:
-    "We deployed automation for renewal management, quote follow-up, cross-sell detection, and compliance logging — integrated with Applied Epic. Goal: no renewal lapses due to missed outreach, no quote dies without follow-up.",
+    "We deployed automation for renewal management, quote follow-up, cross-sell detection, and compliance logging - integrated with Applied Epic. Goal: no renewal lapses due to missed outreach, no quote dies without follow-up.",
   workflowSteps: [
     {
       id: "step-1",
@@ -137,7 +137,7 @@ const data: CaseStudyData = {
   keyResultCallout:
     "Renewal lapse rate from 18% to under 6%. 144 additional policies retained per year. 100% quote follow-up. Cross-sell opportunities surfaced for every client. RIBO compliance gaps closed.",
   whyItMatters:
-    "Insurance brokerage revenue is recurring. Every lapsed policy is not just one year's premium lost — it is the entire future stream. Preventing lapse through consistent, timed outreach has compounding value.",
+    "Insurance brokerage revenue is recurring. Every lapsed policy is not just one year's premium lost - it is the entire future stream. Preventing lapse through consistent, timed outreach has compounding value.",
   whyBullets: [
     "Your renewal lapse rate is above 10%",
     "More than half your quotes get no follow-up",

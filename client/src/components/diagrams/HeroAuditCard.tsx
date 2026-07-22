@@ -1,5 +1,5 @@
 /**
- * HeroAuditCard.tsx — Compact Audit Checklist Card for "Ready to Talk" hero tab
+ * HeroAuditCard.tsx - Compact Audit Checklist Card for "Ready to Talk" hero tab
  */
 
 import { CheckCircle } from "lucide-react";
@@ -15,7 +15,7 @@ const ITEMS = [
   "Annual cost calculation of your manual processes",
   "Top 3 automation opportunities ranked",
   "Phased implementation plan with fixed pricing",
-  "Yours to keep — no obligation",
+  "Yours to keep - no obligation",
 ];
 
 export default function HeroAuditCard() {

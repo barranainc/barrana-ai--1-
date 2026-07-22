@@ -1,6 +1,6 @@
 /**
  * SystemArchDiagram.tsx
- * Barrana.ai — Animated system architecture diagram (LARGE version)
+ * Barrana.ai - Animated system architecture diagram (LARGE version)
  * Shows the Barrana automation layer connecting business tools
  * Connections animate in when scrolled into view
  */

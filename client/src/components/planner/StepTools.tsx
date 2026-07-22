@@ -138,7 +138,7 @@ const STACK_CONFIG: Record<
     dot: "#22C55E",
     text: "#166534",
     message:
-      "Great tool stack — automation will connect everything you already use.",
+      "Great tool stack - automation will connect everything you already use.",
   },
   good: {
     bg: "#FFFBEB",

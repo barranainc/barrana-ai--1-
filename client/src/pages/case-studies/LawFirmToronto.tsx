@@ -36,12 +36,12 @@ const data: CaseStudyData = {
     { label: "Billable hours lost/year", value: "500+" },
   ],
   solutionIntro:
-    "We deployed automation across intake, billing, document management, and client communication — all built on Clio and Gmail. The lawyers' workflow changed minimally. The administrative overhead disappeared.",
+    "We deployed automation across intake, billing, document management, and client communication - all built on Clio and Gmail. The lawyers' workflow changed minimally. The administrative overhead disappeared.",
   workflowSteps: [
     {
       id: "inquiry-arrives",
       label: "Inquiry Arrives",
-      sublabel: "Web form, email, or phone — any channel",
+      sublabel: "Web form, email, or phone - any channel",
       type: "trigger",
       icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
       color: "#F59E0B",
@@ -49,7 +49,7 @@ const data: CaseStudyData = {
     {
       id: "ai-routes",
       label: "AI Routes by Practice Area",
-      sublabel: "Family law, real estate, or corporate — routed instantly",
+      sublabel: "Family law, real estate, or corporate - routed instantly",
       type: "ai",
       icon: "M13 10V3L4 14h7v7l9-11h-7z",
       color: "#7E0F4A",

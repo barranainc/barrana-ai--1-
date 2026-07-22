@@ -42,7 +42,7 @@ const featuredArticle = {
   readTime: "6 min read",
   title: "Why Response Time Is a Systems Problem, Not a Sales Problem",
   excerpt:
-    "Most GTA service businesses lose leads not because their prices are wrong or their pitch is weak, but because a human being has to notice the inquiry and choose to respond. When response time averages four to eight hours, a third of your qualified leads have already booked with someone else. This is a systems problem — and systems problems have systems solutions.",
+    "Most GTA service businesses lose leads not because their prices are wrong or their pitch is weak, but because a human being has to notice the inquiry and choose to respond. When response time averages four to eight hours, a third of your qualified leads have already booked with someone else. This is a systems problem - and systems problems have systems solutions.",
 };
 
 const gridArticles = [
@@ -52,7 +52,7 @@ const gridArticles = [
     date: "Feb 2025",
     readTime: "5 min read",
     title: "The Hidden Cost of Manual Client Intake",
-    excerpt: "When intake is manual, the real cost isn't the 45 minutes per client — it's the error rate, the lag, and the staff capacity absorbed by data entry instead of value-adding work.",
+    excerpt: "When intake is manual, the real cost isn't the 45 minutes per client - it's the error rate, the lag, and the staff capacity absorbed by data entry instead of value-adding work.",
   },
   {
     slug: "/operator-insights/admin-hours-annual-cost",
@@ -60,7 +60,7 @@ const gridArticles = [
     date: "Feb 2025",
     readTime: "4 min read",
     title: "What Your Admin Hours Actually Cost Per Year",
-    excerpt: "At $25/hour, 15 admin hours per week is $19,500 annually — and that's before accounting for the opportunity cost of staff doing coordination instead of billable work.",
+    excerpt: "At $25/hour, 15 admin hours per week is $19,500 annually - and that's before accounting for the opportunity cost of staff doing coordination instead of billable work.",
   },
   {
     slug: "/operator-insights/why-follow-up-fails",
@@ -68,7 +68,7 @@ const gridArticles = [
     date: "Jan 2025",
     readTime: "5 min read",
     title: "Why Follow-Up Fails (And How to Fix It Systematically)",
-    excerpt: "Manual follow-up fails for a simple reason: it depends on a person remembering to do it while managing everything else. The fix isn't discipline — it's removing the human dependency.",
+    excerpt: "Manual follow-up fails for a simple reason: it depends on a person remembering to do it while managing everything else. The fix isn't discipline - it's removing the human dependency.",
   },
   {
     slug: "/operator-insights/control-layer-boundaries",
@@ -76,7 +76,7 @@ const gridArticles = [
     date: "Jan 2025",
     readTime: "6 min read",
     title: "The Control Layer: Why Every Automation Needs Boundaries",
-    excerpt: "Automation without a control layer is a liability. Stop-loss logic, escalation paths, and audit trails aren't optional extras — they're what separates a reliable system from a reckless one.",
+    excerpt: "Automation without a control layer is a liability. Stop-loss logic, escalation paths, and audit trails aren't optional extras - they're what separates a reliable system from a reckless one.",
   },
   {
     slug: "/operator-insights/immigration-intake-field-report",
@@ -84,7 +84,7 @@ const gridArticles = [
     date: "Mar 2025",
     readTime: "7 min read",
     title: "Intake Automation for Immigration Firms: A Field Report",
-    excerpt: "How an immigration consulting firm in Mississauga reduced intake time from 50 minutes to under 5 — without changing their process, just removing the manual steps from their staff's plate.",
+    excerpt: "How an immigration consulting firm in Mississauga reduced intake time from 50 minutes to under 5 - without changing their process, just removing the manual steps from their staff's plate.",
   },
 ];
 

@@ -66,7 +66,7 @@ function WorkflowChainDiagram() {
 
   return (
     <div ref={ref} style={{ margin: "2rem 0", background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 16, padding: "2rem", overflowX: "auto" }}>
-      <h3 style={{ fontWeight: 800, fontSize: "1rem", color: "#1A1A2E", marginBottom: "1.5rem" }}>The 8 Core Business Workflows — Connected</h3>
+      <h3 style={{ fontWeight: 800, fontSize: "1rem", color: "#1A1A2E", marginBottom: "1.5rem" }}>The 8 Core Business Workflows - Connected</h3>
 
       {/* Desktop: horizontal chain */}
       <div style={{ display: "flex", alignItems: "stretch", gap: 0, minWidth: 700 }}>
@@ -183,11 +183,11 @@ export default function WorkflowAutomationSMB() {
   // document.title and meta description are set by SEOHead below
 
   const faqs = [
-    { q: "What is the difference between workflow automation and AI?", a: "Workflow automation executes rules: if this happens, do that. AI makes decisions within those rules — for example, qualifying a lead or categorising an inquiry. Most SMB automation is rule-based, with AI used for specific decision points like lead qualification or document classification." },
+    { q: "What is the difference between workflow automation and AI?", a: "Workflow automation executes rules: if this happens, do that. AI makes decisions within those rules - for example, qualifying a lead or categorising an inquiry. Most SMB automation is rule-based, with AI used for specific decision points like lead qualification or document classification." },
     { q: "How long does it take to set up workflow automation?", a: "A single workflow takes 1–2 weeks to design, build, and test. A connected multi-workflow system covering 3–5 workflows takes 4–8 weeks. Timeline depends on the complexity of your existing tools and the number of integrations required." },
     { q: "Do I need a CRM to automate workflows?", a: "Not always, but a CRM is the backbone of most business automation. It is where client records live, where workflow history is stored, and where your team sees what is happening. If you do not have a CRM, we recommend adding one as part of Phase 1." },
-    { q: "What happens when a workflow fails?", a: "Every system we build includes error monitoring, retry logic, and escalation paths to a human. If a workflow fails — for example, an integration goes down — the system flags the error, retries automatically, and alerts the relevant team member if the retry fails." },
-    { q: "Can workflow automation work for a one-person business?", a: "Yes. Solo operators often see the highest impact because there is no team to absorb the coordination overhead — every unautomated task returns directly to you. Lead response and booking automation alone can recover 10+ hours per week for a solo operator." },
+    { q: "What happens when a workflow fails?", a: "Every system we build includes error monitoring, retry logic, and escalation paths to a human. If a workflow fails - for example, an integration goes down - the system flags the error, retries automatically, and alerts the relevant team member if the retry fails." },
+    { q: "Can workflow automation work for a one-person business?", a: "Yes. Solo operators often see the highest impact because there is no team to absorb the coordination overhead - every unautomated task returns directly to you. Lead response and booking automation alone can recover 10+ hours per week for a solo operator." },
   ];
 
   const jsonLd = {
@@ -253,7 +253,7 @@ export default function WorkflowAutomationSMB() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              Workflow automation for small businesses means connecting triggers to actions across your existing tools so that routine operational sequences happen automatically. When a client submits a form, the system creates their record, sends their confirmation, requests their documents, and books their appointment — without a human managing each step. The 8 highest-impact workflows to automate are: lead intake, missed call handling, appointment booking, client onboarding, document collection, invoicing, internal handoffs, and reporting.
+              Workflow automation for small businesses means connecting triggers to actions across your existing tools so that routine operational sequences happen automatically. When a client submits a form, the system creates their record, sends their confirmation, requests their documents, and books their appointment - without a human managing each step. The 8 highest-impact workflows to automate are: lead intake, missed call handling, appointment booking, client onboarding, document collection, invoicing, internal handoffs, and reporting.
             </p>
           </SummaryBox>
 
@@ -270,10 +270,10 @@ export default function WorkflowAutomationSMB() {
           {/* Section 1 */}
           <SectionHeading>What Is Workflow Automation (Not What You Think)</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            Workflow automation is not robots. It is not AI assistants answering your emails. It is connecting your existing tools — your CRM, calendar, email platform, and accounting software — with logic: IF this happens, THEN do that. When a client books an appointment, the calendar triggers a confirmation email, a document request, and a CRM stage update. When an invoice is overdue by seven days, the system sends a reminder and notifies your accounts person. These are rules, not intelligence.
+            Workflow automation is not robots. It is not AI assistants answering your emails. It is connecting your existing tools - your CRM, calendar, email platform, and accounting software - with logic: IF this happens, THEN do that. When a client books an appointment, the calendar triggers a confirmation email, a document request, and a CRM stage update. When an invoice is overdue by seven days, the system sends a reminder and notifies your accounts person. These are rules, not intelligence.
           </p>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            AI plays a role in specific decision points within these workflows — qualifying a lead, categorising a document, routing a call — but the backbone of SMB automation is rule-based logic. Understand this distinction and you will spend your budget in the right places.
+            AI plays a role in specific decision points within these workflows - qualifying a lead, categorising a document, routing a call - but the backbone of SMB automation is rule-based logic. Understand this distinction and you will spend your budget in the right places.
           </p>
 
           {/* Section 2 */}
@@ -302,7 +302,7 @@ export default function WorkflowAutomationSMB() {
           {/* Section 3 */}
           <SectionHeading>How Workflows Connect: The Automation Chain</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            Workflows do not operate in isolation. The output of one workflow becomes the trigger for the next. Lead intake creates the CRM record that triggers onboarding. Onboarding delivers the document checklist that triggers document collection. Document collection completion triggers the job start, which eventually triggers invoicing. This chain is what makes a full automation system significantly more valuable than individual workflows — each one compounds the others.
+            Workflows do not operate in isolation. The output of one workflow becomes the trigger for the next. Lead intake creates the CRM record that triggers onboarding. Onboarding delivers the document checklist that triggers document collection. Document collection completion triggers the job start, which eventually triggers invoicing. This chain is what makes a full automation system significantly more valuable than individual workflows - each one compounds the others.
           </p>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
             When you build workflows in isolation, you get efficiency gains on individual tasks. When you connect them into a chain, you get an operational system that largely runs itself.
@@ -312,7 +312,7 @@ export default function WorkflowAutomationSMB() {
           <SectionHeading>What a Workflow Trigger Actually Looks Like</SectionHeading>
           <TriggerConditionActionFlow />
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            A trigger is any event that your software already detects: a form submission, an email arriving in a specific inbox, an invoice marked overdue, an appointment cancelled, a CRM stage changing. You do not need new software to have triggers — your existing tools are already generating these events. Automation simply connects them to responses.
+            A trigger is any event that your software already detects: a form submission, an email arriving in a specific inbox, an invoice marked overdue, an appointment cancelled, a CRM stage changing. You do not need new software to have triggers - your existing tools are already generating these events. Automation simply connects them to responses.
           </p>
 
           {/* Section 5 */}
@@ -321,10 +321,10 @@ export default function WorkflowAutomationSMB() {
             Automation handles the predictable, rule-based parts of your workflows. The following must remain with a qualified person:
           </p>
           <ul style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Professional decisions and advice</strong> — regulated or expertise-based recommendations</li>
-            <li><strong>Exception handling</strong> — situations the workflow did not anticipate or could not route correctly</li>
-            <li><strong>Sensitive communications</strong> — complaints, disputes, emotionally charged situations</li>
-            <li><strong>Quality review</strong> — final sign-off on deliverables, proposals, and contracts</li>
+            <li><strong>Professional decisions and advice</strong> - regulated or expertise-based recommendations</li>
+            <li><strong>Exception handling</strong> - situations the workflow did not anticipate or could not route correctly</li>
+            <li><strong>Sensitive communications</strong> - complaints, disputes, emotionally charged situations</li>
+            <li><strong>Quality review</strong> - final sign-off on deliverables, proposals, and contracts</li>
           </ul>
 
           {/* Section 6 */}
@@ -344,7 +344,7 @@ export default function WorkflowAutomationSMB() {
             ))}
           </div>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            The orchestration layer (Make, Zapier, n8n) is the connective tissue — it reads events from one tool and triggers actions in another. Every other tool in the stack communicates through the orchestration layer. You do not need to replace your existing tools; you need to connect them.
+            The orchestration layer (Make, Zapier, n8n) is the connective tissue - it reads events from one tool and triggers actions in another. Every other tool in the stack communicates through the orchestration layer. You do not need to replace your existing tools; you need to connect them.
           </p>
 
           {/* Section 7 */}
@@ -369,7 +369,7 @@ export default function WorkflowAutomationSMB() {
           <SectionHeading>Common Workflow Automation Mistakes</SectionHeading>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
             <li><strong>Building workflows without mapping them first.</strong> Automating a process you have not mapped will automate its inefficiencies. Map the ideal workflow before building the automation.</li>
-            <li><strong>No error handling or fallback paths.</strong> Every automated workflow needs a route for exceptions. If the CRM is down, if the email bounces, if the document is in an unexpected format — what happens? Define it.</li>
+            <li><strong>No error handling or fallback paths.</strong> Every automated workflow needs a route for exceptions. If the CRM is down, if the email bounces, if the document is in an unexpected format - what happens? Define it.</li>
             <li><strong>Choosing tools for familiarity rather than fit.</strong> "We use Zapier because we've heard of it" is not a workflow design decision. Choose tools based on the integrations your workflows require.</li>
             <li><strong>Building too much in Phase 1.</strong> Trying to automate 6 workflows simultaneously produces delays, bugs, and team confusion. One workflow, done well, builds confidence and momentum.</li>
             <li><strong>No monitoring post-launch.</strong> Automation fails silently. Without error monitoring and regular performance review, broken workflows go unnoticed until a client complains.</li>

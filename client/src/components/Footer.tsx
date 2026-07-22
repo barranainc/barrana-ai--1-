@@ -21,7 +21,7 @@ const workflowLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#09142F] text-white">
+    <footer className="site-footer bg-[#09142F] text-white">
       <div className="container py-14 lg:py-16">
         <div className="grid gap-10 border-b border-white/10 pb-12 lg:grid-cols-[1.25fr_0.75fr_0.75fr]">
           <div className="max-w-xl">
@@ -30,9 +30,9 @@ export default function Footer() {
               Barrana is a Canadian AI automation company founded by Ikram Rana. We connect the tools your business already uses, so routine work gets done without someone remembering every step, copying every detail, or chasing every follow-up.
             </p>
             <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">A controlled starting point</p>
+              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#E7B1CD]">A controlled starting point</p>
               <p className="mt-3 text-lg font-bold">Bring one repeated workflow.</p>
-              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#9BE5DD]">
+              <Link href="/contact" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-white hover:text-[#E7B1CD]">
                 Find the Workflow AI Should Fix First
                 <ArrowRight size={15} aria-hidden="true" />
               </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
             "Routine actions leave a record",
           ].map((principle) => (
             <div key={principle} className="flex items-center gap-3 text-xs text-slate-400">
-              <Check size={14} className="shrink-0 text-[#74D4CA]" aria-hidden="true" />
+              <Check size={14} className="shrink-0 text-[#E7B1CD]" aria-hidden="true" />
               {principle}
             </div>
           ))}

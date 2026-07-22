@@ -59,7 +59,7 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
 
   return (
     <div ref={containerRef}>
-      {/* Desktop: scrollable horizontal chip flow — never wraps */}
+      {/* Desktop: scrollable horizontal chip flow - never wraps */}
       <div
         style={{
           display: isMobile ? "none" : "block",

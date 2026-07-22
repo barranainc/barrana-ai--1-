@@ -21,7 +21,7 @@ const data: IndustryPageData = {
     {
       figure: "$40K-$180K/yr",
       label: "Lost Leads",
-      desc: "8-12 qualified leads lost per month to no-response. At $5,000-$15,000 average job value — gone to faster competitors.",
+      desc: "8-12 qualified leads lost per month to no-response. At $5,000-$15,000 average job value - gone to faster competitors.",
     },
     {
       figure: "40%",

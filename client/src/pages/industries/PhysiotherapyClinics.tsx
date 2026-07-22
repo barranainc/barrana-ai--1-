@@ -126,7 +126,7 @@ const data: IndustryPageData = {
   roiMetrics: [
     { label: "No-Show Rate", before: "15-25%", after: "Reduced 25-40% within 60 days" },
     { label: "Front Desk Phone Time", before: "50-70% of day", after: "Reduced 50-70%" },
-    { label: "Patient Intake", after: "Completed before visit — zero paper" },
+    { label: "Patient Intake", after: "Completed before visit - zero paper" },
     { label: "Cancellation Slots", after: "Filled automatically from waitlist" },
     { label: "Daily Revenue Recovered", after: "$640+/day for 40-patient clinic" },
     { label: "Payback Period", after: "Within first month" },

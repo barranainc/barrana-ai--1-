@@ -71,7 +71,7 @@ function CallFlowDiagram() {
     <div ref={ref} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 16, padding: "2rem", margin: "2rem 0" }}>
       <h3 style={{ fontWeight: 800, fontSize: "1rem", color: "#1A1A2E", marginBottom: "1.5rem" }}>AI Receptionist Call Flow</h3>
 
-      {/* Main flow — horizontal */}
+      {/* Main flow - horizontal */}
       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "1.75rem", overflowX: "auto", paddingBottom: 4 }}>
         {mainFlow.map((step, i) => (
           <div key={i} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
@@ -244,10 +244,10 @@ export default function AiReceptionistPage() {
   useEffect(() => { document.title = "AI Receptionist for Small Businesses and Professional Services | Barrana.ai"; }, []);
 
   const faqs = [
-    { q: "Will callers know they're talking to an AI?", a: "The AI identifies itself as an automated assistant for your business. We do not recommend or build deceptive AI implementations. Transparency is both ethically correct and better for your brand — callers appreciate knowing what they are interacting with." },
+    { q: "Will callers know they're talking to an AI?", a: "The AI identifies itself as an automated assistant for your business. We do not recommend or build deceptive AI implementations. Transparency is both ethically correct and better for your brand - callers appreciate knowing what they are interacting with." },
     { q: "What languages does it support?", a: "English and French are supported as standard. Additional languages are available on request depending on the platform selected for your implementation." },
     { q: "Can it actually book appointments in my calendar?", a: "Yes, with direct calendar integration. We integrate with Jane App, Calendly, Google Calendar, and most CRM-native calendars. Appointments booked through the AI receptionist appear in your calendar in real time." },
-    { q: "What happens if the AI can't handle a call?", a: "Calls escalate to a human automatically based on defined triggers — a caller request, a complex or ambiguous query, or detection of specific keywords (complaint, urgent, legal). The AI never abandons a caller without providing an escalation path." },
+    { q: "What happens if the AI can't handle a call?", a: "Calls escalate to a human automatically based on defined triggers - a caller request, a complex or ambiguous query, or detection of specific keywords (complaint, urgent, legal). The AI never abandons a caller without providing an escalation path." },
     { q: "Is the call data stored privately?", a: "Yes. Calls are stored within your system only. We do not route call data through third-party storage without your knowledge. All Canadian business implementations follow PIPEDA guidelines for personal data handling." },
   ];
 
@@ -283,7 +283,7 @@ export default function AiReceptionistPage() {
 
   return (
     <>
-      <SEOHead title="AI Receptionist for Small Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically — without replacing your team." type="article" />
+      <SEOHead title="AI Receptionist for Small Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically - without replacing your team." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -314,7 +314,7 @@ export default function AiReceptionistPage() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              An AI receptionist is a voice-based or text-based AI agent that answers phone calls and messages for your business 24/7. It qualifies callers, books appointments, creates CRM records, and delivers briefings — handling the tasks a human receptionist does, but without business-hour limits. Typical cost: $200–$500/month vs $3,000–$4,000/month for a human. Best for: after-hours coverage, overflow during peak hours, and consistent call handling. Not a replacement for human interaction in emotionally sensitive or complex situations.
+              An AI receptionist is a voice-based or text-based AI agent that answers phone calls and messages for your business 24/7. It qualifies callers, books appointments, creates CRM records, and delivers briefings - handling the tasks a human receptionist does, but without business-hour limits. Typical cost: $200–$500/month vs $3,000–$4,000/month for a human. Best for: after-hours coverage, overflow during peak hours, and consistent call handling. Not a replacement for human interaction in emotionally sensitive or complex situations.
             </p>
           </SummaryBox>
 
@@ -331,14 +331,14 @@ export default function AiReceptionistPage() {
           {/* Section 1 */}
           <SectionHeading>What an AI Receptionist Actually Does (Step by Step)</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            An AI receptionist is not a phone menu. It is a conversational agent that handles calls the way a trained human receptionist would — except it operates 24 hours a day, 7 days a week, without variation in quality.
+            An AI receptionist is not a phone menu. It is a conversational agent that handles calls the way a trained human receptionist would - except it operates 24 hours a day, 7 days a week, without variation in quality.
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
             <li><strong>Answers the call.</strong> Within 1–2 rings, the AI greets the caller using your business name and a natural-sounding opening.</li>
             <li><strong>Qualifies the caller.</strong> It asks 2–3 questions to determine what the caller needs, how urgent the matter is, and whether it can be handled immediately.</li>
             <li><strong>Routes or handles.</strong> Based on the qualification, the AI either books an appointment, transfers to the right team member with a context brief, or takes a detailed message.</li>
             <li><strong>Creates the CRM record.</strong> Every call creates or updates a record in your CRM with caller details, the nature of the enquiry, and the outcome.</li>
-            <li><strong>Delivers the briefing.</strong> If the call results in a handoff, the relevant team member receives a briefing — by SMS, email, or CRM notification — before they speak to the caller.</li>
+            <li><strong>Delivers the briefing.</strong> If the call results in a handoff, the relevant team member receives a briefing - by SMS, email, or CRM notification - before they speak to the caller.</li>
           </ol>
           <CallFlowDiagram />
 
@@ -358,8 +358,8 @@ export default function AiReceptionistPage() {
                   { factor: "Availability", human: "Business hours only (8–9 hrs/day)", ai: "24/7, 365 days" },
                   { factor: "Monthly cost", human: "$3,000–$4,000 CAD + benefits", ai: "$200–$500 + $2,000–$4,000 setup" },
                   { factor: "Consistency", human: "Varies by day, mood, and workload", ai: "Identical quality on every call" },
-                  { factor: "Complex handling", human: "Strong — adapts to any situation", ai: "Limited — rule-based routing only" },
-                  { factor: "Emotional intelligence", human: "High — detects and responds to tone", ai: "Basic — keyword and sentiment detection" },
+                  { factor: "Complex handling", human: "Strong - adapts to any situation", ai: "Limited - rule-based routing only" },
+                  { factor: "Emotional intelligence", human: "High - detects and responds to tone", ai: "Basic - keyword and sentiment detection" },
                   { factor: "Scalability", human: "Requires additional headcount", ai: "Handles unlimited concurrent calls" },
                 ].map((row, i) => (
                   <tr key={row.factor} style={{ background: i % 2 === 0 ? "#fff" : "#FAFBFF", borderBottom: "1px solid #F1F5F9" }}>
@@ -372,7 +372,7 @@ export default function AiReceptionistPage() {
             </table>
           </div>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            Neither is always better. The right choice depends on the type of calls your business receives. Emotionally complex calls — complaints, grief counselling, high-stakes decisions — benefit from human handling. Routine booking, qualification, and information calls are ideal for AI.
+            Neither is always better. The right choice depends on the type of calls your business receives. Emotionally complex calls - complaints, grief counselling, high-stakes decisions - benefit from human handling. Routine booking, qualification, and information calls are ideal for AI.
           </p>
 
           {/* Section 3 */}
@@ -407,7 +407,7 @@ export default function AiReceptionistPage() {
           <SectionHeading>How It Works for Each Industry</SectionHeading>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", margin: "1.5rem 0" }}>
             {[
-              { industry: "Accounting Practices", desc: "The AI qualifies the caller — new client, existing client, tax season enquiry — collects their name and contact details, requests the relevant documents, and books the initial consultation directly into the accountant's calendar." },
+              { industry: "Accounting Practices", desc: "The AI qualifies the caller - new client, existing client, tax season enquiry - collects their name and contact details, requests the relevant documents, and books the initial consultation directly into the accountant's calendar." },
               { industry: "Law Firms", desc: "The AI qualifies the matter type (family, corporate, immigration, criminal), collects the caller's details, provides an estimated response timeframe, and routes urgent matters to an on-call paralegal or duty line." },
               { industry: "Medical and Allied Health Clinics", desc: "The AI handles after-hours appointment booking, prescription refill requests, and general enquiries. Urgent medical calls are escalated to an on-call nurse line or emergency services as appropriate." },
               { industry: "Contractors and Trade Businesses", desc: "The AI collects job type, location, urgency, and contact information. Emergency calls (flood, electrical fault) are escalated immediately. Standard enquiries receive a callback booking within business hours." },
@@ -423,7 +423,7 @@ export default function AiReceptionistPage() {
           {/* Section 5: Coverage Timeline */}
           <SectionHeading>Coverage Without Limits: What 24/7 Means in Practice</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            A human receptionist covers 9am to 5pm. That is 8 hours out of 24. The remaining 16 hours — evenings, early mornings, weekends — every inbound call goes unanswered or hits a voicemail that most callers will not leave a message on. Research consistently shows that 30–50% of missed calls never call back.
+            A human receptionist covers 9am to 5pm. That is 8 hours out of 24. The remaining 16 hours - evenings, early mornings, weekends - every inbound call goes unanswered or hits a voicemail that most callers will not leave a message on. Research consistently shows that 30–50% of missed calls never call back.
           </p>
           <CoverageTimeline />
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
@@ -436,14 +436,14 @@ export default function AiReceptionistPage() {
           <div style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 14, padding: "1.5rem", margin: "1.5rem 0" }}>
             {[
               { speaker: "AI", text: "Thank you for calling Meridian Accounting. I'm the automated assistant for the firm. How can I help you today?" },
-              { speaker: "Caller", text: "Hi, I need help with my taxes — I'm a new client." },
+              { speaker: "Caller", text: "Hi, I need help with my taxes - I'm a new client." },
               { speaker: "AI", text: "I can help you get started. Are you a sole proprietor, incorporated, or filing as an individual?" },
-              { speaker: "Caller", text: "I'm incorporated — small business." },
+              { speaker: "Caller", text: "I'm incorporated - small business." },
               { speaker: "AI", text: "Great. I can book you in for a free 30-minute consultation with one of our corporate tax advisors. Do you have a preferred time this week?" },
               { speaker: "Caller", text: "Thursday afternoon works." },
               { speaker: "AI", text: "I have Thursday at 2pm and 3:30pm available. Which works better for you?" },
               { speaker: "Caller", text: "2pm please." },
-              { speaker: "AI", text: "Done — you're booked for Thursday at 2pm. I'll send a confirmation to the email you provide. Can I get your name and best email?" },
+              { speaker: "AI", text: "Done - you're booked for Thursday at 2pm. I'll send a confirmation to the email you provide. Can I get your name and best email?" },
             ].map((line, i) => (
               <div key={i} style={{ display: "flex", gap: "0.875rem", marginBottom: "0.875rem", alignItems: "flex-start" }}>
                 <div style={{ flexShrink: 0, width: 48, padding: "0.25rem 0.5rem", borderRadius: 6, background: line.speaker === "AI" ? "#EFF6FF" : "#FFF7ED", fontSize: "0.65rem", fontWeight: 800, textTransform: "uppercase", color: line.speaker === "AI" ? "#283891" : "#C2410C", textAlign: "center" }}>
@@ -460,10 +460,10 @@ export default function AiReceptionistPage() {
             A well-designed AI receptionist escalates proactively in the following situations:
           </p>
           <ul style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Emotionally distressed callers</strong> — detected through tone, keywords ("emergency," "desperate," "please help"), or explicit statements</li>
-            <li><strong>Complex complaints</strong> — any caller expressing dissatisfaction, disputes, or legal concerns</li>
-            <li><strong>Sensitive personal situations</strong> — medical emergencies, domestic situations, anything requiring immediate human judgement</li>
-            <li><strong>High-value prospects</strong> — callers who explicitly ask to speak to a person or who the AI cannot adequately qualify</li>
+            <li><strong>Emotionally distressed callers</strong> - detected through tone, keywords ("emergency," "desperate," "please help"), or explicit statements</li>
+            <li><strong>Complex complaints</strong> - any caller expressing dissatisfaction, disputes, or legal concerns</li>
+            <li><strong>Sensitive personal situations</strong> - medical emergencies, domestic situations, anything requiring immediate human judgement</li>
+            <li><strong>High-value prospects</strong> - callers who explicitly ask to speak to a person or who the AI cannot adequately qualify</li>
           </ul>
 
           {/* Section 8 */}
@@ -472,7 +472,7 @@ export default function AiReceptionistPage() {
             {[
               { risk: "Brand risk: overly robotic tone", mitigation: "Design the AI's greeting and responses using your brand voice. Avoid generic corporate language. Test with real callers before launch. The AI should sound like your business, not like a call centre." },
               { risk: "Privacy risk: handling sensitive caller data", mitigation: "Define exactly what data the AI collects, where it is stored, and who has access. For professional services handling regulated information, ensure your implementation follows PIPEDA guidelines and sector-specific requirements." },
-              { risk: "Reliability risk: what if the AI fails during a call", mitigation: "Every implementation should include a fallback path — voicemail, forwarding to a mobile, or an emergency contact number. Callers must always have a route to communicate with your business, even if the AI is unavailable." },
+              { risk: "Reliability risk: what if the AI fails during a call", mitigation: "Every implementation should include a fallback path - voicemail, forwarding to a mobile, or an emergency contact number. Callers must always have a route to communicate with your business, even if the AI is unavailable." },
             ].map(r => (
               <div key={r.risk} style={{ border: "1px solid #FED7AA", borderRadius: 12, padding: "1.1rem 1.5rem", background: "#FFFBEB" }}>
                 <div style={{ fontWeight: 700, color: "#B45309", marginBottom: "0.35rem", fontSize: "0.9rem" }}>Risk: {r.risk}</div>
@@ -498,7 +498,7 @@ export default function AiReceptionistPage() {
             ))}
           </div>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            For most service businesses receiving 30+ inbound calls per month, an AI receptionist pays for its setup cost within the first 1–2 months — before accounting for after-hours leads that would previously have been missed entirely.
+            For most service businesses receiving 30+ inbound calls per month, an AI receptionist pays for its setup cost within the first 1–2 months - before accounting for after-hours leads that would previously have been missed entirely.
           </p>
 
           <ContextualCTA
@@ -520,7 +520,7 @@ export default function AiReceptionistPage() {
               Stop missing after-hours calls.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Book a free Automation Audit to see whether an AI receptionist is right for your business — or explore the full AI Receptionist service.
+              Book a free Automation Audit to see whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>

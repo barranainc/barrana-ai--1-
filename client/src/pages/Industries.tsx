@@ -1,5 +1,5 @@
 /**
- * Industries.tsx — Barrana.ai Industries Overview
+ * Industries.tsx - Barrana.ai Industries Overview
  * Design: Premium Systems Consultancy
  * Numbered alternating layout, scroll reveal, no emoji
  */
@@ -27,7 +27,7 @@ const industriesList = [
     number: "01",
     title: "Immigration Consultants",
     tagline: "AI intake categorizes visa types. Document collection runs itself.",
-    description: "For a 2-consultant firm handling 50 inquiries per month, 40% of every week is consumed by intake, document chasing, and status calls — none of which requires RCIC expertise. We automate all of it.",
+    description: "For a 2-consultant firm handling 50 inquiries per month, 40% of every week is consumed by intake, document chasing, and status calls - none of which requires RCIC expertise. We automate all of it.",
     automations: ["AI visa categorization (8+ streams)", "Document portal with 48hr reminders", "Automatic status updates at every file stage", "Weekly practice reporting delivered Monday"],
     color: "#283891",
   },
@@ -54,7 +54,7 @@ const industriesList = [
     number: "04",
     title: "Contractors & Trades",
     tagline: "You are on the job. Your leads arrive all day. Automation bridges that gap.",
-    description: "At $5,000–$15,000 per job, losing 8–12 leads per month to slow response means $40,000–$180,000 in revenue walking away. Not because your work is bad — because your response was slow.",
+    description: "At $5,000–$15,000 per job, losing 8–12 leads per month to slow response means $40,000–$180,000 in revenue walking away. Not because your work is bad - because your response was slow.",
     automations: ["90-second lead response even while on-site", "Quote follow-up at 48hr/5d/10d", "Jobber scheduling + after-hours voice AI", "Invoice triggered on job completion"],
     color: "#7E0F4A",
   },
@@ -99,7 +99,7 @@ const industriesList = [
     number: "09",
     title: "Insurance Brokers",
     tagline: "40% of your quotes get zero follow-up. 15-20% of renewals lapse.",
-    description: "Quote follow-up depends on the broker's workload that week. Renewal tracking depends on a spreadsheet someone updates monthly. Both fail silently — until clients are gone.",
+    description: "Quote follow-up depends on the broker's workload that week. Renewal tracking depends on a spreadsheet someone updates monthly. Both fail silently - until clients are gone.",
     automations: ["Quote follow-up at 48hr/7d/14d", "Renewal reminders at 90/60/30 days", "Consistent welcome sequence for new clients", "Cross-sell gap detection and broker alerts"],
     color: "#283891",
   },
@@ -151,7 +151,7 @@ const industriesList = [
   {
     slug: "home-services",
     number: "15",
-    title: "Home Services — HVAC, Plumbing, Electrical",
+    title: "Home Services - HVAC, Plumbing, Electrical",
     tagline: "Emergency calls at 2am. 300 seasonal clients due. Automate both.",
     description: "Home service companies handle emergency work that cannot wait and scheduled maintenance that keeps recurring revenue flowing. Managing both manually means one consumes the day while the other falls behind.",
     automations: ["24/7 emergency dispatch with AI triage", "Seasonal maintenance campaigns to 100% of clients", "Agreement renewals at 90/60/30 days", "Weather-triggered snow removal dispatch"],

@@ -24,7 +24,7 @@ const data: IndustryPageData = {
 
   problemsHeading: undefined,
   problems: [
-    { title: "Quote Follow-Up Is Random", desc: "Some quotes get 3 follow-up calls. Others get zero. The difference is not strategy — it is which week the broker had time." },
+    { title: "Quote Follow-Up Is Random", desc: "Some quotes get 3 follow-up calls. Others get zero. The difference is not strategy - it is which week the broker had time." },
     { title: "Renewals Slip Through the Cracks", desc: "With hundreds of policies on different renewal dates, manual tracking guarantees some are missed. You find out when the client calls about a gap in coverage." },
     { title: "Client Onboarding Is Inconsistent", desc: "New clients receive different experiences depending on which broker handles them. No standard welcome sequence, document collection, or introduction process." },
     { title: "Cross-Sell Opportunities Are Invisible", desc: "You have clients with incomplete coverage. Without systematic analysis, these opportunities are only discovered during random conversations." },
@@ -63,7 +63,7 @@ const data: IndustryPageData = {
     { label: "Renewal Retention", after: "Improved 15-20% (reduced lapse rate)" },
     { label: "Onboarding Consistency", after: "Professional, every client" },
     { label: "Cross-Sell Identification", after: "Systematic rather than accidental" },
-    { label: "Broker Admin Time", after: "Reduced — more time selling" },
+    { label: "Broker Admin Time", after: "Reduced - more time selling" },
     { label: "Payback Period", after: "Within first renewal cycle" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
