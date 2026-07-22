@@ -1,7 +1,55 @@
-Options -MultiViews
+Options -Indexes -MultiViews
+DirectoryIndex index.html
 ErrorDocument 404 /404/index.html
 
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ - [R=404,L]
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Canonical HTTPS and non-www host.
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.barrana\.ai$ [NC]
+  RewriteRule ^ https://barrana.ai%{REQUEST_URI} [R=301,L]
+
+  # The static build emits every valid application route as a directory.
+  # Anything else must use the branded error document with a real 404 status.
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ - [R=404,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  <FilesMatch "\.(?:css|js|mjs)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  <FilesMatch "\.(?:png|jpe?g|gif|svg|webp|avif|ico|woff2?|ttf)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json application/manifest+json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType application/manifest+json .webmanifest
+  AddType image/avif .avif
+  AddType image/webp .webp
+</IfModule>
+
+<FilesMatch "(^\.|package(?:-lock)?\.json$|pnpm-lock\.yaml$|yarn\.lock$|tsconfig.*\.json$|vite\.config\.|\.env)">
+  Require all denied
+</FilesMatch>
