@@ -320,7 +320,7 @@ export default function PhysiotherapyHeroVisual({ className }: { className?: str
               animate={{ opacity: 1 }}
               style={{ fontSize: "0.7rem", fontWeight: 600, color: "#10B981", textAlign: "center" }}
             >
-              Recovered: $41,600 saved — waitlist + reminders active
+              Recovered: $41,600 saved - waitlist + reminders active
             </motion.div>
           ) : (
             phase >= 4 && (

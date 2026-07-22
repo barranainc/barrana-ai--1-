@@ -85,7 +85,7 @@ function DecisionMatrix() {
         {/* Axis labels */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.5rem" }}>
           <div style={{ textAlign: "center", fontWeight: 700, color: "#7B7B7B", fontSize: "0.8rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-            ← Low Judgement Required — High Judgement Required →
+            ← Low Judgement Required - High Judgement Required →
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "stretch", gap: "0" }}>
@@ -204,10 +204,10 @@ export default function AutomationVsDelegation() {
 
             <SectionHeading>The Core Distinction</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              <strong style={{ color: "#1A1A2E" }}>Delegation</strong> means you assign the task to a person. That person can adapt to context, interpret ambiguous situations, exercise judgement, and make decisions based on the specific circumstances. The task still takes human time — it's just someone else's time.
+              <strong style={{ color: "#1A1A2E" }}>Delegation</strong> means you assign the task to a person. That person can adapt to context, interpret ambiguous situations, exercise judgement, and make decisions based on the specific circumstances. The task still takes human time - it's just someone else's time.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-              <strong style={{ color: "#1A1A2E" }}>Automation</strong> means the task is removed from people entirely and handled by connected systems. No one decides whether to send the reminder — it happens automatically, every time, without exception. The task takes zero human time.
+              <strong style={{ color: "#1A1A2E" }}>Automation</strong> means the task is removed from people entirely and handled by connected systems. No one decides whether to send the reminder - it happens automatically, every time, without exception. The task takes zero human time.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
               These are fundamentally different tools. Using the wrong one for the wrong task creates either unreliable automation (too much variability) or unnecessarily expensive delegation (too much human time on rule-based work). Both outcomes are costly.
@@ -218,8 +218,8 @@ export default function AutomationVsDelegation() {
               {[
                 { title: "Trying to automate tasks that need judgement", body: "Writing custom client advice, handling complex exception cases, or managing difficult conversations cannot be reliably automated. The variability is too high and the cost of error is too great." },
                 { title: "Delegating tasks that could be automated", body: "Sending standard reminders, creating CRM records, generating invoices, and sending booking confirmations are rule-based. Delegating them wastes your team's time and creates inconsistency from human error." },
-                { title: "Using delegation as a substitute for process design", body: "Dumping messy, undefined work on a hire and hoping they'll figure it out is not delegation — it's avoidance. You still need to define the process before you assign it." },
-                { title: "Using automation as a substitute for clear thinking", body: "Automating a poorly defined process doesn't fix the process — it runs the poorly defined process faster and more consistently. Define first, then automate." },
+                { title: "Using delegation as a substitute for process design", body: "Dumping messy, undefined work on a hire and hoping they'll figure it out is not delegation - it's avoidance. You still need to define the process before you assign it." },
+                { title: "Using automation as a substitute for clear thinking", body: "Automating a poorly defined process doesn't fix the process - it runs the poorly defined process faster and more consistently. Define first, then automate." },
               ].map((item, i) => (
                 <div key={i} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.25rem", borderLeft: "4px solid #7E0F4A" }}>
                   <strong style={{ color: "#1A1A2E", display: "block", marginBottom: "0.4rem" }}>{item.title}</strong>
@@ -262,10 +262,10 @@ export default function AutomationVsDelegation() {
 
             <SectionHeading>The Compounding Effect of Getting It Right</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              When you automate the right tasks, your team's attention shifts to higher-value work — the work that requires judgement, creativity, and relationship. The volume of low-value activity they used to absorb simply disappears. This is not just faster — it is structurally better.
+              When you automate the right tasks, your team's attention shifts to higher-value work - the work that requires judgement, creativity, and relationship. The volume of low-value activity they used to absorb simply disappears. This is not just faster - it is structurally better.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              Over time, the compounding effect is significant. A team freed from reminder emails, CRM data entry, and document chasing can redirect that capacity toward client relationships, strategic work, and growth. The business doesn't just operate more efficiently — it becomes more capable.
+              Over time, the compounding effect is significant. A team freed from reminder emails, CRM data entry, and document chasing can redirect that capacity toward client relationships, strategic work, and growth. The business doesn't just operate more efficiently - it becomes more capable.
             </p>
 
             <SectionHeading>Why Both Matter</SectionHeading>
@@ -280,7 +280,7 @@ export default function AutomationVsDelegation() {
               </div>
             </div>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              The best-run service businesses use both: automation for everything rule-based and repeatable, delegation for everything that requires context, creativity, accountability, or relationship. The two work in concert — automation creates capacity, delegation uses it wisely.
+              The best-run service businesses use both: automation for everything rule-based and repeatable, delegation for everything that requires context, creativity, accountability, or relationship. The two work in concert - automation creates capacity, delegation uses it wisely.
             </p>
 
             <ContextualCTA
@@ -292,8 +292,8 @@ export default function AutomationVsDelegation() {
 
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
-              <FAQItem q="Is there anything that should never be automated?" a="Yes — tasks involving professional liability, emotional support, creative judgement, and regulated advice should not be automated. They can be supported by automation but must remain human-led." />
-              <FAQItem q="Can AI assist with delegation?" a="Yes. AI can draft, summarise, or prepare information for the delegate — reducing the time the task takes. The decision and execution remain human." />
+              <FAQItem q="Is there anything that should never be automated?" a="Yes - tasks involving professional liability, emotional support, creative judgement, and regulated advice should not be automated. They can be supported by automation but must remain human-led." />
+              <FAQItem q="Can AI assist with delegation?" a="Yes. AI can draft, summarise, or prepare information for the delegate - reducing the time the task takes. The decision and execution remain human." />
               <FAQItem q="How do we identify which of our tasks fit each quadrant?" a="The Automation Audit maps your workflows and scores each task on frequency and judgement required. This is the output of the friction mapping exercise." />
               <FAQItem q="We've been delegating everything because we didn't know what could be automated. Where do we start?" a="Start with the highest-frequency, lowest-judgement tasks. Invoice reminders, appointment reminders, lead acknowledgements, document requests. These are usually automatable within 1–2 weeks." />
             </div>

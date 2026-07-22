@@ -41,7 +41,7 @@ export default function TemplateScalingCapacityBar({
   return (
     <div
       role="img"
-      aria-label={`Capacity bar showing current ${currentCapacity} ${unit} with ${adminOverhead}% admin overhead. After automation, capacity grows to ${newCapacity} ${unit} — a ${capacityGain}% increase with the same team.`}
+      aria-label={`Capacity bar showing current ${currentCapacity} ${unit} with ${adminOverhead}% admin overhead. After automation, capacity grows to ${newCapacity} ${unit} - a ${capacityGain}% increase with the same team.`}
       className={className}
       style={{
         background: "white",
@@ -57,7 +57,7 @@ export default function TemplateScalingCapacityBar({
     >
       <div style={{ textAlign: "center", marginBottom: "0.75rem" }}>
         <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#6B7280", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          Scaling Capacity — Same Team
+          Scaling Capacity - Same Team
         </span>
       </div>
 

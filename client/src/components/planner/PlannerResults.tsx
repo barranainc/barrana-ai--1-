@@ -1,5 +1,5 @@
 /**
- * PlannerResults.tsx — Redesigned v2
+ * PlannerResults.tsx - Redesigned v2
  * 8-section narrative results page for non-technical business owners.
  * Narrative arc: Snapshot → Cost → #1 Opportunity → More → Control → Roadmap → Before/After → Get Plan
  */
@@ -178,7 +178,7 @@ const STORIES: Record<string, {
 }> = {
   "inbound-enquiries": {
     problem: "Every new enquiry waits until someone checks their inbox. During evenings and weekends, they wait until Monday. Competitors who respond in minutes win the consultation.",
-    fix: "An automated response acknowledges every enquiry within 90 seconds — day or night. Qualifying questions are sent, a record is created in your CRM, and urgent leads are flagged for priority follow-up.",
+    fix: "An automated response acknowledges every enquiry within 90 seconds - day or night. Qualifying questions are sent, a record is created in your CRM, and urgent leads are flagged for priority follow-up.",
     scenario: "A potential client fills out your form at 8:30pm on Thursday. By 9am Friday, they have already booked a consultation with the firm that responded at 8:31pm.",
     howItWorks: ["New enquiry arrives via website or email", "Acknowledgement sent within 90 seconds", "Qualifying questions sent automatically", "Lead record created in your CRM", "Qualified leads escalated for priority handling"],
   },
@@ -189,13 +189,13 @@ const STORIES: Record<string, {
     howItWorks: ["Call received by AI receptionist", "Caller intent captured", "Appointment booked directly into calendar", "Urgent calls transferred to available staff", "Complete call summary logged automatically"],
   },
   "lead-qualification": {
-    problem: "Your team spends time on discovery calls with people who are not a fit — wrong budget, wrong service, or not ready to move. Meanwhile, qualified prospects wait days for a response.",
+    problem: "Your team spends time on discovery calls with people who are not a fit - wrong budget, wrong service, or not ready to move. Meanwhile, qualified prospects wait days for a response.",
     fix: "An automated qualification sequence asks the right questions before any human conversation. Qualified leads are fast-tracked. Unqualified leads receive appropriate resources automatically.",
     scenario: "You spend 45 minutes on a discovery call only to find out their budget is a quarter of your minimum. That time now goes to three qualified prospects instead.",
     howItWorks: ["New lead submits enquiry", "Automated qualification questions sent within minutes", "Responses scored against your criteria", "Qualified leads fast-tracked to your calendar", "Unqualified leads receive appropriate resources"],
   },
   "appointment-booking": {
-    problem: "Booking requires back-and-forth messages or phone tag — days of exchanging availability. This wastes both sides' time and delays the relationship before it starts.",
+    problem: "Booking requires back-and-forth messages or phone tag - days of exchanging availability. This wastes both sides' time and delays the relationship before it starts.",
     fix: "Clients see your real-time availability and book directly. Confirmations sent immediately. Reminders at 48 hours and 2 hours before every appointment.",
     scenario: "It is 9pm. A patient wants to book for next week. Instead of waiting until your office opens, they book online in 2 minutes and receive an instant confirmation.",
     howItWorks: ["Client visits your booking link", "Real-time availability shown from your calendar", "Client selects slot and provides details", "Confirmation sent immediately", "Reminders sent automatically at 48hr and 2hr before"],
@@ -207,14 +207,14 @@ const STORIES: Record<string, {
     howItWorks: ["Lead enters system via form, call, or referral", "Follow-up sequence triggered automatically", "Sequence adapts based on engagement", "Engaged leads escalated to human", "Long-term nurture continues for contacts not yet ready"],
   },
   "client-onboarding": {
-    problem: "Onboarding a new client involves coordinating information, documents, contracts, and setup across multiple channels — days of back-and-forth occupying significant staff time.",
+    problem: "Onboarding a new client involves coordinating information, documents, contracts, and setup across multiple channels - days of back-and-forth occupying significant staff time.",
     fix: "A fully automated onboarding sequence is triggered the moment a client signs. They receive a branded portal, a clear checklist, and reminders until everything is complete.",
-    scenario: "A new client signs the contract on Friday afternoon. On Monday morning, you receive a notification that their onboarding is 80% complete — and you have not touched it.",
+    scenario: "A new client signs the contract on Friday afternoon. On Monday morning, you receive a notification that their onboarding is 80% complete - and you have not touched it.",
     howItWorks: ["Contract signed or new client created", "Welcome message and portal sent immediately", "Document and information checklist delivered", "Reminders sent every 48hr for incomplete items", "Team notified only when review is needed"],
   },
   "document-collection": {
     problem: "You send the document list. Days pass. Some documents arrive. You send a reminder. More days pass. You call. They promise to send this weekend. Every file drags out by weeks.",
-    fix: "The system sends document requests, tracks what has been received, and sends polite reminders every 48 hours for outstanding items — automatically, until the file is complete.",
+    fix: "The system sends document requests, tracks what has been received, and sends polite reminders every 48 hours for outstanding items - automatically, until the file is complete.",
     scenario: "You send the checklist. Three days later you get a notification: 7 of 9 items received, 2 reminders sent for outstanding items. You have not sent a single follow-up.",
     howItWorks: ["Document checklist sent via secure portal", "Client uploads directly to the portal", "System tracks receipt status in real time", "Reminders sent every 48hr for missing items", "File flagged complete when all documents received"],
   },
@@ -231,7 +231,7 @@ const STORIES: Record<string, {
     howItWorks: ["Job marked complete in your system", "Invoice generated automatically from job details", "Sent to client with payment link", "Reminders at 7, 14, and 21 days if unpaid", "Overdue accounts escalated to your team"],
   },
   "customer-support": {
-    problem: "Your team answers the same questions repeatedly — hours, pricing, process, what to bring. This occupies time that could go to high-value work.",
+    problem: "Your team answers the same questions repeatedly - hours, pricing, process, what to bring. This occupies time that could go to high-value work.",
     fix: "An automated FAQ system handles routine questions around the clock. Complex questions are escalated to a human with full context already captured.",
     scenario: "A client emails at 7pm asking what documents to bring. They receive an accurate, helpful response in 60 seconds. Your team reads it in the morning as a completed interaction.",
     howItWorks: ["Client submits question via chat, email, or form", "System checks FAQ knowledge base", "Routine questions answered automatically", "Complex questions routed to human with full context", "Repeated new questions added to knowledge base"],
@@ -243,7 +243,7 @@ const STORIES: Record<string, {
     howItWorks: ["Trigger event occurs in your system", "Relevant team member notified with context", "Required action is clear and timestamped", "Confirmation captured when action is taken", "Full audit trail maintained automatically"],
   },
   "reporting": {
-    problem: "Your monthly or weekly report takes hours to compile — pulling numbers from multiple places, copying into a spreadsheet, formatting, and hoping nothing is wrong.",
+    problem: "Your monthly or weekly report takes hours to compile - pulling numbers from multiple places, copying into a spreadsheet, formatting, and hoping nothing is wrong.",
     fix: "Data is pulled automatically from your systems, formatted consistently, and delivered to your inbox ready for review. You add commentary. The numbers are already there.",
     scenario: "It is the last day of the month. Instead of spending your evening on numbers, your report arrives in your inbox at 8am complete. You add three sentences and send it.",
     howItWorks: ["Scheduled trigger runs at your frequency", "Data pulled from your tools via API", "Report formatted automatically", "Delivered for your review and commentary", "Approved and sent to stakeholders"],
@@ -270,9 +270,9 @@ function getIndustryLabel(industry: string | null): string {
 
 // ── JARGON map ────────────────────────────────────────────────────────────────
 const JARGON: Record<string, string> = {
-  "CRM record": "A digital file for this client in your customer database — created automatically with all the information they provided.",
+  "CRM record": "A digital file for this client in your customer database - created automatically with all the information they provided.",
   "trigger-action workflow": "When one thing happens (like a new enquiry), another thing happens automatically (like a response being sent). No manual step required.",
-  "AI categorisation": "The system reads the enquiry and sorts it into the right category automatically — like a receptionist who knows which consultant handles which type of case.",
+  "AI categorisation": "The system reads the enquiry and sorts it into the right category automatically - like a receptionist who knows which consultant handles which type of case.",
   escalation: "If the system encounters something it cannot handle, it alerts a human with all the context needed to take over immediately.",
   "knowledge base": "A library of standard answers to common questions. The system searches it automatically to respond to routine enquiries.",
 };
@@ -287,7 +287,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
   const industryLabel = getIndustryLabel(state.industry);
   const toolNames = state.tools.slice(0, 2).join(" and ") || "your existing tools";
 
-  const beforeAfterBullets: [string, string][] = {
+  const beforeAfterBullets: [string, string][] = ({
     "inbound-enquiries": [["Response time", "Hours/days → Under 90 seconds"], ["After-hours coverage", "0% → 100% automated"], ["Lead record creation", "Manual → Instant and automatic"]],
     "phone-calls": [["Missed call rate", "30–50% during busy periods → Near zero"], ["After-hours booking", "Unavailable → 24/7 self-service"]],
     "lead-qualification": [["Time on unqualified calls", "High → Near zero"], ["Response to qualified leads", "Days → Same day"]],
@@ -302,7 +302,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
     "reporting": [["Report preparation time", "4–8 hours → Under 30 minutes"], ["Delivery consistency", "Variable → Always on time"]],
     "review-requests": [["Review request coverage", "10–15% of clients → 80–90%"], ["Review volume", "Low → Consistent growth"]],
     "scheduling-reminders": [["No-show rate", "15–25% → 5–8%"], ["Revenue lost to no-shows", "Significant → Substantially reduced"]],
-  }[opp.workflowId] ?? [["Before automation", "Manual, time-consuming"], ["After automation", "Automated and consistent"]];
+  } as Record<string, [string, string][]>)[opp.workflowId] ?? [["Before automation", "Manual, time-consuming"], ["After automation", "Automated and consistent"]];
 
   return (
     <div
@@ -315,7 +315,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
       {/* Badge */}
       <div style={{ display: "flex", gap: 10, marginBottom: 20, flexWrap: "wrap" }}>
         <span style={{ background: BURGUNDY, color: "white", borderRadius: 20, padding: "5px 14px", fontSize: 12, fontWeight: 700, letterSpacing: "0.04em" }}>
-          ⚡ Start Here — Quick Win
+          ⚡ Start Here - Quick Win
         </span>
         <span style={{ background: "rgba(255,255,255,0.15)", color: "#C4D0F5", borderRadius: 20, padding: "5px 14px", fontSize: 12, fontWeight: 600 }}>
           Phase 1
@@ -351,7 +351,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
           </p>
         </div>
 
-        {/* What Changes — mini before/after */}
+        {/* What Changes - mini before/after */}
         <div style={{ borderLeft: "3px solid rgba(255,255,255,0.2)", paddingLeft: 16 }}>
           <p style={{ margin: "0 0 10px", fontSize: 11, fontWeight: 700, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.1em" }}>
             What Changes
@@ -367,7 +367,7 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
         </div>
       </div>
 
-      {/* Scenario — "sounds like me" */}
+      {/* Scenario - "sounds like me" */}
       {story && (
         <div style={{ background: "rgba(255,255,255,0.06)", borderRadius: 10, padding: "14px 16px", marginBottom: 28 }}>
           <p style={{ margin: "0 0 4px", fontSize: 11, fontWeight: 700, color: "#A5B4FC", textTransform: "uppercase", letterSpacing: "0.08em" }}>
@@ -426,7 +426,7 @@ function AccordionOpportunityCard({ opp, isOpen, onToggle, state }: {
         transition: "box-shadow 0.2s",
       }}
     >
-      {/* Header — always visible */}
+      {/* Header - always visible */}
       <button
         onClick={onToggle}
         style={{
@@ -528,7 +528,7 @@ function InteractiveRoadmap({ phase1, phase2, phase3 }: { phase1: Opportunity[];
 
   return (
     <div>
-      {/* Phase selector — horizontal on desktop, tabs */}
+      {/* Phase selector - horizontal on desktop, tabs */}
       <div style={{ display: "flex", gap: 0, marginBottom: 24, borderRadius: 12, overflow: "hidden", border: "1.5px solid #E2E4ED" }}>
         {phases.map((ph, i) => (
           <button
@@ -570,7 +570,7 @@ function InteractiveRoadmap({ phase1, phase2, phase3 }: { phase1: Opportunity[];
                   <div style={{ width: 6, height: 6, borderRadius: "50%", background: active.color, flexShrink: 0, marginTop: 6 }} />
                   <div>
                     <span style={{ fontSize: 14, fontWeight: 600, color: DARK }}>{opp.name}</span>
-                    <span style={{ fontSize: 13, color: GREY }}> — {opp.estimatedImpact}</span>
+                    <span style={{ fontSize: 13, color: GREY }}> - {opp.estimatedImpact}</span>
                   </div>
                 </div>
               ))}
@@ -663,7 +663,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
           { key: "admin_hours_per_week",    field_value: state.volume.adminHoursPerWeek != null ? String(state.volume.adminHoursPerWeek) : "" },
         ],
       });
-    } catch { /* silent — don't block UX */ }
+    } catch { /* silent - don't block UX */ }
   };
 
   const scrollToLeadForm = () => {
@@ -732,7 +732,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
               What This Is Costing You
             </p>
             <h2 style={{ margin: 0, fontSize: 20, fontWeight: 800, color: DARK, lineHeight: 1.2 }}>
-              The cost of your current operations — in real numbers
+              The cost of your current operations - in real numbers
             </h2>
           </div>
 
@@ -744,7 +744,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
               headline={
                 <><AnimCount value={adminHrs} trigger={costInView} /> hrs/week</>
               }
-              subtext={`Spent on repetitive admin. That is ${annualAdminHrs.toLocaleString()} hours per year — at $30/hr staff cost, that is $${annualAdminCost.toLocaleString()}/year on tasks that generate zero revenue.`}
+              subtext={`Spent on repetitive admin. That is ${annualAdminHrs.toLocaleString()} hours per year - at $30/hr staff cost, that is $${annualAdminCost.toLocaleString()}/year on tasks that generate zero revenue.`}
             />
             <CostCard
               icon="📉"
@@ -762,7 +762,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
               headline={
                 <><AnimCount value={additionalCapacity} trigger={costInView} /> more clients possible</>
               }
-              subtext={`Businesses that automate their coordination layer typically handle 20–30% more volume with the same team — without hiring.`}
+              subtext={`Businesses that automate their coordination layer typically handle 20–30% more volume with the same team - without hiring.`}
             />
           </div>
         </div>
@@ -924,7 +924,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
                 Get Your Custom Automation Map
               </h3>
               <p style={{ margin: "0 0 20px", fontSize: 14, color: GREY, lineHeight: 1.6 }}>
-                We will create a detailed plan based on your results — specific workflows, tool recommendations, timelines, and investment ranges. Delivered within 24 hours.
+                We will create a detailed plan based on your results - specific workflows, tool recommendations, timelines, and investment ranges. Delivered within 24 hours.
               </p>
               <LeadCaptureForm
                 state={state}
@@ -942,7 +942,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
                 Discuss Your Results With a Strategist
               </h3>
               <p style={{ margin: "0 0 auto", fontSize: 14, color: "#A3B4E8", lineHeight: 1.6 }}>
-                Walk through your automation opportunities with a Barrana strategist. 30 minutes. No obligation. We have already seen your results — the call starts where the planner left off.
+                Walk through your automation opportunities with a Barrana strategist. 30 minutes. No obligation. We have already seen your results - the call starts where the planner left off.
               </p>
               <div style={{ marginTop: 24 }}>
                 <a

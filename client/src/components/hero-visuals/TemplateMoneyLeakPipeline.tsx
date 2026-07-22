@@ -85,7 +85,7 @@ export default function TemplateMoneyLeakPipeline({
     >
       <div style={{ textAlign: "center", marginBottom: "0.75rem" }}>
         <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#6B7280", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          {industry} — Revenue Leaks
+          {industry} - Revenue Leaks
         </span>
       </div>
 
@@ -98,7 +98,7 @@ export default function TemplateMoneyLeakPipeline({
 
           {/* Pipeline */}
           <div style={{ position: "relative", height: `${totalPipeH}px` }}>
-            {/* Main pipe — center column */}
+            {/* Main pipe - center column */}
             <div style={{
               position: "absolute",
               left: "50%",
@@ -227,7 +227,7 @@ export default function TemplateMoneyLeakPipeline({
       }}>
         <span style={{ fontSize: "0.7rem", fontWeight: 700, color: phase === "sealed" ? "#10B981" : "#EF4444" }}>
           {phase === "sealed"
-            ? "All leaks sealed — revenue flows through cleanly"
+            ? "All leaks sealed - revenue flows through cleanly"
             : `${leaks.length} revenue leaks identified`}
         </span>
       </div>

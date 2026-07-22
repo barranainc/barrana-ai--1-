@@ -127,7 +127,7 @@ export default function LeadResponseHeroVisual({ className }: { className?: stri
   return (
     <div
       role="img"
-      aria-label="Clock showing leads disappearing over time — at 5 minutes 21% contact rate loss, at 30 minutes 80% loss. One lead glows green at 90 seconds — the automated response window."
+      aria-label="Clock showing leads disappearing over time - at 5 minutes 21% contact rate loss, at 30 minutes 80% loss. One lead glows green at 90 seconds - the automated response window."
       className={className}
       style={{
         background: "white",

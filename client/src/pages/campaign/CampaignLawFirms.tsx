@@ -28,7 +28,7 @@ export default function CampaignLawFirms() {
   return (
     <>
       <Helmet>
-        <title>Barrana.ai — Law Firms Are Losing $120,000+ Per Year to Slow Intake | Vaughan</title>
+        <title>Barrana.ai - Law Firms Are Losing $120,000+ Per Year to Slow Intake | Vaughan</title>
         <meta
           name="description"
           content="Small law firms in Vaughan and the GTA lose $120,000+ per year to slow intake, manual document collection, and missed follow-up. See how automation fixes it."
@@ -36,10 +36,10 @@ export default function CampaignLawFirms() {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="campaign-page min-h-screen flex flex-col bg-white">
         <CampaignHeader />
 
-        {/* Hero — Navy background */}
+        {/* Hero - Navy background */}
         <FadeSection style={{ backgroundColor: NAVY }}>
           <div className="py-16 md:py-20">
             <div className="max-w-3xl mx-auto px-4 md:px-6">
@@ -94,19 +94,19 @@ export default function CampaignLawFirms() {
             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: NAVY }}>
               The Numbers for a Small Law Firm in Vaughan & the GTA
             </h2>
-            <p className="text-sm mb-8" style={{ color: GREY }}>Whether your firm is in Vaughan, Woodbridge, Concord, or Maple — every lost client is a system problem, not a quality problem.</p>
+            <p className="text-sm mb-8" style={{ color: GREY }}>Whether your firm is in Vaughan, Woodbridge, Concord, or Maple - every lost client is a system problem, not a quality problem.</p>
             <ProblemCounterGrid
               stats={[
-                { value: 120000, prefix: "$", suffix: "/yr", label: "Lost to slow intake — clients going to faster firms", icon: "⚖️" },
+                { value: 120000, prefix: "$", suffix: "/yr", label: "Lost to slow intake - clients going to faster firms", icon: "⚖️" },
                 { value: 48000, prefix: "$", suffix: "/yr", label: "Paralegal time on document chasing & manual follow-up", icon: "📄" },
-                { value: 36000, prefix: "$", suffix: "/yr", label: "Unbilled hours — time tracking gaps in manual systems", icon: "⏱️" },
+                { value: 36000, prefix: "$", suffix: "/yr", label: "Unbilled hours - time tracking gaps in manual systems", icon: "⏱️" },
                 { value: 85, suffix: "%", label: "Intake conversion rate achievable with automated follow-up", icon: "📈" },
               ]}
             />
             <div className="mt-8 flex flex-col gap-4">
-              <CampaignMathItem figure="$120,000 – $180,000/year" label="4-6 lost clients per month × $2,500 average retainer — gone to the firm that responded first" />
+              <CampaignMathItem figure="$120,000 – $180,000/year" label="4-6 lost clients per month × $2,500 average retainer - gone to the firm that responded first" />
               <CampaignMathItem figure="$48,000/year" label="Paralegal spending 20+ hours per week chasing documents, sending reminders, and managing intake manually" />
-              <CampaignMathItem figure="$36,000/year" label="Unbilled hours — time tracking gaps in manual systems that never make it to an invoice" />
+              <CampaignMathItem figure="$36,000/year" label="Unbilled hours - time tracking gaps in manual systems that never make it to an invoice" />
               <CampaignMathItem figure="$204,000/year at risk" label="Total operational revenue at risk from manual processes" isTotal />
             </div>
           </div>
@@ -136,8 +136,8 @@ export default function CampaignLawFirms() {
             <BeforeAfterWorkflow
               title="Your Client Intake: Before vs. After"
               beforeSteps={[
-                { label: "Enquiry arrives at 9pm — nobody responds", detail: "You see it at 9am. Prospect has already spoken to 2 other firms." },
-                { label: "Intake form emailed manually — 2 days later", detail: "Paralegal sends form. Client doesn't reply. Nobody follows up." },
+                { label: "Enquiry arrives at 9pm - nobody responds", detail: "You see it at 9am. Prospect has already spoken to 2 other firms." },
+                { label: "Intake form emailed manually - 2 days later", detail: "Paralegal sends form. Client doesn't reply. Nobody follows up." },
                 { label: "Documents collected over 3 weeks by email", detail: "Back-and-forth. Missing items. Delays. Paralegal time wasted." },
               ]}
               afterSteps={[
@@ -195,7 +195,7 @@ export default function CampaignLawFirms() {
                   "A map of exactly where your intake is leaking clients (with dollar amounts)",
                   "Which 1-2 workflows would give you the biggest return if automated",
                   "What it would cost to fix (fixed pricing, you know the number upfront)",
-                  "The full analysis is yours to keep — whether or not you hire us",
+                  "The full analysis is yours to keep - whether or not you hire us",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

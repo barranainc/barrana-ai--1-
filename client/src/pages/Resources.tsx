@@ -1,11 +1,54 @@
 /**
- * Resources.tsx — Barrana.ai Resources / Knowledge Hub
+ * Resources.tsx - Barrana.ai Resources / Knowledge Hub
  * Design: Premium Systems Consultancy
  * Editorial layout, scroll reveal, clean typography
  */
 
 import { useEffect, useRef, useState } from "react";
+import {
+  Apple,
+  Activity,
+  ArrowRight,
+  Bug,
+  BookOpenText,
+  Building2,
+  CakeSlice,
+  Camera,
+  CarFront,
+  CloudSnow,
+  CookingPot,
+  Droplets,
+  Dumbbell,
+  Goal,
+  GraduationCap,
+  HandHeart,
+  ChefHat,
+  Landmark,
+  Languages,
+  Leaf,
+  MapPinned,
+  MessagesSquare,
+  MonitorPlay,
+  Music2,
+  PackageOpen,
+  PackageCheck,
+  Presentation,
+  Recycle,
+  Route,
+  Scale,
+  Sparkles,
+  Ship,
+  Trophy,
+  Truck,
+  UtensilsCrossed,
+  Syringe,
+  Tablet,
+  Waves,
+  WandSparkles,
+  Zap,
+} from "lucide-react";
 import { Link } from "wouter";
+import { industryGuideCards } from "@/content/industry-guides";
 import { colors } from "@/styles/design-tokens";
 
 function useReveal(threshold = 0.15) {
@@ -27,7 +70,7 @@ const pillarGuides = [
   { emoji: "🚀", category: "Getting Started", title: "AI Adoption for Small Businesses: A Practical Guide", desc: "What AI adoption actually means for an SMB, the five stages, what to automate, and what to keep human. Includes cost ranges and common mistakes.", readTime: "15 min read", href: "/ai-adoption-small-business", color: "#283891" },
   { emoji: "⚙️", category: "Framework", title: "Business Workflow Automation for SMBs: The Complete Guide", desc: "The 8 highest-impact workflows to automate, how they connect into a system, and a phased approach to building your automation stack.", readTime: "12 min read", href: "/workflow-automation-smb", color: "#7E0F4A" },
   { emoji: "📞", category: "Service Guide", title: "AI Receptionist for Small Businesses and Professional Services", desc: "How AI receptionists work, what they cost vs a human, when to escalate calls, and honest coverage comparisons by industry.", readTime: "10 min read", href: "/ai-receptionist", color: "#283891" },
-  { emoji: "🧑‍💼", category: "Governance", title: "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge", desc: "How to design automation systems with approval gates, escalation paths, and human decision points — the Control Layer explained.", readTime: "12 min read", href: "/human-in-the-loop-ai", color: "#7E0F4A" },
+  { emoji: "🧑‍💼", category: "Governance", title: "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge", desc: "How to design automation systems with approval gates, escalation paths, and human decision points - the Control Layer explained.", readTime: "12 min read", href: "/human-in-the-loop-ai", color: "#7E0F4A" },
   { emoji: "🏭", category: "Industry Guide", title: "AI Automation by Industry: What Works for Your Business", desc: "Hub page linking to industry-specific automation playbooks for accountants, immigration consultants, law firms, clinics, contractors, and agencies.", readTime: "8 min read", href: "/ai-automation-industries", color: "#283891" },
   { emoji: "📍", category: "Local", title: "AI Automation for Small Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and free Automation Audit for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
 ];
@@ -36,7 +79,7 @@ const pillarGuides = [
 const decisionGuides = [
   { category: "Decision Guide", title: "What Should a Small Business Automate First?", desc: "The 5 highest-ROI starting points ranked, with a priority pyramid and before/after metrics for lead response.", readTime: "10 min read", href: "/insights/what-to-automate-first", color: "#283891" },
   { category: "Assessment", title: "How to Know If Your Business Is Automation-Ready", desc: "The 5 readiness signals, a live readiness checker, and what to fix before you start automating.", readTime: "8 min read", href: "/insights/automation-readiness", color: "#7E0F4A" },
-  { category: "Decision Guide", title: "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools", desc: "Why the hybrid approach — off-the-shelf tools connected by a custom automation layer — wins for most SMBs.", readTime: "9 min read", href: "/insights/build-vs-buy", color: "#283891" },
+  { category: "Decision Guide", title: "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools", desc: "Why the hybrid approach - off-the-shelf tools connected by a custom automation layer - wins for most SMBs.", readTime: "9 min read", href: "/insights/build-vs-buy", color: "#283891" },
   { category: "Trust Builder", title: "When AI Is Not the Answer: 7 Signs You're Not Ready", desc: "The 7 signs that automation won't solve your problem yet, and what to fix first before you build.", readTime: "7 min read", href: "/insights/when-ai-is-not-the-answer", color: "#7E0F4A" },
   { category: "Decision Guide", title: "Automation vs Delegation: What Business Owners Get Wrong", desc: "A 2×2 decision matrix for knowing when to automate, when to delegate, and when to do both with AI assist.", readTime: "8 min read", href: "/insights/automation-vs-delegation", color: "#283891" },
 ];
@@ -47,6 +90,48 @@ const workflowGuides = [
   { emoji: "📅", title: "How to Automate Appointment Booking & Reduce No-Shows", desc: "Dual-reminder system (48hr + 2hr SMS), waitlist auto-fill, and no-show impact calculations.", readTime: "9 min read", href: "/workflows/appointment-booking" },
   { emoji: "🤝", title: "How to Automate Client Onboarding Using Your Current Tools", desc: "Manual vs automated timeline comparison. Works with existing CRM, forms, and calendar.", readTime: "10 min read", href: "/workflows/client-onboarding" },
   { emoji: "📋", title: "How to Automate Document Collection and Stop Chasing Clients", desc: "Dynamic checklists, 48-hour auto-reminders, secure upload portal, completion notifications.", readTime: "9 min read", href: "/workflows/document-collection" },
+];
+
+const industryGuideIcons = [
+  Bug,
+  Sparkles,
+  CloudSnow,
+  Zap,
+  Droplets,
+  Recycle,
+  Scale,
+  PackageOpen,
+  Waves,
+  Truck,
+  HandHeart,
+  Landmark,
+  Apple,
+  Languages,
+  Trophy,
+  MessagesSquare,
+  Building2,
+  WandSparkles,
+  Leaf,
+  Activity,
+  Syringe,
+  Dumbbell,
+  MonitorPlay,
+  Goal,
+  Camera,
+  Route,
+  PackageCheck,
+  CarFront,
+  Ship,
+  UtensilsCrossed,
+  CakeSlice,
+  CookingPot,
+  ChefHat,
+  Tablet,
+  GraduationCap,
+  BookOpenText,
+  MapPinned,
+  Music2,
+  Presentation,
 ];
 
 const guides = [
@@ -147,6 +232,7 @@ const faqs = [
 export default function Resources() {
   const hero = useReveal(0.05);
   const guidesSection = useReveal();
+  const industryGuideSection = useReveal();
   const pillarSection = useReveal();
   const decisionSection = useReveal();
   const workflowSection = useReveal();
@@ -246,6 +332,60 @@ export default function Resources() {
                 </Link>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industry Automation Guides */}
+      <section className="industry-guide-index-section">
+        <div className="container">
+          <div
+            ref={industryGuideSection.ref}
+            className="industry-guide-index-heading"
+            style={{
+              opacity: industryGuideSection.visible ? 1 : 0,
+              transform: industryGuideSection.visible ? "translateY(0)" : "translateY(24px)",
+              transition: "opacity 0.6s ease, transform 0.6s ease",
+            }}
+          >
+            <div className="section-divider mb-4">
+              <span className="section-label">Industry Automation</span>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-4 items-end">
+              <h2 className="text-3xl font-extrabold" style={{ color: "#111827" }}>
+                Industry Automation Guides
+              </h2>
+              <p className="text-gray-500 leading-relaxed">
+                Detailed workflow guides for field-service operators managing crews, schedules, documentation, and recurring revenue.
+              </p>
+            </div>
+          </div>
+
+          <div className="industry-guide-index-grid">
+            {industryGuideCards.map((guide, index) => {
+              const Icon = industryGuideIcons[index];
+              return (
+                <Link
+                  href={guide.href}
+                  className="industry-guide-index-card"
+                  key={guide.href}
+                  style={{
+                    opacity: industryGuideSection.visible ? 1 : 0,
+                    transform: industryGuideSection.visible ? "translateY(0)" : "translateY(20px)",
+                    transitionDelay: `${index * 0.06}s`,
+                  }}
+                >
+                  <div className="industry-guide-index-icon"><Icon size={21} strokeWidth={1.8} aria-hidden="true" /></div>
+                  <div className="industry-guide-index-meta">
+                    <span>Industry Automation</span>
+                    <span>{guide.readTime}</span>
+                  </div>
+                  <h3>{guide.title}</h3>
+                  <p>{guide.description}</p>
+                  <div className="industry-guide-index-link">Read guide <ArrowRight size={15} aria-hidden="true" /></div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

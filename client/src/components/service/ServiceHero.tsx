@@ -81,7 +81,7 @@ export default function ServiceHero({
           <span style={{ color: "var(--b-dark)", fontWeight: 600 }}>{breadcrumb}</span>
         </nav>
 
-        {/* Two-column grid — stacks on mobile */}
+        {/* Two-column grid - stacks on mobile */}
         <div
           style={{
             display: "grid",

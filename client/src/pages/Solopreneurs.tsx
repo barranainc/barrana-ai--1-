@@ -107,7 +107,7 @@ function SolopreneurWeekCalendar() {
         )}
       </div>
       <p style={{ textAlign: "center", fontSize: "0.8rem", color: "#7B7B7B", marginTop: "0.5rem" }}>
-        {!showAfter ? "Showing: current week breakdown" : "Showing: automated week — watch the bars shift"}
+        {!showAfter ? "Showing: current week breakdown" : "Showing: automated week - watch the bars shift"}
       </p>
     </div>
   );
@@ -182,7 +182,7 @@ function SolopreneurToolHub() {
           <text x={cx} y={cy - 6} textAnchor="middle" fill="#fff" fontWeight="700" fontSize="13">YOU +</text>
           <text x={cx} y={cy + 10} textAnchor="middle" fill="#C7D2FE" fontWeight="600" fontSize="11">Make</text>
           {/* Ring label */}
-          <text x={cx} y={cy - 108} textAnchor="middle" fill="#283891" fontWeight="700" fontSize="10" opacity={visible ? 1 : 0} style={{ transition: "opacity 0.4s ease 0.8s" }}>Make — Automation Layer</text>
+          <text x={cx} y={cy - 108} textAnchor="middle" fill="#283891" fontWeight="700" fontSize="10" opacity={visible ? 1 : 0} style={{ transition: "opacity 0.4s ease 0.8s" }}>Make - Automation Layer</text>
         </svg>
         {/* Tool nodes */}
         {tools.map((t, i) => {
@@ -224,7 +224,7 @@ function ThreeGrowthLevers() {
       emoji: "💰",
       label: "More 1:1 Clients",
       headline: "+$50,000–60,000/yr",
-      body: "Reducing 15 hrs of admin to 3-5 hrs recovers 10-12 hrs/week — enough for 5-6 more client sessions. At $200/session: $1,000-$1,200/week additional capacity, without working longer days.",
+      body: "Reducing 15 hrs of admin to 3-5 hrs recovers 10-12 hrs/week - enough for 5-6 more client sessions. At $200/session: $1,000-$1,200/week additional capacity, without working longer days.",
     },
     {
       number: "02",
@@ -272,11 +272,11 @@ function ThreeGrowthLevers() {
 const faqData = [
   {
     q: "I'm literally one person. Is this really for me?",
-    a: "Yes. Solopreneurs benefit most because every automated task returns time directly to you. There's no team to delegate to, so automation IS your team. The systems we build are scaled for one-person operations — lean, efficient, and low-maintenance.",
+    a: "Yes. Solopreneurs benefit most because every automated task returns time directly to you. There's no team to delegate to, so automation IS your team. The systems we build are scaled for one-person operations - lean, efficient, and low-maintenance.",
   },
   {
     q: "I'm not technical at all. Will this be complicated?",
-    a: "No. We handle the entire setup — from connecting your tools to building every workflow. You continue using your existing tools. The automation runs in the background. You'll be shown what's happening, but you don't need to manage any of it.",
+    a: "No. We handle the entire setup - from connecting your tools to building every workflow. You continue using your existing tools. The automation runs in the background. You'll be shown what's happening, but you don't need to manage any of it.",
   },
   {
     q: "How long does implementation take?",
@@ -284,7 +284,7 @@ const faqData = [
   },
   {
     q: "Will my clients notice a difference?",
-    a: "Yes — and they'll notice a better one. Faster responses, smoother onboarding, more consistent follow-up, and a more professional experience. Many clients tell solopreneurs they seem 'more put together' after automation. That's the point.",
+    a: "Yes - and they'll notice a better one. Faster responses, smoother onboarding, more consistent follow-up, and a more professional experience. Many clients tell solopreneurs they seem 'more put together' after automation. That's the point.",
   },
   {
     q: "Can you help with my social media too?",
@@ -292,7 +292,7 @@ const faqData = [
   },
   {
     q: "What about my website?",
-    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation — if the top of the funnel is broken, the rest doesn't matter. We assess this on the strategy call.",
+    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We assess this on the strategy call.",
   },
 ];
 
@@ -386,7 +386,7 @@ export default function Solopreneurs() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Business Automation for Solopreneurs — Barrana",
+    headline: "Business Automation for Solopreneurs - Barrana",
     description: "Automation systems built for coaches, consultants, and expert-led businesses. Recover 10-12 hours per week without hiring a team.",
     author: { "@type": "Organization", name: "Barrana" },
   };
@@ -431,7 +431,7 @@ export default function Solopreneurs() {
               You became an expert to help people, not to chase invoices, manage DMs, send follow-up emails, and build spreadsheets. Automation takes the operational weight off so you can focus on the work that actually earns: coaching, consulting, creating, and serving clients.
             </p>
             <p style={{ fontSize: "1rem", color: "#718096", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-              If you run a coaching practice, consulting business, or expert-led service — and your revenue comes from sessions, courses, or group programs — this page is for you.
+              If you run a coaching practice, consulting business, or expert-led service - and your revenue comes from sessions, courses, or group programs - this page is for you.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/automation-planner?industry=solopreneur">
@@ -466,7 +466,7 @@ export default function Solopreneurs() {
                   <div style={{ fontWeight: 800, color: "#1A1A2E", marginBottom: "0.5rem" }}>{d.day}</div>
                   <div style={{ color: "#22C55E", fontSize: "0.9rem", marginBottom: "0.4rem" }}>✓ {d.sessions}</div>
                   {d.ops.map((o) => <div key={o} style={{ color: "#EF4444", fontSize: "0.85rem", marginBottom: "0.2rem" }}>✗ {o}</div>)}
-                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#7B7B7B" }}>Total: {d.total} — only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
+                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#7B7B7B" }}>Total: {d.total} - only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
                 </div>
               ))}
             </div>
@@ -519,7 +519,7 @@ export default function Solopreneurs() {
           <div ref={toolSection.ref} style={{ opacity: toolSection.visible ? 1 : 0, transition: "opacity 0.5s ease" }}>
             <SectionHeading>Tools That Work for One-Person Businesses</SectionHeading>
             <p style={{ color: "#4A4A4A", lineHeight: 1.7, maxWidth: 640 }}>
-              You don't need enterprise software. Here's the typical solopreneur automation stack — connected by a single automation layer so everything talks to everything else.
+              You don't need enterprise software. Here's the typical solopreneur automation stack - connected by a single automation layer so everything talks to everything else.
             </p>
             <SolopreneurToolHub />
           </div>
@@ -615,7 +615,7 @@ export default function Solopreneurs() {
             Three Growth Levers Automation Unlocks for Solopreneurs
           </h2>
           <p style={{ color: "#A0AEC0", marginBottom: 0, maxWidth: 580 }}>
-            When operational weight lifts, three distinct growth paths open up — none of which require you to work more hours.
+            When operational weight lifts, three distinct growth paths open up - none of which require you to work more hours.
           </p>
           <ThreeGrowthLevers />
         </div>

@@ -72,7 +72,7 @@ const ROLE_OPTIONS = [
 
 const ROLE_INSIGHTS: Record<string, string> = {
   "solo-operator":
-    "Solo operators typically recover 8–12 hours per week through automation — that is an entire extra workday.",
+    "Solo operators typically recover 8–12 hours per week through automation - that is an entire extra workday.",
   "business-owner":
     "Business owners who automate their coordination layer free up 15–25% more capacity for their team without adding headcount.",
   "office-manager":
@@ -92,7 +92,7 @@ const TEAM_SIZE_OPTIONS = [
 
 const TEAM_SIZE_INSIGHTS: Record<string, string> = {
   "just-me":
-    "As a solo operator, every automated task is time returned directly to you. No coordination overhead — just results.",
+    "As a solo operator, every automated task is time returned directly to you. No coordination overhead - just results.",
   "2-5":
     "Small teams benefit most from automating the coordination that currently depends on one person remembering to do it.",
   "6-15":
@@ -348,7 +348,7 @@ export default function StepRole({ state, dispatch, onNext, onBack }: Props) {
         </div>
       </div>
 
-      {/* Micro-insight — shows the most recently selected insight */}
+      {/* Micro-insight - shows the most recently selected insight */}
       {lastInsight && <MicroInsight text={lastInsight} />}
 
       <PlannerNav

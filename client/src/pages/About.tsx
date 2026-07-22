@@ -1,5 +1,5 @@
 /**
- * About.tsx — Barrana.ai About Page
+ * About.tsx - Barrana.ai About Page
  * Design: Premium Systems Consultancy
  * Asymmetric layouts, scroll reveal, narrative-first
  */
@@ -111,7 +111,7 @@ export default function About() {
                   We have spent over a decade building software systems for businesses across industries. We have built CRMs, client portals, scheduling systems, document management platforms, and custom integrations for companies ranging from solo operators to mid-market firms.
                 </p>
                 <p>
-                  In that time, we kept seeing the same pattern: small business owners were being sold AI tools with no plan for how those tools would actually fit into their day-to-day operations. They would buy a chatbot, a CRM, an AI writing tool — and none of it would connect. None of it would reduce the actual work their team was doing.
+                  In that time, we kept seeing the same pattern: small business owners were being sold AI tools with no plan for how those tools would actually fit into their day-to-day operations. They would buy a chatbot, a CRM, an AI writing tool - and none of it would connect. None of it would reduce the actual work their team was doing.
                 </p>
                 <p>
                   Barrana.ai was created to solve that problem. We are not a software vendor. We are a systems integrator. We take the tools businesses already use and build automation layers that make them work together.
@@ -127,7 +127,7 @@ export default function About() {
                 {[
                   { value: "10+", label: "Years of software delivery experience" },
                   { value: "6", label: "GTA cities served" },
-                  { value: "Fixed", label: "Price engagements — always" },
+                  { value: "Fixed", label: "Price engagements - always" },
                   { value: "PIPEDA", label: "Compliant by design" },
                 ].map((stat) => (
                   <div
@@ -233,7 +233,7 @@ export default function About() {
                   Most AI automation companies sell you a platform and leave you to figure out how to use it. We do the opposite: we start with your workflows, design the system around them, and build it to work reliably from day one.
                 </p>
                 <p>
-                  We do not have a preferred tool stack. We use whatever combination of platforms — Make, Zapier, n8n, custom APIs, AI models — that best fits your existing infrastructure and operational requirements.
+                  We do not have a preferred tool stack. We use whatever combination of platforms - Make, Zapier, n8n, custom APIs, AI models - that best fits your existing infrastructure and operational requirements.
                 </p>
                 <p>
                   Every engagement ends with documentation, training, and a monitoring period. You understand exactly what is running, why it is running, and what to do if something needs to change.

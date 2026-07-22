@@ -1,6 +1,6 @@
 /**
  * MethodologyFlow.tsx
- * Barrana.ai — Animated horizontal methodology process flow
+ * Barrana.ai - Animated horizontal methodology process flow
  * Steps illuminate sequentially as user scrolls into view
  */
 

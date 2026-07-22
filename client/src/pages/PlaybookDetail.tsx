@@ -4,7 +4,7 @@ const PLAYBOOKS: Record<string, { title: string; tag: string; emoji: string; int
     title: "Lead Response Automation Playbook",
     tag: "Lead Management",
     emoji: "⚡",
-    intro: "Every minute you delay responding to an inbound lead, your conversion rate drops. This playbook builds a system that acknowledges, qualifies, and routes every enquiry in under 90 seconds — 24 hours a day, 7 days a week.",
+    intro: "Every minute you delay responding to an inbound lead, your conversion rate drops. This playbook builds a system that acknowledges, qualifies, and routes every enquiry in under 90 seconds - 24 hours a day, 7 days a week.",
     phases: [
       { phase: "Phase 1: Capture Every Lead Channel", steps: ["Audit every channel where leads come in (website form, email, Google Business, social DMs, phone)", "Set up a unified intake form or webhook that feeds all channels into one system", "Configure instant acknowledgement emails for each channel with channel-appropriate language", "Set up CRM lead record creation on every new submission"] },
       { phase: "Phase 2: Qualify Automatically", steps: ["Add 2–3 qualifying questions to your intake form (service needed, timeline, budget range)", "Build branching logic so high-priority leads (urgent, high-value) are flagged immediately", "Configure lead scoring rules in your CRM based on service type and response signals", "Set up automatic disqualification and nurture sequences for unqualified leads"] },
@@ -31,7 +31,7 @@ const PLAYBOOKS: Record<string, { title: string; tag: string; emoji: string; int
     title: "Client Onboarding Automation Playbook",
     tag: "Onboarding",
     emoji: "🤝",
-    intro: "The first 7 days after a client signs sets the tone for the entire engagement. This playbook standardises and automates the onboarding experience so every new client gets the same professional, thorough welcome — without your team doing it manually.",
+    intro: "The first 7 days after a client signs sets the tone for the entire engagement. This playbook standardises and automates the onboarding experience so every new client gets the same professional, thorough welcome - without your team doing it manually.",
     phases: [
       { phase: "Phase 1: Engagement Confirmation", steps: ["Automate engagement letter or service agreement delivery on contract signing", "Configure e-signature collection via DocuSign or PandaDoc", "Set up payment method or deposit collection automation", "Send welcome email sequence within 60 seconds of agreement signing"] },
       { phase: "Phase 2: Information Collection", steps: ["Deliver a tailored intake questionnaire based on the service purchased", "Configure CRM population from questionnaire responses (no manual entry)", "Set up document collection request with secure upload link", "Build completion tracking with 48-hour follow-up reminders"] },
@@ -46,7 +46,7 @@ const PLAYBOOKS: Record<string, { title: string; tag: string; emoji: string; int
     title: "Document Collection Automation Playbook",
     tag: "Documents",
     emoji: "📋",
-    intro: "Chasing documents is one of the biggest time drains in professional services. This playbook builds a system that delivers the right document request, tracks what has been received, and follows up automatically — so nothing falls through the cracks.",
+    intro: "Chasing documents is one of the biggest time drains in professional services. This playbook builds a system that delivers the right document request, tracks what has been received, and follows up automatically - so nothing falls through the cracks.",
     phases: [
       { phase: "Phase 1: Identify and Segment Document Needs", steps: ["List every service type and the specific documents required for each", "Build conditional document request templates (e.g. immigration visa type determines checklist)", "Create a master document tracker template in your CRM or project tool", "Map the minimum document set needed to begin work vs. full completion"] },
       { phase: "Phase 2: Initial Document Request", steps: ["Configure automatic document request delivery upon engagement confirmation", "Use a secure document upload portal (ShareFile, PandaDoc, or client portal)", "Send a prioritised checklist: what is needed to start vs. what can follow", "Include clear instructions and file format requirements in the request"] },

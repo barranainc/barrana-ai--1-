@@ -129,7 +129,7 @@ export default function StepPainPoints({
   const maxReached = selected.length >= 3;
   const canNext = selected.length === 3;
 
-  // Track selection order locally — parallel to state.painPoints
+  // Track selection order locally - parallel to state.painPoints
   const [selectionOrder, setSelectionOrder] = useState<PainPointId[]>([]);
 
   const toggle = (id: PainPointId) => {

@@ -268,7 +268,7 @@ function LandingContent({ onStart }: { onStart: () => void }) {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
             {[
-              "Tell us about your business — industry, team size, tools you use",
+              "Tell us about your business - industry, team size, tools you use",
               "Select which workflows exist in your operations",
               "Answer a few focused questions about your biggest bottlenecks",
               "Tell us what must stay human-led",

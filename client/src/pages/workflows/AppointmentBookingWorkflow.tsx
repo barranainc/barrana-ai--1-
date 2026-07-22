@@ -52,7 +52,7 @@ function CancellationBranch() {
   ];
   return (
     <div ref={ref} style={{ background: "#FFF5F9", border: "1px solid #F9D0E2", borderRadius: 12, padding: "1.5rem", marginBottom: "2rem" }}>
-      <h4 style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "1rem", fontSize: "0.95rem" }}>Cancellation Branch — Waitlist Auto-Fill</h4>
+      <h4 style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "1rem", fontSize: "0.95rem" }}>Cancellation Branch - Waitlist Auto-Fill</h4>
       <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
         {steps.map((step, i) => (
           <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
@@ -162,13 +162,13 @@ export default function AppointmentBookingWorkflow() {
         Phone-dependent scheduling creates a hidden cost that most practices never add up. Staff spend 30–40% of their time on scheduling tasks: incoming calls to book, incoming calls to reschedule, outgoing calls to confirm, and manual calendar management. That's not the highest-value work for trained professionals.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        No-shows happen because reminders are inconsistent or forgotten — sent sometimes but not always, via one channel only, or not personalized enough to feel urgent. And when a client cancels, the slot sits empty because there's no waitlist system. Revenue is lost not because demand isn't there, but because the process can't fill the gap fast enough.
+        No-shows happen because reminders are inconsistent or forgotten - sent sometimes but not always, via one channel only, or not personalized enough to feel urgent. And when a client cancels, the slot sits empty because there's no waitlist system. Revenue is lost not because demand isn't there, but because the process can't fill the gap fast enough.
       </p>
 
       {/* Section 2 */}
       <SectionHeading>What Automated Booking Looks Like</SectionHeading>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        A client visits your website or receives a booking link by email or SMS. They see your real-time availability — only times you've made open, respecting your rules and buffer times. They pick a time, fill in any required information, and confirm. Within seconds, they receive a confirmation email. No phone call. No back-and-forth. No staff involvement. The entire booking takes under 3 minutes.
+        A client visits your website or receives a booking link by email or SMS. They see your real-time availability - only times you've made open, respecting your rules and buffer times. They pick a time, fill in any required information, and confirm. Within seconds, they receive a confirmation email. No phone call. No back-and-forth. No staff involvement. The entire booking takes under 3 minutes.
       </p>
 
       {/* Workflow Diagram */}
@@ -191,7 +191,7 @@ export default function AppointmentBookingWorkflow() {
         Single reminders work. Dual reminders work significantly better. The research is consistent: combining a 48-hour email with a 2-hour SMS cuts no-shows by 25–40% compared to no reminders at all, and by 15–20% compared to a single reminder.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        The timing is deliberate. The 48-hour reminder gives clients enough runway to reschedule if something has come up — which is good: you'd rather have the slot filled by someone else than have a ghost. The 2-hour reminder is close enough to the appointment that it creates commitment. SMS open rate at 2 hours out: 98% within 3 minutes of delivery. Email open rates at that window: 35-45%. Using both covers every client preference.
+        The timing is deliberate. The 48-hour reminder gives clients enough runway to reschedule if something has come up - which is good: you'd rather have the slot filled by someone else than have a ghost. The 2-hour reminder is close enough to the appointment that it creates commitment. SMS open rate at 2 hours out: 98% within 3 minutes of delivery. Email open rates at that window: 35-45%. Using both covers every client preference.
       </p>
 
       {/* No-Show Impact */}
@@ -200,7 +200,7 @@ export default function AppointmentBookingWorkflow() {
       {/* Section 4 */}
       <SectionHeading>Waitlist Auto-Fill</SectionHeading>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-        When a client cancels — whether from the reminder link or by calling — the system immediately checks the waitlist. The first waitlisted client receives an offer: "A spot has opened on [date] at [time]. Click here to claim it within 2 hours." If they don't claim it, the offer goes to the next person on the list.
+        When a client cancels - whether from the reminder link or by calling - the system immediately checks the waitlist. The first waitlisted client receives an offer: "A spot has opened on [date] at [time]. Click here to claim it within 2 hours." If they don't claim it, the offer goes to the next person on the list.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         This fills 60–70% of cancelled slots automatically. The remaining 30–40% are genuinely short-notice cancellations where no waitlisted client is available at that time. Even recovering 60% of cancelled slots at $150–$300 per session compounds meaningfully over a year.
@@ -269,10 +269,10 @@ export default function AppointmentBookingWorkflow() {
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
         <FAQItem q="Can clients reschedule or cancel through the reminder?" a="Yes. Every reminder includes a one-click reschedule link and a cancellation link that triggers the waitlist automatically. No phone call needed, which means the client is more likely to act on it." />
-        <FAQItem q="What if we have complex availability rules?" a="Calendar integrations respect your availability settings. We can add custom logic for different service types, team members, locations, or time blocks — including buffer times between appointments and blocked-out periods." />
+        <FAQItem q="What if we have complex availability rules?" a="Calendar integrations respect your availability settings. We can add custom logic for different service types, team members, locations, or time blocks - including buffer times between appointments and blocked-out periods." />
         <FAQItem q="Does this work with our existing booking tool?" a="We integrate with most popular booking tools: Jane App, Calendly, Acuity, Jobber, SimplyBook.me, and more. If you use a custom or proprietary system, we can integrate via API in most cases." />
-        <FAQItem q="How do we build a waitlist if we don't have one?" a="We set up a simple waitlist form or CRM field — clients opt in at booking with a single checkbox. The system manages the rest: order, notifications, and slot assignment." />
-        <FAQItem q="What if a client doesn't respond to the 2-hour reminder?" a="The appointment proceeds as scheduled. If the client doesn't show, the no-show follow-up sequence fires automatically — typically an email offering a rebooking link and noting any cancellation policy." />
+        <FAQItem q="How do we build a waitlist if we don't have one?" a="We set up a simple waitlist form or CRM field - clients opt in at booking with a single checkbox. The system manages the rest: order, notifications, and slot assignment." />
+        <FAQItem q="What if a client doesn't respond to the 2-hour reminder?" a="The appointment proceeds as scheduled. If the client doesn't show, the no-show follow-up sequence fires automatically - typically an email offering a rebooking link and noting any cancellation policy." />
       </div>
 
       {/* CTA */}

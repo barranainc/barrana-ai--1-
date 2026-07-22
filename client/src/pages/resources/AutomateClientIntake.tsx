@@ -44,13 +44,13 @@ function RevealSection({ children }: { children: React.ReactNode }) {
 }
 
 const STEPS = [
-  { num: 1, title: "Trigger: Lead Fills Out Web Form", desc: "A potential client submits your intake form — name, contact info, service needed, urgency. This event fires automatically." },
+  { num: 1, title: "Trigger: Lead Fills Out Web Form", desc: "A potential client submits your intake form - name, contact info, service needed, urgency. This event fires automatically." },
   { num: 2, title: "Instant Acknowledgement Email Sent", desc: "Within 90 seconds, the lead receives a personalised confirmation email with next steps and your calendar link." },
   { num: 3, title: "CRM Record Created Automatically", desc: "Contact details, service type, and source are pushed into your CRM. No manual data entry, no copy-paste errors." },
   { num: 4, title: "Intake Questionnaire Delivered", desc: "A tailored questionnaire is sent based on the service selected. Responses populate the same CRM record." },
   { num: 5, title: "Document Request (If Applicable)", desc: "For services requiring supporting docs, a secure upload link is sent. Files are attached to the client record." },
   { num: 6, title: "Appointment Booked via Calendar Link", desc: "Client books a consultation directly into your availability. Reminder emails are sent 24h and 1h before." },
-  { num: 7, title: "Your Team Notified — Ready to Serve", desc: "By the time you open the file, the client's intake is complete. You focus on the consultation, not admin." },
+  { num: 7, title: "Your Team Notified - Ready to Serve", desc: "By the time you open the file, the client's intake is complete. You focus on the consultation, not admin." },
 ];
 
 const BEFORE_AFTER = [
@@ -112,7 +112,7 @@ export default function AutomateClientIntake() {
             How to Automate Client Intake Without Switching Software
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Your intake process sets the tone for every client relationship — yet most service businesses are still handling it manually. This guide walks through a complete automated intake system: from first form submission to a fully briefed team member, with zero data entry.
+            Your intake process sets the tone for every client relationship - yet most service businesses are still handling it manually. This guide walks through a complete automated intake system: from first form submission to a fully briefed team member, with zero data entry.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-primary">Get This Built for Your Business</Link>
@@ -128,7 +128,7 @@ export default function AutomateClientIntake() {
           <SummaryBox>
             <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem" }}>The core insight:</p>
             <p style={{ color: "#1A1A2E", lineHeight: 1.7 }}>
-              Client intake is the highest-leverage automation in most service businesses. It touches every new client, happens repeatedly, and is highly predictable — making it ideal for automation. The businesses that automate intake first typically recover 8–12 hours per week within 30 days.
+              Client intake is the highest-leverage automation in most service businesses. It touches every new client, happens repeatedly, and is highly predictable - making it ideal for automation. The businesses that automate intake first typically recover 8–12 hours per week within 30 days.
             </p>
           </SummaryBox>
         </RevealSection>
@@ -194,7 +194,7 @@ export default function AutomateClientIntake() {
         <RevealSection>
           <SectionHeading>What Tools Are Involved?</SectionHeading>
           <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-            The beauty of client intake automation is that it works with the tools you already have. You do not need to replace your CRM or email platform — you simply connect them.
+            The beauty of client intake automation is that it works with the tools you already have. You do not need to replace your CRM or email platform - you simply connect them.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
             {[

@@ -89,7 +89,7 @@ function FullStackLayerDiagram() {
     {
       num: 4,
       emoji: "⚙️",
-      label: "Workflow Automation — Core",
+      label: "Workflow Automation - Core",
       desc: "Lead response, intake, booking, documents, invoicing, reporting",
       width: "100%",
       bg: NAVY,
@@ -288,15 +288,15 @@ export default function FullStackServices() {
   const faqs = [
     {
       q: "Can I start with just automation and add the rest later?",
-      a: "Yes — and that is the recommended approach. Most engagements start with Phase 1 (core workflow automation), then expand to other layers like a website rebuild or social media system once the operational foundation is in place. You only pay for what you need, when you need it.",
+      a: "Yes - and that is the recommended approach. Most engagements start with Phase 1 (core workflow automation), then expand to other layers like a website rebuild or social media system once the operational foundation is in place. You only pay for what you need, when you need it.",
     },
     {
       q: "How is this different from hiring separate agencies?",
-      a: "When you hire separate vendors for automation, web, and social media, none of them see the full picture. The automation agency does not know your website is losing leads. The web agency does not know your CRM is the bottleneck. One partner who understands the entire stack builds everything to work together — and fixes problems at the root instead of patching symptoms.",
+      a: "When you hire separate vendors for automation, web, and social media, none of them see the full picture. The automation agency does not know your website is losing leads. The web agency does not know your CRM is the bottleneck. One partner who understands the entire stack builds everything to work together - and fixes problems at the root instead of patching symptoms.",
     },
     {
       q: "Do you manage our social media ongoing?",
-      a: "We build social media systems and content frameworks rather than doing day-to-day posting on your behalf. That means you get a repeatable process, content calendar, and distribution workflow that your team can run — or we can help operate it as part of an ongoing engagement. Either way, it is built to scale.",
+      a: "We build social media systems and content frameworks rather than doing day-to-day posting on your behalf. That means you get a repeatable process, content calendar, and distribution workflow that your team can run - or we can help operate it as part of an ongoing engagement. Either way, it is built to scale.",
     },
   ];
 
@@ -451,7 +451,7 @@ export default function FullStackServices() {
               Your automation agency does not know your website is losing leads before they reach the CRM. Your web agency does not know the booking confirmation email is where clients are dropping off. Your social media manager does not know which content type brings your highest-converting leads.
             </p>
             <p style={{ color: GREY, lineHeight: 1.75, maxWidth: "72ch" }}>
-              One partner who understands your entire operation builds everything to work together — and when something breaks, there is one number to call and one person responsible for fixing it.
+              One partner who understands your entire operation builds everything to work together - and when something breaks, there is one number to call and one person responsible for fixing it.
             </p>
           </Reveal>
         </div>
@@ -504,10 +504,10 @@ export default function FullStackServices() {
                 Custom Software and AI
               </h2>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                We build bespoke applications, AI agents, and intelligent systems that sit on top of your automation layer. From patient portals to client dashboards to internal tools — designed for your specific workflow, not a generic template.
+                We build bespoke applications, AI agents, and intelligent systems that sit on top of your automation layer. From patient portals to client dashboards to internal tools - designed for your specific workflow, not a generic template.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                Off-the-shelf software solves generic problems. When your operation has specific requirements — a referral tracking system, a custom intake experience, an internal reporting dashboard your team will actually use — bespoke development is the answer.
+                Off-the-shelf software solves generic problems. When your operation has specific requirements - a referral tracking system, a custom intake experience, an internal reporting dashboard your team will actually use - bespoke development is the answer.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1.5rem" }}>
                 Because we also build the automation layer, every custom application we create is connected to your live operational data from day one. No integration work. No manual data entry. The software and the automation work together as a single system.
@@ -576,7 +576,7 @@ export default function FullStackServices() {
                 Social Media and Client Acquisition
               </h2>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                We build social media systems, content frameworks, and acquisition funnels that bring prospects to your door — then automation takes over. The full pipeline, not just the middle.
+                We build social media systems, content frameworks, and acquisition funnels that bring prospects to your door - then automation takes over. The full pipeline, not just the middle.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
                 Most businesses invest in acquisition (ads, social, content) without fixing the follow-up. Leads come in, sit in an inbox, and go cold. We build acquisition systems that are explicitly designed to hand off to your automated follow-up, booking, and intake flows.
@@ -612,13 +612,13 @@ export default function FullStackServices() {
                 Operational Consulting: Strategy Before Systems
               </h2>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                Sometimes the fix is not technology — it is process. Automating a broken workflow makes it break faster. Before building any system, we map your current operations, identify the bottlenecks, and redesign the workflow logic.
+                Sometimes the fix is not technology - it is process. Automating a broken workflow makes it break faster. Before building any system, we map your current operations, identify the bottlenecks, and redesign the workflow logic.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
                 We help businesses decide what gets automated, what gets delegated, and what gets eliminated entirely. Many operational problems look like technology problems but are actually sequencing or ownership problems that no software can fix.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1.5rem" }}>
-                This consulting layer is embedded in every engagement. Whether you are starting with automation, a website rebuild, or a full-stack engagement, we begin with process analysis — because the right system built on the wrong process is still the wrong system.
+                This consulting layer is embedded in every engagement. Whether you are starting with automation, a website rebuild, or a full-stack engagement, we begin with process analysis - because the right system built on the wrong process is still the wrong system.
               </p>
               <ul style={{ paddingLeft: "1.25rem", color: GREY, lineHeight: 2 }}>
                 <li>Business process mapping and analysis</li>
@@ -682,7 +682,7 @@ export default function FullStackServices() {
                 Every engagement starts with a strategy call and operational audit. We map your current state, identify the highest-impact starting point, and deliver a fixed-price proposal broken into phases.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                Phase 1 is almost always workflow automation — because it delivers the fastest ROI and creates the operational foundation that everything else is built on. Phase 2 and beyond expand into other layers based on your priorities and growth objectives.
+                Phase 1 is almost always workflow automation - because it delivers the fastest ROI and creates the operational foundation that everything else is built on. Phase 2 and beyond expand into other layers based on your priorities and growth objectives.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75 }}>
                 Fixed-price proposals. No hourly billing. No scope surprises. You know the cost and the deliverables before work begins. You can start with one layer and expand when you are ready.

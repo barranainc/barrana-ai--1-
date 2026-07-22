@@ -18,10 +18,10 @@ const data: CaseStudyData = {
   businessDescription:
     "A residential and light commercial HVAC company in Brampton. Owner, 4 field technicians, 1 dispatcher. Services: furnace/AC installation, maintenance agreements, repairs, emergency service. 450 maintenance clients. 65 active maintenance agreements. Serving Brampton, Caledon, and northwest GTA.",
   problemBody: [
-    "Seasonal maintenance scheduling took 6 weeks of manual calling — 20-25 clients per day. By the time the list was half-done, the fall season was well underway.",
+    "Seasonal maintenance scheduling took 6 weeks of manual calling - 20-25 clients per day. By the time the list was half-done, the fall season was well underway.",
     "Emergency calls after 5pm went to voicemail. The owner checked messages at 10pm and called back. By then, the customer had often called a competitor.",
     "65 maintenance agreements with annual renewal dates. Renewal outreach happened 2-3 weeks before expiry (or after). 22% of agreements lapsed annually.",
-    "Technician scheduling was manual — the dispatcher juggled emergency calls, maintenance, and installations across 4 technicians with ad hoc geographic routing.",
+    "Technician scheduling was manual - the dispatcher juggled emergency calls, maintenance, and installations across 4 technicians with ad hoc geographic routing.",
   ],
   beforeMetrics: [
     { label: "Seasonal campaign duration", value: "6 weeks" },
@@ -31,7 +31,7 @@ const data: CaseStudyData = {
     { label: "Invoice timing", value: "Next day" },
   ],
   solutionIntro:
-    "We deployed seasonal campaign automation, emergency dispatch, agreement renewal sequences, and job completion invoicing — integrated with ServiceTitan. The dispatcher's role shifted from phone caller to schedule optimizer.",
+    "We deployed seasonal campaign automation, emergency dispatch, agreement renewal sequences, and job completion invoicing - integrated with ServiceTitan. The dispatcher's role shifted from phone caller to schedule optimizer.",
   workflowSteps: [
     {
       id: "step-1",

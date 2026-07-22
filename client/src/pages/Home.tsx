@@ -1,8 +1,8 @@
 /*
- * Home.tsx — Barrana.ai Homepage (V6 — Unified Rewrite)
+ * Home.tsx - Barrana.ai Homepage (V6 - Unified Rewrite)
  * Brand Colors (OFFICIAL):
- *   Navy:    #283891  (primary — nav, headings, CTAs, dark sections)
- *   Magenta: #7E0F4A  (accent — dollar amounts, highlights, badges)
+ *   Navy:    #283891  (primary - nav, headings, CTAs, dark sections)
+ *   Magenta: #7E0F4A  (accent - dollar amounts, highlights, badges)
  *   Grey:    #7B7B7B  (body text, secondary labels)
  *   Dark:    #1A1A2E  (headings on light backgrounds)
  *   Offwhite: #F5F6FA (section backgrounds)
@@ -403,7 +403,7 @@ const objectionItems: FAQItem[] = [
   {
     question: "Will this replace my staff?",
     answer:
-      "No. Automation handles coordination tasks: scheduling, reminders, data entry, follow-up. Your staff handles expert work \u2014 advice, sales, client relationships. Automation makes your team more productive, not smaller.",
+      "No. Automation handles coordination tasks: scheduling, reminders, data entry, follow-up. Your staff handles expert work - advice, sales, client relationships. Automation makes your team more productive, not smaller.",
   },
   {
     question: "How long does setup take?",
@@ -463,20 +463,6 @@ const localBusinessSchema = {
     "https://tiktok.com/@barrana.ai",
     "https://facebook.com/barranaai",
   ],
-};
-
-// ─── FAQ Schema ───────────────────────────────────────────────────────
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: mergedFAQItems.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
 };
 
 // ─── Component ────────────────────────────────────────────────────────
@@ -572,7 +558,7 @@ const HERO_STATES: HeroState[] = [
 ];
 
 export default function Home() {
-  // Hero is always above the fold — use mount-trigger instead of IntersectionObserver
+  // Hero is always above the fold - use mount-trigger instead of IntersectionObserver
   const heroRef                    = useRef<HTMLDivElement>(null);
   const [heroVisible, setHeroVisible] = useState(false);
   useEffect(() => { const t = setTimeout(() => setHeroVisible(true), 60); return () => clearTimeout(t); }, []);
@@ -615,16 +601,15 @@ export default function Home() {
   const [hoveredProblem, setHoveredProblem] = useState<number | null>(null);
 
   return (
-    <>
-      <SEOHead title="Barrana.ai — AI Automation for Small Business | Toronto & GTA" description="AI automation systems that close response gaps, eliminate manual coordination, and give small businesses in Toronto and the GTA the operational backbone to grow without adding headcount." />
+    <div className="barrana-home">
+      <SEOHead title="Barrana.ai - AI Automation for Small Business | Toronto & GTA" description="AI automation systems that close response gaps, eliminate manual coordination, and give small businesses in Toronto and the GTA the operational backbone to grow without adding headcount." />
       {/* ─── JSON-LD schemas ─── */}
       <JsonLd data={localBusinessSchema} />
-      <JsonLd data={faqSchema} />
 
       {/* ═══════════════════════════════════════════════════════════════════
-          SECTION 1: HERO — 4-Tab Interactive Hero
+          SECTION 1: HERO - 4-Tab Interactive Hero
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#F5F5F5", paddingTop: "1.25rem", paddingBottom: "2.5rem", minHeight: "90vh" }}>
+      <section className="home-hero" style={{ background: "#F5F5F5", paddingTop: "1.25rem", paddingBottom: "2.5rem", minHeight: "90vh" }}>
         <style>{`
           .hero-grid { grid-template-columns: 1fr; }
           @media (min-width: 1024px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 3rem; } }
@@ -633,7 +618,7 @@ export default function Home() {
         `}</style>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
 
-          {/* Badge — stays fixed */}
+          {/* Badge - stays fixed */}
           <div
             style={{
               display: "inline-block",
@@ -707,7 +692,7 @@ export default function Home() {
             })}
             </div>
 
-            {/* New to AI — separate link to /start-here */}
+            {/* New to AI - separate link to /start-here */}
             <Link
               href="/start-here"
               style={{
@@ -781,7 +766,7 @@ export default function Home() {
                   {HERO_STATES[displayTab].sub}
                 </p>
 
-                {/* Microcopy — the knowing wink (only on Tab 0) */}
+                {/* Microcopy - the knowing wink (only on Tab 0) */}
                 {HERO_STATES[displayTab].microcopy && (
                   <div
                     style={{
@@ -937,7 +922,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 2: TRUST STRIP (#1a2473)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "#EDEDEF", borderBottom: "1px solid #E2E4ED" }}>
+      <section className="home-trust" style={{ background: "#EDEDEF", borderBottom: "1px solid #E2E4ED" }}>
         <div className="container">
           <div
             style={{
@@ -957,7 +942,7 @@ export default function Home() {
             `}</style>
             {[
               { icon: Award, label: "10+ Years Building Business Systems" },
-              { icon: Tag, label: "Fixed Pricing \u2014 Never Hourly" },
+              { icon: Tag, label: "Fixed Pricing - Never Hourly" },
               { icon: Plug, label: "Works With Your Existing Tools" },
               { icon: MapPin, label: "Toronto \u00B7 Vaughan \u00B7 Markham \u00B7 Mississauga \u00B7 GTA" },
             ].map((item, i) => (
@@ -978,7 +963,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 3: THREE THINGS TO KNOW (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
+      <section className="section home-three" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Before You Scroll</div>
@@ -996,7 +981,7 @@ export default function Home() {
       </section>
 
       {/* ─── START HERE BANNER ─── */}
-      <div style={{ background: "rgba(40,56,145,0.06)", padding: "1rem 1.5rem", textAlign: "center" }}>
+      <div className="home-start-banner" style={{ background: "rgba(40,56,145,0.06)", padding: "1rem 1.5rem", textAlign: "center" }}>
         <p style={{ fontSize: "0.9375rem", color: GREY, margin: 0 }}>
           New to AI automation? Not sure if this applies to your business?{" "}
           <Link href="/start-here" style={{ color: NAVY, fontWeight: 600, marginLeft: "0.5rem", textDecoration: "none" }}>
@@ -1008,7 +993,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 4: THE MONEY LEAK (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
+      <section className="section home-money" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Real Cost</div>
@@ -1124,7 +1109,7 @@ export default function Home() {
           SECTION 5: BUYER PATH SELECTOR (blue gradient)
           ═══════════════════════════════════════════════════════════════════ */}
       <section
-        className="section"
+        className="section home-buyer"
         style={{
           background: OFFWHITE,
           padding: "6rem 0",
@@ -1269,7 +1254,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 6: SIX PROBLEMS (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
+      <section className="section home-problems" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Common Operational Problems</div>
@@ -1350,7 +1335,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 7: THE FIX (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
+      <section className="section home-fix" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Fix</div>
@@ -1456,7 +1441,7 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <Link href="/automation-planner" className="btn-primary">
-                Start the Automation Planner \u2014 See which fix delivers the most for your business
+                Start the Automation Planner - See which fix delivers the most for your business
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -1467,12 +1452,14 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 8: MAP WHAT YOU CAN AUTOMATE (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <HomepagePlannerCTA />
+      <div className="home-planner">
+        <HomepagePlannerCTA />
+      </div>
 
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 9: AUTOMATION METHOD (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
+      <section className="section home-method" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Process</div>
@@ -1503,7 +1490,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 10: HOW AUTOMATION FITS YOUR WORKFLOW (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
+      <section className="section home-workflow" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <style>{`
           @keyframes tabContentIn {
             from { opacity: 0; transform: translateY(12px); }
@@ -1539,7 +1526,7 @@ export default function Home() {
               How Automation Fits Your Workflow
             </h2>
             <p style={{ color: GREY, lineHeight: 1.75, margin: 0, fontSize: "1.0625rem" }}>
-              Choose your industry to see exactly what gets handled automatically \u2014 and what your team no longer needs to do manually.
+              Choose your industry to see exactly what gets handled automatically - and what your team no longer needs to do manually.
             </p>
           </div>
 
@@ -1875,7 +1862,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 11: AUTOMATION IS THE CORE (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", padding: "6rem 0" }}>
+      <section className="section home-core" style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="section-divider mb-4" style={{ borderColor: "rgba(255,255,255,0.2)" }}>
@@ -1906,7 +1893,7 @@ export default function Home() {
                   { Icon: Monitor, title: "Custom Software & AI", desc: "Bespoke applications, AI agents, client portals, and internal tools built on your automation layer." },
                   { Icon: Globe, title: "Websites That Convert", desc: "Website design and rebuilds optimised to feed your automated systems with qualified enquiries." },
                   { Icon: Megaphone, title: "Social Media & Acquisition", desc: "Social media systems, content frameworks, and acquisition funnels that fill your pipeline." },
-                  { Icon: Map, title: "Operational Consulting", desc: "Process mapping and workflow redesign \u2014 strategy before systems, every time." },
+                  { Icon: Map, title: "Operational Consulting", desc: "Process mapping and workflow redesign - strategy before systems, every time." },
                 ].map((card) => (
                   <div key={card.title} style={{
                     background: "rgba(255,255,255,0.05)",
@@ -1936,7 +1923,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 12: CASE STUDIES (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
+      <section className="section home-cases" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Real Results</div>
@@ -2030,7 +2017,7 @@ export default function Home() {
                 <ArrowRight size={16} />
               </Link>
               <Link href="/contact" className="btn-primary">
-                Book a Free Audit \u2014 See what these numbers look like for your business
+                Book a Free Audit - See what these numbers look like for your business
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -2041,7 +2028,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 13: INDUSTRY GRID (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
+      <section className="section home-industries" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <h2 style={{ color: DARK, marginBottom: "3rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
@@ -2102,7 +2089,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 14: TIMELINE (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: "white", padding: "6rem 0" }}>
+      <section className="section home-timeline" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>The Process</div>
@@ -2127,7 +2114,7 @@ export default function Home() {
                 badge: "Week 1",
                 title: "Free Audit",
                 body: "We map your workflows and calculate exactly what your operations are costing you. You leave with a number.",
-                dollar: "Identify $X in annual operational waste \u2014 at no cost",
+                dollar: "Identify $X in annual operational waste - at no cost",
                 tag: "Free \u00B7 60 min \u00B7 No obligation",
               },
               {
@@ -2220,9 +2207,9 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════════
-          SECTION 15: OBJECTION FAQ — MERGED (bg: OFFWHITE)
+          SECTION 15: OBJECTION FAQ - MERGED (bg: OFFWHITE)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section className="section" style={{ background: OFFWHITE, padding: "6rem 0" }}>
+      <section className="section home-faq" style={{ background: OFFWHITE, padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
             <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Before You Decide</div>
@@ -2252,7 +2239,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 17: AEO BLOCK (bg: white)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "white" }} className="section-sm">
+      <section style={{ background: "white" }} className="section-sm home-aeo">
         <div className="container">
           <Reveal>
             <div className="aeo-block" style={{ maxWidth: "72ch" }}>
@@ -2272,7 +2259,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════════════════════════
           SECTION 18: FINAL CTA (NAVY gradient)
           ═══════════════════════════════════════════════════════════════════ */}
-      <section style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", paddingTop: "5rem", paddingBottom: "5rem" }}>
+      <section className="home-final" style={{ background: "linear-gradient(to bottom, #1a2d6e, #162358)", paddingTop: "5rem", paddingBottom: "5rem" }}>
         <div className="container">
           <div
             ref={ctaReveal.ref}
@@ -2343,6 +2330,6 @@ export default function Home() {
 
       {/* ─── Social proof toast (fixed position) ─── */}
       <SocialProofToast />
-    </>
+    </div>
   );
 }

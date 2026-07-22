@@ -58,7 +58,7 @@ function ManualVsAutomatedFlow() {
       }}
     >
       <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
-        {/* Left — Manual */}
+        {/* Left - Manual */}
         <div style={{ flex: "1 1 260px" }}>
           <div style={{
             fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase",
@@ -129,7 +129,7 @@ function ManualVsAutomatedFlow() {
           <span style={{ background: "#fff", padding: "4px", fontSize: "1.25rem" }}>⚡</span>
         </div>
 
-        {/* Right — Automated */}
+        {/* Right - Automated */}
         <div style={{ flex: "1 1 260px" }}>
           <div style={{
             fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase",
@@ -412,7 +412,7 @@ export default function WhatIsAIAutomation() {
           <SummaryBox>
             <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
             <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-              AI automation for small business means connecting your existing software tools — CRM, email, calendar, forms — with intelligent logic that handles repetitive tasks automatically.
+              AI automation for small business means connecting your existing software tools - CRM, email, calendar, forms - with intelligent logic that handles repetitive tasks automatically.
               It eliminates the manual middle layer between client actions and business outcomes. You don't need to change your software stack, hire a developer, or understand code.
               Most businesses see full ROI within 4–6 weeks of their first workflow going live.
             </p>
@@ -421,17 +421,17 @@ export default function WhatIsAIAutomation() {
           <SectionHeading>What AI Automation Actually Means</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             When most people hear "AI automation," they imagine robots replacing staff or enterprise-scale software transformations.
-            For small businesses — service firms, professional practices, independent operators — it means something far more practical:
+            For small businesses - service firms, professional practices, independent operators - it means something far more practical:
             getting your software to do the repetitive tasks your team currently does by hand.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             Think about what happens after a client fills out your contact form. Someone on your team reads the email, creates a CRM entry, sends a confirmation, and schedules a meeting.
-            That sequence might take a skilled staff member 30–45 minutes across the day — interrupted, delayed, and error-prone.
+            That sequence might take a skilled staff member 30–45 minutes across the day - interrupted, delayed, and error-prone.
             With automation, the exact same sequence runs in 90 seconds, every time, without human involvement.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
             The "AI" component means the system can handle variability: reading unstructured form responses, classifying inquiry types, routing leads to the right team member,
-            and drafting personalized replies — not just filling in template fields.
+            and drafting personalized replies - not just filling in template fields.
           </p>
 
           <ManualVsAutomatedFlow />
@@ -439,7 +439,7 @@ export default function WhatIsAIAutomation() {
           <SectionHeading>What It Is Not</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             AI automation is not a replacement for professional judgment. It does not make decisions about client advice, complex filings, or nuanced service delivery.
-            It handles the administrative layer around those decisions — freeing your professionals to focus on work that requires expertise.
+            It handles the administrative layer around those decisions - freeing your professionals to focus on work that requires expertise.
           </p>
           <ul style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2 }}>
             <li>It is <strong>not</strong> a new software platform you need to learn</li>
@@ -451,12 +451,12 @@ export default function WhatIsAIAutomation() {
 
           <SectionHeading>What It Costs</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-            For a professional services firm in Canada, a complete AI automation implementation — including scoping, build, testing, and training — typically ranges
+            For a professional services firm in Canada, a complete AI automation implementation - including scoping, build, testing, and training - typically ranges
             from <strong>$3,000 to $15,000 CAD</strong> depending on the number of workflows and integrations involved.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
             The ongoing monthly cost for automation platform licenses (Make, Zapier, or similar) is typically $50–$200/month for a small firm.
-            Compare that against the cost of a staff member spending 10 hours per week on tasks that automation would eliminate — the math resolves quickly.
+            Compare that against the cost of a staff member spending 10 hours per week on tasks that automation would eliminate - the math resolves quickly.
           </p>
 
           <ROITimeline />
@@ -467,11 +467,11 @@ export default function WhatIsAIAutomation() {
             Each takes 2–4 weeks to implement and pays for itself within the first month.
           </p>
           <ol style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2 }}>
-            <li><strong>Client Intake Automation</strong> — Capture, qualify, and respond to new leads automatically</li>
-            <li><strong>Email Follow-up Sequences</strong> — Nurture prospects without manual outreach</li>
-            <li><strong>Appointment Booking</strong> — Eliminate the back-and-forth scheduling loop</li>
-            <li><strong>Invoice and Payment Reminders</strong> — Reduce accounts receivable with automated billing</li>
-            <li><strong>Reporting and Dashboards</strong> — Aggregate data across tools without manual exports</li>
+            <li><strong>Client Intake Automation</strong> - Capture, qualify, and respond to new leads automatically</li>
+            <li><strong>Email Follow-up Sequences</strong> - Nurture prospects without manual outreach</li>
+            <li><strong>Appointment Booking</strong> - Eliminate the back-and-forth scheduling loop</li>
+            <li><strong>Invoice and Payment Reminders</strong> - Reduce accounts receivable with automated billing</li>
+            <li><strong>Reporting and Dashboards</strong> - Aggregate data across tools without manual exports</li>
           </ol>
 
           <StartingPointCards />
@@ -488,7 +488,7 @@ export default function WhatIsAIAutomation() {
               Ready to Implement This?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              Book a free 60-minute Automation Audit. We'll map your highest-friction workflows and show you exactly what's automatable — no obligation.
+              Book a free 60-minute Automation Audit. We'll map your highest-friction workflows and show you exactly what's automatable - no obligation.
             </p>
             <Link href="/contact" className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
               Book Your Free Automation Audit →

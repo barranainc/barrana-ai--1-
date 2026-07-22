@@ -1,7 +1,7 @@
 /**
  * BARRANA.AI CAMPAIGN COMPONENTS
  * Shared components for standalone campaign landing pages.
- * Design: Personal letter aesthetic — no nav, no distractions, one goal.
+ * Design: Personal letter aesthetic - no nav, no distractions, one goal.
  * Colors: Navy #283891 | Magenta #7E0F4A | Grey #7B7B7B | Success Green #0D9668 | Danger Red #DC2626
  * These pages are noindex and have NO main site navigation.
  */
@@ -245,7 +245,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
         }),
       });
     } catch (_) {
-      // silent — show success regardless
+      // silent - show success regardless
     }
     setLoading(false);
     setSubmitted(true);
@@ -274,7 +274,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
             Claim Your Free Audit
           </h2>
           <p className="text-sm mb-8" style={{ color: GREY }}>
-            Tell us a bit about your {industry.toLowerCase()} business. We will map out exactly which workflows to automate first and what it is worth to you — at no cost, no pitch.
+            Tell us a bit about your {industry.toLowerCase()} business. We will map out exactly which workflows to automate first and what it is worth to you - at no cost, no pitch.
           </p>
 
           {submitted ? (
@@ -287,7 +287,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
               <div className="text-4xl mb-4">✅</div>
               <h3 className="text-xl font-bold mb-2" style={{ color: NAVY }}>You are booked in.</h3>
               <p className="text-sm" style={{ color: GREY }}>
-                We will reach out within 1 business day to confirm your 60-minute audit time. Check your inbox — including spam.
+                We will reach out within 1 business day to confirm your 60-minute audit time. Check your inbox - including spam.
               </p>
               <p className="text-xs mt-4 font-medium" style={{ color: MAGENTA }}>
                 No pitch. No obligation. You keep the analysis.

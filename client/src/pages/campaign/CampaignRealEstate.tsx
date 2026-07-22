@@ -28,7 +28,7 @@ export default function CampaignRealEstate() {
   return (
     <>
       <Helmet>
-        <title>Barrana.ai — Your CRM Is Full of $60,000+ You Are Not Collecting | Vaughan Agents</title>
+        <title>Barrana.ai - Your CRM Is Full of $60,000+ You Are Not Collecting | Vaughan Agents</title>
         <meta
           name="description"
           content="Vaughan real estate agents have 200+ leads sitting cold in their CRM. No follow-up after week 1. Automated drip sequences reactivate dormant leads and capture listings competitors get."
@@ -36,10 +36,10 @@ export default function CampaignRealEstate() {
         <meta name="robots" content="noindex" />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col bg-white">
+      <div className="campaign-page min-h-screen flex flex-col bg-white">
         <CampaignHeader />
 
-        {/* Hero — Navy background */}
+        {/* Hero - Navy background */}
         <FadeSection style={{ backgroundColor: NAVY }}>
           <div className="py-16 md:py-20">
             <div className="max-w-3xl mx-auto px-4 md:px-6">
@@ -68,7 +68,7 @@ export default function CampaignRealEstate() {
           </div>
         </FadeSection>
 
-        {/* Animated: Response Race — Portal enquiries */}
+        {/* Animated: Response Race - Portal enquiries */}
         <FadeSection style={{ backgroundColor: "#EEF0F8" }} className="py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 md:px-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-3" style={{ color: NAVY }}>
@@ -83,7 +83,7 @@ export default function CampaignRealEstate() {
               withLabel="Barrana Automation"
               withTime="90 Seconds"
               outcomeWithout="Buyer already booked a showing with another agent"
-              outcomeWith="Showing booked — buyer is now your client"
+              outcomeWith="Showing booked - buyer is now your client"
             />
           </div>
         </FadeSection>
@@ -94,19 +94,19 @@ export default function CampaignRealEstate() {
             <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: NAVY }}>
               The Numbers for a Real Estate Team in Vaughan & the GTA
             </h2>
-            <p className="text-sm mb-8" style={{ color: GREY }}>Every cold lead in your CRM is a commission sitting uncollected — whether it is a Woodbridge townhouse, a Maple detached, or a Concord condo.</p>
+            <p className="text-sm mb-8" style={{ color: GREY }}>Every cold lead in your CRM is a commission sitting uncollected - whether it is a Woodbridge townhouse, a Maple detached, or a Concord condo.</p>
             <ProblemCounterGrid
               stats={[
                 { value: 60000, prefix: "$", suffix: "+", label: "200 dormant leads × 2% conversion × $15K commission", icon: "🏠" },
                 { value: 45000, prefix: "$", suffix: "/yr", label: "Portal enquiries lost to faster agents after hours", icon: "📱" },
                 { value: 5, suffix: " hrs/wk", label: "Manual CRM updates, drip emails, and follow-up management", icon: "⏱️" },
-                { value: 12, suffix: " months", label: "Average lead-to-close timeline — manual follow-up dies at week 1", icon: "📅" },
+                { value: 12, suffix: " months", label: "Average lead-to-close timeline - manual follow-up dies at week 1", icon: "📅" },
               ]}
             />
             <div className="mt-8 flex flex-col gap-4">
-              <CampaignMathItem figure="$60,000+ in unrealised revenue" label="200 dormant leads × 2% conversion rate × $15,000 average commission — sitting in your CRM" />
+              <CampaignMathItem figure="$60,000+ in unrealised revenue" label="200 dormant leads × 2% conversion rate × $15,000 average commission - sitting in your CRM" />
               <CampaignMathItem figure="$45,000/year" label="After-hours portal enquiries lost to agents who responded in 90 seconds while you were asleep" />
-              <CampaignMathItem figure="5-8 hours/week" label="Manual CRM updates, drip emails, and follow-up management — time you could spend on active clients" />
+              <CampaignMathItem figure="5-8 hours/week" label="Manual CRM updates, drip emails, and follow-up management - time you could spend on active clients" />
               <CampaignMathItem figure="$105,000+ in recoverable revenue" label="From leads you already have, plus the ones you are about to get" isTotal />
             </div>
           </div>
@@ -137,12 +137,12 @@ export default function CampaignRealEstate() {
               title="Your Lead Follow-Up: Before vs. After"
               beforeSteps={[
                 { label: "Vaughan buyer enquires at 9pm Saturday", detail: "You see it Monday morning. Buyer already booked with another agent in Woodbridge." },
-                { label: "200 leads in CRM — no follow-up after week 1", detail: "You always have a hotter lead to chase. Cold leads go cold forever." },
+                { label: "200 leads in CRM - no follow-up after week 1", detail: "You always have a hotter lead to chase. Cold leads go cold forever." },
                 { label: "CRM updated manually when you remember", detail: "Gaps in data. No visibility. Leads fall through the cracks." },
               ]}
               afterSteps={[
                 { label: "Portal enquiry gets 90-second auto-response", detail: "Personalised SMS + email sent instantly. Showing link included." },
-                { label: "12-month automated drip sequence runs for every lead", detail: "Market updates, check-ins, neighbourhood insights — all personalised." },
+                { label: "12-month automated drip sequence runs for every lead", detail: "Market updates, check-ins, neighbourhood insights - all personalised." },
                 { label: "CRM updated automatically from every interaction", detail: "No manual logging. Full pipeline visibility. Nothing falls through." },
               ]}
             />
@@ -168,7 +168,7 @@ export default function CampaignRealEstate() {
                 </p>
                 <p className="text-base leading-relaxed mb-6" style={{ color: "rgba(255,255,255,0.85)" }}>
                   "We set up a 12-month automated drip sequence: market updates, neighbourhood insights, and
-                  gentle check-ins — all personalised, all automated. Not templates that scream mass email."
+                  gentle check-ins - all personalised, all automated. Not templates that scream mass email."
                 </p>
                 <div className="rounded-xl p-4 text-center" style={{ backgroundColor: MAGENTA }}>
                   <p className="text-lg font-bold text-white">3 listings from leads dormant for 6-8 months</p>
@@ -196,7 +196,7 @@ export default function CampaignRealEstate() {
                   "How many dormant leads you have and their estimated commission value",
                   "A follow-up automation strategy customised to your market area",
                   "What it would cost to implement (fixed pricing, upfront)",
-                  "The full strategy is yours — whether or not you work with us",
+                  "The full strategy is yours - whether or not you work with us",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

@@ -23,10 +23,10 @@ const data: CaseStudyData = {
   businessDescription:
     "A boutique property management company managing residential rental units in Cabbagetown, Leslieville, Liberty Village, and the Distillery District. 3 staff managing 65 units across 4 buildings for 3 property owners. Services: tenant relations, maintenance coordination, rent collection, lease administration, owner reporting.",
   problemBody: [
-    "Maintenance requests arrived via email, text, and phone. No triage — emergency requests sat in the same inbox as routine requests. Response time varied from 2 hours to 2 days.",
+    "Maintenance requests arrived via email, text, and phone. No triage - emergency requests sat in the same inbox as routine requests. Response time varied from 2 hours to 2 days.",
     "Rent follow-up for late payments required manual, uncomfortable calls. The admin delayed them. Some late payments were not followed up at all.",
-    "Lease renewals tracked in a spreadsheet. Team discovered upcoming expiries 2-3 weeks before date — not enough time for a proper renewal conversation.",
-    "Monthly owner reports required a full day per property — 3 days per month total just on reporting.",
+    "Lease renewals tracked in a spreadsheet. Team discovered upcoming expiries 2-3 weeks before date - not enough time for a proper renewal conversation.",
+    "Monthly owner reports required a full day per property - 3 days per month total just on reporting.",
   ],
   beforeMetrics: [
     { label: "Units managed", value: "65 (at capacity)" },

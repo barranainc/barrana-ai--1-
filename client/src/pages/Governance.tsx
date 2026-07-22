@@ -43,7 +43,7 @@ const pipedaPrinciples = [
   },
   {
     title: "Consent Flows",
-    desc: "Automated workflows are designed to respect how clients have consented to be contacted and how their data may be used — and to stop when consent boundaries are reached.",
+    desc: "Automated workflows are designed to respect how clients have consented to be contacted and how their data may be used - and to stop when consent boundaries are reached.",
     icon: (
       <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
         <circle cx="18" cy="18" r="17" stroke={NAVY} strokeWidth="2" fill="rgba(40,56,145,0.07)" />
@@ -125,7 +125,7 @@ export default function Governance() {
         </div>
       </section>
 
-      {/* Section 1 — How We Handle Your Data */}
+      {/* Section 1 - How We Handle Your Data */}
       <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "white" }}>
         <div className="container">
           <div style={{ maxWidth: "780px" }}>
@@ -134,8 +134,8 @@ export default function Governance() {
             </h2>
             <p style={{ fontSize: "1rem", color: "#374151", lineHeight: 1.75, marginBottom: "1rem" }}>
               When Barrana.ai builds automation for your business, your client data never passes through
-              infrastructure we own. We connect the tools you already use — your CRM, your email, your
-              forms — and orchestrate them through platforms like Make or n8n that run under your account.
+              infrastructure we own. We connect the tools you already use - your CRM, your email, your
+              forms - and orchestrate them through platforms like Make or n8n that run under your account.
             </p>
             <p style={{ fontSize: "1rem", color: "#374151", lineHeight: 1.75, marginBottom: "1rem" }}>
               Every data flow is documented in a system map delivered at project close. You can see exactly
@@ -150,7 +150,7 @@ export default function Governance() {
         </div>
       </section>
 
-      {/* Section 2 — PIPEDA Awareness */}
+      {/* Section 2 - PIPEDA Awareness */}
       <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "#F7F9FC" }}>
         <div className="container">
           <h2
@@ -197,7 +197,7 @@ export default function Governance() {
         </div>
       </section>
 
-      {/* Section 3 — The Control Layer */}
+      {/* Section 3 - The Control Layer */}
       <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "white" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "start" }}>
@@ -206,7 +206,7 @@ export default function Governance() {
                 The Control Layer
               </h2>
               <p style={{ color: "#4B5563", lineHeight: 1.7, marginBottom: "1rem" }}>
-                Every automation system we build includes a control layer — a set of safeguards that
+                Every automation system we build includes a control layer - a set of safeguards that
                 govern how the system behaves when something unexpected happens.
               </p>
               <p style={{ color: "#4B5563", lineHeight: 1.7 }}>
@@ -222,7 +222,7 @@ export default function Governance() {
         </div>
       </section>
 
-      {/* Section 4 — Security Principles */}
+      {/* Section 4 - Security Principles */}
       <section style={{ paddingTop: spacing.sectionPadding, paddingBottom: spacing.sectionPadding, background: "#F7F9FC" }}>
         <div className="container">
           <div style={{ maxWidth: "720px" }}>
@@ -283,7 +283,7 @@ export default function Governance() {
           </h2>
           <p style={{ color: "rgba(255,255,255,0.68)", fontSize: "1.0625rem", marginBottom: "2rem", maxWidth: "520px", margin: "0 auto 2rem" }}>
             Contact us and we will walk through our governance approach for your specific business
-            context — what data flows, where it goes, and how it is protected.
+            context - what data flows, where it goes, and how it is protected.
           </p>
           <Link href="/contact" className="btn-primary">
             Contact Us

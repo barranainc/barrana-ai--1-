@@ -87,7 +87,7 @@ export default function IntegrationPriorityMatrix() {
             The Integration Priority Matrix
           </h1>
           <p style={{ fontSize: "1.0625rem", color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
-            Not all integrations are equal. This matrix ranks the most common tool connections by business impact and implementation effort — so you know exactly where to start and what to leave for later.
+            Not all integrations are equal. This matrix ranks the most common tool connections by business impact and implementation effort - so you know exactly where to start and what to leave for later.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/contact" className="btn-primary">Get a Custom Integration Plan</Link>
@@ -103,7 +103,7 @@ export default function IntegrationPriorityMatrix() {
           <SummaryBox>
             <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem" }}>How to read this matrix:</p>
             <p style={{ color: "#1A1A2E", lineHeight: 1.7 }}>
-              <strong>Tier 1</strong> integrations deliver the highest impact for the lowest effort — do these first. <strong>Tier 2</strong> integrations unlock significant operational gains once Tier 1 is stable. <strong>Tier 3</strong> integrations are worth building eventually, but require cleaner data foundations first.
+              <strong>Tier 1</strong> integrations deliver the highest impact for the lowest effort - do these first. <strong>Tier 2</strong> integrations unlock significant operational gains once Tier 1 is stable. <strong>Tier 3</strong> integrations are worth building eventually, but require cleaner data foundations first.
             </p>
           </SummaryBox>
         </RevealSection>
@@ -111,7 +111,7 @@ export default function IntegrationPriorityMatrix() {
         <RevealSection>
           <SectionHeading>Why Integration Sequencing Matters</SectionHeading>
           <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-            Most businesses approach tool integration backwards — they start with the most visible system (often the CRM) and try to connect everything at once. The result is brittle automations, data conflicts, and teams who stop trusting the tools.
+            Most businesses approach tool integration backwards - they start with the most visible system (often the CRM) and try to connect everything at once. The result is brittle automations, data conflicts, and teams who stop trusting the tools.
           </p>
           <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
             The right approach is to establish a clean data flow in layers: first ensure every lead is captured (Tier 1), then ensure every job is billed correctly (Tier 2), then optimise for reporting and visibility (Tier 3). Each tier builds on the data quality established by the previous one.
@@ -210,7 +210,7 @@ export default function IntegrationPriorityMatrix() {
               Want a Custom Integration Roadmap?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              We will audit your current tool stack and build you a prioritised integration plan — starting with the connections that save the most time.
+              We will audit your current tool stack and build you a prioritised integration plan - starting with the connections that save the most time.
             </p>
             <Link href="/contact" style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
               Book Your Free Audit

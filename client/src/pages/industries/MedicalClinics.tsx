@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Online booking reduces call volume 40-50%. Automated reminders cut no-shows. Digital intake eliminates paper. Prescription renewal reminders keep patients engaged. Lab result follow-up runs systematically.",
   body: [
     "Medical clinics face a unique operational challenge: high patient volume, complex scheduling, regulatory requirements, and a front desk that simultaneously manages check-ins, phone calls, insurance, and intake forms. Something always suffers.",
-    "Automation handles the coordination layer — booking, reminding, intake, follow-up — so your staff focuses on the clinical experience that patients value.",
+    "Automation handles the coordination layer - booking, reminding, intake, follow-up - so your staff focuses on the clinical experience that patients value.",
   ],
   ctaMicro: "See how automation reduces your front desk burden. Free audit.",
 

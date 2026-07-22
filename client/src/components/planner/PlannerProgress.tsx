@@ -155,7 +155,7 @@ export default function PlannerProgress({ currentStep, totalSteps = 8 }: Props) 
           })}
         </div>
 
-        {/* Step X of 8 — time label */}
+        {/* Step X of 8 - time label */}
         <div
           style={{
             textAlign: "center",
@@ -165,7 +165,7 @@ export default function PlannerProgress({ currentStep, totalSteps = 8 }: Props) 
             fontWeight: 400,
           }}
         >
-          Step {currentStep} of {totalSteps} — {timeLabel}
+          Step {currentStep} of {totalSteps} - {timeLabel}
         </div>
       </div>
 

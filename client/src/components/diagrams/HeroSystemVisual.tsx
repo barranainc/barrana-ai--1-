@@ -1,5 +1,5 @@
 /**
- * HeroSystemVisual.tsx — Animated SVG hero diagram (v4 — dark premium)
+ * HeroSystemVisual.tsx - Animated SVG hero diagram (v4 - dark premium)
  * Colour system updated to work on #1B223D card background.
  *
  * Layers:   YOUR TEAM  →  AUTOMATION  →  YOUR TOOLS

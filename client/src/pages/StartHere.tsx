@@ -1,5 +1,5 @@
 /*
- * StartHere.tsx — Barrana.ai "Start Here" Page
+ * StartHere.tsx - Barrana.ai "Start Here" Page
  * Brand Colors (OFFICIAL):
  *   Navy:    #283891  (primary)
  *   Magenta: #7E0F4A  (accent)
@@ -169,7 +169,7 @@ const caseStudies = [
 const faqItems: FAQItem[] = [
   {
     question: "Is this going to be really expensive?",
-    answer: "A single automated workflow costs $1,500 to $4,000. A full system costs $5,000 to $12,000. Fixed pricing \u2014 you know the number before we start. Most businesses see the investment returned within the first month or two. And the audit that tells you everything? That is free.",
+    answer: "A single automated workflow costs $1,500 to $4,000. A full system costs $5,000 to $12,000. Fixed pricing - you know the number before we start. Most businesses see the investment returned within the first month or two. And the audit that tells you everything? That is free.",
   },
   {
     question: "I am not technical at all. Will I understand this?",
@@ -189,7 +189,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "How long before I see results?",
-    answer: "First automated workflow goes live in 1 to 2 weeks. You will see results \u2014 faster responses, fewer missed leads, less admin time \u2014 within the first week of operation. Full system payback: typically 30 to 60 days.",
+    answer: "First automated workflow goes live in 1 to 2 weeks. You will see results - faster responses, fewer missed leads, less admin time - within the first week of operation. Full system payback: typically 30 to 60 days.",
   },
 ];
 
@@ -356,7 +356,7 @@ export default function StartHere() {
           </Reveal>
 
           <div className="sh-grid-3">
-            {/* Type B soft cards — no border, soft bg */}
+            {/* Type B soft cards - no border, soft bg */}
             <Reveal delay={0.05}>
               <div style={{ background: "rgba(245,246,250,0.5)", borderRadius: "0.75rem", padding: "2rem" }}>
                 <div style={{ width: 44, height: 44, borderRadius: "0.625rem", background: `${NAVY}10`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
@@ -364,10 +364,10 @@ export default function StartHere() {
                 </div>
                 <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.875rem" }}>What It Is</h3>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7, marginBottom: "0.75rem" }}>
-                  AI automation connects the software tools your business already uses — your email, your calendar, your client database, your accounting software — so that routine tasks happen automatically instead of manually.
+                  AI automation connects the software tools your business already uses - your email, your calendar, your client database, your accounting software - so that routine tasks happen automatically instead of manually.
                 </p>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7 }}>
-                  When a potential client fills out your website form, instead of someone reading the email, typing the info into a spreadsheet, sending a confirmation, and scheduling a meeting — all of that happens in seconds, automatically.
+                  When a potential client fills out your website form, instead of someone reading the email, typing the info into a spreadsheet, sending a confirmation, and scheduling a meeting - all of that happens in seconds, automatically.
                 </p>
               </div>
             </Reveal>

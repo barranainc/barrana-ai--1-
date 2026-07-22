@@ -20,9 +20,12 @@ import { routes } from "./routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST = path.resolve(__dirname, "../dist/public");
-const PORT = 4174; // avoid clashing with vite preview (4173)
+const PORT = Number(process.env.PRERENDER_PORT || 4174); // avoid clashing with vite preview (4173)
 const ORIGIN = `http://localhost:${PORT}`;
-const CONCURRENCY = 4; // render N pages in parallel tabs
+const CONCURRENCY = Math.max(
+  1,
+  Number(process.env.PRERENDER_CONCURRENCY || 4),
+); // render N pages in parallel tabs
 
 // ── Detect Chrome path ───────────────────────────────────────────────────────
 function findChrome() {
@@ -136,7 +139,9 @@ async function renderRoute(browser, routePath) {
   } catch (err) {
     return { route: routePath, status: "error", error: err.message };
   } finally {
-    await page.close();
+    // Chrome can close a target while a page is settling. Cleanup must not
+    // mask the route result or abort the remaining prerender queue.
+    await page.close().catch(() => {});
   }
 }
 
@@ -148,8 +153,16 @@ async function main() {
     process.exit(1);
   }
 
-  const allPaths = routes.map((r) => r.path);
-  console.log(`\nPre-rendering ${allPaths.length} routes ...\n`);
+  const allRoutePaths = routes.map((r) => r.path);
+  const routeStart = Math.max(0, Number(process.env.PRERENDER_START || 0));
+  const routeLimit = Math.max(
+    0,
+    Number(process.env.PRERENDER_LIMIT || allRoutePaths.length),
+  );
+  const allPaths = allRoutePaths.slice(routeStart, routeStart + routeLimit);
+  console.log(
+    `\nPre-rendering ${allPaths.length} routes (starting at ${routeStart} of ${allRoutePaths.length}) ...\n`,
+  );
 
   // Start static server
   const server = createStaticServer(DIST);

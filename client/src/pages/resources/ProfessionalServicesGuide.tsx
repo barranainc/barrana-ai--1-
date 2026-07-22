@@ -128,7 +128,7 @@ function BillableVsAdminBars() {
         }}
       >
         <strong style={{ color: "#283891" }}>Recovering 15–20 hrs/week of billable time at $250–$500/hr = $195,000–$520,000/year</strong>
-        <span style={{ color: "#3A3A3A", fontSize: "0.9rem" }}> in recovered billing capacity — without hiring a single additional person.</span>
+        <span style={{ color: "#3A3A3A", fontSize: "0.9rem" }}> in recovered billing capacity - without hiring a single additional person.</span>
       </div>
     </div>
   );
@@ -140,12 +140,12 @@ const SIX_WORKFLOWS = [
   {
     icon: "📬",
     title: "Enquiry Intake & Triage",
-    desc: "Automatically capture enquiries from all channels (web, email, phone), classify by service type and urgency, and route to the right team member within seconds — not hours.",
+    desc: "Automatically capture enquiries from all channels (web, email, phone), classify by service type and urgency, and route to the right team member within seconds - not hours.",
   },
   {
     icon: "📋",
     title: "Client Onboarding & Document Collection",
-    desc: "Send welcome sequences, collect required documents, trigger compliance checks, and populate your CRM and matter management system — all without manual intervention.",
+    desc: "Send welcome sequences, collect required documents, trigger compliance checks, and populate your CRM and matter management system - all without manual intervention.",
   },
   {
     icon: "📅",
@@ -155,7 +155,7 @@ const SIX_WORKFLOWS = [
   {
     icon: "💳",
     title: "Billing & Invoice Follow-up",
-    desc: "Auto-generate invoices from time records, send payment reminders at configured intervals, escalate overdue accounts, and reconcile payments — reducing debtor days by 40–60%.",
+    desc: "Auto-generate invoices from time records, send payment reminders at configured intervals, escalate overdue accounts, and reconcile payments - reducing debtor days by 40–60%.",
   },
   {
     icon: "🔄",
@@ -233,7 +233,7 @@ export default function ProfessionalServicesGuide() {
             What This Guide Covers
           </div>
           <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.75, fontSize: "0.9375rem" }}>
-            Professional services firms sell time — yet they spend half of it on work that generates zero revenue. This guide covers the specific automation patterns that shift that ratio: the six workflows every firm should automate, industry-specific implementation patterns for immigration, law, accounting, financial advisory, and insurance/mortgage, and the compliance considerations that make professional services automation different from every other sector.
+            Professional services firms sell time - yet they spend half of it on work that generates zero revenue. This guide covers the specific automation patterns that shift that ratio: the six workflows every firm should automate, industry-specific implementation patterns for immigration, law, accounting, financial advisory, and insurance/mortgage, and the compliance considerations that make professional services automation different from every other sector.
           </p>
         </SummaryBox>
 
@@ -242,7 +242,7 @@ export default function ProfessionalServicesGuide() {
           Professional services firms have a structural problem: their revenue model is built on selling expertise at an hourly or matter rate, but the average fee-earner spends only 50% of their working day on billable activity. The other half evaporates into email, data entry, scheduling, chasing documents, generating reports, and managing internal coordination.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          This isn't a people problem — it's a systems problem. The solution isn't hiring more staff (which simply scales the overhead) or billing fewer hours (which destroys margins). The solution is automating the coordination layer that consumes half your team's capacity.
+          This isn't a people problem - it's a systems problem. The solution isn't hiring more staff (which simply scales the overhead) or billing fewer hours (which destroys margins). The solution is automating the coordination layer that consumes half your team's capacity.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.5rem" }}>
           The visualization below shows what shifts when the coordination layer is automated:
@@ -278,15 +278,15 @@ export default function ProfessionalServicesGuide() {
         </p>
 
         <IndustrySubSection title="Immigration Law">
-          <p>Immigration practices are document-intensive by design — every application involves a checklist of 15–40 documents, each with different expiry dates, certified translation requirements, and government submission formats. Manual document tracking creates bottlenecks at every stage and exposes firms to catastrophic errors when deadlines are missed.</p>
+          <p>Immigration practices are document-intensive by design - every application involves a checklist of 15–40 documents, each with different expiry dates, certified translation requirements, and government submission formats. Manual document tracking creates bottlenecks at every stage and exposes firms to catastrophic errors when deadlines are missed.</p>
           <p>Automation in immigration typically targets three high-value areas: document collection workflows (automated request sequences with client portals), deadline tracking and government fee alert systems, and status update pipelines that reduce inbound status calls by 70–90%.</p>
-          <p>The compounding benefit: once a document workflow is automated, the same infrastructure handles renewals, appeals, and secondary applications — multiplying the initial ROI with each returning client.</p>
+          <p>The compounding benefit: once a document workflow is automated, the same infrastructure handles renewals, appeals, and secondary applications - multiplying the initial ROI with each returning client.</p>
         </IndustrySubSection>
 
         <IndustrySubSection title="Law Firms">
-          <p>Law firms have historically been slow to adopt automation due to concerns about privilege, confidentiality, and regulatory compliance. In practice, the workflows most amenable to automation — intake, scheduling, document collection, billing — touch none of these concerns and represent 40–60% of administrative overhead.</p>
+          <p>Law firms have historically been slow to adopt automation due to concerns about privilege, confidentiality, and regulatory compliance. In practice, the workflows most amenable to automation - intake, scheduling, document collection, billing - touch none of these concerns and represent 40–60% of administrative overhead.</p>
           <p>High-impact targets in legal practice include: new matter opening sequences (client intake → conflict check → engagement letter → file creation), court date and limitation period tracking with multi-step reminder sequences, and accounts receivable automation that reduces average debtor days from 60–90 to under 30.</p>
-          <p>Many firms also benefit from automated precedent distribution — ensuring the right document template is pushed to fee-earners based on matter type, rather than relying on institutional memory.</p>
+          <p>Many firms also benefit from automated precedent distribution - ensuring the right document template is pushed to fee-earners based on matter type, rather than relying on institutional memory.</p>
         </IndustrySubSection>
 
         <IndustrySubSection title="Accounting Firms">
@@ -297,13 +297,13 @@ export default function ProfessionalServicesGuide() {
 
         <IndustrySubSection title="Financial Advisory">
           <p>Financial advisory firms operate under heavy compliance obligations (ASIC, FCA, SEC, IIROC depending on jurisdiction) that create substantial documentation requirements. Paradoxically, this compliance burden is itself a strong argument for automation: manual compliance processes are error-prone, and errors in a regulated context carry significant risk.</p>
-          <p>Automation targets include: SOA/FDS generation workflows, review meeting scheduling and preparation sequences (client data pulled and pre-populated before the adviser sees the file), fee disclosure automation, and portfolio rebalancing notification workflows. CRM hygiene — keeping client records accurate as life circumstances change — is another high-value area.</p>
+          <p>Automation targets include: SOA/FDS generation workflows, review meeting scheduling and preparation sequences (client data pulled and pre-populated before the adviser sees the file), fee disclosure automation, and portfolio rebalancing notification workflows. CRM hygiene - keeping client records accurate as life circumstances change - is another high-value area.</p>
         </IndustrySubSection>
 
         <IndustrySubSection title="Insurance & Mortgage Broking">
-          <p>Broking businesses are pipeline businesses: the margin comes from volume, and volume requires fast, accurate processing of large numbers of parallel client cases. Manual case management at scale creates two failure modes — dropped cases (lost revenue) and slow processing (client attrition to competitors).</p>
+          <p>Broking businesses are pipeline businesses: the margin comes from volume, and volume requires fast, accurate processing of large numbers of parallel client cases. Manual case management at scale creates two failure modes - dropped cases (lost revenue) and slow processing (client attrition to competitors).</p>
           <p>Automation targets include: renewal reminder sequences (the highest-ROI automation for most insurance brokers), lender comparison and scenario generation, document collection and lender submission workflows, and settlement/approval notification chains that keep clients informed without requiring manual updates.</p>
-          <p>For mortgage brokers specifically, automated rate watch alerts — notifying clients when their current product becomes uncompetitive — generate strong repeat business and referrals with near-zero ongoing effort.</p>
+          <p>For mortgage brokers specifically, automated rate watch alerts - notifying clients when their current product becomes uncompetitive - generate strong repeat business and referrals with near-zero ongoing effort.</p>
         </IndustrySubSection>
 
         {/* WorkflowDiagram graphic */}
@@ -318,7 +318,7 @@ export default function ProfessionalServicesGuide() {
           />
         </div>
         <p style={{ lineHeight: 1.8, color: "#7B7B7B", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
-          Each arrow in the lifecycle represents a handoff — and every handoff is a point where manual coordination can be replaced with a triggered, reliable automated action.
+          Each arrow in the lifecycle represents a handoff - and every handoff is a point where manual coordination can be replaced with a triggered, reliable automated action.
         </p>
 
         <SectionHeading>Compliance Considerations</SectionHeading>

@@ -229,25 +229,25 @@ export default function ClientOnboardingWorkflow() {
       <SectionHeading>The 7-Step Automated Onboarding Sequence</SectionHeading>
       <ol style={{ color: "#1A1A2E", lineHeight: 1.8, paddingLeft: "1.5rem", marginBottom: "1.5rem" }}>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Trigger (contract signed or payment received)</strong> — The webhook fires when a contract is signed via e-signature or payment is received. This is the single source of truth for "client is confirmed."
+          <strong>Trigger (contract signed or payment received)</strong> - The webhook fires when a contract is signed via e-signature or payment is received. This is the single source of truth for "client is confirmed."
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Welcome email sent instantly</strong> — Personalized with the client's name, service type, and assigned team member. Sets expectations for what happens next.
+          <strong>Welcome email sent instantly</strong> - Personalized with the client's name, service type, and assigned team member. Sets expectations for what happens next.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Intake form dispatched</strong> — A service-type-specific intake form (built in Typeform or Google Forms) is sent within the same email or as a follow-up 5 minutes later.
+          <strong>Intake form dispatched</strong> - A service-type-specific intake form (built in Typeform or Google Forms) is sent within the same email or as a follow-up 5 minutes later.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>CRM record created automatically</strong> — All fields populated from the contract/payment data. The intake form responses map directly into CRM fields when submitted.
+          <strong>CRM record created automatically</strong> - All fields populated from the contract/payment data. The intake form responses map directly into CRM fields when submitted.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Document request sent</strong> — A dynamic checklist based on service type, delivered via a secure upload portal link.
+          <strong>Document request sent</strong> - A dynamic checklist based on service type, delivered via a secure upload portal link.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Booking link sent for first meeting</strong> — The client schedules their first consultation from real-time calendar availability.
+          <strong>Booking link sent for first meeting</strong> - The client schedules their first consultation from real-time calendar availability.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Team member assigned and notified</strong> — Assignment based on service type, caseload, or round-robin. The team member receives a briefing email with all context collected so far.
+          <strong>Team member assigned and notified</strong> - Assignment based on service type, caseload, or round-robin. The team member receives a briefing email with all context collected so far.
         </li>
       </ol>
 
@@ -284,7 +284,7 @@ export default function ClientOnboardingWorkflow() {
       <SectionHeading>Tools</SectionHeading>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
         {[
-          { tool: "Your existing CRM", note: "HubSpot, Zoho, or similar. Make populates it via API — no manual data entry." },
+          { tool: "Your existing CRM", note: "HubSpot, Zoho, or similar. Make populates it via API - no manual data entry." },
           { tool: "Typeform / Google Forms", note: "For the intake form. Both integrate cleanly with Make. Responses map to CRM fields." },
           { tool: "PandaDoc / DocuSign", note: "E-signature for contracts. Contract signing is the trigger for the entire onboarding sequence." },
           { tool: "Make (Integromat)", note: "The orchestration layer. Connects every tool, runs the conditional logic, manages the sequence." },
@@ -333,9 +333,9 @@ export default function ClientOnboardingWorkflow() {
       {/* FAQ */}
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
-        <FAQItem q="Our onboarding is different for every client. Can it still be automated?" a="Partially, yes. The common steps — welcome, CRM creation, document request, booking — can almost always be automated. The custom elements are layered on top via conditional logic. You define the service types and we build the branches accordingly." />
+        <FAQItem q="Our onboarding is different for every client. Can it still be automated?" a="Partially, yes. The common steps - welcome, CRM creation, document request, booking - can almost always be automated. The custom elements are layered on top via conditional logic. You define the service types and we build the branches accordingly." />
         <FAQItem q="What if the client doesn't complete the intake form?" a="A 48-hour reminder fires automatically, then a 5-day reminder with a slightly more direct tone. If still incomplete at Day 7, an escalation alert goes to the assigned team member for personal follow-up. Nothing falls through silently." />
-        <FAQItem q="Can it handle multiple service types?" a="Yes. Conditional logic in Make routes different service types through different onboarding sequences — different intake forms, different document checklists, different team assignments. This is one of the core design elements." />
+        <FAQItem q="Can it handle multiple service types?" a="Yes. Conditional logic in Make routes different service types through different onboarding sequences - different intake forms, different document checklists, different team assignments. This is one of the core design elements." />
         <FAQItem q="Does the client need to download any software?" a="No. Everything is delivered via email and web link. The intake form, document portal, booking link, and e-signature are all browser-based. No app download required for the client." />
       </div>
 

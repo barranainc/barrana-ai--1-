@@ -133,7 +133,7 @@ export function usePlannerScoring(state: PlannerState): PlannerResults | null {
     const workflowNames = scored.slice(0, 3).map(o => o.name).join(', ');
     const toolNames = selectedToolDefs.map(t => t.label).join(', ') || 'your current tools';
 
-    const summaryText = `Your ${industryDef?.label ?? 'business'} ${state.teamSize ? `with a team of ${state.teamSize}` : ''} handles approximately ${state.volume.enquiriesPerWeek ?? 'a number of'} enquiries per week. Your biggest operational bottlenecks are ${painLabels || 'admin and follow-up'}. You currently use ${toolNames}. Several of your workflows — particularly ${workflowNames} — have strong automation potential.`;
+    const summaryText = `Your ${industryDef?.label ?? 'business'} ${state.teamSize ? `with a team of ${state.teamSize}` : ''} handles approximately ${state.volume.enquiriesPerWeek ?? 'a number of'} enquiries per week. Your biggest operational bottlenecks are ${painLabels || 'admin and follow-up'}. You currently use ${toolNames}. Several of your workflows - particularly ${workflowNames} - have strong automation potential.`;
 
     return {
       summaryText,

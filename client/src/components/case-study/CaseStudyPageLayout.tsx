@@ -151,7 +151,7 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
             {data.intro}
           </p>
           <div style={st(5)}>
-            <Link href="/contact" className="btn-primary">Get Similar Results — Book a Free Audit</Link>
+            <Link href="/contact" className="btn-primary">Get Similar Results - Book a Free Audit</Link>
             <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", marginTop: "0.625rem" }}>
               See what automation looks like for your operations. 60 minutes. No obligation.
             </p>
@@ -274,8 +274,8 @@ export default function CaseStudyPageLayout({ data }: Props) {
   };
 
   return (
-    <>
-      {/* SEO Head — OG, Twitter, Canonical */}
+    <div className="template-page case-study-template">
+      {/* SEO Head - OG, Twitter, Canonical */}
       <SEOHead title={data.title} description={data.description} type="article" />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -312,7 +312,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
           {data.problemBody.map((p, i) => (
             <p key={i} style={{ color: "var(--b-grey)", lineHeight: 1.75, fontSize: "0.9375rem", maxWidth: "72ch", marginBottom: "0.875rem" }}>{p}</p>
           ))}
-          <h3 style={{ fontWeight: 700, color: "#111827", fontSize: "0.9375rem", marginTop: "2rem", marginBottom: "0.25rem" }}>By the Numbers — Before</h3>
+          <h3 style={{ fontWeight: 700, color: "#111827", fontSize: "0.9375rem", marginTop: "2rem", marginBottom: "0.25rem" }}>By the Numbers - Before</h3>
           <BeforeMetrics metrics={data.beforeMetrics} color={color} />
         </div>
       </section>
@@ -410,6 +410,6 @@ export default function CaseStudyPageLayout({ data }: Props) {
           <RelatedResources pagePath={`/case-studies/${data.slug}`} />
         </div>
       </section>
-    </>
+    </div>
   );
 }

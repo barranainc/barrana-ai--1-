@@ -67,7 +67,7 @@ const data: IndustryPageData = {
     {
       label: "Document Chasing",
       before: "15 hrs/week",
-      after: "Zero — auto-tracked",
+      after: "Zero - auto-tracked",
       beforeW: 85,
       afterW: 5,
     },

@@ -96,7 +96,7 @@ export interface IndustryPageData {
   // Internal links
   internalLinks: { label: string; href: string; desc?: string }[];
 
-  // Hero visual stats (right column of hero — auto-derived from roiMetrics if not set)
+  // Hero visual stats (right column of hero - auto-derived from roiMetrics if not set)
   heroStats?: { value: string; label: string }[];
 
   // Optional custom slot (rendered after workflow, before control)
@@ -184,8 +184,8 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
   };
 
   return (
-    <>
-      {/* SEO Head — OG, Twitter, Canonical */}
+    <div className="template-page industry-template">
+      {/* SEO Head - OG, Twitter, Canonical */}
       <SEOHead title={data.title} description={data.description} type="article" />
 
       {/* JSON-LD Schemas */}
@@ -229,7 +229,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         <TrustBadges />
       </section>
 
-      {/* 3. Cost of Inaction — off-white */}
+      {/* 3. Cost of Inaction - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
@@ -237,7 +237,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 4. Problems — white */}
+      {/* 4. Problems - white */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>
@@ -247,7 +247,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 5. Before vs After — off-white */}
+      {/* 5. Before vs After - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>Before vs After Automation</h2>
@@ -258,7 +258,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 6. Automation Workflows — white */}
+      {/* 6. Automation Workflows - white */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>
@@ -271,11 +271,11 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* Optional custom slot — from data.children or JSX children prop */}
+      {/* Optional custom slot - from data.children or JSX children prop */}
       {data.children}
       {children}
 
-      {/* 7. Control Layer — off-white */}
+      {/* 7. Control Layer - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={{ ...headingStyle, marginBottom: "1.5rem" }}>Built-In Governance &amp; Control</h2>
@@ -283,7 +283,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 8. ROI & Impact — white */}
+      {/* 8. ROI & Impact - white */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>ROI &amp; Impact</h2>
@@ -292,7 +292,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 9. Who This Is For — off-white */}
+      {/* 9. Who This Is For - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <h2 style={headingStyle}>Who This Is For</h2>
@@ -303,7 +303,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 10. AEO Quick Answer — white */}
+      {/* 10. AEO Quick Answer - white */}
       <section style={sectionStyle("white")}>
         <div className="container" style={{ maxWidth: "720px" }}>
           <AEOBlock question={data.aeoQuestion} answer={data.aeoAnswer} />
@@ -322,7 +322,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </section>
       )}
 
-      {/* 11. FAQ — white */}
+      {/* 11. FAQ - white */}
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>Frequently Asked Questions</h2>
@@ -332,7 +332,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         </div>
       </section>
 
-      {/* 12. Final CTA — dark navy */}
+      {/* 12. Final CTA - dark navy */}
       <ServiceCTASection
         headline={data.ctaHeadline}
         body={data.ctaBody}
@@ -342,7 +342,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         secondaryMicro={data.secondaryMicro}
       />
 
-      {/* 13. Related Resources — off-white */}
+      {/* 13. Related Resources - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
           <InternalLinksGrid links={data.internalLinks} />
@@ -355,6 +355,6 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
           <RelatedResources pagePath={pagePath} />
         </div>
       </section>
-    </>
+    </div>
   );
 }

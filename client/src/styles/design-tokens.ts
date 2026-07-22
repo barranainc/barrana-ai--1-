@@ -19,19 +19,19 @@ export const colors = {
 
   // Semantic
   success: "#0D9668",
-  warning: "#D97706",
+  warning: "#7E0F4A",
   danger: "#DC2626",
 
   // Surfaces
-  surfaceLight: "#F5F5F5",
+  surfaceLight: "#F5F6FA",
   surfaceWhite: "#FFFFFF",
   border: "#E2E4ED",
 } as const;
 
 // ─── SPACING (in rem, for inline styles) ────────────────────
 export const spacing = {
-  sectionPadding: "6rem",        // py-24
-  sectionPaddingLg: "8rem",      // py-32 (md)
+  sectionPadding: "clamp(5rem, 8vw, 7rem)",
+  sectionPaddingLg: "clamp(6rem, 10vw, 8rem)",
   sectionPaddingSm: "4rem",      // py-16 (compact)
   sectionPaddingSmLg: "5rem",    // py-20 (compact md)
 
@@ -50,17 +50,17 @@ export const spacing = {
 // ─── TYPOGRAPHY (inline style objects) ──────────────────────
 export const typography = {
   pageTitle: {
-    fontSize: "clamp(2.25rem, 5vw, 3rem)",
+    fontSize: "clamp(2.35rem, 5vw, 3.75rem)",
     fontWeight: 800,
     color: colors.textPrimary,
-    letterSpacing: "-0.025em",
-    lineHeight: 1.1,
+    letterSpacing: "-0.045em",
+    lineHeight: 1.04,
   },
   sectionHeading: {
-    fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)",
-    fontWeight: 700,
+    fontSize: "clamp(2rem, 3.8vw, 3.25rem)",
+    fontWeight: 800,
     color: colors.navy,
-    letterSpacing: "-0.02em",
+    letterSpacing: "-0.04em",
   },
   sectionSubheading: {
     fontSize: "1.125rem",
@@ -71,9 +71,9 @@ export const typography = {
   },
   eyebrow: {
     fontSize: "0.75rem",
-    fontWeight: 600,
+    fontWeight: 800,
     textTransform: "uppercase" as const,
-    letterSpacing: "0.1em",
+    letterSpacing: "0.13em",
     color: colors.magenta,
   },
   body: {
@@ -109,24 +109,24 @@ export const typography = {
 
 // ─── CARD STYLES ────────────────────────────────────────────
 export const cards = {
-  /** Type A: Primary — bordered, interactive, for key data */
+  /** Type A: Primary - bordered, interactive, for key data */
   typeA: {
     background: colors.surfaceWhite,
-    borderRadius: "1rem",
-    border: `1px solid rgba(226,228,237,0.6)`,
-    boxShadow: "0 1px 4px rgba(0,0,0,0.04)",
+    borderRadius: "1.35rem 1.35rem 1.35rem 0.3rem",
+    border: `1px solid rgba(40,56,145,0.13)`,
+    boxShadow: "0 18px 50px rgba(22,31,84,0.08)",
     padding: "2rem",
   },
   typeAHover: {
-    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
-    borderColor: "rgba(226,228,237,0.9)",
+    boxShadow: "0 24px 58px rgba(22,31,84,0.13)",
+    borderColor: "rgba(126,15,74,0.35)",
   },
 
-  /** Type B: Soft — borderless, informational */
+  /** Type B: Soft - borderless, informational */
   typeB: {
-    background: "rgba(245,246,250,0.5)",
-    borderRadius: "0.75rem",
-    border: "none",
+    background: "linear-gradient(145deg, rgba(255,255,255,0.98), rgba(40,56,145,0.045))",
+    borderRadius: "1.1rem 1.1rem 1.1rem 0.25rem",
+    border: "1px solid rgba(40,56,145,0.10)",
     padding: "2rem",
   },
 
@@ -135,7 +135,7 @@ export const cards = {
     background: "rgba(255,255,255,0.05)",
     backdropFilter: "blur(8px)",
     border: "1px solid rgba(255,255,255,0.10)",
-    borderRadius: "0.75rem",
+    borderRadius: "1.1rem 1.1rem 0.3rem 1.1rem",
     padding: "1.5rem",
   },
 } as const;
@@ -144,7 +144,7 @@ export const cards = {
 export const surfaces = {
   white: { background: colors.surfaceWhite },
   light: { background: colors.surfaceLight },
-  darkGradient: { background: "linear-gradient(to bottom, #1a2d6e, #162358)" },
+  darkGradient: { background: "linear-gradient(120deg, rgba(126,15,74,0.30), transparent 40%), linear-gradient(145deg, #111a49, #283891)" },
   blueWash: { background: colors.navyWash },
 } as const;
 
@@ -159,7 +159,7 @@ export const buttons = {
     fontWeight: 700,
     fontSize: "0.9375rem",
     padding: "0.875rem 1.75rem",
-    borderRadius: "0.5rem",
+    borderRadius: "0.7rem",
     textDecoration: "none",
     border: "none",
     cursor: "pointer",
@@ -175,7 +175,7 @@ export const buttons = {
     fontWeight: 700,
     fontSize: "0.9375rem",
     padding: "0.875rem 1.75rem",
-    borderRadius: "0.5rem",
+    borderRadius: "0.7rem",
     textDecoration: "none",
     border: `2px solid ${colors.navy}`,
     cursor: "pointer",

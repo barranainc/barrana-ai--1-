@@ -83,7 +83,7 @@ const sections = [
     metrics: [
       { label: "After-5pm Lead Capture", before: "0% (voicemail)", after: "100% responded", beforeW: 100, afterW: 5 },
       { label: "Qualified by Morning", before: "0%", after: "100% in CRM", beforeW: 100, afterW: 5 },
-      { label: "Lead Loss Rate", before: "High — 40%+ after hours", after: "Under 5%", beforeW: 40, afterW: 5 },
+      { label: "Lead Loss Rate", before: "High - 40%+ after hours", after: "Under 5%", beforeW: 40, afterW: 5 },
     ],
   },
   {
@@ -156,7 +156,7 @@ export default function BeforeAfter() {
             </h1>
             <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.72)", lineHeight: 1.65, maxWidth: "600px" }}>
               Real workflow comparisons showing what changes when coordination tasks are automated.
-              Eight common business workflows — side by side.
+              Eight common business workflows - side by side.
             </p>
           </div>
         </div>

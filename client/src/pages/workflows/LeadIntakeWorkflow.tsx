@@ -58,7 +58,7 @@ function ResponseTimeChart() {
         <div key={i} style={{ marginBottom: "0.875rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.3rem" }}>
             <span style={{ fontSize: "0.9rem", fontWeight: i === 0 ? 700 : 500, color: i === 0 ? "#0D9668" : "#1A1A2E" }}>
-              {d.time}{i === 0 ? " — Your target" : ""}
+              {d.time}{i === 0 ? " - Your target" : ""}
             </span>
             <span style={{ fontSize: "0.9rem", fontWeight: 700, color: d.color }}>{d.rate}% contact rate</span>
           </div>
@@ -82,7 +82,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "How to Automate Lead Intake for Small Businesses",
-  "description": "A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds.",
+  "description": "A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio - cutting response time from hours to under 90 seconds.",
   "step": [
     { "@type": "HowToStep", "name": "Capture every lead channel in one system" },
     { "@type": "HowToStep", "name": "Send instant acknowledgement within 90 seconds" },
@@ -95,7 +95,7 @@ const jsonLd = {
 export default function LeadIntakeWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
-      <SEOHead title="How to Automate Lead Intake for Small Businesses" description="A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio — cutting response time from hours to under 90 seconds." type="article" />
+      <SEOHead title="How to Automate Lead Intake for Small Businesses" description="A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio - cutting response time from hours to under 90 seconds." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}
@@ -117,29 +117,29 @@ export default function LeadIntakeWorkflow() {
       {/* Section 1 */}
       <SectionHeading>The Manual Lead Intake Problem</SectionHeading>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-        When a lead submits a form on your website, here is what typically happens: the enquiry arrives by email. Someone on the team sees it — two hours later, if they're not in a meeting. They manually create a CRM record, type a confirmation email, and try to book a meeting. By then, the lead has moved on. They submitted to three other businesses. The one that responded first got the call.
+        When a lead submits a form on your website, here is what typically happens: the enquiry arrives by email. Someone on the team sees it - two hours later, if they're not in a meeting. They manually create a CRM record, type a confirmation email, and try to book a meeting. By then, the lead has moved on. They submitted to three other businesses. The one that responded first got the call.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        After hours it's worse. A lead who submits at 7 pm on a Friday doesn't hear back until Monday morning — 60+ hours later. The contact rate at that point is under 2%. You paid for the ad, you got the click, and you lost the lead because the response came too late.
+        After hours it's worse. A lead who submits at 7 pm on a Friday doesn't hear back until Monday morning - 60+ hours later. The contact rate at that point is under 2%. You paid for the ad, you got the click, and you lost the lead because the response came too late.
       </p>
 
       {/* Section 2 */}
       <SectionHeading>What a Lead Automation System Does (5 Steps)</SectionHeading>
       <ol style={{ color: "#1A1A2E", lineHeight: 1.8, paddingLeft: "1.5rem", marginBottom: "1.5rem" }}>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Captures every lead channel</strong> — website form, email enquiry, Google Business profile, social DMs — into one unified workflow. Source is tagged on every record.
+          <strong>Captures every lead channel</strong> - website form, email enquiry, Google Business profile, social DMs - into one unified workflow. Source is tagged on every record.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Sends instant acknowledgement (&lt;90 seconds)</strong> — personalized by source (website vs. Google vs. social), by service type if captured, and by time of day.
+          <strong>Sends instant acknowledgement (&lt;90 seconds)</strong> - personalized by source (website vs. Google vs. social), by service type if captured, and by time of day.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Qualifies with 2–3 embedded questions</strong> — service needed, timeline, and rough budget. Keeps the friction minimal while capturing the data you need to route properly.
+          <strong>Qualifies with 2–3 embedded questions</strong> - service needed, timeline, and rough budget. Keeps the friction minimal while capturing the data you need to route properly.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Routes to the right team member</strong> — based on service type, location, or any field you choose. The team member receives full context: source, answers, and any prior interactions.
+          <strong>Routes to the right team member</strong> - based on service type, location, or any field you choose. The team member receives full context: source, answers, and any prior interactions.
         </li>
         <li style={{ marginBottom: "0.75rem" }}>
-          <strong>Creates the CRM record and books the consultation automatically</strong> — no manual data entry, no scheduling back-and-forth. The lead picks from real-time availability.
+          <strong>Creates the CRM record and books the consultation automatically</strong> - no manual data entry, no scheduling back-and-forth. The lead picks from real-time availability.
         </li>
       </ol>
 
@@ -159,7 +159,7 @@ export default function LeadIntakeWorkflow() {
       {/* Section 3 */}
       <SectionHeading>The Complete Workflow (Trigger to Outcome)</SectionHeading>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-        The trigger is a form submission — from your website, a landing page, or a Google Business profile. The moment the form fires, a webhook sends the data to Make (formerly Integromat). Make is the orchestration layer: it routes data between your tools and runs the conditional logic.
+        The trigger is a form submission - from your website, a landing page, or a Google Business profile. The moment the form fires, a webhook sends the data to Make (formerly Integromat). Make is the orchestration layer: it routes data between your tools and runs the conditional logic.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
         Within seconds, Make sends a personalized acknowledgement via email and SMS simultaneously (using Twilio for SMS). The message references what the lead enquired about and sets expectations: "We've received your enquiry about [service]. A team member will be in touch within [X hours]." During business hours, that handoff is often immediate.
@@ -168,7 +168,7 @@ export default function LeadIntakeWorkflow() {
         The qualification sequence fires next. This is typically 2–3 questions delivered inline in the email or via a short form. The answers trigger conditional branches in Make: an immigration enquiry routes differently from a bookkeeping enquiry. A high-budget lead with an urgent timeline gets flagged for priority follow-up.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        Once qualified, the CRM record is created automatically — all fields populated from the form and qualification answers. A Calendly or equivalent booking link is included in the next touchpoint. The assigned team member receives a Slack or email notification with the full context summary.
+        Once qualified, the CRM record is created automatically - all fields populated from the form and qualification answers. A Calendly or equivalent booking link is included in the next touchpoint. The assigned team member receives a Slack or email notification with the full context summary.
       </p>
 
       {/* Response Time Chart */}
@@ -178,9 +178,9 @@ export default function LeadIntakeWorkflow() {
       <SectionHeading>Tools Used for Lead Automation</SectionHeading>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
         {[
-          { tool: "Make (Integromat)", desc: "Orchestration layer — connects your tools, runs the conditional logic, handles the webhook from your form." },
+          { tool: "Make (Integromat)", desc: "Orchestration layer - connects your tools, runs the conditional logic, handles the webhook from your form." },
           { tool: "CRM (HubSpot / GHL / Zoho)", desc: "Record creation, pipeline tracking, and the source of truth for every lead through the funnel." },
-          { tool: "Calendly", desc: "Real-time booking integration. Leads pick from live availability — no back-and-forth." },
+          { tool: "Calendly", desc: "Real-time booking integration. Leads pick from live availability - no back-and-forth." },
           { tool: "Twilio", desc: "Programmatic SMS. Sends the 90-second response and any follow-up messages." },
           { tool: "Your existing form", desc: "Typeform, Gravity Forms, WPForms, or any form with webhook support. No need to replace it." },
         ].map((item, i) => (
@@ -255,9 +255,9 @@ export default function LeadIntakeWorkflow() {
       {/* FAQ */}
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
-        <FAQItem q="What if leads come from multiple channels?" a="The system captures all channels — website form, email, Google Business, social DMs — into one unified workflow. The source is tagged on each record so you can see which channels drive the most qualified leads." />
-        <FAQItem q="Can it qualify leads for complex services?" a="The qualification uses 2-3 questions that you define. For complex qualification, we build multi-step sequences with conditional branches — so a visa enquiry can branch into different qualification paths based on the visa category." />
-        <FAQItem q="What happens to leads who don't qualify?" a="They go into a nurture sequence — not lost, just in a different track. Qualification thresholds are configurable, and the nurture sequence can include educational content, a lighter-touch follow-up, or a referral pathway." />
+        <FAQItem q="What if leads come from multiple channels?" a="The system captures all channels - website form, email, Google Business, social DMs - into one unified workflow. The source is tagged on each record so you can see which channels drive the most qualified leads." />
+        <FAQItem q="Can it qualify leads for complex services?" a="The qualification uses 2-3 questions that you define. For complex qualification, we build multi-step sequences with conditional branches - so a visa enquiry can branch into different qualification paths based on the visa category." />
+        <FAQItem q="What happens to leads who don't qualify?" a="They go into a nurture sequence - not lost, just in a different track. Qualification thresholds are configurable, and the nurture sequence can include educational content, a lighter-touch follow-up, or a referral pathway." />
         <FAQItem q="How does the 90-second response actually work?" a="The moment a form is submitted, a webhook fires, the automation creates the record, personalises the message, and sends it via email and SMS simultaneously. Average actual time: 8-45 seconds depending on server load and the complexity of personalization." />
         <FAQItem q="Does this work for after-hours enquiries?" a="Yes. The system runs 24/7. After-hours leads get the same 90-second response and are flagged in the morning digest so the team sees them first thing. The team member assignment happens immediately; the human follow-up happens at business hours." />
       </div>

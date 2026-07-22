@@ -86,7 +86,7 @@ export default function TemplateTimeDrainWaterfall({
     >
       <div style={{ textAlign: "center", marginBottom: "0.5rem" }}>
         <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#6B7280", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-          {industry} — Weekly Time Drain
+          {industry} - Weekly Time Drain
         </span>
       </div>
 
@@ -160,7 +160,7 @@ export default function TemplateTimeDrainWaterfall({
               <AnimatedCounter from={0} to={totalDrainHours} duration={2.5} suffix="h" /> wasted on admin per week
             </>
           ) : (
-            `${totalDrainHours}h recovered — same team, more output`
+            `${totalDrainHours}h recovered - same team, more output`
           )}
         </div>
       </div>

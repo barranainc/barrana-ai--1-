@@ -1,5 +1,5 @@
 /**
- * CaseStudies.tsx — Barrana.ai Case Studies Index
+ * CaseStudies.tsx - Barrana.ai Case Studies Index
  * 12-card filterable grid. Each card: industry badge + title + key metric + location.
  * Cards link to individual case study pages.
  */

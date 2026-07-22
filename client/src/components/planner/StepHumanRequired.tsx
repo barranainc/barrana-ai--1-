@@ -181,7 +181,7 @@ export default function StepHumanRequired({
         })}
       </div>
 
-      {/* Shield visual — shown when >= 1 selected */}
+      {/* Shield visual - shown when >= 1 selected */}
       {selected.length >= 1 && (
         <div
           style={{
@@ -205,7 +205,7 @@ export default function StepHumanRequired({
         </div>
       )}
 
-      {/* Reassurance message — shown when >= 3 selected */}
+      {/* Reassurance message - shown when >= 3 selected */}
       {selected.length >= 3 && (
         <div
           style={{

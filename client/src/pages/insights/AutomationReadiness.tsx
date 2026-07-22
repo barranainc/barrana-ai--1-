@@ -150,7 +150,7 @@ export default function AutomationReadiness() {
             {[
               {
                 num: 1, title: "You have repeatable workflows",
-                body: "If the same steps happen in the same order for most clients, you have something automation can reliably handle. The workflow doesn't need to be perfect — it needs to be consistent. Even a rough, manual process that happens the same way 80% of the time is automatable."
+                body: "If the same steps happen in the same order for most clients, you have something automation can reliably handle. The workflow doesn't need to be perfect - it needs to be consistent. Even a rough, manual process that happens the same way 80% of the time is automatable."
               },
               {
                 num: 2, title: "You have volume (20+ client interactions per month)",
@@ -158,15 +158,15 @@ export default function AutomationReadiness() {
               },
               {
                 num: 3, title: "You can name specific time drains",
-                body: "If you or your team can say 'we spend X hours per week doing Y manually', you have identified a target. This specificity is the foundation of ROI calculation. Vague frustration is not enough — you need to be able to point to the drain."
+                body: "If you or your team can say 'we spend X hours per week doing Y manually', you have identified a target. This specificity is the foundation of ROI calculation. Vague frustration is not enough - you need to be able to point to the drain."
               },
               {
                 num: 4, title: "You have basic digital tools",
-                body: "Email and a calendar are the minimum. A CRM of any kind — even a spreadsheet — is better. You do not need Salesforce or a complex tech stack. The key is that your client data exists in digital form that can be read and written by automation tools."
+                body: "Email and a calendar are the minimum. A CRM of any kind - even a spreadsheet - is better. You do not need Salesforce or a complex tech stack. The key is that your client data exists in digital form that can be read and written by automation tools."
               },
               {
                 num: 5, title: "You're willing to start small and measure",
-                body: "The businesses that succeed with automation are those that commit to one workflow, measure its results for 4 weeks, and then expand. Impatience — wanting to automate everything at once — is the most common reason projects fail."
+                body: "The businesses that succeed with automation are those that commit to one workflow, measure its results for 4 weeks, and then expand. Impatience - wanting to automate everything at once - is the most common reason projects fail."
               },
             ].map((s) => (
               <div key={s.num} style={{ display: "flex", gap: "1.25rem", marginBottom: "1.5rem", alignItems: "flex-start" }}>
@@ -208,10 +208,10 @@ export default function AutomationReadiness() {
               If you're not quite there yet on the readiness signals, here are the four things to address first:
             </p>
             <ol style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-              <li><strong style={{ color: "#1A1A2E" }}>Define the workflow</strong> — you can't automate what you can't describe. Write out the steps, even roughly.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Have a CRM or spreadsheet for client records</strong> — automation needs somewhere to read and write client data.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Have at least one tool for client intake</strong> — a form, an email inbox, or any structured method of receiving new enquiries.</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Define what success looks like</strong> — how will you know it worked? Pick one metric before you build.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Define the workflow</strong> - you can't automate what you can't describe. Write out the steps, even roughly.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Have a CRM or spreadsheet for client records</strong> - automation needs somewhere to read and write client data.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Have at least one tool for client intake</strong> - a form, an email inbox, or any structured method of receiving new enquiries.</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Define what success looks like</strong> - how will you know it worked? Pick one metric before you build.</li>
             </ol>
 
             <SectionHeading>What to Fix If You're Not Ready Yet</SectionHeading>
@@ -242,8 +242,8 @@ export default function AutomationReadiness() {
 
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
-              <FAQItem q="We're a solo operator with 2 clients — are we ready?" a="Probably not yet for workflow automation. Focus on landing more clients. But start preparing: use a proper CRM and document your intake process." />
-              <FAQItem q="What if our processes aren't consistent yet?" a="Fix the process first. Automation doesn't fix a broken process — it accelerates it. Map the ideal workflow, then automate." />
+              <FAQItem q="We're a solo operator with 2 clients - are we ready?" a="Probably not yet for workflow automation. Focus on landing more clients. But start preparing: use a proper CRM and document your intake process." />
+              <FAQItem q="What if our processes aren't consistent yet?" a="Fix the process first. Automation doesn't fix a broken process - it accelerates it. Map the ideal workflow, then automate." />
               <FAQItem q="How do we know which automation to start with?" a="The Automation Planner helps you identify this. You can also book a free audit and we'll map it with you." />
               <FAQItem q="We tried automation before and it failed. Does readiness help?" a="Yes. Most automation failures happen because either the workflow wasn't defined or the wrong thing was automated first. The readiness framework prevents both." />
             </div>

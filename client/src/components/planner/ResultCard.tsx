@@ -119,7 +119,7 @@ export default function ResultCard({ opportunity, rank, delay = 0 }: Props) {
         {opportunity.name}
       </h3>
 
-      {/* Description — 3 line clamp */}
+      {/* Description - 3 line clamp */}
       <p
         style={{
           margin: "0 0 14px",

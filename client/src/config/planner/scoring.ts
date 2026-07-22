@@ -6,7 +6,7 @@ export const SCORING_WEIGHTS = {
   frequency: 0.20,
   standardisation: 0.15,
   toolCompatibility: 0.15,
-  humanSensitivity: 0.10, // inverse — lower sensitivity = higher score
+  humanSensitivity: 0.10, // inverse - lower sensitivity = higher score
   quickWinPotential: 0.10,
 };
 

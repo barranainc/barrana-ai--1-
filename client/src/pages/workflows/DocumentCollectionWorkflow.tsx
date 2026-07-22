@@ -222,7 +222,7 @@ export default function DocumentCollectionWorkflow() {
         Staff spend 15+ hours per week chasing documents. The process is the same every time: send the checklist, wait, send a reminder, wait, call the client, receive a partial submission, send another reminder for the outstanding items, wait again. Each cycle takes days. The average collection time for a standard engagement runs 18–21 days.
       </p>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        The cost isn't just time. Incomplete files at the start of an engagement delay billable work, create bottlenecks, and often require the professional to chase the client themselves — taking them away from the work they're actually trained to do.
+        The cost isn't just time. Incomplete files at the start of an engagement delay billable work, create bottlenecks, and often require the professional to chase the client themselves - taking them away from the work they're actually trained to do.
       </p>
 
       {/* Chase vs System diagram */}
@@ -231,7 +231,7 @@ export default function DocumentCollectionWorkflow() {
       {/* Section 2 */}
       <SectionHeading>What Automated Document Collection Does</SectionHeading>
       <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        When an engagement is confirmed, the system sends a personalised document request with a dynamic checklist — the items on the list are determined by the service type, not a generic template. The client receives a secure upload portal link: browser-based, no software download required. As documents arrive, the system tracks each item in the CRM in real time. Every 48 hours, a reminder goes out for any outstanding items — automatically, without staff involvement. At Day 10–14 if items are still missing, an escalation alert fires to the assigned team member for personal follow-up. When the package is complete, the team member is notified immediately.
+        When an engagement is confirmed, the system sends a personalised document request with a dynamic checklist - the items on the list are determined by the service type, not a generic template. The client receives a secure upload portal link: browser-based, no software download required. As documents arrive, the system tracks each item in the CRM in real time. Every 48 hours, a reminder goes out for any outstanding items - automatically, without staff involvement. At Day 10–14 if items are still missing, an escalation alert fires to the assigned team member for personal follow-up. When the package is complete, the team member is notified immediately.
       </p>
 
       {/* Document Dashboard */}
@@ -258,7 +258,7 @@ export default function DocumentCollectionWorkflow() {
       <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
         {[
           { day: "Day 0", label: "Initial Request", desc: "Dynamic checklist sent via email and SMS. Upload portal link included.", color: "#283891" },
-          { day: "Day 2", label: "First Reminder", desc: "Reminder listing specifically the outstanding items — not the full checklist.", color: "#283891" },
+          { day: "Day 2", label: "First Reminder", desc: "Reminder listing specifically the outstanding items - not the full checklist.", color: "#283891" },
           { day: "Day 5", label: "Second Reminder", desc: "Slightly more direct tone. Notes that the file cannot proceed without these items.", color: "#7E0F4A" },
           { day: "Day 10", label: "Escalation Alert", desc: "Team member receives a notification for personal follow-up. Human touch applied.", color: "#DC2626" },
           { day: "Day 14", label: "Account Manager Flag", desc: "Flagged for senior review if still incomplete. Action plan determined case-by-case.", color: "#991B1B" },
@@ -289,7 +289,7 @@ export default function DocumentCollectionWorkflow() {
       <SectionHeading>What Stays Human</SectionHeading>
       <ul style={{ color: "#1A1A2E", lineHeight: 1.9, paddingLeft: "1.5rem", marginBottom: "1.5rem" }}>
         <li>When a client says they don't have a document and need guidance on how to obtain it</li>
-        <li>Sensitive document situations — health records, legal documents — where the conversation needs to be handled personally</li>
+        <li>Sensitive document situations - health records, legal documents - where the conversation needs to be handled personally</li>
         <li>When collection is stalled because the client is dealing with a personal circumstance the team knows about</li>
         <li>Disputes over what documents are required (the system escalates these; they're not handled automatically)</li>
       </ul>
@@ -330,9 +330,9 @@ export default function DocumentCollectionWorkflow() {
       <SectionHeading>Frequently Asked Questions</SectionHeading>
       <div style={{ marginBottom: "2.5rem" }}>
         <FAQItem q="Can the checklist adapt to each client's service type?" a="Yes. The checklist is dynamically generated from the service type field in your CRM. Different service types get different required document lists. The mapping is set up during implementation and can be updated any time." />
-        <FAQItem q="What upload method do clients use?" a="A secure link to a portal — no software download required. Common options: PandaDoc, ShareFile, Google Drive with restricted sharing, or a client portal built into your CRM. Tool selection is partly based on your file size requirements and existing subscriptions." />
+        <FAQItem q="What upload method do clients use?" a="A secure link to a portal - no software download required. Common options: PandaDoc, ShareFile, Google Drive with restricted sharing, or a client portal built into your CRM. Tool selection is partly based on your file size requirements and existing subscriptions." />
         <FAQItem q="What if a client says they don't have a particular document?" a="The system flags this exception and routes it to the assigned team member. The exception is logged in the CRM and the item is removed from the outstanding list with a note. The team member handles the conversation from there." />
-        <FAQItem q="How does it handle large files?" a="Document portal selection is partly based on file size requirements. For large files — medical imaging, large PDFs, architectural drawings — we select portals with higher upload size limits. ShareFile and PandaDoc both support large files well." />
+        <FAQItem q="How does it handle large files?" a="Document portal selection is partly based on file size requirements. For large files - medical imaging, large PDFs, architectural drawings - we select portals with higher upload size limits. ShareFile and PandaDoc both support large files well." />
         <FAQItem q="Can we track collection rate across all active files?" a="Yes. The dashboard view shows collection status across all active files, sortable by overdue items, days elapsed, and completion percentage. This is typically surfaced in a CRM view or a dedicated reporting dashboard." />
       </div>
 

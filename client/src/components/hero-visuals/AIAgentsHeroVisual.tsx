@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const CHATBOT_BLOCKS = [
@@ -27,7 +28,7 @@ const AGENT_DELAY_START = 0.8; // agent tower starts after chatbot finishes
 export default function AIAgentsHeroVisual({ className }: { className?: string }) {
   const reduced = useReducedMotion();
 
-  const chatbotVariants = {
+  const chatbotVariants: Variants = {
     hidden: { scaleY: 0, opacity: 0 },
     visible: (i: number) => ({
       scaleY: 1,
@@ -36,7 +37,7 @@ export default function AIAgentsHeroVisual({ className }: { className?: string }
     }),
   };
 
-  const agentVariants = {
+  const agentVariants: Variants = {
     hidden: { scaleY: 0, opacity: 0, y: 10 },
     visible: (i: number) => ({
       scaleY: 1,
@@ -101,7 +102,7 @@ export default function AIAgentsHeroVisual({ className }: { className?: string }
             CHATBOT
           </div>
 
-          {/* Blocks stacked from bottom — we render top to bottom but align to bottom via flex column-reverse trick */}
+          {/* Blocks stacked from bottom - we render top to bottom but align to bottom via flex column-reverse trick */}
           <div style={{
             display: "flex",
             flexDirection: "column-reverse",

@@ -106,7 +106,7 @@ export default function Benchmarks() {
         </div>
       </section>
 
-      {/* Section 1 — Response Time */}
+      {/* Section 1 - Response Time */}
       <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem" }}>
         <div className="container">
           <span style={sectionLabelStyle}>Response Time</span>
@@ -119,7 +119,7 @@ export default function Benchmarks() {
         </div>
       </section>
 
-      {/* Section 2 — Appointment & Scheduling */}
+      {/* Section 2 - Appointment & Scheduling */}
       <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem", background: "#F7F9FC" }}>
         <div className="container">
           <span style={sectionLabelStyle}>Appointments</span>
@@ -132,7 +132,7 @@ export default function Benchmarks() {
         </div>
       </section>
 
-      {/* Section 3 — Document Collection */}
+      {/* Section 3 - Document Collection */}
       <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem" }}>
         <div className="container">
           <span style={sectionLabelStyle}>Documents</span>
@@ -145,7 +145,7 @@ export default function Benchmarks() {
         </div>
       </section>
 
-      {/* Section 4 — Admin & Capacity */}
+      {/* Section 4 - Admin & Capacity */}
       <section style={{ paddingTop: "3.5rem", paddingBottom: "3.5rem", background: "#F7F9FC" }}>
         <div className="container">
           <span style={sectionLabelStyle}>Admin &amp; Capacity</span>

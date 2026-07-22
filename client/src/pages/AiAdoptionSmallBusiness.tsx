@@ -223,8 +223,8 @@ export default function AiAdoptionSmallBusiness() {
 
   const faqs = [
     { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
-    { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use — your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
-    { q: "Is this relevant for a solo operator?", a: "Yes — solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
+    { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use - your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
+    { q: "Is this relevant for a solo operator?", a: "Yes - solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
     { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we map your current workflows, identify the highest-friction tasks, and recommend a Phase 1 that delivers measurable ROI within the first month." },
     { q: "Is my client data safe?", a: "All data stays within your controlled systems. We do not introduce third-party platforms that store your client information without your knowledge. Every data flow is documented, and all Canadian implementations follow PIPEDA guidelines." },
   ];
@@ -292,7 +292,7 @@ export default function AiAdoptionSmallBusiness() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              AI adoption for a small business means systematically identifying repetitive operational tasks — lead response, booking, intake, document collection, invoicing, and reporting — and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and shows measurable ROI within the first month. Typical investment: $3,000–$15,000 CAD depending on scope.
+              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and shows measurable ROI within the first month. Typical investment: $3,000–$15,000 CAD depending on scope.
             </p>
           </SummaryBox>
 
@@ -310,10 +310,10 @@ export default function AiAdoptionSmallBusiness() {
           {/* Section 1 */}
           <SectionHeading>What AI Adoption Actually Means for a Small Business</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            AI adoption does not mean robots. For small and medium businesses, it means connecting the tools you already use so that routine workflows happen automatically. A client fills out a form — the system creates a CRM record, sends a confirmation email, requests their documents, and books a meeting slot, all within 90 seconds. No one typed anything. No one followed up manually. The work happened because triggers connected to actions.
+            AI adoption does not mean robots. For small and medium businesses, it means connecting the tools you already use so that routine workflows happen automatically. A client fills out a form - the system creates a CRM record, sends a confirmation email, requests their documents, and books a meeting slot, all within 90 seconds. No one typed anything. No one followed up manually. The work happened because triggers connected to actions.
           </p>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            The coordination overhead that currently consumes 30–50% of a small team's day — the chasing, the scheduling, the copy-pasting between systems — is exactly what automation eliminates. You are not replacing your team. You are removing the work that was never the best use of their time.
+            The coordination overhead that currently consumes 30–50% of a small team's day - the chasing, the scheduling, the copy-pasting between systems - is exactly what automation eliminates. You are not replacing your team. You are removing the work that was never the best use of their time.
           </p>
 
           <ManualVsAutomatedDay />
@@ -325,8 +325,8 @@ export default function AiAdoptionSmallBusiness() {
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
             <li><strong>Assessment.</strong> Map every client-facing and internal workflow. Identify where time is lost, where errors occur, and where ROI potential is highest. This is a 60–90 minute structured audit, not a vague discovery call.</li>
-            <li><strong>First Automation.</strong> Deploy a single workflow — typically lead response — that solves the highest-friction point. Build it, test it, and prove the ROI before expanding.</li>
-            <li><strong>Expand.</strong> Add 2–3 connected workflows (booking, intake, document collection). Each one compounds the previous — the system becomes more valuable as the workflows connect.</li>
+            <li><strong>First Automation.</strong> Deploy a single workflow - typically lead response - that solves the highest-friction point. Build it, test it, and prove the ROI before expanding.</li>
+            <li><strong>Expand.</strong> Add 2–3 connected workflows (booking, intake, document collection). Each one compounds the previous - the system becomes more valuable as the workflows connect.</li>
             <li><strong>Connect.</strong> Integrate tools into a unified operational system. Data flows between your CRM, calendar, documents, and accounting without human intervention.</li>
             <li><strong>Optimise.</strong> Monitor performance, measure results, and iterate. This is where you move from "automation works" to "automation compounds."</li>
           </ol>
@@ -337,21 +337,21 @@ export default function AiAdoptionSmallBusiness() {
           <SectionHeading>What Can Be Automated in a Small Business</SectionHeading>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>Ranked by impact for most service businesses:</p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Lead response</strong> — 90-second response to every inquiry, 24/7, with qualification and routing</li>
-            <li><strong>Appointment booking and reminders</strong> — self-serve booking, confirmation, and reminder sequences</li>
-            <li><strong>Client intake and onboarding</strong> — form delivery, CRM record creation, welcome sequences</li>
-            <li><strong>Document collection</strong> — automated checklists with follow-up reminders every 48 hours</li>
-            <li><strong>Invoicing</strong> — invoice creation triggered by job completion, with payment reminder sequences</li>
-            <li><strong>Follow-up sequences</strong> — post-consultation, post-quote, post-delivery touch sequences</li>
-            <li><strong>Internal handoffs</strong> — stage transition notifications, task assignments, team alerts</li>
-            <li><strong>Reporting</strong> — weekly performance summaries delivered automatically to relevant team members</li>
+            <li><strong>Lead response</strong> - 90-second response to every inquiry, 24/7, with qualification and routing</li>
+            <li><strong>Appointment booking and reminders</strong> - self-serve booking, confirmation, and reminder sequences</li>
+            <li><strong>Client intake and onboarding</strong> - form delivery, CRM record creation, welcome sequences</li>
+            <li><strong>Document collection</strong> - automated checklists with follow-up reminders every 48 hours</li>
+            <li><strong>Invoicing</strong> - invoice creation triggered by job completion, with payment reminder sequences</li>
+            <li><strong>Follow-up sequences</strong> - post-consultation, post-quote, post-delivery touch sequences</li>
+            <li><strong>Internal handoffs</strong> - stage transition notifications, task assignments, team alerts</li>
+            <li><strong>Reporting</strong> - weekly performance summaries delivered automatically to relevant team members</li>
           </ol>
 
           {/* Section 4 */}
           <SectionHeading>What Should Stay Human</SectionHeading>
           <AutomateVsHumanGrid />
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            Automation handles volume and consistency. Humans handle judgement and relationships. The goal is not to remove humans from your business — it is to remove humans from the tasks that do not require a human. Professional advice, pricing decisions, regulated determinations, sensitive communications, and final sign-off on deliverables should always remain with a qualified person.
+            Automation handles volume and consistency. Humans handle judgement and relationships. The goal is not to remove humans from your business - it is to remove humans from the tasks that do not require a human. Professional advice, pricing decisions, regulated determinations, sensitive communications, and final sign-off on deliverables should always remain with a qualified person.
           </p>
 
           {/* Section 5 */}
@@ -377,9 +377,9 @@ export default function AiAdoptionSmallBusiness() {
           {/* Section 6 */}
           <SectionHeading>Common Mistakes</SectionHeading>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Starting with a complex workflow.</strong> The first automation should be simple, fast, and high-impact. Lead response or appointment booking — not a multi-stage, exception-heavy process.</li>
+            <li><strong>Starting with a complex workflow.</strong> The first automation should be simple, fast, and high-impact. Lead response or appointment booking - not a multi-stage, exception-heavy process.</li>
             <li><strong>Automating everything at once.</strong> Attempting to automate 6 workflows simultaneously produces delays, confusion, and poor results. Phase your implementation.</li>
-            <li><strong>Choosing tools before mapping workflows.</strong> "We bought Zapier — now what do we connect?" Tools are infrastructure. Map the workflow first, then select the tool that supports it.</li>
+            <li><strong>Choosing tools before mapping workflows.</strong> "We bought Zapier - now what do we connect?" Tools are infrastructure. Map the workflow first, then select the tool that supports it.</li>
             <li><strong>Not testing with real data.</strong> Many automation failures happen because the system was built with hypothetical scenarios. Test every workflow with real client data before going live.</li>
             <li><strong>No monitoring or fallback paths.</strong> Every automated workflow needs error handling, retry logic, and a fallback path to a human. If the automation fails, someone needs to know.</li>
             <li><strong>Expecting zero maintenance.</strong> Automation requires monitoring and iteration. Tools update, business processes change, and edge cases emerge. Budget for ongoing support.</li>
@@ -417,7 +417,7 @@ export default function AiAdoptionSmallBusiness() {
               Ready to eliminate the coordination overhead?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Start with the Automation Planner to get a personalised workflow recommendation — or book a free Automation Audit.
+              Start with the Automation Planner to get a personalised workflow recommendation - or book a free Automation Audit.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>

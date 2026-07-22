@@ -23,7 +23,7 @@ const costs = [
     prefix: "$",
     period: "/year",
     label: "Wasted Admin",
-    desc: "Per employee spent on tasks automation handles — data entry, reminders, follow-up.",
+    desc: "Per employee spent on tasks automation handles - data entry, reminders, follow-up.",
   },
   {
     Icon: Clock,

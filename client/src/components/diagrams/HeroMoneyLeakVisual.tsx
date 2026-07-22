@@ -1,5 +1,5 @@
 /**
- * HeroMoneyLeakVisual.tsx — Money Leak Bar Chart for "Know My Costs" hero tab
+ * HeroMoneyLeakVisual.tsx - Money Leak Bar Chart for "Know My Costs" hero tab
  * 4 horizontal bars showing money leaks, stacking to a total.
  */
 

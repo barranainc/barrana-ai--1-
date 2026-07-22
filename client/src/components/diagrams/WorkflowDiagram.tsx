@@ -13,7 +13,11 @@ import { useIsMobile } from "@/hooks/useMobile";
 export type WorkflowStepType = "trigger" | "action" | "ai" | "outcome";
 
 export interface WorkflowStep {
+  id?: string;
   label: string;
+  sublabel?: string;
+  icon?: string;
+  color?: string;
   type: WorkflowStepType;
 }
 
@@ -55,7 +59,7 @@ export default function WorkflowDiagram({ steps, resultBadge }: WorkflowDiagramP
 
   return (
     <div ref={containerRef}>
-      {/* Desktop: scrollable horizontal chip flow — never wraps */}
+      {/* Desktop: scrollable horizontal chip flow - never wraps */}
       <div
         style={{
           display: isMobile ? "none" : "block",

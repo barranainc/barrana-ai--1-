@@ -116,7 +116,7 @@ export default function WhenAiIsNotTheAnswer() {
               When AI Is Not the Answer: 7 Signs Automation Is Not What You Need Right Now
             </h1>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1.05rem", lineHeight: 1.7 }}>
-              The honest guide to recognising when to wait — and what to fix first.
+              The honest guide to recognising when to wait - and what to fix first.
             </p>
           </div>
         </section>
@@ -126,12 +126,12 @@ export default function WhenAiIsNotTheAnswer() {
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
               <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.7 }}>
-                AI automation is not the right solution when: you don't have a repeatable process, your problem is a people issue, your volume is under 10 interactions per month, your data is too messy, you can't define success, you're automating in a high-accountability area without oversight, or you haven't diagnosed the root problem. Fix these first — then automate.
+                AI automation is not the right solution when: you don't have a repeatable process, your problem is a people issue, your volume is under 10 interactions per month, your data is too messy, you can't define success, you're automating in a high-accountability area without oversight, or you haven't diagnosed the root problem. Fix these first - then automate.
               </p>
             </SummaryBox>
 
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "2rem" }}>
-              Automation is one of the most powerful tools available to small businesses. But it is not a universal solution. Knowing when <em>not</em> to automate is as important as knowing what to automate. Building a system on a shaky foundation doesn't fix the foundation — it amplifies its flaws.
+              Automation is one of the most powerful tools available to small businesses. But it is not a universal solution. Knowing when <em>not</em> to automate is as important as knowing what to automate. Building a system on a shaky foundation doesn't fix the foundation - it amplifies its flaws.
             </p>
 
             <SectionHeading>The 7 Signs</SectionHeading>
@@ -142,12 +142,12 @@ export default function WhenAiIsNotTheAnswer() {
               {[
                 {
                   num: 1, title: "You don't have a repeatable process",
-                  body: "If you do it differently every time, automating it will lock in inconsistency at scale. The automation will behave unpredictably because the underlying process is unpredictable. This doesn't mean your process needs to be perfect — it needs to follow the same general steps for most clients, most of the time.",
+                  body: "If you do it differently every time, automating it will lock in inconsistency at scale. The automation will behave unpredictably because the underlying process is unpredictable. This doesn't mean your process needs to be perfect - it needs to follow the same general steps for most clients, most of the time.",
                   fix: "Document the ideal process first. Even a rough 1-page flowchart is enough to start. Define the steps, the inputs, the outputs, and the exceptions. Then automate the core path."
                 },
                 {
                   num: 2, title: "Your problem is a people problem, not a systems problem",
-                  body: "If the issue is lack of follow-through, accountability, or motivation on your team, automation won't solve it. A reminder system can't make someone want to do good work. An onboarding automation can't compensate for poor training. Technology amplifies what's already there — including dysfunction.",
+                  body: "If the issue is lack of follow-through, accountability, or motivation on your team, automation won't solve it. A reminder system can't make someone want to do good work. An onboarding automation can't compensate for poor training. Technology amplifies what's already there - including dysfunction.",
                   fix: "Address the people issue first. Define expectations, establish accountability, and create the right incentive structure. Once the human side is functioning, automation can multiply the results."
                 },
                 {
@@ -157,7 +157,7 @@ export default function WhenAiIsNotTheAnswer() {
                 },
                 {
                   num: 4, title: "Your data is too messy",
-                  body: "Automation depends on clean, structured, consistent data. If your CRM has duplicate records, inconsistent naming conventions, missing fields, or data spread across five different spreadsheets, any automation built on top of it will produce unreliable results. Garbage in, garbage out — at scale.",
+                  body: "Automation depends on clean, structured, consistent data. If your CRM has duplicate records, inconsistent naming conventions, missing fields, or data spread across five different spreadsheets, any automation built on top of it will produce unreliable results. Garbage in, garbage out - at scale.",
                   fix: "Run a data cleanup sprint before automating. Standardise your client records, consolidate your data sources, and define the fields that automation will depend on. This cleanup often takes 2–4 weeks but is foundational."
                 },
                 {
@@ -167,8 +167,8 @@ export default function WhenAiIsNotTheAnswer() {
                 },
                 {
                   num: 6, title: "You're automating in a high-accountability area without oversight",
-                  body: "Professional advice, medical decisions, regulated communications, and complex client-specific judgements are areas where automation can assist but should not replace human oversight. The risk of errors in these areas is not just operational — it's legal and reputational.",
-                  fix: "Keep humans in the loop. Use automation to draft, prepare, and prompt — but require human review and approval before anything sensitive is sent or actioned. Build oversight into the workflow, not around it."
+                  body: "Professional advice, medical decisions, regulated communications, and complex client-specific judgements are areas where automation can assist but should not replace human oversight. The risk of errors in these areas is not just operational - it's legal and reputational.",
+                  fix: "Keep humans in the loop. Use automation to draft, prepare, and prompt - but require human review and approval before anything sensitive is sent or actioned. Build oversight into the workflow, not around it."
                 },
                 {
                   num: 7, title: "You haven't diagnosed the root problem",
@@ -192,10 +192,10 @@ export default function WhenAiIsNotTheAnswer() {
 
             <SectionHeading>The Common Thread</SectionHeading>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              All 7 signs point to the same root issue: automation should solve a defined, measured problem — not be purchased speculatively because it sounds powerful. The businesses that get the most from automation are those that treat it as a precision tool, not a cure-all.
+              All 7 signs point to the same root issue: automation should solve a defined, measured problem - not be purchased speculatively because it sounds powerful. The businesses that get the most from automation are those that treat it as a precision tool, not a cure-all.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              The most successful automation projects start with a clearly articulated problem, a measurable baseline, and a defined success outcome. Everything else — the tools, the platforms, the integrations — follows from that foundation.
+              The most successful automation projects start with a clearly articulated problem, a measurable baseline, and a defined success outcome. Everything else - the tools, the platforms, the integrations - follows from that foundation.
             </p>
 
             <DiagnosisFramework />
@@ -205,12 +205,12 @@ export default function WhenAiIsNotTheAnswer() {
               If any of the 7 signs apply to your business right now, here is the sequence:
             </p>
             <ol style={{ color: "#7B7B7B", lineHeight: 2, paddingLeft: "1.25rem" }}>
-              <li><strong style={{ color: "#1A1A2E" }}>Map your workflows</strong> — document what you actually do today, step by step</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Identify the highest-cost bottleneck</strong> — where is time, money, or opportunity being lost?</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Define success</strong> — what does "fixed" look like, in measurable terms?</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Clean your data</strong> — standardise client records and consolidate data sources</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Fix process inconsistencies</strong> — document the ideal path before you automate it</li>
-              <li><strong style={{ color: "#1A1A2E" }}>Then automate</strong> — with a defined problem, clean data, and measurable success criteria</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Map your workflows</strong> - document what you actually do today, step by step</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Identify the highest-cost bottleneck</strong> - where is time, money, or opportunity being lost?</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Define success</strong> - what does "fixed" look like, in measurable terms?</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Clean your data</strong> - standardise client records and consolidate data sources</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Fix process inconsistencies</strong> - document the ideal path before you automate it</li>
+              <li><strong style={{ color: "#1A1A2E" }}>Then automate</strong> - with a defined problem, clean data, and measurable success criteria</li>
             </ol>
 
             <ContextualCTA
@@ -224,7 +224,7 @@ export default function WhenAiIsNotTheAnswer() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="What if I'm not sure whether my problem is a people issue or systems issue?" a="Run an experiment: have the person follow the ideal process manually for 2 weeks. If results improve with manual effort, it's a process issue. If the person can't sustain it, it's a systems issue." />
               <FAQItem q="We only have 8 client interactions per month. Should we wait?" a="Focus on lead generation first. When you reach 20+ per month, automation ROI becomes compelling. Use the time to document your processes." />
-              <FAQItem q="How do I clean up our data before automating?" a="A data audit and cleanup sprint is often part of Phase 1. We can include it in the automation scope — typically 1–2 weeks of structured cleanup before building." />
+              <FAQItem q="How do I clean up our data before automating?" a="A data audit and cleanup sprint is often part of Phase 1. We can include it in the automation scope - typically 1–2 weeks of structured cleanup before building." />
               <FAQItem q="We've invested in automation before and it didn't work. Was it one of these 7 reasons?" a="Almost always yes. The most common root causes are Sign 1 (no repeatable process) or Sign 7 (didn't diagnose the problem first). Both lead to building the wrong thing." />
             </div>
 

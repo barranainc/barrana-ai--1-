@@ -310,18 +310,18 @@ export default function OperationalFrictionMap() {
           <SectionHeading>What Is Operational Friction?</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             Operational friction is the invisible tax your business pays every day. It's the time your team spends on tasks that aren't billable, aren't strategic,
-            and don't require expertise — but still demand attention. A client waiting 3 hours for a confirmation email.
+            and don't require expertise - but still demand attention. A client waiting 3 hours for a confirmation email.
             A staff member re-entering data from a form into your CRM. A follow-up that never happened because someone was too busy.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-            For professional services firms — immigration lawyers, accountants, physiotherapists, insurance brokers — operational friction typically consumes
+            For professional services firms - immigration lawyers, accountants, physiotherapists, insurance brokers - operational friction typically consumes
             15–25% of total staff time. That's one quarter of your payroll delivering zero direct value.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
             The Friction Map helps you see it clearly, prioritize ruthlessly, and act precisely.
           </p>
 
-          <FrictionMatrix showDots={exampleDots} title="Figure 1 — Friction Quadrant Framework" />
+          <FrictionMatrix showDots={exampleDots} title="Figure 1 - Friction Quadrant Framework" />
 
           <p style={{ fontSize: "0.875rem", color: "#7B7B7B", marginTop: "-1rem", marginBottom: "2rem", fontStyle: "italic" }}>
             Plot any task by how often it occurs (horizontal) and how much professional skill it requires (vertical). The bottom-right quadrant is your automation target zone.
@@ -332,22 +332,22 @@ export default function OperationalFrictionMap() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
               {
-                title: "AUTOMATE FIRST — Bottom Right",
+                title: "AUTOMATE FIRST - Bottom Right",
                 description: "High-frequency, low-skill tasks. These are your highest ROI automation targets. Think: intake form processing, appointment confirmations, payment reminders, status update emails. Every one of these running manually is waste.",
                 bg: "#FDF2F8", border: "#7E0F4A", titleColor: "#7E0F4A",
               },
               {
-                title: "Protect — Top Right",
-                description: "High-frequency, high-skill tasks. These require your professionals and should stay human. But the administrative layer around them — scheduling, document requests, follow-up confirmations — can often be automated to free up expert time.",
+                title: "Protect - Top Right",
+                description: "High-frequency, high-skill tasks. These require your professionals and should stay human. But the administrative layer around them - scheduling, document requests, follow-up confirmations - can often be automated to free up expert time.",
                 bg: "#EEF2FF", border: "#283891", titleColor: "#283891",
               },
               {
-                title: "Batch & Simplify — Bottom Left",
+                title: "Batch & Simplify - Bottom Left",
                 description: "Low-frequency, low-skill tasks. These aren't worth complex automation but can often be batched into efficient routines or handled with simple templates.",
                 bg: "#F8FAFC", border: "#CBD5E1", titleColor: "#374151",
               },
               {
-                title: "Monitor — Top Left",
+                title: "Monitor - Top Left",
                 description: "Low-frequency, high-skill tasks. These are specialized activities that happen rarely and require deep expertise. Keep them human but track time spent to reassess as your business scales.",
                 bg: "#F8FAFC", border: "#CBD5E1", titleColor: "#374151",
               },
@@ -367,10 +367,10 @@ export default function OperationalFrictionMap() {
           <SectionHeading>How to Map Your Business in 5 Steps</SectionHeading>
           <ol style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 1.4 }}>
             {[
-              { n: 1, title: "List every recurring task", body: "Spend 30 minutes listing everything your team does repeatedly — daily, weekly, and monthly. Include tasks that feel small. Focus on the moment between a client action and a business response." },
-              { n: 2, title: "Rate frequency (1–5)", body: "Assign a frequency score: 1 = rarely (once a month or less), 5 = constantly (multiple times per day). Don't overthink this — a rough estimate is sufficient." },
+              { n: 1, title: "List every recurring task", body: "Spend 30 minutes listing everything your team does repeatedly - daily, weekly, and monthly. Include tasks that feel small. Focus on the moment between a client action and a business response." },
+              { n: 2, title: "Rate frequency (1–5)", body: "Assign a frequency score: 1 = rarely (once a month or less), 5 = constantly (multiple times per day). Don't overthink this - a rough estimate is sufficient." },
               { n: 3, title: "Rate skill required (1–5)", body: "Assess how much professional judgment the task requires. Data entry and confirmations score low. Strategic advice and complex analysis score high." },
-              { n: 4, title: "Plot on the matrix", body: "Place each task in one of the four quadrants. Tasks that score high frequency AND low skill go in the bottom-right — your Automate First zone." },
+              { n: 4, title: "Plot on the matrix", body: "Place each task in one of the four quadrants. Tasks that score high frequency AND low skill go in the bottom-right - your Automate First zone." },
               { n: 5, title: "Prioritize by time cost", body: "Within the Automate First quadrant, rank tasks by time cost (frequency × minutes per occurrence). The top 3 items on this list are your automation roadmap." },
             ].map((step) => (
               <li key={step.n} style={{ marginBottom: "1.25rem", paddingLeft: "0.5rem" }}>
@@ -383,10 +383,10 @@ export default function OperationalFrictionMap() {
           <SectionHeading>Example: Immigration Firm Friction Map</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             Here's what a completed Friction Map looks like for a typical immigration law firm with 4–8 staff.
-            Notice how several high-ROI tasks cluster in the bottom-right quadrant — and how client-facing strategy stays top-right.
+            Notice how several high-ROI tasks cluster in the bottom-right quadrant - and how client-facing strategy stays top-right.
           </p>
 
-          <FrictionMatrix showDots={immigrationDots} isFilled title="Figure 2 — Immigration Firm Example" />
+          <FrictionMatrix showDots={immigrationDots} isFilled title="Figure 2 - Immigration Firm Example" />
 
           <SectionHeading>Implementation Process</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
