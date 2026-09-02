@@ -272,6 +272,29 @@ export default function About() {
         </div>
       </section>
 
+      {/* AI Search Visibility Practice */}
+      <section className="py-16 lg:py-20" style={{ backgroundColor: "#FFFFFF" }}>
+        <div className="container">
+          <div className="max-w-3xl">
+            <div className="section-divider mb-4">
+              <span className="section-label">Our AI Search Visibility Practice</span>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+              <a
+                href="https://www.aisearchready.ca/"
+                target="_blank"
+                rel="noopener"
+                className="font-semibold"
+                style={{ color: "#283891" }}
+              >
+                AI Search Ready
+              </a>{" "}
+              is Barrana.ai's dedicated AI search visibility practice. It helps businesses improve how they are found, understood, cited and recommended by Google AI Overviews, ChatGPT, Gemini, Perplexity and other AI-powered search tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section
         className="py-20"

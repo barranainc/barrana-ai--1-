@@ -8,6 +8,7 @@ const exploreLinks = [
   { label: "Workflow Insights", href: "/insights/what-to-automate-first" },
   { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },
   { label: "About Barrana", href: "/about" },
+  { label: "AI Search Visibility — AI Search Ready", href: "https://www.aisearchready.ca/", external: true },
 ];
 
 const workflowLinks = [
@@ -44,7 +45,18 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {exploreLinks.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sm text-slate-300 transition hover:text-white">{item.label}</Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener"
+                      className="text-sm text-slate-300 transition hover:text-white"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="text-sm text-slate-300 transition hover:text-white">{item.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>
