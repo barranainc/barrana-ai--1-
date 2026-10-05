@@ -1,7 +1,8 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { useEffect } from "react";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
@@ -113,6 +114,20 @@ import CampaignContractors from "./pages/campaign/CampaignContractors";
 import CampaignDental from "./pages/campaign/CampaignDental";
 import CampaignLawFirms from "./pages/campaign/CampaignLawFirms";
 import CampaignRealEstate from "./pages/campaign/CampaignRealEstate";
+
+type MetaPixelWindow = Window & {
+  fbq?: (...args: unknown[]) => void;
+};
+
+function MetaPixelPageViews() {
+  const [location] = useLocation();
+
+  useEffect(() => {
+    (window as MetaPixelWindow).fbq?.("track", "PageView");
+  }, [location]);
+
+  return null;
+}
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -281,6 +296,7 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
+          <MetaPixelPageViews />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

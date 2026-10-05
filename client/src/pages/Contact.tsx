@@ -66,6 +66,9 @@ export default function Contact() {
         throw new Error(result.error || "The request could not be submitted.");
       }
 
+      (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", {
+        content_name: "Initial Workflow Conversation",
+      });
       setSubmitted(true);
       toast.success("Your request was sent.");
     } catch (error) {
