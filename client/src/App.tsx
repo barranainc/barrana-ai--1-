@@ -65,6 +65,7 @@ import AutomationPlanner from "./pages/AutomationPlanner";
 import CaseStudies from "./pages/CaseStudies";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 // SEO/AEO Expansion Pages
 import KnowledgeBase from "./pages/KnowledgeBase";
@@ -216,6 +217,8 @@ function LayoutRoutes() {
         <Route path="/case-studies/marketing-agency-liberty-village" component={MarketingAgencyLibertyVillage} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/privacy-policy" component={PrivacyPolicy} />
+        <Route path="/privacy">{() => { window.location.href = "/privacy-policy"; return null; }}</Route>
         <Route path="/faq" component={FAQ} />
 
         {/* SEO/AEO Expansion Pages */}
