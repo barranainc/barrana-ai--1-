@@ -1,244 +1,522 @@
 import { Link } from "wouter";
+import {
+  Database,
+  ExternalLink,
+  LockKeyhole,
+  Mail,
+  Megaphone,
+  ShieldCheck,
+  UserRoundCheck,
+} from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+
+const sections = [
+  { id: "scope", label: "Scope and accountability" },
+  { id: "collection", label: "Information we collect" },
+  { id: "uses", label: "How we use information" },
+  { id: "meta", label: "Facebook and Instagram ads" },
+  { id: "sharing", label: "Service providers and disclosure" },
+  { id: "retention", label: "Retention and safeguards" },
+  { id: "choices", label: "Your choices and rights" },
+  { id: "contact", label: "Contact the Privacy Lead" },
+];
+
+const summaryItems = [
+  {
+    icon: UserRoundCheck,
+    title: "You choose what to provide",
+    text: "Inquiry forms ask for business contact details and information about the workflow you want to discuss.",
+  },
+  {
+    icon: Database,
+    title: "We use it for a defined purpose",
+    text: "We use the information to respond, assess fit, deliver services, maintain records, and protect the website.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "You can ask about your information",
+    text: "You may request access, correction, or deletion, subject to legal and recordkeeping requirements.",
+  },
+];
+
+function PolicySection({
+  id,
+  number,
+  title,
+  children,
+}: {
+  id: string;
+  number: string;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section
+      id={id}
+      className="scroll-mt-28 border-t border-slate-200 py-10 first:border-t-0 first:pt-0"
+    >
+      <div className="flex gap-5 sm:gap-7">
+        <span
+          aria-hidden="true"
+          className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#E9EDFF] text-xs font-extrabold text-[#283891]"
+        >
+          {number}
+        </span>
+        <div className="min-w-0 flex-1">
+          <h2 className="text-2xl font-extrabold tracking-[-0.025em] text-[#111A36]">
+            {title}
+          </h2>
+          <div className="mt-5 space-y-4 text-[0.98rem] leading-7 text-slate-600">
+            {children}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-[#F5F6FA]">
+    <div className="min-h-screen bg-[#F5F6FA] text-slate-950">
       <SEOHead
         title="Privacy Policy | Barrana.ai"
-        description="Barrana.ai privacy policy. Learn how we collect, use, protect, and manage your personal information in accordance with Canadian privacy law (PIPEDA)."
+        description="How Barrana.ai collects, uses, shares, retains, and protects personal information, including information received through Facebook and Instagram ads."
       />
 
-      <section className="relative overflow-hidden bg-[#09142F] py-16 text-white lg:py-20">
-        <div
-          className="absolute inset-0 opacity-30"
+      <section className="relative overflow-hidden bg-[#09142F] text-white">
+        <span
+          className="absolute inset-0 opacity-35"
           aria-hidden="true"
           style={{
             backgroundImage:
-              "linear-gradient(rgba(117,135,209,0.14) 1px, transparent 1px), linear-gradient(90deg, rgba(117,135,209,0.14) 1px, transparent 1px)",
+              "linear-gradient(rgba(117,135,209,0.13) 1px, transparent 1px), linear-gradient(90deg, rgba(117,135,209,0.13) 1px, transparent 1px)",
             backgroundSize: "44px 44px",
           }}
         />
-        <div className="container relative max-w-4xl">
-          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">Legal</p>
-          <h1 className="mt-5 text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl">Privacy Policy</h1>
-          <p className="mt-6 text-lg leading-8 text-slate-300">
-            Last updated: October 8, 2026
-          </p>
-        </div>
-      </section>
+        <span
+          className="absolute -right-36 top-10 h-96 w-96 rounded-full border border-[#E7B1CD]/20"
+          aria-hidden="true"
+        />
+        <div className="container relative py-16 lg:py-20">
+          <nav
+            aria-label="Breadcrumb"
+            className="flex items-center gap-2 text-sm text-slate-400"
+          >
+            <Link href="/" className="transition hover:text-white">
+              Home
+            </Link>
+            <span aria-hidden="true">/</span>
+            <span className="text-slate-200">Privacy Policy</span>
+          </nav>
 
-      <section className="py-14 lg:py-20">
-        <div className="container max-w-4xl">
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm shadow-slate-900/[0.03] sm:p-10 lg:p-12">
-            <div className="prose prose-slate max-w-none">
-              <h2>1. Introduction</h2>
-              <p>
-                This privacy policy explains how Barrana.ai ("Barrana," "we," "our," or "us") collects, uses, discloses, and protects your personal information when you use our website, services, or contact us for information about workflow automation and AI implementation services.
+          <div className="mt-10 grid items-end gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+            <div>
+              <h1 className="max-w-3xl text-4xl font-extrabold tracking-[-0.045em] sm:text-5xl lg:text-6xl">
+                Your information, explained plainly.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+                This policy explains how Barrana handles personal information
+                from this website, service inquiries, Facebook and Instagram
+                ads, Meta lead forms, and the Meta Pixel.
               </p>
-              <p>
-                Barrana.ai is a Canadian AI automation company founded by Ikram Rana. We are committed to protecting your privacy and handling your personal information in accordance with Canada's Personal Information Protection and Electronic Documents Act (PIPEDA) and other applicable privacy laws.
+              <p className="mt-7 text-sm font-semibold text-[#E7B1CD]">
+                Effective October 8, 2026
               </p>
+            </div>
 
-              <h2>2. Contact Information</h2>
-              <p>
-                If you have questions about this privacy policy or how we handle your personal information, you can contact us at:
+            <div className="border-l-2 border-[#7E0F4A] bg-white/[0.055] p-6 backdrop-blur-sm sm:p-7">
+              <p className="text-sm font-bold text-white">The short version</p>
+              <p className="mt-3 text-sm leading-7 text-slate-300">
+                Barrana collects the information needed to respond to business
+                inquiries and provide services. We do not sell personal
+                information. We use service providers for hosting and customer
+                relationship management, and we explain Meta advertising
+                separately below.
               </p>
-              <div className="not-prose rounded-xl border border-slate-200 bg-slate-50 p-5 text-sm">
-                <p className="font-semibold text-slate-900">Barrana.ai</p>
-                <p className="mt-2 text-slate-600">50 Corstate Avenue, Unit 01</p>
-                <p className="text-slate-600">Vaughan, Ontario L4K 4X2</p>
-                <p className="text-slate-600">Canada</p>
-                <p className="mt-3 text-slate-600">Email: <a href="mailto:help@barrana.ai" className="text-[#283891] hover:underline">help@barrana.ai</a></p>
-                <p className="text-slate-600">Phone: <a href="tel:+16473676771" className="text-[#283891] hover:underline">+1 647 367 6771</a></p>
-              </div>
-
-              <h2>3. Information We Collect</h2>
-              <h3>3.1 Information You Provide Directly</h3>
-              <p>
-                When you contact us through forms on our website or submit information to inquire about our services, we may collect:
-              </p>
-              <ul>
-                <li>Your name</li>
-                <li>Work email address</li>
-                <li>Phone number (optional)</li>
-                <li>Business name</li>
-                <li>Industry</li>
-                <li>Team size (optional)</li>
-                <li>Workflow descriptions and business information you choose to share</li>
-                <li>Any additional information you provide in messages or notes</li>
-              </ul>
-
-              <h3>3.2 Information from Third-Party Services</h3>
-              <p>
-                If you contact us through social media platforms, advertising platforms, or lead generation forms operated by third parties (such as Meta, Facebook, or Instagram lead forms), we may receive the information you submit through those platforms in accordance with your settings and the third party's privacy policy.
-              </p>
-
-              <h3>3.3 Automatically Collected Information</h3>
-              <p>
-                When you visit our website, we automatically collect certain technical information, including:
-              </p>
-              <ul>
-                <li>Your IP address</li>
-                <li>Browser type and version</li>
-                <li>Device type and operating system</li>
-                <li>Pages you visit and how you interact with our site</li>
-                <li>Date and time of your visit</li>
-                <li>Referring website or source</li>
-              </ul>
-
-              <h2>4. How We Use Your Information</h2>
-              <p>
-                We use the personal information we collect for the following purposes:
-              </p>
-              <ul>
-                <li><strong>Service delivery and communication:</strong> To respond to your inquiries, provide information about our workflow automation and AI implementation services, schedule consultations, and communicate about potential engagements.</li>
-                <li><strong>Business operations:</strong> To analyze workflow requirements, prepare proposals, deliver discovery and implementation services, and maintain records of our business interactions.</li>
-                <li><strong>Marketing and advertising:</strong> To provide relevant information about our services, send follow-up communications (with your consent where required), and measure the effectiveness of our marketing efforts.</li>
-                <li><strong>Website improvement:</strong> To understand how visitors use our website, improve user experience, diagnose technical issues, and enhance our content and services.</li>
-                <li><strong>Legal compliance:</strong> To comply with applicable laws, respond to legal requests, protect our rights and property, and enforce our terms of service.</li>
-              </ul>
-
-              <h2>5. Cookies and Tracking Technologies</h2>
-              <h3>5.1 Cookies</h3>
-              <p>
-                Our website uses cookies and similar tracking technologies. Cookies are small text files stored on your device that help us recognize you, remember your preferences, and understand how you use our site.
-              </p>
-
-              <h3>5.2 Analytics and Advertising Tools</h3>
-              <p>
-                We use third-party analytics and advertising tools to understand website traffic, measure the performance of our marketing campaigns, and deliver relevant advertisements. These tools may include:
-              </p>
-              <ul>
-                <li><strong>Meta Pixel (Facebook Pixel):</strong> We use the Meta Pixel to track conversions from Facebook and Instagram advertisements, build audiences for ad targeting, and measure the effectiveness of our advertising campaigns. The Meta Pixel collects information about your visits to our website, including pages viewed and actions taken.</li>
-                <li><strong>Other advertising and analytics services:</strong> We may use additional services from time to time to analyze user behavior, optimize our marketing efforts, and improve website performance.</li>
-              </ul>
-
-              <h3>5.3 Managing Cookies and Ad Preferences</h3>
-              <p>
-                You can control cookies through your browser settings. Most browsers allow you to refuse cookies, delete existing cookies, or receive alerts before cookies are stored. However, disabling cookies may affect your ability to use certain features of our website.
-              </p>
-              <p>
-                To opt out of personalized advertising based on your online activity:
-              </p>
-              <ul>
-                <li>Visit the Digital Advertising Alliance of Canada at <a href="https://youradchoices.ca/" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">youradchoices.ca</a></li>
-                <li>Adjust your ad preferences on <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">Facebook</a> and <a href="https://www.instagram.com/accounts/privacy_and_security/" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">Instagram</a></li>
-                <li>Review and adjust privacy settings on other platforms where you may see our advertisements</li>
-              </ul>
-
-              <h2>6. How We Share Your Information</h2>
-              <p>
-                We do not sell your personal information. We may share your information in the following circumstances:
-              </p>
-              <ul>
-                <li><strong>Service providers:</strong> We may share information with trusted third-party service providers who assist us with business operations, such as email delivery, customer relationship management, website hosting, analytics, payment processing, and marketing services. These providers are contractually obligated to protect your information and use it only for the purposes we specify.</li>
-                <li><strong>Advertising platforms:</strong> We share limited information with advertising platforms (such as Meta, Facebook, and Instagram) to deliver, measure, and optimize our advertising campaigns. This may include hashed email addresses, phone numbers, or other identifiers that help match you with platform user accounts for ad targeting and measurement purposes.</li>
-                <li><strong>Business transfers:</strong> If Barrana.ai is involved in a merger, acquisition, sale of assets, or other business transaction, your information may be transferred as part of that transaction.</li>
-                <li><strong>Legal requirements:</strong> We may disclose information when required by law, legal process, court order, government request, or to protect our rights, property, safety, or the rights, property, or safety of others.</li>
-                <li><strong>With your consent:</strong> We may share your information for other purposes with your explicit consent.</li>
-              </ul>
-
-              <h2>7. Cross-Border Data Storage and Processing</h2>
-              <p>
-                Some of our service providers and technology platforms are located outside of Canada, including in the United States and other countries. When we use these services, your personal information may be stored, processed, or accessed in those jurisdictions, which may have different privacy laws than Canada.
-              </p>
-              <p>
-                We take reasonable steps to ensure that third-party service providers provide an adequate level of protection for your personal information, including through contractual commitments. However, information stored or processed outside Canada may be subject to lawful access by courts, law enforcement, and national security authorities in those jurisdictions.
-              </p>
-
-              <h2>8. Data Retention</h2>
-              <p>
-                We retain your personal information only as long as necessary to fulfill the purposes for which it was collected, comply with legal obligations, resolve disputes, and enforce our agreements.
-              </p>
-              <p>
-                Retention periods vary depending on the type of information and the purpose for which it was collected. For example:
-              </p>
-              <ul>
-                <li>Contact form submissions and inquiry records: retained for as long as necessary to respond to your inquiry and maintain business records, typically 3 to 7 years.</li>
-                <li>Client engagement records: retained for the duration of the engagement and for a reasonable period afterward to support ongoing services, legal compliance, and business records, typically 7 years or as required by law.</li>
-                <li>Marketing and analytics data: retained for as long as necessary to support our marketing efforts and analyze performance, subject to your consent and legal requirements.</li>
-              </ul>
-              <p>
-                After the retention period expires, we securely delete or anonymize your personal information.
-              </p>
-
-              <h2>9. Data Security</h2>
-              <p>
-                We implement reasonable physical, technical, and administrative safeguards to protect your personal information from unauthorized access, use, disclosure, alteration, or destruction. These measures include:
-              </p>
-              <ul>
-                <li>Secure transmission of data using encryption (HTTPS)</li>
-                <li>Access controls and authentication requirements for systems containing personal information</li>
-                <li>Regular security reviews and updates to our practices and technology</li>
-                <li>Contractual requirements for service providers to protect your information</li>
-              </ul>
-              <p>
-                While we take reasonable steps to protect your information, no method of transmission over the internet or electronic storage is completely secure. We cannot guarantee absolute security.
-              </p>
-
-              <h2>10. Your Privacy Rights</h2>
-              <p>
-                Under Canadian privacy law, you have the following rights regarding your personal information:
-              </p>
-              <ul>
-                <li><strong>Right to access:</strong> You have the right to request access to the personal information we hold about you and to receive information about how we use and disclose it.</li>
-                <li><strong>Right to correction:</strong> You have the right to request that we correct inaccurate or incomplete personal information.</li>
-                <li><strong>Right to withdraw consent:</strong> Where we rely on your consent to process your information (such as for marketing communications), you have the right to withdraw that consent at any time.</li>
-                <li><strong>Right to request deletion:</strong> In certain circumstances, you may request that we delete your personal information, subject to legal and operational requirements.</li>
-                <li><strong>Right to complain:</strong> If you believe we have not handled your personal information appropriately, you have the right to file a complaint with the Office of the Privacy Commissioner of Canada.</li>
-              </ul>
-              <p>
-                To exercise any of these rights, please contact us using the contact information provided in Section 2 of this policy. We will respond to your request within a reasonable time, typically within 30 days, and in accordance with applicable law.
-              </p>
-              <p>
-                To opt out of marketing communications, you can use the unsubscribe link in our emails or contact us directly.
-              </p>
-
-              <h2>11. Children's Privacy</h2>
-              <p>
-                Our website and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have inadvertently collected personal information from a child, we will take steps to delete that information as soon as possible.
-              </p>
-
-              <h2>12. Changes to This Privacy Policy</h2>
-              <p>
-                We may update this privacy policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will update the "Last updated" date at the top of this policy and, where appropriate, notify you by email or through a notice on our website.
-              </p>
-              <p>
-                We encourage you to review this privacy policy periodically to stay informed about how we protect your information.
-              </p>
-
-              <h2>13. Additional Information for Meta Ad Users</h2>
-              <p>
-                If you interact with Barrana.ai through Facebook or Instagram advertisements, lead forms, or other Meta platforms:
-              </p>
-              <ul>
-                <li>Your interactions are subject to <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">Meta's Privacy Policy</a> in addition to this privacy policy.</li>
-                <li>When you submit information through a Meta lead form, Meta shares that information with us so we can respond to your inquiry.</li>
-                <li>We may use information you provide to create Custom Audiences or Lookalike Audiences on Meta platforms for advertising purposes. You can manage your ad preferences and opt out of certain data uses through your <a href="https://www.facebook.com/ads/preferences" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">Facebook ad settings</a> and <a href="https://www.instagram.com/accounts/privacy_and_security/" target="_blank" rel="noopener noreferrer" className="text-[#283891] hover:underline">Instagram privacy settings</a>.</li>
-                <li>The Meta Pixel on our website helps us measure ad performance, optimize campaigns, and deliver relevant ads to you on Facebook and Instagram.</li>
-              </ul>
-
-              <h2>14. Governing Law</h2>
-              <p>
-                This privacy policy is governed by the laws of the Province of Ontario and the federal laws of Canada applicable therein. Any disputes arising from this policy or our privacy practices will be subject to the jurisdiction of the courts of Ontario.
-              </p>
-
-              <div className="mt-10 rounded-xl border border-slate-200 bg-slate-50 p-6">
-                <p className="text-sm text-slate-600">
-                  <strong className="text-slate-900">Questions or concerns?</strong> If you have questions about this privacy policy, want to exercise your privacy rights, or have concerns about how we handle your personal information, please contact us at <a href="mailto:help@barrana.ai" className="text-[#283891] hover:underline">help@barrana.ai</a> or call us at <a href="tel:+16473676771" className="text-[#283891] hover:underline">+1 647 367 6771</a>.
-                </p>
-              </div>
-
-              <div className="mt-8 border-t border-slate-200 pt-8">
-                <Link href="/contact" className="inline-flex items-center gap-2 text-sm font-bold text-[#283891] hover:text-[#7E0F4A]">
-                  ← Return to Contact Page
-                </Link>
-              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section className="border-b border-slate-200 bg-white">
+        <div className="container grid gap-px bg-slate-200 md:grid-cols-3">
+          {summaryItems.map(({ icon: Icon, title, text }) => (
+            <div key={title} className="bg-white px-6 py-7 sm:px-8">
+              <Icon size={21} className="text-[#7E0F4A]" aria-hidden="true" />
+              <h2 className="mt-4 text-base font-extrabold text-[#111A36]">
+                {title}
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="container grid max-w-6xl gap-10 py-14 lg:grid-cols-[15rem_minmax(0,1fr)] lg:py-20">
+        <aside className="lg:sticky lg:top-28 lg:self-start">
+          <div className="border-l-2 border-[#283891] pl-5">
+            <h2 className="text-sm font-extrabold text-[#111A36]">
+              On this page
+            </h2>
+            <nav aria-label="Privacy policy sections" className="mt-4">
+              <ul className="space-y-3">
+                {sections.map((section) => (
+                  <li key={section.id}>
+                    <a
+                      href={`#${section.id}`}
+                      className="text-sm leading-5 text-slate-500 transition hover:text-[#7E0F4A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#283891]"
+                    >
+                      {section.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          <div className="mt-8 rounded-xl bg-[#E9EDFF] p-5">
+            <LockKeyhole
+              size={20}
+              className="text-[#283891]"
+              aria-hidden="true"
+            />
+            <p className="mt-3 text-sm font-bold text-[#111A36]">
+              Privacy request
+            </p>
+            <a
+              href="mailto:help@barrana.ai?subject=Privacy%20request"
+              className="mt-2 block break-all text-sm font-semibold text-[#283891] underline decoration-[#283891]/30 underline-offset-4 hover:text-[#7E0F4A]"
+            >
+              help@barrana.ai
+            </a>
+          </div>
+        </aside>
+
+        <article className="rounded-2xl border border-slate-200 bg-white px-6 py-10 shadow-sm shadow-slate-950/[0.03] sm:px-10 lg:px-12">
+          <PolicySection
+            id="scope"
+            number="01"
+            title="Scope and accountability"
+          >
+            <p>
+              This policy applies to personal information handled by Barrana.ai,
+              also called Barrana, through barrana.ai, its campaign pages,
+              inquiry forms, automation planner, direct communications, and ads
+              or lead forms operated through Facebook and Instagram.
+            </p>
+            <p>
+              Barrana is responsible for personal information under its control.
+              The Privacy Lead receives questions, access requests, correction
+              requests, deletion requests, and complaints using the contact
+              details at the end of this policy.
+            </p>
+          </PolicySection>
+
+          <PolicySection
+            id="collection"
+            number="02"
+            title="Information we collect"
+          >
+            <p>We collect information in four ways:</p>
+            <ul className="list-disc space-y-3 pl-5 marker:text-[#7E0F4A]">
+              <li>
+                <strong className="text-[#111A36]">
+                  Information you provide.
+                </strong>{" "}
+                This may include your name, work email, phone number, business
+                name, industry, team size, workflow details, operational
+                challenges, appointment information, and anything else you
+                include in a message.
+              </li>
+              <li>
+                <strong className="text-[#111A36]">
+                  Information from Meta.
+                </strong>{" "}
+                If you respond to a Barrana ad or submit a Facebook or Instagram
+                lead form, Meta may provide us with your form responses, contact
+                details, campaign source, and related lead information.
+              </li>
+              <li>
+                <strong className="text-[#111A36]">
+                  Meta Pixel event information.
+                </strong>{" "}
+                The Meta Pixel may use cookies or similar technology and send
+                Meta a PageView event when you open a page. After the main
+                contact form is submitted successfully, it also sends a Lead
+                event labelled Initial Workflow Conversation. These events may
+                include the page URL, referring page, browser or device details,
+                and the IP address processed during the request. The current
+                Lead event does not include the information entered in the form.
+              </li>
+              <li>
+                <strong className="text-[#111A36]">
+                  Technical information.
+                </strong>{" "}
+                Website hosting and security logs may record an IP address,
+                browser and device information, requested pages, referring page,
+                and timestamps. The site may store a theme choice and
+                dismissed-notice preference in your browser.
+              </li>
+            </ul>
+            <div className="rounded-xl border border-[#283891]/15 bg-[#F5F6FA] p-5 text-sm leading-6 text-slate-600">
+              Barrana currently uses Meta Pixel ID 1757222568845282. You can
+              block or delete cookies through your browser and manage
+              advertising preferences through Meta. Blocking advertising
+              technology does not prevent you from submitting a Barrana form.
+            </div>
+          </PolicySection>
+
+          <PolicySection id="uses" number="03" title="How we use information">
+            <p>We use personal information to:</p>
+            <ul className="list-disc space-y-3 pl-5 marker:text-[#7E0F4A]">
+              <li>
+                respond to an inquiry and determine whether Barrana can help
+                with the workflow described;
+              </li>
+              <li>schedule and prepare for a business conversation;</li>
+              <li>provide, support, and document agreed services;</li>
+              <li>
+                maintain customer relationship records and avoid duplicate or
+                conflicting follow-up;
+              </li>
+              <li>understand which campaign or page produced an inquiry;</li>
+              <li>measure advertising performance and reported conversions;</li>
+              <li>
+                operate, troubleshoot, and protect the website and its forms;
+              </li>
+              <li>
+                meet contractual, accounting, legal, and regulatory obligations;
+                and
+              </li>
+              <li>
+                send marketing messages where you have consented or where the
+                law otherwise permits them.
+              </li>
+            </ul>
+            <p>
+              We do not use an inquiry alone as consent to send unrelated
+              marketing. You may unsubscribe from marketing messages at any
+              time. We may still send messages needed to answer your request or
+              provide a service.
+            </p>
+          </PolicySection>
+
+          <PolicySection
+            id="meta"
+            number="04"
+            title="Facebook and Instagram advertising"
+          >
+            <div className="mb-6 flex items-start gap-4 border-l-2 border-[#7E0F4A] bg-[#FFF8FC] p-5">
+              <Megaphone
+                size={22}
+                className="mt-1 shrink-0 text-[#7E0F4A]"
+                aria-hidden="true"
+              />
+              <p className="m-0 text-sm leading-6 text-slate-700">
+                This section is included so a person who finds Barrana through a
+                Meta ad can understand what happens to the information they
+                submit and how website events are measured.
+              </p>
+            </div>
+            <p>
+              Meta operates Facebook and Instagram and processes information
+              under its own terms and privacy policy. When you view or interact
+              with an ad, Meta may collect information about that activity. When
+              you submit a Meta lead form, Meta sends the information you chose
+              to provide to Barrana.
+            </p>
+            <p>
+              Barrana uses Meta lead information to contact you about the
+              request, assess service fit, record the source of the inquiry, and
+              review campaign performance at the lead level. The Meta Pixel is
+              used to record website page views and successful submissions of
+              the main contact form. Meta may connect Pixel event information
+              with information it already holds, as described in its own privacy
+              policy.
+            </p>
+            <p>
+              We do not sell Meta lead information. We do not ask Meta lead-form
+              users to provide passwords, government identification numbers,
+              financial account details, health information, or information
+              about children.
+            </p>
+            <p>
+              You can review Meta&apos;s practices and manage advertising
+              preferences using Meta&apos;s own controls:
+            </p>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <a
+                href="https://www.facebook.com/privacy/policy/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-[#283891] underline decoration-[#283891]/30 underline-offset-4 hover:text-[#7E0F4A]"
+              >
+                Meta Privacy Policy{" "}
+                <ExternalLink size={14} aria-hidden="true" />
+              </a>
+              <a
+                href="https://accountscenter.facebook.com/ad_preferences/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 font-bold text-[#283891] underline decoration-[#283891]/30 underline-offset-4 hover:text-[#7E0F4A]"
+              >
+                Meta ad preferences{" "}
+                <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            </div>
+          </PolicySection>
+
+          <PolicySection
+            id="sharing"
+            number="05"
+            title="Service providers and disclosure"
+          >
+            <p>
+              We disclose personal information only for the purposes described
+              in this policy, including to:
+            </p>
+            <ul className="list-disc space-y-3 pl-5 marker:text-[#7E0F4A]">
+              <li>
+                <strong className="text-[#111A36]">
+                  HighLevel and LeadConnector
+                </strong>
+                , which receive website-form and lead information for customer
+                relationship management, contact records, and follow-up;
+              </li>
+              <li>
+                <strong className="text-[#111A36]">Hostinger</strong>, which
+                hosts the website and may process technical and server-log
+                information;
+              </li>
+              <li>
+                <strong className="text-[#111A36]">Meta</strong>, which may
+                receive lead-form information and website events when you use
+                Facebook, Instagram, or barrana.ai;
+              </li>
+              <li>
+                contractors, advisers, or technology providers that need the
+                information to perform work for Barrana;
+              </li>
+              <li>
+                government, regulatory, law-enforcement, or legal parties when
+                disclosure is required or permitted by law; and
+              </li>
+              <li>
+                a buyer or successor in connection with a proposed or completed
+                business transaction, subject to appropriate protections.
+              </li>
+            </ul>
+            <p>
+              Some service providers process information outside Canada.
+              Personal information stored or processed in another country may be
+              subject to that country&apos;s laws and lawful access by its
+              courts, law-enforcement agencies, or regulators.
+            </p>
+          </PolicySection>
+
+          <PolicySection
+            id="retention"
+            number="06"
+            title="Retention and safeguards"
+          >
+            <p>
+              Barrana keeps personal information only as long as reasonably
+              needed for the purpose it was collected, the business
+              relationship, recordkeeping, dispute resolution, security, and
+              legal requirements. When the information is no longer required, we
+              delete it, anonymize it, or allow it to be overwritten through the
+              normal operation of backup systems.
+            </p>
+            <p>
+              We use administrative, technical, and organizational safeguards
+              that are appropriate to the sensitivity of the information. These
+              may include limited access, account controls, encrypted
+              transmission, service provider controls, and incident response
+              procedures. No website, email, or storage system can guarantee
+              absolute security.
+            </p>
+          </PolicySection>
+
+          <PolicySection
+            id="choices"
+            number="07"
+            title="Your choices and rights"
+          >
+            <p>You may contact the Privacy Lead to:</p>
+            <ul className="list-disc space-y-3 pl-5 marker:text-[#7E0F4A]">
+              <li>ask whether Barrana holds personal information about you;</li>
+              <li>request access to, or correction of, that information;</li>
+              <li>withdraw consent, subject to legal or contractual limits;</li>
+              <li>
+                request deletion where Barrana is not required to keep the
+                information;
+              </li>
+              <li>opt out of marketing communications; or</li>
+              <li>
+                raise a question or complaint about Barrana&apos;s information
+                practices.
+              </li>
+            </ul>
+            <p>
+              We may need to verify your identity before completing a request.
+              We will explain any legal exception or limit that prevents us from
+              completing all or part of a request.
+            </p>
+            <p>
+              The website and Barrana&apos;s services are intended for
+              businesses and adults. We do not knowingly solicit personal
+              information from children.
+            </p>
+          </PolicySection>
+
+          <PolicySection
+            id="contact"
+            number="08"
+            title="Contact the Privacy Lead"
+          >
+            <p>
+              Send privacy questions and requests with the subject line{" "}
+              <strong className="text-[#111A36]">Privacy request</strong>.
+            </p>
+            <div className="grid gap-5 rounded-xl bg-[#09142F] p-6 text-slate-200 sm:grid-cols-[1fr_auto] sm:items-end">
+              <div>
+                <p className="font-bold text-white">Privacy Lead, Barrana.ai</p>
+                <p className="mt-2 text-sm leading-6">
+                  50 Corstate Avenue, Unit 01
+                </p>
+                <p className="text-sm leading-6">
+                  Vaughan, Ontario L4K 4X2, Canada
+                </p>
+              </div>
+              <a
+                href="mailto:help@barrana.ai?subject=Privacy%20request"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-[#7E0F4A] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#6A0C3E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              >
+                <Mail size={16} aria-hidden="true" />
+                Email the Privacy Lead
+              </a>
+            </div>
+            <p>
+              If Barrana does not resolve a privacy concern to your
+              satisfaction, you may contact the{" "}
+              <a
+                href="https://www.priv.gc.ca/en/report-a-concern/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-[#283891] underline decoration-[#283891]/30 underline-offset-4 hover:text-[#7E0F4A]"
+              >
+                Office of the Privacy Commissioner of Canada
+              </a>
+              .
+            </p>
+            <p>
+              We may update this policy when our services, providers,
+              advertising tools, or legal obligations change. The effective date
+              at the top of the page identifies the current version.
+            </p>
+          </PolicySection>
+        </article>
+      </div>
     </div>
   );
 }

@@ -234,7 +234,11 @@ export default function Contact() {
                     {!loading && <ArrowRight size={17} aria-hidden="true" />}
                   </button>
                   <p className="text-center text-xs leading-5 text-slate-500">
-                    Submit only information you are comfortable sharing for an initial business conversation.
+                    Submit only information you are comfortable sharing for an initial business conversation. See our{" "}
+                    <Link href="/privacy-policy" className="font-semibold text-[#283891] underline underline-offset-2 hover:text-[#7E0F4A]">
+                      Privacy Policy
+                    </Link>
+                    .
                   </p>
                 </form>
               </>
