@@ -107,7 +107,7 @@ export function CampaignFooter() {
         {/* Links */}
         <div className="flex gap-6 text-xs" style={{ color: "rgba(255,255,255,0.5)" }}>
           <span>Unsubscribe</span>
-          <a href="/governance" className="hover:text-white transition-colors underline">Privacy Policy</a>
+          <a href="/privacy-policy" className="hover:text-white transition-colors underline">Privacy Policy</a>
           <a href="/" className="hover:text-white transition-colors">barrana.ai</a>
         </div>
       </div>
@@ -386,6 +386,13 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
 
               <p className="text-xs text-center" style={{ color: GREY }}>
                 No pitch. No obligation. You keep the analysis. We respond within 1 business day.
+              </p>
+              <p className="text-xs text-center" style={{ color: GREY }}>
+                We use your details to respond to this request. Read our{" "}
+                <a href="/privacy-policy" className="font-semibold underline underline-offset-2" style={{ color: NAVY }}>
+                  Privacy Policy
+                </a>
+                .
               </p>
             </form>
           )}
