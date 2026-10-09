@@ -78,7 +78,8 @@ export default function Footer() {
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Barrana.ai. All rights reserved.</p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">
-            <Link href="/governance" className="transition hover:text-slate-300">Privacy and Governance</Link>
+            <Link href="/privacy-policy" className="transition hover:text-slate-300">Privacy Policy</Link>
+            <Link href="/governance" className="transition hover:text-slate-300">Governance</Link>
             <Link href="/contact" className="transition hover:text-slate-300">Contact</Link>
           </div>
         </div>
