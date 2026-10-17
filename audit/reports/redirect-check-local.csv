@@ -1,0 +1,7 @@
+"retired_url","status","location","final_status","expected"
+"/resources/automation-benchmarks","301","/benchmarks?utm_source=check","200","/benchmarks"
+"/resources/ai-automation-glossary","301","/glossary?utm_source=check","200","/glossary"
+"/resources/roi-calculator","301","/automation-roi-calculator?utm_source=check","200","/automation-roi-calculator"
+"/resources/automation-playbooks","301","/playbooks?utm_source=check","200","/playbooks"
+"/resources/workflow-templates","301","/templates?utm_source=check","200","/templates"
+"/resources/before-and-after","301","/before-after?utm_source=check","200","/before-after"

@@ -1,0 +1,1529 @@
+[
+ {
+  "path": "/",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "1.0",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/about",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/ai-adoption-small-business",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/ai-automation-industries",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/ai-automation-vaughan",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/ai-receptionist",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/automation-planner",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/automation-roi-calculator",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/before-after",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/benchmarks",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/accounting-firm-vaughan",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/cleaning-company-etobicoke",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/contractor-mississauga",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/dental-office-scarborough",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/hvac-company-brampton",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/immigration-firm-north-york",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/insurance-brokerage-vaughan",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/law-firm-toronto",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/marketing-agency-liberty-village",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/physio-clinic-richmond-hill",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/property-management-toronto",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/case-studies/real-estate-team-markham",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/contact",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/faq",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/glossary",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/governance",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/human-in-the-loop-ai",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.9",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/auto-repair",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/cleaning-companies",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/dental-offices",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/financial-advisors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/home-services",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/insurance-brokers",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/landscaping",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/marketing-agencies",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/medical-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/mortgage-brokers",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/physiotherapy-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/property-management",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/real-estate-teams",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/service-businesses",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/tutoring-education",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/industries/veterinary-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/insights/automation-readiness",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/insights/automation-vs-delegation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/insights/build-vs-buy",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/insights/what-to-automate-first",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/insights/when-ai-is-not-the-answer",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/integrations",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/knowledge",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/knowledge/ai-agents-for-small-business",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/knowledge/client-intake-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/knowledge/lead-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/knowledge/top-25-automated-workflows",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/knowledge/workflow-automation-explained",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/locations",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/brampton/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/brampton/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/brampton/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/brampton/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/brampton/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/markham",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/markham/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/markham/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/markham/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/mississauga/physiotherapy",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/north-york",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/north-york/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/richmond-hill",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/richmond-hill/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/richmond-hill/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/richmond-hill/physiotherapy",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/scarborough/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/toronto/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/accounting-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/contractors",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/dental-clinics",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/immigration-consultants",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/law-firms",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/locations/vaughan/physiotherapy",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/operator-insights",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/operator-insights/admin-hours-annual-cost",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/operator-insights/control-layer-boundaries",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/operator-insights/hidden-cost-manual-intake",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/operator-insights/immigration-intake-field-report",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/operator-insights/response-time-systems-problem",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/operator-insights/why-follow-up-fails",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/playbooks/after-hours-capture",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks/booking-reminders",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks/client-onboarding",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks/document-collection",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks/invoice-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/playbooks/lead-response",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-linked"
+ },
+ {
+  "path": "/resources",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/auto-parts-supplier-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/automate-client-intake",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/automation-roi",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/catering-company-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/charity-donation-receipt-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/coaching-business-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/commercial-cleaning-company-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/corporate-trainer-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/courier-delivery-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/custom-bakery-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/driving-school-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/electrical-contractor-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/faith-organization-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/food-bank-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/ghost-kitchen-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/grease-trap-cleaning-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/import-export-broker-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/integration-priority-matrix",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/iv-therapy-wellness-lounge-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/language-school-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/meal-prep-delivery-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/medical-aesthetics-clinic-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/medical-supply-distribution-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/moving-company-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/multi-location-dental-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/music-school-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/naturopathic-clinic-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/online-fitness-programme-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/operational-friction-map",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/personal-trainer-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/pest-control-company-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/physiotherapy-occupational-therapy-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/portable-toilet-rental-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/private-chef-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/professional-services-guide",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/scrap-metal-dealer-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/septic-drain-cleaning-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/settlement-services-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/snow-removal-lawn-care-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/social-media-to-consultation-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/tire-recycling-broker-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/tutoring-centre-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/wedding-photographer-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/what-is-ai-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/resources/youth-sports-league-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services",
+  "sitemap": true,
+  "changefreq": "weekly",
+  "priority": "0.9",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/after-hours-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/ai-agents",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/ai-receptionist",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/appointment-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/client-intake-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/crm-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/custom-ai-systems",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/document-collection",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/full-stack",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/invoice-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/lead-response-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/operations-reporting",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/services/workflow-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.8",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/solopreneurs",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/start-here",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.9",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/templates",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/workflow-automation-smb",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.7",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/workflows/appointment-booking",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/workflows/client-onboarding",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/workflows/document-collection",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/workflows/lead-intake",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.6",
+  "source": "live-sitemap"
+ },
+ {
+  "path": "/ai-automation/toronto",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/vaughan",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/markham",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/richmond-hill",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/mississauga",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/north-york",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/brampton",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/scarborough",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/oakville",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/etobicoke",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Thin city page overlapping /locations/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/toronto/immigration-consultants",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Overlaps /locations/toronto/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/toronto/accounting-firms",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Overlaps /locations/toronto/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/ai-automation/toronto/contractors",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Overlaps /locations/toronto/*; owner to decide keep vs 301"
+ },
+ {
+  "path": "/integrations/make-integromat",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/zapier",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/hubspot",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/jobber",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/quickbooks",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/calendly",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/jotform",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/gohighlevel",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/twilio",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/integrations/google-workspace",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "live-unlinked (now linked from /integrations)"
+ },
+ {
+  "path": "/campaign/contractors",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Ad landing page; canonical points to homepage"
+ },
+ {
+  "path": "/campaign/dental",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Ad landing page; canonical points to homepage"
+ },
+ {
+  "path": "/campaign/law-firms",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Ad landing page; canonical points to homepage"
+ },
+ {
+  "path": "/campaign/real-estate",
+  "sitemap": false,
+  "source": "live-unlinked",
+  "note": "Ad landing page; canonical points to homepage"
+ },
+ {
+  "path": "/privacy-policy",
+  "sitemap": true,
+  "static": true,
+  "changefreq": "yearly",
+  "priority": "0.3",
+  "source": "live static page (uploaded 2026-10-12, previously unlinked)"
+ },
+ {
+  "path": "/playbooks/accounting-firm",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/playbooks/contractor",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/playbooks/immigration-consultant",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/playbooks/physiotherapy-clinic",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/operator-insights/accounting-firm-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/operator-insights/contractor-lead-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/operator-insights/immigration-consultant-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/operator-insights/law-firm-intake-automation",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/operator-insights/physiotherapy-no-show-reduction",
+  "sitemap": true,
+  "changefreq": "monthly",
+  "priority": "0.5",
+  "source": "hostinger package (unlinked on live; now linked from hub)"
+ },
+ {
+  "path": "/industries/clinics",
+  "sitemap": false,
+  "source": "hostinger package (unlinked on live)",
+  "note": "Same topic as /industries/medical-clinics; owner to decide keep vs 301"
+ },
+ {
+  "path": "/industries/real-estate",
+  "sitemap": false,
+  "source": "hostinger package (unlinked on live)",
+  "note": "Same topic as /industries/real-estate-teams; owner to decide keep vs 301"
+ },
+ {
+  "path": "/services/lead-automation",
+  "sitemap": false,
+  "source": "hostinger package (unlinked on live)",
+  "note": "Same topic as /services/lead-response-automation; owner to decide keep vs 301"
+ },
+ {
+  "path": "/services/operations-automation",
+  "sitemap": false,
+  "source": "hostinger package (unlinked on live)",
+  "note": "Same topic as /services/operations-reporting; owner to decide keep vs 301"
+ }
+]

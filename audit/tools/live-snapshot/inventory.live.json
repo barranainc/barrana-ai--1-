@@ -1,0 +1,2563 @@
+{
+ "pages": {
+  "/": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Barrana.ai - AI Automation for Small Business | Toronto &amp; GTA",
+   "desc": "AI automation systems that close response gaps, eliminate manual coordination, and give small businesses in Toronto and the GTA the operational backbone to grow without adding headcount.",
+   "canonical": "https://barrana.ai/"
+  },
+  "/about": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/services",
+    "/contact"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "About Barrana.ai | AI Automation Consultancy, Toronto",
+   "desc": "10+ years building business systems for Toronto and GTA service businesses. Fixed pricing, your existing tools, humans in the loop. 50 Corstate Ave, Vaughan.",
+   "canonical": "https://barrana.ai/about"
+  },
+  "/ai-adoption-small-business": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/ai-adoption-small-business",
+    "/ai-automation-vaughan",
+    "/human-in-the-loop-ai"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Adoption for Small Business: A Practical Guide",
+   "desc": "A no-jargon guide to adopting AI automation in your small business. Which workflows to automate first, what to keep human, and how to measure ROI in 30 to 60 days.",
+   "canonical": "https://barrana.ai/ai-adoption-small-business"
+  },
+  "/ai-automation-industries": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/",
+    "/resources",
+    "/ai-automation-industries"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation by Industry: What Works for Your Business | Barrana AI",
+   "desc": "Quick Summary",
+   "canonical": "https://barrana.ai/ai-automation-industries"
+  },
+  "/ai-automation-vaughan": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan/physiotherapy",
+    "/locations/vaughan/dental-clinics",
+    "/locations/vaughan/law-firms",
+    "/resources"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Businesses in Vaughan and the GTA | Barrana AI",
+   "desc": "50 Corstate Avenue, Unit 01 - Vaughan, ON L4K 4X2",
+   "canonical": "https://barrana.ai/ai-automation-vaughan"
+  },
+  "/ai-receptionist": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/ai-receptionist"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Receptionist for Small Businesses and Professional Services | Barrana.ai",
+   "desc": "An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically - without replacing your team.",
+   "canonical": "https://barrana.ai/ai-receptionist"
+  },
+  "/automation-planner": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/start-here",
+    "/start-here",
+    "/start-here"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Map What Your Business Can Automate | Barrana.ai",
+   "desc": "AUTOMATION PLANNER",
+   "canonical": "https://barrana.ai/automation-planner"
+  },
+  "/automation-roi-calculator": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/automation-roi",
+    "/automation-roi-calculator"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation ROI Calculator | Barrana.ai",
+   "desc": "Estimate the return on investment from automation for your specific business. Adjust the inputs to match your situation.",
+   "canonical": "https://barrana.ai/automation-roi-calculator"
+  },
+  "/before-after": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/before-after"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Before vs After Automation | Barrana.ai",
+   "desc": "Real workflow comparisons showing what changes when coordination tasks are automated. Eight common business workflows - side by side.",
+   "canonical": "https://barrana.ai/before-after"
+  },
+  "/benchmarks": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/benchmarks"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation Benchmarks | Barrana.ai",
+   "desc": "Typical results from deployed automation systems for GTA service businesses. Based on measured client outcomes.",
+   "canonical": "https://barrana.ai/benchmarks"
+  },
+  "/case-studies": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/lead-response-automation",
+    "/",
+    "/services/appointment-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Real Businesses. Measurable Results. | Barrana.ai",
+   "desc": "Every case study is a real automation system built for a real GTA business. Results are measured 30–90 days post-deployment.",
+   "canonical": "https://barrana.ai/case-studies"
+  },
+  "/case-studies/accounting-firm-vaughan": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/invoice-automation",
+    "/industries/accounting-firms",
+    "/industries/financial-advisors",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Accounting Firm Automation Case Study",
+   "desc": "How a 4-person accounting firm in Vaughan automated document collection, invoicing, and onboarding. Added 65 clients next season without new hires.",
+   "canonical": "https://barrana.ai/case-studies/accounting-firm-vaughan"
+  },
+  "/case-studies/cleaning-company-etobicoke": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries/cleaning-companies",
+    "/case-studies",
+    "/industries/landscaping",
+    "/case-studies/cleaning-company-etobicoke"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Cleaning Company Automation Case Study | Doubled Conversion | Barrana.ai",
+   "desc": "How a residential cleaning company in Etobicoke automated after-hours quotes, booking, reminders, invoicing, and reviews. Quote conversion doubled in 90 days.",
+   "canonical": "https://barrana.ai/case-studies/cleaning-company-etobicoke"
+  },
+  "/case-studies/contractor-mississauga": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/lead-response-automation",
+    "/industries/contractors",
+    "/case-studies",
+    "/case-studies/contractor-mississauga"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Contractor Automation Case Study | 22% Conversion Increase | Barrana.ai",
+   "desc": "How a renovation contractor in Mississauga automated lead response, quote follow-up, and after-hours capture. Quote conversion up 22% in 60 days.",
+   "canonical": "https://barrana.ai/case-studies/contractor-mississauga"
+  },
+  "/case-studies/dental-office-scarborough": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/ai-receptionist",
+    "/services/after-hours-automation",
+    "/industries/dental-offices",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Dental Office Automation Case Study | $120K Revenue Recovery | Barrana.ai",
+   "desc": "How a 3-chair dental practice in Scarborough automated reminders, recall campaigns, and digital intake. No-shows down 55%. Recall compliance up to 91%.",
+   "canonical": "https://barrana.ai/case-studies/dental-office-scarborough"
+  },
+  "/case-studies/hvac-company-brampton": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries/service-businesses",
+    "/industries/home-services",
+    "/industries/auto-repair",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "HVAC Company Automation Case Study",
+   "desc": "How a Brampton HVAC company automated seasonal maintenance campaigns, emergency dispatch, and agreement renewals. 300 slots filled in 10 days. Retention up 28%.",
+   "canonical": "https://barrana.ai/case-studies/hvac-company-brampton"
+  },
+  "/case-studies/immigration-firm-north-york": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/document-collection",
+    "/services/client-intake-automation",
+    "/industries/immigration-consultants",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Immigration Firm Automation Case Study | 14 Hours Recovered | Barrana.ai",
+   "desc": "How a 2-consultant immigration firm in North York automated intake, document collection, and status updates. Recovered 14 staff hours per week. Capacity up 25%.",
+   "canonical": "https://barrana.ai/case-studies/immigration-firm-north-york"
+  },
+  "/case-studies/insurance-brokerage-vaughan": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries/insurance-brokers",
+    "/case-studies",
+    "/case-studies/insurance-brokerage-vaughan",
+    "/case-studies/property-management-toronto"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Insurance Brokerage Automation Case Study | Renewal Retention | Barrana.ai",
+   "desc": "How a Vaughan insurance brokerage automated quote follow-up, renewal reminders, and cross-sell detection. Renewal lapse rate dropped from 18% to under 6%.",
+   "canonical": "https://barrana.ai/case-studies/insurance-brokerage-vaughan"
+  },
+  "/case-studies/law-firm-toronto": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries/law-firms",
+    "/case-studies",
+    "/case-studies/law-firm-toronto",
+    "/case-studies/immigration-firm-north-york"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Law Firm Automation Case Study | 500+ Billable Hours Saved | Barrana.ai",
+   "desc": "How a 3-lawyer boutique firm in Toronto automated intake, billing, document exchange, and status updates. Recovered 500+ billable hours annually.",
+   "canonical": "https://barrana.ai/case-studies/law-firm-toronto"
+  },
+  "/case-studies/marketing-agency-liberty-village": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/workflow-automation",
+    "/services/custom-ai-systems",
+    "/services/ai-agents",
+    "/industries/marketing-agencies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Marketing Agency Automation Case Study | 40% More Clients | Barrana.ai",
+   "desc": "How a Toronto digital marketing agency automated onboarding, reporting, invoicing, and handoffs. Grew from 12 to 17 clients without operations staff.",
+   "canonical": "https://barrana.ai/case-studies/marketing-agency-liberty-village"
+  },
+  "/case-studies/physio-clinic-richmond-hill": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/appointment-automation",
+    "/industries/physiotherapy-clinics",
+    "/industries/tutoring-education",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Physio Clinic Automation Case Study | $85K No-Show Recovery | Barrana.ai",
+   "desc": "How a 6-practitioner physiotherapy clinic in Richmond Hill reduced no-shows by 38% using dual reminders and waitlist automation. $85,000 annual revenue recovered.",
+   "canonical": "https://barrana.ai/case-studies/physio-clinic-richmond-hill"
+  },
+  "/case-studies/property-management-toronto": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/operations-reporting",
+    "/industries/property-management",
+    "/case-studies",
+    "/case-studies/insurance-brokerage-vaughan"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Property Management Automation Case Study | 65 to 120 Units | Barrana.ai",
+   "desc": "How a Toronto property management company automated maintenance routing, rent reminders, lease renewals, and owner reporting. Scaled from 65 to 120 units with same team.",
+   "canonical": "https://barrana.ai/case-studies/property-management-toronto"
+  },
+  "/case-studies/real-estate-team-markham": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/crm-automation",
+    "/industries/real-estate-teams",
+    "/industries/mortgage-brokers",
+    "/case-studies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Real Estate Automation Case Study",
+   "desc": "How a 4-agent real estate team in Markham automated lead capture, 12-month buyer nurture, and CRM management. Pipeline value increased 40% in 6 months.",
+   "canonical": "https://barrana.ai/case-studies/real-estate-team-markham"
+  },
+  "/contact": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/services",
+    "/services"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Find the Workflow AI Should Fix First | Barrana.ai",
+   "desc": "Tell Barrana about one repeated workflow. The initial conversation determines fit, scope, and whether automation is the right next step.",
+   "canonical": "https://barrana.ai/contact"
+  },
+  "/faq": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/faq"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Questions We Hear From Every Client | Barrana.ai",
+   "desc": "Answers to the most common questions about AI automation for small businesses, our process, pricing, and results. If your question is not here, book a free audit and we will answer it directly.",
+   "canonical": "https://barrana.ai/faq"
+  },
+  "/glossary": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/glossary"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation Glossary for Small Business | Barrana.ai",
+   "desc": "Plain-language definitions of AI automation terms for small business owners. No jargon, no developer-speak.",
+   "canonical": "https://barrana.ai/glossary"
+  },
+  "/governance": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/contact",
+    "/contact"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Data Governance &amp; PIPEDA-Aware Automation | Barrana.ai",
+   "desc": "We build automation systems with Canadian privacy law in mind. Every workflow we design is documented, auditable, and structured so your clients' data stays within platforms you control.",
+   "canonical": "https://barrana.ai/governance"
+  },
+  "/human-in-the-loop-ai": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Human-in-the-Loop AI: Keep Control of Your Automation",
+   "desc": "AI automation with human oversight built in. Approval gates, safety rails, and escalation triggers ensure your team stays in control of every decision that matters.",
+   "canonical": "https://barrana.ai/human-in-the-loop-ai"
+  },
+  "/industries": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/services",
+    "/contact"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation Built Around How Your Industry Works | Barrana.ai",
+   "desc": "We specialize in professional service businesses in Toronto and the GTA. Each industry has specific workflows, compliance requirements, and operational patterns. We build automation systems that reflect those realities.",
+   "canonical": "https://barrana.ai/industries"
+  },
+  "/industries/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/document-collection",
+    "/services/document-collection",
+    "/services/client-intake-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms | Tax Season Without the Chaos | Barrana.ai",
+   "desc": "Automate tax document collection, client onboarding, invoicing, and capacity planning for accounting practices. QuickBooks integrated. Free audit.",
+   "canonical": "https://barrana.ai/industries/accounting-firms"
+  },
+  "/industries/auto-repair": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries",
+    "/industries/auto-repair"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Auto Repair Shops Toronto | Barrana.ai",
+   "desc": "Automate service reminders, appointment booking, estimate follow-up, invoicing, and review requests for auto repair and service shops. Free audit.",
+   "canonical": "https://barrana.ai/industries/auto-repair"
+  },
+  "/industries/cleaning-companies": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/lead-response-automation",
+    "/services/invoice-automation",
+    "/industries",
+    "/industries/cleaning-companies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Cleaning Companies Toronto | Barrana.ai",
+   "desc": "Automate quote requests, booking, reminders, invoicing, review requests, and recurring schedule management for residential and commercial cleaning companies. Free audit.",
+   "canonical": "https://barrana.ai/industries/cleaning-companies"
+  },
+  "/industries/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/lead-response-automation",
+    "/services/lead-response-automation",
+    "/"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors &amp; Trades",
+   "desc": "Automate lead capture, quote follow-up, site visit booking, after-hours calls, and invoicing for contractors. Jobber integrated. Free audit.",
+   "canonical": "https://barrana.ai/industries/contractors"
+  },
+  "/industries/dental-offices": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/",
+    "/services/appointment-automation",
+    "/services/ai-receptionist",
+    "/services/ai-receptionist"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Offices Toronto | Fill Chairs, Clear Recall Lists | Barrana.ai",
+   "desc": "Reduce dental no-shows 50-60%, automate recall campaigns, patient booking, digital intake, and review requests for dental practices. Free audit.",
+   "canonical": "https://barrana.ai/industries/dental-offices"
+  },
+  "/industries/financial-advisors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/client-intake-automation",
+    "/industries",
+    "/industries/accounting-firms",
+    "/industries/financial-advisors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Financial Advisors Toronto | Barrana.ai",
+   "desc": "Automate client onboarding, annual review scheduling, KYC document collection, compliance logging, and milestone touchpoints for financial advisory practices. Free audit.",
+   "canonical": "https://barrana.ai/industries/financial-advisors"
+  },
+  "/industries/home-services": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/lead-response-automation",
+    "/industries",
+    "/industries/contractors",
+    "/services/after-hours-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for HVAC, Plumbing, and Electrical Companies Toronto | Barrana.ai",
+   "desc": "Automate emergency dispatch, seasonal maintenance reminders, lead capture, technician scheduling, and invoicing for HVAC, plumbing, and electrical companies. Free audit.",
+   "canonical": "https://barrana.ai/industries/home-services"
+  },
+  "/industries/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/document-collection",
+    "/services/document-collection",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants | Barrana.ai",
+   "desc": "Immigration consultants spend 18+ hours per week on intake and document chasing. Automate client intake, document collection, and status updates. Recover $70,000+ per year.",
+   "canonical": "https://barrana.ai/industries/immigration-consultants"
+  },
+  "/industries/insurance-brokers": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/workflow-automation",
+    "/services/custom-ai-systems",
+    "/industries"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Insurance Brokers Toronto | Never Miss a Renewal | Barrana.ai",
+   "desc": "Automate quote follow-up, renewal reminders, client onboarding, cross-sell detection, and compliance logging for insurance brokerages. Free audit.",
+   "canonical": "https://barrana.ai/industries/insurance-brokers"
+  },
+  "/industries/landscaping": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/lead-response-automation",
+    "/services/invoice-automation",
+    "/industries",
+    "/industries/cleaning-companies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Landscaping Companies Toronto | Barrana.ai",
+   "desc": "Automate seasonal contract renewals, crew scheduling, quote follow-up, weather-triggered dispatch, invoicing, and referral campaigns for landscaping companies. Free audit.",
+   "canonical": "https://barrana.ai/industries/landscaping"
+  },
+  "/industries/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/document-collection",
+    "/services/client-intake-automation",
+    "/services/client-intake-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms Toronto | Protect Billable Hours | Barrana.ai",
+   "desc": "Automate client intake, matter management, document exchange, billing, and status updates for law firms. Clio integrated. Free audit.",
+   "canonical": "https://barrana.ai/industries/law-firms"
+  },
+  "/industries/marketing-agencies": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/workflow-automation",
+    "/services/workflow-automation",
+    "/services/operations-reporting",
+    "/services/custom-ai-systems"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Marketing Agencies Toronto | Barrana.ai",
+   "desc": "Automate client onboarding, project handoffs, monthly reporting, invoicing, and lead follow-up for digital marketing and creative agencies. Free audit.",
+   "canonical": "https://barrana.ai/industries/marketing-agencies"
+  },
+  "/industries/medical-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/appointment-automation",
+    "/services/ai-receptionist",
+    "/industries",
+    "/industries/physiotherapy-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Medical Clinics Toronto | Barrana.ai",
+   "desc": "Automate patient booking, reminders, digital intake, prescription renewal alerts, and follow-up for walk-in and family medicine clinics. Free audit.",
+   "canonical": "https://barrana.ai/industries/medical-clinics"
+  },
+  "/industries/mortgage-brokers": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/document-collection",
+    "/industries",
+    "/industries/real-estate-teams",
+    "/industries/mortgage-brokers"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Mortgage Brokers Toronto | Win the Application Before Competitors | Barrana.ai",
+   "desc": "Automate lead response, mortgage application intake, document collection, rate notifications, and renewal reminders for mortgage brokerages. Free audit.",
+   "canonical": "https://barrana.ai/industries/mortgage-brokers"
+  },
+  "/industries/physiotherapy-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/",
+    "/services/appointment-automation",
+    "/services/appointment-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Physiotherapy Clinics",
+   "desc": "Reduce no-shows by 25-40%, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free audit.",
+   "canonical": "https://barrana.ai/industries/physiotherapy-clinics"
+  },
+  "/industries/property-management": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/workflow-automation",
+    "/services/operations-reporting",
+    "/services/operations-reporting",
+    "/services/custom-ai-systems"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Property Management Companies Toronto | Barrana.ai",
+   "desc": "Automate tenant communications, maintenance requests, lease renewals, rent reminders, and owner reporting for property management companies. Free audit.",
+   "canonical": "https://barrana.ai/industries/property-management"
+  },
+  "/industries/real-estate-teams": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/services/lead-response-automation",
+    "/",
+    "/industries"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Real Estate Teams",
+   "desc": "Automate lead capture from all channels, buyer nurture sequences, listing follow-up, CRM management, and post-offer communication for real estate teams. Free audit.",
+   "canonical": "https://barrana.ai/industries/real-estate-teams"
+  },
+  "/industries/service-businesses": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/industries",
+    "/industries/service-businesses",
+    "/industries/marketing-agencies",
+    "/industries/marketing-agencies"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Service Businesses Toronto | Systematize the Client Lifecycle | Barrana.ai",
+   "desc": "AI automation for any service business: lead response, intake, scheduling, invoicing, follow-up, and reviews. If you run on appointments and clients, this is for you.",
+   "canonical": "https://barrana.ai/industries/service-businesses"
+  },
+  "/industries/tutoring-education": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/appointment-automation",
+    "/industries",
+    "/industries/tutoring-education",
+    "/ai-automation-vaughan"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Tutoring Centers Toronto | Barrana.ai",
+   "desc": "Automate student enrollment, session scheduling, parent communication, progress reporting, and re-enrollment campaigns for tutoring and education centers. Free audit.",
+   "canonical": "https://barrana.ai/industries/tutoring-education"
+  },
+  "/industries/veterinary-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services/appointment-automation",
+    "/industries",
+    "/industries/veterinary-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Veterinary Clinics Toronto | Barrana.ai",
+   "desc": "Automate pet appointment booking, vaccination reminders, prescription refill alerts, post-surgery follow-up, and Google reviews for veterinary practices. Free audit.",
+   "canonical": "https://barrana.ai/industries/veterinary-clinics"
+  },
+  "/insights/automation-readiness": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/insights/automation-readiness",
+    "/insights/when-ai-is-not-the-answer",
+    "/insights/when-ai-is-not-the-answer"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Know If Your Business Is Automation-Ready | Barrana AI",
+   "desc": "A business is ready for automation when it has repeatable workflows, 20+ client interactions per month, identifiable time drains, basic digital tools, and willingness to start small.",
+   "canonical": "https://barrana.ai/insights/automation-readiness"
+  },
+  "/insights/automation-vs-delegation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/insights/automation-vs-delegation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation vs Delegation: What Business Owners Get Wrong | Barrana AI",
+   "desc": "Automation and delegation solve different problems. If a task follows the same rules every time and requires no judgement, automate it. If it requires context, creativity, or relationships, delegate it.",
+   "canonical": "https://barrana.ai/insights/automation-vs-delegation"
+  },
+  "/insights/build-vs-buy": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/insights/build-vs-buy"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI",
+   "desc": "For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier.",
+   "canonical": "https://barrana.ai/insights/build-vs-buy"
+  },
+  "/insights/what-to-automate-first": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/start-here"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "What Should a Small Business Automate First? | Barrana.ai",
+   "desc": "A practical framework for choosing your first automation. Start with the workflow that costs the most time, touches the most clients, and has the clearest before-and-after.",
+   "canonical": "https://barrana.ai/insights/what-to-automate-first"
+  },
+  "/insights/when-ai-is-not-the-answer": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana AI",
+   "desc": "AI automation is not the right solution when you don't have a repeatable process, your problem is a people issue, your volume is too low, or you haven't diagnosed the root problem.",
+   "canonical": "https://barrana.ai/insights/when-ai-is-not-the-answer"
+  },
+  "/integrations": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/integration-priority-matrix",
+    "/integrations"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Tools We Connect | Barrana.ai",
+   "desc": "We connect the tools your business already uses. No platform switches, no migration headaches. Barrana.ai builds the bridges between your existing stack so data flows automatically where it needs to go.",
+   "canonical": "https://barrana.ai/integrations"
+  },
+  "/knowledge": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/knowledge",
+    "/knowledge/client-intake-automation",
+    "/knowledge/lead-automation",
+    "/knowledge/top-25-automated-workflows"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business: A Practical Knowledge Base | Barrana.ai",
+   "desc": "Practical guides on AI automation for small business owners in Toronto and the GTA. Written for operators, not developers.",
+   "canonical": "https://barrana.ai/knowledge"
+  },
+  "/knowledge/ai-agents-for-small-business": {
+   "inSitemap": false,
+   "from": [
+    "/knowledge",
+    "/knowledge/ai-agents-for-small-business"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Agents for Small Business: What They Are and What They Do | Barrana.ai",
+   "desc": "7 min read · Barrana.ai Knowledge Base",
+   "canonical": "https://barrana.ai/knowledge/ai-agents-for-small-business"
+  },
+  "/knowledge/client-intake-automation": {
+   "inSitemap": false,
+   "from": [
+    "/knowledge",
+    "/knowledge/client-intake-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Client Intake Automation: From Inquiry to Onboarded Client | Barrana.ai",
+   "desc": "10 min read · Barrana.ai Knowledge Base",
+   "canonical": "https://barrana.ai/knowledge/client-intake-automation"
+  },
+  "/knowledge/lead-automation": {
+   "inSitemap": false,
+   "from": [
+    "/knowledge",
+    "/knowledge/lead-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Lead Response Automation for Small Business | Barrana.ai",
+   "desc": "8 min read · Barrana.ai Knowledge Base",
+   "canonical": "https://barrana.ai/knowledge/lead-automation"
+  },
+  "/knowledge/top-25-automated-workflows": {
+   "inSitemap": false,
+   "from": [
+    "/knowledge",
+    "/knowledge/top-25-automated-workflows"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Top 25 Automated Workflows for Small Business | Barrana.ai",
+   "desc": "12 min read · Barrana.ai Knowledge Base",
+   "canonical": "https://barrana.ai/knowledge/top-25-automated-workflows"
+  },
+  "/knowledge/workflow-automation-explained": {
+   "inSitemap": false,
+   "from": [
+    "/knowledge",
+    "/knowledge/workflow-automation-explained"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Workflow Automation Explained: A Guide for Small Business Owners | Barrana.ai",
+   "desc": "9 min read · Barrana.ai Knowledge Base",
+   "canonical": "https://barrana.ai/knowledge/workflow-automation-explained"
+  },
+  "/locations": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/markham",
+    "/locations/toronto",
+    "/locations/mississauga"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation Services Across the GTA | Barrana.ai",
+   "desc": "Barrana.ai is based in Vaughan and serves small and medium businesses across the Greater Toronto Area. We work on-site and remotely across all GTA cities.",
+   "canonical": "https://barrana.ai/locations"
+  },
+  "/locations/brampton/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/brampton/accounting-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms in Brampton | Barrana.ai",
+   "desc": "Brampton CPA firms automate document collection, onboarding, and invoicing - handling 40–65 more clients per tax season without hiring.",
+   "canonical": "https://barrana.ai/locations/brampton/accounting-firms"
+  },
+  "/locations/brampton/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/brampton/contractors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors in Brampton | Barrana.ai",
+   "desc": "Brampton contractors capture missed leads with 90-second AI response. Quote follow-up automation closes 22% more jobs.",
+   "canonical": "https://barrana.ai/locations/brampton/contractors"
+  },
+  "/locations/brampton/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/brampton/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Brampton | Barrana.ai",
+   "desc": "Brampton dental clinics reduce no-shows 25–40% with dual reminders. Automated recall fills hygiene schedules. AI receptionist captures after-hours patients.",
+   "canonical": "https://barrana.ai/locations/brampton/dental-clinics"
+  },
+  "/locations/brampton/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/brampton/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in Brampton | Barrana.ai",
+   "desc": "Brampton’s fast-growing immigration sector is overwhelmed with intake volume. AI automation handles document tracking, qualification, and follow-up so RCICs focus on cases.",
+   "canonical": "https://barrana.ai/locations/brampton/immigration-consultants"
+  },
+  "/locations/brampton/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/brampton/law-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms in Brampton | Barrana.ai",
+   "desc": "Brampton law firms automate client intake, document collection, and billing - handling more clients without adding staff.",
+   "canonical": "https://barrana.ai/locations/brampton/law-firms"
+  },
+  "/locations/markham": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/markham"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in Markham | Barrana.ai",
+   "desc": "AI automation for small businesses in Markham. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/markham"
+  },
+  "/locations/markham/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/markham",
+    "/locations/markham/accounting-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms in Markham | Barrana.ai",
+   "desc": "Markham CPA firms serving the tech corridor’s SMBs automate document collection, onboarding, and invoicing - recovering 40–60 hours per month in admin time.",
+   "canonical": "https://barrana.ai/locations/markham/accounting-firms"
+  },
+  "/locations/markham/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/markham",
+    "/locations/markham/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Markham | Barrana.ai",
+   "desc": "Markham dental clinics automate booking, reminders, and recall - matching the digital expectations of tech-savvy patients.",
+   "canonical": "https://barrana.ai/locations/markham/dental-clinics"
+  },
+  "/locations/markham/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/markham",
+    "/locations/markham/law-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms in Markham | Barrana.ai",
+   "desc": "Markham law firms automate intake, documents, and billing - matching the digital expectations of tech corridor clients.",
+   "canonical": "https://barrana.ai/locations/markham/law-firms"
+  },
+  "/locations/mississauga": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/mississauga"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in Mississauga | Barrana.ai",
+   "desc": "AI automation for small businesses in Mississauga. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/mississauga"
+  },
+  "/locations/mississauga/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga",
+    "/locations/mississauga/accounting-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms in Mississauga | Barrana.ai",
+   "desc": "Mississauga CPA practices handling 200+ returns per season lose $30,000+ to document chasing. Automation cuts collection from 18 days to 9 and invoices on completion.",
+   "canonical": "https://barrana.ai/locations/mississauga/accounting-firms"
+  },
+  "/locations/mississauga/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga",
+    "/locations/mississauga/contractors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors in Mississauga | Barrana.ai",
+   "desc": "Mississauga contractors who respond in under 90 seconds close 15–25% more quotes. AI lead response and quote follow-up give you the edge.",
+   "canonical": "https://barrana.ai/locations/mississauga/contractors"
+  },
+  "/locations/mississauga/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga",
+    "/locations/mississauga/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Mississauga | Barrana.ai",
+   "desc": "560+ dental clinics compete in Mississauga. AI automation handles booking, dual reminders, recall campaigns, and after-hours calls - filling chairs competitors leave empty.",
+   "canonical": "https://barrana.ai/locations/mississauga/dental-clinics"
+  },
+  "/locations/mississauga/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga",
+    "/locations/mississauga/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in Mississauga | Barrana.ai",
+   "desc": "Mississauga immigration firms handling high-volume LMIA and Express Entry files lose $70,000+ per year to manual intake. Automation recovers capacity and captures after-hours leads.",
+   "canonical": "https://barrana.ai/locations/mississauga/immigration-consultants"
+  },
+  "/locations/mississauga/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga",
+    "/locations/mississauga/law-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms in Mississauga | Barrana.ai",
+   "desc": "Mississauga law firms lose $100,000+ per year to intake admin and missed after-hours enquiries. AI automation handles intake, documents, and billing follow-up.",
+   "canonical": "https://barrana.ai/locations/mississauga/law-firms"
+  },
+  "/locations/mississauga/physiotherapy": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/mississauga/physiotherapy"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Physiotherapy Clinics in Mississauga | Barrana.ai",
+   "desc": "Mississauga physio clinics reduce no-shows with dual reminders and waitlist auto-fill - recovering $50,000+ per year in empty appointment slots.",
+   "canonical": "https://barrana.ai/locations/mississauga/physiotherapy"
+  },
+  "/locations/north-york": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/north-york"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in North York | Barrana.ai",
+   "desc": "AI automation for small businesses in North York. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/north-york"
+  },
+  "/locations/north-york/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/north-york",
+    "/locations/north-york/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in North York | Barrana.ai",
+   "desc": "North York immigration firms automate intake, document collection, and after-hours response - recovering $70,000+ per year in consultant capacity.",
+   "canonical": "https://barrana.ai/locations/north-york/immigration-consultants"
+  },
+  "/locations/richmond-hill": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/richmond-hill"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in Richmond Hill | Barrana.ai",
+   "desc": "AI automation for small businesses in Richmond Hill. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/richmond-hill"
+  },
+  "/locations/richmond-hill/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/richmond-hill/contractors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors in Richmond Hill | Barrana.ai",
+   "desc": "Richmond Hill contractors capture missed leads with 90-second AI response. Quote follow-up automation closes more jobs in York Region.",
+   "canonical": "https://barrana.ai/locations/richmond-hill/contractors"
+  },
+  "/locations/richmond-hill/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/richmond-hill",
+    "/locations/richmond-hill/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Richmond Hill | Barrana.ai",
+   "desc": "208 dental clinics in Richmond Hill. Dual reminders reduce no-shows 25–40%. Automated recall fills hygiene schedules. AI receptionist answers after-hours enquiries.",
+   "canonical": "https://barrana.ai/locations/richmond-hill/dental-clinics"
+  },
+  "/locations/richmond-hill/physiotherapy": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/richmond-hill/physiotherapy"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Physiotherapy Clinics in Richmond Hill | Barrana.ai",
+   "desc": "Richmond Hill physio clinics near Major Mackenzie Hospital see 20%+ no-show rates. Dual reminders and waitlist auto-fill recover $85,000+ per year in empty slots.",
+   "canonical": "https://barrana.ai/locations/richmond-hill/physiotherapy"
+  },
+  "/locations/scarborough/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/scarborough/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in Scarborough | Barrana.ai",
+   "desc": "Scarborough immigration firms serving diverse communities automate intake and document collection - recovering 18+ hours per week.",
+   "canonical": "https://barrana.ai/locations/scarborough/immigration-consultants"
+  },
+  "/locations/toronto": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/toronto"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in Toronto | Barrana.ai",
+   "desc": "AI automation for small businesses in Toronto. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/toronto"
+  },
+  "/locations/toronto/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/toronto",
+    "/locations/toronto/accounting-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms in Toronto | Barrana.ai",
+   "desc": "Toronto CPA firms automate document collection, client onboarding, and invoicing - handling more returns per season without adding staff.",
+   "canonical": "https://barrana.ai/locations/toronto/accounting-firms"
+  },
+  "/locations/toronto/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/toronto/contractors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors in Toronto | Barrana.ai",
+   "desc": "Toronto contractors who respond in under 90 seconds close more quotes. AI lead response and follow-up automation give you the edge in the GTA’s busiest market.",
+   "canonical": "https://barrana.ai/locations/toronto/contractors"
+  },
+  "/locations/toronto/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/toronto/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Toronto &amp; North York | Barrana.ai",
+   "desc": "1,800+ dental clinics in Toronto and North York. At this density, patient experience is the edge. Automation ensures instant response, zero no-shows, and filled recall lists.",
+   "canonical": "https://barrana.ai/locations/toronto/dental-clinics"
+  },
+  "/locations/toronto/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/toronto",
+    "/locations/toronto/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in Toronto | Barrana.ai",
+   "desc": "Toronto immigration consultants automate intake, document collection, and status updates - recovering 18+ hours per week in consultant capacity.",
+   "canonical": "https://barrana.ai/locations/toronto/immigration-consultants"
+  },
+  "/locations/toronto/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/toronto",
+    "/locations/toronto/law-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms in Toronto | Barrana.ai",
+   "desc": "Toronto law firms spend 20+ hours per week on intake admin. AI automation handles client intake, document collection, and billing follow-up so lawyers focus on billable work.",
+   "canonical": "https://barrana.ai/locations/toronto/law-firms"
+  },
+  "/locations/vaughan": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations",
+    "/locations/vaughan"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Small Business in Vaughan | Barrana.ai",
+   "desc": "AI automation for small businesses in Vaughan. Fixed pricing. No retainers. Results from Week 1.",
+   "canonical": "https://barrana.ai/locations/vaughan"
+  },
+  "/locations/vaughan/accounting-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan",
+    "/locations/vaughan/accounting-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Accounting Firms in Vaughan | Barrana.ai",
+   "desc": "Vaughan CPA firms spend 15+ hours per week chasing T4s during tax season. Automation handles document collection, onboarding, and invoicing so accountants focus on advisory.",
+   "canonical": "https://barrana.ai/locations/vaughan/accounting-firms"
+  },
+  "/locations/vaughan/contractors": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan",
+    "/locations/vaughan/contractors"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Contractors in Vaughan | Barrana.ai",
+   "desc": "Vaughan contractors lose 8–12 leads per month while on the job. At $8,000–$25,000 per job, that is $96,000+ walking to competitors annually.",
+   "canonical": "https://barrana.ai/locations/vaughan/contractors"
+  },
+  "/locations/vaughan/dental-clinics": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan/dental-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Dental Clinics in Vaughan | Barrana.ai",
+   "desc": "Vaughan dental clinics automate booking, reminders, and recall - reducing no-shows and recovering $40,000+ in dormant hygiene revenue.",
+   "canonical": "https://barrana.ai/locations/vaughan/dental-clinics"
+  },
+  "/locations/vaughan/immigration-consultants": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan",
+    "/locations/vaughan/immigration-consultants"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Immigration Consultants in Vaughan | Barrana.ai",
+   "desc": "Immigration consultants along Vaughan's Highway 7 corridor spend 18+ hours per week on intake admin. AI automation handles document collection, intake categorisation, and status updates.",
+   "canonical": "https://barrana.ai/locations/vaughan/immigration-consultants"
+  },
+  "/locations/vaughan/law-firms": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan/law-firms"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Law Firms in Vaughan | Barrana.ai",
+   "desc": "Vaughan law firms automate client intake, document collection, and billing follow-up - recovering 20+ hours per week in lawyer capacity.",
+   "canonical": "https://barrana.ai/locations/vaughan/law-firms"
+  },
+  "/locations/vaughan/physiotherapy": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/locations/vaughan/physiotherapy"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation for Physiotherapy Clinics in Vaughan | Barrana.ai",
+   "desc": "Vaughan physio clinics lose $37,000–$150,000 per year to no-shows. Automated booking with dual reminders and digital intake cuts admin time 60%.",
+   "canonical": "https://barrana.ai/locations/vaughan/physiotherapy"
+  },
+  "/operator-insights": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/operator-insights",
+    "/operator-insights/response-time-systems-problem",
+    "/operator-insights/hidden-cost-manual-intake",
+    "/operator-insights/immigration-intake-field-report"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Operator Insights | Barrana.ai",
+   "desc": "Field notes from implementing automation for GTA service businesses. Written for operators, not technologists.",
+   "canonical": "https://barrana.ai/operator-insights"
+  },
+  "/operator-insights/admin-hours-annual-cost": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/admin-hours-annual-cost"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "What Your Admin Hours Actually Cost Per Year | Barrana.ai",
+   "desc": "4 min read",
+   "canonical": "https://barrana.ai/operator-insights/admin-hours-annual-cost"
+  },
+  "/operator-insights/control-layer-boundaries": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/control-layer-boundaries"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "The Control Layer: Why Every Automation Needs Boundaries | Barrana.ai",
+   "desc": "6 min read",
+   "canonical": "https://barrana.ai/operator-insights/control-layer-boundaries"
+  },
+  "/operator-insights/hidden-cost-manual-intake": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/hidden-cost-manual-intake"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "The Hidden Cost of Manual Client Intake | Barrana.ai",
+   "desc": "5 min read",
+   "canonical": "https://barrana.ai/operator-insights/hidden-cost-manual-intake"
+  },
+  "/operator-insights/immigration-intake-field-report": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/immigration-intake-field-report"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Intake Automation for Immigration Firms: A Field Report | Barrana.ai",
+   "desc": "7 min read",
+   "canonical": "https://barrana.ai/operator-insights/immigration-intake-field-report"
+  },
+  "/operator-insights/response-time-systems-problem": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/response-time-systems-problem"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Why Response Time Is a Systems Problem, Not a Sales Problem | Barrana.ai",
+   "desc": "6 min read",
+   "canonical": "https://barrana.ai/operator-insights/response-time-systems-problem"
+  },
+  "/operator-insights/why-follow-up-fails": {
+   "inSitemap": false,
+   "from": [
+    "/operator-insights",
+    "/operator-insights/why-follow-up-fails"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Why Follow-Up Fails (And How to Fix It Systematically) | Barrana.ai",
+   "desc": "5 min read",
+   "canonical": "https://barrana.ai/operator-insights/why-follow-up-fails"
+  },
+  "/playbooks": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/playbooks",
+    "/playbooks/booking-reminders",
+    "/playbooks/lead-response",
+    "/playbooks/invoice-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation Playbooks | Barrana.ai",
+   "desc": "Step-by-step guides for automating the most impactful workflows in your business.",
+   "canonical": "https://barrana.ai/playbooks"
+  },
+  "/playbooks/after-hours-capture": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/after-hours-capture"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "After-Hours Lead Capture Playbook | Barrana.ai",
+   "desc": "40–60% of service enquiries arrive outside business hours. Without a system to capture and nurture these leads overnight, you are losing clients to competitors who respond faster. This playbook ensures no after-hours lead goes cold.",
+   "canonical": "https://barrana.ai/playbooks/after-hours-capture"
+  },
+  "/playbooks/booking-reminders": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/booking-reminders"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Booking and Reminders Automation Playbook | Barrana.ai",
+   "desc": "No-shows cost service businesses an average of 15–20% of their booked revenue. This playbook builds a multi-touch reminder system that confirms attendance, reduces no-shows by up to 35%, and automatically fills cancellations.",
+   "canonical": "https://barrana.ai/playbooks/booking-reminders"
+  },
+  "/playbooks/client-onboarding": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/client-onboarding"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Client Onboarding Automation Playbook | Barrana.ai",
+   "desc": "The first 7 days after a client signs sets the tone for the entire engagement. This playbook standardises and automates the onboarding experience so every new client gets the same professional, thorough welcome - without your team doing it manually.",
+   "canonical": "https://barrana.ai/playbooks/client-onboarding"
+  },
+  "/playbooks/document-collection": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Document Collection Automation Playbook | Barrana.ai",
+   "desc": "Chasing documents is one of the biggest time drains in professional services. This playbook builds a system that delivers the right document request, tracks what has been received, and follows up automatically - so nothing falls through the cracks.",
+   "canonical": "https://barrana.ai/playbooks/document-collection"
+  },
+  "/playbooks/invoice-automation": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/invoice-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Invoice Automation Playbook | Barrana.ai",
+   "desc": "Most service businesses leave money on the table through delayed invoicing, inconsistent follow-up, and manual payment tracking. This playbook automates the entire billing cycle from invoice generation to payment confirmation.",
+   "canonical": "https://barrana.ai/playbooks/invoice-automation"
+  },
+  "/playbooks/lead-response": {
+   "inSitemap": false,
+   "from": [
+    "/resources/automation-playbooks",
+    "/playbooks",
+    "/playbooks/lead-response"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Lead Response Automation Playbook | Barrana.ai",
+   "desc": "Every minute you delay responding to an inbound lead, your conversion rate drops. This playbook builds a system that acknowledges, qualifies, and routes every enquiry in under 90 seconds - 24 hours a day, 7 days a week.",
+   "canonical": "https://barrana.ai/playbooks/lead-response"
+  },
+  "/resources": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/contact",
+    "/contact"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Practical Resources for Business Owners | Barrana.ai",
+   "desc": "Guides, frameworks, and workflow examples built for operators, not technology enthusiasts. Every resource is written from an operational perspective.",
+   "canonical": "https://barrana.ai/resources"
+  },
+  "/resources/ai-automation-glossary": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/ai-automation-glossary"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation Glossary for Small Business | Barrana.ai",
+   "desc": "Plain-language definitions of AI automation terms for small business owners. No jargon, no developer-speak.",
+   "canonical": "https://barrana.ai/resources/ai-automation-glossary"
+  },
+  "/resources/auto-parts-supplier-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/auto-parts-supplier-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Auto Parts Supplier Automation: Quote Requests, Sourcing, Fitment Verification, and Returns | Barrana.ai",
+   "desc": "Auto parts supplier automation handles parts request intake, supplier sourcing, fitment verification, order tracking, core returns, and warranty claims. GTA guide.",
+   "canonical": "https://barrana.ai/resources/auto-parts-supplier-automation"
+  },
+  "/resources/automate-client-intake": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/automate-client-intake"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Automate Client Intake Without Switching Software | Barrana AI",
+   "desc": "Your intake process sets the tone for every client relationship - yet most service businesses are still handling it manually. This guide walks through a complete automated intake system: from first form submission to a fully briefed team member, with zero data entry.",
+   "canonical": "https://barrana.ai/resources/automate-client-intake"
+  },
+  "/resources/automation-benchmarks": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/automation-benchmarks"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation Benchmarks | Barrana.ai",
+   "desc": "Typical results from deployed automation systems for GTA service businesses. Based on measured client outcomes.",
+   "canonical": "https://barrana.ai/resources/automation-benchmarks"
+  },
+  "/resources/automation-playbooks": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/automation-playbooks"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation Playbooks | Barrana.ai",
+   "desc": "Step-by-step guides for automating the most impactful workflows in your business.",
+   "canonical": "https://barrana.ai/resources/automation-playbooks"
+  },
+  "/resources/automation-roi": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/automation-roi",
+    "/resources/pest-control-company-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Calculate the ROI of Business Automation | Barrana.ai",
+   "desc": "Most ROI calculations only count time saved - and therefore understate the value of automation by 5–10×. The Automation ROI Stack is a four-layer framework that captures every dimension of value: direct time recovery, error elimination, revenue protection, and the compounding multiplier of scalability. This guide walks you through measuring each layer and building a defensible business case.",
+   "canonical": "https://barrana.ai/resources/automation-roi"
+  },
+  "/resources/before-and-after": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/before-and-after"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Before vs After Automation | Barrana.ai",
+   "desc": "Real workflow comparisons showing what changes when coordination tasks are automated. Eight common business workflows - side by side.",
+   "canonical": "https://barrana.ai/resources/before-and-after"
+  },
+  "/resources/catering-company-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/catering-company-automation",
+    "/resources/custom-bakery-automation",
+    "/resources/private-chef-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Catering Company Automation: Enquiries, Quoting, Dietary Requirements, Production, and Delivery | Barrana.ai",
+   "desc": "Catering business automation handles enquiry response, quoting, dietary and allergen capture, production planning, staff scheduling, and delivery. GTA operator guide.",
+   "canonical": "https://barrana.ai/resources/catering-company-automation"
+  },
+  "/resources/charity-donation-receipt-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/charity-donation-receipt-automation",
+    "/resources/faith-organization-automation",
+    "/resources/faith-organization-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automating Donation Tax Receipts for Canadian Charities: A CRA-Compliant Workflow | Barrana.ai",
+   "desc": "How Canadian registered charities automate CRA-compliant donation receipts, donor acknowledgment, and annual giving summaries without adding admin staff.",
+   "canonical": "https://barrana.ai/resources/charity-donation-receipt-automation"
+  },
+  "/resources/coaching-business-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/coaching-business-automation",
+    "/resources/corporate-trainer-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Coaching Business Automation: Discovery Calls, Client Onboarding, Session Management, and Retention | Barrana.ai",
+   "desc": "Coaching business automation handles discovery call booking, client onboarding, session scheduling and prep, accountability check-ins, and package renewals. GTA guide.",
+   "canonical": "https://barrana.ai/resources/coaching-business-automation"
+  },
+  "/resources/commercial-cleaning-company-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/commercial-cleaning-company-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Commercial Cleaning Company Automation: Client Onboarding, Crew Scheduling, and Quality Control | Barrana.ai",
+   "desc": "Commercial cleaning automation handles client onboarding, cleaner scheduling, quality checklists, and invoicing automatically. Practical guide for GTA operators.",
+   "canonical": "https://barrana.ai/resources/commercial-cleaning-company-automation"
+  },
+  "/resources/corporate-trainer-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/corporate-trainer-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Corporate Trainer Automation: Enquiries, Proposals, Session Logistics, and Post-Workshop Follow-Up | Barrana.ai",
+   "desc": "Corporate training business automation handles enquiry response, proposals, participant logistics, pre-work delivery, attendance, evaluation, and repeat business.",
+   "canonical": "https://barrana.ai/resources/corporate-trainer-automation"
+  },
+  "/resources/courier-delivery-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/courier-delivery-automation",
+    "/resources/medical-supply-distribution-automation",
+    "/resources/auto-parts-supplier-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Courier and Last-Mile Delivery Automation: Dispatch, Proof of Delivery, Driver Settlement, and Client Reporting | Barrana.ai",
+   "desc": "Courier business automation handles order intake, driver dispatch and routing, proof of delivery capture, exception handling, and driver settlement. GTA operator guide.",
+   "canonical": "https://barrana.ai/resources/courier-delivery-automation"
+  },
+  "/resources/custom-bakery-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/custom-bakery-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Custom Bakery Automation: Order Intake, Design Approval, Production Scheduling, and Delivery | Barrana.ai",
+   "desc": "Custom bakery automation handles order enquiries, design consultation, deposits, production scheduling, allergen tracking, and delivery coordination. GTA guide.",
+   "canonical": "https://barrana.ai/resources/custom-bakery-automation"
+  },
+  "/resources/driving-school-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/driving-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Driving School Automation: Enrollment, Lesson Scheduling, Instructor Routing, and Licensing Milestones | Barrana.ai",
+   "desc": "Driving school automation handles enrollment, in-car lesson scheduling, instructor routing, progress tracking, road test preparation, and certification. Ontario guide.",
+   "canonical": "https://barrana.ai/resources/driving-school-automation"
+  },
+  "/resources/electrical-contractor-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/electrical-contractor-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Electrical Contractor Automation: Quotes, Permits, Inspections, and Getting Paid Faster | Barrana.ai",
+   "desc": "Electrical contractor automation handles quote follow-up, permit tracking, inspection scheduling, job sign-off, and invoicing. Practical guide for Ontario electricians.",
+   "canonical": "https://barrana.ai/resources/electrical-contractor-automation"
+  },
+  "/resources/faith-organization-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/faith-organization-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Faith Organization Automation: Donations, Membership, Events, and Volunteer Coordination | Barrana.ai",
+   "desc": "Automation for mosques, temples, churches, and gurdwaras: donation tracking, receipting, membership records, event registration, and volunteer scheduling. GTA guide.",
+   "canonical": "https://barrana.ai/resources/faith-organization-automation"
+  },
+  "/resources/food-bank-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/food-bank-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Food Bank and Community Pantry Automation: Volunteer Shifts, Donation Intake, Client Service, and Funder Reporting | Barrana.ai",
+   "desc": "Food bank automation handles volunteer scheduling, donation and inventory intake, dignified client check-in, and funder reporting. Practical guide for GTA organizations.",
+   "canonical": "https://barrana.ai/resources/food-bank-automation"
+  },
+  "/resources/ghost-kitchen-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/ghost-kitchen-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Ghost Kitchen Automation: Multi-Platform Orders, Kitchen Routing, Brand Performance, and Delivery Handoff | Barrana.ai",
+   "desc": "Ghost kitchen automation handles order aggregation across delivery platforms, kitchen routing, menu and availability sync, brand P&amp;L, and delivery coordination.",
+   "canonical": "https://barrana.ai/resources/ghost-kitchen-automation"
+  },
+  "/resources/grease-trap-cleaning-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/grease-trap-cleaning-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Grease Trap Cleaning Automation: Compliance Scheduling, Manifest Records, and Restaurant Account Management | Barrana.ai",
+   "desc": "Grease trap cleaning automation handles compliance-driven service scheduling, waste manifest records, certificate delivery, and restaurant account billing. Ontario guide.",
+   "canonical": "https://barrana.ai/resources/grease-trap-cleaning-automation"
+  },
+  "/resources/import-export-broker-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/import-export-broker-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Import and Export Broker Automation: Shipment Files, Customs Documentation, Milestone Tracking, and Client Updates | Barrana.ai",
+   "desc": "Freight forwarder and customs broker automation handles shipment file creation, document collection, milestone tracking, client notifications, and billing. GTA guide.",
+   "canonical": "https://barrana.ai/resources/import-export-broker-automation"
+  },
+  "/resources/integration-priority-matrix": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/integration-priority-matrix"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "The Integration Priority Matrix | Barrana.ai",
+   "desc": "STRATEGIC FRAMEWORK",
+   "canonical": "https://barrana.ai/resources/integration-priority-matrix"
+  },
+  "/resources/iv-therapy-wellness-lounge-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/iv-therapy-wellness-lounge-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "IV Therapy and Wellness Lounge Automation: Screening, Memberships, Chair Utilization, and Repeat Visits | Barrana.ai",
+   "desc": "IV therapy clinic automation handles medical screening, consent, membership management, chair utilization, and repeat visit prompts. Practical guide for Ontario operators.",
+   "canonical": "https://barrana.ai/resources/iv-therapy-wellness-lounge-automation"
+  },
+  "/resources/language-school-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/language-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Language School Automation: Enrollment, Placement Testing, Class Assignment, and Attendance | Barrana.ai",
+   "desc": "Language school automation handles enrollment, placement assessment, class assignment, attendance tracking, payment plans, and student progression. GTA guide.",
+   "canonical": "https://barrana.ai/resources/language-school-automation"
+  },
+  "/resources/meal-prep-delivery-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/meal-prep-delivery-automation",
+    "/resources/ghost-kitchen-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Meal Prep Delivery Automation: Subscriptions, Menu Cycles, Allergen Safety, and Route Delivery | Barrana.ai",
+   "desc": "Meal prep business automation handles subscription management, weekly menu selection, allergen and dietary tracking, production planning, and delivery routing. GTA guide.",
+   "canonical": "https://barrana.ai/resources/meal-prep-delivery-automation"
+  },
+  "/resources/medical-aesthetics-clinic-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/medical-aesthetics-clinic-automation",
+    "/resources/iv-therapy-wellness-lounge-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Medical Aesthetics Clinic Automation: Consultations, Consent, Treatment Intervals, and Rebooking | Barrana.ai",
+   "desc": "Medical aesthetics automation handles consultation booking, consent documentation, treatment interval tracking, aftercare follow-up, and rebooking. Ontario clinic guide.",
+   "canonical": "https://barrana.ai/resources/medical-aesthetics-clinic-automation"
+  },
+  "/resources/medical-supply-distribution-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/medical-supply-distribution-automation",
+    "/resources/import-export-broker-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Medical Supply Distribution Automation: Order Processing, Cold Chain, Lot Traceability, and Recall Readiness | Barrana.ai",
+   "desc": "Medical supply distributor automation handles order intake, lot and expiry tracking, cold chain documentation, recall readiness, and customer reporting. Ontario guide.",
+   "canonical": "https://barrana.ai/resources/medical-supply-distribution-automation"
+  },
+  "/resources/moving-company-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/moving-company-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Moving Company Automation: Estimates, Crew Scheduling, Inventory Documentation, and Claims Prevention | Barrana.ai",
+   "desc": "Moving company automation handles quote follow-up, crew and truck scheduling, inventory and condition documentation, and post-move follow-up. Guide for GTA movers.",
+   "canonical": "https://barrana.ai/resources/moving-company-automation"
+  },
+  "/resources/multi-location-dental-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/multi-location-dental-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Multi-Location Dental Group Automation: Standardizing Operations Across Every Office | Barrana.ai",
+   "desc": "Dental group automation standardizes intake, recall, scheduling, and reporting across multiple locations while keeping each office's patient experience consistent.",
+   "canonical": "https://barrana.ai/resources/multi-location-dental-automation"
+  },
+  "/resources/music-school-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/music-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Music School Automation: Trial Lessons, Teacher Matching, Recurring Scheduling, and Recital Management | Barrana.ai",
+   "desc": "Music school automation handles trial lesson booking, teacher matching, recurring lesson scheduling, make-up policies, recitals, exams, and tuition billing. GTA guide.",
+   "canonical": "https://barrana.ai/resources/music-school-automation"
+  },
+  "/resources/naturopathic-clinic-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/naturopathic-clinic-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Naturopathic Clinic Automation: Intake, Protocol Follow-Up, Dispensary Orders, and Retention | Barrana.ai",
+   "desc": "Naturopathic clinic automation handles detailed intake, treatment protocol follow-up, supplement dispensary reordering, and patient retention. Ontario practice guide.",
+   "canonical": "https://barrana.ai/resources/naturopathic-clinic-automation"
+  },
+  "/resources/online-fitness-programme-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/online-fitness-programme-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Online Fitness Programme Automation: Delivery, Community, Churn, and Launch Operations | Barrana.ai",
+   "desc": "Automation for online fitness businesses: programme delivery, member onboarding, community management, churn prevention, and launch operations at scale.",
+   "canonical": "https://barrana.ai/resources/online-fitness-programme-automation"
+  },
+  "/resources/operational-friction-map": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/operational-friction-map",
+    "/resources/professional-services-guide"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "The Operational Friction Map | Barrana AI Resources",
+   "desc": "Quick Summary",
+   "canonical": "https://barrana.ai/resources/operational-friction-map"
+  },
+  "/resources/personal-trainer-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/online-fitness-programme-automation",
+    "/resources/personal-trainer-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Personal Trainer Automation: Turning Enquiries Into Clients and Keeping Them Longer | Barrana.ai",
+   "desc": "Personal trainer automation handles enquiry response, consultation booking, session scheduling, programme delivery, and client retention. Practical guide for GTA trainers.",
+   "canonical": "https://barrana.ai/resources/personal-trainer-automation"
+  },
+  "/resources/pest-control-company-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/pest-control-company-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Pest Control Company Automation: How to Run More Jobs Without More Admin Staff | Barrana.ai",
+   "desc": "Pest control company automation handles booking, technician dispatch, treatment reports, and renewal reminders automatically. Practical guide for Ontario operators.",
+   "canonical": "https://barrana.ai/resources/pest-control-company-automation"
+  },
+  "/resources/physiotherapy-occupational-therapy-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/physiotherapy-occupational-therapy-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Physiotherapy and Occupational Therapy Practice Automation: Referrals, Insurance Approvals, Attendance, and Reporting | Barrana.ai",
+   "desc": "Rehab clinic automation handles referral intake, insurance pre-approval tracking, appointment attendance, home exercise adherence, and third-party reporting. Ontario guide.",
+   "canonical": "https://barrana.ai/resources/physiotherapy-occupational-therapy-automation"
+  },
+  "/resources/portable-toilet-rental-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/portable-toilet-rental-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Portable Toilet Rental Automation: Delivery, Service Routes, Unit Tracking, and Recurring Billing | Barrana.ai",
+   "desc": "Portable toilet rental automation handles quote-to-delivery, service route scheduling, unit location tracking, and recurring billing. Practical guide for GTA operators.",
+   "canonical": "https://barrana.ai/resources/portable-toilet-rental-automation"
+  },
+  "/resources/private-chef-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/private-chef-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Private Chef Automation: Enquiries, Menu Planning, Client Preferences, and Event Execution | Barrana.ai",
+   "desc": "Private chef business automation handles enquiry response, menu proposals, dietary capture, shopping and prep planning, and repeat client management. GTA guide.",
+   "canonical": "https://barrana.ai/resources/private-chef-automation"
+  },
+  "/resources/professional-services-guide": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/operational-friction-map",
+    "/resources/professional-services-guide"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation for Professional Services Firms | Barrana.ai",
+   "desc": "Professional services firms sell time - yet they spend half of it on work that generates zero revenue. This guide covers the specific automation patterns that shift that ratio: the six workflows every firm should automate, industry-specific implementation patterns for immigration, law, accounting, financial advisory, and insurance/mortgage, and the compliance considerations that make professional services automation different from every other sector.",
+   "canonical": "https://barrana.ai/resources/professional-services-guide"
+  },
+  "/resources/roi-calculator": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/roi-calculator"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Automation ROI Calculator | Barrana.ai",
+   "desc": "Estimate the return on investment from automation for your specific business. Adjust the inputs to match your situation.",
+   "canonical": "https://barrana.ai/resources/roi-calculator"
+  },
+  "/resources/scrap-metal-dealer-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/scrap-metal-dealer-automation",
+    "/resources/auto-parts-supplier-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Scrap Metal Dealer Automation: Supplier Pricing, Weight Tickets, Compliance, and Buyer Settlement | Barrana.ai",
+   "desc": "Scrap metal dealer automation handles supplier pricing updates, weight ticket capture, seller ID compliance, inventory grading, and buyer settlement. Ontario guide.",
+   "canonical": "https://barrana.ai/resources/scrap-metal-dealer-automation"
+  },
+  "/resources/septic-drain-cleaning-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/septic-drain-cleaning-automation",
+    "/resources/grease-trap-cleaning-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Septic and Drain Cleaning Company Automation: Emergency Dispatch, Service Records, and Recurring Maintenance | Barrana.ai",
+   "desc": "Septic and drain cleaning automation handles emergency call routing, technician dispatch, service report delivery, and recurring pump-out reminders. Guide for Ontario operators.",
+   "canonical": "https://barrana.ai/resources/septic-drain-cleaning-automation"
+  },
+  "/resources/settlement-services-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/settlement-services-automation",
+    "/resources/language-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Settlement Services Automation: Client Intake, Multilingual Scheduling, Document Collection, and Funder Reporting | Barrana.ai",
+   "desc": "Settlement agency automation handles client intake, language-matched appointment routing, document collection, case tracking, and IRCC funder reporting. GTA guide.",
+   "canonical": "https://barrana.ai/resources/settlement-services-automation"
+  },
+  "/resources/snow-removal-lawn-care-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/snow-removal-lawn-care-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Snow Removal and Lawn Care Automation: Managing Seasonal Contracts, Crews, and Weather-Triggered Dispatch | Barrana.ai",
+   "desc": "Snow removal and lawn care automation handles seasonal contract renewals, weather-triggered dispatch, crew routing, and service confirmation. Guide for Ontario operators.",
+   "canonical": "https://barrana.ai/resources/snow-removal-lawn-care-automation"
+  },
+  "/resources/social-media-to-consultation-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/social-media-to-consultation-automation",
+    "/resources/multi-location-dental-automation",
+    "/resources/medical-aesthetics-clinic-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Turning Social Media Followers Into Booked Consultations: Automation for Practitioners With an Audience | Barrana.ai",
+   "desc": "How practitioners with large social followings convert DMs, comments, and profile traffic into booked paid consultations using automated intake and booking workflows.",
+   "canonical": "https://barrana.ai/resources/social-media-to-consultation-automation"
+  },
+  "/resources/tire-recycling-broker-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/tire-recycling-broker-automation",
+    "/resources/scrap-metal-dealer-automation",
+    "/resources/courier-delivery-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Tire Recycling and Waste Material Broker Automation: Collection, Processing, and Export Operations | Barrana.ai",
+   "desc": "Tire recycling automation handles supplier pickup scheduling, collection volume tracking, baling and packing records, and export documentation. Guide for Ontario operators.",
+   "canonical": "https://barrana.ai/resources/tire-recycling-broker-automation"
+  },
+  "/resources/tutoring-centre-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/tutoring-centre-automation",
+    "/resources/driving-school-automation",
+    "/resources/language-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Tutoring Centre Automation: Enquiries, Assessment, Tutor Matching, Scheduling, and Progress Reporting | Barrana.ai",
+   "desc": "Tutoring business automation handles enquiry response, assessment booking, tutor matching, session scheduling, progress reporting, and re-enrollment. GTA guide.",
+   "canonical": "https://barrana.ai/resources/tutoring-centre-automation"
+  },
+  "/resources/wedding-photographer-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/wedding-photographer-automation",
+    "/resources/private-chef-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Wedding Photographer Automation: Enquiries, Contracts, Shoot Coordination, and Gallery Delivery | Barrana.ai",
+   "desc": "Wedding photography automation handles enquiry response, contract and deposit collection, timeline coordination, shoot day logistics, and gallery delivery. GTA guide.",
+   "canonical": "https://barrana.ai/resources/wedding-photographer-automation"
+  },
+  "/resources/what-is-ai-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources",
+    "/resources/what-is-ai-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "What Is AI Automation for Small Business? | Barrana AI",
+   "desc": "Quick Summary",
+   "canonical": "https://barrana.ai/resources/what-is-ai-automation"
+  },
+  "/resources/workflow-templates": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources/workflow-templates"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Workflow Templates | Barrana.ai",
+   "desc": "Visual automation templates showing exactly how each workflow is structured. Use these as reference for your own implementation.",
+   "canonical": "https://barrana.ai/resources/workflow-templates"
+  },
+  "/resources/youth-sports-league-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/resources/youth-sports-league-automation",
+    "/resources/tutoring-centre-automation",
+    "/resources/driving-school-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Youth Sports League Automation: Registration, Team Assignment, Scheduling, and Volunteer Coordination | Barrana.ai",
+   "desc": "Youth sports league automation handles registration and payment, team assignment, game and practice scheduling, volunteer coordination, and parent communication. GTA guide.",
+   "canonical": "https://barrana.ai/resources/youth-sports-league-automation"
+  },
+  "/services": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/services",
+    "/services"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Automation Services for Small Business | Barrana.ai",
+   "desc": "Lead response, client intake, document collection, invoicing, and workflow automation for Toronto and GTA service businesses. Fixed pricing. No hourly billing.",
+   "canonical": "https://barrana.ai/services"
+  },
+  "/services/after-hours-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/lead-response-automation",
+    "/services/lead-response-automation",
+    "/services/ai-receptionist"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "After-Hours AI Automation | Barrana.ai",
+   "desc": "Capture and qualify every lead that arrives after business hours. AI receptionist, automated qualification, CRM records, and morning briefings.",
+   "canonical": "https://barrana.ai/services/after-hours-automation"
+  },
+  "/services/ai-agents": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/custom-ai-systems",
+    "/services/custom-ai-systems",
+    "/services/ai-agents"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Agents for Business | Beyond Chatbots | Barrana.ai",
+   "desc": "AI agents take real actions in your business: booking appointments, creating records, qualifying leads, routing tasks. Not chatbots. Operational systems.",
+   "canonical": "https://barrana.ai/services/ai-agents"
+  },
+  "/services/ai-receptionist": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/lead-response-automation",
+    "/services/appointment-automation",
+    "/services/appointment-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "AI Receptionist | Every Call Answered 24/7 | Barrana.ai",
+   "desc": "AI receptionist that answers every call, qualifies every lead, and books every appointment. 24/7. Natural conversation. No missed inquiries.",
+   "canonical": "https://barrana.ai/services/ai-receptionist"
+  },
+  "/services/appointment-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/appointment-automation",
+    "/services/ai-receptionist",
+    "/industries/physiotherapy-clinics"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Appointment Automation | Reduce No-Shows by 25-40% | Barrana.ai",
+   "desc": "Automated booking, dual reminders, digital intake, waitlist management, and rescheduling. Reduce no-shows by 25-40% for clinics and service businesses.",
+   "canonical": "https://barrana.ai/services/appointment-automation"
+  },
+  "/services/client-intake-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/document-collection",
+    "/services/document-collection",
+    "/services/client-intake-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Client Intake Automation | Save 15+ Hours Per Week",
+   "desc": "Automate your client intake process. Collect information, create CRM records, and send next steps automatically. Immigration, law, and accounting firms save 15+ hours per week.",
+   "canonical": "https://barrana.ai/services/client-intake-automation"
+  },
+  "/services/crm-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/lead-response-automation",
+    "/services/workflow-automation",
+    "/services/workflow-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "CRM Automation | A CRM That Updates Itself | Barrana.ai",
+   "desc": "Your CRM is only useful if the data is accurate. CRM automation creates records, updates stages, logs communications, and surfaces insights without manual entry.",
+   "canonical": "https://barrana.ai/services/crm-automation"
+  },
+  "/services/custom-ai-systems": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/custom-ai-systems",
+    "/services/ai-agents",
+    "/services/ai-agents"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Custom AI Systems | Enterprise-Grade Automation for Growing Businesses | Barrana.ai",
+   "desc": "Custom AI automation systems for complex business operations. Multi-workflow, multi-tool, fully governed. For businesses that have outgrown simple automation.",
+   "canonical": "https://barrana.ai/services/custom-ai-systems"
+  },
+  "/services/document-collection": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/document-collection",
+    "/services/client-intake-automation",
+    "/services/client-intake-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Document Collection Automation | Stop Chasing Clients | Barrana.ai",
+   "desc": "Automate document requests, tracking, and reminders for professional services. Dynamic checklists, upload portals, 48-hour reminders. Zero manual chasing.",
+   "canonical": "https://barrana.ai/services/document-collection"
+  },
+  "/services/full-stack": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/",
+    "/services/full-stack",
+    "/industries/service-businesses",
+    "/insights/automation-readiness"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Full-Stack AI Automation | Barrana.ai",
+   "desc": "Barrana.ai provides full-stack business partnership: workflow automation as the core, with custom software, website design, social media, and operational consulting. One partner for your entire operational technology stack.",
+   "canonical": "https://barrana.ai/services/full-stack"
+  },
+  "/services/invoice-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/document-collection",
+    "/services/invoice-automation",
+    "/services/operations-reporting"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Invoice Automation for Small Business",
+   "desc": "Automate invoice generation, delivery, and payment reminders. Invoices trigger on project completion. Reminders at 7/14/21 days. Integrated with QuickBooks.",
+   "canonical": "https://barrana.ai/services/invoice-automation"
+  },
+  "/services/lead-response-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/client-intake-automation",
+    "/services/lead-response-automation",
+    "/services/workflow-automation"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Lead Response Automation | Respond in 90 Seconds | Barrana.ai",
+   "desc": "Stop losing leads to slow response. Barrana.ai builds lead response systems that reply in 90 seconds, qualify automatically, and book appointments 24/7.",
+   "canonical": "https://barrana.ai/services/lead-response-automation"
+  },
+  "/services/operations-reporting": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/workflow-automation",
+    "/services/invoice-automation",
+    "/services/operations-reporting"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Operations Reporting Automation",
+   "desc": "Automate internal operations: document management, task routing, staff alerts, compliance logging, and weekly reporting. Operational visibility without manual work.",
+   "canonical": "https://barrana.ai/services/operations-reporting"
+  },
+  "/services/workflow-automation": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services/workflow-automation",
+    "/services/operations-reporting",
+    "/services/operations-reporting"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Workflow Automation | Connect Your Tools, Eliminate Hand-Offs | Barrana.ai",
+   "desc": "Custom workflow automation that connects your business tools through trigger-action sequences. No more manual hand-offs, dropped tasks, or data re-entry.",
+   "canonical": "https://barrana.ai/services/workflow-automation"
+  },
+  "/solopreneurs": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/start-here",
+    "/",
+    "/solopreneurs"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "You Are the Product, the Marketing Team, the Admin, and the CEO. Let Automation Handle Three of Those. | Barrana.ai",
+   "desc": "You became an expert to help people, not to chase invoices, manage DMs, send follow-up emails, and build spreadsheets. Automation takes the operational weight off so you can focus on the work that actually earns: coaching, consulting, creating, and serving clients.",
+   "canonical": "https://barrana.ai/solopreneurs"
+  },
+  "/start-here": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/services",
+    "/services",
+    "/contact"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Start Here: AI Automation for Your Business | Barrana.ai",
+   "desc": "Not sure if AI automation is right for your business? Start here. No jargon. No pressure. Find out what it costs you to stay manual and where to begin.",
+   "canonical": "https://barrana.ai/start-here"
+  },
+  "/templates": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/templates"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Workflow Templates | Barrana.ai",
+   "desc": "Visual automation templates showing exactly how each workflow is structured. Use these as reference for your own implementation.",
+   "canonical": "https://barrana.ai/templates"
+  },
+  "/workflow-automation-smb": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/resources",
+    "/workflow-automation-smb"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "Workflow Automation for Small Business | Barrana.ai",
+   "desc": "Automate intake, follow-up, scheduling, and invoicing for your small business. Fixed pricing. No hourly billing. See which workflows save the most time and money.",
+   "canonical": "https://barrana.ai/workflow-automation-smb"
+  },
+  "/workflows/appointment-booking": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Automate Appointment Booking and Reduce No-Shows",
+   "desc": "A step-by-step guide to building an automated booking workflow with smart reminders that reduces no-shows by 40-50%.",
+   "canonical": "https://barrana.ai/workflows/appointment-booking"
+  },
+  "/workflows/client-onboarding": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Automate Client Onboarding for Service Businesses",
+   "desc": "A step-by-step guide to building an automated client onboarding workflow that cuts intake time from days to minutes.",
+   "canonical": "https://barrana.ai/workflows/client-onboarding"
+  },
+  "/workflows/document-collection": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Automate Document Collection for Service Businesses",
+   "desc": "A step-by-step guide to building an automated document collection workflow that cuts collection time from weeks to days.",
+   "canonical": "https://barrana.ai/workflows/document-collection"
+  },
+  "/workflows/lead-intake": {
+   "inSitemap": true,
+   "from": [
+    "sitemap",
+    "/services",
+    "/contact",
+    "/start-here",
+    "/services/document-collection"
+   ],
+   "status": 200,
+   "location": null,
+   "title": "How to Automate Lead Intake for Small Businesses",
+   "desc": "A complete guide to automating lead intake using Make, a CRM, Calendly, and Twilio - cutting response time from hours to under 90 seconds.",
+   "canonical": "https://barrana.ai/workflows/lead-intake"
+  }
+ },
+ "assets": [
+  "/assets/index-C59IYsUO.css",
+  "/assets/index-CdLHEBIa.js",
+  "/barrana-logo-white.png",
+  "/barrana-logo.png",
+  "/meta-pixel.js"
+ ]
+}

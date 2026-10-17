@@ -1,0 +1,30 @@
+{
+  "name": "barrana-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "node scripts/use-prebuilt-release.mjs",
+    "build:ssg": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && node scripts/generate-sitemap.mjs && node scripts/prerender.mjs && node scripts/validate-built-site.mjs",
+    "prerender": "node scripts/prerender.mjs",
+    "generate:sitemap": "node scripts/generate-sitemap.mjs",
+    "validate:foundation": "node scripts/validate-site-foundation.mjs",
+    "validate:routes": "node scripts/validate-routes.mjs",
+    "validate:build": "node scripts/validate-built-site.mjs",
+    "start": "NODE_ENV=production node dist/index.js",
+    "preview": "vite preview --host",
+    "check": "tsc --noEmit",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "overrides": {
+    "path-to-regexp": "0.1.13",
+    "lodash": "4.18.0"
+  }
+}

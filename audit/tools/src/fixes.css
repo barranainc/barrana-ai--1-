@@ -1,0 +1,6 @@
+
+/* Barrana audit fixes (appended by _tools/build.mjs).
+   The site-wide even-section striping rule forces a light background with !important, which turned
+   solid dark call-to-action sections light and left their white headings unreadable. Restore them. */
+html body .site-main section[style*="background-color: rgb(40, 56, 145)"][style] { background-color: #283891 !important; }
+html body .site-main section[style*="background: rgb(26, 26, 46)"][style] { background-color: #1a1a2e !important; }
