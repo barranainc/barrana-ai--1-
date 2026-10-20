@@ -38,6 +38,9 @@ function findChrome() {
     "/usr/bin/google-chrome",
     "/usr/bin/chromium-browser",
     "/usr/bin/chromium",
+    // Windows
+    "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
     // Windows (WSL)
     "/mnt/c/Program Files/Google/Chrome/Application/chrome.exe",
   ];
@@ -105,6 +108,27 @@ function createStaticServer(root) {
   });
 }
 
+// ── Post-process captured HTML ───────────────────────────────────────────────
+// Runtime-injected tags must not be frozen into the static HTML: the Meta pixel script tags
+// (meta-pixel.js re-adds them, so a frozen copy would double-load), the deferred fonts link
+// (fonts.ts re-adds it after first paint), analytics loaders, and any editor runtime. The 404
+// page must not be indexed.
+function postProcess(html, routePath) {
+  let out = html;
+  if (!/^\s*<!doctype/i.test(out)) out = "<!DOCTYPE html>" + out;
+  out = out.replace(/<script[^>]*src="https:\/\/connect\.facebook\.net[^"]*"[^>]*><\/script>/g, "");
+  out = out.replace(/<script id="manus-runtime">[\s\S]*?<\/script>/g, "");
+  out = out.replace(/<link[^>]*data-deferred-font[^>]*>/g, "");
+  out = out.replace(/<script[^>]*src="\/analytics-config\.js"[^>]*><\/script>/g, "");
+  out = out.replace(/<script[^>]*src="https:\/\/www\.googletagmanager\.com[^"]*"[^>]*><\/script>/g, "");
+  if (routePath === "/404") {
+    out = out
+      .replace(/<link rel="canonical"[^>]*>/g, "")
+      .replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex, follow">');
+  }
+  return out;
+}
+
 // ── Render a single route ────────────────────────────────────────────────────
 async function renderRoute(browser, routePath) {
   const page = await browser.newPage();
@@ -116,7 +140,7 @@ async function renderRoute(browser, routePath) {
     // Give React an extra moment to settle hydration / lazy components
     await page.evaluate(() => new Promise((r) => setTimeout(r, 500)));
 
-    const html = await page.content();
+    const html = postProcess(await page.content(), routePath);
 
     // Determine output path
     const relPath = routePath === "/" ? "/index.html" : `${routePath}/index.html`;

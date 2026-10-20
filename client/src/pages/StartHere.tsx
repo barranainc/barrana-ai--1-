@@ -160,8 +160,8 @@ const industryCards = [
 ];
 
 const caseStudies = [
-  { location: "Immigration Firm \u00b7 North York", amount: "$86,400+ recovered", detail: "14 staff hours/week recovered = $36,400/yr in capacity. 25% more client files handled. $50,000+ in captured evening leads." },
-  { location: "Accounting Firm \u00b7 Vaughan", amount: "$82,000+ in new revenue", detail: "65 additional clients at avg $800 = $52,000 new revenue. Invoice delays eliminated = $30,000+ accelerated cash flow." },
+  { location: "Immigration Firm \u00b7 North York", amount: "$50,000+ in captured leads", detail: "Revenue: $50,000+ from captured evening leads. Capacity: 14 staff hours/week recovered (about $36,400/yr in staff time, not cash savings). 25% more client files handled." },
+  { location: "Accounting Firm \u00b7 Vaughan", amount: "$52,000 in new revenue", detail: "65 additional clients at avg $800 = $52,000 in new annual revenue. Separately, faster invoicing brought forward $30,000+ in cash flow - a timing benefit, not new revenue." },
   { location: "Physiotherapy Clinic \u00b7 Richmond Hill", amount: "$85,000/yr recovered", detail: "No-shows dropped to 13.6%. Revenue from reduced empty slots + filled cancellations." },
   { location: "Contractor \u00b7 Mississauga", amount: "$24K\u2013$100K/yr recaptured", detail: "Quote conversion up 22%. 3\u20134 more jobs/month at $8,000\u2013$25,000 per job captured from competitors." },
 ];
@@ -189,7 +189,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "How long before I see results?",
-    answer: "First automated workflow goes live in 1 to 2 weeks. You will see results - faster responses, fewer missed leads, less admin time - within the first week of operation. Full system payback: typically 30 to 60 days.",
+    answer: "Your first automated workflow typically goes live 2 to 4 weeks after the first call, of which about 1 to 2 weeks is build and testing. Results depend on your volumes, so we agree on what to measure before launch.",
   },
 ];
 
@@ -459,7 +459,7 @@ export default function StartHere() {
           <Reveal delay={0.25}>
             <div style={{ textAlign: "center", marginTop: "3rem" }}>
               <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.375rem", marginBottom: "1.75rem" }}>
-                $80,000 to $200,000 per year in operational waste for a 5\u201315 person service business.
+                $80,000 to $200,000 per year in operational waste for a 5–15 person service business.
               </p>
               <Link href="/automation-planner" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                 Calculate Your Specific Number <ArrowRight size={16} />

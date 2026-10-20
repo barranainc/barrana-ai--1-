@@ -25,17 +25,18 @@
     <!-- Google Fonts: Inter + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <!-- The Google Fonts stylesheet is added by client/src/lib/fonts.ts after first paint so it does not block rendering. -->
 
     <!-- Conservative organization schema. Add legal and location fields only after verification. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://barrana.ai/#organization",
       "name": "Barrana.ai",
       "description": "Barrana is a Canadian AI automation company founded by Ikram Rana. We connect the tools your business already uses, so routine work gets done without someone remembering every step, copying every detail, or chasing every follow-up.",
       "url": "https://barrana.ai",
-      "logo": "https://barrana.ai/barrana-logo.png",
+      "logo": "https://barrana.ai/barrana-logo-social.png",
       "founder": {
         "@type": "Person",
         "name": "Ikram Rana"

@@ -43,6 +43,10 @@ const playbooks = [
     steps: 5,
     slug: "after-hours-capture",
   },
+  {"emoji":"📊","title":"Accounting Firm Playbook","desc":"Document collection, onboarding, and invoicing for accounting practices","steps":16,"slug":"accounting-firm"},
+  {"emoji":"🔧","title":"Contractor Playbook","desc":"Lead response, quote follow-up, and invoicing for contractors","steps":16,"slug":"contractor"},
+  {"emoji":"🛂","title":"Immigration Consultant Playbook","desc":"Intake, document tracking, and deadlines for immigration firms","steps":20,"slug":"immigration-consultant"},
+  {"emoji":"🏥","title":"Physiotherapy Clinic Playbook","desc":"Reminders, digital intake, and no-show reduction for clinics","steps":16,"slug":"physiotherapy-clinic"},
 ];
 
 export default function Playbooks() {

@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 /**
  * PlannerResults.tsx - Redesigned v2
  * 8-section narrative results page for non-technical business owners.
@@ -622,6 +623,11 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const leadFormRef = useRef<HTMLDivElement>(null);
   const costSectionRef = useRef<HTMLDivElement>(null);
   const { ref: costRef, inView: costInView } = useInView(0.2);
+
+  // Audit task 10: one completion event when the results step is reached.
+  useEffect(() => {
+    trackEvent("planner_complete", { industry: state.industry || "" });
+  }, []);
 
   // Derive volume numbers with defaults
   const adminHrs = state.volume.adminHoursPerWeek ?? 12;

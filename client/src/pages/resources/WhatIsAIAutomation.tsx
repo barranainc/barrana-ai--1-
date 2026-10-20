@@ -364,7 +364,7 @@ function StartingPointCards() {
 
 export default function WhatIsAIAutomation() {
   useEffect(() => {
-    document.title = "What Is AI Automation for Small Business? | Barrana AI";
+    document.title = "What Is AI Automation for Small Business? | Barrana.ai";
   }, []);
 
   return (

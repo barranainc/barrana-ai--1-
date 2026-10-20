@@ -359,7 +359,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How fast will I see results?",
     answer:
-      "First automated workflow goes live in 1\u20132 weeks. Measurable results visible within the first week of operation. Full system payback typically 30\u201360 days.",
+      "Your first automated workflow typically goes live 2\u20134 weeks after the first call (about 1\u20132 weeks of that is build and testing). Results depend on your volumes, so we agree on what to measure before launch.",
   },
   {
     question: "Will this replace my staff?",
@@ -408,7 +408,7 @@ const objectionItems: FAQItem[] = [
   {
     question: "How long does setup take?",
     answer:
-      "First workflow: 1\u20132 weeks. Full multi-workflow system: 4\u20138 weeks. You start seeing results from Week 1, not Month 3.",
+      "First workflow: typically 1\u20132 weeks of build and testing, live 2\u20134 weeks after the first call once scope is approved. Full multi-workflow system: typically 4\u201310 weeks, depending on the number of workflows and integrations.",
   },
   {
     question: "Do I need to change my current software?",
@@ -511,7 +511,7 @@ const HERO_STATES: HeroState[] = [
     afterText: "",
     sub: "Most service businesses lose $80,000 to $200,000 per year to slow lead response, manual admin, no-shows, and invoice delays. The waste is calculable. So is the fix.",
     microcopy: "These are not estimates.\nThey are calculated from real patterns across GTA service businesses.\nYour number is probably in this range.",
-    primaryCTA: { text: "Calculate Your Annual Operational Cost", href: "/resources/roi-calculator" },
+    primaryCTA: { text: "Calculate Your Annual Operational Cost", href: "/automation-roi-calculator" },
     secondaryCTA: { text: "See What Other Businesses Recovered", href: "/case-studies" },
     metrics: [
       { value: "$80K\u2013$200K/yr", label: "Average annual loss" },
@@ -1001,7 +1001,7 @@ export default function Home() {
               You Are Losing Money in 4 Places Right Now.
             </h2>
             <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "72ch", marginBottom: "3rem" }}>
-              Most business owners know they are busy. Few have calculated what that busyness actually costs. Here is the math for a typical service business with 5\u201315 staff:
+              Most business owners know they are busy. Few have calculated what that busyness actually costs. Here is the math for a typical service business with 5–15 staff:
             </p>
           </Reveal>
 
@@ -1082,7 +1082,7 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.75rem" }}>
-                Add it up: a typical 5\u201315 person service business loses
+                Add it up: a typical 5–15 person service business loses
               </p>
               <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "2.5rem", lineHeight: 1.1, marginBottom: "0.5rem" }}>
                 $80,000 to $200,000 per year
@@ -1467,7 +1467,7 @@ export default function Home() {
               How It Works: The Barrana Automation Method
             </h2>
             <p style={{ color: GREY, lineHeight: 1.7, maxWidth: "68ch", marginBottom: "3rem" }}>
-              Five stages. Fixed pricing. Your first automation live in 2\u20133 weeks.
+              Five stages. Fixed pricing. Your first workflow is typically live 2–4 weeks after the first call.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -1947,16 +1947,16 @@ export default function Home() {
                 location: "North York",
                 pain: "Staff spent 18 hrs/week on intake and document chasing",
                 fix: "AI intake + document collection + status updates automated",
-                result: "$86,400+ recovered",
-                desc: "14 staff hours/week recovered = $36,400/yr in capacity. 25% more client files handled. $50,000+ in captured evening leads.",
+                result: "$50,000+ in captured leads",
+                desc: "Revenue: $50,000+ from captured evening leads. Capacity: 14 staff hours/week recovered (about $36,400/yr in staff time, not cash savings). 25% more client files handled.",
               },
               {
                 industry: "Accounting Firm",
                 location: "Vaughan",
                 pain: "Tax season at capacity. Turning away clients.",
                 fix: "Document collection + invoicing + onboarding automated",
-                result: "$82,000+ in new revenue",
-                desc: "65 additional clients at avg $800 = $52,000 new revenue. Invoice delays eliminated = $30,000\u2013$50,000 accelerated cash flow.",
+                result: "$52,000 in new revenue",
+                desc: "65 additional clients at avg $800 = $52,000 in new annual revenue. Separately, faster invoicing brought forward an estimated $30,000\u2013$50,000 in cash flow - a timing benefit, not new revenue.",
               },
               {
                 industry: "Physiotherapy Clinic",
@@ -1986,7 +1986,7 @@ export default function Home() {
                 }}>
                   <div style={{ background: NAVY, padding: "0.75rem 1rem" }}>
                     <span style={{ color: "white", fontSize: "0.8125rem", fontWeight: 600 }}>
-                      {card.industry} \u00B7 {card.location}
+                      {card.industry} · {card.location}
                     </span>
                   </div>
                   <div style={{ padding: "2rem" }}>
@@ -2322,7 +2322,7 @@ export default function Home() {
               </div>
             </div>
             <p style={{ fontSize: "0.8125rem", color: "rgba(255,255,255,0.5)", marginTop: "1.25rem" }}>
-              Serving Toronto and GTA service businesses with 2\u201350 staff. Fixed pricing. Works with your existing tools.
+              Serving Toronto and GTA service businesses with 2–50 staff. Fixed pricing. Works with your existing tools.
             </p>
           </div>
         </div>

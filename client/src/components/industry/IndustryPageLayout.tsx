@@ -1,3 +1,4 @@
+import { ORG_REF } from "@/lib/schema";
 /**
  * IndustryPageLayout.tsx
  * Master template for all 20 industry pages.
@@ -164,23 +165,9 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
   const pageSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: data.title,
+    name: data.title.split(" | ")[0].trim(),
     description: data.description,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Barrana.ai",
-      url: "https://barrana.ai",
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://barrana.ai" },
-      { "@type": "ListItem", position: 2, name: "Industries", item: "https://barrana.ai/industries" },
-      { "@type": "ListItem", position: 3, name: data.breadcrumb, item: `https://barrana.ai/industries/${data.route}` },
-    ],
+    provider: ORG_REF,
   };
 
   return (
@@ -190,7 +177,6 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
 
       {/* JSON-LD Schemas */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb Nav */}
       <div style={{ background: colors.surfaceLight, paddingTop: "3rem", paddingBottom: 0 }}>

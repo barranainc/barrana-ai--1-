@@ -151,7 +151,12 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// Manus runtime, the jsx-loc data attributes and the debug collector are development aids only.
+// In production they added a 360 KB inline script and a data-loc attribute to every element.
+const isProduction = process.env.NODE_ENV === "production";
+const plugins = isProduction
+  ? [react(), tailwindcss()]
+  : [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
 
 export default defineConfig({
   plugins,

@@ -1,6 +1,7 @@
 /**
  * BreadcrumbNav.tsx
  * Accessible breadcrumb navigation with JSON-LD BreadcrumbList schema.
+ * This is the only BreadcrumbList a page emits; layouts must not add a second copy.
  */
 
 import { Link } from "wouter";
@@ -57,8 +58,6 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
             margin: 0,
             padding: 0,
           }}
-          itemScope
-          itemType="https://schema.org/BreadcrumbList"
         >
           {items.map((item, i) => {
             const isLast = i === items.length - 1;
@@ -66,14 +65,10 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
               <li
                 key={i}
                 style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
-                itemProp="itemListElement"
-                itemScope
-                itemType="https://schema.org/ListItem"
               >
                 {!isLast && item.href ? (
                   <Link
                     href={item.href}
-                    itemProp="item"
                     style={{
                       color: NAVY,
                       textDecoration: "none",
@@ -85,18 +80,16 @@ export default function BreadcrumbNav({ items }: BreadcrumbNavProps) {
                       (e.currentTarget as HTMLAnchorElement).style.textDecoration = "none";
                     }}
                   >
-                    <span itemProp="name">{item.label}</span>
+                    <span>{item.label}</span>
                   </Link>
                 ) : (
                   <span
-                    itemProp="name"
                     style={{ color: GREY }}
                     aria-current={isLast ? "page" : undefined}
                   >
                     {item.label}
                   </span>
                 )}
-                <meta itemProp="position" content={String(i + 1)} />
                 {!isLast && (
                   <span style={{ color: GREY, margin: "0 0.125rem" }} aria-hidden="true">
                     &#8250;

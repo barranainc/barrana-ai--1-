@@ -1,120 +1,123 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch, useLocation } from "wouter";
+import { Redirect, Route, Switch, useLocation } from "wouter";
+import { initAnalytics, trackPageView } from "./lib/analytics";
+import { loadFonts } from "./lib/fonts";
+import { redirects as retiredRedirects } from "../../scripts/routes.mjs";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import RouteMetadataFallback from "./components/RouteMetadataFallback";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import ServiceDetail from "./pages/ServiceDetail";
-import LeadResponseAutomation from "./pages/services/LeadResponseAutomation";
-import ClientIntakeAutomation from "./pages/services/ClientIntakeAutomation";
-import AIReceptionist from "./pages/services/AIReceptionist";
-import DocumentCollectionAutomation from "./pages/services/DocumentCollectionAutomation";
-import AppointmentAutomation from "./pages/services/AppointmentAutomation";
-import InvoiceAutomation from "./pages/services/InvoiceAutomation";
-import WorkflowAutomation from "./pages/services/WorkflowAutomation";
-import CRMAutomation from "./pages/services/CRMAutomation";
-import OperationsReportingAutomation from "./pages/services/OperationsReportingAutomation";
-import AfterHoursAutomation from "./pages/services/AfterHoursAutomation";
-import AIAgents from "./pages/services/AIAgents";
-import CustomAISystems from "./pages/services/CustomAISystems";
-import FullStackServices from "./pages/services/FullStackServices";
-import Industries from "./pages/Industries";
-import IndustryDetail from "./pages/IndustryDetail";
-import ImmigrationConsultants from "./pages/industries/ImmigrationConsultants";
-import AccountingFirms from "./pages/industries/AccountingFirms";
-import LawFirms from "./pages/industries/LawFirms";
-import Contractors from "./pages/industries/Contractors";
-import PhysiotherapyClinics from "./pages/industries/PhysiotherapyClinics";
-import RealEstateTeams from "./pages/industries/RealEstateTeams";
-import ServiceBusinesses from "./pages/industries/ServiceBusinesses";
-import DentalOffices from "./pages/industries/DentalOffices";
-import InsuranceBrokers from "./pages/industries/InsuranceBrokers";
-import MortgageBrokers from "./pages/industries/MortgageBrokers";
-import FinancialAdvisors from "./pages/industries/FinancialAdvisors";
-import MarketingAgencies from "./pages/industries/MarketingAgencies";
-import CleaningCompanies from "./pages/industries/CleaningCompanies";
-import PropertyManagement from "./pages/industries/PropertyManagement";
-import HomeServices from "./pages/industries/HomeServices";
-import MedicalClinics from "./pages/industries/MedicalClinics";
-import VeterinaryClinics from "./pages/industries/VeterinaryClinics";
-import TutoringEducation from "./pages/industries/TutoringEducation";
-import AutoRepair from "./pages/industries/AutoRepair";
-import Landscaping from "./pages/industries/Landscaping";
-import ImmigrationFirmNorthYork from "./pages/case-studies/ImmigrationFirmNorthYork";
-import AccountingFirmVaughan from "./pages/case-studies/AccountingFirmVaughan";
-import ContractorMississauga from "./pages/case-studies/ContractorMississauga";
-import PhysioClinicRichmondHill from "./pages/case-studies/PhysioClinicRichmondHill";
-import LawFirmToronto from "./pages/case-studies/LawFirmToronto";
-import RealEstateTeamMarkham from "./pages/case-studies/RealEstateTeamMarkham";
-import DentalOfficeScarborough from "./pages/case-studies/DentalOfficeScarborough";
-import CleaningCompanyEtobicoke from "./pages/case-studies/CleaningCompanyEtobicoke";
-import HVACCompanyBrampton from "./pages/case-studies/HVACCompanyBrampton";
-import PropertyManagementToronto from "./pages/case-studies/PropertyManagementToronto";
-import InsuranceBrokerageVaughan from "./pages/case-studies/InsuranceBrokerageVaughan";
-import MarketingAgencyLibertyVillage from "./pages/case-studies/MarketingAgencyLibertyVillage";
-import Locations from "./pages/Locations";
-import LocationDetail from "./pages/LocationDetail";
-import Resources from "./pages/Resources";
-import AutomationPlanner from "./pages/AutomationPlanner";
-import CaseStudies from "./pages/CaseStudies";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+const Home = lazy(() => import("./pages/Home"));
+const Services = lazy(() => import("./pages/Services"));
+const ServiceDetail = lazy(() => import("./pages/ServiceDetail"));
+const LeadResponseAutomation = lazy(() => import("./pages/services/LeadResponseAutomation"));
+const ClientIntakeAutomation = lazy(() => import("./pages/services/ClientIntakeAutomation"));
+const AIReceptionist = lazy(() => import("./pages/services/AIReceptionist"));
+const DocumentCollectionAutomation = lazy(() => import("./pages/services/DocumentCollectionAutomation"));
+const AppointmentAutomation = lazy(() => import("./pages/services/AppointmentAutomation"));
+const InvoiceAutomation = lazy(() => import("./pages/services/InvoiceAutomation"));
+const WorkflowAutomation = lazy(() => import("./pages/services/WorkflowAutomation"));
+const CRMAutomation = lazy(() => import("./pages/services/CRMAutomation"));
+const OperationsReportingAutomation = lazy(() => import("./pages/services/OperationsReportingAutomation"));
+const AfterHoursAutomation = lazy(() => import("./pages/services/AfterHoursAutomation"));
+const AIAgents = lazy(() => import("./pages/services/AIAgents"));
+const CustomAISystems = lazy(() => import("./pages/services/CustomAISystems"));
+const FullStackServices = lazy(() => import("./pages/services/FullStackServices"));
+const Industries = lazy(() => import("./pages/Industries"));
+const IndustryDetail = lazy(() => import("./pages/IndustryDetail"));
+const ImmigrationConsultants = lazy(() => import("./pages/industries/ImmigrationConsultants"));
+const AccountingFirms = lazy(() => import("./pages/industries/AccountingFirms"));
+const LawFirms = lazy(() => import("./pages/industries/LawFirms"));
+const Contractors = lazy(() => import("./pages/industries/Contractors"));
+const PhysiotherapyClinics = lazy(() => import("./pages/industries/PhysiotherapyClinics"));
+const RealEstateTeams = lazy(() => import("./pages/industries/RealEstateTeams"));
+const ServiceBusinesses = lazy(() => import("./pages/industries/ServiceBusinesses"));
+const DentalOffices = lazy(() => import("./pages/industries/DentalOffices"));
+const InsuranceBrokers = lazy(() => import("./pages/industries/InsuranceBrokers"));
+const MortgageBrokers = lazy(() => import("./pages/industries/MortgageBrokers"));
+const FinancialAdvisors = lazy(() => import("./pages/industries/FinancialAdvisors"));
+const MarketingAgencies = lazy(() => import("./pages/industries/MarketingAgencies"));
+const CleaningCompanies = lazy(() => import("./pages/industries/CleaningCompanies"));
+const PropertyManagement = lazy(() => import("./pages/industries/PropertyManagement"));
+const HomeServices = lazy(() => import("./pages/industries/HomeServices"));
+const MedicalClinics = lazy(() => import("./pages/industries/MedicalClinics"));
+const VeterinaryClinics = lazy(() => import("./pages/industries/VeterinaryClinics"));
+const TutoringEducation = lazy(() => import("./pages/industries/TutoringEducation"));
+const AutoRepair = lazy(() => import("./pages/industries/AutoRepair"));
+const Landscaping = lazy(() => import("./pages/industries/Landscaping"));
+const ImmigrationFirmNorthYork = lazy(() => import("./pages/case-studies/ImmigrationFirmNorthYork"));
+const AccountingFirmVaughan = lazy(() => import("./pages/case-studies/AccountingFirmVaughan"));
+const ContractorMississauga = lazy(() => import("./pages/case-studies/ContractorMississauga"));
+const PhysioClinicRichmondHill = lazy(() => import("./pages/case-studies/PhysioClinicRichmondHill"));
+const LawFirmToronto = lazy(() => import("./pages/case-studies/LawFirmToronto"));
+const RealEstateTeamMarkham = lazy(() => import("./pages/case-studies/RealEstateTeamMarkham"));
+const DentalOfficeScarborough = lazy(() => import("./pages/case-studies/DentalOfficeScarborough"));
+const CleaningCompanyEtobicoke = lazy(() => import("./pages/case-studies/CleaningCompanyEtobicoke"));
+const HVACCompanyBrampton = lazy(() => import("./pages/case-studies/HVACCompanyBrampton"));
+const PropertyManagementToronto = lazy(() => import("./pages/case-studies/PropertyManagementToronto"));
+const InsuranceBrokerageVaughan = lazy(() => import("./pages/case-studies/InsuranceBrokerageVaughan"));
+const MarketingAgencyLibertyVillage = lazy(() => import("./pages/case-studies/MarketingAgencyLibertyVillage"));
+const Locations = lazy(() => import("./pages/Locations"));
+const LocationDetail = lazy(() => import("./pages/LocationDetail"));
+const Resources = lazy(() => import("./pages/Resources"));
+const AutomationPlanner = lazy(() => import("./pages/AutomationPlanner"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 // SEO/AEO Expansion Pages
-import KnowledgeBase from "./pages/KnowledgeBase";
-import KnowledgeArticle from "./pages/KnowledgeArticle";
-import Playbooks from "./pages/Playbooks";
-import PlaybookDetail from "./pages/PlaybookDetail";
-import Glossary from "./pages/Glossary";
-import BeforeAfter from "./pages/BeforeAfter";
-import Benchmarks from "./pages/Benchmarks";
-import Governance from "./pages/Governance";
-import WorkflowTemplates from "./pages/WorkflowTemplates";
-import OperatorInsights from "./pages/OperatorInsights";
-import OperatorInsightArticle from "./pages/OperatorInsightArticle";
-import Integrations from "./pages/Integrations";
-import IntegrationDetail from "./pages/IntegrationDetail";
-import ROICalculator from "./pages/ROICalculator";
-import LocalSEOPage from "./pages/LocalSEOPage";
-import LocationIndustryPage from "./pages/LocationIndustryPage";
-import FAQ from "./pages/FAQ";
-import WhatIsAIAutomation from "./pages/resources/WhatIsAIAutomation";
-import OperationalFrictionMap from "./pages/resources/OperationalFrictionMap";
-import AutomateClientIntake from "./pages/resources/AutomateClientIntake";
-import AutomationROI from "./pages/resources/AutomationROI";
-import ProfessionalServicesGuide from "./pages/resources/ProfessionalServicesGuide";
-import IntegrationPriorityMatrix from "./pages/resources/IntegrationPriorityMatrix";
-import IndustryAutomationGuide from "./pages/resources/IndustryAutomationGuide";
-import HumanInTheLoop from "./pages/HumanInTheLoop";
-import AiAutomationIndustries from "./pages/AiAutomationIndustries";
-import AiAutomationVaughan from "./pages/AiAutomationVaughan";
-import AiAdoptionSmallBusiness from "./pages/AiAdoptionSmallBusiness";
-import WorkflowAutomationSMB from "./pages/WorkflowAutomationSMB";
-import AiReceptionistPage from "./pages/AiReceptionistPage";
-import WhatToAutomateFirst from "./pages/insights/WhatToAutomateFirst";
-import AutomationReadiness from "./pages/insights/AutomationReadiness";
-import BuildVsBuy from "./pages/insights/BuildVsBuy";
-import WhenAiIsNotTheAnswer from "./pages/insights/WhenAiIsNotTheAnswer";
-import AutomationVsDelegation from "./pages/insights/AutomationVsDelegation";
-import LeadIntakeWorkflow from "./pages/workflows/LeadIntakeWorkflow";
-import StartHere from "./pages/StartHere";
-import Solopreneurs from "./pages/Solopreneurs";
-import AppointmentBookingWorkflow from "./pages/workflows/AppointmentBookingWorkflow";
-import ClientOnboardingWorkflow from "./pages/workflows/ClientOnboardingWorkflow";
-import DocumentCollectionWorkflow from "./pages/workflows/DocumentCollectionWorkflow";
+const KnowledgeBase = lazy(() => import("./pages/KnowledgeBase"));
+const KnowledgeArticle = lazy(() => import("./pages/KnowledgeArticle"));
+const Playbooks = lazy(() => import("./pages/Playbooks"));
+const PlaybookDetail = lazy(() => import("./pages/PlaybookDetail"));
+const Glossary = lazy(() => import("./pages/Glossary"));
+const BeforeAfter = lazy(() => import("./pages/BeforeAfter"));
+const Benchmarks = lazy(() => import("./pages/Benchmarks"));
+const Governance = lazy(() => import("./pages/Governance"));
+const WorkflowTemplates = lazy(() => import("./pages/WorkflowTemplates"));
+const OperatorInsights = lazy(() => import("./pages/OperatorInsights"));
+const OperatorInsightArticle = lazy(() => import("./pages/OperatorInsightArticle"));
+const Integrations = lazy(() => import("./pages/Integrations"));
+const IntegrationDetail = lazy(() => import("./pages/IntegrationDetail"));
+const ROICalculator = lazy(() => import("./pages/ROICalculator"));
+const LocalSEOPage = lazy(() => import("./pages/LocalSEOPage"));
+const LocationIndustryPage = lazy(() => import("./pages/LocationIndustryPage"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const WhatIsAIAutomation = lazy(() => import("./pages/resources/WhatIsAIAutomation"));
+const OperationalFrictionMap = lazy(() => import("./pages/resources/OperationalFrictionMap"));
+const AutomateClientIntake = lazy(() => import("./pages/resources/AutomateClientIntake"));
+const AutomationROI = lazy(() => import("./pages/resources/AutomationROI"));
+const ProfessionalServicesGuide = lazy(() => import("./pages/resources/ProfessionalServicesGuide"));
+const IntegrationPriorityMatrix = lazy(() => import("./pages/resources/IntegrationPriorityMatrix"));
+const IndustryAutomationGuide = lazy(() => import("./pages/resources/IndustryAutomationGuide"));
+const HumanInTheLoop = lazy(() => import("./pages/HumanInTheLoop"));
+const AiAutomationIndustries = lazy(() => import("./pages/AiAutomationIndustries"));
+const AiAutomationVaughan = lazy(() => import("./pages/AiAutomationVaughan"));
+const AiAdoptionSmallBusiness = lazy(() => import("./pages/AiAdoptionSmallBusiness"));
+const WorkflowAutomationSMB = lazy(() => import("./pages/WorkflowAutomationSMB"));
+const AiReceptionistPage = lazy(() => import("./pages/AiReceptionistPage"));
+const WhatToAutomateFirst = lazy(() => import("./pages/insights/WhatToAutomateFirst"));
+const AutomationReadiness = lazy(() => import("./pages/insights/AutomationReadiness"));
+const BuildVsBuy = lazy(() => import("./pages/insights/BuildVsBuy"));
+const WhenAiIsNotTheAnswer = lazy(() => import("./pages/insights/WhenAiIsNotTheAnswer"));
+const AutomationVsDelegation = lazy(() => import("./pages/insights/AutomationVsDelegation"));
+const LeadIntakeWorkflow = lazy(() => import("./pages/workflows/LeadIntakeWorkflow"));
+const StartHere = lazy(() => import("./pages/StartHere"));
+const Solopreneurs = lazy(() => import("./pages/Solopreneurs"));
+const AppointmentBookingWorkflow = lazy(() => import("./pages/workflows/AppointmentBookingWorkflow"));
+const ClientOnboardingWorkflow = lazy(() => import("./pages/workflows/ClientOnboardingWorkflow"));
+const DocumentCollectionWorkflow = lazy(() => import("./pages/workflows/DocumentCollectionWorkflow"));
 
 // Campaign landing pages (no nav/footer)
-import CampaignContractors from "./pages/campaign/CampaignContractors";
-import CampaignDental from "./pages/campaign/CampaignDental";
-import CampaignLawFirms from "./pages/campaign/CampaignLawFirms";
-import CampaignRealEstate from "./pages/campaign/CampaignRealEstate";
+const CampaignContractors = lazy(() => import("./pages/campaign/CampaignContractors"));
+const CampaignDental = lazy(() => import("./pages/campaign/CampaignDental"));
+const CampaignLawFirms = lazy(() => import("./pages/campaign/CampaignLawFirms"));
+const CampaignRealEstate = lazy(() => import("./pages/campaign/CampaignRealEstate"));
 
 type MetaPixelWindow = Window & {
   fbq?: (...args: unknown[]) => void;
@@ -125,6 +128,7 @@ function MetaPixelPageViews() {
 
   useEffect(() => {
     (window as MetaPixelWindow).fbq?.("track", "PageView");
+    trackPageView(location);
   }, [location]);
 
   return null;
@@ -144,6 +148,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 function LayoutRoutes() {
   return (
     <Layout>
+      <Suspense fallback={<div aria-busy="true" style={{ minHeight: "60vh" }} />}>
       <Switch>
         {/* Core Pages */}
         <Route path="/start-here" component={StartHere} />
@@ -194,12 +199,12 @@ function LayoutRoutes() {
         <Route path="/resources/automation-roi" component={AutomationROI} />
         <Route path="/resources/professional-services-guide" component={ProfessionalServicesGuide} />
         <Route path="/resources/integration-priority-matrix" component={IntegrationPriorityMatrix} />
-        <Route path="/resources/automation-playbooks" component={Playbooks} />
-        <Route path="/resources/ai-automation-glossary" component={Glossary} />
-        <Route path="/resources/workflow-templates" component={WorkflowTemplates} />
-        <Route path="/resources/automation-benchmarks" component={Benchmarks} />
-        <Route path="/resources/before-and-after" component={BeforeAfter} />
-        <Route path="/resources/roi-calculator" component={ROICalculator} />
+        <Route path="/resources/automation-playbooks">{() => <Redirect to={retiredRedirects["/resources/automation-playbooks"] ?? "/playbooks"} replace />}</Route>
+        <Route path="/resources/ai-automation-glossary">{() => <Redirect to={retiredRedirects["/resources/ai-automation-glossary"] ?? "/glossary"} replace />}</Route>
+        <Route path="/resources/workflow-templates">{() => <Redirect to={retiredRedirects["/resources/workflow-templates"] ?? "/templates"} replace />}</Route>
+        <Route path="/resources/automation-benchmarks">{() => <Redirect to={retiredRedirects["/resources/automation-benchmarks"] ?? "/benchmarks"} replace />}</Route>
+        <Route path="/resources/before-and-after">{() => <Redirect to={retiredRedirects["/resources/before-and-after"] ?? "/before-after"} replace />}</Route>
+        <Route path="/resources/roi-calculator">{() => <Redirect to={retiredRedirects["/resources/roi-calculator"] ?? "/automation-roi-calculator"} replace />}</Route>
         <Route path="/resources/:slug" component={IndustryAutomationGuide} />
         <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
@@ -274,12 +279,14 @@ function LayoutRoutes() {
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
+      </Suspense>
     </Layout>
   );
 }
 
 function Router() {
   return (
+    <Suspense fallback={<div aria-busy="true" style={{ minHeight: "60vh" }} />}>
     <Switch>
       {/* Campaign landing pages - no nav/footer */}
       <Route path="/campaign/contractors" component={CampaignContractors} />
@@ -290,10 +297,16 @@ function Router() {
       {/* All other pages with Layout */}
       <Route>{() => <LayoutRoutes />}</Route>
     </Switch>
+    </Suspense>
   );
 }
 
 function App() {
+  useEffect(() => {
+    loadFonts();
+    initAnalytics();
+  }, []);
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="light">

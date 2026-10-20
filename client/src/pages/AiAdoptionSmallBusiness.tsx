@@ -236,7 +236,6 @@ export default function AiAdoptionSmallBusiness() {
         "@type": "Article",
         "headline": "AI Adoption for Small Businesses: A Practical Guide",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
-        "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
         "description": "AI adoption for a small business means systematically identifying repetitive operational tasks and automating them. Learn the 5-stage method, costs, and what to automate first.",
       },

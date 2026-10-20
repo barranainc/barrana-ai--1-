@@ -2840,3 +2840,14 @@
     transform: none !important;
   }
 }
+
+/* Audit fix: the even-section striping above must not recolour sections that set their own dark background inline
+   (it hid white headings on two call-to-action blocks). */
+html body .site-main section[style*="background-color: rgb(40, 56, 145)"][style],
+html body .site-main section[style*="background-color: #283891"][style] {
+  background-color: #283891 !important;
+}
+html body .site-main section[style*="background: rgb(26, 26, 46)"][style],
+html body .site-main section[style*="background: #1A1A2E"][style] {
+  background-color: #1a1a2e !important;
+}

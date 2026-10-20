@@ -109,16 +109,16 @@ const jsonLdData = {
   "@type": "Article",
   "headline": "How to Know If Your Business Is Automation-Ready",
   "description": "A business is ready for automation when it has repeatable workflows, 20+ client interactions per month, identifiable time drains, basic digital tools, and willingness to start small.",
-  "author": { "@type": "Organization", "name": "Barrana AI" },
-  "publisher": { "@type": "Organization", "name": "Barrana AI" },
+  "author": { "@type": "Organization", "name": "Barrana.ai" },
+  "publisher": { "@type": "Organization", "name": "Barrana.ai" },
 };
 
 export default function AutomationReadiness() {
-  useEffect(() => { document.title = "How to Know If Your Business Is Automation-Ready | Barrana AI"; }, []);
+  useEffect(() => { document.title = "How to Know If Your Business Is Automation-Ready | Barrana.ai"; }, []);
 
   return (
     <>
-      <SEOHead title="How to Know If Your Business Is Automation-Ready | Barrana AI" description="A business is ready for automation when it has repeatable workflows, 20+ client interactions per month, identifiable time drains, basic digital tools, and willingness to start small." type="article" />
+      <SEOHead title="How to Know If Your Business Is Automation-Ready | Barrana.ai" description="A business is ready for automation when it has repeatable workflows, 20+ client interactions per month, identifiable time drains, basic digital tools, and willingness to start small." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>

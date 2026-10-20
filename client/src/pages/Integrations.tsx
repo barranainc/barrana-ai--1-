@@ -1,6 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 
+/** Tools that have a detail page under /integrations/<slug>. */
+const INTEGRATION_DETAIL_SLUGS: Record<string, string> = {
+  "make (integromat)": "make-integromat", make: "make-integromat", zapier: "zapier", hubspot: "hubspot", jobber: "jobber",
+  quickbooks: "quickbooks", calendly: "calendly", jotform: "jotform", gohighlevel: "gohighlevel", twilio: "twilio",
+  "twilio sms": "twilio", "google workspace": "google-workspace", gmail: "google-workspace", "google drive": "google-workspace",
+};
+function integrationDetailHref(name: string): string | null {
+  const slug = INTEGRATION_DETAIL_SLUGS[name.toLowerCase()];
+  return slug ? `/integrations/${slug}` : null;
+}
+
 const NAVY = "#283891";
 const DARK = "#1A1A2E";
 
@@ -14,6 +25,7 @@ const categories = [
       { name: "Zoho CRM", emoji: "🔴", desc: "Mid-market CRM with deep workflow automation" },
       { name: "Salesforce", emoji: "🔵", desc: "Enterprise CRM for larger service businesses" },
       { name: "Pipedrive", emoji: "🟢", desc: "Sales-focused pipeline management" },
+      { name: "Jobber", emoji: "🛠️", desc: "Field service quotes, scheduling, and invoicing" },
     ],
   },
   {
@@ -326,7 +338,13 @@ export default function Integrations() {
                         {tool.emoji}
                       </div>
                       <div style={{ fontWeight: 700, fontSize: "0.9375rem", color: DARK, marginBottom: "0.3rem" }}>
-                        {tool.name}
+                        {integrationDetailHref(tool.name) ? (
+                          <Link href={integrationDetailHref(tool.name)!} style={{ color: "inherit", textDecoration: "underline", textUnderlineOffset: "3px" }}>
+                            {tool.name}
+                          </Link>
+                        ) : (
+                          tool.name
+                        )}
                       </div>
                       <div style={{ fontSize: "0.8125rem", color: "#6B7280", lineHeight: 1.55 }}>
                         {tool.desc}

@@ -197,7 +197,6 @@ export default function WorkflowAutomationSMB() {
         "@type": "Article",
         "headline": "Business Workflow Automation for SMBs: The Complete Guide",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
-        "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
         "description": "Workflow automation for small businesses means connecting triggers to actions across existing tools. The 8 highest-impact workflows to automate: lead intake, missed call, booking, onboarding, document collection, invoicing, handoffs, and reporting.",
       },

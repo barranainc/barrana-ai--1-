@@ -82,7 +82,7 @@ function ImplementationTimeline() {
 
 export default function AutomateClientIntake() {
   useEffect(() => {
-    document.title = "How to Automate Client Intake Without Switching Software | Barrana AI";
+    document.title = "How to Automate Client Intake Without Switching Software | Barrana.ai";
   }, []);
 
   return (

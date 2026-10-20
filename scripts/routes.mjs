@@ -119,12 +119,6 @@ export const routes = [
   { path: "/resources/automation-roi", priority: 0.6, changefreq: "monthly" },
   { path: "/resources/professional-services-guide", priority: 0.6, changefreq: "monthly" },
   { path: "/resources/integration-priority-matrix", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/automation-playbooks", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/ai-automation-glossary", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/workflow-templates", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/automation-benchmarks", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/before-and-after", priority: 0.6, changefreq: "monthly" },
-  { path: "/resources/roi-calculator", priority: 0.6, changefreq: "monthly" },
   { path: "/resources/pest-control-company-automation", priority: 0.6, changefreq: "monthly" },
   { path: "/resources/commercial-cleaning-company-automation", priority: 0.6, changefreq: "monthly" },
   { path: "/resources/snow-removal-lawn-care-automation", priority: 0.6, changefreq: "monthly" },
@@ -201,6 +195,44 @@ export const routes = [
   { path: "/workflows/appointment-booking", priority: 0.6, changefreq: "monthly" },
   { path: "/workflows/client-onboarding", priority: 0.6, changefreq: "monthly" },
   { path: "/workflows/document-collection", priority: 0.6, changefreq: "monthly" },
+
+  // ── Articles and tool pages that were live but unlinked before Oct 2026 (audit task 6) ──
+  { path: "/knowledge/lead-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/knowledge/client-intake-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/knowledge/ai-agents-for-small-business", priority: 0.5, changefreq: "monthly" },
+  { path: "/knowledge/workflow-automation-explained", priority: 0.5, changefreq: "monthly" },
+  { path: "/knowledge/top-25-automated-workflows", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/lead-response", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/booking-reminders", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/client-onboarding", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/document-collection", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/invoice-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/after-hours-capture", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/immigration-consultant", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/accounting-firm", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/contractor", priority: 0.5, changefreq: "monthly" },
+  { path: "/playbooks/physiotherapy-clinic", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/response-time-systems-problem", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/hidden-cost-manual-intake", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/admin-hours-annual-cost", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/why-follow-up-fails", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/control-layer-boundaries", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/immigration-intake-field-report", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/immigration-consultant-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/accounting-firm-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/contractor-lead-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/physiotherapy-no-show-reduction", priority: 0.5, changefreq: "monthly" },
+  { path: "/operator-insights/law-firm-intake-automation", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/make-integromat", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/zapier", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/hubspot", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/jobber", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/quickbooks", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/calendly", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/jotform", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/gohighlevel", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/twilio", priority: 0.5, changefreq: "monthly" },
+  { path: "/integrations/google-workspace", priority: 0.5, changefreq: "monthly" },
 ];
 
 /**
@@ -215,49 +247,9 @@ export const prerenderOnlyRoutes = [
   "/industries/clinics",
   "/industries/real-estate",
 
-  // Knowledge articles.
-  "/knowledge/lead-automation",
-  "/knowledge/client-intake-automation",
-  "/knowledge/ai-agents-for-small-business",
-  "/knowledge/workflow-automation-explained",
-  "/knowledge/top-25-automated-workflows",
 
-  // Workflow and industry playbooks.
-  "/playbooks/lead-response",
-  "/playbooks/booking-reminders",
-  "/playbooks/client-onboarding",
-  "/playbooks/document-collection",
-  "/playbooks/invoice-automation",
-  "/playbooks/after-hours-capture",
-  "/playbooks/immigration-consultant",
-  "/playbooks/accounting-firm",
-  "/playbooks/contractor",
-  "/playbooks/physiotherapy-clinic",
 
-  // Published operator links plus data-backed archive articles.
-  "/operator-insights/response-time-systems-problem",
-  "/operator-insights/hidden-cost-manual-intake",
-  "/operator-insights/admin-hours-annual-cost",
-  "/operator-insights/why-follow-up-fails",
-  "/operator-insights/control-layer-boundaries",
-  "/operator-insights/immigration-intake-field-report",
-  "/operator-insights/immigration-consultant-automation",
-  "/operator-insights/accounting-firm-automation",
-  "/operator-insights/contractor-lead-automation",
-  "/operator-insights/physiotherapy-no-show-reduction",
-  "/operator-insights/law-firm-intake-automation",
 
-  // Integration detail pages.
-  "/integrations/make-integromat",
-  "/integrations/zapier",
-  "/integrations/hubspot",
-  "/integrations/jobber",
-  "/integrations/quickbooks",
-  "/integrations/calendly",
-  "/integrations/jotform",
-  "/integrations/gohighlevel",
-  "/integrations/twilio",
-  "/integrations/google-workspace",
 
   // Local SEO matrix pages.
   "/ai-automation/toronto",
@@ -282,6 +274,19 @@ export const prerenderOnlyRoutes = [
 ];
 
 export const errorRoutes = ["/404"];
+
+/**
+ * Retired duplicate URLs (audit task 1). The server answers 301, the app redirects on client-side
+ * navigation, and none of these appear in the sitemap. Keep all three in step by editing only this map.
+ */
+export const redirects = {
+  "/resources/automation-playbooks": "/playbooks",
+  "/resources/ai-automation-glossary": "/glossary",
+  "/resources/workflow-templates": "/templates",
+  "/resources/automation-benchmarks": "/benchmarks",
+  "/resources/before-and-after": "/before-after",
+  "/resources/roi-calculator": "/automation-roi-calculator"
+};
 
 export const prerenderPaths = [
   ...routes.map((route) => route.path),
