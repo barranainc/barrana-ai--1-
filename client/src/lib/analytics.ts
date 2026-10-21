@@ -45,8 +45,11 @@ export function initAnalytics(): void {
     const id = window.barranaAnalyticsConfig?.measurementId;
     if (!id) return;
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function gtag(...args: unknown[]) {
-      window.dataLayer!.push(args);
+    // gtag.js only processes the `arguments` object. An array pushed here is silently ignored,
+    // which is how the 20 Oct release loaded GA4 but sent no hits at all.
+    window.gtag = function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer!.push(arguments);
     };
     const denied = (window.barranaAnalyticsConfig?.defaultConsent || "denied") === "denied";
     window.gtag("consent", "default", {
@@ -56,7 +59,9 @@ export function initAnalytics(): void {
       analytics_storage: denied ? "denied" : "granted",
     });
     window.gtag("js", new Date());
-    window.gtag("config", id, { send_page_view: false, anonymize_ip: true });
+    // `?debug_analytics=1` sends this session to GA4 DebugView, for verifying events after a release.
+    const debug = new URLSearchParams(window.location.search).has("debug_analytics");
+    window.gtag("config", id, { send_page_view: false, anonymize_ip: true, ...(debug ? { debug_mode: true } : {}) });
     trackPageView(window.location.pathname);
     const lib = document.createElement("script");
     lib.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
