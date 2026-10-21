@@ -258,7 +258,6 @@ export default function AiReceptionistPage() {
         "@type": "Article",
         "headline": "AI Receptionist for Small Businesses and Professional Services",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
-        "datePublished": "2024-01-01",
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
         "description": "An AI receptionist answers calls 24/7, qualifies callers, books appointments, and creates CRM records. Costs $200-$500/month vs $3,000-$4,000/month for a human. Best for after-hours coverage and overflow.",
       },
@@ -283,7 +282,7 @@ export default function AiReceptionistPage() {
 
   return (
     <>
-      <SEOHead title="AI Receptionist for Small Businesses | Barrana AI" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically - without replacing your team." type="article" />
+      <SEOHead title="AI Receptionist for Small Businesses | Barrana.ai" description="An AI receptionist answers calls, qualifies leads, books appointments, and handles after-hours enquiries automatically - without replacing your team." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}

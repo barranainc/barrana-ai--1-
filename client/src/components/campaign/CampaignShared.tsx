@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 /**
  * BARRANA.AI CAMPAIGN COMPONENTS
  * Shared components for standalone campaign landing pages.
@@ -227,7 +228,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
     e.preventDefault();
     setLoading(true);
     try {
-      await fetch("/api/lead", {
+      const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -244,8 +245,15 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
           tags: ["campaign-lead", "audit-request", industry.toLowerCase().replace(/\s+/g, "-"), utm],
         }),
       });
-    } catch (_) {
-      // silent - show success regardless
+      if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
+      (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", { content_name: `Campaign - ${industry}` });
+      trackEvent("generate_lead", { form_name: `Campaign - ${industry}` });
+    } catch (error) {
+      // Audit task 10: never show a thank-you for a lead that was not delivered.
+      console.error("Campaign lead submission failed:", error);
+      setLoading(false);
+      window.alert("Sorry - your request could not be sent. Please try again, or use the form at barrana.ai/contact.");
+      return;
     }
     setLoading(false);
     setSubmitted(true);

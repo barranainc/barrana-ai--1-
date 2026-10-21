@@ -1,3 +1,4 @@
+import { ORG_REF } from "@/lib/schema";
 /**
  * ServicePageLayout.tsx
  * Master template for all 12 service pages.
@@ -128,40 +129,9 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: data.title,
+    name: data.title.split(" | ")[0].trim(),
     description: data.description,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Barrana.ai",
-      url: "https://barrana.ai",
-    },
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://barrana.ai",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: "https://barrana.ai/services",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: data.breadcrumb,
-        item: `https://barrana.ai/services/${data.breadcrumb
-          .toLowerCase()
-          .replace(/\s+/g, "-")}`,
-      },
-    ],
+    provider: ORG_REF,
   };
 
   return (
@@ -173,10 +143,6 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Breadcrumb Nav */}

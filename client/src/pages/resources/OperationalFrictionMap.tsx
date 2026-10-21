@@ -255,7 +255,7 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
 
 export default function OperationalFrictionMap() {
   useEffect(() => {
-    document.title = "The Operational Friction Map | Barrana AI Resources";
+    document.title = "The Operational Friction Map | Barrana.ai";
   }, []);
 
   return (

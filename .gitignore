@@ -9,3 +9,6 @@ dist/
 .manus-logs/
 .claude/
 .vite/
+
+# Hostinger deployment packages built by scripts/package-hostinger.mjs
+release/

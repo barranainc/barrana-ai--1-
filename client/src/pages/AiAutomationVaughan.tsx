@@ -219,7 +219,7 @@ function EngagementTimeline() {
 
 export default function AiAutomationVaughan() {
   useEffect(() => {
-    document.title = "AI Automation for Small Businesses in Vaughan and the GTA | Barrana AI";
+    document.title = "AI Automation for Small Businesses in Vaughan and the GTA | Barrana.ai";
   }, []);
 
   return (

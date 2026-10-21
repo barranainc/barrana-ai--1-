@@ -165,17 +165,17 @@ const jsonLdData = {
   "@type": "Article",
   "headline": "Automation vs Delegation: What Business Owners Get Wrong",
   "description": "Automation and delegation solve different problems. The decision framework: if a task follows the same rules every time and requires no judgement, automate it. If it requires context, creativity, or relationships, delegate it.",
-  "author": { "@type": "Organization", "name": "Barrana AI" },
-  "publisher": { "@type": "Organization", "name": "Barrana AI" },
+  "author": { "@type": "Organization", "name": "Barrana.ai" },
+  "publisher": { "@type": "Organization", "name": "Barrana.ai" },
 };
 
 export default function AutomationVsDelegation() {
-  useEffect(() => { document.title = "Automation vs Delegation: What Business Owners Get Wrong | Barrana AI"; }, []);
+  useEffect(() => { document.title = "Automation vs Delegation: What Business Owners Get Wrong | Barrana.ai"; }, []);
   const examplesReveal = useReveal();
 
   return (
     <>
-      <SEOHead title="Automation vs Delegation: What Business Owners Get Wrong | Barrana AI" description="Automation and delegation solve different problems. If a task follows the same rules every time and requires no judgement, automate it. If it requires context, creativity, or relationships, delegate it." type="article" />
+      <SEOHead title="Automation vs Delegation: What Business Owners Get Wrong | Barrana.ai" description="Automation and delegation solve different problems. If a task follows the same rules every time and requires no judgement, automate it. If it requires context, creativity, or relationships, delegate it." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>

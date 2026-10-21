@@ -73,7 +73,7 @@ const servicesList = [
     description: "A fully automated scheduling system that books appointments, sends confirmation sequences, triggers pre-appointment reminders, and follows up after the meeting. Your calendar fills itself.",
     outcomes: ["Online booking integrated with your calendar", "Automated confirmation and reminder sequences", "No-show reduction through multi-step reminders", "Post-appointment follow-up triggered automatically"],
     color: "#283891",
-    pipeline: PIPELINES.leadCapture,
+    pipeline: PIPELINES.appointment,
   },
   {
     slug: "invoice-automation",
@@ -83,7 +83,7 @@ const servicesList = [
     description: "Automate invoice generation, delivery, payment tracking, and overdue follow-up sequences. Get paid faster without your team manually chasing every outstanding balance.",
     outcomes: ["Auto-generated invoices on project milestone", "Payment status tracked in real time", "Overdue payment reminders sent automatically", "Reconciliation updates pushed to your accounting system"],
     color: "#7E0F4A",
-    pipeline: PIPELINES.documentCollection,
+    pipeline: PIPELINES.invoice,
   },
   {
     slug: "workflow-automation",
@@ -93,7 +93,7 @@ const servicesList = [
     description: "We build the automation layer that connects your CRM, calendar, email, project management, and invoicing tools into one coordinated system. When something happens in one tool, the right things happen automatically in all the others.",
     outcomes: ["Leads automatically logged and assigned", "Client records created without manual entry", "Tasks created and assigned on trigger events", "Status updates pushed across all systems"],
     color: "#283891",
-    pipeline: PIPELINES.clientIntake,
+    pipeline: PIPELINES.workflow,
   },
   {
     slug: "crm-automation",
@@ -103,7 +103,7 @@ const servicesList = [
     description: "Every call, email, form submission, and meeting automatically creates or updates the right CRM record. No more stale data, no more manual logging, no more deals falling through the cracks because of missing context.",
     outcomes: ["All interactions auto-logged to CRM", "Deal stages updated by trigger events", "Contact records enriched automatically", "Pipeline reports generated without manual input"],
     color: "#7E0F4A",
-    pipeline: PIPELINES.clientIntake,
+    pipeline: PIPELINES.crm,
   },
   {
     slug: "operations-reporting",
@@ -113,7 +113,7 @@ const servicesList = [
     description: "Automated dashboards, weekly performance summaries, and real-time status reports built from your live data. No manual compilation, no spreadsheets - just the numbers you need, ready when you need them.",
     outcomes: ["Automated weekly performance reports", "Real-time pipeline and revenue dashboards", "Team activity and task completion tracking", "Custom KPI alerts and anomaly flags"],
     color: "#283891",
-    pipeline: PIPELINES.clientIntake,
+    pipeline: PIPELINES.reporting,
   },
   {
     slug: "after-hours-automation",
@@ -123,7 +123,7 @@ const servicesList = [
     description: "An after-hours system that captures every inquiry that arrives outside business hours - by phone, form, or message - qualifies the lead, books a callback or appointment, and has the full context ready for your team when they start the day.",
     outcomes: ["All after-hours inquiries captured and responded to", "Leads qualified and appointments booked overnight", "Morning briefing report ready for your team", "Zero leads lost to after-hours silence"],
     color: "#7E0F4A",
-    pipeline: PIPELINES.leadCapture,
+    pipeline: PIPELINES.afterHours,
   },
   {
     slug: "ai-agents",
@@ -133,7 +133,7 @@ const servicesList = [
     description: "Purpose-built AI agents that handle intake, follow-up, qualification, document collection, and reporting. Unlike chatbots, these agents act inside your business tools: booking appointments, creating records, sending sequences, and routing tasks.",
     outcomes: ["Agents handle repetitive coordination tasks end-to-end", "10–20+ hours of admin work recovered per week", "Consistent execution - identical process every time", "Escalates exceptions to humans automatically"],
     color: "#283891",
-    pipeline: PIPELINES.clientIntake,
+    pipeline: PIPELINES.aiAgents,
   },
   {
     slug: "custom-ai-systems",
@@ -143,7 +143,7 @@ const servicesList = [
     description: "For businesses that have outgrown individual automations. We design and build a unified AI system that connects all your workflows, agents, and tools into one governed operational platform - with full visibility and control.",
     outcomes: ["+30–50% capacity without new headcount", "One source of truth across all tools", "Unified monitoring and reporting dashboard", "Phased implementation with quick early wins"],
     color: "#7E0F4A",
-    pipeline: PIPELINES.clientIntake,
+    pipeline: PIPELINES.customAi,
   },
 ];
 

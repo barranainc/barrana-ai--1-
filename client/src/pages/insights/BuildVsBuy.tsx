@@ -162,16 +162,16 @@ const jsonLdData = {
   "@type": "Article",
   "headline": "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools",
   "description": "For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier.",
-  "author": { "@type": "Organization", "name": "Barrana AI" },
-  "publisher": { "@type": "Organization", "name": "Barrana AI" },
+  "author": { "@type": "Organization", "name": "Barrana.ai" },
+  "publisher": { "@type": "Organization", "name": "Barrana.ai" },
 };
 
 export default function BuildVsBuy() {
-  useEffect(() => { document.title = "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI"; }, []);
+  useEffect(() => { document.title = "Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana.ai"; }, []);
 
   return (
     <>
-      <SEOHead title="Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana AI" description="For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier." type="article" />
+      <SEOHead title="Build vs Buy: Custom AI Automation vs Off-the-Shelf Tools | Barrana.ai" description="For most small businesses with 2-50 staff, the best approach is a hybrid: use off-the-shelf tools connected by a custom automation layer built on platforms like Make or Zapier." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>

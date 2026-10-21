@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight, MapPin } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { localPages } from "@/data/local-pages";
 
 const locations = [
   { slug: "toronto", name: "Toronto", description: "AI automation for small businesses across Toronto's diverse commercial districts and professional services sector." },
@@ -52,6 +53,21 @@ export default function Locations() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section style={{ padding: "0 0 5rem", background: "#fff" }}>
+        <div className="container">
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#111827", marginBottom: "1.25rem" }}>Local Guides by City and Industry</h2>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "0.5rem 2rem" }}>
+            {localPages.map((page) => (
+              <li key={page.route}>
+                <Link href={page.route} style={{ color: "#283891", fontSize: "0.9rem", textDecoration: "none" }}>
+                  {page.industry} in {page.city}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

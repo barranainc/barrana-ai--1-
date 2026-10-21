@@ -86,6 +86,11 @@ const gridArticles = [
     title: "Intake Automation for Immigration Firms: A Field Report",
     excerpt: "How an immigration consulting firm in Mississauga reduced intake time from 50 minutes to under 5 - without changing their process, just removing the manual steps from their staff's plate.",
   },
+  {"slug":"/operator-insights/accounting-firm-automation","tag":"Accounting","date":"","readTime":"8 min read","title":"Automation for Accounting Firms: The Document Chase Problem","excerpt":"Every accounting firm has the same problem: clients who do not send their documents on time."},
+  {"slug":"/operator-insights/contractor-lead-automation","tag":"Contractors","date":"","readTime":"7 min read","title":"Lead Automation for Contractors: Why Response Time Is Everything","excerpt":"Contractors lose more qualified leads to slow response time than to price."},
+  {"slug":"/operator-insights/immigration-consultant-automation","tag":"Immigration","date":"","readTime":"9 min read","title":"Automation for Immigration Consultants: What Works and What Does Not","excerpt":"High-volume intake, complex document requirements, strict deadlines, and precise file tracking."},
+  {"slug":"/operator-insights/law-firm-intake-automation","tag":"Legal","date":"","readTime":"10 min read","title":"Client Intake Automation for Law Firms: Compliance and Efficiency","excerpt":"Automating intake while keeping conflict checks, engagement letters, and professional obligations intact."},
+  {"slug":"/operator-insights/physiotherapy-no-show-reduction","tag":"Healthcare","date":"","readTime":"6 min read","title":"No-Show Reduction for Physiotherapy Clinics: A Systems Approach","excerpt":"A clinic with a 20 percent no-show rate is losing 20 percent of its appointment capacity every week."}
 ];
 
 export default function OperatorInsights() {

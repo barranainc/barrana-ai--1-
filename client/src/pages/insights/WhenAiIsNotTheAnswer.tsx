@@ -94,16 +94,16 @@ const jsonLdData = {
   "@type": "Article",
   "headline": "When AI Is Not the Answer: 7 Signs Automation Is Not What You Need Right Now",
   "description": "AI automation is not the right solution when you don't have a repeatable process, your problem is a people issue, your volume is too low, or you haven't diagnosed the root problem.",
-  "author": { "@type": "Organization", "name": "Barrana AI" },
-  "publisher": { "@type": "Organization", "name": "Barrana AI" },
+  "author": { "@type": "Organization", "name": "Barrana.ai" },
+  "publisher": { "@type": "Organization", "name": "Barrana.ai" },
 };
 
 export default function WhenAiIsNotTheAnswer() {
-  useEffect(() => { document.title = "When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana AI"; }, []);
+  useEffect(() => { document.title = "When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana.ai"; }, []);
 
   return (
     <>
-      <SEOHead title="When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana AI" description="AI automation is not the right solution when you don't have a repeatable process, your problem is a people issue, your volume is too low, or you haven't diagnosed the root problem." type="article" />
+      <SEOHead title="When AI Is Not the Answer: 7 Signs You're Not Ready | Barrana.ai" description="AI automation is not the right solution when you don't have a repeatable process, your problem is a people issue, your volume is too low, or you haven't diagnosed the root problem." type="article" />
       <JsonLd data={jsonLdData} />
       <main style={{ fontFamily: "'Inter', sans-serif", color: "#1A1A2E" }}>
         <section style={{ ...surfaces.darkGradient, padding: spacing.sectionPadding + " 1.5rem " + spacing.sectionPaddingSm }}>

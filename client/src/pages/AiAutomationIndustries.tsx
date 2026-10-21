@@ -197,7 +197,7 @@ function MaturityScale() {
 
 export default function AiAutomationIndustries() {
   useEffect(() => {
-    document.title = "AI Automation by Industry: What Works for Your Business | Barrana AI";
+    document.title = "AI Automation by Industry: What Works for Your Business | Barrana.ai";
   }, []);
 
   return (

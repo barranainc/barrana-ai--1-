@@ -1,3 +1,4 @@
+import { ORG_REF } from "@/lib/schema";
 /**
  * CaseStudyPageLayout.tsx
  * Master template for all 12 case study pages.
@@ -259,27 +260,16 @@ export default function CaseStudyPageLayout({ data }: Props) {
     "@type": "Article",
     headline: data.h1,
     description: data.description,
-    author: { "@type": "Organization", name: "Barrana.ai" },
-    publisher: { "@type": "Organization", name: "Barrana.ai", url: "https://barrana.ai" },
-    datePublished: "2025-01-01",
+    author: ORG_REF,
+    publisher: ORG_REF,
+    // datePublished: add the real publication date when the owner supplies it (audit task 9).
   };
-  const bcSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://barrana.ai" },
-      { "@type": "ListItem", position: 2, name: "Case Studies", item: "https://barrana.ai/case-studies" },
-      { "@type": "ListItem", position: 3, name: data.industry, item: `https://barrana.ai/case-studies/${data.slug}` },
-    ],
-  };
-
   return (
     <div className="template-page case-study-template">
       {/* SEO Head - OG, Twitter, Canonical */}
       <SEOHead title={data.title} description={data.description} type="article" />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bcSchema) }} />
 
       {/* Breadcrumb Nav */}
       <div style={{ background: colors.surfaceLight, paddingTop: "3rem", paddingBottom: 0 }}>

@@ -1,3 +1,4 @@
+import { trackEvent } from "@/lib/analytics";
 import { useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, Check, ClipboardCheck, Route, ShieldCheck } from "lucide-react";
@@ -69,6 +70,7 @@ export default function Contact() {
       (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", {
         content_name: "Initial Workflow Conversation",
       });
+      trackEvent("generate_lead", { form_name: "Initial Workflow Conversation" });
       setSubmitted(true);
       toast.success("Your request was sent.");
     } catch (error) {

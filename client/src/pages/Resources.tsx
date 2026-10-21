@@ -183,6 +183,18 @@ const guides = [
     color: "#7E0F4A",
     href: "/resources/integration-priority-matrix",
   },
+  {"category":"Tool","title":"Automation Planner","description":"Answer guided questions about your workflows and get a phased roadmap, including what should stay human-led.","readTime":"3–5 min","color":"#283891","href":"/automation-planner","cta":"Open the planner"},
+  {"category":"Tool","title":"Automation ROI Calculator","description":"Estimate the time and cost of manual work in your business using your own inputs and assumptions.","readTime":"Interactive","color":"#7E0F4A","href":"/automation-roi-calculator","cta":"Open the calculator"},
+  {"category":"Playbooks","title":"Automation Playbooks","description":"Step-by-step guides for lead response, booking reminders, client onboarding, document collection, invoicing, and after-hours capture.","readTime":"10 playbooks","color":"#283891","href":"/playbooks","cta":"Browse playbooks"},
+  {"category":"Reference","title":"Workflow Templates","description":"Visual templates showing how common automated workflows are structured, step by step.","readTime":"Templates","color":"#7E0F4A","href":"/templates","cta":"View templates"},
+  {"category":"Reference","title":"Before and After","description":"Side-by-side comparisons of common business workflows before and after coordination tasks are automated.","readTime":"8 workflows","color":"#283891","href":"/before-after","cta":"See comparisons"},
+  {"category":"Reference","title":"Automation Benchmarks","description":"Typical outcome ranges reported for automation projects in GTA service businesses.","readTime":"Reference","color":"#7E0F4A","href":"/benchmarks","cta":"View benchmarks"},
+  {"category":"Reference","title":"AI Automation Glossary","description":"Plain-language definitions of AI automation terms for small business owners.","readTime":"Glossary","color":"#283891","href":"/glossary","cta":"Open the glossary"},
+  {"category":"Knowledge Base","title":"Knowledge Base","description":"In-depth articles on lead automation, client intake, AI agents, and workflow automation fundamentals.","readTime":"5 articles","color":"#7E0F4A","href":"/knowledge","cta":"Read articles"},
+  {"category":"Operator Insights","title":"Operator Insights","description":"Short field notes on response time, follow-up, intake costs, and the controls every automation needs.","readTime":"11 articles","color":"#283891","href":"/operator-insights","cta":"Read insights"},
+  {"category":"Case Studies","title":"Case Studies","description":"How GTA service businesses automated intake, follow-up, scheduling, and invoicing.","readTime":"12 case studies","color":"#7E0F4A","href":"/case-studies","cta":"Read case studies"},
+  {"category":"Reference","title":"Integrations","description":"The business tools Barrana connects, including CRMs, scheduling, accounting, and automation platforms.","readTime":"Tool directory","color":"#283891","href":"/integrations","cta":"See integrations"},
+  {"category":"Answers","title":"Frequently Asked Questions","description":"Answers about cost, timelines, data handling, and how an automation engagement works.","readTime":"FAQ","color":"#7E0F4A","href":"/faq","cta":"Read the FAQ"},
 ];
 
 const frameworks = [
@@ -327,7 +339,7 @@ export default function Resources() {
                   className="flex items-center gap-1.5 text-xs font-semibold mt-auto"
                   style={{ color: guide.color }}
                 >
-                  Read guide
+                  {"cta" in guide ? guide.cta : "Read guide"}
                   <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </Link>
               </Link>

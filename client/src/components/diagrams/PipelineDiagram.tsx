@@ -108,7 +108,7 @@ export default function PipelineDiagram({ steps, title }: PipelineDiagramProps) 
 }
 
 // Pre-defined pipeline configurations
-export const PIPELINES = {
+const BASE_PIPELINES = {
   leadCapture: [
     { id: "form",    label: "Lead Form",        sublabel: "Website / SMS",   icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z", color: "#283891" },
     { id: "ai",      label: "AI Response",      sublabel: "< 90 seconds",    icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H4a2 2 0 01-2-2V5a2 2 0 012-2h16a2 2 0 012 2v10a2 2 0 01-2 2h-1", color: "#7E0F4A" },
@@ -120,7 +120,7 @@ export const PIPELINES = {
     { id: "inquiry",  label: "Client Inquiry", sublabel: "Form / Email",     icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z", color: "#283891" },
     { id: "confirm",  label: "Auto Confirm",   sublabel: "Instant reply",    icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z", color: "#7E0F4A" },
     { id: "record",   label: "CRM Record",     sublabel: "Auto-created",     icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2", color: "#283891" },
-    { id: "assign",   label: "Assign File",    sublabel: "By visa type",     icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z", color: "#283891" },
+    { id: "assign",   label: "Assign File",    sublabel: "Right team member",     icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z", color: "#283891" },
     { id: "followup", label: "24hr Follow-Up", sublabel: "Auto-scheduled",   icon: "M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15", color: "#7E0F4A" },
   ],
   documentCollection: [
@@ -130,4 +130,60 @@ export const PIPELINES = {
     { id: "remind",    label: "48hr Reminders", sublabel: "Auto-sent",        icon: "M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9", color: "#7E0F4A" },
     { id: "flag",      label: "Flag Overdue",   sublabel: "Staff alerted",    icon: "M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9", color: "#283891" },
   ],
+};
+
+/** Per-service diagrams (audit task 4). Icons are reused from the base step sets. */
+type PipelineStepDef = (typeof BASE_PIPELINES)["leadCapture"][number];
+const ALL_BASE_STEPS: PipelineStepDef[] = [
+  ...BASE_PIPELINES.leadCapture,
+  ...BASE_PIPELINES.clientIntake,
+  ...BASE_PIPELINES.documentCollection,
+];
+function iconOf(id: string): string {
+  return ALL_BASE_STEPS.find((s) => s.id === id)?.icon ?? "";
+}
+function pipeline(key: string, steps: [string, string, string][]): PipelineStepDef[] {
+  return steps.map(([iconId, label, sublabel], i) => ({
+    id: `${key}-${i}`,
+    label,
+    sublabel,
+    icon: iconOf(iconId),
+    color: i % 2 ? "#7E0F4A" : "#283891",
+  }));
+}
+
+export const PIPELINES = {
+  ...BASE_PIPELINES,
+  appointment: pipeline("appointment", [
+    ["form", "Booking Request", "Online / phone"], ["book", "Slot Booked", "Calendar synced"], ["confirm", "Confirmation", "Instant email / SMS"],
+    ["remind", "Reminders", "48hr + 2hr"], ["followup", "Follow-Up", "After the visit"],
+  ]),
+  invoice: pipeline("invoice", [
+    ["open", "Work Completed", "Trigger event"], ["record", "Invoice Generated", "From job data"], ["inquiry", "Invoice Sent", "Email + pay link"],
+    ["remind", "Payment Reminders", "7 / 14 / 21 days"], ["confirm", "Reconciled", "Accounting sync"],
+  ]),
+  workflow: pipeline("workflow", [
+    ["form", "Trigger Event", "Form / email"], ["record", "Record Created", "CRM / sheet"], ["assign", "Task Assigned", "Right owner"],
+    ["track", "Tools Updated", "Status synced"], ["flag", "Exceptions Flagged", "Team alerted"],
+  ]),
+  crm: pipeline("crm", [
+    ["inquiry", "New Contact", "Form / email / call"], ["confirm", "Duplicate Check", "Matched to record"], ["record", "Fields Updated", "Auto-filled"],
+    ["track", "Stage Moved", "On client action"], ["followup", "Follow-Up Task", "Owner assigned"],
+  ]),
+  reporting: pipeline("reporting", [
+    ["record", "Data Collected", "CRM, invoices, calendar"], ["track", "Metrics Calculated", "Daily / weekly"], ["flag", "Exceptions Flagged", "Overdue / stalled"],
+    ["inquiry", "Report Sent", "Email / dashboard"], ["assign", "Owner Review", "Human decision"],
+  ]),
+  afterHours: pipeline("afterHours", [
+    ["form", "After-Hours Enquiry", "Call / form / SMS"], ["ai", "Instant Reply", "< 90 seconds"], ["qualify", "Details Captured", "Need + urgency"],
+    ["flag", "Urgent Escalated", "On-call alerted"], ["crm", "Morning Queue", "CRM + callback"],
+  ]),
+  aiAgents: pipeline("aiAgents", [
+    ["inquiry", "Request Received", "Any channel"], ["ai", "Intent Classified", "AI agent"], ["book", "Action Taken", "Book / route / create"],
+    ["record", "Result Logged", "CRM record"], ["assign", "Human Review", "Exceptions escalated"],
+  ]),
+  customAi: pipeline("customAi", [
+    ["open", "Workflow Mapped", "Scope agreed"], ["checklist", "System Designed", "You approve first"], ["track", "Built & Tested", "Real scenarios"],
+    ["confirm", "Go Live", "Team trained"], ["flag", "Monitored", "Logs + alerts"],
+  ]),
 };

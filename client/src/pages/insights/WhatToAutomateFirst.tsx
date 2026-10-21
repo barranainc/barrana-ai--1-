@@ -100,8 +100,8 @@ const jsonLdData = {
   "@type": "Article",
   "headline": "What Should a Small Business Automate First?",
   "description": "The best first automation for most small businesses is lead response - responding within 90 seconds, qualifying prospects, creating CRM records, and booking consultations.",
-  "author": { "@type": "Organization", "name": "Barrana AI" },
-  "publisher": { "@type": "Organization", "name": "Barrana AI" },
+  "author": { "@type": "Organization", "name": "Barrana.ai" },
+  "publisher": { "@type": "Organization", "name": "Barrana.ai" },
 };
 
 export default function WhatToAutomateFirst() {

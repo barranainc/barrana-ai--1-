@@ -8,6 +8,10 @@ const exploreLinks = [
   { label: "Workflow Insights", href: "/insights/what-to-automate-first" },
   { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },
   { label: "About Barrana", href: "/about" },
+  { label: "Resources", href: "/resources" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 const workflowLinks = [
