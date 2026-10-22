@@ -22,8 +22,6 @@ import {
   Search,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import BreadcrumbNav from "@/components/linking/BreadcrumbNav";
 import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCrosslinks";
 import SEOHead from "@/components/SEOHead";
@@ -446,7 +444,6 @@ export default function LocationDetail() {
   if (!location) {
     return (
       <div style={{ minHeight: "100vh", background: colors.surfaceWhite }}>
-        <Navigation />
         <div className="container" style={{ paddingTop: "8rem", paddingBottom: "5rem", textAlign: "center" }}>
           <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>Location Not Found</h1>
           <p style={{ ...typography.body, marginBottom: "2rem" }}>
@@ -456,7 +453,6 @@ export default function LocationDetail() {
             View All Locations <ArrowRight size={16} />
           </Link>
         </div>
-        <Footer />
       </div>
     );
   }
@@ -482,13 +478,13 @@ export default function LocationDetail() {
     name: "Barrana.ai",
     description: `AI automation for small businesses in ${location.name}`,
     url: `https://barrana.ai/locations/${slug}`,
-    telephone: "+1-905-000-0000",
+    telephone: "+1-647-367-6771",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "50 Corstate Avenue",
+      streetAddress: "50 Corstate Avenue, Unit 01",
       addressLocality: "Vaughan",
       addressRegion: "ON",
-      postalCode: "L4K 4V2",
+      postalCode: "L4K 4X2",
       addressCountry: "CA",
     },
     areaServed: {
@@ -522,7 +518,6 @@ export default function LocationDetail() {
   return (
     <div style={{ minHeight: "100vh", background: colors.surfaceWhite }}>
       <SEOHead title={location.metaTitle} description={`AI automation for small businesses in ${location.name}. Fixed pricing. No retainers. Results from Week 1.`} />
-      <Navigation />
 
       {/* ── 1. HERO ─────────────────────────────────────────── */}
       <section
@@ -889,8 +884,6 @@ export default function LocationDetail() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </section>
-
-      <Footer />
     </div>
   );
 }

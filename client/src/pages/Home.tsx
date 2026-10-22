@@ -456,7 +456,6 @@ const localBusinessSchema = {
   areaServed: [
     "Toronto", "Vaughan", "Markham", "Richmond Hill", "Mississauga", "North York",
   ],
-  serviceType: "AI Automation Consulting",
   sameAs: [
     "https://linkedin.com/company/barrana-ai",
     "https://instagram.com/barrana.ai",

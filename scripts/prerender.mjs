@@ -197,6 +197,8 @@ async function main() {
   const browser = await puppeteer.launch({
     executablePath: CHROME_PATH,
     headless: true,
+    // A busy machine can take longer than the 30 s default to open a tab.
+    protocolTimeout: 120000,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
