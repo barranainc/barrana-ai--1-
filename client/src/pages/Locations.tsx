@@ -3,8 +3,6 @@
  */
 import { Link } from "wouter";
 import { ArrowRight, MapPin } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { localPages } from "@/data/local-pages";
 
 const locations = [
@@ -19,7 +17,6 @@ const locations = [
 export default function Locations() {
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-20" style={{ backgroundColor: "#F7F8FB" }}>
         <div className="container">
@@ -80,8 +77,6 @@ export default function Locations() {
           </Link>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

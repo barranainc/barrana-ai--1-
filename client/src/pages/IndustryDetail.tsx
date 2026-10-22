@@ -4,8 +4,6 @@
  */
 import { Link, useParams } from "wouter";
 import { ArrowRight, CheckCircle2, ArrowLeft } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 
 const industryData: Record<string, {
   name: string;
@@ -227,19 +225,16 @@ export default function IndustryDetail() {
   if (!industry) {
     return (
       <div className="min-h-screen bg-white">
-        <Navigation />
         <div className="container pt-32 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Industry Not Found</h1>
           <Link href="/industries" className="btn-primary">View All Industries</Link>
         </div>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
 
       {/* Hero */}
       <section className="pt-24 pb-16 lg:pt-32 lg:pb-20" style={{ backgroundColor: "#F7F8FB" }}>
@@ -353,8 +348,6 @@ export default function IndustryDetail() {
           </Link>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
