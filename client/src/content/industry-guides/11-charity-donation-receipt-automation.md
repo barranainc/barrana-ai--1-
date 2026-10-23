@@ -191,11 +191,11 @@ Your accountant, and ideally a lawyer with charity law experience. Given that re
 
 Barrana works with registered charities, nonprofits, and community organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours to keep whether or not you work with us. We map your donation capture, receipting, acknowledgment, and reporting processes and show you where staff time and compliance risk are concentrated.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours to keep whether or not you work with us. We map your donation capture, receipting, acknowledgment, and reporting processes and show you where staff time and compliance risk are concentrated.
 
 We build the workflow. Your accountant or counsel validates the receipting rules. That division of labour is deliberate.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Never hourly. Works with the systems you already run.
 

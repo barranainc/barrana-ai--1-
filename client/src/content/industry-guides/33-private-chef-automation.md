@@ -188,9 +188,9 @@ Menu proposal assembly. It recovers the largest block of unpaid time, and it app
 
 Barrana works with private chefs, personal chefs, and small food businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enquiry, proposal, preparation, and follow-up processes and show you how many unpaid hours each booking is costing you.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry, proposal, preparation, and follow-up processes and show you how many unpaid hours each booking is costing you.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the tools you already run.
 

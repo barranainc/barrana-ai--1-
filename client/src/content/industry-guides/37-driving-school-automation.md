@@ -188,11 +188,11 @@ In-car lesson booking with routing. It addresses the largest source of lost inst
 
 Barrana works with driving schools, training providers, and instruction businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enrollment, scheduling, progress tracking, and certification processes and show you how much instructor capacity is being lost to travel and empty slots.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enrollment, scheduling, progress tracking, and certification processes and show you how much instructor capacity is being lost to travel and empty slots.
 
 For schools working with minors we build screening and licence expiry tracking as blocking controls and expect your policies on instructor-student communication to shape the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

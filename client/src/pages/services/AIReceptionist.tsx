@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Peak Missed Calls", before: "40% lost", after: "Eliminated" },
     { label: "Front Desk Phone Volume", before: "Full burden", after: "Reduced 50–70%" },
     { label: "Monthly Cost vs Receptionist", after: "Fraction of salary" },
-    { label: "Typical Payback", after: "Within first month" },
+    { label: "Typical Payback", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",

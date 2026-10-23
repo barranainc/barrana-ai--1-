@@ -184,7 +184,7 @@ export default function AutomationReadiness() {
                 { title: "Technical expertise", body: "We handle all technical implementation. You only need to understand your own workflows." },
                 { title: "A large team", body: "Many of our most successful clients are solo operators or 2–3 person firms." },
                 { title: "An enterprise CRM", body: "Free tools like HubSpot CRM or even Google Sheets are a sufficient starting point." },
-                { title: "A big budget", body: "Most initial automations are scoped to $3,000–$8,000 with clear ROI within 60 days." },
+                { title: "A big budget", body: "Most initial automations are scoped to $3,000–$8,000, with the measures of success agreed before launch." },
                 { title: "A perfectly documented process", body: "We document it during the audit. You just need to be able to describe what you do today." },
               ].map((item) => (
                 <div key={item.title} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.25rem" }}>

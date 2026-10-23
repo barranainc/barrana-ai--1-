@@ -64,7 +64,7 @@ const data: IndustryPageData = {
     { label: "Admin Hours", before: "15-25/week", after: "Recovered" },
     { label: "Client Capacity", after: "20-30% more volume, same team" },
     { label: "Cash Flow", after: "Stabilized through same-day invoicing" },
-    { label: "Payback Period", after: "30-60 days" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
 

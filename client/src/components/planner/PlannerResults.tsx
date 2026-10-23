@@ -392,10 +392,10 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
           onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#6a0c3e"; }}
           onMouseLeave={(e) => { (e.target as HTMLElement).style.background = BURGUNDY; }}
         >
-          Book a Strategy Call About This
+          Book a Free Automation Audit About This
         </button>
         <p style={{ margin: "auto 0", fontSize: 12, color: "#8FA4E8" }}>
-          30 minutes. We have already seen your results.
+          60 minutes. Free. Bring these planner results with you.
         </p>
       </div>
     </div>
@@ -615,6 +615,8 @@ interface Props {
   onRestart?: () => void;
 }
 
+let plannerCompleteSent = false;
+
 export default function PlannerResults({ state, onRestart }: Props) {
   const scoringState = { ...state, currentStep: 9 };
   const results = usePlannerScoring(scoringState);
@@ -624,8 +626,10 @@ export default function PlannerResults({ state, onRestart }: Props) {
   const costSectionRef = useRef<HTMLDivElement>(null);
   const { ref: costRef, inView: costInView } = useInView(0.2);
 
-  // Audit task 10: one completion event when the results step is reached.
+  // Audit task 10 / R4: one completion event per page load, even if the visitor steps back and returns to results.
   useEffect(() => {
+    if (plannerCompleteSent) return;
+    plannerCompleteSent = true;
     trackEvent("planner_complete", { industry: state.industry || "" });
   }, []);
 
@@ -939,16 +943,16 @@ export default function PlannerResults({ state, onRestart }: Props) {
               />
             </div>
 
-            {/* Strategy call card */}
+            {/* Automation Audit card */}
             <div style={{ background: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.15)", borderRadius: 16, padding: "28px 24px", display: "flex", flexDirection: "column" }}>
               <p style={{ margin: "0 0 6px", fontSize: 12, fontWeight: 700, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                 Option B
               </p>
               <h3 style={{ margin: "0 0 8px", fontSize: 17, fontWeight: 800, color: "white" }}>
-                Discuss Your Results With a Strategist
+                Turn Your Results Into a Workflow Map
               </h3>
               <p style={{ margin: "0 0 auto", fontSize: 14, color: "#A3B4E8", lineHeight: 1.6 }}>
-                Walk through your automation opportunities with a Barrana strategist. 30 minutes. No obligation. We have already seen your results - the call starts where the planner left off.
+                Book a free 60-minute Automation Audit. We map your workflows, estimate what your manual work costs each year, and show you what to automate first. You keep the workflow map.
               </p>
               <div style={{ marginTop: 24 }}>
                 <a
@@ -962,10 +966,10 @@ export default function PlannerResults({ state, onRestart }: Props) {
                   onMouseEnter={(e) => { const el = e.currentTarget; el.style.background = "white"; el.style.color = NAVY; }}
                   onMouseLeave={(e) => { const el = e.currentTarget; el.style.background = "transparent"; el.style.color = "white"; }}
                 >
-                  Book a Strategy Call
+                  Book a Free Automation Audit
                 </a>
                 <p style={{ margin: "10px 0 0", fontSize: 12, color: "#8FA4E8", textAlign: "center" }}>
-                  30 minutes. Free. No pressure.
+                  60 minutes. Free. No obligation.
                 </p>
               </div>
             </div>

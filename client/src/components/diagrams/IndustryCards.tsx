@@ -50,7 +50,7 @@ const industries = [
     name: "Real Estate",
     flow: ["Listing", "Lead Captured", "Qualified", "Showing"],
     metric: "Response time < 2 min",
-    href: "/industries/real-estate",
+    href: "/industries/real-estate-teams",
   },
   {
     Icon: Truck,

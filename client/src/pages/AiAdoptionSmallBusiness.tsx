@@ -225,7 +225,7 @@ export default function AiAdoptionSmallBusiness() {
     { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
     { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use - your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
     { q: "Is this relevant for a solo operator?", a: "Yes - solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
-    { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we map your current workflows, identify the highest-friction tasks, and recommend a Phase 1 that delivers measurable ROI within the first month." },
+    { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we map your current workflows, identify the highest-friction tasks, and recommend a Phase 1 with clear measures agreed before launch." },
     { q: "Is my client data safe?", a: "All data stays within your controlled systems. We do not introduce third-party platforms that store your client information without your knowledge. Every data flow is documented, and all Canadian implementations follow PIPEDA guidelines." },
   ];
 
@@ -260,7 +260,7 @@ export default function AiAdoptionSmallBusiness() {
 
   return (
     <>
-      <SEOHead title="AI Adoption for Small Business: A Practical Guide" description="A no-jargon guide to adopting AI automation in your small business. Which workflows to automate first, what to keep human, and how to measure ROI in 30 to 60 days." type="article" />
+      <SEOHead title="AI Adoption for Small Business: A Practical Guide" description="A no-jargon guide to adopting AI automation in your small business. Which workflows to automate first, what to keep human, and how to measure the results." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* ── Hero ── */}
@@ -291,7 +291,7 @@ export default function AiAdoptionSmallBusiness() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and shows measurable ROI within the first month. Typical investment: $3,000–$15,000 CAD depending on scope.
+              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and is straightforward to measure. Typical investment: $3,000–$15,000 CAD depending on scope.
             </p>
           </SummaryBox>
 
@@ -323,7 +323,7 @@ export default function AiAdoptionSmallBusiness() {
             Most businesses attempt automation in the wrong order: they choose tools before mapping their workflows, or they try to automate everything at once. The five-stage approach below produces consistent, measurable results.
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Assessment.</strong> Map every client-facing and internal workflow. Identify where time is lost, where errors occur, and where ROI potential is highest. This is a 60–90 minute structured audit, not a vague discovery call.</li>
+            <li><strong>Assessment.</strong> Map every client-facing and internal workflow. Identify where time is lost, where errors occur, and where ROI potential is highest. This is the free 60-minute Automation Audit, a structured workflow review rather than a sales call.</li>
             <li><strong>First Automation.</strong> Deploy a single workflow - typically lead response - that solves the highest-friction point. Build it, test it, and prove the ROI before expanding.</li>
             <li><strong>Expand.</strong> Add 2–3 connected workflows (booking, intake, document collection). Each one compounds the previous - the system becomes more valuable as the workflows connect.</li>
             <li><strong>Connect.</strong> Integrate tools into a unified operational system. Data flows between your CRM, calendar, documents, and accounting without human intervention.</li>
@@ -370,7 +370,7 @@ export default function AiAdoptionSmallBusiness() {
             ))}
           </div>
           <p style={{ color: "#4B5563", lineHeight: 1.8 }}>
-            Most businesses see ROI within 30–60 days of deploying their first workflow. A single workflow that saves 10 hours per week at $50/hour recovers its cost within the first month of operation.
+            Payback depends on your volumes and scope, so we agree on what to measure before launch. As an illustration, a workflow that saves 10 hours per week is worth about $500 a week in staff time at $50/hour; that is capacity, not cash, unless costs fall.
           </p>
 
           {/* Section 6 */}

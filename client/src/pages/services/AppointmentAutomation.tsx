@@ -7,9 +7,9 @@ import { useEffect } from "react";
 import ServicePageLayout, { ServicePageData } from "@/components/service/ServicePageLayout";
 
 const data: ServicePageData = {
-  title: "Appointment Automation | Reduce No-Shows by 25-40% | Barrana.ai",
+  title: "Appointment Automation | Fewer No-Shows | Barrana.ai",
   description:
-    "Automated booking, dual reminders, digital intake, waitlist management, and rescheduling. Reduce no-shows by 25-40% for clinics and service businesses.",
+    "Automated booking, dual reminders, digital intake, waitlist management, and rescheduling. Reduce no-shows for clinics and service businesses.",
 
   breadcrumb: "Appointment Automation",
   h1: "Every No-Show Is Revenue That Walked Out the Door. Automation Brings It Back.",
@@ -87,7 +87,7 @@ const data: ServicePageData = {
     { label: "Front Desk Phone Time", before: "50–70% of day", after: "Reduced significantly" },
     { label: "Patient Intake", before: "Paper waiting room", after: "Digital before visit" },
     { label: "Cancellation Slots", before: "Mostly unfilled", after: "Auto-filled from waitlist" },
-    { label: "Typical Payback", after: "Within first month" },
+    { label: "Typical Payback", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",

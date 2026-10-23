@@ -64,7 +64,7 @@ const data: IndustryPageData = {
     { label: "Maturity Renewal Retention", after: "Improved 20-30%" },
     { label: "Client Status Calls", after: "Reduced 60%+ (automated updates)" },
     { label: "Pipeline Visibility", after: "Real-time, automated" },
-    { label: "Payback Period", after: "Within first 1-2 closed deals" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
 
@@ -87,7 +87,7 @@ const data: IndustryPageData = {
     { question: "Which mortgage tools?", answer: "We integrate with Velocity, Finastra/Mortgagebot, and CRM systems used by brokerages (Salesforce, Go High Level, custom)." },
     { question: "Residential and commercial?", answer: "Yes. Separate workflows, document checklists, and timelines per mortgage type." },
     { question: "How long?", answer: "Standard mortgage automation: 3-4 weeks from audit to live." },
-    { question: "How much?", answer: "Mortgage broker automation: $5,000-$10,000 CAD depending on scope. Typically pays for itself within the first 1-2 additional closings from captured leads." },
+    { question: "How much?", answer: "Mortgage broker automation: $5,000-$10,000 CAD depending on scope. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Maturity tracking: how does it know when mortgages are up?", answer: "We import maturity dates from your records or CRM. The system then automatically triggers the 6-month renewal sequence for each client." },
     { question: "Can it handle multiple lenders?", answer: "Yes. The system tracks which lender holds each mortgage and can customize renewal outreach accordingly." },
   ],

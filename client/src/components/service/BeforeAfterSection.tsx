@@ -209,6 +209,9 @@ export default function BeforeAfterSection({ metrics }: BeforeAfterSectionProps)
           ))}
         </div>
       </div>
+      <p style={{ gridColumn: "1 / -1", margin: 0, fontSize: "0.8125rem", color: "#6B7280" }}>
+        Illustrative ranges from typical projects, not verified client results. We measure your baseline first.
+      </p>
     </div>
   );
 }

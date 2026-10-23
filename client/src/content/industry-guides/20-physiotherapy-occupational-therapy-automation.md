@@ -183,11 +183,11 @@ Approval and visit cap tracking. It directly prevents unbilled treatment and int
 
 Barrana works with physiotherapy, occupational therapy, chiropractic, and rehabilitation clinics across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your referral, approval, attendance, adherence, and reporting processes and show you where clinician hours and funded revenue are going.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your referral, approval, attendance, adherence, and reporting processes and show you where clinician hours and funded revenue are going.
 
 For regulated practices we build to PHIPA requirements, handle third-party disclosure consent explicitly, and expect your privacy advisor and college standards to shape the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

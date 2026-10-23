@@ -155,9 +155,9 @@ Call-out management and shift confirmation. It solves the most acute daily pain 
 
 Barrana works with commercial cleaning and facility services companies across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map regardless of whether you work with us. We map your onboarding, scheduling, verification, and billing processes and show you where the hours and revenue are leaking.
+We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map regardless of whether you work with us. We map your onboarding, scheduling, verification, and billing processes and show you where the hours and revenue are leaking.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds. No hourly billing. Works with the tools you already run.
 

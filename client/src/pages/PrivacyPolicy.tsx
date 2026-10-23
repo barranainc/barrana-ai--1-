@@ -117,10 +117,10 @@ export default function PrivacyPolicy() {
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
                 This policy explains how Barrana handles personal information
                 from this website, service inquiries, Facebook and Instagram
-                ads, Meta lead forms, and the Meta Pixel.
+                ads, Meta lead forms, the Meta Pixel, and Google Analytics.
               </p>
               <p className="mt-7 text-sm font-semibold text-[#E7B1CD]">
-                Effective October 8, 2026
+                Effective October 23, 2026
               </p>
             </div>
 
@@ -129,9 +129,9 @@ export default function PrivacyPolicy() {
               <p className="mt-3 text-sm leading-7 text-slate-300">
                 Barrana collects the information needed to respond to business
                 inquiries and provide services. We do not sell personal
-                information. We use service providers for hosting and customer
-                relationship management, and we explain Meta advertising
-                separately below.
+                information. We use service providers for hosting, email, and
+                customer relationship management. Google Analytics and the Meta
+                Pixel run only if you select Accept in the cookie banner.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
                   <li key={section.id}>
                     <a
                       href={`#${section.id}`}
-                      className="text-sm leading-5 text-slate-500 transition hover:text-[#7E0F4A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#283891]"
+                      className="text-sm leading-5 text-slate-600 transition hover:text-[#7E0F4A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#283891]"
                     >
                       {section.label}
                     </a>
@@ -236,17 +236,22 @@ export default function PrivacyPolicy() {
                 lead form, Meta may provide us with your form responses, contact
                 details, campaign source, and related lead information.
               </li>
-              <li>
+              <li id="tracking">
                 <strong className="text-[#111A36]">
-                  Meta Pixel event information.
+                  Analytics and ad measurement, only if you accept.
                 </strong>{" "}
-                The Meta Pixel may use cookies or similar technology and send
-                Meta a PageView event when you open a page. After the main
-                contact form is submitted successfully, it also sends a Lead
-                event labelled Initial Workflow Conversation. These events may
+                Google Analytics 4 and the Meta Pixel load only after you select
+                Accept in the cookie banner. Until then, and if you select
+                Reject, neither tool is loaded and nothing is sent to Google or
+                Meta. If you accept, Google Analytics sets cookies and records
+                pages viewed, a successful enquiry (generate_lead) and a
+                completed automation planner (planner_complete); the Meta Pixel
+                sets a cookie and sends a PageView event for each page and a
+                Lead event labelled Automation Audit Request (or the campaign
+                name) after a successful form submission. These events may
                 include the page URL, referring page, browser or device details,
-                and the IP address processed during the request. The current
-                Lead event does not include the information entered in the form.
+                and the IP address processed during the request. They never
+                include the information you type into a form.
               </li>
               <li>
                 <strong className="text-[#111A36]">
@@ -259,10 +264,13 @@ export default function PrivacyPolicy() {
               </li>
             </ul>
             <div className="rounded-xl border border-[#283891]/15 bg-[#F5F6FA] p-5 text-sm leading-6 text-slate-600">
-              Barrana currently uses Meta Pixel ID 1757222568845282. You can
-              block or delete cookies through your browser and manage
-              advertising preferences through Meta. Blocking advertising
-              technology does not prevent you from submitting a Barrana form.
+              Your choice is stored in your browser (not in a cookie) and you can
+              change it at any time with Cookie settings at the bottom of every
+              page. If you withdraw consent, Google Analytics and the Meta Pixel
+              stop sending events and their cookies on barrana.ai are removed.
+              Barrana uses Meta Pixel ID 1757222568845282 and one Google
+              Analytics 4 property. Rejecting does not prevent you from
+              submitting a Barrana form.
             </div>
           </PolicySection>
 
@@ -328,9 +336,9 @@ export default function PrivacyPolicy() {
             <p>
               Barrana uses Meta lead information to contact you about the
               request, assess service fit, record the source of the inquiry, and
-              review campaign performance at the lead level. The Meta Pixel is
-              used to record website page views and successful submissions of
-              the main contact form. Meta may connect Pixel event information
+              review campaign performance at the lead level. If you accept it in
+              the cookie banner, the Meta Pixel records website page views and
+              successful form submissions. Meta may connect Pixel event information
               with information it already holds, as described in its own privacy
               policy.
             </p>
@@ -389,9 +397,14 @@ export default function PrivacyPolicy() {
                 information;
               </li>
               <li>
+                <strong className="text-[#111A36]">Google</strong>, which
+                delivers website-form submissions to Barrana by email (Gmail)
+                and, only if you accept, provides Google Analytics;
+              </li>
+              <li>
                 <strong className="text-[#111A36]">Meta</strong>, which may
-                receive lead-form information and website events when you use
-                Facebook, Instagram, or barrana.ai;
+                receive lead-form information when you use Facebook or
+                Instagram, and website events from barrana.ai only if you accept;
               </li>
               <li>
                 contractors, advisers, or technology providers that need the
@@ -446,7 +459,9 @@ export default function PrivacyPolicy() {
             <ul className="list-disc space-y-3 pl-5 marker:text-[#7E0F4A]">
               <li>ask whether Barrana holds personal information about you;</li>
               <li>request access to, or correction of, that information;</li>
-              <li>withdraw consent, subject to legal or contractual limits;</li>
+              <li>withdraw consent, subject to legal or contractual limits (for
+                analytics and ad measurement you can do this yourself with
+                Cookie settings at the bottom of any page);</li>
               <li>
                 request deletion where Barrana is not required to keep the
                 information;

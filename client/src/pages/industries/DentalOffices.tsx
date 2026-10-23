@@ -65,7 +65,7 @@ const data: IndustryPageData = {
     { label: "New Patient Intake", after: "Completed before visit, zero paper" },
     { label: "Google Reviews", after: "Consistent automatic requests" },
     { label: "Annual Revenue Impact", after: "$80,000-$120,000 for 2-chair practice" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
 
@@ -89,7 +89,7 @@ const data: IndustryPageData = {
     { question: "Insurance verification?", answer: "We can automate insurance eligibility checks as part of the intake or booking workflow depending on your management system." },
     { question: "PHIPA compliance?", answer: "All patient data stays in your practice management system. We do not store, process, or access clinical patient data. Automation flows documented." },
     { question: "How quickly?", answer: "Standard dental automation: 2-3 weeks from audit to live." },
-    { question: "How much?", answer: "Dental practice automation: $4,000-$8,000 CAD. Typically pays for itself within the first month through reduced no-shows and improved recall." },
+    { question: "How much?", answer: "Dental practice automation: $4,000-$8,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can we do treatment plan follow-up?", answer: "Yes. Presented-but-not-scheduled treatment plans get systematic follow-up at 48hr, 7-day, and 30-day intervals." },
   ],
 

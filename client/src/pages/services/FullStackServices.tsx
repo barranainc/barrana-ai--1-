@@ -380,7 +380,7 @@ export default function FullStackServices() {
                 display: "inline-block",
               }}
             >
-              Book a Strategy Call
+              Book a Free Automation Audit
             </Link>
             <Link
               href="/automation-planner"
@@ -679,7 +679,7 @@ export default function FullStackServices() {
                 How Full-Stack Engagements Work
               </h2>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                Every engagement starts with a strategy call and operational audit. We map your current state, identify the highest-impact starting point, and deliver a fixed-price proposal broken into phases.
+                Every engagement starts with a free 60-minute Automation Audit. We map your current workflows, identify the highest-impact starting point, and, if you want to go ahead, follow with a fixed-price proposal broken into phases. You keep the workflow map either way.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
                 Phase 1 is almost always workflow automation - because it delivers the fastest ROI and creates the operational foundation that everything else is built on. Phase 2 and beyond expand into other layers based on your priorities and growth objectives.
@@ -736,7 +736,7 @@ export default function FullStackServices() {
                 margin: "0 auto 2rem",
               }}
             >
-              Start with a strategy call. We will map your current operations and show you exactly where to begin.
+              Start with a free 60-minute Automation Audit. We map your current workflows and show you where to begin.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link
@@ -752,7 +752,7 @@ export default function FullStackServices() {
                   display: "inline-block",
                 }}
               >
-                Book a Strategy Call
+                Book a Free Automation Audit
               </Link>
               <Link
                 href="/automation-planner"

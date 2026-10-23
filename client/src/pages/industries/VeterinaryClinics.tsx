@@ -135,7 +135,7 @@ const data: IndustryPageData = {
     { label: "Prescription Refill Revenue", after: "Proactive capture" },
     { label: "Post-Surgery Follow-Up", after: "100% consistent" },
     { label: "Wellness Revenue", after: "Increased 20-30%" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",

@@ -15,7 +15,7 @@ const READINESS_OPTIONS = [
     label: "Ready to Go",
     sublabel: "I want to start implementing within 30 days. Show me the plan.",
     microInsight:
-      "Great. Your results will include a clear action plan and a direct path to book a strategy call.",
+      "Great. Your results will include a clear action plan and a direct path to book a free 60-minute Automation Audit.",
   },
   {
     value: "interested" as const,

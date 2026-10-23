@@ -164,9 +164,9 @@ Collection verification. It removes daily data entry, ends volume disputes, and 
 
 Barrana works with recycling, waste brokerage, and material export businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map either way. We map your collection, processing, inventory, and export documentation processes and show you where the reconciliation gap is costing you time and margin.
+We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map either way. We map your collection, processing, inventory, and export documentation processes and show you where the reconciliation gap is costing you time and margin.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Never hourly. Works with the systems you already run.
 

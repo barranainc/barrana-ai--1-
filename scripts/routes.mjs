@@ -233,6 +233,11 @@ export const routes = [
   { path: "/integrations/gohighlevel", priority: 0.5, changefreq: "monthly" },
   { path: "/integrations/twilio", priority: 0.5, changefreq: "monthly" },
   { path: "/integrations/google-workspace", priority: 0.5, changefreq: "monthly" },
+  // City pages without a fuller /locations page (R6, 23 Oct 2026: kept and expanded).
+  { path: "/ai-automation/brampton", priority: 0.6, changefreq: "monthly" },
+  { path: "/ai-automation/scarborough", priority: 0.6, changefreq: "monthly" },
+  { path: "/ai-automation/oakville", priority: 0.6, changefreq: "monthly" },
+  { path: "/ai-automation/etobicoke", priority: 0.6, changefreq: "monthly" },
 ];
 
 /**
@@ -241,31 +246,6 @@ export const routes = [
  * while keeping the existing indexable route inventory unchanged.
  */
 export const prerenderOnlyRoutes = [
-  // Legacy detail pages backed by in-app content.
-  "/services/lead-automation",
-  "/services/operations-automation",
-  "/industries/clinics",
-  "/industries/real-estate",
-
-
-
-
-
-  // Local SEO matrix pages.
-  "/ai-automation/toronto",
-  "/ai-automation/vaughan",
-  "/ai-automation/markham",
-  "/ai-automation/richmond-hill",
-  "/ai-automation/mississauga",
-  "/ai-automation/north-york",
-  "/ai-automation/brampton",
-  "/ai-automation/scarborough",
-  "/ai-automation/oakville",
-  "/ai-automation/etobicoke",
-  "/ai-automation/toronto/immigration-consultants",
-  "/ai-automation/toronto/accounting-firms",
-  "/ai-automation/toronto/contractors",
-
   // Noindex campaign landing pages.
   "/campaign/contractors",
   "/campaign/dental",
@@ -276,7 +256,7 @@ export const prerenderOnlyRoutes = [
 export const errorRoutes = ["/404"];
 
 /**
- * Retired duplicate URLs (audit task 1). The server answers 301, the app redirects on client-side
+ * Retired duplicate URLs (audit task 1 and R6). The server answers 301, the app redirects on client-side
  * navigation, and none of these appear in the sitemap. Keep all three in step by editing only this map.
  */
 export const redirects = {
@@ -285,7 +265,21 @@ export const redirects = {
   "/resources/workflow-templates": "/templates",
   "/resources/automation-benchmarks": "/benchmarks",
   "/resources/before-and-after": "/before-after",
-  "/resources/roi-calculator": "/automation-roi-calculator"
+  "/resources/roi-calculator": "/automation-roi-calculator",
+  // Overlapping pages consolidated (R6, owner-approved 23 Oct 2026).
+  "/ai-automation/toronto": "/locations/toronto",
+  "/ai-automation/vaughan": "/locations/vaughan",
+  "/ai-automation/markham": "/locations/markham",
+  "/ai-automation/richmond-hill": "/locations/richmond-hill",
+  "/ai-automation/mississauga": "/locations/mississauga",
+  "/ai-automation/north-york": "/locations/north-york",
+  "/ai-automation/toronto/immigration-consultants": "/locations/toronto/immigration-consultants",
+  "/ai-automation/toronto/accounting-firms": "/locations/toronto/accounting-firms",
+  "/ai-automation/toronto/contractors": "/locations/toronto/contractors",
+  "/industries/clinics": "/industries/medical-clinics",
+  "/industries/real-estate": "/industries/real-estate-teams",
+  "/services/lead-automation": "/services/lead-response-automation",
+  "/services/operations-automation": "/services/workflow-automation"
 };
 
 export const prerenderPaths = [

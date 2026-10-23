@@ -191,9 +191,9 @@ Onboarding and week-one activation. It is the highest-leverage point in the enti
 
 Barrana works with online fitness businesses, course creators, and membership businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA - and remotely for creator businesses anywhere.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your purchase flow, onboarding, support, retention, and launch operations and show you where members and margin are leaking.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your purchase flow, onboarding, support, retention, and launch operations and show you where members and margin are leaking.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the platforms you already run.
 

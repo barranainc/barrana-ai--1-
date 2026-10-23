@@ -108,7 +108,7 @@ const data: IndustryPageData = {
     { label: "No-Shows", after: "Reduced with dual reminders" },
     { label: "Invoicing", after: "Automatic, zero manual effort" },
     { label: "Google Reviews", after: "Consistent after every clean" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
@@ -144,7 +144,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard cleaning company automation: 2-3 weeks." },
     {
       question: "How much?",
-      answer: "Cleaning company automation: $3,000-$6,000 CAD. Pays for itself within first month through captured quotes.",
+      answer: "Cleaning company automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Crew management?",

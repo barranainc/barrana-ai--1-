@@ -139,7 +139,13 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
           <span style={{ fontSize: "0.75rem", fontWeight: 600, padding: "0.25rem 0.75rem", borderRadius: 999, background: "#F3F4F6", color: "#6B7280" }}>
             {data.teamSize}
           </span>
+          <span style={{ fontSize: "0.75rem", fontWeight: 700, padding: "0.25rem 0.75rem", borderRadius: 999, background: "#FFF8E7", color: "#92400E" }}>
+            Illustrative example
+          </span>
         </div>
+        <p style={{ fontSize: "0.875rem", color: "#92400E", background: "#FFF8E7", border: "1px solid rgba(217,119,6,0.2)", borderRadius: "0.75rem", padding: "0.75rem 1rem", maxWidth: "780px", marginBottom: "1.5rem" }}>
+          Illustrative example: anonymised composite based on typical engagements; figures are not verified client results.
+        </p>
 
         <div style={{ borderLeft: "4px solid var(--b-navy)", paddingLeft: "1.5rem", maxWidth: "780px" }}>
           <h1 style={{ fontWeight: 800, color: "#111827", fontSize: "clamp(1.875rem, 4vw, 2.875rem)", lineHeight: 1.15, marginBottom: "1rem", ...st(2) }}>
@@ -152,7 +158,7 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
             {data.intro}
           </p>
           <div style={st(5)}>
-            <Link href="/contact" className="btn-primary">Get Similar Results - Book a Free Audit</Link>
+            <Link href="/contact" className="btn-primary">See What Applies to You - Book a Free Audit</Link>
             <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", marginTop: "0.625rem" }}>
               See what automation looks like for your operations. 60 minutes. No obligation.
             </p>
@@ -259,7 +265,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: data.h1,
-    description: data.description,
+    description: `Illustrative example: ${data.description}`,
     author: ORG_REF,
     publisher: ORG_REF,
     // datePublished: add the real publication date when the owner supplies it (audit task 9).
@@ -267,7 +273,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
   return (
     <div className="template-page case-study-template">
       {/* SEO Head - OG, Twitter, Canonical */}
-      <SEOHead title={data.title} description={data.description} type="article" />
+      <SEOHead title={data.title} description={`Illustrative example: ${data.description}`} type="article" />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
@@ -372,7 +378,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
         <div className="container">
           <h2 style={h2Style}>Cross-Industry Relevance</h2>
           <p style={{ color: "var(--b-grey)", fontSize: "0.9375rem", lineHeight: 1.65, marginBottom: "0.5rem" }}>
-            This case study is directly relevant if you operate in any of these industries:
+            This illustrative example is most relevant if you operate in any of these industries:
           </p>
           <CrossIndustry items={data.crossIndustryItems} />
         </div>

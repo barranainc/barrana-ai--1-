@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { openConsentSettings } from "@/lib/consent";
 import { ArrowRight, Check } from "lucide-react";
 
 const exploreLinks = [
@@ -85,6 +86,7 @@ export default function Footer() {
             <Link href="/privacy-policy" className="transition hover:text-slate-300">Privacy Policy</Link>
             <Link href="/governance" className="transition hover:text-slate-300">Governance</Link>
             <Link href="/contact" className="transition hover:text-slate-300">Contact</Link>
+            <button type="button" onClick={openConsentSettings} className="transition hover:text-slate-300">Cookie settings</button>
           </div>
         </div>
       </div>

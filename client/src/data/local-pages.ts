@@ -71,7 +71,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Vaughan?",
-        answer: "For a typical 2\u20135 person immigration firm: $4,000\u2013$8,000 CAD for core intake + document automation. $8,000\u2013$12,000 for full system including after-hours, invoicing, and status updates. Fixed pricing. Most firms see full ROI within 30\u201345 days.",
+        answer: "For a typical 2\u20135 person immigration firm: $4,000\u2013$8,000 CAD for core intake + document automation. $8,000\u2013$12,000 for full system including after-hours, invoicing, and status updates. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -200,7 +200,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Brampton?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. ROI within 30\u201345 days for most firms.",
+        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -329,7 +329,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Mississauga?",
-        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. ROI within the first busy season.",
+        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -966,7 +966,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Mississauga?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. ROI within 45\u201360 days.",
+        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1033,7 +1033,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Toronto?",
-        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. ROI within 30\u201345 days.",
+        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1096,7 +1096,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in North York?",
-        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. ROI within 30\u201345 days.",
+        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1160,7 +1160,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Scarborough?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. ROI within 30\u201345 days.",
+        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1286,7 +1286,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Toronto?",
-        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. ROI within the first busy season.",
+        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1728,7 +1728,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Vaughan?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. ROI within 45\u201360 days.",
+        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",

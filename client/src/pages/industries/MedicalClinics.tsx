@@ -10,7 +10,7 @@ const data: IndustryPageData = {
   breadcrumb: "Medical Clinics",
   h1: "Your Waiting Room Is Full but Your Phone Is Ringing. Your Staff Cannot Handle Both. Let Automation Take the Phones.",
   subheadline:
-    "Online booking reduces call volume 40-50%. Automated reminders cut no-shows. Digital intake eliminates paper. Prescription renewal reminders keep patients engaged. Lab result follow-up runs systematically.",
+    "Online booking reduces call volume. Automated reminders cut no-shows. Digital intake eliminates paper. Prescription renewal reminders keep patients engaged. Lab result follow-up runs systematically.",
   body: [
     "Medical clinics face a unique operational challenge: high patient volume, complex scheduling, regulatory requirements, and a front desk that simultaneously manages check-ins, phone calls, insurance, and intake forms. Something always suffers.",
     "Automation handles the coordination layer - booking, reminding, intake, follow-up - so your staff focuses on the clinical experience that patients value.",
@@ -134,7 +134,7 @@ const data: IndustryPageData = {
     { label: "Patient Intake", after: "Completed before visit, zero paper" },
     { label: "Prescription Renewals", after: "Proactive, zero panic calls" },
     { label: "Lab Follow-Up", after: "Systematic, zero gaps" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
@@ -152,7 +152,7 @@ const data: IndustryPageData = {
 
   aeoQuestion: "How does AI automation help medical clinics?",
   aeoAnswer:
-    "AI automation helps medical clinics by enabling online patient booking (reducing phone volume 40-50%), sending dual appointment reminders (cutting no-shows to 5-12%), providing digital intake forms completed before visits, sending proactive prescription renewal reminders, systematically notifying patients when lab results are available, and running post-visit follow-up with care instructions. This allows front desk staff to focus on in-person patient experience rather than phone management.",
+    "AI automation helps medical clinics by enabling online patient booking (reducing phone volume), sending dual appointment reminders (cutting no-shows), providing digital intake forms completed before visits, sending proactive prescription renewal reminders, systematically notifying patients when lab results are available, and running post-visit follow-up with care instructions. This allows front desk staff to focus on in-person patient experience rather than phone management.",
 
   faqItems: [
     {

@@ -1,10 +1,12 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { lazyPage, preloadRoute } from "./lib/lazyPage";
 import NotFound from "@/pages/NotFound";
 import { Redirect, Route, Switch, useLocation } from "wouter";
-import { initAnalytics, trackPageView } from "./lib/analytics";
+import { trackPageView } from "./lib/analytics";
+import { trackMeta } from "./lib/metaPixel";
+import CookieConsent from "./components/CookieConsent";
 import { loadFonts } from "./lib/fonts";
 import { redirects as retiredRedirects } from "../../scripts/routes.mjs";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -120,15 +122,17 @@ const CampaignDental = lazyPage(() => import("./pages/campaign/CampaignDental"))
 const CampaignLawFirms = lazyPage(() => import("./pages/campaign/CampaignLawFirms"));
 const CampaignRealEstate = lazyPage(() => import("./pages/campaign/CampaignRealEstate"));
 
-type MetaPixelWindow = Window & {
-  fbq?: (...args: unknown[]) => void;
-};
-
-function MetaPixelPageViews() {
+/** Page views after client-side navigation. The first page view is sent when GA4 or the pixel starts. */
+function PageViews() {
   const [location] = useLocation();
+  const first = useRef(true);
 
   useEffect(() => {
-    (window as MetaPixelWindow).fbq?.("track", "PageView");
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    trackMeta("PageView");
     trackPageView(location);
   }, [location]);
 
@@ -151,6 +155,11 @@ function LayoutRoutes() {
     <Layout>
       <Suspense fallback={<div aria-busy="true" style={{ minHeight: "60vh" }} />}>
       <Switch>
+        {/* Retired URLs: same map the server answers with 301 (scripts/routes.mjs) */}
+        {Object.entries(retiredRedirects).map(([from, to]) => (
+          <Route key={from} path={from}>{() => <Redirect to={to} replace />}</Route>
+        ))}
+
         {/* Core Pages */}
         <Route path="/start-here" component={StartHere} />
         <Route path="/" component={Home} />
@@ -200,12 +209,6 @@ function LayoutRoutes() {
         <Route path="/resources/automation-roi" component={AutomationROI} />
         <Route path="/resources/professional-services-guide" component={ProfessionalServicesGuide} />
         <Route path="/resources/integration-priority-matrix" component={IntegrationPriorityMatrix} />
-        <Route path="/resources/automation-playbooks">{() => <Redirect to={retiredRedirects["/resources/automation-playbooks"] ?? "/playbooks"} replace />}</Route>
-        <Route path="/resources/ai-automation-glossary">{() => <Redirect to={retiredRedirects["/resources/ai-automation-glossary"] ?? "/glossary"} replace />}</Route>
-        <Route path="/resources/workflow-templates">{() => <Redirect to={retiredRedirects["/resources/workflow-templates"] ?? "/templates"} replace />}</Route>
-        <Route path="/resources/automation-benchmarks">{() => <Redirect to={retiredRedirects["/resources/automation-benchmarks"] ?? "/benchmarks"} replace />}</Route>
-        <Route path="/resources/before-and-after">{() => <Redirect to={retiredRedirects["/resources/before-and-after"] ?? "/before-after"} replace />}</Route>
-        <Route path="/resources/roi-calculator">{() => <Redirect to={retiredRedirects["/resources/roi-calculator"] ?? "/automation-roi-calculator"} replace />}</Route>
         <Route path="/resources/:slug" component={IndustryAutomationGuide} />
         <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
@@ -272,9 +275,8 @@ function LayoutRoutes() {
         {/* Location + Industry Pages (30 local pages) */}
         <Route path="/locations/:city/:industry" component={LocationIndustryPage} />
 
-        {/* Local SEO Matrix */}
+        {/* City pages without a /locations page */}
         <Route path="/ai-automation/:city" component={LocalSEOPage} />
-        <Route path="/ai-automation/:city/:industry" component={LocalSEOPage} />
 
         {/* Fallback */}
         <Route path="/404" component={NotFound} />
@@ -305,7 +307,6 @@ function Router() {
 function App() {
   useEffect(() => {
     loadFonts();
-    initAnalytics();
   }, []);
 
   return (
@@ -313,7 +314,8 @@ function App() {
       <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
-          <MetaPixelPageViews />
+          <PageViews />
+          <CookieConsent />
           <Router />
         </TooltipProvider>
       </ThemeProvider>
@@ -427,7 +429,6 @@ const ROUTE_TABLE = [
   ["/workflows/document-collection", DocumentCollectionWorkflow],
   ["/locations/:city/:industry", LocationIndustryPage],
   ["/ai-automation/:city", LocalSEOPage],
-  ["/ai-automation/:city/:industry", LocalSEOPage],
   ["/404", NotFound],
 ] as const;
 

@@ -309,7 +309,7 @@ export default function AiAutomationIndustries() {
               Automated appointment reminders - sent by SMS or email 48 hours and 24 hours before an appointment - consistently reduce no-show rates by 20-35%. Recall campaigns automatically contact patients at defined intervals after their last visit, bringing in appointment bookings that would otherwise fall through.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-              The recommended starting point for clinics is appointment reminder automation. It requires minimal setup, integrates with most practice management systems, and delivers measurable ROI within the first month.
+              The recommended starting point for clinics is appointment reminder automation. It requires minimal setup, integrates with most practice management systems, and its effect on no-shows is easy to measure.
             </p>
 
             {/* Contractors */}
@@ -321,7 +321,7 @@ export default function AiAutomationIndustries() {
               An AI receptionist or automated lead response system handles incoming inquiries instantly - acknowledging the request, gathering job details, and booking an estimate appointment - regardless of when the inquiry arrives. After-hours capture ensures that evening and weekend inquiries do not go cold overnight.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
-              The recommended starting point for contractors is lead response and after-hours capture automation. It directly addresses the highest point of lost revenue and typically pays for itself within the first month of operation.
+              The recommended starting point for contractors is lead response and after-hours capture automation. It directly addresses the highest point of lost revenue. Payback depends on your volumes and scope; we agree on what to measure before launch.
             </p>
 
             {/* FAQ */}

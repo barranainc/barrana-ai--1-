@@ -6,12 +6,12 @@ const data: IndustryPageData = {
   title:
     "AI Automation for Physiotherapy Clinics",
   description:
-    "Reduce no-shows by 25-40%, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free audit.",
+    "Reduce no-shows, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free audit.",
   route: "physiotherapy-clinics",
   breadcrumb: "Physiotherapy Clinics",
   h1: "Every No-Show Is $80 That Walked Out the Door. At 40 Patients Per Day, That Is $150,000 Per Year.",
   subheadline:
-    "Dual reminders cut no-shows 25-40%. Digital intake eliminates paper forms. Cancellations auto-fill from waitlist. Post-treatment re-engagement runs itself. Your front desk focuses on patients, not phones.",
+    "Dual reminders cut no-shows. Digital intake eliminates paper forms. Cancellations auto-fill from waitlist. Post-treatment re-engagement runs itself. Your front desk focuses on patients, not phones.",
   body: [
     "A physiotherapy clinic seeing 40 patients per day with a 20% no-show rate loses 8 appointments daily. At $80 per visit, that is $640 per day, $3,200 per week, over $150,000 per year. The majority of those no-shows are preventable with consistent reminders your front desk cannot send manually at that scale.",
     "Beyond no-shows, your front desk juggles booking calls, check-ins, insurance questions, and paper intake forms simultaneously. The phones ring. Patients wait. Something always gets dropped.",
@@ -129,7 +129,7 @@ const data: IndustryPageData = {
     { label: "Patient Intake", after: "Completed before visit - zero paper" },
     { label: "Cancellation Slots", after: "Filled automatically from waitlist" },
     { label: "Daily Revenue Recovered", after: "$640+/day for 40-patient clinic" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
@@ -145,7 +145,7 @@ const data: IndustryPageData = {
   ],
   aeoQuestion: "How does AI automation help physiotherapy clinics?",
   aeoAnswer:
-    "AI automation helps physiotherapy clinics by sending dual appointment reminders (48-hour email + 2-hour SMS) to reduce no-shows by 25-40%, providing digital intake forms completed before visits, managing waitlists to auto-fill cancellation slots, enabling online self-serve booking, and running post-treatment re-engagement sequences at 30 and 60 days. This recovers revenue from no-shows, reduces front desk phone volume by 50-70%, and brings patients back for maintenance care.",
+    "AI automation helps physiotherapy clinics by sending dual appointment reminders (48-hour email + 2-hour SMS) to reduce no-shows, providing digital intake forms completed before visits, managing waitlists to auto-fill cancellation slots, enabling online self-serve booking, and running post-treatment re-engagement sequences at 30 and 60 days. This recovers revenue from no-shows, reduces front desk phone volume by 50-70%, and brings patients back for maintenance care.",
   faqItems: [
     {
       question: "Jane App integration?",
@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     {
       question: "Typical no-show reduction?",
       answer:
-        "25-40% within 60 days of dual reminder implementation. Consistent across our clinic implementations.",
+        "It depends on your current no-show rate and patient mix. Dual reminders, waitlist fill and digital intake usually reduce no-shows; we record your baseline first so the change can be measured.",
     },
     {
       question: "Can we automate Google review requests?",
@@ -213,7 +213,7 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Real results from real clients",
+      desc: "Illustrative examples of typical outcomes",
     },
   ],
 };

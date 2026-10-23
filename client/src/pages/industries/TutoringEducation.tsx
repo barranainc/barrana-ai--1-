@@ -148,7 +148,7 @@ const data: IndustryPageData = {
       label: "Referral Rate",
       after: "Systematic after grade improvements",
     },
-    { label: "Payback Period", after: "Within first enrollment cycle" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",

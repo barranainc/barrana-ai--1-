@@ -194,11 +194,11 @@ Trial lesson booking with automated post-trial follow-up. It is the cheapest bui
 
 Barrana works with music schools, arts education providers, and lesson-based businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enquiry, scheduling, make-up, progress, and re-enrollment processes and show you where administrative hours and students are being lost.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry, scheduling, make-up, progress, and re-enrollment processes and show you where administrative hours and students are being lost.
 
 For organizations working with minors we build screening expiry as a blocking control and route all communication through school-managed channels by default.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

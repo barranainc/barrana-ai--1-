@@ -127,7 +127,7 @@ const data: IndustryPageData = {
     { label: "Seasonal booking", before: "Last-minute rush", after: "Filled 4 weeks in advance" },
     { label: "Estimate conversion", before: "Memory-dependent", after: "Improved through consistent 48hr/7d/14d follow-up" },
     { label: "Google reviews", before: "Rarely requested", after: "Consistent automatic requests every service" },
-    { label: "Typical payback", after: "Within first month" },
+    { label: "Typical payback", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific shop.",
 
@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much does it cost?",
-      answer: "Auto repair shop automation: $3,000-$6,000 CAD. Maintenance reminder revenue alone typically exceeds investment within first month.",
+      answer: "Auto repair shop automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Seasonal campaigns to how many customers?",
@@ -184,7 +184,7 @@ const data: IndustryPageData = {
     { label: "Invoice Automation", href: "/services/invoice-automation", desc: "Invoices sent on job completion, payments tracked" },
     { label: "Contractors", href: "/industries/contractors", desc: "Similar automation for trades businesses" },
     { label: "Home Services", href: "/industries/home-services", desc: "HVAC, plumbing, electrical automation" },
-    { label: "Case Studies", href: "/case-studies", desc: "Real results from real businesses" },
+    { label: "Case Studies", href: "/case-studies", desc: "Illustrative examples of typical outcomes" },
   ],
 };
 

@@ -196,11 +196,11 @@ Selection management with automated reminders and defaults. It fixes the bottlen
 
 Barrana works with meal prep, food subscription, and prepared food delivery businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your subscription, selection, production, packing, and delivery cycle and show you where the weekly scramble is costing you.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your subscription, selection, production, packing, and delivery cycle and show you where the weekly scramble is costing you.
 
 For allergen handling we build blocking controls rather than warnings, and we expect your food safety lead to own final verification.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

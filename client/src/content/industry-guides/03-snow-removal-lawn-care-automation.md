@@ -150,7 +150,7 @@ Property managers and condo boards care enormously, because slip-and-fall liabil
 Yes, and it should. Running them separately is why cross-sell rates stay low. One client record, two service lines, shared route geography.
 
 **What is the smallest useful starting point?**
-Renewal automation, built in the off-season when you have time. It costs the least, requires the fewest integrations, and typically pays for itself before the next season starts.
+Renewal automation, built in the off-season when you have time. It costs the least and requires the fewest integrations.
 
 ---
 
@@ -158,11 +158,11 @@ Renewal automation, built in the off-season when you have time. It costs the lea
 
 Barrana works with snow removal, landscaping, and seasonal service contractors across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map regardless. We map your dispatch, verification, renewal, and billing processes and show you exactly where the season's revenue is leaking.
+We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map regardless. We map your dispatch, verification, renewal, and billing processes and show you exactly where the season's revenue is leaking.
 
 The best time to build this is the off-season.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the tools you already run.
 

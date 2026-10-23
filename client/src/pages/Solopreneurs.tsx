@@ -292,7 +292,7 @@ const faqData = [
   },
   {
     q: "What about my website?",
-    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We assess this on the strategy call.",
+    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We assess this during the free Automation Audit.",
   },
 ];
 
@@ -364,7 +364,7 @@ export default function Solopreneurs() {
       name: "Starter",
       price: "$2,500–$4,000 CAD",
       items: ["Lead response automation", "Discovery call booking", "Session follow-up"],
-      note: "Pays for itself in 3-4 weeks at $200/session.",
+      note: "Payback depends on your session volume; we agree on what to measure before launch.",
       highlight: false,
     },
     {
@@ -441,7 +441,7 @@ export default function Solopreneurs() {
               </Link>
               <Link href="/contact">
                 <a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.4)", display: "inline-block" }}>
-                  Book a Free Strategy Call
+                  Book a Free Automation Audit
                 </a>
               </Link>
             </div>
@@ -716,7 +716,7 @@ export default function Solopreneurs() {
             </Link>
             <Link href="/contact">
               <a style={{ background: "transparent", color: "#fff", padding: "0.9rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", display: "inline-block" }}>
-                Book a Free Strategy Call
+                Book a Free Automation Audit
               </a>
             </Link>
           </div>

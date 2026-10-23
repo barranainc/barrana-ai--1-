@@ -1,4 +1,5 @@
 import { trackEvent } from "@/lib/analytics";
+import { trackMeta } from "@/lib/metaPixel";
 /**
  * BARRANA.AI CAMPAIGN COMPONENTS
  * Shared components for standalone campaign landing pages.
@@ -143,7 +144,7 @@ export function CampaignCTA({ centered = false, large = false }: CampaignCTAProp
         Book Your Free 60-Minute Audit →
       </motion.button>
       <p className="text-sm mt-3" style={{ color: GREY }}>
-        No pitch. No obligation. You keep the analysis.
+        No pitch. No obligation. You keep the workflow map.
       </p>
     </div>
   );
@@ -212,6 +213,8 @@ interface CampaignLeadFormProps {
 export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  // Blocks a second submission before React has re-rendered the disabled button.
+  const inFlight = useRef(false);
   const [form, setForm] = useState({
     name: "",
     business: "",
@@ -226,6 +229,8 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (inFlight.current) return;
+    inFlight.current = true;
     setLoading(true);
     try {
       const response = await fetch("/api/lead", {
@@ -246,11 +251,12 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
         }),
       });
       if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
-      (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", { content_name: `Campaign - ${industry}` });
+      trackMeta("Lead", { content_name: `Campaign - ${industry}` });
       trackEvent("generate_lead", { form_name: `Campaign - ${industry}` });
     } catch (error) {
       // Audit task 10: never show a thank-you for a lead that was not delivered.
       console.error("Campaign lead submission failed:", error);
+      inFlight.current = false;
       setLoading(false);
       window.alert("Sorry - your request could not be sent. Please try again, or use the form at barrana.ai/contact.");
       return;
@@ -298,7 +304,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
                 We will reach out within 1 business day to confirm your 60-minute audit time. Check your inbox - including spam.
               </p>
               <p className="text-xs mt-4 font-medium" style={{ color: MAGENTA }}>
-                No pitch. No obligation. You keep the analysis.
+                No pitch. No obligation. You keep the workflow map.
               </p>
             </motion.div>
           ) : (
@@ -393,7 +399,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
               </motion.button>
 
               <p className="text-xs text-center" style={{ color: GREY }}>
-                No pitch. No obligation. You keep the analysis. We respond within 1 business day.
+                No pitch. No obligation. You keep the workflow map. We respond within 1 business day.
               </p>
               <p className="text-xs text-center" style={{ color: GREY }}>
                 We use your details to respond to this request. Read our{" "}

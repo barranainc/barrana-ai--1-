@@ -190,11 +190,11 @@ Lot-level inventory with expiry logic. It reduces write-offs immediately, it pre
 
 Barrana works with medical supply distributors, healthcare logistics businesses, and regulated distribution operations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your order, inventory, shipping, and traceability processes and show you where regulatory exposure and margin are concentrated.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your order, inventory, shipping, and traceability processes and show you where regulatory exposure and margin are concentrated.
 
 For regulated distribution we expect your quality and regulatory affairs leads to shape the design and to own validation. We build the workflow; they own the compliance decisions.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

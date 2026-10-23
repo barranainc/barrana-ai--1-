@@ -129,7 +129,7 @@ const data: IndustryPageData = {
     { label: "Tax Season Capacity", after: "30% increase, same team" },
     { label: "Files Processed", after: "215 → 280 (4-person team)" },
     { label: "New Client Onboarding", after: "Consistent every time" },
-    { label: "Payback Period", after: "Within first engagement cycle" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
@@ -213,7 +213,7 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Real results from real clients",
+      desc: "Illustrative examples of typical outcomes",
     },
   ],
 };

@@ -28,10 +28,10 @@ export default function ROICalculator() {
 
   const results = [
     { label: "Monthly admin cost (current)", value: `$${Math.round(monthlyAdminCost).toLocaleString()}`, sub: `${staff} staff x ${adminHours} hrs/week x $${hourlyRate}/hr`, color: "#DC2626", bold: false },
-    { label: "Monthly admin savings from automation", value: `$${Math.round(savedCostPerMonth).toLocaleString()}`, sub: "~80% reduction in admin hours", color: "#059669", bold: false },
-    { label: "Additional monthly revenue from faster lead response", value: `$${Math.round(additionalRevenue).toLocaleString()}`, sub: `+${additionalConversions.toFixed(1)} conversions/month at $${avgDealValue.toLocaleString()} avg`, color: "#059669", bold: false },
-    { label: "Total monthly ROI", value: `$${Math.round(totalMonthlyROI).toLocaleString()}`, sub: "Admin savings + additional revenue", color: "#283891", bold: true },
-    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Based on ~$3,500 implementation", color: "#283891", bold: true },
+    { label: "Staff time freed per month (capacity, not cash)", value: `$${Math.round(savedCostPerMonth).toLocaleString()}`, sub: "Assumes ~80% fewer admin hours, valued at your hourly rate", color: "#059669", bold: false },
+    { label: "Additional monthly revenue from faster lead response", value: `$${Math.round(additionalRevenue).toLocaleString()}`, sub: `Assumes 15% of monthly leads convert in addition: +${additionalConversions.toFixed(1)} at $${avgDealValue.toLocaleString()} avg`, color: "#059669", bold: false },
+    { label: "Total estimated monthly value", value: `$${Math.round(totalMonthlyROI).toLocaleString()}`, sub: "Freed staff time + additional revenue (estimate)", color: "#283891", bold: true },
+    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Assumes a ~$3,500 implementation; illustrative", color: "#283891", bold: true },
   ];
 
   return (
@@ -84,7 +84,7 @@ export default function ROICalculator() {
                 ))}
               </div>
               <div className="mt-6 p-4 rounded-xl text-xs" style={{ backgroundColor: "#FFF8E7", border: "1px solid rgba(217,119,6,0.2)", color: "#92400E" }}>
-                <strong>Note:</strong> These are estimates based on typical results. Actual ROI depends on your specific workflows, starting conditions, and implementation scope.
+                <strong>Estimate, not a quote or a promise.</strong> The calculator assumes automation removes about 80% of the admin hours you enter, that 15% of your monthly leads convert in addition because of faster response, and an implementation cost of about $3,500. Freed staff time is capacity, not a cash saving, unless costs actually fall. Your actual result depends on your workflows, starting point and scope; we measure your baseline during the free Automation Audit.
               </div>
               <div className="mt-6">
                 <Link href="/contact" className="btn-primary block text-center">Book Free Audit to Get Exact Numbers</Link>

@@ -124,7 +124,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   "name": "How to Automate Appointment Booking and Reduce No-Shows",
-  "description": "Automated booking combines self-serve scheduling with dual reminders (48-hour email + 2-hour SMS) and waitlist management to reduce no-shows 25-40%.",
+  "description": "Automated booking combines self-serve scheduling with dual reminders (48-hour email + 2-hour SMS) and waitlist management to reduce no-shows.",
   "step": [
     { "@type": "HowToStep", "name": "Set up self-serve online booking with real-time availability" },
     { "@type": "HowToStep", "name": "Send instant confirmation email" },
@@ -137,7 +137,7 @@ const jsonLd = {
 export default function AppointmentBookingWorkflow() {
   return (
     <div className="container" style={{ maxWidth: 860, margin: "0 auto", padding: spacing.sectionPadding + " 1.25rem" }}>
-      <SEOHead title="How to Automate Appointment Booking and Reduce No-Shows" description="A step-by-step guide to building an automated booking workflow with smart reminders that reduces no-shows by 40-50%." type="article" />
+      <SEOHead title="How to Automate Appointment Booking and Reduce No-Shows" description="A step-by-step guide to building an automated booking workflow with smart reminders that reduces no-shows." type="article" />
       <JsonLd data={jsonLd} />
 
       {/* Header */}

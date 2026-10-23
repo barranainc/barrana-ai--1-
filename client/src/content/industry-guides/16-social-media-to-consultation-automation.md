@@ -181,11 +181,11 @@ Instant acknowledgment with a booking link. It is the least complex build and it
 
 Barrana works with clinics, practices, and practitioner-led businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enquiry channels, booking process, and follow-up and show you where audience attention is failing to become booked revenue.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry channels, booking process, and follow-up and show you where audience attention is failing to become booked revenue.
 
 For regulated practices, we build to keep clinical information out of social platforms and expect your college's advertising standards and your privacy advisor to shape the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

@@ -104,7 +104,7 @@ const data: IndustryPageData = {
     { label: "Client Touchpoints", before: "Sporadic", after: "Systematic" },
     { label: "Onboarding Quality", after: "Consistent, professional every time" },
     { label: "Compliance Risk", after: "Significantly reduced" },
-    { label: "Payback Period", after: "Within first quarter" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
@@ -141,7 +141,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard advisor automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Financial advisor automation: $5,000-$10,000 CAD. Pays for itself through improved retention and compliance risk reduction.",
+      answer: "Financial advisor automation: $5,000-$10,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
 

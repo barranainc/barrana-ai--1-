@@ -220,6 +220,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
           <CostOfInactionCards items={data.costItems} />
+          <p style={{ ...subheadingStyle, fontSize: "0.875rem", fontStyle: "italic", marginTop: "1rem", marginBottom: 0 }}>Illustrative example for a firm of this size; your figures will differ.</p>
         </div>
       </section>
 
@@ -238,7 +239,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
         <div className="container">
           <h2 style={headingStyle}>Before vs After Automation</h2>
           <p style={subheadingStyle}>
-            The measurable difference automation makes for {data.breadcrumb.toLowerCase()}.
+            Illustrative before-and-after ranges for {data.breadcrumb.toLowerCase()}; we measure your own baseline first.
           </p>
           <BeforeAfterSection metrics={data.beforeAfterMetrics} />
         </div>
@@ -253,7 +254,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
           <p style={{ ...subheadingStyle, marginBottom: "1.5rem" }}>
             Purpose-built automation that runs end-to-end without manual hand-offs.
           </p>
-          <WorkflowDiagram steps={data.workflowSteps} resultBadge={data.workflowBadge} />
+          <WorkflowDiagram steps={data.workflowSteps} resultBadge={data.workflowBadge ? `${data.workflowBadge} (illustrative)` : undefined} />
         </div>
       </section>
 
@@ -273,7 +274,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       <section style={sectionStyle("white")}>
         <div className="container">
           <h2 style={headingStyle}>ROI &amp; Impact</h2>
-          <p style={subheadingStyle}>Typical outcomes for {data.breadcrumb.toLowerCase()}.</p>
+          <p style={subheadingStyle}>Illustrative outcomes for {data.breadcrumb.toLowerCase()}, not verified client results. Your figures will differ.</p>
           <ROIMetricsGrid metrics={data.roiMetrics} note={data.roiNote} ctaText={data.roiCtaText} />
         </div>
       </section>

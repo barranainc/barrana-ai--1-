@@ -354,7 +354,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How much does automation cost?",
     answer:
-      "Single workflow: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Full operational automation: $10,000\u2013$20,000. All fixed pricing after a free audit. Most businesses see full ROI within 30\u201360 days. Monthly maintenance: $200\u2013$500.",
+      "Single workflow: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Full operational automation: $10,000\u2013$20,000. All fixed pricing after a free audit. Payback periods vary with volumes and scope; we agree on what to measure before launch. Monthly maintenance: $200\u2013$500.",
   },
   {
     question: "How fast will I see results?",
@@ -398,7 +398,7 @@ const objectionItems: FAQItem[] = [
   {
     question: "How much does this cost?",
     answer:
-      "Single workflow automation: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Fixed pricing after a free audit. No hourly billing. No surprise invoices. Most businesses see full ROI within 30\u201360 days.",
+      "Single workflow automation: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Fixed pricing after a free audit. No hourly billing. No surprise invoices. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
   },
   {
     question: "Will this replace my staff?",
@@ -508,13 +508,13 @@ const HERO_STATES: HeroState[] = [
     emphasisText: "Here Is What It Is Costing You.",
     emphasisColor: MAGENTA,
     afterText: "",
-    sub: "Most service businesses lose $80,000 to $200,000 per year to slow lead response, manual admin, no-shows, and invoice delays. The waste is calculable. So is the fix.",
-    microcopy: "These are not estimates.\nThey are calculated from real patterns across GTA service businesses.\nYour number is probably in this range.",
+    sub: "A typical 5\u201315 person service business can lose $80,000 to $200,000 a year (illustrative estimate) to slow lead response, manual admin, no-shows, and invoice delays. The waste is calculable. So is the fix.",
+    microcopy: "These are illustrative estimates.\nThey use typical figures for a 5\u201315 person service business.\nYour number will differ.",
     primaryCTA: { text: "Calculate Your Annual Operational Cost", href: "/automation-roi-calculator" },
-    secondaryCTA: { text: "See What Other Businesses Recovered", href: "/case-studies" },
+    secondaryCTA: { text: "See Illustrative Examples", href: "/case-studies" },
     metrics: [
-      { value: "$80K\u2013$200K/yr", label: "Average annual loss" },
-      { value: "30\u201360 days", label: "Typical ROI timeline" },
+      { value: "$80K\u2013$200K/yr", label: "Illustrative annual loss (5\u201315 staff)" },
+      { value: "60 min", label: "Free Automation Audit" },
       { value: "$3K\u2013$12K", label: "Fixed-price implementation" },
     ],
   },
@@ -544,8 +544,8 @@ const HERO_STATES: HeroState[] = [
     emphasisText: "Let Us Look at Your Business.",
     emphasisColor: NAVY,
     afterText: "",
-    sub: "Book a free 60-minute Automation Audit. We map your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first. You keep the audit even if you do nothing.",
-    microcopy: "60 minutes. No sales pitch.\nYou keep the full audit report.\nIf automation is not the right answer, we will tell you that.",
+    sub: "Book a free 60-minute Automation Audit. We map your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first. You keep the workflow map, whether or not you work with us.",
+    microcopy: "60 minutes. No sales pitch.\nYou keep the workflow map.\nIf automation is not the right answer, we will tell you that.",
     primaryCTA: { text: "Book Your Free Automation Audit", href: "/contact" },
     secondaryCTA: { text: "Call Us: +1 647 367 6771", href: "tel:+16473676771" },
     metrics: [
@@ -674,7 +674,7 @@ export default function Home() {
                     borderBottom: activeTab === i ? `2px solid ${MAGENTA}` : "2px solid transparent",
                     borderRadius: "0.75rem",
                     padding: "0.625rem 1.25rem",
-                    color: activeTab === i ? NAVY : GREY,
+                    color: activeTab === i ? NAVY : "#5f5f6b", // 4.5:1 on the tab bar background
                     fontWeight: activeTab === i ? 600 : 500,
                     fontSize: "0.875rem",
                     cursor: "pointer",
@@ -1081,7 +1081,7 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.75rem" }}>
-                Add it up: a typical 5–15 person service business loses
+                Add it up: an illustrative 5–15 person service business loses
               </p>
               <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "2.5rem", lineHeight: 1.1, marginBottom: "0.5rem" }}>
                 $80,000 to $200,000 per year
@@ -1090,7 +1090,7 @@ export default function Home() {
                 to operational friction.
               </p>
               <p style={{ color: GREY, fontSize: "0.875rem", maxWidth: "64ch", margin: "0 auto 1.75rem" }}>
-                These are not theoretical numbers. They are calculated from real-world patterns across immigration firms, accounting practices, law firms, clinics, and contractors in the GTA.
+                Illustrative scenario. Each figure uses the assumptions shown in its tile; your numbers will differ.
               </p>
               <Link href="/automation-planner" className="btn-primary">
                 Calculate Your Specific Number
@@ -1195,19 +1195,19 @@ export default function Home() {
               {
                 icon: PhoneCall,
                 title: "I am losing leads to slow response",
-                dollar: "$36K\u2013$180K/yr at risk",
+                dollar: "$36K\u2013$180K/yr at risk (illustrative)",
                 href: "/services",
               },
               {
                 icon: Clock,
                 title: "My team is buried in admin work",
-                dollar: "$26K\u2013$78K/yr in staff time wasted",
+                dollar: "$26K\u2013$78K/yr in staff time (illustrative)",
                 href: "/services",
               },
               {
                 icon: CalendarX,
                 title: "No-shows and scheduling are killing my revenue",
-                dollar: "$15K\u2013$150K/yr in empty slots",
+                dollar: "$15K\u2013$150K/yr in empty slots (illustrative)",
                 href: "/services",
               },
               {
@@ -1358,7 +1358,7 @@ export default function Home() {
             {[
               {
                 icon: Zap,
-                recovery: "Recover $36K\u2013$180K/yr",
+                recovery: "Recover $36K\u2013$180K/yr (illustrative range)",
                 title: "Lead Response Automation",
                 body: "Every enquiry gets a response in under 90 seconds, 24/7. Prospect is qualified, CRM record created, consultation booked. Even at 11pm on a Sunday.",
                 before: [{ label: "Response time", val: "4\u20138 hrs" }, { label: "Lost leads", val: "8\u201312/mo" }],
@@ -1366,7 +1366,7 @@ export default function Home() {
               },
               {
                 icon: Settings,
-                recovery: "Recover $26K\u2013$78K/yr",
+                recovery: "Recover $26K\u2013$78K/yr (illustrative range)",
                 title: "Admin Automation",
                 body: "Intake, data entry, follow-up emails, CRM updates, and document collection run automatically. Your team does the expert work. The system does the coordination.",
                 before: [{ label: "Admin hours", val: "15\u201320/wk" }, { label: "Staff focus", val: "admin" }],
@@ -1374,15 +1374,15 @@ export default function Home() {
               },
               {
                 icon: Calendar,
-                recovery: "Recover $15K\u2013$150K/yr",
+                recovery: "Recover $15K\u2013$150K/yr (illustrative range)",
                 title: "Booking and Reminders",
-                body: "Dual reminders (48hr email + 2hr SMS) reduce no-shows 25\u201340%. Cancellations auto-fill from waitlist. Online booking reduces phone volume 40\u201350%.",
+                body: "Dual reminders (48hr email + 2hr SMS) cut no-shows, cancellations auto-fill from the waitlist, and online booking takes calls off the phone. We measure your baseline first so the change can be shown.",
                 before: [{ label: "No-show rate", val: "15\u201320%" }, { label: "Empty slots", val: "manual fill" }],
                 after: [{ label: "No-show rate", val: "8\u201312%" }, { label: "Empty slots", val: "filled from waitlist" }],
               },
               {
                 icon: Receipt,
-                recovery: "Recover $10K\u2013$50K/yr",
+                recovery: "Recover $10K\u2013$50K/yr (illustrative range)",
                 title: "Invoice Automation",
                 body: "Invoices trigger the day work completes. Payment reminders at 7/14/21 days. Reconciliation automated. Cash flow stabilised.",
                 before: [{ label: "Invoice delay", val: "2\u20134 weeks" }, { label: "Collections", val: "manual" }],
@@ -1475,11 +1475,11 @@ export default function Home() {
           <Reveal delay={0.2}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <Link href="/contact" className="btn-primary">
-                Book Your Free Friction Mapping Session
+                Book Your Free Automation Audit
                 <ArrowRight size={16} />
               </Link>
               <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                60 minutes. Free. You keep the workflow map regardless.
+                60 minutes. Free. You keep the workflow map, whether or not you work with us.
               </p>
             </div>
           </Reveal>
@@ -1665,7 +1665,7 @@ export default function Home() {
                     fontWeight: 700,
                     letterSpacing: "0.09em",
                     textTransform: "uppercase",
-                    color: GREY,
+                    color: "#5f5f6b", // 4.5:1 for 11px text
                     margin: "0 0 1.25rem",
                   }}>
                     What happens, step by step
@@ -1925,10 +1925,13 @@ export default function Home() {
       <section className="section home-cases" style={{ background: "white", padding: "6rem 0" }}>
         <div className="container">
           <Reveal>
-            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Real Results</div>
+            <div className="eyebrow" style={{ letterSpacing: "0.1em" }}>Illustrative Examples</div>
             <h2 style={{ color: DARK, marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
-              What Automation Actually Saved These Businesses.
+              What Automation Can Change for Businesses Like Yours.
             </h2>
+            <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.6, maxWidth: "64ch", margin: 0 }}>
+              Illustrative examples based on typical engagements, not verified client results. Your figures will differ.
+            </p>
           </Reveal>
 
           <div
@@ -1946,7 +1949,7 @@ export default function Home() {
                 location: "North York",
                 pain: "Staff spent 18 hrs/week on intake and document chasing",
                 fix: "AI intake + document collection + status updates automated",
-                result: "$50,000+ in captured leads",
+                result: "$50,000+ in captured leads (illustrative)",
                 desc: "Revenue: $50,000+ from captured evening leads. Capacity: 14 staff hours/week recovered (about $36,400/yr in staff time, not cash savings). 25% more client files handled.",
               },
               {
@@ -1954,7 +1957,7 @@ export default function Home() {
                 location: "Vaughan",
                 pain: "Tax season at capacity. Turning away clients.",
                 fix: "Document collection + invoicing + onboarding automated",
-                result: "$52,000 in new revenue",
+                result: "$52,000 in new revenue (illustrative)",
                 desc: "65 additional clients at avg $800 = $52,000 in new annual revenue. Separately, faster invoicing brought forward an estimated $30,000\u2013$50,000 in cash flow - a timing benefit, not new revenue.",
               },
               {
@@ -1962,7 +1965,7 @@ export default function Home() {
                 location: "Richmond Hill",
                 pain: "22% no-show rate across 6 practitioners",
                 fix: "Dual reminders + waitlist + digital intake",
-                result: "$85,000/yr recovered",
+                result: "$85,000/yr recovered (illustrative)",
                 desc: "No-shows dropped to 13.6%. Revenue from reduced empty slots + filled cancellations.",
               },
               {
@@ -1970,7 +1973,7 @@ export default function Home() {
                 location: "Mississauga",
                 pain: "Losing 10+ leads/month to slow response",
                 fix: "90-second lead response + after-hours AI + quote follow-up",
-                result: "$24K\u2013$100K/yr recaptured",
+                result: "$24K\u2013$100K per month in recaptured jobs (illustrative)",
                 desc: "Quote conversion up 22%. 3\u20134 more jobs/month at $8,000\u2013$25,000 per job captured from competitors.",
               },
             ].map((card, i) => (
@@ -2012,7 +2015,7 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div style={{ textAlign: "center", marginTop: "2.5rem", display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
               <Link href="/case-studies" className="btn-secondary">
-                View All Case Studies
+                View All Illustrative Examples
                 <ArrowRight size={16} />
               </Link>
               <Link href="/contact" className="btn-primary">
