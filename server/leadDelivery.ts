@@ -1,11 +1,15 @@
 /**
- * Lead delivery: sends each website enquiry to the notification inbox through the Gmail API.
+ * Lead delivery: sends each website enquiry to the notification inbox, through Gmail SMTP with an app
+ * password when SMTP_PASSWORD is set (added 23 Oct 2026 after the Gmail OAuth values were lost), otherwise
+ * through the Gmail API with OAuth.
  * Reconstructed from the server that has been running on Hostinger since 5 Oct 2026
  * (hbuilds/last-source/prebuilt-release/index.js); the GitHub copy still had the retired
  * GoHighLevel version. Credentials come from environment variables, never from the client.
  */
 
-export type LeadDeliveryFailure = "configuration" | "oauth" | "gmail";
+import nodemailer from "nodemailer";
+
+export type LeadDeliveryFailure = "configuration" | "oauth" | "gmail" | "smtp";
 
 export class LeadDeliveryError extends Error {
   code: LeadDeliveryFailure;
@@ -107,7 +111,11 @@ function toBase64Url(value: string): string {
   return Buffer.from(value, "utf8").toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
 }
 
-export function buildLeadNotification(lead: LeadPayload, conversionId: string, config: GmailDeliveryConfig): string {
+export function buildLeadNotification(
+  lead: LeadPayload,
+  conversionId: string,
+  config: Pick<GmailDeliveryConfig, "senderEmail" | "notificationEmail">,
+): string {
   const fullName = [lead.firstName, lead.lastName].filter(Boolean).join(" ");
   const customFieldLines = lead.customFields.map((field) => `- ${field.key}: ${field.field_value}`);
   const body = [
@@ -189,4 +197,43 @@ export async function deliverLeadWithGmail(
   const payload = (await response.json().catch(() => ({}))) as { id?: string };
   if (!response.ok || !payload.id) throw new LeadDeliveryError("gmail", response.status);
   return { messageId: payload.id };
+}
+
+export interface SmtpDeliveryConfig {
+  /** Gmail or Google Workspace account that sends the notification; the app password belongs to it. */
+  senderEmail: string;
+  /** 16-character Google app password for senderEmail. */
+  appPassword: string;
+  notificationEmail: string;
+}
+
+type SendRaw = (message: { from: string; to: string; raw: string }) => Promise<{ messageId?: string }>;
+
+function gmailSmtp(config: SmtpDeliveryConfig): SendRaw {
+  const transport = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user: config.senderEmail, pass: config.appPassword.replace(/s+/g, "") },
+  });
+  return ({ from, to, raw }) => transport.sendMail({ envelope: { from, to: [to] }, raw });
+}
+
+export async function deliverLeadWithSmtp(
+  lead: LeadPayload,
+  conversionId: string,
+  config: SmtpDeliveryConfig,
+  send: SendRaw = gmailSmtp(config),
+): Promise<{ messageId: string }> {
+  if (!config.appPassword || !EMAIL_PATTERN.test(config.senderEmail) || !EMAIL_PATTERN.test(config.notificationEmail)) {
+    throw new LeadDeliveryError("configuration");
+  }
+  const raw = buildLeadNotification(lead, conversionId, config);
+  try {
+    const info = await send({ from: config.senderEmail, to: config.notificationEmail, raw });
+    return { messageId: info.messageId || conversionId };
+  } catch (error) {
+    const code = (error as { responseCode?: number }).responseCode;
+    throw new LeadDeliveryError("smtp", typeof code === "number" ? code : undefined);
+  }
 }

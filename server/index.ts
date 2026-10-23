@@ -12,7 +12,7 @@ import { createServer } from "http";
 import { existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import { deliverLeadWithGmail, LeadDeliveryError, parseLeadPayload } from "./leadDelivery";
+import { deliverLeadWithGmail, deliverLeadWithSmtp, LeadDeliveryError, parseLeadPayload } from "./leadDelivery";
 import { redirects } from "../scripts/routes.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -25,6 +25,15 @@ const gmailDeliveryConfig = {
   senderEmail: process.env.LEAD_SENDER_EMAIL || "help@barrana.ai",
   notificationEmail: process.env.LEAD_NOTIFICATION_EMAIL || "help@barrana.ai",
 };
+
+// Gmail SMTP with an app password takes precedence when SMTP_PASSWORD is set; the sender is LEAD_SENDER_EMAIL.
+const smtpDeliveryConfig = process.env.SMTP_PASSWORD
+  ? {
+      senderEmail: gmailDeliveryConfig.senderEmail,
+      appPassword: process.env.SMTP_PASSWORD,
+      notificationEmail: gmailDeliveryConfig.notificationEmail,
+    }
+  : null;
 
 const CONVERSION_ID_PATTERN = /^[A-Za-z0-9-]{16,64}$/;
 const CANONICAL_HOSTS = new Set(["barrana.ai", "www.barrana.ai"]);
@@ -132,7 +141,8 @@ async function startServer() {
         res.status(400).json({ error: "A valid first name and email are required" });
         return;
       }
-      await deliverLeadWithGmail(lead, conversionId, gmailDeliveryConfig);
+      if (smtpDeliveryConfig) await deliverLeadWithSmtp(lead, conversionId, smtpDeliveryConfig);
+      else await deliverLeadWithGmail(lead, conversionId, gmailDeliveryConfig);
       res.json({ success: true, conversionId });
     } catch (err) {
       if (err instanceof LeadDeliveryError) {
@@ -202,6 +212,9 @@ async function startServer() {
   const port = process.env.PORT || 3000;
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
+    // Which lead delivery is configured (no secret values): visible in hPanel Runtime logs after a restart.
+    const gmailReady = Boolean(gmailDeliveryConfig.clientId && gmailDeliveryConfig.clientSecret && gmailDeliveryConfig.refreshToken);
+    console.log(`Lead delivery: ${smtpDeliveryConfig ? `gmail-smtp as ${smtpDeliveryConfig.senderEmail}` : gmailReady ? "gmail-api" : "NOT CONFIGURED"}`);
   });
 }
 

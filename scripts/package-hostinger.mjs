@@ -52,7 +52,7 @@ fs.writeFileSync(
         build: "node scripts/use-prebuilt-release.mjs",
         start: "NODE_ENV=production node dist/index.js",
       },
-      dependencies: { express: "^4.22.2" },
+      dependencies: { express: "^4.22.2", nodemailer: "10.0.16" },
       engines: { node: "20.x" },
       overrides: { "path-to-regexp": "0.1.13", lodash: "4.18.0" },
     },
