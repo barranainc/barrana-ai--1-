@@ -64,7 +64,7 @@ const data: IndustryPageData = {
     { label: "Onboarding Consistency", after: "Professional, every client" },
     { label: "Cross-Sell Identification", after: "Systematic rather than accidental" },
     { label: "Broker Admin Time", after: "Reduced - more time selling" },
-    { label: "Payback Period", after: "Within first renewal cycle" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
 
@@ -88,7 +88,7 @@ const data: IndustryPageData = {
     { question: "RIBO compliance?", answer: "All client communications logged per policy. Complete audit trail maintained for regulatory and E&O documentation requirements." },
     { question: "How long to implement?", answer: "Standard brokerage automation: 3-4 weeks." },
     { question: "Does it work for independent brokers?", answer: "Yes. Solo and small brokerages benefit most because they have the least admin support for manual follow-up." },
-    { question: "How much?", answer: "Insurance brokerage automation: $5,000-$10,000 CAD. Typically pays for itself within the first renewal cycle through retained policies." },
+    { question: "How much?", answer: "Insurance brokerage automation: $5,000-$10,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can it handle multi-policy households?", answer: "Yes. The system links policies to household records, coordinates renewal dates, and prevents duplicate outreach." },
   ],
 

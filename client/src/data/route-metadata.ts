@@ -4,6 +4,8 @@
  * section labels such as "Quick Summary" or "7 min read". Edit this file, not the components.
  */
 export const ROUTE_DESCRIPTIONS: Record<string, string> = {
+  "/benchmarks":
+    "Illustrative before-and-after ranges for lead response, intake, scheduling and invoicing automation in GTA service businesses. Not a measured study; results depend on your volume and baseline.",
   "/resources/what-is-ai-automation":
     "Learn how AI automation connects your CRM, email, calendar, and forms to reduce repetitive work, with practical examples for small businesses.",
   "/resources/operational-friction-map":

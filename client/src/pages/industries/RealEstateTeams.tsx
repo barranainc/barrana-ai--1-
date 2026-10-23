@@ -64,7 +64,7 @@ const data: IndustryPageData = {
     { label: "Long-Term Nurture", before: "Abandoned", after: "12-month automated sequence" },
     { label: "CRM Accuracy", before: "End-of-day manual", after: "Real-time auto-update" },
     { label: "Lead-to-Showing Rate", after: "Improved through faster, consistent response" },
-    { label: "Payback Period", after: "30-60 days" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
 
@@ -88,7 +88,7 @@ const data: IndustryPageData = {
     { question: "Can it send listing alerts?", answer: "Yes. Connected to your MLS feed or listing database for automatic buyer notifications matching their criteria." },
     { question: "How long to implement?", answer: "Standard real estate automation: 2-3 weeks." },
     { question: "Does it work for individual agents?", answer: "Yes. Solo agents benefit from consistent follow-up they cannot maintain manually while showing properties." },
-    { question: "Cost?", answer: "Real estate team automation: $4,000-$8,000 CAD. Typically pays for itself with the first deal closed from a lead that would have been lost." },
+    { question: "Cost?", answer: "Real estate team automation: $4,000-$8,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
   ],
 
   ctaHeadline: "Your Pipeline Leaks at Every Stage. Every Unfollowed Lead Is Commission Lost. Plug the Gaps.",
@@ -100,7 +100,7 @@ const data: IndustryPageData = {
     { label: "Lead Response Automation", href: "/services/lead-response-automation", desc: "Respond in 90 seconds, every time" },
     { label: "CRM Automation", href: "/services/crm-automation", desc: "Your CRM stays current automatically" },
     { label: "After-Hours Automation", href: "/services/after-hours-automation", desc: "Capture leads while your team sleeps" },
-    { label: "Case Studies", href: "/case-studies", desc: "Real results from real clients" },
+    { label: "Case Studies", href: "/case-studies", desc: "Illustrative examples of typical outcomes" },
   ],
 };
 

@@ -160,16 +160,16 @@ const industryCards = [
 ];
 
 const caseStudies = [
-  { location: "Immigration Firm \u00b7 North York", amount: "$50,000+ in captured leads", detail: "Revenue: $50,000+ from captured evening leads. Capacity: 14 staff hours/week recovered (about $36,400/yr in staff time, not cash savings). 25% more client files handled." },
-  { location: "Accounting Firm \u00b7 Vaughan", amount: "$52,000 in new revenue", detail: "65 additional clients at avg $800 = $52,000 in new annual revenue. Separately, faster invoicing brought forward $30,000+ in cash flow - a timing benefit, not new revenue." },
-  { location: "Physiotherapy Clinic \u00b7 Richmond Hill", amount: "$85,000/yr recovered", detail: "No-shows dropped to 13.6%. Revenue from reduced empty slots + filled cancellations." },
-  { location: "Contractor \u00b7 Mississauga", amount: "$24K\u2013$100K/yr recaptured", detail: "Quote conversion up 22%. 3\u20134 more jobs/month at $8,000\u2013$25,000 per job captured from competitors." },
+  { location: "Immigration Firm \u00b7 North York", amount: "$50,000+ in captured leads (illustrative)", detail: "Revenue: $50,000+ from captured evening leads. Capacity: 14 staff hours/week recovered (about $36,400/yr in staff time, not cash savings). 25% more client files handled." },
+  { location: "Accounting Firm \u00b7 Vaughan", amount: "$52,000 in new revenue (illustrative)", detail: "65 additional clients at avg $800 = $52,000 in new annual revenue. Separately, faster invoicing brought forward $30,000+ in cash flow - a timing benefit, not new revenue." },
+  { location: "Physiotherapy Clinic \u00b7 Richmond Hill", amount: "$85,000/yr recovered (illustrative)", detail: "No-shows dropped to 13.6%. Revenue from reduced empty slots + filled cancellations." },
+  { location: "Contractor \u00b7 Mississauga", amount: "$24K\u2013$100K per month in recaptured jobs (illustrative)", detail: "Quote conversion up 22%. 3\u20134 more jobs/month at $8,000\u2013$25,000 per job captured from competitors." },
 ];
 
 const faqItems: FAQItem[] = [
   {
     question: "Is this going to be really expensive?",
-    answer: "A single automated workflow costs $1,500 to $4,000. A full system costs $5,000 to $12,000. Fixed pricing - you know the number before we start. Most businesses see the investment returned within the first month or two. And the audit that tells you everything? That is free.",
+    answer: "A single automated workflow costs $1,500 to $4,000. A full system costs $5,000 to $12,000. Fixed pricing - you know the number before we start. Payback periods vary with volumes and scope; we agree on what to measure before launch. And the audit that tells you everything? That is free.",
   },
   {
     question: "I am not technical at all. Will I understand this?",
@@ -459,7 +459,7 @@ export default function StartHere() {
           <Reveal delay={0.25}>
             <div style={{ textAlign: "center", marginTop: "3rem" }}>
               <p style={{ color: MAGENTA, fontWeight: 800, fontSize: "1.375rem", marginBottom: "1.75rem" }}>
-                $80,000 to $200,000 per year in operational waste for a 5–15 person service business.
+                Illustrative estimate: $80,000 to $200,000 per year in operational waste for a 5–15 person service business. Your number will differ.
               </p>
               <Link href="/automation-planner" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
                 Calculate Your Specific Number <ArrowRight size={16} />
@@ -525,12 +525,12 @@ export default function StartHere() {
       <section className="sh-section" style={{ background: OFFWHITE }}>
         <div className="container">
           <Reveal>
-            <p className="eyebrow" style={{ letterSpacing: "0.1em" }}>Real Results</p>
+            <p className="eyebrow" style={{ letterSpacing: "0.1em" }}>Illustrative Examples</p>
             <h2 style={{ color: DARK, fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", fontWeight: 700, letterSpacing: "-0.02em", marginBottom: "1rem" }}>
-              Here Is What Businesses Like Yours Recovered After Automating.
+              What Automation Can Change for Businesses Like Yours.
             </h2>
             <p style={{ color: GREY, fontSize: "1.125rem", lineHeight: 1.7, marginBottom: "3rem", maxWidth: "40rem" }}>
-              These are real outcomes from GTA service businesses.
+              Illustrative examples based on typical engagements, not verified client results. Your figures will differ.
             </p>
           </Reveal>
 
@@ -555,7 +555,7 @@ export default function StartHere() {
           <Reveal delay={0.25}>
             <div style={{ textAlign: "center", marginTop: "3rem" }}>
               <Link href="/case-studies" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
-                Read All Case Studies <ArrowRight size={16} />
+                Read All Illustrative Examples <ArrowRight size={16} />
               </Link>
             </div>
           </Reveal>
@@ -660,7 +660,7 @@ export default function StartHere() {
                   Book a Free Automation Audit <ArrowRight size={16} />
                 </Link>
                 <p style={{ color: GREY, fontSize: "0.8rem", marginTop: "0.75rem" }}>
-                  60 minutes. No obligation. You keep the audit even if you do nothing.
+                  60 minutes. No obligation. You keep the workflow map, whether or not you work with us.
                 </p>
               </HoverCard>
             </Reveal>

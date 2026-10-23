@@ -183,11 +183,11 @@ Pre-visit intake. It recovers clinical time immediately, it is the clearest qual
 
 Barrana works with naturopathic, integrative health, and allied practitioner clinics across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your intake, protocol follow-up, dispensary, and retention processes and show you where clinical time and patient outcomes are being lost to administration.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your intake, protocol follow-up, dispensary, and retention processes and show you where clinical time and patient outcomes are being lost to administration.
 
 For regulated practices we build to PHIPA requirements and expect your privacy advisor and college standards to shape the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

@@ -267,15 +267,15 @@ Example: $180,000/FTE × 25% × 4 FTEs = $180,000 incremental capacity`}
           </Link>
         </div>
 
-        <SectionHeading>Typical ROI Timeline</SectionHeading>
+        <SectionHeading>Payback and ROI Timing</SectionHeading>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
           Automation projects typically require an upfront investment in setup, configuration, and process mapping - usually 20–60 hours of professional services depending on complexity. This one-time cost is then weighed against recurring savings that compound every week.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          For most small and mid-sized businesses, the payback period lands between <strong>30 and 90 days</strong>. Businesses with higher staff costs or larger lead pipelines often see payback within the first 2–4 weeks.
+          Payback depends on your volumes and scope. Businesses with higher staff costs or larger lead pipelines tend to recover the setup cost sooner. We agree on what to measure before launch so the result can be shown, not assumed.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          Implementation costs typically range from $3,000–$15,000 for a comprehensive automation overhaul. Against an annual value creation of $50,000–$300,000 (across all four ROI layers), this represents a 5–30× return in year one alone - with zero incremental cost in subsequent years.
+          Implementation costs typically range from $3,000–$15,000 for a comprehensive automation overhaul. Use the calculator to estimate the annual value for your own volumes, and compare it with the one-time cost plus any monthly support and subscription costs.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.5rem" }}>
           The key insight: <strong>the question is rarely "can we afford automation?"</strong> - it's "what is it costing us every month we delay?"

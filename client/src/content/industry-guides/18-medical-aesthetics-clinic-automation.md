@@ -183,11 +183,11 @@ Treatment interval tracking with rebooking prompts. It is the clearest revenue d
 
 Barrana works with medical aesthetics clinics, med spas, and cosmetic practices across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your consultation, intake, treatment documentation, aftercare, and rebooking processes and show you where retention revenue is leaking.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your consultation, intake, treatment documentation, aftercare, and rebooking processes and show you where retention revenue is leaking.
 
 For regulated practices we build to PHIPA requirements, keep clinical and marketing consent separate, and expect your privacy and health law advisors to review the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

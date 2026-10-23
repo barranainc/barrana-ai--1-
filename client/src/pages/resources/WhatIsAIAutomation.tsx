@@ -177,8 +177,8 @@ function ManualVsAutomatedFlow() {
 const roiNodes = [
   { label: "Week 0", sublabel: "Investment", type: "cost" as const },
   { label: "Week 2–3", sublabel: "First workflow live", type: "milestone" as const },
-  { label: "Week 4–6", sublabel: "ROI breakeven", type: "milestone" as const },
-  { label: "Month 3–6", sublabel: "Compounding returns", type: "return" as const },
+  { label: "Week 4–6", sublabel: "First results measured", type: "milestone" as const },
+  { label: "Month 3+", sublabel: "Review and extend", type: "return" as const },
 ];
 
 function ROITimeline() {
@@ -414,7 +414,7 @@ export default function WhatIsAIAutomation() {
             <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
               AI automation for small business means connecting your existing software tools - CRM, email, calendar, forms - with intelligent logic that handles repetitive tasks automatically.
               It eliminates the manual middle layer between client actions and business outcomes. You don't need to change your software stack, hire a developer, or understand code.
-              Most businesses see full ROI within 4–6 weeks of their first workflow going live.
+              Payback depends on your volumes and scope; results vary, so we agree on what to measure before launch.
             </p>
           </SummaryBox>
 
@@ -464,7 +464,7 @@ export default function WhatIsAIAutomation() {
           <SectionHeading>Five Common Starting Points</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1.25rem" }}>
             Most firms start with one high-friction workflow and expand from there. The five starting points below represent the highest ROI opportunities for professional services businesses.
-            Each takes 2–4 weeks to implement and pays for itself within the first month.
+            Each takes 2–4 weeks to implement and is straightforward to measure.
           </p>
           <ol style={{ paddingLeft: "1.5rem", fontSize: "0.9375rem", color: "#374151", lineHeight: 2 }}>
             <li><strong>Client Intake Automation</strong> - Capture, qualify, and respond to new leads automatically</li>

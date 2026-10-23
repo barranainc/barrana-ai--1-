@@ -72,8 +72,8 @@ export default function Benchmarks() {
               Automation Benchmarks
             </h1>
             <p style={{ fontSize: "1.0625rem", color: "rgba(255,255,255,0.72)", lineHeight: 1.65, maxWidth: "600px" }}>
-              Typical results from deployed automation systems for GTA service businesses.
-              Based on measured client outcomes.
+              Illustrative ranges from typical automation projects for GTA service businesses, not a measured study.
+              Results depend on your volume and baseline.
             </p>
           </div>
         </div>
@@ -98,9 +98,9 @@ export default function Benchmarks() {
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke={NAVY} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             <p style={{ fontSize: "0.875rem", color: "#374151", lineHeight: 1.65, margin: 0 }}>
-              These benchmarks represent typical results across multiple implementations. Individual results vary
-              based on starting conditions, business type, and the specific workflows automated. We calculate
-              projected ROI for your specific business during the discovery phase.
+              Illustrative ranges from typical automation projects, not a measured study: no sample size, dates or
+              baselines are published for them. Results depend on your volume, baseline, business type and the
+              workflows automated. During the free Automation Audit we record your own baseline so the change can be measured.
             </p>
           </div>
         </div>

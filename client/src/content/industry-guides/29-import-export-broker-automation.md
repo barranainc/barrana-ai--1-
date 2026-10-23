@@ -185,11 +185,11 @@ Document checklist generation with automated chasing. It addresses the largest t
 
 Barrana works with customs brokers, freight forwarders, and international logistics businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your booking, document, milestone, and billing processes and show you where coordinator hours and deadline costs are concentrated.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your booking, document, milestone, and billing processes and show you where coordinator hours and deadline costs are concentrated.
 
 For licensed activities we build so that declaration review and submission always route through a qualified broker, and we expect your compliance lead to shape the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

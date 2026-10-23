@@ -198,11 +198,11 @@ Structured dietary requirement capture with carry-through to production. It is t
 
 Barrana works with caterers, event food businesses, and hospitality operators across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enquiry, quoting, detail collection, production, and staffing processes and show you where hours and margin are going.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry, quoting, detail collection, production, and staffing processes and show you where hours and margin are going.
 
 For anything touching allergens, we build structured capture with mandatory human verification and expect your food safety lead to review the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

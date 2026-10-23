@@ -169,11 +169,11 @@ Lead response automation is the second priority. Booking and dispatch optimizati
 
 ## Book a Free Automation Audit
 
-Barrana works with service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA. We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map whether or not you work with us.
+Barrana works with service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA. We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map whether or not you work with us.
 
 In that session we map your current booking, dispatch, documentation, and renewal processes, identify where the time and revenue are leaking, and give you a phased plan with fixed pricing.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 No hourly billing. No software you will never open. Fixed-price builds starting at $1,500 CAD.
 

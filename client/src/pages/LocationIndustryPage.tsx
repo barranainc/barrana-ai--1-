@@ -203,6 +203,7 @@ export default function LocationIndustryPage() {
             <div style={{ maxWidth: "48rem" }}>
               <h2 style={{ ...typography.sectionHeading, marginBottom: spacing.headingToBody }}>{page.costSection.title}</h2>
               <p style={{ ...typography.body, fontSize: "1.0625rem", lineHeight: 1.8 }}>{page.costSection.body}</p>
+              <p style={{ ...typography.body, fontSize: "0.875rem", fontStyle: "italic", marginTop: "0.75rem" }}>Illustrative example for a firm of this size; your figures will differ.</p>
             </div>
           </div>
         </section>
@@ -266,7 +267,7 @@ export default function LocationIndustryPage() {
         <section style={{ ...surfaces.white, padding: `${spacing.sectionPadding} 0` }}>
           <div className="container">
             <div style={{ maxWidth: "48rem" }}>
-              <h2 style={{ ...typography.sectionHeading, marginBottom: spacing.headingToBody }}>Results</h2>
+              <h2 style={{ ...typography.sectionHeading, marginBottom: spacing.headingToBody }}>Typical Results (Illustrative)</h2>
               <div
                 style={{
                   ...cards.typeA,
@@ -276,6 +277,7 @@ export default function LocationIndustryPage() {
               >
                 <p style={{ ...typography.body, fontSize: "1.0625rem", lineHeight: 1.8, margin: 0 }}>{page.resultsSection.body}</p>
               </div>
+              <p style={{ ...typography.body, fontSize: "0.875rem", fontStyle: "italic", marginTop: "0.75rem" }}>Illustrative example based on typical engagements, not verified client results; your figures will differ.</p>
             </div>
           </div>
         </section>

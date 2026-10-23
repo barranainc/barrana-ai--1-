@@ -179,11 +179,11 @@ Recall automation at one location as a pilot. It produces measurable production 
 
 Barrana works with dental groups, medical clinics, and multi-location healthcare practices across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your intake, recall, treatment follow-up, and reporting processes across locations and show you where production is leaking and where offices diverge.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your intake, recall, treatment follow-up, and reporting processes across locations and show you where production is leaking and where offices diverge.
 
 For regulated practices we build to PHIPA requirements and expect your privacy officer to review the design.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

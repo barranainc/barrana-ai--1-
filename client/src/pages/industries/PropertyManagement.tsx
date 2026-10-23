@@ -104,7 +104,7 @@ const data: IndustryPageData = {
     { label: "Rent Collection", before: "Manual awkward calls", after: "Automated sequence" },
     { label: "Owner Reporting", before: "Hours per property", after: "Auto-generated" },
     { label: "Units Per Staff Member", after: "Significant increase" },
-    { label: "Payback Period", after: "Within first quarter" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",

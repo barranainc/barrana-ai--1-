@@ -1192,7 +1192,8 @@
     align-items: center;
     gap: 0.5rem;
     font-size: 0.8125rem;
-    color: var(--b-grey);
+    /* Darker than --b-grey: 13px text needs 4.5:1 contrast on white (R9 accessibility check). */
+    color: #5f5f6b;
     margin-bottom: 1.5rem;
   }
   .breadcrumb a { color: var(--b-navy); text-decoration: none; }

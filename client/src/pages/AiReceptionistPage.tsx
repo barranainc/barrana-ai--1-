@@ -487,7 +487,7 @@ export default function AiReceptionistPage() {
               { label: "Platform cost", value: "$200–$500/month", note: "Ongoing AI receptionist service" },
               { label: "Setup & configuration", value: "$2,000–$4,000", note: "One-time build and integration" },
               { label: "Human receptionist", value: "$3,000–$4,000/month", note: "Salary + benefits, business hours only" },
-              { label: "Break-even", value: "Month 1–2", note: "Typical ROI timeline" },
+              { label: "Payback", value: "Depends on call volume", note: "Measured against your baseline after launch" },
             ].map(c => (
               <div key={c.label} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
                 <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{c.label}</div>

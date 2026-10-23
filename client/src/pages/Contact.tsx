@@ -1,5 +1,6 @@
 import { trackEvent } from "@/lib/analytics";
-import { useState } from "react";
+import { trackMeta } from "@/lib/metaPixel";
+import { useRef, useState } from "react";
 import { Link } from "wouter";
 import { ArrowRight, Check, ClipboardCheck, Route, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
@@ -32,6 +33,8 @@ export default function Contact() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  // Blocks a second submission before React has re-rendered the disabled button (double-clicks, Enter twice).
+  const inFlight = useRef(false);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -42,6 +45,8 @@ export default function Contact() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (inFlight.current) return;
+    inFlight.current = true;
     setSubmitError("");
     setLoading(true);
 
@@ -55,9 +60,9 @@ export default function Contact() {
         companyName: formData.business.trim(),
         industry: formData.industry,
         message: formData.workflow.trim(),
-        formName: "Initial Workflow Conversation",
+        formName: "Automation Audit Request",
         pageUrl: window.location.href,
-        tags: ["website-lead", "workflow-conversation"],
+        tags: ["website-lead", "automation-audit"],
         customFields: [
           { key: "team_size", field_value: formData.teamSize },
         ],
@@ -67,19 +72,18 @@ export default function Contact() {
         throw new Error(result.error || "The request could not be submitted.");
       }
 
-      (window as Window & { fbq?: (...args: unknown[]) => void }).fbq?.("track", "Lead", {
-        content_name: "Initial Workflow Conversation",
-      });
-      trackEvent("generate_lead", { form_name: "Initial Workflow Conversation" });
+      trackMeta("Lead", { content_name: "Automation Audit Request" });
+      trackEvent("generate_lead", { form_name: "Automation Audit Request" });
       setSubmitted(true);
       toast.success("Your request was sent.");
     } catch (error) {
-      console.error("Workflow conversation request failed:", error);
+      console.error("Automation Audit request failed:", error);
       const message =
         "We could not send your request. Please check your connection and try again.";
       setSubmitError(message);
       toast.error(message);
     } finally {
+      inFlight.current = false;
       setLoading(false);
     }
   };
@@ -87,8 +91,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F5F6FA] text-slate-950">
       <SEOHead
-        title="Find the Workflow AI Should Fix First | Barrana.ai"
-        description="Tell Barrana about one repeated workflow. The initial conversation determines fit, scope, and whether automation is the right next step."
+        title="Book a Free 60-Minute Automation Audit | Barrana.ai"
+        description="Book a free 60-minute Automation Audit. Barrana maps your workflows, estimates what manual work costs you each year, and shows what to automate first. You keep the workflow map."
       />
 
       <section className="relative overflow-hidden bg-[#09142F] py-16 text-white lg:py-20">
@@ -102,12 +106,12 @@ export default function Contact() {
           }}
         />
         <div className="container relative max-w-5xl">
-          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">Initial workflow conversation</p>
+          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">Free 60-minute Automation Audit</p>
           <h1 className="mt-5 max-w-4xl text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl lg:text-6xl">
             Find the workflow AI should fix first.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Bring one repeated workflow that creates delay, copying, chasing, or unclear ownership. Barrana will use the conversation to determine fit, scope, and whether automation is the right next step.
+            Book a free 60-minute Automation Audit. We map your workflows, estimate what your manual work costs each year, and show you what to automate first. You keep the workflow map, whether or not you work with us.
           </p>
         </div>
       </section>
@@ -116,13 +120,14 @@ export default function Contact() {
         <div className="container grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <aside className="space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-6">
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7E0F4A]">What this conversation covers</p>
+              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7E0F4A]">What the audit covers</p>
               <ul className="mt-5 space-y-4">
                 {[
                   "The trigger that starts the workflow",
                   "The tools and people involved",
                   "The repeated handoff or constraint",
                   "The exceptions that need human judgment",
+                  "What to automate first, and what to leave alone",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm leading-6 text-slate-600">
                     <Check size={16} className="mt-1 shrink-0 text-[#283891]" aria-hidden="true" />
@@ -135,10 +140,10 @@ export default function Contact() {
             <div className="rounded-2xl bg-[#172865] p-6 text-white">
               <div className="flex items-center gap-3">
                 <ShieldCheck size={20} className="text-[#9BE5DD]" aria-hidden="true" />
-                <h2 className="font-bold">Clear boundary</h2>
+                <h2 className="font-bold">What you get</h2>
               </div>
               <p className="mt-4 text-sm leading-6 text-blue-100">
-                The initial conversation is for fit and scope. It is not a promise of a free strategy, solution design, implementation plan, audit deliverable, or price quote.
+                The audit is free, takes 60 minutes, and comes with no obligation. You keep the workflow map whether or not you work with us. If you decide to go ahead, implementation is quoted separately at a fixed price.
               </p>
             </div>
 
@@ -159,9 +164,9 @@ export default function Contact() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E9EDFF] text-[#283891]">
                   <ClipboardCheck size={27} aria-hidden="true" />
                 </div>
-                <h2 className="mt-6 text-2xl font-extrabold text-[#111A36]">Your workflow request was sent.</h2>
+                <h2 className="mt-6 text-2xl font-extrabold text-[#111A36]">Your audit request was sent.</h2>
                 <p className="mt-3 max-w-lg text-sm leading-6 text-slate-600">
-                  Barrana will review the context you provided and contact you about the appropriate next step.
+                  Barrana will review the workflow you described and contact you to schedule your free 60-minute Automation Audit.
                 </p>
                 <Link href="/" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#283891] hover:text-[#7E0F4A]">
                   Return to the homepage <ArrowRight size={15} aria-hidden="true" />
@@ -189,7 +194,7 @@ export default function Contact() {
 
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="contact-phone" className="text-sm font-semibold text-slate-700">Phone <span className="font-normal text-slate-400">optional</span></label>
+                      <label htmlFor="contact-phone" className="text-sm font-semibold text-slate-700">Phone <span className="font-normal text-slate-500">optional</span></label>
                       <input id="contact-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" value={formData.phone} onChange={handleChange} className={fieldClass} />
                     </div>
                     <div>
@@ -207,7 +212,7 @@ export default function Contact() {
                       </select>
                     </div>
                     <div>
-                      <label htmlFor="contact-team-size" className="text-sm font-semibold text-slate-700">Team size <span className="font-normal text-slate-400">optional</span></label>
+                      <label htmlFor="contact-team-size" className="text-sm font-semibold text-slate-700">Team size <span className="font-normal text-slate-500">optional</span></label>
                       <select id="contact-team-size" name="teamSize" value={formData.teamSize} onChange={handleChange} className={fieldClass}>
                         <option value="">Select a range</option>
                         <option value="1">1</option>
@@ -236,7 +241,7 @@ export default function Contact() {
                     {!loading && <ArrowRight size={17} aria-hidden="true" />}
                   </button>
                   <p className="text-center text-xs leading-5 text-slate-500">
-                    Submit only information you are comfortable sharing for an initial business conversation. See our{" "}
+                    Submit only information you are comfortable sharing before your audit. See our{" "}
                     <Link href="/privacy-policy" className="font-semibold text-[#283891] underline underline-offset-2 hover:text-[#7E0F4A]">
                       Privacy Policy
                     </Link>

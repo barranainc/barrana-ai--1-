@@ -121,11 +121,11 @@ const locationData: Record<string, LocationEntry> = {
     ],
     localContext: [
       "Toronto's professional services market rewards speed and consistency. The businesses that respond within five minutes, send documents automatically, and follow up without being asked are the ones that grow. The ones that rely on a receptionist and a spreadsheet plateau.",
-      "We have worked with immigration firms on University Avenue, contractors in the Junction, dental clinics along the Danforth, and accounting practices in Midtown. The pattern is the same: $80K to $200K per year in operational waste that automation eliminates.",
+      "Immigration firms, contractors, dental clinics and accounting practices across Toronto share the same pattern: repeated manual work that, for an illustrative 5–15 person firm, can add up to $80K to $200K per year in operational waste.",
       "Toronto rent is not getting cheaper. Hiring is not getting easier. Automation is the only lever that scales without adding cost.",
     ],
     localInsight:
-      "In Toronto, the average professional services firm loses $80K-$200K/yr in operational waste from manual processes. That is one to two full-time salaries spent on work a system should handle.",
+      "In Toronto, an illustrative 5–15 person professional services firm can lose $80K-$200K/yr in operational waste from manual processes (estimate). That is one to two full-time salaries spent on work a system should handle.",
     industries: [
       "Dental Clinics",
       "Law Firms",
@@ -135,7 +135,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     stats: [
       { value: "400K+", label: "Small businesses in Toronto" },
-      { value: "$80K-$200K", label: "Avg operational waste/yr" },
+      { value: "$80K-$200K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "1,800+", label: "Dental clinics" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
@@ -170,7 +170,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     localContext: [
       "Vaughan's Highway 7 corridor is one of the densest concentrations of professional services firms in York Region. Immigration consultants, accountants, and physiotherapy clinics cluster along this strip, competing on responsiveness and client experience.",
-      "The firms that automate intake and follow-up report 25-40% faster file opening times and significantly higher client satisfaction. In a market where referrals drive growth, that operational edge compounds.",
+      "Firms that automate intake and follow-up open files faster and keep clients better informed. In a market where referrals drive growth, that operational edge compounds.",
       "Vaughan's contractor market is equally competitive. Residential renovation demand remains high, and the firms that respond within minutes to new enquiries close significantly more jobs than those that call back the next day.",
     ],
     localInsight:
@@ -183,8 +183,8 @@ const locationData: Record<string, LocationEntry> = {
     ],
     stats: [
       { value: "Barrana HQ", label: "50 Corstate Ave, Vaughan" },
-      { value: "50+", label: "Local clients served" },
-      { value: "$70K-$150K", label: "Avg operational waste/yr" },
+      { value: "60 min", label: "Free Automation Audit" },
+      { value: "$70K-$150K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
     costItems: [
@@ -233,7 +233,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     stats: [
       { value: "560+", label: "Dental clinics in Mississauga" },
-      { value: "$80K-$180K", label: "Avg operational waste/yr" },
+      { value: "$80K-$180K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "2nd", label: "Largest city in the GTA" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
@@ -275,7 +275,7 @@ const locationData: Record<string, LocationEntry> = {
     industries: ["Dental Clinics", "Physiotherapy Clinics"],
     stats: [
       { value: "208", label: "Dental clinics in Richmond Hill" },
-      { value: "$70K-$150K", label: "Avg operational waste/yr" },
+      { value: "$70K-$150K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Yonge St", label: "Key professional corridor" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
@@ -323,7 +323,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     stats: [
       { value: "Tech Capital", label: "Canada's high-tech hub" },
-      { value: "$75K-$160K", label: "Avg operational waste/yr" },
+      { value: "$75K-$160K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Digital-first", label: "Client expectations" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
@@ -357,7 +357,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     localContext: [
       "North York's Yonge-Sheppard-Finch triangle is one of the most competitive professional services markets in the GTA. Immigration firms, accounting practices, and law offices compete within blocks of each other.",
-      "The area's diverse population creates high demand for services with complex, document-heavy intake processes. Firms that automate these processes recover 25-40% of staff capacity and serve more clients without hiring.",
+      "The area's diverse population creates high demand for services with complex, document-heavy intake processes. Firms that automate these processes recover staff capacity and can serve more clients without hiring.",
       "North York's density means every missed call, slow follow-up, and manual intake form costs you a client who found a faster competitor three blocks away.",
     ],
     localInsight:
@@ -371,7 +371,7 @@ const locationData: Record<string, LocationEntry> = {
     ],
     stats: [
       { value: "#1", label: "Immigration firm density in GTA" },
-      { value: "$80K-$180K", label: "Avg operational waste/yr" },
+      { value: "$80K-$180K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Yonge-Finch", label: "Key professional corridor" },
       { value: "$1,500", label: "Fixed pricing from" },
     ],
@@ -499,7 +499,7 @@ export default function LocationDetail() {
     { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
     { q: `How quickly can automation be implemented?`, a: `Most single-workflow automations are live within 1-2 weeks. A full multi-workflow system typically takes 4-6 weeks. You will see measurable results from Week 1 of each deployment.` },
     { q: `Do you work on-site in ${location.name}?`, a: `Our headquarters are at 50 Corstate Avenue in Vaughan. We conduct initial audits and onboarding sessions in person across the GTA when requested, and handle implementation and support remotely for efficiency.` },
-    { q: `What is the typical ROI timeline?`, a: `Most businesses see a full return on investment within 1-3 months. Lead response automation often pays for itself in the first month by converting leads that would otherwise be lost to slow follow-up.` },
+    { q: `What is the typical ROI timeline?`, a: `Payback depends on your volumes and scope, so we agree on what to measure before launch. Lead response automation is usually the quickest to show a change, because it converts leads that would otherwise be lost to slow follow-up.` },
   ];
 
   /* FAQPage schema */
@@ -595,7 +595,7 @@ export default function LocationDetail() {
               Industries We Automate in {location.name}
             </h2>
             <p style={{ ...typography.sectionSubheading, margin: "0 auto" }}>
-              Every card links to a detailed page showing exactly what we automate, what it costs, and what stays human for your industry in {location.name}.
+              Every card links to a detailed page showing exactly what we automate, what it costs, and what stays human for your industry in {location.name}. Dollar figures on the cards are illustrative estimates for a firm of typical size; your figures will differ.
             </p>
           </div>
 

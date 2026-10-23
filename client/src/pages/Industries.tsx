@@ -163,7 +163,7 @@ const industriesList = [
     title: "Medical Clinics",
     tagline: "Your waiting room is full but your phone is ringing.",
     description: "A front desk simultaneously managing check-ins, phone calls, insurance questions, and intake forms cannot do all of it well. Online booking reduces phone volume 40–50%. Automation handles the rest.",
-    automations: ["Online booking reduces phone volume 40-50%", "Dual reminders cut no-shows to 5-12%", "Digital intake completed before visit", "Proactive prescription renewal reminders"],
+    automations: ["Online booking reduces phone volume", "Dual reminders cut no-shows to 5-12%", "Digital intake completed before visit", "Proactive prescription renewal reminders"],
     color: "#7E0F4A",
   },
   {

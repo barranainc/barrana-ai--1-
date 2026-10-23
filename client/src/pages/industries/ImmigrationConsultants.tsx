@@ -133,7 +133,7 @@ const data: IndustryPageData = {
     { label: "Status Calls", before: "25/week", after: "~6/week" },
     { label: "Billable Hours Recovered", after: "11+ hrs/week" },
     { label: "File Capacity", after: "20-30% more with same team" },
-    { label: "Payback Period", after: "Within first billing cycle" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
@@ -184,7 +184,7 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Immigration intake + document automation: $5,000-$10,000 CAD. Fixed pricing after free audit. Most firms see payback within the first billing cycle.",
+        "Immigration intake + document automation: $5,000-$10,000 CAD. Fixed pricing after free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:
@@ -217,7 +217,7 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Real results from real clients",
+      desc: "Illustrative examples of typical outcomes",
     },
   ],
 };

@@ -182,9 +182,9 @@ Booking with automated reminders. It is the cheapest build, it addresses no-show
 
 Barrana works with personal trainers, fitness studios, and coaching businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and the workflow map is yours regardless. We map your enquiry handling, booking, programme delivery, and retention processes and show you how many unpaid hours a week you are working.
+We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry handling, booking, programme delivery, and retention processes and show you how many unpaid hours a week you are working.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the tools you already run.
 

@@ -314,17 +314,17 @@ export default function CaseStudies() {
             </div>
             <div style={{ maxWidth: "640px" }}>
               <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#111827", marginBottom: "1rem", lineHeight: 1.15 }}>
-                Real Businesses.<br />Measurable Results.
+                Illustrative Examples.<br />Typical Outcomes.
               </h1>
               <p style={{ fontSize: "1.0625rem", color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                Every case study is a real automation system built for a real GTA business. Results are measured 30–90 days post-deployment.
+                Each page is an illustrative example: an anonymised composite based on typical automation engagements for GTA service businesses. The figures are not verified client results; your results will differ.
               </p>
               {/* Stats row */}
               <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
                 {[
-                  { v: "12", l: "Case Studies" },
+                  { v: "12", l: "Illustrative Examples" },
                   { v: "6", l: "Industries" },
-                  { v: "14+", l: "Hours Recovered Avg" },
+                  { v: "60 min", l: "Free Automation Audit" },
                 ].map((s) => (
                   <div key={s.l}>
                     <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#283891" }}>{s.v}</div>
@@ -393,7 +393,7 @@ export default function CaseStudies() {
       <section style={{ background: "white", padding: "1.5rem 0" }}>
         <div className="container">
           <p style={{ fontSize: "0.75rem", color: "#9CA3AF", maxWidth: "640px" }}>
-            <strong>Note on Results:</strong> All metrics are based on client-reported operational data measured 30–90 days after deployment. Individual results vary based on business size, industry, workflow complexity, and implementation scope.
+            <strong>Note on figures:</strong> These are illustrative examples, not verified client results. Real results vary with business size, industry, workflow complexity and implementation scope; we measure your own baseline during the free Automation Audit.
           </p>
         </div>
       </section>

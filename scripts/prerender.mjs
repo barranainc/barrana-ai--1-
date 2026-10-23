@@ -110,7 +110,7 @@ function createStaticServer(root) {
 
 // ── Post-process captured HTML ───────────────────────────────────────────────
 // Runtime-injected tags must not be frozen into the static HTML: the Meta pixel script tags
-// (meta-pixel.js re-adds them, so a frozen copy would double-load), the deferred fonts link
+// (lib/metaPixel.ts adds them after consent), the deferred fonts link
 // (fonts.ts re-adds it after first paint), analytics loaders, and any editor runtime. The 404
 // page must not be indexed.
 function postProcess(html, routePath) {

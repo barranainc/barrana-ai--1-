@@ -109,7 +109,7 @@ const data: IndustryPageData = {
     { label: "Invoice Delay", after: "Eliminated (milestone-triggered)" },
     { label: "Lead Follow-Up", after: "100% automated" },
     { label: "Client Capacity", after: "30-50% more accounts, same team" },
-    { label: "Payback Period", after: "Within first month" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",

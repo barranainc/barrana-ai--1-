@@ -170,9 +170,9 @@ Donation capture and receipting. It removes the heaviest recurring burden, it re
 
 Barrana works with mosques, temples, churches, gurdwaras, and community organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map either way. We map your donation, membership, event, and volunteer processes and show you where your small staff and large volunteer base are losing hours.
+We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map either way. We map your donation, membership, event, and volunteer processes and show you where your small staff and large volunteer base are losing hours.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

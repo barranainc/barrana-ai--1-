@@ -18,9 +18,9 @@ import {
 // Barrana brand colors
 const NAVY = "#283891";
 const MAGENTA = "#7E0F4A";
-const GREY = "#7B7B7B";
+const GREY = "#5F5F6B"; // darker than the brand grey: 11px labels need 4.5:1 contrast
 const BORDER = "#E2E4ED";
-const GREEN = "#0D9668"; // Barrana success green
+const GREEN = "#047857"; // darker success green: 11px labels need 4.5:1 contrast on the tinted cards
 
 const topTasks = [
   { Icon: Mail, text: "Reply to enquiry" },

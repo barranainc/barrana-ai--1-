@@ -196,7 +196,7 @@ export default function CampaignContractors() {
               Book Your Free Automation Audit
             </h2>
             <p className="text-sm mb-6" style={{ color: GREY }}>
-              60 minutes. Zoom or in-person at our Vaughan office (50 Corstate Ave, Unit 01). You keep the analysis whether or not you hire us.
+              60 minutes. Zoom or in-person at our Vaughan office (50 Corstate Ave, Unit 01). You keep the workflow map whether or not you work with us.
             </p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
               <p className="font-semibold mb-4" style={{ color: NAVY }}>What you get in 60 minutes:</p>

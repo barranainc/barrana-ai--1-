@@ -128,7 +128,7 @@ const data: IndustryPageData = {
     { label: "Billing Delay", before: "2-4 weeks", after: "Automated" },
     { label: "Client Status Calls", before: "Frequent", after: "Reduced 60%+" },
     { label: "Matter Capacity", after: "Serve more without additional admin" },
-    { label: "Payback Period", after: "Within first billing cycle" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
@@ -174,7 +174,7 @@ const data: IndustryPageData = {
     {
       question: "How much?",
       answer:
-        "Law firm automation: $5,000-$12,000 CAD. Fixed pricing after audit. Typically pays for itself within the first month of recovered billable hours.",
+        "Law firm automation: $5,000-$12,000 CAD. Fixed pricing after audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:
@@ -207,7 +207,7 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Real results from real clients",
+      desc: "Illustrative examples of typical outcomes",
     },
   ],
 };

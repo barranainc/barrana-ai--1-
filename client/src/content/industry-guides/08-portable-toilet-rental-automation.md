@@ -160,9 +160,9 @@ Unit tracking with automatic pickup triggering. It stops capital loss and captur
 
 Barrana works with portable sanitation, equipment rental, and site services businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Friction Mapping session - free, no obligation, and you keep the workflow map regardless. We map your quoting, delivery, service, tracking, and billing processes and show you where units and revenue are disappearing.
+We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map regardless. We map your quoting, delivery, service, tracking, and billing processes and show you where units and revenue are disappearing.
 
-**[Book your free Friction Mapping session →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://barrana.ai/contact)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the tools you already run.
 

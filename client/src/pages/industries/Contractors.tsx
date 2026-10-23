@@ -129,7 +129,7 @@ const data: IndustryPageData = {
     { label: "Quote Conversion", after: "Estimated +22% within 60 days" },
     { label: "After-Hours Capture", before: "0%", after: "100%" },
     { label: "Invoice Delay", after: "Eliminated (same-day on job close)" },
-    { label: "Payback Period", after: "Within first month (often first week)" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
@@ -170,7 +170,7 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Contractor lead automation: $3,000-$6,000 CAD. Typically pays for itself within the first month through captured leads.",
+        "Contractor lead automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "After-hours AI: does it really answer calls?",
@@ -208,7 +208,7 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Real results from real clients",
+      desc: "Illustrative examples of typical outcomes",
     },
   ],
 };

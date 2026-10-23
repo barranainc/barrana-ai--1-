@@ -133,7 +133,7 @@ export default function WhatToAutomateFirst() {
             <SummaryBox>
               <strong style={{ color: "#283891", display: "block", marginBottom: "0.5rem" }}>Quick Answer</strong>
               <p style={{ margin: 0, color: "#1A1A2E", lineHeight: 1.7 }}>
-                The best first automation for most small businesses is <strong>lead response</strong> - responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and delivers measurable ROI within the first month.
+                The best first automation for most small businesses is <strong>lead response</strong> - responding to every enquiry within 90 seconds, qualifying the prospect, creating a CRM record, and booking a consultation. It addresses the highest-cost problem (lost leads from slow response), requires the lowest complexity (1–2 week implementation), and its results are easy to measure.
               </p>
             </SummaryBox>
 
@@ -279,7 +279,7 @@ export default function WhatToAutomateFirst() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Can I automate two things at once for Phase 1?" a="We recommend starting with one workflow and measuring results before adding the second. Two simultaneous implementations often lead to scope creep and delayed results." />
               <FAQItem q="What if my most urgent problem isn't in the top 5?" a="Map your workflows first. Urgency and ROI aren't always the same thing. The Automation Audit helps you prioritise objectively." />
-              <FAQItem q="How long before I see ROI from lead response automation?" a="Typically within the first month. If you're converting even one additional lead per month that you were previously losing to slow response, the system pays for itself." />
+              <FAQItem q="How long before I see ROI from lead response automation?" a="It depends on your lead volume and client value, so we agree on what to measure before launch. Compare the system cost with the value of the extra leads you convert that slow response used to lose." />
               <FAQItem q="Does industry matter for this ranking?" a="Yes. The rankings above apply to most service businesses, but the Industry-Specific section shows exceptions by sector." />
             </div>
 

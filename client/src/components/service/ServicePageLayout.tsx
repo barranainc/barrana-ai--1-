@@ -186,6 +186,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         <div className="container">
           <h2 style={headingStyle}>{data.costHeading}</h2>
           <CostOfInactionCards items={data.costItems} />
+          <p style={{ ...subheadingStyle, fontSize: "0.875rem", fontStyle: "italic", marginTop: "1rem", marginBottom: 0 }}>Illustrative example for a firm of typical size; your figures will differ.</p>
         </div>
       </section>
 
@@ -211,7 +212,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
           </p>
           <WorkflowDiagram
             steps={data.workflowSteps}
-            resultBadge={data.workflowBadge}
+            resultBadge={data.workflowBadge ? `${data.workflowBadge} (illustrative)` : undefined}
           />
         </div>
       </section>
@@ -234,7 +235,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
         <div className="container">
           <h2 style={headingStyle}>ROI &amp; Impact</h2>
           <p style={subheadingStyle}>
-            Real results from systems just like yours.
+            Illustrative outcomes from systems like these, not verified client results. Your figures will differ.
           </p>
           <ROIMetricsGrid
             metrics={data.roiMetrics}

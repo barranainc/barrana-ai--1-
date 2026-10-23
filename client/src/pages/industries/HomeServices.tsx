@@ -104,7 +104,7 @@ const data: IndustryPageData = {
     { label: "Agreement Retention", after: "Improved 20-30%" },
     { label: "Technician Efficiency", after: "Improved through geographic scheduling" },
     { label: "Invoicing", after: "Same-day, field-triggered" },
-    { label: "Payback Period", after: "Within first seasonal campaign" },
+    { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
     "These are typical outcomes. The Automation Audit provides a projection for your specific business.",

@@ -5,13 +5,17 @@ import { Link } from "wouter";
 import { ArrowRight, MapPin } from "lucide-react";
 import { localPages } from "@/data/local-pages";
 
-const locations = [
+const locations: { slug: string; name: string; description: string; href?: string }[] = [
   { slug: "toronto", name: "Toronto", description: "AI automation for small businesses across Toronto's diverse commercial districts and professional services sector." },
   { slug: "vaughan", name: "Vaughan", description: "Serving Vaughan's growing professional services community with AI-powered workflow automation." },
   { slug: "richmond-hill", name: "Richmond Hill", description: "AI automation for Richmond Hill's professional services firms and service-based businesses." },
   { slug: "markham", name: "Markham", description: "Workflow automation for Markham's technology-forward small business community." },
   { slug: "mississauga", name: "Mississauga", description: "AI automation systems for Mississauga's diverse professional services and contractor community." },
   { slug: "north-york", name: "North York", description: "Serving North York's professional services firms with AI-powered operational automation." },
+  { slug: "brampton", name: "Brampton", href: "/ai-automation/brampton", description: "Intake, document collection and lead response for Brampton's immigration, accounting and professional service firms." },
+  { slug: "scarborough", name: "Scarborough", href: "/ai-automation/scarborough", description: "Lead response, client intake and scheduling for Scarborough's service businesses and clinics." },
+  { slug: "oakville", name: "Oakville", href: "/ai-automation/oakville", description: "Response time, onboarding and billing automation for Oakville's professional service firms." },
+  { slug: "etobicoke", name: "Etobicoke", href: "/ai-automation/etobicoke", description: "Lead response and scheduling for Etobicoke contractors and clinics, intake for professional firms." },
 ];
 
 export default function Locations() {
@@ -36,7 +40,7 @@ export default function Locations() {
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {locations.map((loc) => (
-              <Link key={loc.slug} href={`/locations/${loc.slug}`} className="barrana-card p-6 flex flex-col group">
+              <Link key={loc.slug} href={loc.href ?? `/locations/${loc.slug}`} className="barrana-card p-6 flex flex-col group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: "#F2F4F8" }}>
                     <MapPin size={18} style={{ color: "#283891" }} />
