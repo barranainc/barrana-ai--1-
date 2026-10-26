@@ -26,9 +26,11 @@ declare global {
 }
 
 let started = false;
+/** Whether Meta currently has consent in this page view (grant and revoke can alternate). */
+let granted = false;
 
-/** Installs Meta's standard fbq stub, requests fbevents.js and sends the PageView for the current page. */
-function start(): void {
+/** Installs Meta's standard fbq stub and requests fbevents.js. Runs at most once per page view. */
+function load(): void {
   if (started) return;
   started = true;
   if (!window.fbq) {
@@ -47,25 +49,35 @@ function start(): void {
     script.src = SCRIPT_SRC;
     document.head.appendChild(script);
   }
-  window.fbq("consent", "grant");
-  window.fbq("init", PIXEL_ID);
-  window.fbq("track", "PageView");
 }
 
-/** Call once consent is known to be granted (on load with a stored choice, or when the visitor accepts). */
+/**
+ * Call when consent is granted (on load with a stored choice, or on every Accept). The first call loads the
+ * pixel, grants consent, initialises it and sends the PageView; a later Accept after a Reject in the same page
+ * view only grants consent again (R4a, 25 Oct 2026: re-accepting used to return early and never re-grant).
+ */
 export function enableMetaPixel(): void {
-  if (typeof window === "undefined" || navigator.webdriver || !hasConsent()) return;
-  start();
+  if (typeof window === "undefined" || navigator.webdriver || !hasConsent() || granted) return;
+  const first = !started;
+  load();
+  window.fbq!("consent", "grant");
+  granted = true;
+  if (first) {
+    window.fbq!("init", PIXEL_ID);
+    window.fbq!("track", "PageView");
+  }
 }
 
-/** Stops further Meta events in this page view after the visitor withdraws consent. */
+/** Revokes Meta consent for the rest of this page view after the visitor rejects. */
 export function disableMetaPixel(): void {
+  if (!started || !granted) return;
   window.fbq?.("consent", "revoke");
+  granted = false;
 }
 
-/** Sends a Meta event only when the visitor has accepted; otherwise the call is dropped. */
+/** Sends a Meta event only while the visitor has accepted; otherwise the call is dropped. */
 export function trackMeta(event: "PageView" | "Lead", params?: Record<string, string>): void {
-  if (!started || !hasConsent()) return;
+  if (!started || !granted || !hasConsent()) return;
   try {
     window.fbq?.("track", event, params);
   } catch {
