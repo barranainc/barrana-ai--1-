@@ -162,9 +162,9 @@ Compliance scheduling with automatic certificate delivery. It is the retention d
 
 Barrana works with grease trap, waste haulage, and restaurant service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map either way. We map your scheduling, routing, manifest, certificate, and billing processes and show you where compliance risk and unbilled revenue are sitting.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your scheduling, routing, manifest, certificate, and billing processes and show you where compliance risk and unbilled revenue are sitting.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

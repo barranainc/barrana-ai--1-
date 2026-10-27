@@ -138,7 +138,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$5,000–$8,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first nurtured transaction",
   keyResultCallout:
     "Pipeline value up 40% in 6 months. 6 additional transactions from nurtured leads in first 8 months. 90-second response for every lead. 12-month nurture that never stops. Zero CRM data entry for agents.",

@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useEffect, useRef, useState } from "react";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -66,8 +67,8 @@ export default function KnowledgeBase() {
       <section className="cta-section py-20">
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Ready to Implement Automation?</h2>
-          <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>Book a free 60-minute Automation Audit. We map your workflows and identify your highest-impact automation opportunities.</p>
-          <Link href="/contact" className="btn-primary">Book Free Audit</Link>
+          <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>Book a free 60-minute Automation Audit. We walk through your workflows and identify your highest-impact automation opportunities.</p>
+          <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
         </div>
       </section>
     </div>

@@ -7,7 +7,8 @@
 import { Link } from "wouter";
 
 const NAVY = "#283891";
-const GREY = "#7B7B7B";
+// Darker than the brand grey: 13px breadcrumb text needs 4.5:1 contrast on the light hero backgrounds.
+const GREY = "#5F5F6B";
 
 interface BreadcrumbItem {
   label: string;

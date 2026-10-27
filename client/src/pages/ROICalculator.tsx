@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useState } from "react";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 export default function ROICalculator() {
   const [staff, setStaff] = useState(3);
@@ -15,7 +16,8 @@ export default function ROICalculator() {
   const additionalConversions = leadsPerMonth * 0.15;
   const additionalRevenue = additionalConversions * avgDealValue;
   const totalMonthlyROI = savedCostPerMonth + additionalRevenue;
-  const paybackMonths = Math.ceil(3500 / totalMonthlyROI);
+  // Uses the published starting price (owner-approved 27 Oct 2026); real quotes follow the free audit.
+  const paybackMonths = Math.ceil(1500 / totalMonthlyROI);
 
   const inputs = [
     { label: "Number of staff", value: staff, setter: setStaff, min: 1, max: 50, step: 1, fmt: (v: number) => `${v} staff` },
@@ -31,7 +33,7 @@ export default function ROICalculator() {
     { label: "Staff time freed per month (capacity, not cash)", value: `$${Math.round(savedCostPerMonth).toLocaleString()}`, sub: "Assumes ~80% fewer admin hours, valued at your hourly rate", color: "#059669", bold: false },
     { label: "Additional monthly revenue from faster lead response", value: `$${Math.round(additionalRevenue).toLocaleString()}`, sub: `Assumes 15% of monthly leads convert in addition: +${additionalConversions.toFixed(1)} at $${avgDealValue.toLocaleString()} avg`, color: "#059669", bold: false },
     { label: "Total estimated monthly value", value: `$${Math.round(totalMonthlyROI).toLocaleString()}`, sub: "Freed staff time + additional revenue (estimate)", color: "#283891", bold: true },
-    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Assumes a ~$3,500 implementation; illustrative", color: "#283891", bold: true },
+    { label: "Estimated payback period", value: `${paybackMonths} months`, sub: "Assumes the $1,500 CAD starting price; illustrative", color: "#283891", bold: true },
   ];
 
   return (
@@ -84,10 +86,10 @@ export default function ROICalculator() {
                 ))}
               </div>
               <div className="mt-6 p-4 rounded-xl text-xs" style={{ backgroundColor: "#FFF8E7", border: "1px solid rgba(217,119,6,0.2)", color: "#92400E" }}>
-                <strong>Estimate, not a quote or a promise.</strong> The calculator assumes automation removes about 80% of the admin hours you enter, that 15% of your monthly leads convert in addition because of faster response, and an implementation cost of about $3,500. Freed staff time is capacity, not a cash saving, unless costs actually fall. Your actual result depends on your workflows, starting point and scope; we measure your baseline during the free Automation Audit.
+                <strong>Estimate, not a quote or a promise.</strong> The calculator assumes automation removes about 80% of the admin hours you enter, that 15% of your monthly leads convert in addition because of faster response, and an implementation cost of about $1,500 CAD. Freed staff time is capacity, not a cash saving, unless costs actually fall. Your actual result depends on your workflows, starting point and scope; we measure your baseline during the free Automation Audit.
               </div>
               <div className="mt-6">
-                <Link href="/contact" className="btn-primary block text-center">Book Free Audit to Get Exact Numbers</Link>
+                <AuditBookingLink className="btn-primary block text-center">Book Free Audit to Get Exact Numbers</AuditBookingLink>
               </div>
             </div>
           </div>

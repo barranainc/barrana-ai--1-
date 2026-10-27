@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -259,7 +260,7 @@ export default function AiReceptionistPage() {
         "headline": "AI Receptionist for Small Businesses and Professional Services",
         "author": { "@type": "Organization", "name": "Barrana.ai" },
         "publisher": { "@type": "Organization", "name": "Barrana.ai", "url": "https://barrana.ai" },
-        "description": "An AI receptionist answers calls 24/7, qualifies callers, books appointments, and creates CRM records. Costs $200-$500/month vs $3,000-$4,000/month for a human. Best for after-hours coverage and overflow.",
+        "description": "An AI receptionist answers calls 24/7, qualifies callers, books appointments, and creates CRM records. Setup starts from $1,500 CAD with ongoing costs quoted with your project, vs $3,000-$4,000/month for a human. Best for after-hours coverage and overflow.",
       },
       {
         "@type": "BreadcrumbList",
@@ -313,7 +314,7 @@ export default function AiReceptionistPage() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              An AI receptionist is a voice-based or text-based AI agent that answers phone calls and messages for your business 24/7. It qualifies callers, books appointments, creates CRM records, and delivers briefings - handling the tasks a human receptionist does, but without business-hour limits. Typical cost: $200–$500/month vs $3,000–$4,000/month for a human. Best for: after-hours coverage, overflow during peak hours, and consistent call handling. Not a replacement for human interaction in emotionally sensitive or complex situations.
+              An AI receptionist is a voice-based or text-based AI agent that answers phone calls and messages for your business 24/7. It qualifies callers, books appointments, creates CRM records, and delivers briefings - handling the tasks a human receptionist does, but without business-hour limits. Setup starts from $1,500 CAD with ongoing costs quoted with your project, vs $3,000–$4,000/month for a human. Best for: after-hours coverage, overflow during peak hours, and consistent call handling. Not a replacement for human interaction in emotionally sensitive or complex situations.
             </p>
           </SummaryBox>
 
@@ -355,7 +356,7 @@ export default function AiReceptionistPage() {
               <tbody>
                 {[
                   { factor: "Availability", human: "Business hours only (8–9 hrs/day)", ai: "24/7, 365 days" },
-                  { factor: "Monthly cost", human: "$3,000–$4,000 CAD + benefits", ai: "$200–$500 + $2,000–$4,000 setup" },
+                  { factor: "Monthly cost", human: "$3,000–$4,000 CAD + benefits", ai: "From $1,500 CAD setup; ongoing cost quoted with your project" },
                   { factor: "Consistency", human: "Varies by day, mood, and workload", ai: "Identical quality on every call" },
                   { factor: "Complex handling", human: "Strong - adapts to any situation", ai: "Limited - rule-based routing only" },
                   { factor: "Emotional intelligence", human: "High - detects and responds to tone", ai: "Basic - keyword and sentiment detection" },
@@ -484,8 +485,8 @@ export default function AiReceptionistPage() {
           <SectionHeading>Cost Breakdown</SectionHeading>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
-              { label: "Platform cost", value: "$200–$500/month", note: "Ongoing AI receptionist service" },
-              { label: "Setup & configuration", value: "$2,000–$4,000", note: "One-time build and integration" },
+              { label: "Ongoing service", value: "Quoted with your project", note: "Included in the fixed quote after the free audit" },
+              { label: "Setup & configuration", value: "From $1,500 CAD", note: "One-time build and integration, fixed quote after the free audit" },
               { label: "Human receptionist", value: "$3,000–$4,000/month", note: "Salary + benefits, business hours only" },
               { label: "Payback", value: "Depends on call volume", note: "Measured against your baseline after launch" },
             ].map(c => (
@@ -522,9 +523,9 @@ export default function AiReceptionistPage() {
               Book a free Automation Audit to see whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
+              <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 Book a Free Audit
-              </Link>
+              </AuditBookingLink>
               <Link href="/services/ai-receptionist" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the AI Receptionist Service
               </Link>

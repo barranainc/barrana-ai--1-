@@ -196,16 +196,15 @@ export default function CampaignContractors() {
               Book Your Free Automation Audit
             </h2>
             <p className="text-sm mb-6" style={{ color: GREY }}>
-              60 minutes. Zoom or in-person at our Vaughan office (50 Corstate Ave, Unit 01). You keep the workflow map whether or not you work with us.
+              60 minutes. Zoom or in-person at our Vaughan office (50 Corstate Ave, Unit 01).
             </p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
               <p className="font-semibold mb-4" style={{ color: NAVY }}>What you get in 60 minutes:</p>
               <ul className="flex flex-col gap-0">
                 {[
-                  "A map of exactly where your leads are leaking (with dollar amounts specific to your business)",
+                  "Exactly where your leads are leaking (with dollar amounts specific to your business)",
                   "Which 1-2 workflows would give you the biggest return if automated",
                   "What it would cost to fix (fixed pricing - you know the number upfront, no surprises)",
-                  "The full analysis is yours to keep - whether or not you hire us",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

@@ -194,11 +194,11 @@ Progress reporting. It is the retention driver, it makes the value of your servi
 
 Barrana works with tutoring centres, learning services, and education businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry, matching, scheduling, reporting, and re-enrollment processes and show you where students and coordinator hours are being lost.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your enquiry, matching, scheduling, reporting, and re-enrollment processes and show you where students and coordinator hours are being lost.
 
 For organizations working with minors we build screening expiry tracking as a blocking control, restrict data access by role, and expect your privacy advisor to review the design.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

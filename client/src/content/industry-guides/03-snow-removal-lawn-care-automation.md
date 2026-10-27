@@ -158,11 +158,11 @@ Renewal automation, built in the off-season when you have time. It costs the lea
 
 Barrana works with snow removal, landscaping, and seasonal service contractors across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map regardless. We map your dispatch, verification, renewal, and billing processes and show you exactly where the season's revenue is leaking.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your dispatch, verification, renewal, and billing processes and show you exactly where the season's revenue is leaking.
 
 The best time to build this is the off-season.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the tools you already run.
 

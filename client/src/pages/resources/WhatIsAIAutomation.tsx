@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared layout helpers ────────────────────────────────────────────────────
 
@@ -451,8 +452,8 @@ export default function WhatIsAIAutomation() {
 
           <SectionHeading>What It Costs</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-            For a professional services firm in Canada, a complete AI automation implementation - including scoping, build, testing, and training - typically ranges
-            from <strong>$3,000 to $15,000 CAD</strong> depending on the number of workflows and integrations involved.
+            For a professional services firm in Canada, an AI automation implementation - including scoping, build, testing, and training - starts
+            from <strong>$1,500 CAD</strong>, with a fixed quote after the free audit based on the number of workflows and integrations involved.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
             The ongoing monthly cost for automation platform licenses (Make, Zapier, or similar) is typically $50–$200/month for a small firm.
@@ -488,11 +489,11 @@ export default function WhatIsAIAutomation() {
               Ready to Implement This?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              Book a free 60-minute Automation Audit. We'll map your highest-friction workflows and show you exactly what's automatable - no obligation.
+              Book a free 60-minute Automation Audit. We'll walk through your highest-friction workflows and show you exactly what's automatable - no obligation.
             </p>
-            <Link href="/contact" className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
+            <AuditBookingLink className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
               Book Your Free Automation Audit →
-            </Link>
+            </AuditBookingLink>
           </div>
         </div>
       </section>

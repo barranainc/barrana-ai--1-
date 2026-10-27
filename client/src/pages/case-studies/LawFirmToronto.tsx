@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "4 weeks",
-  investmentRange: "$8,000–$12,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first quarter",
   keyResultCallout:
     "500+ billable hours recovered per year. $175,000+ in billable capacity restored. Billing reduced from hours to minutes per lawyer per month. Client status calls down 65%. Intake response from days to minutes.",

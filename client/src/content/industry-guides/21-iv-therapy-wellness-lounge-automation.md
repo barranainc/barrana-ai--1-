@@ -188,11 +188,11 @@ Online booking with pre-visit screening. It captures after-hours demand, moves s
 
 Barrana works with IV therapy clinics, wellness lounges, and medical wellness businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your booking, screening, scheduling, membership, and retention processes and show you where chair time and repeat revenue are being lost.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your booking, screening, scheduling, membership, and retention processes and show you where chair time and repeat revenue are being lost.
 
 Where clinical screening is involved, we build so that no automated step ever substitutes for a clinician's decision, and we expect your clinical and privacy advisors to review the design.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

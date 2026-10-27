@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -416,11 +417,11 @@ export default function CaseStudies() {
             Want Results Like These?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.75)", marginBottom: "2rem", maxWidth: "480px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
-            Book a free 60-minute Automation Audit. We map your workflows, identify the highest-impact opportunities, and give you a prioritized plan.
+            Book a free 60-minute Automation Audit. We walk through your workflows, identify the highest-impact opportunities, and give you a prioritized plan.
           </p>
-          <Link href="/contact" className="btn-accent">
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

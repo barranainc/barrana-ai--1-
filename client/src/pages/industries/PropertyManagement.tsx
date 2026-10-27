@@ -147,7 +147,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Property management automation: $8,000-$15,000 CAD depending on portfolio size and workflow count.",
+      answer: "Property management automation starts from $1,500 CAD, with a fixed quote after the free audit based on portfolio size and workflow count.",
     },
   ],
 

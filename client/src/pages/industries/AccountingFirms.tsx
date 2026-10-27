@@ -180,7 +180,7 @@ const data: IndustryPageData = {
     {
       question: "How much does it cost?",
       answer:
-        "Accounting firm automation: $5,000-$12,000 CAD depending on workflow count. Fixed pricing after audit.",
+        "Accounting firm automation starts from $1,500 CAD, with a fixed quote after the free audit based on workflow count.",
     },
   ],
   ctaHeadline:

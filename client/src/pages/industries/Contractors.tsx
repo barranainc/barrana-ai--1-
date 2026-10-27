@@ -170,7 +170,7 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Contractor lead automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Contractor lead automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "After-hours AI: does it really answer calls?",

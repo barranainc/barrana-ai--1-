@@ -141,7 +141,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "2 weeks",
-  investmentRange: "$4,000–$6,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first 2 weeks (1 captured job)",
   keyResultCallout:
     "22% increase in quote-to-job conversion within 60 days. 90-second response time. 100% after-hours capture. The owner stopped missing leads because his phone went to voicemail. He started each morning with booked appointments he did not have to schedule.",

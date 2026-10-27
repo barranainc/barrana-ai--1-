@@ -114,7 +114,7 @@ const data: ServicePageData = {
     {
       question: "How much does lead response automation cost?",
       answer:
-        "Implementation: $2,000–$5,000 CAD. Monthly tools: $100–$300. Fixed pricing after free audit. Most implementations pay for themselves within 30–60 days through captured leads.",
+        "Projects start from $1,500 CAD, with a fixed quote after the free 60-minute Automation Audit. Third-party tool subscriptions are paid directly to those providers. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Does the automated response sound generic?",

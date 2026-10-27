@@ -7,6 +7,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -272,11 +273,11 @@ export default function AutomateClientIntake() {
               Ready to Automate Your Intake Process?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Most of our clients have a fully automated intake system live within 2 weeks. Book a free audit and we will map exactly what your intake flow looks like automated.
+              Most of our clients have a fully automated intake system live within 2 weeks. Book a free audit and we will show you exactly what your intake flow looks like automated.
             </p>
-            <Link href="/contact" style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
+            <AuditBookingLink style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
               Book Your Free Audit
-            </Link>
+            </AuditBookingLink>
           </div>
         </RevealSection>
       </div>

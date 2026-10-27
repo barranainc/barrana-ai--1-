@@ -184,7 +184,7 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Immigration intake + document automation: $5,000-$10,000 CAD. Fixed pricing after free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Immigration intake and document automation starts from $1,500 CAD. Fixed pricing after free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:

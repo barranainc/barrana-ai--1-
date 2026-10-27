@@ -61,6 +61,7 @@ import MethodTimeline from "@/components/diagrams/MethodTimeline";
 
 // UI components
 import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
+import AuditBookingLink, { CALENDLY_URL, CtaLink } from "@/components/AuditBookingLink";
 
 // Brand color constants
 const NAVY    = "#283891";
@@ -354,7 +355,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How much does automation cost?",
     answer:
-      "Single workflow: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Full operational automation: $10,000\u2013$20,000. All fixed pricing after a free audit. Payback periods vary with volumes and scope; we agree on what to measure before launch. Monthly maintenance: $200\u2013$500.",
+      "Projects start from $1,500 CAD for a single workflow; multi-workflow systems and full operational automation are quoted after the free 60-minute Automation Audit. All pricing is fixed, and ongoing support is quoted with your project. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
   },
   {
     question: "How fast will I see results?",
@@ -398,7 +399,7 @@ const objectionItems: FAQItem[] = [
   {
     question: "How much does this cost?",
     answer:
-      "Single workflow automation: $1,500\u2013$4,000 CAD. Multi-workflow system: $5,000\u2013$12,000. Fixed pricing after a free audit. No hourly billing. No surprise invoices. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
+      "Projects start from $1,500 CAD for a single workflow; larger systems are quoted after the free 60-minute Automation Audit. Fixed pricing. No hourly billing. No surprise invoices. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
   },
   {
     question: "Will this replace my staff?",
@@ -515,7 +516,7 @@ const HERO_STATES: HeroState[] = [
     metrics: [
       { value: "$80K\u2013$200K/yr", label: "Illustrative annual loss (5\u201315 staff)" },
       { value: "60 min", label: "Free Automation Audit" },
-      { value: "$3K\u2013$12K", label: "Fixed-price implementation" },
+      { value: "From $1,500 CAD", label: "Fixed-price implementation" },
     ],
   },
   {
@@ -544,14 +545,14 @@ const HERO_STATES: HeroState[] = [
     emphasisText: "Let Us Look at Your Business.",
     emphasisColor: NAVY,
     afterText: "",
-    sub: "Book a free 60-minute Automation Audit. We map your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first. You keep the workflow map, whether or not you work with us.",
-    microcopy: "60 minutes. No sales pitch.\nYou keep the workflow map.\nIf automation is not the right answer, we will tell you that.",
-    primaryCTA: { text: "Book Your Free Automation Audit", href: "/contact" },
+    sub: "Book a free 60-minute Automation Audit. We walk through your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first.",
+    microcopy: "60 minutes. No sales pitch.\nIf automation is not the right answer, we will tell you that.",
+    primaryCTA: { text: "Book Your Free Automation Audit", href: CALENDLY_URL },
     secondaryCTA: { text: "Call Us: +1 647 367 6771", href: "tel:+16473676771" },
     metrics: [
       { value: "60 min", label: "The audit takes one hour" },
       { value: "Free", label: "No charge, no obligation" },
-      { value: "Yours to keep", label: "Full report whether or not you hire us" },
+      { value: "Fixed quote", label: "If you decide to go ahead" },
     ],
   },
 ];
@@ -807,7 +808,7 @@ export default function Home() {
                   }}
                 >
                   <div>
-                    <Link
+                    <CtaLink
                       href={HERO_STATES[displayTab].primaryCTA.href}
                       style={{
                         display: "inline-flex",
@@ -825,7 +826,7 @@ export default function Home() {
                     >
                       {HERO_STATES[displayTab].primaryCTA.text}
                       <ArrowRight size={16} />
-                    </Link>
+                    </CtaLink>
                   </div>
                   <div>
                     {HERO_STATES[displayTab].secondaryCTA.href.startsWith("tel:") ? (
@@ -1474,12 +1475,12 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.2}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-              <Link href="/contact" className="btn-primary">
+              <AuditBookingLink className="btn-primary">
                 Book Your Free Automation Audit
                 <ArrowRight size={16} />
-              </Link>
+              </AuditBookingLink>
               <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                60 minutes. Free. You keep the workflow map, whether or not you work with us.
+                60 minutes. Free.
               </p>
             </div>
           </Reveal>
@@ -2018,10 +2019,10 @@ export default function Home() {
                 View All Illustrative Examples
                 <ArrowRight size={16} />
               </Link>
-              <Link href="/contact" className="btn-primary">
+              <AuditBookingLink className="btn-primary">
                 Book a Free Audit - See what these numbers look like for your business
                 <ArrowRight size={16} />
-              </Link>
+              </AuditBookingLink>
             </div>
           </Reveal>
         </div>
@@ -2115,7 +2116,7 @@ export default function Home() {
               {
                 badge: "Week 1",
                 title: "Free Audit",
-                body: "We map your workflows and calculate exactly what your operations are costing you. You leave with a number.",
+                body: "We walk through your workflows and calculate exactly what your operations are costing you. You leave with a number.",
                 dollar: "Identify $X in annual operational waste - at no cost",
                 tag: "Free \u00B7 60 min \u00B7 No obligation",
               },
@@ -2227,10 +2228,10 @@ export default function Home() {
                 <p style={{ color: GREY, lineHeight: 1.7, marginBottom: "1.5rem" }}>
                   Honest answers. No fluff. If automation is not right for your business, we will tell you.
                 </p>
-                <Link href="/contact" className="btn-primary" style={{ display: "inline-flex" }}>
+                <AuditBookingLink className="btn-primary" style={{ display: "inline-flex" }}>
                   Book a Free Audit
                   <ArrowRight size={16} />
-                </Link>
+                </AuditBookingLink>
               </div>
               <FAQAccordion items={mergedFAQItems} />
             </div>
@@ -2278,12 +2279,11 @@ export default function Home() {
               Your Operations Will Not Fix Themselves. The Audit Takes 60 Minutes.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-              We will map your workflows, calculate what your manual operations cost per year, and show you exactly where automation recovers that money. Free. No obligation.
+              We will walk through your workflows, calculate what your manual operations cost per year, and show you exactly where automation recovers that money. Free. No obligation.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", alignItems: "flex-start" }}>
               <div>
-                <Link
-                  href="/contact"
+                <AuditBookingLink
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -2300,7 +2300,7 @@ export default function Home() {
                 >
                   Book Your Free Automation Audit
                   <ArrowRight size={16} />
-                </Link>
+                </AuditBookingLink>
               </div>
               <div>
                 <Link

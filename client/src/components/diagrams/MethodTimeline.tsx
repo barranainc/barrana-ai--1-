@@ -16,7 +16,7 @@ const steps = [
     sub: "60 min - Free",
     color: "var(--b-amber)",
     colorBg: "var(--b-amber-bg)",
-    deliverables: "Workflow map, friction analysis, ROI projection. Yours to keep.",
+    deliverables: "Workflow walk-through, friction analysis, ROI projection.",
   },
   {
     Icon: PenTool,

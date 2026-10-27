@@ -1,4 +1,5 @@
 import { Link, useParams } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 const PLAYBOOKS: Record<string, { title: string; tag: string; emoji: string; intro: string; phases: { phase: string; steps: string[] }[] }> = {
   "lead-response": {
     title: "Lead Response Automation Playbook",
@@ -162,7 +163,7 @@ export default function PlaybookDetail() {
             <div className="mt-12 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
               <h3 className="text-xl font-bold text-white mb-3">Implement This Playbook for Your Business</h3>
               <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will customize this playbook for your specific workflows and tools.</p>
-              <Link href="/contact" className="btn-primary">Book Free Audit</Link>
+              <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Link, useParams } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 const INTEGRATIONS: Record<string, { name: string; category: string; description: string; useCases: string[]; benefits: string[] }> = {
   "make-integromat": { name: "Make (Integromat)", category: "Automation Platform", description: "Make is the primary automation platform used by Barrana.ai for complex, multi-step workflows. It connects over 1,000 business tools and handles conditional logic, data transformation, and error handling with a visual workflow builder.", useCases: ["Multi-step client intake workflows", "Document collection and tracking systems", "Lead routing with conditional logic", "CRM data synchronization", "Invoice generation triggers"], benefits: ["Visual workflow builder makes complex logic manageable", "Handles errors gracefully with retry logic", "Supports complex data transformations", "Detailed execution logs for auditing", "Cost-effective for high-volume automations"] },
   "zapier": { name: "Zapier", category: "Automation Platform", description: "Zapier connects over 5,000 apps and is used for simpler automation workflows. It is ideal for straightforward trigger-action automations where the logic is linear and the tools are well-supported.", useCases: ["Simple lead notification workflows", "Form submission to CRM creation", "Calendar event to task creation", "Email trigger to Slack notification", "Payment received to invoice logging"], benefits: ["Largest app library of any automation platform", "Easy to set up for simple workflows", "Reliable for straightforward integrations", "Good documentation and support"] },
@@ -38,7 +39,7 @@ export default function IntegrationDetail() {
           <div className="max-w-3xl mt-10 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
             <h3 className="text-xl font-bold text-white mb-3">Want to Integrate {int.name} with Your Business?</h3>
             <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free Automation Audit and we will design an integration plan for your specific workflows.</p>
-            <Link href="/contact" className="btn-primary">Book Free Audit</Link>
+            <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
           </div>
         </div>
       </section>

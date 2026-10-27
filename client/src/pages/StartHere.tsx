@@ -32,6 +32,7 @@ import {
 
 import FAQAccordion, { FAQItem } from "@/components/ui/FAQAccordion";
 import { colors } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // Brand color constants
 const NAVY = colors.navy;
@@ -169,7 +170,7 @@ const caseStudies = [
 const faqItems: FAQItem[] = [
   {
     question: "Is this going to be really expensive?",
-    answer: "A single automated workflow costs $1,500 to $4,000. A full system costs $5,000 to $12,000. Fixed pricing - you know the number before we start. Payback periods vary with volumes and scope; we agree on what to measure before launch. And the audit that tells you everything? That is free.",
+    answer: "Projects start from $1,500 CAD for a single automated workflow; a full system is quoted after the free audit. Fixed pricing - you know the number before we start. Payback periods vary with volumes and scope; we agree on what to measure before launch. And the audit that tells you everything? That is free.",
   },
   {
     question: "I am not technical at all. Will I understand this?",
@@ -323,7 +324,7 @@ export default function StartHere() {
 
             {/* Card D */}
             <Reveal delay={0.2}>
-              <Link href="/contact" style={{ textDecoration: "none" }}>
+              <AuditBookingLink style={{ textDecoration: "none" }}>
                 <HoverCard style={{ background: "#fff", cursor: "pointer", borderLeft: `4px solid ${NAVY}`, padding: "2rem" }}>
                   <div style={{ width: 44, height: 44, borderRadius: "0.625rem", background: `${NAVY}10`, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "1.25rem" }}>
                     <Phone size={22} color={NAVY} />
@@ -339,7 +340,7 @@ export default function StartHere() {
                     Book Free Audit <ArrowRight size={14} />
                   </div>
                 </HoverCard>
-              </Link>
+              </AuditBookingLink>
             </Reveal>
           </div>
         </div>
@@ -391,7 +392,7 @@ export default function StartHere() {
                 </div>
                 <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.875rem" }}>What It Costs</h3>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7 }}>
-                  For most small businesses: $3,000 to $12,000 to set up, depending on how many workflows you automate. Monthly costs: $200 to $500. Most businesses see the investment pay for itself within 30 to 60 days through saved time, captured leads, and faster billing.
+                  Projects start from $1,500 CAD, and the fixed quote after your free audit depends on how many workflows you automate. Ongoing support is quoted with your project. Payback depends on your volumes and scope; we agree on what to measure before launch.
                 </p>
               </div>
             </Reveal>
@@ -641,8 +642,7 @@ export default function StartHere() {
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                   Book a free 60-minute Automation Audit. We look at your specific workflows, calculate what your manual operations cost per year, and show you exactly what to automate first.
                 </p>
-                <Link
-                  href="/contact"
+                <AuditBookingLink
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -658,9 +658,9 @@ export default function StartHere() {
                   }}
                 >
                   Book a Free Automation Audit <ArrowRight size={16} />
-                </Link>
+                </AuditBookingLink>
                 <p style={{ color: GREY, fontSize: "0.8rem", marginTop: "0.75rem" }}>
-                  60 minutes. No obligation. You keep the workflow map, whether or not you work with us.
+                  60 minutes. No obligation.
                 </p>
               </HoverCard>
             </Reveal>

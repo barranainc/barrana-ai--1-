@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const NAVY = "#283891";
 const DARK = "#1A1A2E";
@@ -201,12 +202,12 @@ export default function BeforeAfter() {
               lineHeight: 1.65,
             }}
           >
-            Book a free Automation Audit and we will map your current workflows, identify the highest-impact
+            Book a free Automation Audit and we will walk through your current workflows, identify the highest-impact
             automations, and show you what the after state looks like for your specific business.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <AuditBookingLink className="btn-primary">
             Book Free Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

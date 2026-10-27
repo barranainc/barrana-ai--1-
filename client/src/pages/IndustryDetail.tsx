@@ -4,6 +4,7 @@
  */
 import { Link, useParams } from "wouter";
 import { ArrowRight, CheckCircle2, ArrowLeft } from "lucide-react";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const industryData: Record<string, {
   name: string;
@@ -247,9 +248,9 @@ export default function IndustryDetail() {
             <div className="section-label mb-3">{industry.name}</div>
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">{industry.heroTitle}</h1>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">{industry.heroSubtitle}</p>
-            <Link href="/contact" className="btn-primary">
+            <AuditBookingLink className="btn-primary">
               Book a Free Automation Audit <ArrowRight size={16} />
-            </Link>
+            </AuditBookingLink>
           </div>
         </div>
       </section>
@@ -342,10 +343,10 @@ export default function IndustryDetail() {
       <section className="py-16" style={{ backgroundColor: "#283891" }}>
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Automate Your {industry.name} Operations?</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">Book a free 60-minute Automation Audit. We map your specific workflows and identify the highest-impact automation opportunities.</p>
-          <Link href="/contact" className="btn-accent">
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">Book a free 60-minute Automation Audit. We walk through your specific workflows and identify the highest-impact automation opportunities.</p>
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit <ArrowRight size={16} />
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

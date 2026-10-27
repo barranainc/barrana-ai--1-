@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ────────────────────────────────────────────────────────────
 
@@ -341,7 +342,7 @@ export default function AiAutomationVaughan() {
             {/* Section 3 */}
             <SectionHeading>Our Approach: Operator-First, Practical, Phased</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              We start every engagement with a free 60-minute Automation Audit. This is not a sales call. We map your actual workflows, identify where time is lost, and show you exactly what is automatable and what should stay manual. You leave with a clear picture of your automation opportunity regardless of whether we work together.
+              We start every engagement with a free 60-minute Automation Audit. This is not a sales call. We walk through your actual workflows, identify where time is lost, and show you exactly what is automatable and what should stay manual. You leave with a clear picture of your automation opportunity regardless of whether we work together.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
               All work is quoted at a fixed price before any build begins. No hourly billing, no scope creep invoicing, no surprises. We work with the tools you already use - your CRM, your email system, your practice management software - so you do not need to change your stack or learn a new platform.
@@ -382,7 +383,7 @@ export default function AiAutomationVaughan() {
               />
               <FAQItem
                 q="Is there a minimum contract size?"
-                a="Our smallest engagement is a single-workflow automation starting at approximately $1,500 CAD. Most clients start with a Phase 1 package at $3,000–$5,000, which includes scoping, build, testing, and team training."
+                a="Projects start from $1,500 CAD for a single-workflow automation. The fixed quote after the free 60-minute Automation Audit covers scoping, build, testing, and team training."
               />
               <FAQItem
                 q="How long does an engagement take?"
@@ -390,11 +391,11 @@ export default function AiAutomationVaughan() {
               />
               <FAQItem
                 q="Do you offer support after implementation?"
-                a="Yes. Monthly monitoring and maintenance plans start from $200/month. These cover platform licensing oversight, error monitoring, and minor workflow adjustments as your business evolves."
+                a="Yes. Monitoring and maintenance are quoted with your project and cover platform licensing oversight, error monitoring, and minor workflow adjustments as your business evolves."
               />
               <FAQItem
                 q="Is the initial audit really free?"
-                a="Yes. The 60-minute Automation Audit is completely free with no obligation. We map your workflows and tell you exactly what to automate and in what order. You can use this information with any provider, or with us."
+                a="Yes. The 60-minute Automation Audit is completely free with no obligation. We walk through your workflows and tell you exactly what to automate and in what order. You can use this information with any provider, or with us."
               />
             </div>
 
@@ -404,15 +405,15 @@ export default function AiAutomationVaughan() {
                 Book Your Free Audit in Vaughan
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "0.5rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 0.5rem" }}>
-                60 minutes. No obligation. We'll map your workflows and tell you exactly what to automate and in what order.
+                60 minutes. No obligation. We'll walk through your workflows and tell you exactly what to automate and in what order.
               </p>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", marginBottom: "1.75rem" }}>
                 50 Corstate Avenue, Unit 01 - Vaughan, ON L4K 4X2
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
+                <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
                   Book Free Audit in Vaughan →
-                </Link>
+                </AuditBookingLink>
                 <Link href="/services" style={{ background: "rgba(255,255,255,0.1)", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block", border: "1.5px solid rgba(255,255,255,0.25)" }}>
                   See Our Services
                 </Link>

@@ -127,7 +127,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$6,000–$9,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first seasonal campaign",
   keyResultCallout:
     "300 seasonal maintenance slots targeted, 225 booked in 10 days. Emergency dispatch went from voicemail to immediate. Agreement renewal lapse dropping from 22% toward single digits. Dispatcher freed from 6 weeks of manual calling.",

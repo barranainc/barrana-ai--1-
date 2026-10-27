@@ -140,7 +140,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "4 weeks",
-  investmentRange: "$7,000–$10,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Immediate (avoided $60K hire + 5 new clients)",
   keyResultCallout:
     "40% more clients with same team. $60,000+ operations hire avoided. Monthly reporting reduced from 72 hours to 8 hours. Onboarding from 2 weeks to 48 hours. Zero missed handoffs.",

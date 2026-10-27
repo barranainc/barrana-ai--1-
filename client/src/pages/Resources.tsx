@@ -50,6 +50,7 @@ import {
 import { Link } from "wouter";
 import { industryGuideCards } from "@/content/industry-guides";
 import { colors } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -233,7 +234,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Every engagement is fixed-price. After the free Automation Audit, we provide a written proposal with a clear scope, timeline, and price. Most small business automation systems range from $2,500 to $12,000 depending on complexity.",
+    a: "Every engagement is fixed-price. After the free Automation Audit, we provide a written proposal with a clear scope, timeline, and price. Projects start from $1,500 CAD.",
   },
   {
     q: "Is my client data safe?",
@@ -630,9 +631,9 @@ export default function Resources() {
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
             Book a free 60-minute Automation Audit. We apply these frameworks directly to your business and give you a prioritized action plan.
           </p>
-          <Link href="/contact" className="btn-accent">
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

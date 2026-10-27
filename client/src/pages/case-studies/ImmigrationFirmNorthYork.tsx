@@ -141,7 +141,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "4 weeks from audit to full deployment",
-  investmentRange: "$6,000–$10,000 CAD (fixed-price)",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first billing cycle",
   keyResultCallout:
     "14 staff hours recovered per week. 11 additional billable consultant hours. 25% more client files handled with the same 3-person team. Document collection time cut in half. Status calls reduced by 68%.",

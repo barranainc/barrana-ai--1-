@@ -88,7 +88,7 @@ const data: IndustryPageData = {
     { question: "RIBO compliance?", answer: "All client communications logged per policy. Complete audit trail maintained for regulatory and E&O documentation requirements." },
     { question: "How long to implement?", answer: "Standard brokerage automation: 3-4 weeks." },
     { question: "Does it work for independent brokers?", answer: "Yes. Solo and small brokerages benefit most because they have the least admin support for manual follow-up." },
-    { question: "How much?", answer: "Insurance brokerage automation: $5,000-$10,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "How much?", answer: "Insurance brokerage automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can it handle multi-policy households?", answer: "Yes. The system links policies to household records, coordinates renewal dates, and prevents duplicate outreach." },
   ],
 

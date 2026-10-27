@@ -140,7 +140,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard home service automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Home service automation: $5,000-$10,000 CAD. Seasonal campaign revenue alone typically exceeds the investment.",
+      answer: "Home service automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Weather-triggered dispatch for snow/HVAC?",

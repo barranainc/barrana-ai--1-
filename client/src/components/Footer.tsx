@@ -5,6 +5,7 @@ import { ArrowRight, Check } from "lucide-react";
 const exploreLinks = [
   { label: "Start Here", href: "/start-here" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Industries", href: "/industries" },
   { label: "Workflow Insights", href: "/insights/what-to-automate-first" },
   { label: "When AI Is Not the Answer", href: "/insights/when-ai-is-not-the-answer" },

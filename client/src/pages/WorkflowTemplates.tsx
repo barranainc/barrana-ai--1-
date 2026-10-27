@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const templates = [
   {
@@ -159,9 +160,9 @@ export default function WorkflowTemplates() {
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>
             Book a free Automation Audit and we will identify which templates apply to your business and customize them for your specific workflows.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <AuditBookingLink className="btn-primary">
             Book Free Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

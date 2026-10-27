@@ -130,7 +130,7 @@ const data: ServicePageData = {
     {
       question: "How much does this cost?",
       answer:
-        "After-hours automation typically costs $2,000–$4,000 to implement. Monthly operating cost is a fraction of hiring overnight coverage.",
+        "After-hours automation starts from $1,500 CAD, with a fixed quote after the free 60-minute Automation Audit. Monthly operating cost is a fraction of hiring overnight coverage.",
     },
   ],
 

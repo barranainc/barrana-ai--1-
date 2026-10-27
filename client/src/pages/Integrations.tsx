@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 /** Tools that have a detail page under /integrations/<slug>. */
 const INTEGRATION_DETAIL_SLUGS: Record<string, string> = {
@@ -382,9 +383,9 @@ export default function Integrations() {
             We integrate with 200+ platforms. Book an automation audit and tell us what you use -
             if there's an API, we can connect it.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <AuditBookingLink className="btn-primary">
             Book an Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

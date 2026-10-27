@@ -4,6 +4,7 @@
  */
 import { Link, useParams } from "wouter";
 import { ArrowRight, CheckCircle2, ArrowLeft } from "lucide-react";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const serviceData: Record<string, {
   title: string;
@@ -165,9 +166,9 @@ export default function ServiceDetail() {
             <div className="section-label mb-3">{service.subtitle}</div>
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">{service.title}</h1>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.description}</p>
-            <Link href="/contact" className="btn-primary">
+            <AuditBookingLink className="btn-primary">
               Book a Free Automation Audit <ArrowRight size={16} />
-            </Link>
+            </AuditBookingLink>
           </div>
         </div>
       </section>
@@ -221,10 +222,10 @@ export default function ServiceDetail() {
 
               <div className="rounded-xl p-6 text-white" style={{ backgroundColor: "#283891" }}>
                 <h3 className="font-bold mb-3">Ready to Get Started?</h3>
-                <p className="text-sm text-blue-100 mb-4">Book a free 60-minute Automation Audit. We map your workflows and identify the highest-impact opportunities.</p>
-                <Link href="/contact" className="btn-accent text-sm w-full justify-center">
+                <p className="text-sm text-blue-100 mb-4">Book a free 60-minute Automation Audit. We walk through your workflows and identify the highest-impact opportunities.</p>
+                <AuditBookingLink className="btn-accent text-sm w-full justify-center">
                   Book Free Audit <ArrowRight size={14} />
-                </Link>
+                </AuditBookingLink>
               </div>
             </div>
           </div>

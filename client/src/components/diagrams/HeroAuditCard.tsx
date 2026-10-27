@@ -11,11 +11,11 @@ const NAVY = "#283891";
 const BORDER = "#E2E4ED";
 
 const ITEMS = [
-  "Full workflow map of your operations",
+  "Walk-through of your current workflows",
   "Annual cost calculation of your manual processes",
   "Top 3 automation opportunities ranked",
   "Phased implementation plan with fixed pricing",
-  "Yours to keep - no obligation",
+  "Free, no obligation",
 ];
 
 export default function HeroAuditCard() {

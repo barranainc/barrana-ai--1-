@@ -176,9 +176,9 @@ Online registration with payment collection. It removes the single heaviest volu
 
 Barrana works with youth sports leagues, clubs, and community associations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map either way. We map your registration, team formation, scheduling, volunteer, and communication processes and show you where your board's volunteer hours are going.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your registration, team formation, scheduling, volunteer, and communication processes and show you where your board's volunteer hours are going.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

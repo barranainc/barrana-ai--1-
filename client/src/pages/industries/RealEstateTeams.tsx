@@ -88,7 +88,7 @@ const data: IndustryPageData = {
     { question: "Can it send listing alerts?", answer: "Yes. Connected to your MLS feed or listing database for automatic buyer notifications matching their criteria." },
     { question: "How long to implement?", answer: "Standard real estate automation: 2-3 weeks." },
     { question: "Does it work for individual agents?", answer: "Yes. Solo agents benefit from consistent follow-up they cannot maintain manually while showing properties." },
-    { question: "Cost?", answer: "Real estate team automation: $4,000-$8,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "Cost?", answer: "Real estate team automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
   ],
 
   ctaHeadline: "Your Pipeline Leaks at Every Stage. Every Unfollowed Lead Is Commission Lost. Plug the Gaps.",

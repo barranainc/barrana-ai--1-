@@ -142,7 +142,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard agency automation: 3-5 weeks." },
     {
       question: "How much?",
-      answer: "Agency automation: $5,000-$12,000 CAD depending on workflow count and platform integrations.",
+      answer: "Agency automation starts from $1,500 CAD, with a fixed quote after the free audit based on workflow count and platform integrations.",
     },
     {
       question: "Does it replace our project managers?",

@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much does it cost?",
-      answer: "Landscaping company automation: $5,000-$10,000 CAD. Seasonal renewal revenue alone typically exceeds the investment.",
+      answer: "Landscaping company automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Before/after photos?",

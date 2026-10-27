@@ -173,7 +173,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard clinic automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Medical clinic automation: $5,000-$10,000 CAD.",
+      answer: "Medical clinic automation starts from $1,500 CAD, with a fixed quote after the free audit.",
     },
     {
       question: "Walk-in queue management?",

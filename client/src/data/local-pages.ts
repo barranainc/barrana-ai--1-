@@ -1,3 +1,4 @@
+import { CALENDLY_URL } from "@/lib/booking";
 /**
  * Local Industry Pages Data
  * 30 pages: 15 Tier 1 (full copy) + 15 Tier 2 (template)
@@ -42,7 +43,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Your RCIC qualification took years. Your intake forms take 45 minutes per client. Your team spends 18+ hours per week on document chasing, data entry, and status update calls. Along Vaughan\u2019s Highway 7 corridor, immigration firms that automate intake and document collection recover $70,000+ per year in consultant capacity.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in Vaughan",
@@ -71,7 +72,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Vaughan?",
-        answer: "For a typical 2\u20135 person immigration firm: $4,000\u2013$8,000 CAD for core intake + document automation. $8,000\u2013$12,000 for full system including after-hours, invoicing, and status updates. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Pricing starts from $1,500 CAD for core intake and document automation; a full system with after-hours, invoicing and status updates is quoted after the free 60-minute Automation Audit. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -91,7 +92,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -108,7 +109,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga immigration consultants handle some of the highest client volumes in the GTA. During LMIA and Express Entry peaks, intake backlogs cost clients and consultants alike. Automation handles the volume so your team handles the strategy.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in Mississauga",
@@ -137,7 +138,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Mississauga?",
-        answer: "$4,000\u2013$12,000 CAD depending on scope. Fixed pricing after a free audit. ROI typically within 30\u201345 days.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -154,7 +155,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -171,7 +172,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton immigration firms are drowning in intake volume. Your community needs you for strategy, not data entry. Automation handles the 18 hours of weekly admin so you handle the cases that change lives.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=brampton" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in Brampton",
@@ -200,7 +201,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Brampton?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -217,7 +218,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in Brampton and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in Brampton and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -234,7 +235,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation accounting firm Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Your CPA took years to earn. Your tax season is spent on the phone asking clients for T4s. Vaughan accounting firms that automate document collection handle 40\u201365 more clients per season with the same team.",
-    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: "/contact?industry=accounting&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Vaughan",
@@ -263,7 +264,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Vaughan?",
-        answer: "$5,000\u2013$10,000 CAD for document collection + invoicing + onboarding. Fixed pricing. ROI from the first tax season.",
+        answer: "Pricing starts from $1,500 CAD for document collection, invoicing and onboarding; you get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -283,7 +284,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=accounting",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your accounting practice in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your accounting practice in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -300,7 +301,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation accounting firm Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga CPA firms handling 200+ returns per season hit a wall every January. The wall is not expertise. It is admin. Automation handles the document chase so your CPAs handle the returns.",
-    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: "/contact?industry=accounting&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Mississauga",
@@ -329,7 +330,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Mississauga?",
-        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -346,7 +347,7 @@ export const localPages: LocalPageData[] = [
       "/services/invoice-automation",
       "/automation-planner?industry=accounting",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your accounting practice in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your accounting practice in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -363,7 +364,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation accounting firm Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech companies expect instant everything from their service providers. Your accounting firm should not be the exception. Automate the admin, match the digital expectations of your tech corridor clients.",
-    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: "/contact?industry=accounting&city=markham" },
+    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Markham",
@@ -392,7 +393,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Markham?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -408,7 +409,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=accounting",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your accounting practice in Markham and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your accounting practice in Markham and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -425,7 +426,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "560 dental clinics in Mississauga. Your clinical skills are not the differentiator. Your responsiveness is. The practices filling every chair are the ones where booking, reminders, and recall run automatically.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Mississauga",
@@ -455,7 +456,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Mississauga?",
-        answer: "$4,000\u2013$8,000 CAD for booking + reminders + recall. $8,000\u2013$12,000 with AI receptionist and intake. Fixed pricing.",
+        answer: "Pricing starts from $1,500 CAD for booking, reminders and recall; adding an AI receptionist and intake is quoted after the free 60-minute Automation Audit. Fixed pricing.",
       },
       {
         question: "How long does implementation take?",
@@ -473,7 +474,7 @@ export const localPages: LocalPageData[] = [
       "/workflows/appointment-booking",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -490,7 +491,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Toronto North York",
     eyebrow: "AI AUTOMATION IN TORONTO / NORTH YORK",
     heroBody: "1,800+ dental clinics in Toronto and North York. Same training. Same equipment. Different systems. The clinics filling every chair are the ones where a patient can book at 11pm, get reminded at 8am, and walk into a practice that already has their intake form completed.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=toronto" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Toronto / North York",
@@ -520,7 +521,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Toronto / North York?",
-        answer: "$5,000\u2013$12,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -537,7 +538,7 @@ export const localPages: LocalPageData[] = [
       "/services/ai-receptionist",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Toronto / North York and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Toronto / North York and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -554,7 +555,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Richmond Hill",
     eyebrow: "AI AUTOMATION IN RICHMOND HILL",
     heroBody: "208 dental practices along Richmond Hill\u2019s Yonge corridor. Your patients compare you to clinics that let them book online at midnight. Automation makes your practice the modern, responsive one.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=richmond-hill" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Richmond Hill",
@@ -583,7 +584,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Richmond Hill?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -600,7 +601,7 @@ export const localPages: LocalPageData[] = [
       "/services/ai-receptionist",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Richmond Hill and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Richmond Hill and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -617,7 +618,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation physiotherapy clinic Richmond Hill",
     eyebrow: "AI AUTOMATION IN RICHMOND HILL",
     heroBody: "Your Richmond Hill physio clinic runs on appointments. Every empty slot is revenue that evaporated. Dual reminders and waitlist auto-fill recover $85,000+ per year in chairs that would otherwise sit empty.",
-    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: "/contact?industry=physio&city=richmond-hill" },
+    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=physio" },
     costSection: {
       title: "The Cost of Manual Operations for Physiotherapy Clinics in Richmond Hill",
@@ -647,7 +648,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for physiotherapy clinics in Richmond Hill?",
-        answer: "$4,000\u2013$8,000 CAD for booking + reminders + intake. $8,000\u2013$12,000 with WSIB document automation. Fixed pricing.",
+        answer: "Pricing starts from $1,500 CAD for booking, reminders and intake; adding WSIB document automation is quoted after the free 60-minute Automation Audit. Fixed pricing.",
       },
       {
         question: "How long does implementation take?",
@@ -665,7 +666,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/physio-clinic-richmond-hill",
       "/automation-planner?industry=physio",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your physiotherapy practice in Richmond Hill and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your physiotherapy practice in Richmond Hill and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -682,7 +683,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation physiotherapy clinic Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Vaughan physio clinics are growing with the community. But your booking system is not growing with you. Automation handles the scheduling, reminders, and intake that consume 60% of your admin\u2019s day.",
-    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: "/contact?industry=physio&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=physio" },
     costSection: {
       title: "The Cost of Manual Operations for Physiotherapy Clinics in Vaughan",
@@ -711,7 +712,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for physiotherapy clinics in Vaughan?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -728,7 +729,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=physio",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your physiotherapy practice in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your physiotherapy practice in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -745,7 +746,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation contractor Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "You are on a job site in Vaughan. Your phone rings. You cannot answer. That lead calls your competitor. By the time you call back at 6pm, they have already booked. This happens 8\u201312 times per month. At $8,000\u2013$25,000 per job, that is your most expensive missed call.",
-    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
       title: "The Cost of Manual Operations for Contractors in Vaughan",
@@ -774,7 +775,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for contractors in Vaughan?",
-        answer: "$3,000\u2013$6,000 CAD for lead response + quote follow-up. $6,000\u2013$10,000 with invoicing and review automation. Fixed pricing.",
+        answer: "Pricing starts from $1,500 CAD for lead response and quote follow-up; adding invoicing and review automation is quoted after the free 60-minute Automation Audit. Fixed pricing.",
       },
       {
         question: "How long does implementation take?",
@@ -793,7 +794,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=contractor",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your contracting business in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your contracting business in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -810,7 +811,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation contractor Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga homeowners request 3\u20135 quotes for every job. The contractor who responds first gets the appointment. Automation puts you first.",
-    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
       title: "The Cost of Manual Operations for Contractors in Mississauga",
@@ -839,7 +840,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for contractors in Mississauga?",
-        answer: "$3,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -856,7 +857,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/contractor-mississauga",
       "/automation-planner?industry=contractor",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your contracting business in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your contracting business in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -873,7 +874,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation law firm Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto\u2019s legal market is the most competitive in Canada. Your firm\u2019s edge is not just legal expertise - it is how fast you respond to new enquiries, how smoothly you onboard clients, and how reliably you collect retainers. Automation handles the operations so your lawyers handle the law.",
-    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=toronto" },
+    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
       title: "The Cost of Manual Operations for Law Firms in Toronto",
@@ -902,7 +903,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Toronto?",
-        answer: "$5,000\u2013$12,000 CAD depending on scope. Fixed pricing. ROI typically within 60 days.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -920,7 +921,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/law-firm-toronto",
       "/automation-planner?industry=law",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your law firm in Toronto and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your law firm in Toronto and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -937,7 +938,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation law firm Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga law firms along the Hurontario corridor serve one of the fastest-growing populations in the GTA. More residents means more legal needs - and more competition for those clients. The firms winning are the ones that respond fastest and onboard smoothest.",
-    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
       title: "The Cost of Manual Operations for Law Firms in Mississauga",
@@ -966,7 +967,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Mississauga?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -983,7 +984,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=law",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your law firm in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your law firm in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1004,7 +1005,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto is home to one of the largest concentrations of immigration consultants in Canada. Automation handles the intake admin, document chasing, and status updates that consume 18+ hours per week so your RCICs focus on case strategy.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=toronto" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in Toronto",
@@ -1033,7 +1034,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Toronto?",
-        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1050,7 +1051,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in Toronto and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in Toronto and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1067,7 +1068,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant North York",
     eyebrow: "AI AUTOMATION IN NORTH YORK",
     heroBody: "North York\u2019s dense professional service corridor includes a high concentration of immigration firms. Automation handles intake categorisation, document chasing, and after-hours enquiries so consultants focus on case strategy.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=north-york" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in North York",
@@ -1096,7 +1097,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in North York?",
-        answer: "$4,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1114,7 +1115,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/immigration-firm-north-york",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in North York and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in North York and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1131,7 +1132,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation immigration consultant Scarborough",
     eyebrow: "AI AUTOMATION IN SCARBOROUGH",
     heroBody: "Scarborough\u2019s diverse immigration market demands responsive, multilingual service. Automation handles intake categorisation, document collection, and after-hours response so your consultants focus on the cases that matter.",
-    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: "/contact?industry=immigration&city=scarborough" },
+    ctaPrimary: { text: "Book a Free Audit for Your Immigration Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=immigration" },
     costSection: {
       title: "The Cost of Manual Operations for Immigration Consultants in Scarborough",
@@ -1160,7 +1161,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for immigration consultants in Scarborough?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1177,7 +1178,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=immigration",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your immigration practice in Scarborough and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your immigration practice in Scarborough and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1194,7 +1195,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation accounting firm Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s growing business community keeps CPA firms busy year-round. Automation handles the document chasing, onboarding, and invoicing that consume your team\u2019s capacity during tax season and beyond.",
-    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: "/contact?industry=accounting&city=brampton" },
+    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Brampton",
@@ -1223,7 +1224,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Brampton?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. ROI from the first tax season.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1240,7 +1241,7 @@ export const localPages: LocalPageData[] = [
       "/services/invoice-automation",
       "/automation-planner?industry=accounting",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your accounting practice in Brampton and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your accounting practice in Brampton and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1257,7 +1258,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation accounting firm Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto\u2019s competitive accounting market demands efficiency. Automation handles document chasing, client onboarding, and invoicing so your CPAs focus on advisory work that commands higher fees.",
-    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: "/contact?industry=accounting&city=toronto" },
+    ctaPrimary: { text: "Book a Free Audit for Your Accounting Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=accounting" },
     costSection: {
       title: "The Cost of Manual Operations for Accounting Firms in Toronto",
@@ -1286,7 +1287,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for accounting firms in Toronto?",
-        answer: "$5,000\u2013$12,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1303,7 +1304,7 @@ export const localPages: LocalPageData[] = [
       "/services/invoice-automation",
       "/automation-planner?industry=accounting",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your accounting practice in Toronto and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your accounting practice in Toronto and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1320,7 +1321,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s growing population means more patients seeking dental care. The clinics filling every chair are the ones where booking, reminders, and recall run automatically - not the ones where staff make 50 calls a day.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=brampton" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Brampton",
@@ -1349,7 +1350,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Brampton?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1366,7 +1367,7 @@ export const localPages: LocalPageData[] = [
       "/services/ai-receptionist",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Brampton and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Brampton and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1383,7 +1384,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Vaughan\u2019s new communities bring new patients. But if your booking system requires a phone call during business hours, you lose those patients to the clinic that lets them book online at midnight.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Vaughan",
@@ -1412,7 +1413,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Vaughan?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1430,7 +1431,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1447,7 +1448,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation dental clinic Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech-savvy population expects digital-first healthcare. Automated booking, reminders, and recall give your dental practice the modern experience patients compare you on.",
-    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: "/contact?industry=dental&city=markham" },
+    ctaPrimary: { text: "Book a Free Audit for Your Dental Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=dental" },
     costSection: {
       title: "The Cost of Manual Operations for Dental Clinics in Markham",
@@ -1476,7 +1477,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for dental clinics in Markham?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1493,7 +1494,7 @@ export const localPages: LocalPageData[] = [
       "/services/ai-receptionist",
       "/automation-planner?industry=dental",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your dental practice in Markham and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your dental practice in Markham and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1510,7 +1511,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation physiotherapy clinic Mississauga",
     eyebrow: "AI AUTOMATION IN MISSISSAUGA",
     heroBody: "Mississauga physio clinics lose tens of thousands per year to no-shows and manual booking admin. Dual reminders and waitlist auto-fill recover empty slots automatically.",
-    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: "/contact?industry=physio&city=mississauga" },
+    ctaPrimary: { text: "Book a Free Audit for Your Physiotherapy Practice", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=physio" },
     costSection: {
       title: "The Cost of Manual Operations for Physiotherapy Clinics in Mississauga",
@@ -1539,7 +1540,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for physiotherapy clinics in Mississauga?",
-        answer: "$4,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1556,7 +1557,7 @@ export const localPages: LocalPageData[] = [
       "/services/client-intake-automation",
       "/automation-planner?industry=physio",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your physiotherapy practice in Mississauga and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your physiotherapy practice in Mississauga and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1573,7 +1574,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation contractor Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s construction boom means more leads than you can answer while on the job. Automation responds in 90 seconds, follows up on quotes, and invoices on completion - so no opportunity walks to a competitor.",
-    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=brampton" },
+    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
       title: "The Cost of Manual Operations for Contractors in Brampton",
@@ -1602,7 +1603,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for contractors in Brampton?",
-        answer: "$3,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1619,7 +1620,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/contractor-mississauga",
       "/automation-planner?industry=contractor",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your contracting business in Brampton and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your contracting business in Brampton and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1636,7 +1637,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation contractor Toronto",
     eyebrow: "AI AUTOMATION IN TORONTO",
     heroBody: "Toronto\u2019s renovation and construction market is the busiest in Canada. The contractor who responds first gets the job. Automation puts you first - every time, even when you are on a job site.",
-    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=toronto" },
+    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
       title: "The Cost of Manual Operations for Contractors in Toronto",
@@ -1665,7 +1666,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for contractors in Toronto?",
-        answer: "$3,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1682,7 +1683,7 @@ export const localPages: LocalPageData[] = [
       "/case-studies/contractor-mississauga",
       "/automation-planner?industry=contractor",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your contracting business in Toronto and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your contracting business in Toronto and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1699,7 +1700,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation law firm Vaughan",
     eyebrow: "AI AUTOMATION IN VAUGHAN",
     heroBody: "Vaughan law firms serve the growing York Region community. Automation handles the intake admin, document collection, and billing follow-up that consume hours of lawyer time every week.",
-    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=vaughan" },
+    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
       title: "The Cost of Manual Operations for Law Firms in Vaughan",
@@ -1728,7 +1729,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Vaughan?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
       },
       {
         question: "How long does implementation take?",
@@ -1746,7 +1747,7 @@ export const localPages: LocalPageData[] = [
       "/ai-automation-vaughan",
       "/automation-planner?industry=law",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your law firm in Vaughan and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your law firm in Vaughan and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1763,7 +1764,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation law firm Brampton",
     eyebrow: "AI AUTOMATION IN BRAMPTON",
     heroBody: "Brampton\u2019s growing population means more legal needs. Automation handles intake, document collection, and billing follow-up so your lawyers focus on billable work.",
-    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=brampton" },
+    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
       title: "The Cost of Manual Operations for Law Firms in Brampton",
@@ -1792,7 +1793,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Brampton?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1809,7 +1810,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=law",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your law firm in Brampton and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your law firm in Brampton and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1826,7 +1827,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation law firm Markham",
     eyebrow: "AI AUTOMATION IN MARKHAM",
     heroBody: "Markham\u2019s tech corridor clients expect digital-first service from their lawyers. Automation gives your firm the modern intake, document collection, and communication experience that tech-savvy clients compare you on.",
-    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: "/contact?industry=law&city=markham" },
+    ctaPrimary: { text: "Book a Free Audit for Your Law Firm", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=law" },
     costSection: {
       title: "The Cost of Manual Operations for Law Firms in Markham",
@@ -1855,7 +1856,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for law firms in Markham?",
-        answer: "$5,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1872,7 +1873,7 @@ export const localPages: LocalPageData[] = [
       "/services/document-collection",
       "/automation-planner?industry=law",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your law firm in Markham and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your law firm in Markham and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 
@@ -1889,7 +1890,7 @@ export const localPages: LocalPageData[] = [
     targetKeyword: "AI automation contractor Richmond Hill",
     eyebrow: "AI AUTOMATION IN RICHMOND HILL",
     heroBody: "Richmond Hill\u2019s residential market keeps contractors busy. Automation ensures you never miss a lead while on the job - responding in 90 seconds, following up on quotes, and invoicing on completion.",
-    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: "/contact?industry=contractor&city=richmond-hill" },
+    ctaPrimary: { text: "Book a Free Audit for Your Contracting Business", href: CALENDLY_URL },
     ctaSecondary: { text: "Start the Automation Planner", href: "/automation-planner?industry=contractor" },
     costSection: {
       title: "The Cost of Manual Operations for Contractors in Richmond Hill",
@@ -1918,7 +1919,7 @@ export const localPages: LocalPageData[] = [
     faq: [
       {
         question: "How much does automation cost for contractors in Richmond Hill?",
-        answer: "$3,000\u2013$10,000 CAD. Fixed pricing.",
+        answer: "Projects start from $1,500 CAD. You get a fixed quote after the free 60-minute Automation Audit.",
       },
       {
         question: "How long does implementation take?",
@@ -1934,7 +1935,7 @@ export const localPages: LocalPageData[] = [
       "/services/lead-response-automation",
       "/automation-planner?industry=contractor",
     ],
-    ctaBody: "Book a free 60-minute Automation Audit. We will map the workflows specific to your contracting business in Richmond Hill and show you exactly where the money is leaking.",
+    ctaBody: "Book a free 60-minute Automation Audit. We will walk through the workflows specific to your contracting business in Richmond Hill and show you exactly where the money is leaking.",
     schema: ["LocalBusiness", "Service", "FAQPage", "BreadcrumbList"],
   },
 ];

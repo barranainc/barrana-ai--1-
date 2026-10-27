@@ -6,6 +6,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import JsonLd from "@/components/JsonLd";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ── Brand constants ──────────────────────────────────────────────────────────
 const NAVY = "#283891";
@@ -367,8 +368,7 @@ export default function FullStackServices() {
             One partner who handles your entire operational technology stack. No vendor coordination. No gaps.
           </p>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <Link
-              href="/contact"
+            <AuditBookingLink
               style={{
                 background: BURGUNDY,
                 color: "white",
@@ -381,7 +381,7 @@ export default function FullStackServices() {
               }}
             >
               Book a Free Automation Audit
-            </Link>
+            </AuditBookingLink>
             <Link
               href="/automation-planner"
               style={{
@@ -679,7 +679,7 @@ export default function FullStackServices() {
                 How Full-Stack Engagements Work
               </h2>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
-                Every engagement starts with a free 60-minute Automation Audit. We map your current workflows, identify the highest-impact starting point, and, if you want to go ahead, follow with a fixed-price proposal broken into phases. You keep the workflow map either way.
+                Every engagement starts with a free 60-minute Automation Audit. We walk through your current workflows, identify the highest-impact starting point, and, if you want to go ahead, follow with a fixed-price proposal broken into phases.
               </p>
               <p style={{ color: GREY, lineHeight: 1.75, marginBottom: "1rem" }}>
                 Phase 1 is almost always workflow automation - because it delivers the fastest ROI and creates the operational foundation that everything else is built on. Phase 2 and beyond expand into other layers based on your priorities and growth objectives.
@@ -736,11 +736,10 @@ export default function FullStackServices() {
                 margin: "0 auto 2rem",
               }}
             >
-              Start with a free 60-minute Automation Audit. We map your current workflows and show you where to begin.
+              Start with a free 60-minute Automation Audit. We walk through your current workflows and show you where to begin.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <Link
-                href="/contact"
+              <AuditBookingLink
                 style={{
                   background: BURGUNDY,
                   color: "white",
@@ -753,7 +752,7 @@ export default function FullStackServices() {
                 }}
               >
                 Book a Free Automation Audit
-              </Link>
+              </AuditBookingLink>
               <Link
                 href="/automation-planner"
                 style={{

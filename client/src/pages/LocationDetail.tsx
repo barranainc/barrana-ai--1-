@@ -27,6 +27,7 @@ import IndustryServiceCrosslinks from "@/components/linking/IndustryServiceCross
 import SEOHead from "@/components/SEOHead";
 import { colors, spacing, typography, cards, surfaces, buttons } from "@/styles/design-tokens";
 import { localPages } from "@/data/local-pages";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 /* ─── INDUSTRY ICONS ──────────────────────────────────────── */
 const industryIcons: Record<string, LucideIcon> = {
@@ -137,7 +138,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "400K+", label: "Small businesses in Toronto" },
       { value: "$80K-$200K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "1,800+", label: "Dental clinics" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$36,000", label: "Intake admin and data entry" },
@@ -185,7 +186,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "Barrana HQ", label: "50 Corstate Ave, Vaughan" },
       { value: "60 min", label: "Free Automation Audit" },
       { value: "$70K-$150K", label: "Illustrative waste/yr (5–15 staff)" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$36,000", label: "Intake admin and data entry" },
@@ -235,7 +236,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "560+", label: "Dental clinics in Mississauga" },
       { value: "$80K-$180K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "2nd", label: "Largest city in the GTA" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$42,000", label: "Front-desk phone and scheduling overhead" },
@@ -277,7 +278,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "208", label: "Dental clinics in Richmond Hill" },
       { value: "$70K-$150K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Yonge St", label: "Key professional corridor" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$45,000", label: "No-show and cancellation losses" },
@@ -325,7 +326,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "Tech Capital", label: "Canada's high-tech hub" },
       { value: "$75K-$160K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Digital-first", label: "Client expectations" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$32,000", label: "Manual CRM entry and data sync" },
@@ -373,7 +374,7 @@ const locationData: Record<string, LocationEntry> = {
       { value: "#1", label: "Immigration firm density in GTA" },
       { value: "$80K-$180K", label: "Illustrative waste/yr (5–15 staff)" },
       { value: "Yonge-Finch", label: "Key professional corridor" },
-      { value: "$1,500", label: "Fixed pricing from" },
+      { value: "$1,500 CAD", label: "Fixed pricing from" },
     ],
     costItems: [
       { amount: "$36,000", label: "Intake admin and data entry" },
@@ -397,7 +398,7 @@ const processSteps = [
   {
     num: "01",
     title: "Audit",
-    desc: "We map your current workflow, measure where time and money leak, and identify the highest-ROI automation targets.",
+    desc: "We walk through your current workflow, measure where time and money leak, and identify the highest-ROI automation targets.",
     Icon: Search,
   },
   {
@@ -496,7 +497,7 @@ export default function LocationDetail() {
   /* FAQ items - generic to all locations */
   const locationFaqs = [
     { q: `What types of businesses in ${location.name} do you work with?`, a: `We work with professional services firms, healthcare clinics, contractors, and service-based operators across ${location.name}. Common clients include immigration consultants, accounting firms, dental offices, physiotherapy clinics, law firms, and home service businesses.` },
-    { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Our fixed-price automation systems start at $1,500. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
+    { q: `How much does AI automation cost for a ${location.name} small business?`, a: `Projects start from $1,500 CAD. There are no retainers or hourly fees. The exact cost depends on the complexity of the workflows being automated, which we scope during a free 60-minute Automation Audit.` },
     { q: `How quickly can automation be implemented?`, a: `Most single-workflow automations are live within 1-2 weeks. A full multi-workflow system typically takes 4-6 weeks. You will see measurable results from Week 1 of each deployment.` },
     { q: `Do you work on-site in ${location.name}?`, a: `Our headquarters are at 50 Corstate Avenue in Vaughan. We conduct initial audits and onboarding sessions in person across the GTA when requested, and handle implementation and support remotely for efficiency.` },
     { q: `What is the typical ROI timeline?`, a: `Payback depends on your volumes and scope, so we agree on what to measure before launch. Lead response automation is usually the quickest to show a change, because it converts leads that would otherwise be lost to slow follow-up.` },
@@ -547,9 +548,9 @@ export default function LocationDetail() {
               {location.heroSubtitle}
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-              <Link href={`/contact?city=${slug}`} style={{ ...buttons.primary }}>
+              <AuditBookingLink style={{ ...buttons.primary }}>
                 Book a Free Audit in {location.name} <ArrowRight size={16} />
-              </Link>
+              </AuditBookingLink>
               <Link href="/automation-planner" style={{ ...buttons.secondary }}>
                 Start the Automation Planner <ArrowRight size={16} />
               </Link>
@@ -866,9 +867,9 @@ export default function LocationDetail() {
             Every week you wait is another $1,500-$4,000 in operational waste. Book a free 60-minute Automation Audit and we will show you exactly where the money is leaking.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem", marginBottom: "1.5rem" }}>
-            <Link href={`/contact?city=${slug}`} style={{ ...buttons.primaryOnDark }}>
+            <AuditBookingLink style={{ ...buttons.primaryOnDark }}>
               Book a Free Audit <ArrowRight size={16} />
-            </Link>
+            </AuditBookingLink>
             <Link href="/automation-planner" style={{ ...buttons.secondaryOnDark }}>
               Start the Automation Planner <ArrowRight size={16} />
             </Link>

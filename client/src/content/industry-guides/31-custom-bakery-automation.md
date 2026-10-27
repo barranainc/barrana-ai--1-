@@ -188,9 +188,9 @@ Enquiry intake with capacity checking and deposit collection. It stops overbooki
 
 Barrana works with bakeries, dessert businesses, and custom food producers across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your enquiry, quoting, design approval, production, and delivery processes and show you where capacity and margin are being lost.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your enquiry, quoting, design approval, production, and delivery processes and show you where capacity and margin are being lost.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 
