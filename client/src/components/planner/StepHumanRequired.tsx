@@ -2,7 +2,7 @@ import type { PlannerState, PlannerAction } from "@/types/planner";
 import { HUMAN_REQUIRED_OPTIONS } from "@/config/planner/humanRequired";
 
 const NAVY = "#283891";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const DARK = "#1A1A2E";
 
 interface StepProps {

@@ -37,7 +37,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -73,7 +73,7 @@ function ChaseVsSystem() {
       </div>
 
       {/* Divider */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: "1.1rem", color: "#7B7B7B", paddingTop: "3rem" }}>VS</div>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: "1.1rem", color: "#707070", paddingTop: "3rem" }}>VS</div>
 
       {/* Right: system */}
       <div style={{ background: "#F0FDF4", border: "1px solid #BBF7D0", borderRadius: 12, padding: "1.25rem" }}>
@@ -123,11 +123,11 @@ function DocumentDashboard() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
         <div>
           <h4 style={{ fontWeight: 700, color: "#1A1A2E", margin: 0 }}>Document Collection Status</h4>
-          <p style={{ color: "#7B7B7B", fontSize: "0.85rem", margin: "0.25rem 0 0" }}>10 documents required</p>
+          <p style={{ color: "#707070", fontSize: "0.85rem", margin: "0.25rem 0 0" }}>10 documents required</p>
         </div>
         <div style={{ textAlign: "right" }}>
           <div style={{ fontWeight: 800, fontSize: "1.25rem", color: "#283891" }}>{received}/{total}</div>
-          <div style={{ fontSize: "0.75rem", color: "#7B7B7B" }}>complete</div>
+          <div style={{ fontSize: "0.75rem", color: "#707070" }}>complete</div>
         </div>
       </div>
 
@@ -205,7 +205,7 @@ export default function DocumentCollectionWorkflow() {
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
           <span style={{ background: "#EEF2FF", color: "#283891", fontWeight: 600, fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>Workflow Guide</span>
-          <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>9 min read</span>
+          <span style={{ background: "#F8F9FA", color: "#707070", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>9 min read</span>
         </div>
         <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
           How to Automate Document Collection and Stop Chasing Clients
@@ -219,10 +219,10 @@ export default function DocumentCollectionWorkflow() {
 
       {/* Section 1 */}
       <SectionHeading>The Manual Document Chase Problem</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Staff spend 15+ hours per week chasing documents. The process is the same every time: send the checklist, wait, send a reminder, wait, call the client, receive a partial submission, send another reminder for the outstanding items, wait again. Each cycle takes days. The average collection time for a standard engagement runs 18–21 days.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         The cost isn't just time. Incomplete files at the start of an engagement delay billable work, create bottlenecks, and often require the professional to chase the client themselves - taking them away from the work they're actually trained to do.
       </p>
 
@@ -231,7 +231,7 @@ export default function DocumentCollectionWorkflow() {
 
       {/* Section 2 */}
       <SectionHeading>What Automated Document Collection Does</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         When an engagement is confirmed, the system sends a personalised document request with a dynamic checklist - the items on the list are determined by the service type, not a generic template. The client receives a secure upload portal link: browser-based, no software download required. As documents arrive, the system tracks each item in the CRM in real time. Every 48 hours, a reminder goes out for any outstanding items - automatically, without staff involvement. At Day 10–14 if items are still missing, an escalation alert fires to the assigned team member for personal follow-up. When the package is complete, the team member is notified immediately.
       </p>
 
@@ -240,17 +240,17 @@ export default function DocumentCollectionWorkflow() {
 
       {/* Section 3 */}
       <SectionHeading>The Dynamic Checklist System</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         The most important design element in document collection automation is that the checklist is not the same for every client. Sending a generic 20-item list when a client only needs 8 creates friction and delays. The system reads the service type field from the CRM and generates the appropriate checklist automatically.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1.5rem" }}>
         <div style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
           <div style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "0.5rem" }}>Immigration</div>
-          <p style={{ color: "#7B7B7B", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>Different visa types trigger different document lists. A spousal sponsorship needs different documents than a skilled worker application. The checklist is populated from a lookup table in Make.</p>
+          <p style={{ color: "#707070", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>Different visa types trigger different document lists. A spousal sponsorship needs different documents than a skilled worker application. The checklist is populated from a lookup table in Make.</p>
         </div>
         <div style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
           <div style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "0.5rem" }}>Accounting</div>
-          <p style={{ color: "#7B7B7B", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>T1 personal returns, T2 corporate, and bookkeeping engagements all require different source documents. The intake form captures the service type and the correct list generates automatically.</p>
+          <p style={{ color: "#707070", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>T1 personal returns, T2 corporate, and bookkeeping engagements all require different source documents. The intake form captures the service type and the correct list generates automatically.</p>
         </div>
       </div>
 
@@ -268,7 +268,7 @@ export default function DocumentCollectionWorkflow() {
             <div style={{ background: item.color, color: "#fff", borderRadius: 8, padding: "0.35rem 0.7rem", fontSize: "0.8rem", fontWeight: 700, minWidth: "60px", textAlign: "center", flexShrink: 0 }}>{item.day}</div>
             <div>
               <div style={{ fontWeight: 700, color: "#1A1A2E", fontSize: "0.9rem" }}>{item.label}</div>
-              <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+              <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
             </div>
           </div>
         ))}
@@ -306,7 +306,7 @@ export default function DocumentCollectionWorkflow() {
         ].map((item, i) => (
           <div key={i} style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.4rem", fontSize: "0.9rem" }}>{item.tool}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>

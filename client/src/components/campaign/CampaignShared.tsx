@@ -4,7 +4,7 @@ import { trackMeta } from "@/lib/metaPixel";
  * BARRANA.AI CAMPAIGN COMPONENTS
  * Shared components for standalone campaign landing pages.
  * Design: Personal letter aesthetic - no nav, no distractions, one goal.
- * Colors: Navy #283891 | Magenta #7E0F4A | Grey #7B7B7B | Success Green #0D9668 | Danger Red #DC2626
+ * Colors: Navy #283891 | Magenta #7E0F4A | Grey #707070 | Success Green #0D9668 | Danger Red #DC2626
  * These pages are noindex and have NO main site navigation.
  */
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
@@ -15,7 +15,7 @@ import { CALENDLY_URL } from "@/lib/booking";
 // ─── Brand Constants ─────────────────────────────────────────────────────────
 export const NAVY = "#283891";
 export const MAGENTA = "#7E0F4A";
-export const GREY = "#7B7B7B";
+export const GREY = "#707070";
 export const SUCCESS = "#0D9668";
 export const DANGER = "#DC2626";
 export const BARRANA_LOGO_URL = "/barrana-logo.png";

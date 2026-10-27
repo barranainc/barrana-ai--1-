@@ -318,7 +318,7 @@ export default function ProfessionalServicesGuide() {
             resultBadge="End-to-end automation possible at each transition"
           />
         </div>
-        <p style={{ lineHeight: 1.8, color: "#7B7B7B", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
+        <p style={{ lineHeight: 1.8, color: "#707070", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
           Each arrow in the lifecycle represents a handoff - and every handoff is a point where manual coordination can be replaced with a triggered, reliable automated action.
         </p>
 

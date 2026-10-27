@@ -91,10 +91,10 @@ export default function AutomateClientIntake() {
       {/* Hero */}
       <div style={{ background: "linear-gradient(135deg, #F0F4FF 0%, #F7F9FC 100%)", borderBottom: "1px solid #E2E6F3", padding: "4rem 0 3rem" }}>
         <div className="container" style={{ maxWidth: 800 }}>
-          <nav style={{ display: "flex", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B", marginBottom: "1.5rem" }}>
-            <Link href="/" style={{ color: "#7B7B7B", textDecoration: "none" }}>Home</Link>
+          <nav style={{ display: "flex", gap: "0.4rem", fontSize: "0.8rem", color: "#707070", marginBottom: "1.5rem" }}>
+            <Link href="/" style={{ color: "#707070", textDecoration: "none" }}>Home</Link>
             <span>/</span>
-            <Link href="/resources" style={{ color: "#7B7B7B", textDecoration: "none" }}>Resources</Link>
+            <Link href="/resources" style={{ color: "#707070", textDecoration: "none" }}>Resources</Link>
             <span>/</span>
             <span style={{ color: "#1A1A2E", fontWeight: 600 }}>Automate Client Intake</span>
           </nav>
@@ -107,12 +107,12 @@ export default function AutomateClientIntake() {
             }}>
               Implementation
             </span>
-            <span style={{ fontSize: "0.8125rem", color: "#7B7B7B" }}>⏱ 15 min read</span>
+            <span style={{ fontSize: "0.8125rem", color: "#707070" }}>⏱ 15 min read</span>
           </div>
           <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.75rem)", fontWeight: 800, color: "#1A1A2E", lineHeight: 1.2, marginBottom: "1.25rem" }}>
             How to Automate Client Intake Without Switching Software
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "1.0625rem", color: "#707070", lineHeight: 1.75, marginBottom: "2rem" }}>
             Your intake process sets the tone for every client relationship - yet most service businesses are still handling it manually. This guide walks through a complete automated intake system: from first form submission to a fully briefed team member, with zero data entry.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
@@ -136,15 +136,15 @@ export default function AutomateClientIntake() {
 
         <RevealSection>
           <SectionHeading>Why Manual Intake Costs You More Than You Think</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             Every time a new client enquires, your team is likely performing the same sequence of tasks: sending a welcome email, creating a CRM record, asking for documents, scheduling a call. Multiply that by every new client across a year, and you are looking at hundreds of hours of pure admin.
           </p>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             Beyond time, slow intake has a direct revenue impact. Studies show that responding to an inbound lead within 5 minutes makes you 100 times more likely to connect than waiting 30 minutes. For most businesses doing manual intake, the average response time is 4+ hours. By then, the prospect has often moved on.
           </p>
           <div style={{ background: "#FFF5F5", border: "1px solid #FECACA", borderRadius: 12, padding: "1.25rem 1.5rem", marginBottom: "2rem" }}>
             <p style={{ fontWeight: 700, color: "#B91C1C", marginBottom: "0.5rem" }}>The hidden cost of a slow intake process:</p>
-            <ul style={{ color: "#7B7B7B", lineHeight: 2, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 2, paddingLeft: "1.25rem" }}>
               <li>Lost leads who did not hear back fast enough</li>
               <li>Incomplete intake files that delay billable work</li>
               <li>Staff time spent chasing missing documents</li>
@@ -156,7 +156,7 @@ export default function AutomateClientIntake() {
 
         <RevealSection>
           <SectionHeading>The 7-Step Automated Intake System</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.5rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.5rem" }}>
             Here is how a complete automated intake system works from end to end. This can be implemented for most service businesses within 1 to 2 weeks.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -167,7 +167,7 @@ export default function AutomateClientIntake() {
                 </div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1A2E", marginBottom: "0.25rem" }}>{title}</p>
-                  <p style={{ color: "#7B7B7B", lineHeight: 1.65, fontSize: "0.9375rem" }}>{desc}</p>
+                  <p style={{ color: "#707070", lineHeight: 1.65, fontSize: "0.9375rem" }}>{desc}</p>
                 </div>
               </div>
             ))}
@@ -194,7 +194,7 @@ export default function AutomateClientIntake() {
 
         <RevealSection>
           <SectionHeading>What Tools Are Involved?</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             The beauty of client intake automation is that it works with the tools you already have. You do not need to replace your CRM or email platform - you simply connect them.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem", marginBottom: "2rem" }}>
@@ -208,7 +208,7 @@ export default function AutomateClientIntake() {
             ].map(({ name, examples }) => (
               <div key={name} style={{ background: "#F7F9FC", borderRadius: 10, padding: "1rem 1.25rem", border: "1px solid #E2E6F3" }}>
                 <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.25rem", fontSize: "0.9375rem" }}>{name}</p>
-                <p style={{ color: "#7B7B7B", fontSize: "0.8125rem" }}>{examples}</p>
+                <p style={{ color: "#707070", fontSize: "0.8125rem" }}>{examples}</p>
               </div>
             ))}
           </div>
@@ -216,7 +216,7 @@ export default function AutomateClientIntake() {
 
         <RevealSection>
           <SectionHeading>Industry-Specific Considerations</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             While the core intake flow is universal, some industries have specific requirements:
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
@@ -229,7 +229,7 @@ export default function AutomateClientIntake() {
             ].map(({ industry, note }) => (
               <div key={industry} style={{ background: "white", border: "1px solid #E2E6F3", borderRadius: 10, padding: "1.125rem 1.5rem" }}>
                 <p style={{ fontWeight: 700, color: "#1A1A2E", marginBottom: "0.375rem" }}>{industry}</p>
-                <p style={{ color: "#7B7B7B", lineHeight: 1.65, fontSize: "0.9375rem" }}>{note}</p>
+                <p style={{ color: "#707070", lineHeight: 1.65, fontSize: "0.9375rem" }}>{note}</p>
               </div>
             ))}
           </div>
@@ -251,7 +251,7 @@ export default function AutomateClientIntake() {
                 </div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1A2E", marginBottom: "0.25rem" }}>{step}</p>
-                  <p style={{ color: "#7B7B7B", lineHeight: 1.65, fontSize: "0.9375rem" }}>{detail}</p>
+                  <p style={{ color: "#707070", lineHeight: 1.65, fontSize: "0.9375rem" }}>{detail}</p>
                 </div>
               </div>
             ))}
@@ -260,7 +260,7 @@ export default function AutomateClientIntake() {
 
         <RevealSection>
           <SectionHeading>Implementation Timeline</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1rem" }}>
             A complete intake automation goes live in 2–4 weeks following five sequential steps:
           </p>
           <ImplementationTimeline />

@@ -35,7 +35,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -62,7 +62,7 @@ function DecisionMatrix() {
     {
       label: "BATCH IT",
       freq: "Low", judge: "Low",
-      color: "#7B7B7B", bg: "#F8F9FC",
+      color: "#707070", bg: "#F8F9FC",
       border: "#E2E8F0",
       examples: "Filing, data tidying, admin catch-up",
       position: "bottom-left",
@@ -85,14 +85,14 @@ function DecisionMatrix() {
       <div style={{ position: "relative" }}>
         {/* Axis labels */}
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.5rem" }}>
-          <div style={{ textAlign: "center", fontWeight: 700, color: "#7B7B7B", fontSize: "0.8rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+          <div style={{ textAlign: "center", fontWeight: 700, color: "#707070", fontSize: "0.8rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
             ← Low Judgement Required - High Judgement Required →
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "stretch", gap: "0" }}>
           {/* Y-axis label */}
           <div style={{ display: "flex", alignItems: "center", marginRight: "0.5rem" }}>
-            <div style={{ transform: "rotate(-90deg)", whiteSpace: "nowrap", fontWeight: 700, color: "#7B7B7B", fontSize: "0.78rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+            <div style={{ transform: "rotate(-90deg)", whiteSpace: "nowrap", fontWeight: 700, color: "#707070", fontSize: "0.78rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
               ↑ High Freq ↓ Low
             </div>
           </div>
@@ -100,14 +100,14 @@ function DecisionMatrix() {
             {quadrants.map((q) => (
               <div key={q.label} style={{ background: q.bg, border: `2px solid ${q.border}`, borderRadius: 12, padding: "1.25rem" }}>
                 <div style={{ fontWeight: 800, color: q.color, fontSize: "0.9rem", marginBottom: "0.5rem" }}>{q.label}</div>
-                <div style={{ fontSize: "0.72rem", color: "#7B7B7B", fontWeight: 600, textTransform: "uppercase", marginBottom: "0.4rem" }}>Freq: {q.freq} | Judgement: {q.judge}</div>
-                <p style={{ color: "#7B7B7B", fontSize: "0.8rem", margin: 0, lineHeight: 1.5 }}>{q.examples}</p>
+                <div style={{ fontSize: "0.72rem", color: "#707070", fontWeight: 600, textTransform: "uppercase", marginBottom: "0.4rem" }}>Freq: {q.freq} | Judgement: {q.judge}</div>
+                <p style={{ color: "#707070", fontSize: "0.8rem", margin: 0, lineHeight: 1.5 }}>{q.examples}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <p style={{ textAlign: "center", color: "#7B7B7B", fontSize: "0.8rem", marginTop: "1rem" }}>
+      <p style={{ textAlign: "center", color: "#707070", fontSize: "0.8rem", marginTop: "1rem" }}>
         Start with the top-left quadrant: high frequency, low judgement tasks are your fastest automation wins.
       </p>
     </div>
@@ -204,13 +204,13 @@ export default function AutomationVsDelegation() {
             </SummaryBox>
 
             <SectionHeading>The Core Distinction</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Delegation</strong> means you assign the task to a person. That person can adapt to context, interpret ambiguous situations, exercise judgement, and make decisions based on the specific circumstances. The task still takes human time - it's just someone else's time.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Automation</strong> means the task is removed from people entirely and handled by connected systems. No one decides whether to send the reminder - it happens automatically, every time, without exception. The task takes zero human time.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               These are fundamentally different tools. Using the wrong one for the wrong task creates either unreliable automation (too much variability) or unnecessarily expensive delegation (too much human time on rule-based work). Both outcomes are costly.
             </p>
 
@@ -224,13 +224,13 @@ export default function AutomationVsDelegation() {
               ].map((item, i) => (
                 <div key={i} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.25rem", borderLeft: "4px solid #7E0F4A" }}>
                   <strong style={{ color: "#1A1A2E", display: "block", marginBottom: "0.4rem" }}>{item.title}</strong>
-                  <p style={{ color: "#7B7B7B", margin: 0, lineHeight: 1.7, fontSize: "0.95rem" }}>{item.body}</p>
+                  <p style={{ color: "#707070", margin: 0, lineHeight: 1.7, fontSize: "0.95rem" }}>{item.body}</p>
                 </div>
               ))}
             </div>
 
             <SectionHeading>The Decision Framework</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.7, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.7, marginBottom: "1rem" }}>
               Place every task on two dimensions: how often does it happen (frequency), and how much judgement does it require? The quadrant it falls into tells you the right approach.
             </p>
 
@@ -254,7 +254,7 @@ export default function AutomationVsDelegation() {
                     <tr key={i} style={{ background: i % 2 === 0 ? "#fff" : "#F8F9FC" }}>
                       <td style={{ padding: "0.85rem 1rem", color: "#1A1A2E", fontWeight: 500, fontSize: "0.88rem", borderBottom: "1px solid #E2E8F0" }}>{row.task}</td>
                       <td style={{ padding: "0.85rem 1rem", fontWeight: 700, fontSize: "0.88rem", color: row.decision === "Automate" ? "#22c55e" : "#283891", borderBottom: "1px solid #E2E8F0" }}>{row.decision}</td>
-                      <td style={{ padding: "0.85rem 1rem", color: "#7B7B7B", fontSize: "0.85rem", borderBottom: "1px solid #E2E8F0" }}>{row.reason}</td>
+                      <td style={{ padding: "0.85rem 1rem", color: "#707070", fontSize: "0.85rem", borderBottom: "1px solid #E2E8F0" }}>{row.reason}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -262,10 +262,10 @@ export default function AutomationVsDelegation() {
             </div>
 
             <SectionHeading>The Compounding Effect of Getting It Right</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               When you automate the right tasks, your team's attention shifts to higher-value work - the work that requires judgement, creativity, and relationship. The volume of low-value activity they used to absorb simply disappears. This is not just faster - it is structurally better.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               Over time, the compounding effect is significant. A team freed from reminder emails, CRM data entry, and document chasing can redirect that capacity toward client relationships, strategic work, and growth. The business doesn't just operate more efficiently - it becomes more capable.
             </p>
 
@@ -273,14 +273,14 @@ export default function AutomationVsDelegation() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "2rem" }}>
               <div style={{ background: "#F0F4FF", borderRadius: 12, padding: "1.25rem", border: "2px solid #283891" }}>
                 <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem" }}>Only automation</div>
-                <p style={{ color: "#7B7B7B", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>Handles volume efficiently but loses the human touch that clients need for complex situations. Falls short in high-judgement moments.</p>
+                <p style={{ color: "#707070", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>Handles volume efficiently but loses the human touch that clients need for complex situations. Falls short in high-judgement moments.</p>
               </div>
               <div style={{ background: "#FFF0F8", borderRadius: 12, padding: "1.25rem", border: "2px solid #7E0F4A" }}>
                 <div style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "0.5rem" }}>Only delegation</div>
-                <p style={{ color: "#7B7B7B", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>Human capacity has a ceiling. Growth requires proportionally more headcount. Inconsistency in rule-based tasks creates errors and client friction.</p>
+                <p style={{ color: "#707070", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>Human capacity has a ceiling. Growth requires proportionally more headcount. Inconsistency in rule-based tasks creates errors and client friction.</p>
               </div>
             </div>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               The best-run service businesses use both: automation for everything rule-based and repeatable, delegation for everything that requires context, creativity, accountability, or relationship. The two work in concert - automation creates capacity, delegation uses it wisely.
             </p>
 

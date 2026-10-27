@@ -124,7 +124,7 @@ export default function ResultCard({ opportunity, rank, delay = 0 }: Props) {
         style={{
           margin: "0 0 14px",
           fontSize: 14,
-          color: "#7B7B7B",
+          color: "#707070",
           lineHeight: 1.5,
           display: "-webkit-box",
           WebkitLineClamp: 3,
@@ -181,7 +181,7 @@ export default function ResultCard({ opportunity, rank, delay = 0 }: Props) {
             flexWrap: "wrap",
           }}
         >
-          <span style={{ fontSize: 12, color: "#7B7B7B" }}>Works with:</span>
+          <span style={{ fontSize: 12, color: "#707070" }}>Works with:</span>
           {opportunity.toolsInvolved.map((tool) => (
             <span
               key={tool}
@@ -213,12 +213,12 @@ export default function ResultCard({ opportunity, rank, delay = 0 }: Props) {
           <svg width="14" height="14" viewBox="0 0 20 20" fill="none">
             <path
               d="M10 2L3 6v5c0 4.418 2.986 8.164 7 9 4.014-.836 7-4.582 7-9V6L10 2Z"
-              stroke="#7B7B7B"
+              stroke="#707070"
               strokeWidth="1.5"
               fill="none"
             />
           </svg>
-          <span style={{ fontSize: 12, color: "#7B7B7B", fontStyle: "italic" }}>
+          <span style={{ fontSize: 12, color: "#707070", fontStyle: "italic" }}>
             Human approval gates included
           </span>
         </div>

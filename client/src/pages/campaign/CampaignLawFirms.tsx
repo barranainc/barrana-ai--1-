@@ -2,7 +2,7 @@
  * CAMPAIGN PAGE: /campaign/law-firms
  * Standalone, noindex, no main nav. Single goal: book audit.
  * Target: Small law firms in GTA losing clients to slow intake and manual follow-up.
- * Brand: Navy #283891 | Magenta #7E0F4A | Grey #7B7B7B
+ * Brand: Navy #283891 | Magenta #7E0F4A | Grey #707070
  */
 import { Helmet } from "react-helmet-async";
 import {

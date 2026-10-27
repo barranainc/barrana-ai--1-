@@ -3,7 +3,7 @@
  * Brand Colors (OFFICIAL):
  *   Navy:    #283891  (primary - nav, headings, CTAs, dark sections)
  *   Magenta: #7E0F4A  (accent - dollar amounts, highlights, badges)
- *   Grey:    #7B7B7B  (body text, secondary labels)
+ *   Grey:    #707070  (body text, secondary labels)
  *   Dark:    #1A1A2E  (headings on light backgrounds)
  *   Offwhite: #F5F6FA (section backgrounds)
  *   Border:  #E2E4ED
@@ -66,7 +66,7 @@ import AuditBookingLink, { CALENDLY_URL, CtaLink } from "@/components/AuditBooki
 // Brand color constants
 const NAVY    = "#283891";
 const MAGENTA = "#7E0F4A";
-const GREY    = "#7B7B7B";
+const GREY    = "#707070";
 const DARK    = "#1A1A2E";
 const OFFWHITE = "#F5F6FA";
 const BORDER  = "#E2E4ED";

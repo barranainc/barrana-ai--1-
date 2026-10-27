@@ -123,7 +123,7 @@ function AnalysisLoader() {
       <p
         style={{
           fontSize: 14,
-          color: "#7B7B7B",
+          color: "#707070",
           lineHeight: 1.6,
           margin: 0,
           maxWidth: 300,

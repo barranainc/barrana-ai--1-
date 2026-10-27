@@ -43,7 +43,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -76,7 +76,7 @@ function GTAServiceArea() {
         margin: "2rem 0",
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
+      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#707070", marginBottom: "1.5rem" }}>
         GTA Service Area
       </div>
       <div style={{
@@ -125,7 +125,7 @@ function GTAServiceArea() {
       </div>
       <p style={{
         fontSize: "0.8125rem",
-        color: "#7B7B7B",
+        color: "#707070",
         marginTop: "1.25rem",
         textAlign: "center",
         fontStyle: "italic",
@@ -163,7 +163,7 @@ function EngagementTimeline() {
         overflowX: "auto",
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "2rem" }}>
+      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#707070", marginBottom: "2rem" }}>
         What a Typical Engagement Looks Like
       </div>
       <div style={{ minWidth: "480px" }}>
@@ -205,7 +205,7 @@ function EngagementTimeline() {
               transform: visible ? "translateY(0)" : "translateY(16px)",
               transition: `opacity 0.4s ease ${i * 0.12 + 0.3}s, transform 0.4s cubic-bezier(0.16,1,0.3,1) ${i * 0.12 + 0.3}s`,
             }}>
-              <div style={{ fontSize: "0.68rem", fontWeight: 800, color: "#7B7B7B", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>{step.label}</div>
+              <div style={{ fontSize: "0.68rem", fontWeight: 800, color: "#707070", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>{step.label}</div>
               <div style={{ fontSize: "0.8125rem", fontWeight: 800, color: "#283891", marginBottom: "0.35rem" }}>{step.title}</div>
               <div style={{ fontSize: "0.75rem", color: "#374151", lineHeight: 1.5 }}>{step.desc}</div>
             </div>
@@ -422,7 +422,7 @@ export default function AiAutomationVaughan() {
 
             {/* Related Links */}
             <div style={{ marginTop: "3rem" }}>
-              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#7B7B7B", marginBottom: "1rem" }}>Related Pages</p>
+              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#707070", marginBottom: "1rem" }}>Related Pages</p>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 {[
                   { label: "Our Services", href: "/services" },
@@ -458,11 +458,10 @@ export default function AiAutomationVaughan() {
           "postalCode": "L4K 4X2",
           "addressCountry": "CA"
         },
-        "telephone": "+1-905-555-0000",
+        "telephone": "+1-647-367-6771",
         "url": "https://barrana.ai",
         "description": "AI automation services for small businesses in Vaughan and the Greater Toronto Area.",
-        "areaServed": ["Vaughan", "Toronto", "Markham", "Richmond Hill", "Mississauga", "North York", "Brampton", "Oakville", "Burlington", "Hamilton"],
-        "serviceType": ["AI Automation", "Lead Response Automation", "Client Intake Automation", "Workflow Automation"]
+        "areaServed": ["Vaughan", "Toronto", "Markham", "Richmond Hill", "Mississauga", "North York", "Brampton", "Oakville", "Burlington", "Hamilton"]
       }} />
       <JsonLd data={{
         "@context": "https://schema.org",

@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -78,10 +78,10 @@ function ManualVsAutomatedDay() {
       </div>
 
       <div style={{ display: "flex", gap: "1rem", marginBottom: "0.75rem" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#707070" }}>
           <div style={{ width: 12, height: 12, borderRadius: 2, background: "#DC2626" }} /> Manual
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#707070" }}>
           <div style={{ width: 12, height: 12, borderRadius: 2, background: "#16A34A" }} /> Automated
         </div>
       </div>
@@ -91,7 +91,7 @@ function ManualVsAutomatedDay() {
           <div key={task.label} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-20px)", transition: `opacity 0.4s ease ${i * 0.12}s, transform 0.4s ease ${i * 0.12}s` }}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.3rem" }}>
               <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "#1A1A2E" }}>{task.label}</span>
-              <span style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{task.manual} min → {task.auto} min</span>
+              <span style={{ fontSize: "0.8rem", color: "#707070" }}>{task.manual} min → {task.auto} min</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
               <div style={{ background: "#FEE2E2", borderRadius: 4, height: 14, overflow: "hidden" }}>
@@ -104,7 +104,7 @@ function ManualVsAutomatedDay() {
           </div>
         ))}
       </div>
-      <p style={{ marginTop: "1.25rem", fontSize: "0.8rem", color: "#7B7B7B", fontStyle: "italic" }}>
+      <p style={{ marginTop: "1.25rem", fontSize: "0.8rem", color: "#707070", fontStyle: "italic" }}>
         Manual total: 7 hrs/day in coordination. Automated: 45 min oversight.
       </p>
     </div>
@@ -151,7 +151,7 @@ function AdoptionStaircase() {
             </div>
             <div>
               <div style={{ fontWeight: 700, color: stage.color, fontSize: "0.95rem" }}>{stage.name}</div>
-              <div style={{ fontSize: "0.8rem", color: "#7B7B7B", marginTop: "0.1rem" }}>{stage.desc}</div>
+              <div style={{ fontSize: "0.8rem", color: "#707070", marginTop: "0.1rem" }}>{stage.desc}</div>
             </div>
           </div>
         ))}
@@ -364,9 +364,9 @@ export default function AiAdoptionSmallBusiness() {
               { tier: "Ongoing Support", price: "Quoted with your project", desc: "Monitoring, updates, and iteration support" },
             ].map(t => (
               <div key={t.tier} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{t.tier}</div>
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#707070", marginBottom: "0.5rem" }}>{t.tier}</div>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#283891", marginBottom: "0.4rem" }}>{t.price}</div>
-                <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{t.desc}</div>
+                <div style={{ fontSize: "0.8rem", color: "#707070" }}>{t.desc}</div>
               </div>
             ))}
           </div>

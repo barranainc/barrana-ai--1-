@@ -3,7 +3,7 @@
  * Brand Colors (OFFICIAL):
  *   Navy:    #283891  (primary)
  *   Magenta: #7E0F4A  (accent)
- *   Grey:    #7B7B7B  (body text)
+ *   Grey:    #707070  (body text)
  *   Dark:    #1A1A2E  (headings)
  *   Offwhite: #F5F6FA (alt section bg)
  *   Border:  #E2E4ED

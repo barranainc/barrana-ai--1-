@@ -122,7 +122,7 @@ export default function WorkflowTemplates() {
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-4" style={{ color: "#1A1A2E" }}>
               Workflow Templates
             </h1>
-            <p className="text-lg leading-relaxed" style={{ color: "#7B7B7B" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "#707070" }}>
               Visual automation templates showing exactly how each workflow is structured. Use these as reference for your own implementation.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function WorkflowTemplates() {
               <h3 className="text-2xl font-bold mb-3" style={{ color: "#1A1A2E" }}>
                 {template.title}
               </h3>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "#7B7B7B" }}>
+              <p className="text-base leading-relaxed mb-8" style={{ color: "#707070" }}>
                 {template.description}
               </p>
               <WorkflowDiagram steps={template.steps} resultBadge={template.resultBadge} />

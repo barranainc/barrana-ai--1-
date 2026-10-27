@@ -288,7 +288,7 @@ function ROITimeline() {
           {roiNodes.map((node, i) => (
             <div key={i} style={{ flex: 1, textAlign: "center" }}>
               <div style={{ fontSize: "0.75rem", fontWeight: 800, color: "#283891" }}>{node.label}</div>
-              <div style={{ fontSize: "0.7rem", color: "#7B7B7B", marginTop: "2px" }}>{node.sublabel}</div>
+              <div style={{ fontSize: "0.7rem", color: "#707070", marginTop: "2px" }}>{node.sublabel}</div>
             </div>
           ))}
         </div>
@@ -353,7 +353,7 @@ function StartingPointCards() {
         >
           <span style={{ fontSize: "2rem" }}>{item.emoji}</span>
           <span style={{ fontWeight: 800, fontSize: "0.9rem", color: "#1A1A2E" }}>{item.title}</span>
-          <span style={{ fontSize: "0.78rem", color: "#7B7B7B", lineHeight: 1.4 }}>{item.benefit}</span>
+          <span style={{ fontSize: "0.78rem", color: "#707070", lineHeight: 1.4 }}>{item.benefit}</span>
           <span style={{ fontSize: "0.75rem", color: "#283891", fontWeight: 700, marginTop: "0.25rem" }}>Learn more →</span>
         </Link>
       ))}
@@ -374,10 +374,10 @@ export default function WhatIsAIAutomation() {
       <section style={{ background: "#fff", borderBottom: "1px solid #E2E8F0", padding: "3rem 0 2.5rem" }}>
         <div className="container" style={{ maxWidth: "860px" }}>
           {/* Breadcrumb */}
-          <nav style={{ fontSize: "0.8125rem", color: "#7B7B7B", marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
-            <Link href="/" style={{ color: "#7B7B7B", textDecoration: "none" }}>Home</Link>
+          <nav style={{ fontSize: "0.8125rem", color: "#707070", marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <Link href="/" style={{ color: "#707070", textDecoration: "none" }}>Home</Link>
             <span>/</span>
-            <Link href="/resources" style={{ color: "#7B7B7B", textDecoration: "none" }}>Resources</Link>
+            <Link href="/resources" style={{ color: "#707070", textDecoration: "none" }}>Resources</Link>
             <span>/</span>
             <span style={{ color: "#1A1A2E" }}>What Is AI Automation</span>
           </nav>
@@ -392,7 +392,7 @@ export default function WhatIsAIAutomation() {
             }}>
               Getting Started
             </span>
-            <span style={{ fontSize: "0.8125rem", color: "#7B7B7B" }}>⏱ 8 min read</span>
+            <span style={{ fontSize: "0.8125rem", color: "#707070" }}>⏱ 8 min read</span>
           </div>
 
           <h1 style={{

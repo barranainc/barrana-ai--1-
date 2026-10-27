@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -79,7 +79,7 @@ function AutomationBoundaryMap() {
         overflowX: "auto",
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
+      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#707070", marginBottom: "1.5rem" }}>
         Client Lifecycle - Automation Boundary Map
       </div>
       <div style={{ display: "flex", gap: "0", alignItems: "center", flexWrap: "wrap", minWidth: "560px" }}>
@@ -386,7 +386,7 @@ export default function HumanInTheLoop() {
 
             {/* Related Links */}
             <div style={{ marginTop: "3rem" }}>
-              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#7B7B7B", marginBottom: "1rem" }}>Related Pages</p>
+              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#707070", marginBottom: "1rem" }}>Related Pages</p>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 {[
                   { label: "Governance Approach", href: "/governance" },

@@ -97,7 +97,7 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
       background: isFilled ? "rgba(126,15,74,0.06)" : "rgba(126,15,74,0.04)",
       animation: (!isFilled && visible) ? "pulseHighlight 2s ease-in-out infinite" : "none",
     };
-    return { ...base, bottom: 0, left: 0, background: "rgba(123,123,123,0.05)" };
+    return { ...base, bottom: 0, left: 0, background: "rgba(112, 112, 112,0.05)" };
   };
 
   const getDotPosition = (dot: MatrixDot): React.CSSProperties => {
@@ -116,7 +116,7 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
   return (
     <div ref={ref} style={{ margin: "2rem 0" }}>
       {title && (
-        <p style={{ fontSize: "0.8125rem", fontWeight: 700, color: "#7B7B7B", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.75rem" }}>
+        <p style={{ fontSize: "0.8125rem", fontWeight: 700, color: "#707070", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.75rem" }}>
           {title}
         </p>
       )}
@@ -141,7 +141,7 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
             transform: "rotate(180deg)",
             fontSize: "0.75rem",
             fontWeight: 700,
-            color: "#7B7B7B",
+            color: "#707070",
             letterSpacing: "0.07em",
             textAlign: "center",
             flexShrink: 0,
@@ -173,15 +173,15 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
                   {/* Quadrant fills */}
                   <div style={quadrantStyle("tl")}>
                     <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "#374151", lineHeight: 1.3 }}>Monitor</span>
-                    <span style={{ fontSize: "0.675rem", color: "#7B7B7B", marginTop: "0.2rem" }}>Low automation priority</span>
+                    <span style={{ fontSize: "0.675rem", color: "#707070", marginTop: "0.2rem" }}>Low automation priority</span>
                   </div>
                   <div style={quadrantStyle("tr")}>
                     <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "#283891", lineHeight: 1.3 }}>Protect</span>
-                    <span style={{ fontSize: "0.675rem", color: "#7B7B7B", marginTop: "0.2rem" }}>Keep human, reduce surrounding admin</span>
+                    <span style={{ fontSize: "0.675rem", color: "#707070", marginTop: "0.2rem" }}>Keep human, reduce surrounding admin</span>
                   </div>
                   <div style={quadrantStyle("bl")}>
                     <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "#374151", lineHeight: 1.3 }}>Batch & Simplify</span>
-                    <span style={{ fontSize: "0.675rem", color: "#7B7B7B", marginTop: "0.2rem" }}>Low priority</span>
+                    <span style={{ fontSize: "0.675rem", color: "#707070", marginTop: "0.2rem" }}>Low priority</span>
                   </div>
                   <div style={quadrantStyle("br")}>
                     <span style={{ fontSize: "0.75rem", fontWeight: 800, color: "#7E0F4A", lineHeight: 1.3 }}>
@@ -242,7 +242,7 @@ function FrictionMatrix({ showDots, isFilled = false, title }: FrictionMatrixPro
             </div>
 
             {/* X-axis label */}
-            <div style={{ textAlign: "center", fontSize: "0.75rem", fontWeight: 700, color: "#7B7B7B", letterSpacing: "0.07em", marginTop: "0.5rem", userSelect: "none" }}>
+            <div style={{ textAlign: "center", fontSize: "0.75rem", fontWeight: 700, color: "#707070", letterSpacing: "0.07em", marginTop: "0.5rem", userSelect: "none" }}>
               Frequency (Low → High)
             </div>
           </div>
@@ -264,10 +264,10 @@ export default function OperationalFrictionMap() {
       {/* Hero */}
       <section style={{ background: "#fff", borderBottom: "1px solid #E2E8F0", padding: "3rem 0 2.5rem" }}>
         <div className="container" style={{ maxWidth: "860px" }}>
-          <nav style={{ fontSize: "0.8125rem", color: "#7B7B7B", marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
-            <Link href="/" style={{ color: "#7B7B7B", textDecoration: "none" }}>Home</Link>
+          <nav style={{ fontSize: "0.8125rem", color: "#707070", marginBottom: "1.25rem", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+            <Link href="/" style={{ color: "#707070", textDecoration: "none" }}>Home</Link>
             <span>/</span>
-            <Link href="/resources" style={{ color: "#7B7B7B", textDecoration: "none" }}>Resources</Link>
+            <Link href="/resources" style={{ color: "#707070", textDecoration: "none" }}>Resources</Link>
             <span>/</span>
             <span style={{ color: "#1A1A2E" }}>Operational Friction Map</span>
           </nav>
@@ -281,7 +281,7 @@ export default function OperationalFrictionMap() {
             }}>
               Framework
             </span>
-            <span style={{ fontSize: "0.8125rem", color: "#7B7B7B" }}>⏱ 12 min read</span>
+            <span style={{ fontSize: "0.8125rem", color: "#707070" }}>⏱ 12 min read</span>
           </div>
 
           <h1 style={{
@@ -324,7 +324,7 @@ export default function OperationalFrictionMap() {
 
           <FrictionMatrix showDots={exampleDots} title="Figure 1 - Friction Quadrant Framework" />
 
-          <p style={{ fontSize: "0.875rem", color: "#7B7B7B", marginTop: "-1rem", marginBottom: "2rem", fontStyle: "italic" }}>
+          <p style={{ fontSize: "0.875rem", color: "#707070", marginTop: "-1rem", marginBottom: "2rem", fontStyle: "italic" }}>
             Plot any task by how often it occurs (horizontal) and how much professional skill it requires (vertical). The bottom-right quadrant is your automation target zone.
           </p>
 
@@ -416,7 +416,7 @@ export default function OperationalFrictionMap() {
                 </div>
                 <div>
                   <div style={{ fontWeight: 700, fontSize: "0.9rem", color: "#1A1A2E", marginBottom: "0.2rem" }}>{s.title}</div>
-                  <div style={{ fontSize: "0.85rem", color: "#7B7B7B" }}>{s.detail}</div>
+                  <div style={{ fontSize: "0.85rem", color: "#707070" }}>{s.detail}</div>
                 </div>
               </div>
             ))}

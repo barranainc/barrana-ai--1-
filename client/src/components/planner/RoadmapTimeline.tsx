@@ -29,7 +29,7 @@ const PHASES = [
     sublabel: "Mature Operations",
     timeframe: "Weeks 9–16",
     filled: false,
-    color: "#7B7B7B",
+    color: "#707070",
   },
 ];
 
@@ -110,7 +110,7 @@ export default function RoadmapTimeline({ phase1, phase2, phase3 }: Props) {
                     <div
                       style={{
                         fontSize: 11,
-                        color: "#7B7B7B",
+                        color: "#707070",
                         marginTop: 2,
                       }}
                     >
@@ -150,7 +150,7 @@ export default function RoadmapTimeline({ phase1, phase2, phase3 }: Props) {
                     ))}
                   </ul>
                 ) : (
-                  <p style={{ fontSize: 13, color: "#7B7B7B", margin: 0, fontStyle: "italic" }}>
+                  <p style={{ fontSize: 13, color: "#707070", margin: 0, fontStyle: "italic" }}>
                     No items in this phase
                   </p>
                 )}

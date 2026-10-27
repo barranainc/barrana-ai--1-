@@ -19,7 +19,7 @@ import { CALENDLY_URL } from "@/components/AuditBookingLink";
 // ── Brand ─────────────────────────────────────────────────────────────────────
 const NAVY = "#283891";
 const BURGUNDY = "#7E0F4A";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const DARK = "#1A1A2E";
 const GREEN = "#0D9668";
 const AMBER = "#D97706";

@@ -6,7 +6,7 @@
 import { Link } from "wouter";
 
 const NAVY = "#283891";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 
 interface ContextualCTAProps {
   label: string;

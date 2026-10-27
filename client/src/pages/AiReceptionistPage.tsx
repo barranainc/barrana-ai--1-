@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -107,7 +107,7 @@ function CallFlowDiagram() {
 
       {/* 3-way branch */}
       <div style={{ borderTop: "2px dashed #CBD5E1", paddingTop: "1.5rem" }}>
-        <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#7B7B7B", letterSpacing: "0.07em", textTransform: "uppercase", marginBottom: "1rem" }}>Routing Outcomes</div>
+        <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#707070", letterSpacing: "0.07em", textTransform: "uppercase", marginBottom: "1rem" }}>Routing Outcomes</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0.875rem" }}>
           {outcomes.map((o, i) => (
             <div key={o.label} style={{
@@ -120,7 +120,7 @@ function CallFlowDiagram() {
               transition: `opacity 0.4s ease ${0.6 + i * 0.12}s, transform 0.4s ease ${0.6 + i * 0.12}s`,
             }}>
               <div style={{ fontWeight: 800, fontSize: "0.875rem", color: o.color, marginBottom: "0.3rem" }}>{o.label}</div>
-              <div style={{ fontSize: "0.775rem", color: "#7B7B7B" }}>{o.desc}</div>
+              <div style={{ fontSize: "0.775rem", color: "#707070" }}>{o.desc}</div>
             </div>
           ))}
         </div>
@@ -183,7 +183,7 @@ function CoverageTimeline() {
       {/* Hour labels */}
       <div style={{ display: "flex", gap: 0, marginBottom: "0.5rem", paddingLeft: 180 }}>
         {[0, 6, 12, 18, 23].map(h => (
-          <div key={h} style={{ flex: h === 23 ? 1 : 6, fontSize: "0.65rem", color: "#7B7B7B", textAlign: "left" }}>
+          <div key={h} style={{ flex: h === 23 ? 1 : 6, fontSize: "0.65rem", color: "#707070", textAlign: "left" }}>
             {h === 0 ? "12am" : h === 6 ? "6am" : h === 12 ? "12pm" : h === 18 ? "6pm" : "11pm"}
           </div>
         ))}
@@ -229,7 +229,7 @@ function CoverageTimeline() {
           { color: "#0F766E", label: "AI Receptionist" },
           { color: "#283891", label: "Human (business hours)" },
         ].map(l => (
-          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", color: "#7B7B7B" }}>
+          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", color: "#707070" }}>
             <div style={{ width: 12, height: 12, borderRadius: 2, background: l.color, flexShrink: 0 }} />
             {l.label}
           </div>
@@ -491,9 +491,9 @@ export default function AiReceptionistPage() {
               { label: "Payback", value: "Depends on call volume", note: "Measured against your baseline after launch" },
             ].map(c => (
               <div key={c.label} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{c.label}</div>
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#707070", marginBottom: "0.5rem" }}>{c.label}</div>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#283891", marginBottom: "0.3rem" }}>{c.value}</div>
-                <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{c.note}</div>
+                <div style={{ fontSize: "0.8rem", color: "#707070" }}>{c.note}</div>
               </div>
             ))}
           </div>

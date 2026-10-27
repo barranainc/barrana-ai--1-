@@ -74,10 +74,10 @@ export default function IntegrationPriorityMatrix() {
       {/* Hero */}
       <div style={{ background: "linear-gradient(135deg, #F0F4FF 0%, #F7F9FC 100%)", borderBottom: "1px solid #E2E6F3", padding: "4rem 0 3rem" }}>
         <div className="container" style={{ maxWidth: 900 }}>
-          <nav style={{ display: "flex", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B", marginBottom: "1.5rem" }}>
-            <Link href="/" style={{ color: "#7B7B7B", textDecoration: "none" }}>Home</Link>
+          <nav style={{ display: "flex", gap: "0.4rem", fontSize: "0.8rem", color: "#707070", marginBottom: "1.5rem" }}>
+            <Link href="/" style={{ color: "#707070", textDecoration: "none" }}>Home</Link>
             <span>/</span>
-            <Link href="/resources" style={{ color: "#7B7B7B", textDecoration: "none" }}>Resources</Link>
+            <Link href="/resources" style={{ color: "#707070", textDecoration: "none" }}>Resources</Link>
             <span>/</span>
             <span style={{ color: "#1A1A2E", fontWeight: 600 }}>Integration Priority Matrix</span>
           </nav>
@@ -87,7 +87,7 @@ export default function IntegrationPriorityMatrix() {
           <h1 style={{ fontSize: "clamp(1.75rem,4vw,2.75rem)", fontWeight: 800, color: "#1A1A2E", lineHeight: 1.2, marginBottom: "1.25rem" }}>
             The Integration Priority Matrix
           </h1>
-          <p style={{ fontSize: "1.0625rem", color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ fontSize: "1.0625rem", color: "#707070", lineHeight: 1.75, marginBottom: "2rem" }}>
             Not all integrations are equal. This matrix ranks the most common tool connections by business impact and implementation effort - so you know exactly where to start and what to leave for later.
           </p>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
@@ -111,10 +111,10 @@ export default function IntegrationPriorityMatrix() {
 
         <RevealSection>
           <SectionHeading>Why Integration Sequencing Matters</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             Most businesses approach tool integration backwards - they start with the most visible system (often the CRM) and try to connect everything at once. The result is brittle automations, data conflicts, and teams who stop trusting the tools.
           </p>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "2rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "2rem" }}>
             The right approach is to establish a clean data flow in layers: first ensure every lead is captured (Tier 1), then ensure every job is billed correctly (Tier 2), then optimise for reporting and visibility (Tier 3). Each tier builds on the data quality established by the previous one.
           </p>
         </RevealSection>
@@ -133,7 +133,7 @@ export default function IntegrationPriorityMatrix() {
                   borderRadius: 6,
                   border: filter === t ? "none" : "1.5px solid #E2E6F3",
                   background: filter === t ? "#283891" : "white",
-                  color: filter === t ? "white" : "#7B7B7B",
+                  color: filter === t ? "white" : "#707070",
                   fontWeight: 700,
                   fontSize: "0.875rem",
                   cursor: "pointer",
@@ -152,12 +152,12 @@ export default function IntegrationPriorityMatrix() {
                   <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap", marginBottom: "0.625rem" }}>
                     <div>
                       <p style={{ fontWeight: 800, color: "#1A1A2E", fontSize: "1rem", marginBottom: "0.2rem" }}>{tool}</p>
-                      <p style={{ color: "#7B7B7B", fontSize: "0.8125rem" }}>{category}</p>
+                      <p style={{ color: "#707070", fontSize: "0.8125rem" }}>{category}</p>
                     </div>
                     <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", alignItems: "center" }}>
                       <span style={{ background: pc.bg, color: pc.text, fontWeight: 700, fontSize: "0.75rem", padding: "0.3rem 0.75rem", borderRadius: 20 }}>{priority}</span>
                       <span style={{ background: "#F0F4FF", color: "#283891", fontWeight: 600, fontSize: "0.75rem", padding: "0.3rem 0.75rem", borderRadius: 20 }}>Impact: {impact}</span>
-                      <span style={{ background: "#FFF", color: "#7B7B7B", fontWeight: 600, fontSize: "0.75rem", padding: "0.3rem 0.75rem", borderRadius: 20, border: "1px solid #E2E6F3" }}>Effort: {effort}</span>
+                      <span style={{ background: "#FFF", color: "#707070", fontWeight: 600, fontSize: "0.75rem", padding: "0.3rem 0.75rem", borderRadius: 20, border: "1px solid #E2E6F3" }}>Effort: {effort}</span>
                     </div>
                   </div>
                   <p style={{ color: "#4B5563", lineHeight: 1.65, fontSize: "0.9375rem" }}>{why}</p>
@@ -169,7 +169,7 @@ export default function IntegrationPriorityMatrix() {
 
         <RevealSection>
           <SectionHeading>The Tier 1 Stack: What to Build First</SectionHeading>
-          <p style={{ color: "#7B7B7B", lineHeight: 1.75, marginBottom: "1.25rem" }}>
+          <p style={{ color: "#707070", lineHeight: 1.75, marginBottom: "1.25rem" }}>
             For most service businesses, the Tier 1 stack looks like this: a web form feeds into your CRM, the CRM triggers an email sequence, and new bookings update the CRM record automatically. This takes 1 to 2 weeks to implement and typically saves 6 to 10 hours per week immediately.
           </p>
           <div style={{ background: "#F0F4FF", borderRadius: 12, padding: "1.5rem 1.75rem", marginBottom: "2rem" }}>
@@ -197,7 +197,7 @@ export default function IntegrationPriorityMatrix() {
                 <div style={{ color: "#DC2626", fontSize: "1.25rem", flexShrink: 0, lineHeight: 1 }}>x</div>
                 <div>
                   <p style={{ fontWeight: 700, color: "#1A1A2E", marginBottom: "0.25rem" }}>Mistake: {mistake}</p>
-                  <p style={{ color: "#7B7B7B", fontSize: "0.9375rem" }}><strong style={{ color: "#16A34A" }}>Fix:</strong> {fix}</p>
+                  <p style={{ color: "#707070", fontSize: "0.9375rem" }}><strong style={{ color: "#16A34A" }}>Fix:</strong> {fix}</p>
                 </div>
               </div>
             ))}

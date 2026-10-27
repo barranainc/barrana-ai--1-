@@ -24,7 +24,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -90,7 +90,7 @@ function SolopreneurWeekCalendar() {
                 )}
                 <div style={{ width: "100%", height: billableH, background: "#22C55E", opacity: visible ? 1 : 0, transition: `opacity 0.4s ease ${i * 0.15}s` }} />
               </div>
-              <span style={{ fontSize: "0.8rem", color: "#7B7B7B", fontWeight: 600 }}>{d.day}</span>
+              <span style={{ fontSize: "0.8rem", color: "#707070", fontWeight: 600 }}>{d.day}</span>
             </div>
           );
         })}
@@ -107,7 +107,7 @@ function SolopreneurWeekCalendar() {
           </div>
         )}
       </div>
-      <p style={{ textAlign: "center", fontSize: "0.8rem", color: "#7B7B7B", marginTop: "0.5rem" }}>
+      <p style={{ textAlign: "center", fontSize: "0.8rem", color: "#707070", marginTop: "0.5rem" }}>
         {!showAfter ? "Showing: current week breakdown" : "Showing: automated week - watch the bars shift"}
       </p>
     </div>
@@ -143,7 +143,7 @@ function SolopreneurToolHub() {
           <div key={t.name} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 10, padding: "0.85rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 4, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: `opacity 0.4s ease ${i * 0.07}s, transform 0.4s ease ${i * 0.07}s` }}>
             <span style={{ fontSize: "1.5rem" }}>{t.emoji}</span>
             <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "#1A1A2E" }}>{t.name}</span>
-            <span style={{ fontSize: "0.75rem", color: "#7B7B7B" }}>{t.detail}</span>
+            <span style={{ fontSize: "0.75rem", color: "#707070" }}>{t.detail}</span>
           </div>
         ))}
       </div>
@@ -208,7 +208,7 @@ function SolopreneurToolHub() {
             }}>
               <div style={{ fontSize: "1.1rem" }}>{t.emoji}</div>
               <div style={{ fontWeight: 700, fontSize: "0.7rem", color: "#1A1A2E", lineHeight: 1.2 }}>{t.name}</div>
-              <div style={{ fontSize: "0.6rem", color: "#7B7B7B", lineHeight: 1.2 }}>{t.detail}</div>
+              <div style={{ fontSize: "0.6rem", color: "#707070", lineHeight: 1.2 }}>{t.detail}</div>
             </div>
           );
         })}
@@ -465,7 +465,7 @@ export default function Solopreneurs() {
                   <div style={{ fontWeight: 800, color: "#1A1A2E", marginBottom: "0.5rem" }}>{d.day}</div>
                   <div style={{ color: "#22C55E", fontSize: "0.9rem", marginBottom: "0.4rem" }}>✓ {d.sessions}</div>
                   {d.ops.map((o) => <div key={o} style={{ color: "#EF4444", fontSize: "0.85rem", marginBottom: "0.2rem" }}>✗ {o}</div>)}
-                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#7B7B7B" }}>Total: {d.total} - only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
+                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#707070" }}>Total: {d.total} - only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
                 </div>
               ))}
             </div>
@@ -649,11 +649,11 @@ export default function Solopreneurs() {
                       <li key={item} style={{ color: tier.highlight ? "#C7D2FE" : "#4A4A4A", lineHeight: 1.8, fontSize: "0.9rem" }}>{item}</li>
                     ))}
                   </ul>
-                  <p style={{ fontSize: "0.85rem", color: tier.highlight ? "#A5B4FC" : "#7B7B7B", fontStyle: "italic", margin: 0 }}>{tier.note}</p>
+                  <p style={{ fontSize: "0.85rem", color: tier.highlight ? "#A5B4FC" : "#707070", fontStyle: "italic", margin: 0 }}>{tier.note}</p>
                 </div>
               ))}
             </div>
-            <p style={{ marginTop: "1.5rem", color: "#7B7B7B", fontSize: "0.9rem" }}>
+            <p style={{ marginTop: "1.5rem", color: "#707070", fontSize: "0.9rem" }}>
               Ongoing maintenance is quoted with your project: monitoring workflows, updating integrations, and adding small automations as your business evolves.
             </p>
           </div>

@@ -15,7 +15,7 @@ export const colors = {
   // Text
   textPrimary: "#1a1a2e",
   textBody: "#4A4A4A",
-  textSecondary: "#7B7B7B",
+  textSecondary: "#707070",
 
   // Semantic
   success: "#0D9668",

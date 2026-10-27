@@ -36,7 +36,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -80,7 +80,7 @@ function PriorityPyramid() {
           );
         })}
       </div>
-      <p style={{ textAlign: "center", color: "#7B7B7B", fontSize: "0.8rem", marginTop: "1rem" }}>
+      <p style={{ textAlign: "center", color: "#707070", fontSize: "0.8rem", marginTop: "1rem" }}>
         Start at the base - Lead Response delivers the fastest measurable ROI
       </p>
     </div>
@@ -139,10 +139,10 @@ export default function WhatToAutomateFirst() {
             </SummaryBox>
 
             <SectionHeading>Why the First Automation Decision Matters Most</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               You are more likely to stall on automation entirely if your first project fails. A bad first experience creates scepticism that delays every subsequent initiative - often by months or years. This is why the selection of the first automation deserves careful thought, not just enthusiasm.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               The first automation must meet three criteria: (a) <strong>high-ROI</strong> so you feel the impact quickly and can justify the effort, (b) <strong>low-complexity</strong> so implementation doesn't drag out and lose momentum, and (c) <strong>measurable</strong> so you can prove to yourself and your team that it worked.
             </p>
 
@@ -177,10 +177,10 @@ export default function WhatToAutomateFirst() {
             ].map((item) => (
               <div key={item.rank} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.5rem", marginBottom: "1.25rem", borderLeft: `4px solid ${item.rank === 1 ? "#283891" : "#E2E8F0"}` }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
-                  <span style={{ background: item.rank === 1 ? "#283891" : "#7B7B7B", color: "#fff", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", fontWeight: 700, flexShrink: 0 }}>{item.rank}</span>
+                  <span style={{ background: item.rank === 1 ? "#283891" : "#707070", color: "#fff", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.85rem", fontWeight: 700, flexShrink: 0 }}>{item.rank}</span>
                   <strong style={{ color: "#1A1A2E", fontSize: "1rem" }}>{item.title}</strong>
                 </div>
-                <p style={{ color: "#7B7B7B", lineHeight: 1.7, margin: "0 0 0.75rem" }}>{item.desc}</p>
+                <p style={{ color: "#707070", lineHeight: 1.7, margin: "0 0 0.75rem" }}>{item.desc}</p>
                 <div style={{ display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
                   <span style={{ fontSize: "0.82rem", color: "#283891", fontWeight: 600 }}>Implementation: {item.time}</span>
                   <span style={{ fontSize: "0.82rem", color: "#7E0F4A", fontWeight: 600 }}>Typical result: {item.result}</span>
@@ -189,7 +189,7 @@ export default function WhatToAutomateFirst() {
             ))}
 
             <SectionHeading>Why Lead Response Wins as the First Automation</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               The cost of slow lead response is immediate and measurable. Research consistently shows: contact rate at 5 minutes is 78%. At 30 minutes, it drops to 26%. At 1 hour, it falls to 12%. Every hour of delay costs you real conversions with prospects who have already moved on to a competitor.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", margin: "1.5rem 0 2rem" }}>
@@ -201,11 +201,11 @@ export default function WhatToAutomateFirst() {
                 <div key={stat.time} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem", textAlign: "center" }}>
                   <div style={{ fontSize: "2rem", fontWeight: 900, color: stat.color }}>{stat.rate}</div>
                   <div style={{ color: "#1A1A2E", fontWeight: 600, fontSize: "0.9rem" }}>Contact rate</div>
-                  <div style={{ color: "#7B7B7B", fontSize: "0.82rem" }}>at {stat.time} response</div>
+                  <div style={{ color: "#707070", fontSize: "0.82rem" }}>at {stat.time} response</div>
                 </div>
               ))}
             </div>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               Most service businesses have at least 5–10 missed or delayed leads per month - each worth $500–$5,000+. Faster response can win back some of those leads; we measure your baseline first so the change can be shown.
             </p>
 
@@ -234,7 +234,7 @@ export default function WhatToAutomateFirst() {
                     <tr key={row.industry} style={{ background: i % 2 === 0 ? "#fff" : "#F8F9FC" }}>
                       <td style={{ padding: "0.85rem 1rem", fontWeight: 600, color: "#1A1A2E", fontSize: "0.9rem", borderBottom: "1px solid #E2E8F0" }}>{row.industry}</td>
                       <td style={{ padding: "0.85rem 1rem", color: "#283891", fontWeight: 600, fontSize: "0.9rem", borderBottom: "1px solid #E2E8F0" }}>{row.rec}</td>
-                      <td style={{ padding: "0.85rem 1rem", color: "#7B7B7B", fontSize: "0.88rem", borderBottom: "1px solid #E2E8F0" }}>{row.why}</td>
+                      <td style={{ padding: "0.85rem 1rem", color: "#707070", fontSize: "0.88rem", borderBottom: "1px solid #E2E8F0" }}>{row.why}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -242,7 +242,7 @@ export default function WhatToAutomateFirst() {
             </div>
 
             <SectionHeading>The Phased Approach: Do Not Automate Everything At Once</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               The most common mistake business owners make is trying to automate everything simultaneously. Phase 1 should be a single workflow - implemented, tested, and measured. Only once it is running reliably should you expand.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "1.5rem" }}>
@@ -253,16 +253,16 @@ export default function WhatToAutomateFirst() {
               ].map((p) => (
                 <div key={p.phase} style={{ borderLeft: `4px solid ${p.color}`, background: "#F8F9FC", borderRadius: "0 12px 12px 0", padding: "1.25rem" }}>
                   <div style={{ fontWeight: 700, color: p.color, marginBottom: "0.4rem" }}>{p.phase}</div>
-                  <p style={{ color: "#7B7B7B", margin: 0, fontSize: "0.9rem", lineHeight: 1.6 }}>{p.desc}</p>
+                  <p style={{ color: "#707070", margin: 0, fontSize: "0.9rem", lineHeight: 1.6 }}>{p.desc}</p>
                 </div>
               ))}
             </div>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               Rushing to Phase 3 before Phase 1 is solid creates fragile systems that fail at the worst moments and erode trust in automation entirely.
             </p>
 
             <SectionHeading>Common Mistakes When Choosing What to Automate</SectionHeading>
-            <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li><strong style={{ color: "#1A1A2E" }}>Starting with the most complex workflow</strong> - complexity means longer timelines and more failure points, exactly what you don't want from a first project.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Choosing based on what's technically possible rather than ROI</strong> - impressive demos don't equal business value. Start where the money is.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Skipping measurement</strong> - if you don't define success metrics before you build, you'll never know if it worked.</li>

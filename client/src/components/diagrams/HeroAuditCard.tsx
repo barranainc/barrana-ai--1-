@@ -6,7 +6,7 @@ import { CheckCircle } from "lucide-react";
 
 const DARK = "#1A1A2E";
 const GREEN = "#0D9668";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const NAVY = "#283891";
 const BORDER = "#E2E4ED";
 

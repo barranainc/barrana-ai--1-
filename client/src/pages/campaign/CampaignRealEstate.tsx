@@ -2,7 +2,7 @@
  * CAMPAIGN PAGE: /campaign/real-estate
  * Standalone, noindex, no main nav. Single goal: book audit.
  * Target: GTA real estate agents with cold CRM leads and no follow-up system.
- * Brand: Navy #283891 | Magenta #7E0F4A | Grey #7B7B7B
+ * Brand: Navy #283891 | Magenta #7E0F4A | Grey #707070
  */
 import { Helmet } from "react-helmet-async";
 import {

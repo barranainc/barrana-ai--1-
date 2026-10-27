@@ -79,7 +79,7 @@ function ROIPyramid() {
           </div>
         </div>
       ))}
-      <div style={{ marginTop: "0.75rem", fontSize: "0.8125rem", color: "#7B7B7B", textAlign: "center" }}>
+      <div style={{ marginTop: "0.75rem", fontSize: "0.8125rem", color: "#707070", textAlign: "center" }}>
         The Automation ROI Stack - value compounds as you move up
       </div>
     </div>
