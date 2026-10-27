@@ -184,9 +184,9 @@ Order aggregation into one queue. It reduces the most immediate daily pain, and 
 
 Barrana works with ghost kitchens, virtual restaurant brands, and delivery-first food businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your order flow, menu management, cost structure, and reporting and show you which brands are actually making money.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your order flow, menu management, cost structure, and reporting and show you which brands are actually making money.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the platforms you already run.
 

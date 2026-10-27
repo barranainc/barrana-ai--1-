@@ -190,7 +190,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Tutoring center automation: $4,000-$8,000 CAD.",
+      answer: "Tutoring center automation starts from $1,500 CAD, with a fixed quote after the free audit.",
     },
     {
       question: "Seasonal enrollment campaigns?",

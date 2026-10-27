@@ -5,6 +5,7 @@ import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
 import FAQAccordion, { type FAQItem } from "@/components/ui/FAQAccordion";
 import { industryGuides, type IndustryGuideSection } from "@/content/industry-guides";
+import AuditBookingLink, { CtaLink } from "@/components/AuditBookingLink";
 
 const SITE_URL = "https://barrana.ai";
 
@@ -145,9 +146,9 @@ function renderBlocks(lines: string[], keyPrefix: string) {
     const ctaLink = line.match(/^\*\*\[([^\]]+)\]\(([^)]+)\)\*\*$/);
     if (ctaLink) {
       blocks.push(
-        <Link className="industry-guide-primary-link" href={localHref(ctaLink[2])} key={`${keyPrefix}-cta-${index}`}>
+        <CtaLink className="industry-guide-primary-link" href={localHref(ctaLink[2])} key={`${keyPrefix}-cta-${index}`}>
           {ctaLink[1]} <ArrowRight size={17} aria-hidden="true" />
-        </Link>,
+        </CtaLink>,
       );
       index += 1;
       continue;
@@ -281,9 +282,9 @@ export default function IndustryAutomationGuide() {
                 <a href={`#${section.id}`} key={section.id}>{section.title}</a>
               ))}
             </nav>
-            <Link href="/contact" className="industry-guide-toc-cta">
+            <AuditBookingLink className="industry-guide-toc-cta">
               Book a Free Automation Audit <ArrowRight size={15} aria-hidden="true" />
-            </Link>
+            </AuditBookingLink>
           </div>
         </aside>
 

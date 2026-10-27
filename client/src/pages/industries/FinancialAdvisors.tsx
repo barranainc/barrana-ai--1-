@@ -141,7 +141,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard advisor automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Financial advisor automation: $5,000-$10,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Financial advisor automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
 

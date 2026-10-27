@@ -7,6 +7,7 @@ import RelatedResources from "@/components/linking/RelatedResources";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
@@ -344,9 +345,7 @@ export default function DocumentCollectionWorkflow() {
           <Link href="/automation-planner">
             <a style={{ background: "#7E0F4A", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Start the Automation Planner</a>
           </Link>
-          <Link href="/contact">
-            <a style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a>
-          </Link>
+          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
         </div>
       </div>
 

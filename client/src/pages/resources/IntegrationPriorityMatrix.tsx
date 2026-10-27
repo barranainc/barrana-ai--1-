@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -212,9 +213,9 @@ export default function IntegrationPriorityMatrix() {
             <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
               We will audit your current tool stack and build you a prioritised integration plan - starting with the connections that save the most time.
             </p>
-            <Link href="/contact" style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
+            <AuditBookingLink style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
               Book Your Free Audit
-            </Link>
+            </AuditBookingLink>
           </div>
         </RevealSection>
       </div>

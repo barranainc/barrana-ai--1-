@@ -174,7 +174,7 @@ const data: IndustryPageData = {
     {
       question: "How much?",
       answer:
-        "Law firm automation: $5,000-$12,000 CAD. Fixed pricing after audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Law firm automation starts from $1,500 CAD. Fixed pricing after audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:

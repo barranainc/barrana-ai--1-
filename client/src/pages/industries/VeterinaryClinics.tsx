@@ -177,7 +177,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Veterinary clinic automation: $4,000-$8,000 CAD.",
+      answer: "Veterinary clinic automation starts from $1,500 CAD, with a fixed quote after the free audit.",
     },
     {
       question: "Seasonal parasite prevention?",

@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -225,7 +226,7 @@ export default function AiAdoptionSmallBusiness() {
     { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
     { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use - your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
     { q: "Is this relevant for a solo operator?", a: "Yes - solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
-    { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we map your current workflows, identify the highest-friction tasks, and recommend a Phase 1 with clear measures agreed before launch." },
+    { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we walk through your current workflows, identify the highest-friction tasks, and recommend a Phase 1 with clear measures agreed before launch." },
     { q: "Is my client data safe?", a: "All data stays within your controlled systems. We do not introduce third-party platforms that store your client information without your knowledge. Every data flow is documented, and all Canadian implementations follow PIPEDA guidelines." },
   ];
 
@@ -291,7 +292,7 @@ export default function AiAdoptionSmallBusiness() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and is straightforward to measure. Typical investment: $3,000–$15,000 CAD depending on scope.
+              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and is straightforward to measure. Projects start from $1,500 CAD, with a fixed quote after the free audit.
             </p>
           </SummaryBox>
 
@@ -357,10 +358,10 @@ export default function AiAdoptionSmallBusiness() {
           <SectionHeading>What It Costs</SectionHeading>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
-              { tier: "Single Workflow", price: "$1,500–$4,000 CAD", desc: "One end-to-end workflow (e.g. lead response)" },
-              { tier: "Multi-Workflow", price: "$5,000–$12,000 CAD", desc: "2–4 connected workflows with integrations" },
-              { tier: "Full System", price: "$10,000–$20,000 CAD", desc: "6+ workflows, full operational integration" },
-              { tier: "Monthly Maintenance", price: "$200–$500 CAD/mo", desc: "Monitoring, updates, and iteration support" },
+              { tier: "Single Workflow", price: "From $1,500 CAD", desc: "One end-to-end workflow (e.g. lead response)" },
+              { tier: "Multi-Workflow", price: "Fixed quote after audit", desc: "2–4 connected workflows with integrations" },
+              { tier: "Full System", price: "Fixed quote after audit", desc: "6+ workflows, full operational integration" },
+              { tier: "Ongoing Support", price: "Quoted with your project", desc: "Monitoring, updates, and iteration support" },
             ].map(t => (
               <div key={t.tier} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
                 <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{t.tier}</div>
@@ -390,7 +391,7 @@ export default function AiAdoptionSmallBusiness() {
             Every Barrana engagement follows a five-stage method:
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Free Automation Audit.</strong> 60 minutes. We map your workflows and identify the highest-ROI starting point with no cost or obligation.</li>
+            <li><strong>Free Automation Audit.</strong> 60 minutes. We walk through your workflows and identify the highest-ROI starting point with no cost or obligation.</li>
             <li><strong>Friction Map.</strong> A documented analysis of your current processes, including time cost, error rate, and automation potential for each workflow.</li>
             <li><strong>Fixed-Price Phase 1.</strong> We quote a fixed price for the first workflow before any work begins. No scope creep, no hourly billing surprises.</li>
             <li><strong>Build, Test, and Launch.</strong> Every system is tested with real data before going live. We do not launch until you are satisfied with the results.</li>
@@ -422,9 +423,9 @@ export default function AiAdoptionSmallBusiness() {
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 Start the Automation Planner
               </Link>
-              <Link href="/contact" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
+              <AuditBookingLink style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 Book a Free Automation Audit
-              </Link>
+              </AuditBookingLink>
             </div>
           </div>
 

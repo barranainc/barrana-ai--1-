@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const NAVY = "#283891";
 const DARK = "#1A1A2E";
@@ -182,9 +183,9 @@ export default function Benchmarks() {
             Book a free Automation Audit and we will calculate projected ROI for your specific
             workflows and team size.
           </p>
-          <Link href="/contact" className="btn-primary">
+          <AuditBookingLink className="btn-primary">
             Book Free Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

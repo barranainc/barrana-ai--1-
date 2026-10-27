@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much does it cost?",
-      answer: "Auto repair shop automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Auto repair shop automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Seasonal campaigns to how many customers?",

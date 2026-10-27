@@ -89,7 +89,7 @@ const data: IndustryPageData = {
     { question: "Insurance verification?", answer: "We can automate insurance eligibility checks as part of the intake or booking workflow depending on your management system." },
     { question: "PHIPA compliance?", answer: "All patient data stays in your practice management system. We do not store, process, or access clinical patient data. Automation flows documented." },
     { question: "How quickly?", answer: "Standard dental automation: 2-3 weeks from audit to live." },
-    { question: "How much?", answer: "Dental practice automation: $4,000-$8,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "How much?", answer: "Dental practice automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can we do treatment plan follow-up?", answer: "Yes. Presented-but-not-scheduled treatment plans get systematic follow-up at 48hr, 7-day, and 30-day intervals." },
   ],
 

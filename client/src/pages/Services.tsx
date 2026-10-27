@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import PipelineDiagram, { PIPELINES } from "@/components/diagrams/PipelineDiagram";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -273,10 +274,10 @@ export default function Services() {
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 Not software subscriptions. Not AI experiments. Working automation systems built around your actual business workflows. Every service is scoped, priced, and delivered at a fixed price before work begins.
               </p>
-              <Link href="/contact" className="btn-primary">
+              <AuditBookingLink className="btn-primary">
                 Book a Free Automation Audit
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-              </Link>
+              </AuditBookingLink>
             </div>
           </div>
         </div>
@@ -292,11 +293,11 @@ export default function Services() {
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Ready to Automate Your Operations?</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            Book a free 60-minute Automation Audit. We map your workflows and identify your highest-impact opportunities. No obligation.
+            Book a free 60-minute Automation Audit. We walk through your workflows and identify your highest-impact opportunities. No obligation.
           </p>
-          <Link href="/contact" className="btn-accent">
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

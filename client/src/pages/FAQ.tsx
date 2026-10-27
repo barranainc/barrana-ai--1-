@@ -5,6 +5,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { colors } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const faqCategories = [
   {
@@ -119,7 +120,7 @@ export default function FAQ() {
           <div className="mt-16 text-center p-10 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
             <h3 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
             <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit and we will answer every question specific to your business.</p>
-            <Link href="/contact" className="btn-primary">Book Free Audit</Link>
+            <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
           </div>
         </div>
       </section>

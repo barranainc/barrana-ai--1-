@@ -6,6 +6,7 @@ import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
@@ -205,7 +206,7 @@ export default function WhatToAutomateFirst() {
               ))}
             </div>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
-              Most service businesses have at least 5–10 missed or delayed leads per month - each worth $500–$5,000+. A single additional conversion per month from faster response often pays for the entire automation system in month one.
+              Most service businesses have at least 5–10 missed or delayed leads per month - each worth $500–$5,000+. Faster response can win back some of those leads; we measure your baseline first so the change can be shown.
             </p>
 
             <PriorityPyramid />
@@ -288,7 +289,7 @@ export default function WhatToAutomateFirst() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner identifies your highest-ROI first automation in under 5 minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book Free Audit</a></Link>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book Free Audit</AuditBookingLink>
               </div>
             </div>
 

@@ -10,6 +10,7 @@ import { trackMeta } from "@/lib/metaPixel";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { CALENDLY_URL } from "@/lib/booking";
 
 // ─── Brand Constants ─────────────────────────────────────────────────────────
 export const NAVY = "#283891";
@@ -21,8 +22,7 @@ export const BARRANA_LOGO_URL = "/barrana-logo.png";
 export const BARRANA_LOGO_WHITE_URL = "/barrana-logo-white.png";
 
 // ─── Booking URL ─────────────────────────────────────────────────────────────
-export const BOOKING_URL =
-  (import.meta.env.VITE_GHL_BOOKING_URL as string) || "https://booking.barrana.ai/audit";
+export const BOOKING_URL = CALENDLY_URL;
 
 // ─── Animated Counter ────────────────────────────────────────────────────────
 interface AnimatedCounterProps {
@@ -117,7 +117,7 @@ export function CampaignFooter() {
   );
 }
 
-// ─── Campaign CTA Button (scrolls to inline form) ────────────────────────────
+// ─── Campaign CTA Button (opens the free-audit booking page) ─────────────────
 interface CampaignCTAProps {
   utm?: string;
   centered?: boolean;
@@ -125,14 +125,12 @@ interface CampaignCTAProps {
 }
 
 export function CampaignCTA({ centered = false, large = false }: CampaignCTAProps) {
-  const scrollToForm = () => {
-    const el = document.getElementById("campaign-lead-form");
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
   return (
     <div className={`mt-8 ${centered ? "flex flex-col items-center" : ""}`}>
-      <motion.button
-        onClick={scrollToForm}
+      <motion.a
+        href={CALENDLY_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`inline-block text-white font-bold rounded-xl shadow-lg cursor-pointer ${
           large ? "px-10 py-5 text-xl" : "px-8 py-4 text-lg"
         }`}
@@ -142,9 +140,9 @@ export function CampaignCTA({ centered = false, large = false }: CampaignCTAProp
         transition={{ duration: 0.15 }}
       >
         Book Your Free 60-Minute Audit →
-      </motion.button>
+      </motion.a>
       <p className="text-sm mt-3" style={{ color: GREY }}>
-        No pitch. No obligation. You keep the workflow map.
+        No pitch. No obligation.
       </p>
     </div>
   );
@@ -288,7 +286,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
             Claim Your Free Audit
           </h2>
           <p className="text-sm mb-8" style={{ color: GREY }}>
-            Tell us a bit about your {industry.toLowerCase()} business. We will map out exactly which workflows to automate first and what it is worth to you - at no cost, no pitch.
+            Tell us a bit about your {industry.toLowerCase()} business. We will show you which workflows to automate first and what it is worth to you - at no cost, no pitch.
           </p>
 
           {submitted ? (
@@ -304,7 +302,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
                 We will reach out within 1 business day to confirm your 60-minute audit time. Check your inbox - including spam.
               </p>
               <p className="text-xs mt-4 font-medium" style={{ color: MAGENTA }}>
-                No pitch. No obligation. You keep the workflow map.
+                No pitch. No obligation.
               </p>
             </motion.div>
           ) : (
@@ -399,7 +397,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
               </motion.button>
 
               <p className="text-xs text-center" style={{ color: GREY }}>
-                No pitch. No obligation. You keep the workflow map. We respond within 1 business day.
+                No pitch. No obligation. We respond within 1 business day.
               </p>
               <p className="text-xs text-center" style={{ color: GREY }}>
                 We use your details to respond to this request. Read our{" "}
@@ -656,7 +654,7 @@ export function RevenueRecoveryMeter({ totalAtRisk, recoverable, recoverablePerc
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 2 }}
         >
-          ↑ This is what the free 60-minute audit will map out for your business specifically.
+          ↑ This is what the free 60-minute audit will look at for your business specifically.
         </motion.p>
       </div>
     </div>

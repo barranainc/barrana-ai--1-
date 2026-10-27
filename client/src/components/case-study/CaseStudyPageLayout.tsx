@@ -21,6 +21,7 @@ import RelatedResources from "@/components/linking/RelatedResources";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 import type { WorkflowStep } from "@/components/diagrams/WorkflowDiagram";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 export interface CaseStudyData {
   // Meta
@@ -158,7 +159,7 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
             {data.intro}
           </p>
           <div style={st(5)}>
-            <Link href="/contact" className="btn-primary">See What Applies to You - Book a Free Audit</Link>
+            <AuditBookingLink className="btn-primary">See What Applies to You - Book a Free Audit</AuditBookingLink>
             <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", marginTop: "0.625rem" }}>
               See what automation looks like for your operations. 60 minutes. No obligation.
             </p>

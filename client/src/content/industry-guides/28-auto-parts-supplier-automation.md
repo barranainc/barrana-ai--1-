@@ -170,9 +170,9 @@ Core and warranty tracking. It requires no customer behaviour change, it recover
 
 Barrana works with auto parts suppliers, distributors, and automotive service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your quoting, fitment, fulfilment, and returns processes and show you how much core and warranty value is leaking.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your quoting, fitment, fulfilment, and returns processes and show you how much core and warranty value is leaking.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

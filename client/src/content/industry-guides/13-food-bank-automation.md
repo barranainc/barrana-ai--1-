@@ -172,11 +172,11 @@ Volunteer scheduling. It relieves the most acute weekly pain, requires no client
 
 Barrana works with food banks, community pantries, and social service organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and you keep the workflow map either way. We map your volunteer, intake, inventory, service, and reporting processes and show you where staff and volunteer hours are going.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your volunteer, intake, inventory, service, and reporting processes and show you where staff and volunteer hours are going.
 
 Where client data is involved, we build to a privacy-first standard and expect your privacy advisor to review the design.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

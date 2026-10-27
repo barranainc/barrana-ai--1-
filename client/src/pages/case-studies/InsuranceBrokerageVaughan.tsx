@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$6,000–$9,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first renewal cycle",
   keyResultCallout:
     "Renewal lapse rate from 18% to under 6%. 144 additional policies retained per year. 100% quote follow-up. Cross-sell opportunities surfaced for every client. RIBO compliance gaps closed.",

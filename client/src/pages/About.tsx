@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import SEOHead from "@/components/SEOHead";
 import { colors, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -286,13 +287,13 @@ export default function About() {
             transition: "opacity 0.7s ease, transform 0.7s ease",
           }}
         >
-          <h2 className="text-3xl font-extrabold text-white mb-4">Let's Map Your Workflows</h2>
+          <h2 className="text-3xl font-extrabold text-white mb-4">Let's Walk Through Your Workflows</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            Book a free 60-minute Automation Audit. We map your workflows, identify your highest-impact automation opportunities, and give you a clear picture of what is possible.
+            Book a free 60-minute Automation Audit. We walk through your workflows, identify your highest-impact automation opportunities, and give you a clear picture of what is possible.
           </p>
-          <Link href="/contact" className="btn-accent">
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

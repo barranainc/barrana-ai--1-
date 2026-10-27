@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import { ArrowRight, Check, ClipboardCheck, Route, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
+import AuditBookingLink from "@/components/AuditBookingLink";
 import { submitLead } from "@/lib/ghl";
 
 const industries = [
@@ -92,7 +93,7 @@ export default function Contact() {
     <div className="min-h-screen bg-[#F5F6FA] text-slate-950">
       <SEOHead
         title="Book a Free 60-Minute Automation Audit | Barrana.ai"
-        description="Book a free 60-minute Automation Audit. Barrana maps your workflows, estimates what manual work costs you each year, and shows what to automate first. You keep the workflow map."
+        description="Book a free 60-minute Automation Audit. Barrana walks through your workflows, estimates what manual work costs you each year, and shows what to automate first."
       />
 
       <section className="relative overflow-hidden bg-[#09142F] py-16 text-white lg:py-20">
@@ -111,8 +112,14 @@ export default function Contact() {
             Find the workflow AI should fix first.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Book a free 60-minute Automation Audit. We map your workflows, estimate what your manual work costs each year, and show you what to automate first. You keep the workflow map, whether or not you work with us.
+            Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.
           </p>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <AuditBookingLink className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#7E0F4A] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6A0C3E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+              Book your free audit <ArrowRight size={17} aria-hidden="true" />
+            </AuditBookingLink>
+            <span className="text-sm text-slate-300">Pick a time online, or describe your workflow below.</span>
+          </div>
         </div>
       </section>
 
@@ -143,7 +150,7 @@ export default function Contact() {
                 <h2 className="font-bold">What you get</h2>
               </div>
               <p className="mt-4 text-sm leading-6 text-blue-100">
-                The audit is free, takes 60 minutes, and comes with no obligation. You keep the workflow map whether or not you work with us. If you decide to go ahead, implementation is quoted separately at a fixed price.
+                The audit is free, takes 60 minutes, and comes with no obligation. If you decide to go ahead, implementation is quoted separately at a fixed price.
               </p>
             </div>
 
@@ -166,8 +173,11 @@ export default function Contact() {
                 </div>
                 <h2 className="mt-6 text-2xl font-extrabold text-[#111A36]">Your audit request was sent.</h2>
                 <p className="mt-3 max-w-lg text-sm leading-6 text-slate-600">
-                  Barrana will review the workflow you described and contact you to schedule your free 60-minute Automation Audit.
+                  Barrana will review the workflow you described and contact you. You can also book a time for your free Automation Audit now.
                 </p>
+                <AuditBookingLink className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#283891] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1F2D75]">
+                  Book your free audit <ArrowRight size={15} aria-hidden="true" />
+                </AuditBookingLink>
                 <Link href="/" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#283891] hover:text-[#7E0F4A]">
                   Return to the homepage <ArrowRight size={15} aria-hidden="true" />
                 </Link>

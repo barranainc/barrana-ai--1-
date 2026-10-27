@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
@@ -55,7 +56,7 @@ function BuildVsBuyTable() {
     {
       name: "Hybrid / Connected",
       icon: "🔗",
-      cost: "$3,000–12,000 once + $200–500/mo",
+      cost: "From $1,500 CAD once + tool subscriptions",
       timeline: "2–6 weeks",
       flexibility: "High",
       maintenance: "Shared",
@@ -226,7 +227,7 @@ export default function BuildVsBuy() {
               <li>Multiple tools need to talk to each other (CRM + calendar + email + accounting)</li>
               <li>Your workflows are specific to your business model or service type</li>
               <li>You need conditional logic - different actions depending on client type, service, or status</li>
-              <li>Your budget is $3,000–$12,000 for implementation with $200–$500/month ongoing</li>
+              <li>Your budget allows a one-time implementation (Barrana projects start from $1,500 CAD) plus tool subscriptions</li>
               <li>You want to avoid replacing tools you've already invested in</li>
             </ul>
 
@@ -246,7 +247,7 @@ export default function BuildVsBuy() {
               Off-the-shelf tools appear cheapest upfront - $20–$500/month with no implementation cost. But the real cost is in the workarounds: manual steps you still have to do because the tool can't quite do what you need, or multiple tools that don't connect, or staff time spent compensating for the tool's limitations.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
-              The hybrid approach has a moderate upfront investment ($3,000–$12,000) but low ongoing cost ($200–$500/month) and high ROI once built. The logic is custom to your business, which means fewer workarounds and more reliable operation.
+              The hybrid approach has a moderate upfront investment (Barrana projects start from $1,500 CAD) and a low ongoing cost, and it is built around your actual workflows. The logic is custom to your business, which means fewer workarounds and more reliable operation.
             </p>
             <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For SMBs, this is rarely justified - the hybrid approach delivers 90% of the value at 20% of the cost.
@@ -291,7 +292,7 @@ export default function BuildVsBuy() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner helps you map your needs and identify the right approach in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a></Link>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/build-vs-buy" />

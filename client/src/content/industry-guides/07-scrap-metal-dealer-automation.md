@@ -164,9 +164,9 @@ Intake and ticketing, including compliance capture. It touches every transaction
 
 Barrana works with scrap metal dealers, recyclers, and material processing businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours to keep either way. We map your intake, ticketing, inventory, and settlement processes and show you where the three reconciliations are costing you margin.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your intake, ticketing, inventory, and settlement processes and show you where the three reconciliations are costing you margin.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

@@ -10,6 +10,7 @@ import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
 import ControlLayerCard from "@/components/service/ControlLayerCard";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ────────────────────────────────────────────────────────────
 
@@ -371,12 +372,12 @@ export default function HumanInTheLoop() {
                 Design Automation That Keeps You in Control
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 1.75rem" }}>
-                Book a free 60-minute Automation Audit. We'll map your workflows and show you exactly where to place approval gates and escalation paths - no obligation.
+                Book a free 60-minute Automation Audit. We'll walk through your workflows and show you exactly where to place approval gates and escalation paths - no obligation.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                <Link href="/contact" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
+                <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
                   Book a Free Audit →
-                </Link>
+                </AuditBookingLink>
                 <Link href="/governance" style={{ background: "rgba(255,255,255,0.1)", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block", border: "1.5px solid rgba(255,255,255,0.25)" }}>
                   See Our Governance Approach
                 </Link>

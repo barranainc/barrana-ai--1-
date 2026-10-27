@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function SummaryBox({ children }: { children: React.ReactNode }) {
   return (
@@ -184,7 +185,7 @@ export default function AutomationReadiness() {
                 { title: "Technical expertise", body: "We handle all technical implementation. You only need to understand your own workflows." },
                 { title: "A large team", body: "Many of our most successful clients are solo operators or 2–3 person firms." },
                 { title: "An enterprise CRM", body: "Free tools like HubSpot CRM or even Google Sheets are a sufficient starting point." },
-                { title: "A big budget", body: "Most initial automations are scoped to $3,000–$8,000, with the measures of success agreed before launch." },
+                { title: "A big budget", body: "Projects start from $1,500 CAD, with the measures of success agreed before launch." },
                 { title: "A perfectly documented process", body: "We document it during the audit. You just need to be able to describe what you do today." },
               ].map((item) => (
                 <div key={item.title} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.25rem" }}>
@@ -244,7 +245,7 @@ export default function AutomationReadiness() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="We're a solo operator with 2 clients - are we ready?" a="Probably not yet for workflow automation. Focus on landing more clients. But start preparing: use a proper CRM and document your intake process." />
               <FAQItem q="What if our processes aren't consistent yet?" a="Fix the process first. Automation doesn't fix a broken process - it accelerates it. Map the ideal workflow, then automate." />
-              <FAQItem q="How do we know which automation to start with?" a="The Automation Planner helps you identify this. You can also book a free audit and we'll map it with you." />
+              <FAQItem q="How do we know which automation to start with?" a="The Automation Planner helps you identify this. You can also book a free audit and we'll walk through it with you." />
               <FAQItem q="We tried automation before and it failed. Does readiness help?" a="Yes. Most automation failures happen because either the workflow wasn't defined or the wrong thing was automated first. The readiness framework prevents both." />
             </div>
 
@@ -253,7 +254,7 @@ export default function AutomationReadiness() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner maps your readiness and identifies your best starting point in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <Link href="/contact"><a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</a></Link>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/automation-readiness" />

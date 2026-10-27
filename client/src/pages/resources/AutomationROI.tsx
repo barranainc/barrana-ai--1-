@@ -275,7 +275,7 @@ Example: $180,000/FTE × 25% × 4 FTEs = $180,000 incremental capacity`}
           Payback depends on your volumes and scope. Businesses with higher staff costs or larger lead pipelines tend to recover the setup cost sooner. We agree on what to measure before launch so the result can be shown, not assumed.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "1rem" }}>
-          Implementation costs typically range from $3,000–$15,000 for a comprehensive automation overhaul. Use the calculator to estimate the annual value for your own volumes, and compare it with the one-time cost plus any monthly support and subscription costs.
+          Barrana projects start from $1,500 CAD, with a fixed quote after the free audit. Use the calculator to estimate the annual value for your own volumes, and compare it with the one-time cost plus any monthly support and subscription costs.
         </p>
         <p style={{ lineHeight: 1.8, color: "#3A3A3A", marginBottom: "0.5rem" }}>
           The key insight: <strong>the question is rarely "can we afford automation?"</strong> - it's "what is it costing us every month we delay?"
@@ -287,7 +287,7 @@ Example: $180,000/FTE × 25% × 4 FTEs = $180,000 incremental capacity`}
             Ready to Build Your ROI Case?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.78)", marginBottom: "2rem", fontSize: "1rem", maxWidth: "480px", margin: "0 auto 2rem" }}>
-            We'll map your workflows, estimate your four-layer ROI, and show you exactly what automation would return for your specific business.
+            We'll walk through your workflows, estimate your four-layer ROI, and show you exactly what automation would return for your specific business.
           </p>
           <Link
             href="/contact"

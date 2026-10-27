@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import JsonLd from "@/components/JsonLd";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -362,21 +363,21 @@ export default function Solopreneurs() {
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$2,500–$4,000 CAD",
+      price: "From $1,500 CAD",
       items: ["Lead response automation", "Discovery call booking", "Session follow-up"],
       note: "Payback depends on your session volume; we agree on what to measure before launch.",
       highlight: false,
     },
     {
       name: "Growth",
-      price: "$5,000–$8,000 CAD",
+      price: "Fixed quote after audit",
       items: ["Everything in Starter", "Client onboarding", "Invoice & payment collection", "Testimonial requests"],
       note: "The most popular choice for solopreneurs scaling to $15k+/month.",
       highlight: true,
     },
     {
       name: "Full System",
-      price: "$8,000–$12,000 CAD",
+      price: "Fixed quote after audit",
       items: ["Everything in Growth", "Content repurposing engine", "Re-engagement sequences", "Reporting dashboard"],
       note: "Built for solopreneurs ready to launch group programs or courses.",
       highlight: false,
@@ -439,11 +440,9 @@ export default function Solopreneurs() {
                   See What You Can Automate
                 </a>
               </Link>
-              <Link href="/contact">
-                <a style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.4)", display: "inline-block" }}>
+              <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.4)", display: "inline-block" }}>
                   Book a Free Automation Audit
-                </a>
-              </Link>
+                </AuditBookingLink>
             </div>
           </div>
         </div>
@@ -655,7 +654,7 @@ export default function Solopreneurs() {
               ))}
             </div>
             <p style={{ marginTop: "1.5rem", color: "#7B7B7B", fontSize: "0.9rem" }}>
-              Plus monthly maintenance: $150–$300 CAD/month to monitor workflows, update integrations, and add small automations as your business evolves.
+              Ongoing maintenance is quoted with your project: monitoring workflows, updating integrations, and adding small automations as your business evolves.
             </p>
           </div>
         </div>
@@ -714,11 +713,9 @@ export default function Solopreneurs() {
                 See What You Can Automate
               </a>
             </Link>
-            <Link href="/contact">
-              <a style={{ background: "transparent", color: "#fff", padding: "0.9rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", display: "inline-block" }}>
+            <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.9rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", display: "inline-block" }}>
                 Book a Free Automation Audit
-              </a>
-            </Link>
+              </AuditBookingLink>
           </div>
           <p style={{ color: "#718096", fontSize: "0.875rem" }}>
             We work with solopreneurs earning $5,000–$25,000/month who want to grow without burning out.

@@ -7,7 +7,7 @@ import { ORG_REF } from "@/lib/schema";
  */
 
 import React from "react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { colors, spacing, typography, cards, surfaces } from "@/styles/design-tokens";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
@@ -281,6 +281,10 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
           <h2 style={headingStyle}>Frequently Asked Questions</h2>
           <div style={{ maxWidth: "720px" }}>
             <FAQAccordion items={data.faqItems} />
+            <p style={{ marginTop: "1.5rem", fontSize: "0.95rem" }}>
+              Projects start from $1,500 CAD, with a fixed quote after the free Automation Audit.{" "}
+              <Link href="/pricing" style={{ color: "#283891", fontWeight: 700 }}>See pricing</Link>
+            </p>
           </div>
         </div>
       </section>

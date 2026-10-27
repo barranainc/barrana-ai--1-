@@ -144,7 +144,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard cleaning company automation: 2-3 weeks." },
     {
       question: "How much?",
-      answer: "Cleaning company automation: $3,000-$6,000 CAD. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Cleaning company automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Crew management?",

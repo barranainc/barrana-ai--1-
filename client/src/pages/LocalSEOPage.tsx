@@ -8,6 +8,7 @@
 import { Link, useParams } from "wouter";
 import { ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 type LinkItem = { label: string; href: string };
 
@@ -223,8 +224,8 @@ export default function LocalSEOPage() {
 
             <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
               <h2 className="text-xl font-bold text-white mb-3">Free Automation Audit for {page.city} Businesses</h2>
-              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit. We map your workflows, estimate what your manual work costs each year, and show you what to automate first. You keep the workflow map.</p>
-              <Link href="/contact" className="btn-primary">Book Your Free Automation Audit</Link>
+              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.</p>
+              <AuditBookingLink className="btn-primary">Book Your Free Automation Audit</AuditBookingLink>
             </div>
           </div>
         </div>

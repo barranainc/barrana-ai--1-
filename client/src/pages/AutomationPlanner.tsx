@@ -96,7 +96,7 @@ const faqItems: FAQItem[] = [
   {
     question: "Is this a sales pitch?",
     answer:
-      "No. You get useful results without talking to anyone. If you want a deeper analysis, you can book a free 60-minute Automation Audit and keep the workflow map.",
+      "No. You get useful results without talking to anyone. If you want a deeper analysis, you can book a free 60-minute Automation Audit.",
   },
   {
     question: "How long does it take?",
@@ -201,7 +201,7 @@ function LandingContent({ onStart }: { onStart: () => void }) {
               "A clear view of what should remain human-led in your business",
               "A phased roadmap: what to automate first, second, and third",
               "Estimated time recovery and capacity improvements",
-              "Optional: a free 60-minute Automation Audit with Barrana; you keep the workflow map",
+              "Optional: a free 60-minute Automation Audit with Barrana",
             ].map((item) => (
               <div key={item} style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
                 <BurgundyCheck />

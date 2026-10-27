@@ -159,9 +159,9 @@ Lead response and estimate follow-up. It is the least complex build and it direc
 
 Barrana works with moving, storage, and logistics businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours regardless. We map your lead handling, estimating, scheduling, documentation, and follow-up processes and show you where bookings and margin are leaking.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your lead handling, estimating, scheduling, documentation, and follow-up processes and show you where bookings and margin are leaking.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Never hourly. Works with the tools you already run.
 

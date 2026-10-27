@@ -91,6 +91,7 @@ const ROICalculator = lazyPage(() => import("./pages/ROICalculator"));
 const LocalSEOPage = lazyPage(() => import("./pages/LocalSEOPage"));
 const LocationIndustryPage = lazyPage(() => import("./pages/LocationIndustryPage"));
 const FAQ = lazyPage(() => import("./pages/FAQ"));
+const Pricing = lazyPage(() => import("./pages/Pricing"));
 const WhatIsAIAutomation = lazyPage(() => import("./pages/resources/WhatIsAIAutomation"));
 const OperationalFrictionMap = lazyPage(() => import("./pages/resources/OperationalFrictionMap"));
 const AutomateClientIntake = lazyPage(() => import("./pages/resources/AutomateClientIntake"));
@@ -229,6 +230,7 @@ function LayoutRoutes() {
         <Route path="/privacy-policy" component={PrivacyPolicy} />
         <Route path="/privacy">{() => { window.location.href = "/privacy-policy"; return null; }}</Route>
         <Route path="/faq" component={FAQ} />
+        <Route path="/pricing" component={Pricing} />
 
         {/* SEO/AEO Expansion Pages */}
         <Route path="/knowledge" component={KnowledgeBase} />
@@ -397,6 +399,7 @@ const ROUTE_TABLE = [
   ["/contact", Contact],
   ["/privacy-policy", PrivacyPolicy],
   ["/faq", FAQ],
+  ["/pricing", Pricing],
   ["/knowledge", KnowledgeBase],
   ["/knowledge/:slug", KnowledgeArticle],
   ["/playbooks", Playbooks],

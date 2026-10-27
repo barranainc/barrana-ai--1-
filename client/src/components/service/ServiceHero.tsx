@@ -7,6 +7,7 @@
 
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export interface ServiceHeroProps {
@@ -143,9 +144,9 @@ export default function ServiceHero({
 
             {/* CTA */}
             <div style={{ marginTop: "2rem", ...staggerStyle(4) }}>
-              <Link href="/contact" className="btn-primary">
+              <AuditBookingLink className="btn-primary">
                 {ctaText}
-              </Link>
+              </AuditBookingLink>
               {ctaMicro && (
                 <p
                   style={{

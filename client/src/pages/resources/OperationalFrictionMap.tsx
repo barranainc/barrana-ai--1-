@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared layout helpers ────────────────────────────────────────────────────
 
@@ -443,11 +444,11 @@ export default function OperationalFrictionMap() {
               Want Us to Map Your Business?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              We run a live Friction Mapping exercise as part of every Automation Audit. Book your free 60-minute Automation Audit and keep the workflow map, with your first automation identified.
+              We run a live Friction Mapping exercise as part of every Automation Audit. Book your free 60-minute Automation Audit and identify your first automation.
             </p>
-            <Link href="/contact" className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
+            <AuditBookingLink className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
               Book a Free Automation Audit →
-            </Link>
+            </AuditBookingLink>
           </div>
         </div>
       </section>

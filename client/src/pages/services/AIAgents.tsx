@@ -119,7 +119,7 @@ const data: ServicePageData = {
     {
       question: "How much does an AI agent cost?",
       answer:
-        "Simple single-function agents: $1,500–$4,000. Complex multi-integration agents: $5,000–$12,000. Fixed pricing after free audit.",
+        "Pricing starts from $1,500 CAD for a simple single-function agent; complex multi-integration agents are quoted after the free 60-minute Automation Audit. Fixed pricing.",
     },
     {
       question: "Can an AI agent handle phone calls?",

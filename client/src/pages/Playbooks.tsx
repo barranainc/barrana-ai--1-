@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 const playbooks = [
   {
@@ -103,13 +104,12 @@ export default function Playbooks() {
             <p className="text-base mb-4" style={{ color: "#7B7B7B" }}>
               Ready to implement one of these playbooks in your business?
             </p>
-            <Link
-              href="/contact"
+            <AuditBookingLink
               className="inline-block px-6 py-3 rounded-lg font-semibold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#283891" }}
             >
               Book a Free Automation Audit
-            </Link>
+            </AuditBookingLink>
           </div>
         </div>
       </section>

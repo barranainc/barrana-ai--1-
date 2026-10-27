@@ -86,9 +86,9 @@ const data: IndustryPageData = {
     { question: "What types of service businesses?", answer: "Any business running on appointments, inquiries, and client relationships: consulting, cleaning, tutoring, repair, wellness, professional services, home services, and more." },
     { question: "Do I need a CRM?", answer: "For automation to work properly, yes. We recommend and set up lightweight CRMs as part of implementation if you do not have one." },
     { question: "Can I start with just one workflow?", answer: "Yes. We recommend starting with the highest-impact workflow (usually lead response or scheduling) and expanding from there." },
-    { question: "How much does it cost?", answer: "Single workflow: $1,500-$4,000. Full lifecycle automation: $5,000-$15,000. Fixed pricing after free audit." },
+    { question: "How much does it cost?", answer: "Projects start from $1,500 CAD for a single workflow; full lifecycle automation is quoted after the free audit. Fixed pricing." },
     { question: "How long?", answer: "First workflow live in 2-3 weeks. Full system in 4-8 weeks." },
-    { question: "What if I am not sure what to automate first?", answer: "That is exactly what the free audit determines. We map your workflows, score the friction, and tell you where to start." },
+    { question: "What if I am not sure what to automate first?", answer: "That is exactly what the free audit determines. We walk through your workflows, score the friction, and tell you where to start." },
   ],
 
   ctaHeadline: "Your Business Runs on Client Relationships. Automation Makes Sure the Operations Keep Up.",

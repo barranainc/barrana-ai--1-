@@ -115,7 +115,7 @@ const data: ServicePageData = {
     {
       question: "How much does a custom system cost?",
       answer:
-        "Custom systems typically range from $10,000–$25,000+ depending on complexity. Phased implementation allows you to spread the investment.",
+        "Projects start from $1,500 CAD; custom systems get a fixed quote after the free 60-minute Automation Audit, based on complexity. Phased implementation allows you to spread the investment.",
     },
     {
       question: "How long does implementation take?",

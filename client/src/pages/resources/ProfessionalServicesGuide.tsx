@@ -7,6 +7,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ────────────────────────────────────────────────────────────
 
@@ -359,12 +360,11 @@ export default function ProfessionalServicesGuide() {
           <p style={{ color: "rgba(255,255,255,0.78)", fontSize: "1rem", maxWidth: "480px", margin: "0 auto 2rem" }}>
             We've helped immigration firms, law practices, accountants, and financial advisers reclaim 15–20 billable hours per fee-earner per week. Let's build the same system for your firm.
           </p>
-          <Link
-            href="/contact"
+          <AuditBookingLink
             style={{ display: "inline-block", background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "1rem", padding: "0.875rem 2.25rem", borderRadius: "10px", textDecoration: "none", letterSpacing: "0.01em" }}
           >
             Book a Free Workflow Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </div>
     </div>

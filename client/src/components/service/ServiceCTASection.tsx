@@ -4,6 +4,7 @@
  */
 
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 export interface ServiceCTASectionProps {
   headline: string;
@@ -69,9 +70,9 @@ export default function ServiceCTASection({
         >
           {/* Primary CTA */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.5rem" }}>
-            <Link href="/contact" className="btn-magenta">
+            <AuditBookingLink className="btn-magenta">
               {primaryCTA}
-            </Link>
+            </AuditBookingLink>
             {primaryMicro && (
               <span
                 style={{

@@ -14,6 +14,7 @@ import BeforeAfterSection from "@/components/service/BeforeAfterSection";
 import LeadCaptureForm from "./LeadCaptureForm";
 import ShareResults from "./ShareResults";
 import { submitLead } from "@/lib/ghl";
+import { CALENDLY_URL } from "@/components/AuditBookingLink";
 
 // ── Brand ─────────────────────────────────────────────────────────────────────
 const NAVY = "#283891";
@@ -382,18 +383,20 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
 
       {/* CTAs */}
       <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-        <button
-          onClick={onCTA}
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
             padding: "13px 24px", borderRadius: 8, border: "none",
             background: BURGUNDY, color: "white", fontSize: 14, fontWeight: 700,
-            cursor: "pointer", transition: "background 0.15s",
+            cursor: "pointer", transition: "background 0.15s", textDecoration: "none",
           }}
           onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#6a0c3e"; }}
           onMouseLeave={(e) => { (e.target as HTMLElement).style.background = BURGUNDY; }}
         >
           Book a Free Automation Audit About This
-        </button>
+        </a>
         <p style={{ margin: "auto 0", fontSize: 12, color: "#8FA4E8" }}>
           60 minutes. Free. Bring these planner results with you.
         </p>
@@ -949,14 +952,16 @@ export default function PlannerResults({ state, onRestart }: Props) {
                 Option B
               </p>
               <h3 style={{ margin: "0 0 8px", fontSize: 17, fontWeight: 800, color: "white" }}>
-                Turn Your Results Into a Workflow Map
+                Turn Your Results Into a Plan
               </h3>
               <p style={{ margin: "0 0 auto", fontSize: 14, color: "#A3B4E8", lineHeight: 1.6 }}>
-                Book a free 60-minute Automation Audit. We map your workflows, estimate what your manual work costs each year, and show you what to automate first. You keep the workflow map.
+                Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.
               </p>
               <div style={{ marginTop: 24 }}>
                 <a
-                  href="/contact"
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     display: "block", textAlign: "center", padding: "14px 24px",
                     borderRadius: 8, border: "2px solid white", color: "white",

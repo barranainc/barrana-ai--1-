@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import ContextualCTA from "@/components/linking/ContextualCTA";
 import RelatedResources from "@/components/linking/RelatedResources";
 import { colors, spacing, typography, surfaces } from "@/styles/design-tokens";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 
@@ -399,9 +400,9 @@ export default function WorkflowAutomationSMB() {
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the Automation Planner
               </Link>
-              <Link href="/contact" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
+              <AuditBookingLink style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 Book a Free Audit
-              </Link>
+              </AuditBookingLink>
             </div>
           </div>
 

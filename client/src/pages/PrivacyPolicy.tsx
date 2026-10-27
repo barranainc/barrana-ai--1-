@@ -120,7 +120,7 @@ export default function PrivacyPolicy() {
                 ads, Meta lead forms, the Meta Pixel, and Google Analytics.
               </p>
               <p className="mt-7 text-sm font-semibold text-[#E7B1CD]">
-                Effective October 23, 2026
+                Effective October 27, 2026
               </p>
             </div>
 
@@ -245,7 +245,8 @@ export default function PrivacyPolicy() {
                 Reject, neither tool is loaded and nothing is sent to Google or
                 Meta. If you accept, Google Analytics sets cookies and records
                 pages viewed, a successful enquiry (generate_lead) and a
-                completed automation planner (planner_complete); the Meta Pixel
+                completed automation planner (planner_complete) and a click on a
+                free-audit booking button (book_audit_click); the Meta Pixel
                 sets a cookie and sends a PageView event for each page and a
                 Lead event labelled Automation Audit Request (or the campaign
                 name) after a successful form submission. These events may
@@ -400,6 +401,12 @@ export default function PrivacyPolicy() {
                 <strong className="text-[#111A36]">Google</strong>, which
                 delivers website-form submissions to Barrana by email (Gmail)
                 and, only if you accept, provides Google Analytics;
+              </li>
+              <li>
+                <strong className="text-[#111A36]">Calendly</strong>, which
+                receives the details you enter when you book your free audit
+                through our scheduling link (calendly.com) and handles that
+                booking under its own privacy policy;
               </li>
               <li>
                 <strong className="text-[#111A36]">Meta</strong>, which may

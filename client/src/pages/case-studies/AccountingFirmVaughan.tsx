@@ -140,7 +140,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$6,000–$10,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first tax season",
   keyResultCallout:
     "65 additional clients served the following tax season. 280 files processed vs 215 the year before. Same 4-person team. Zero new hires. Document collection time cut in half. Invoices now go out the day work completes.",

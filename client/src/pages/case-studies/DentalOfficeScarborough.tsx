@@ -139,7 +139,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$6,000–$9,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first month",
   keyResultCallout:
     "$120,000 in annual revenue recovered. No-shows down 55%. Recall compliance from 64% to 91%. 350 overdue patients contacted in one week (would have taken months manually). Google reviews tripled.",

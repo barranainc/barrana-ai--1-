@@ -160,9 +160,9 @@ Quote follow-up. It is the least complex build and it directly generates revenue
 
 Barrana works with electrical contractors and trades businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation, and the workflow map is yours to keep either way. We map your quoting, permitting, scheduling, documentation, and billing processes and show you where jobs are stalling and where cash is sitting.
+We start with a 60-minute Automation Audit - free, no obligation. We walk through your quoting, permitting, scheduling, documentation, and billing processes and show you where jobs are stalling and where cash is sitting.
 
-**[Book your free Automation Audit →](https://barrana.ai/contact)**
+**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Never hourly. Works with the tools you already run.
 

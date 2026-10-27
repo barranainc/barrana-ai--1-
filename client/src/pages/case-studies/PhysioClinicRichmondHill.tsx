@@ -134,7 +134,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "$5,000–$8,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first month",
   keyResultCallout:
     "$85,000 in annual revenue recovered. No-shows down 38%. Waitlist fills 70% of cancellations. Front desk freed from 55% of phone burden. Paper intake eliminated. Patients return for maintenance care 25% more often.",

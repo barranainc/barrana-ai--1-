@@ -138,7 +138,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "2 weeks",
-  investmentRange: "$3,000–$5,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Within first 2 weeks",
   keyResultCallout:
     "Quote conversion doubled in 90 days. Google reviews tripled. Owner stopped working evenings. Invoicing became automatic. Recurring clients managed by the system.",

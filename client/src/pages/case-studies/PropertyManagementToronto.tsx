@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "5 weeks (multi-building complexity)",
-  investmentRange: "$10,000–$14,000 CAD",
+  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
   payback: "Through revenue from 55 additional units",
   keyResultCallout:
     "65 units to 120 units. Same 3-person team. Owner reporting fully automated. Maintenance triaged by AI. Rent reminders removed the most uncomfortable part of the job. Zero surprise lease expirations.",

@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import AuditBookingLink from "@/components/AuditBookingLink";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -332,11 +333,11 @@ export default function Industries() {
         >
           <h2 className="text-3xl font-extrabold text-white mb-4">Don't See Your Industry?</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            We work with any professional service business in the GTA. Book a free Automation Audit and we will map your specific workflows.
+            We work with any professional service business in the GTA. Book a free Automation Audit and we will walk through your specific workflows.
           </p>
-          <Link href="/contact" className="btn-accent">
+          <AuditBookingLink className="btn-accent">
             Book Free Automation Audit
-          </Link>
+          </AuditBookingLink>
         </div>
       </section>
     </div>

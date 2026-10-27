@@ -187,15 +187,14 @@ export default function CampaignLawFirms() {
             <h2 className="text-2xl font-bold mb-2" style={{ color: NAVY }}>
               Book Your Free Automation Audit
             </h2>
-            <p className="text-sm mb-6" style={{ color: GREY }}>60 minutes. You keep the workflow map whether or not you work with us.</p>
+            <p className="text-sm mb-6" style={{ color: GREY }}>60 minutes.</p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
               <p className="font-semibold mb-4" style={{ color: NAVY }}>What you get in 60 minutes:</p>
               <ul className="flex flex-col gap-0">
                 {[
-                  "A map of exactly where your intake is leaking clients (with dollar amounts)",
+                  "Exactly where your intake is leaking clients (with dollar amounts)",
                   "Which 1-2 workflows would give you the biggest return if automated",
                   "What it would cost to fix (fixed pricing, you know the number upfront)",
-                  "The full analysis is yours to keep - whether or not you hire us",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

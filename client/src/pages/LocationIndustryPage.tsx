@@ -188,7 +188,7 @@ export default function LocationIndustryPage() {
 
               {/* CTAs */}
               <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-                <Link href={page.ctaPrimary.href} style={buttons.primary}>{page.ctaPrimary.text}</Link>
+                <CtaLink href={page.ctaPrimary.href} style={buttons.primary}>{page.ctaPrimary.text}</CtaLink>
                 <Link href={page.ctaSecondary.href} style={buttons.secondary}>
                   {page.ctaSecondary.text} <ArrowRightIcon />
                 </Link>
@@ -313,7 +313,7 @@ export default function LocationIndustryPage() {
                 {page.ctaBody}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
-                <Link href="/contact" style={buttons.primaryOnDark}>Book Free Audit</Link>
+                <AuditBookingLink style={buttons.primaryOnDark}>Book Free Audit</AuditBookingLink>
                 <Link href="/automation-planner" style={buttons.secondaryOnDark}>Start Automation Planner</Link>
               </div>
             </div>
@@ -354,3 +354,4 @@ export default function LocationIndustryPage() {
 
 /* Need React import for useState */
 import React from "react";
+import AuditBookingLink, { CtaLink } from "@/components/AuditBookingLink";
