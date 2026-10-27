@@ -140,7 +140,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first tax season",
   keyResultCallout:
     "65 additional clients served the following tax season. 280 files processed vs 215 the year before. Same 4-person team. Zero new hires. Document collection time cut in half. Invoices now go out the day work completes.",
@@ -175,7 +175,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Firm Has the Same Ceiling. The Capacity Is There. The Admin Is in the Way.",
   ctaBody:
-    "The audit maps your document, billing, and onboarding workflows and shows you exactly where the capacity is hiding.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Accounting Firms", href: "/industries/accounting-firms" },
     { label: "Document Collection", href: "/services/document-collection" },

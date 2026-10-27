@@ -35,7 +35,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -60,7 +60,7 @@ function WarningCards() {
             <span style={{ background: "#f59e0b", color: "#fff", borderRadius: "50%", width: 24, height: 24, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.78rem", fontWeight: 700, flexShrink: 0 }}>{i + 1}</span>
             <strong style={{ color: "#1A1A2E", fontSize: "0.9rem" }}>{s.sign}</strong>
           </div>
-          <p style={{ color: "#7B7B7B", fontSize: "0.84rem", fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>Fix first: {s.fix}</p>
+          <p style={{ color: "#707070", fontSize: "0.84rem", fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>Fix first: {s.fix}</p>
         </div>
       ))}
     </div>
@@ -82,7 +82,7 @@ function DiagnosisFramework() {
           <div key={step.num} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.5rem", borderTop: `4px solid ${step.color}`, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: `opacity 0.45s ease ${i * 150}ms, transform 0.45s ease ${i * 150}ms` }}>
             <div style={{ width: 32, height: 32, background: step.color, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontWeight: 700, fontSize: "0.9rem", marginBottom: "0.75rem" }}>{step.num}</div>
             <strong style={{ color: "#1A1A2E", display: "block", marginBottom: "0.5rem", fontSize: "0.95rem" }}>{step.title}</strong>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>e.g. {step.example}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", fontStyle: "italic", margin: 0, lineHeight: 1.6 }}>e.g. {step.example}</p>
           </div>
         ))}
       </div>
@@ -131,7 +131,7 @@ export default function WhenAiIsNotTheAnswer() {
               </p>
             </SummaryBox>
 
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "2rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "2rem" }}>
               Automation is one of the most powerful tools available to small businesses. But it is not a universal solution. Knowing when <em>not</em> to automate is as important as knowing what to automate. Building a system on a shaky foundation doesn't fix the foundation - it amplifies its flaws.
             </p>
 
@@ -182,30 +182,30 @@ export default function WhenAiIsNotTheAnswer() {
                     <span style={{ background: "#f59e0b", color: "#fff", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.85rem", flexShrink: 0 }}>{sign.num}</span>
                     <strong style={{ color: "#1A1A2E", fontSize: "1rem" }}>{sign.title}</strong>
                   </div>
-                  <p style={{ color: "#7B7B7B", lineHeight: 1.75, margin: "0 0 0.75rem" }}>{sign.body}</p>
+                  <p style={{ color: "#707070", lineHeight: 1.75, margin: "0 0 0.75rem" }}>{sign.body}</p>
                   <div style={{ background: "#fff", borderRadius: 8, padding: "0.75rem 1rem", border: "1px solid #E2E8F0" }}>
                     <strong style={{ color: "#283891", fontSize: "0.85rem" }}>Fix: </strong>
-                    <span style={{ color: "#7B7B7B", fontSize: "0.88rem" }}>{sign.fix}</span>
+                    <span style={{ color: "#707070", fontSize: "0.88rem" }}>{sign.fix}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             <SectionHeading>The Common Thread</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               All 7 signs point to the same root issue: automation should solve a defined, measured problem - not be purchased speculatively because it sounds powerful. The businesses that get the most from automation are those that treat it as a precision tool, not a cure-all.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               The most successful automation projects start with a clearly articulated problem, a measurable baseline, and a defined success outcome. Everything else - the tools, the platforms, the integrations - follows from that foundation.
             </p>
 
             <DiagnosisFramework />
 
             <SectionHeading>What to Do Instead</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               If any of the 7 signs apply to your business right now, here is the sequence:
             </p>
-            <ol style={{ color: "#7B7B7B", lineHeight: 2, paddingLeft: "1.25rem" }}>
+            <ol style={{ color: "#707070", lineHeight: 2, paddingLeft: "1.25rem" }}>
               <li><strong style={{ color: "#1A1A2E" }}>Map your workflows</strong> - document what you actually do today, step by step</li>
               <li><strong style={{ color: "#1A1A2E" }}>Identify the highest-cost bottleneck</strong> - where is time, money, or opportunity being lost?</li>
               <li><strong style={{ color: "#1A1A2E" }}>Define success</strong> - what does "fixed" look like, in measurable terms?</li>
@@ -234,7 +234,7 @@ export default function WhenAiIsNotTheAnswer() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Readiness Assessment shows you exactly where you stand and what to address first.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/insights/automation-readiness"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Take the Readiness Assessment</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/when-ai-is-not-the-answer" />

@@ -283,7 +283,7 @@ export default function IndustryAutomationGuide() {
               ))}
             </nav>
             <AuditBookingLink className="industry-guide-toc-cta">
-              Book a Free Automation Audit <ArrowRight size={15} aria-hidden="true" />
+              Book a Free Introductory Session <ArrowRight size={15} aria-hidden="true" />
             </AuditBookingLink>
           </div>
         </aside>
@@ -291,7 +291,7 @@ export default function IndustryAutomationGuide() {
         <article className="industry-guide-article">
           {guide.sections.map((section, index) => {
             const isFaq = section === faqSection;
-            const isCta = section.title === "Book a Free Automation Audit";
+            const isCta = section.title === "Book a Free Introductory Session";
             const isRelated = section.title === "Related Guides";
 
             return (

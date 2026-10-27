@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Medical Clinics Toronto | Barrana.ai",
   description:
-    "Automate patient booking, reminders, digital intake, prescription renewal alerts, and follow-up for walk-in and family medicine clinics. Free audit.",
+    "Automate patient booking, reminders, digital intake, prescription renewal alerts, and follow-up for walk-in and family medicine clinics. Free introductory session.",
   route: "medical-clinics",
   breadcrumb: "Medical Clinics",
   h1: "Your Waiting Room Is Full but Your Phone Is Ringing. Your Staff Cannot Handle Both. Let Automation Take the Phones.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Medical clinics face a unique operational challenge: high patient volume, complex scheduling, regulatory requirements, and a front desk that simultaneously manages check-ins, phone calls, insurance, and intake forms. Something always suffers.",
     "Automation handles the coordination layer - booking, reminding, intake, follow-up - so your staff focuses on the clinical experience that patients value.",
   ],
-  ctaMicro: "See how automation reduces your front desk burden. Free audit.",
+  ctaMicro: "See how automation reduces your front desk burden. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Medical Clinics",
   costItems: [
@@ -137,7 +137,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Family medicine clinics with 30+ scheduled appointments per day",
@@ -173,7 +173,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard clinic automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Medical clinic automation starts from $1,500 CAD, with a fixed quote after the free audit.",
+      answer: "Medical clinic automation starts from $1,500 CAD, with a fixed quote after a free introductory session.",
     },
     {
       question: "Walk-in queue management?",
@@ -186,7 +186,7 @@ const data: IndustryPageData = {
     "Your Patients Deserve Better Than Hold Music. Your Staff Deserve Better Than All-Day Phone Duty. Automate the Gap.",
   ctaBody:
     "Walk away with a clear plan for reducing phone volume and no-shows. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Medical Clinics Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

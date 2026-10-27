@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Marketing Agencies Toronto | Barrana.ai",
   description:
-    "Automate client onboarding, project handoffs, monthly reporting, invoicing, and lead follow-up for digital marketing and creative agencies. Free audit.",
+    "Automate client onboarding, project handoffs, monthly reporting, invoicing, and lead follow-up for digital marketing and creative agencies. Free introductory session.",
   route: "marketing-agencies",
   breadcrumb: "Marketing Agencies",
   h1: "You Sell Efficiency to Clients. Your Internal Operations Run on Slack Messages and Memory. Fix That.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Marketing agencies have a credibility problem: they sell operational efficiency to clients while running their own operations on Slack threads, shared docs with unclear ownership, and follow-up that depends on who remembers.",
     "The agencies that scale past 10 clients without chaos are the ones that systematize their internal operations. The creative work stays human. The coordination work becomes automated.",
   ],
-  ctaMicro: "See where your agency operations are leaking time. Free 60-minute audit.",
+  ctaMicro: "See where your agency operations are leaking time. Free 15-minute introductory session.",
 
   costHeading: "What Manual Operations Cost Marketing Agencies",
   costItems: [
@@ -112,7 +112,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Digital marketing agencies with 10+ active clients",
@@ -142,7 +142,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard agency automation: 3-5 weeks." },
     {
       question: "How much?",
-      answer: "Agency automation starts from $1,500 CAD, with a fixed quote after the free audit based on workflow count and platform integrations.",
+      answer: "Agency automation starts from $1,500 CAD, with a fixed quote after a free introductory session based on workflow count and platform integrations.",
     },
     {
       question: "Does it replace our project managers?",
@@ -154,7 +154,7 @@ const data: IndustryPageData = {
     "Your Clients Pay for Results, Not for Your Team to Build Spreadsheets. Automate the Operations.",
   ctaBody:
     "Walk away with a clear plan for handling 30-50% more clients with your existing team. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Marketing Agencies Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

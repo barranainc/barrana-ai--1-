@@ -318,7 +318,7 @@ export default function ProfessionalServicesGuide() {
             resultBadge="End-to-end automation possible at each transition"
           />
         </div>
-        <p style={{ lineHeight: 1.8, color: "#7B7B7B", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
+        <p style={{ lineHeight: 1.8, color: "#707070", fontSize: "0.875rem", marginBottom: "0.5rem" }}>
           Each arrow in the lifecycle represents a handoff - and every handoff is a point where manual coordination can be replaced with a triggered, reliable automated action.
         </p>
 
@@ -363,7 +363,7 @@ export default function ProfessionalServicesGuide() {
           <AuditBookingLink
             style={{ display: "inline-block", background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "1rem", padding: "0.875rem 2.25rem", borderRadius: "10px", textDecoration: "none", letterSpacing: "0.01em" }}
           >
-            Book a Free Workflow Audit
+            Book a Free Introductory Session
           </AuditBookingLink>
         </div>
       </div>

@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for HVAC, Plumbing, and Electrical Companies Toronto | Barrana.ai",
   description:
-    "Automate emergency dispatch, seasonal maintenance reminders, lead capture, technician scheduling, and invoicing for HVAC, plumbing, and electrical companies. Free audit.",
+    "Automate emergency dispatch, seasonal maintenance reminders, lead capture, technician scheduling, and invoicing for HVAC, plumbing, and electrical companies. Free introductory session.",
   route: "home-services",
   breadcrumb: "Home Services - HVAC, Plumbing, Electrical",
   h1: "Emergency Calls at 2am. Seasonal Maintenance Due for 300 Clients. Your Team Is Already Overbooked. Automate the Coordination.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Home service companies handle two realities simultaneously: emergency work that cannot wait and scheduled maintenance that keeps recurring revenue flowing. Managing both manually means emergencies consume the day while maintenance reminders, seasonal campaigns, and follow-up fall behind.",
     "Your technicians are skilled. Your dispatchers are overwhelmed. Automation handles the coordination so your team handles the work.",
   ],
-  ctaMicro: "See how many seasonal maintenance clients you are losing. Free audit.",
+  ctaMicro: "See how many seasonal maintenance clients you are losing. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Home Service Companies",
   costItems: [
@@ -107,7 +107,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "HVAC companies with 200+ maintenance clients",
@@ -140,7 +140,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard home service automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Home service automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Home service automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Weather-triggered dispatch for snow/HVAC?",
@@ -151,7 +151,7 @@ const data: IndustryPageData = {
   ctaHeadline: "Emergencies Cannot Wait. Seasonal Maintenance Cannot Be Manual. Automate Both.",
   ctaBody:
     "Walk away with a clear plan for 24/7 emergency dispatch and 100% seasonal maintenance outreach. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Home Service Companies Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

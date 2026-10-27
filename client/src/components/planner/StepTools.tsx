@@ -5,7 +5,7 @@ import PlannerNav from "./PlannerNav";
 
 // ─── Brand constants ────────────────────────────────────────────────────────
 const NAVY = "#283891";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const DARK = "#1A1A2E";
 
 // ─── Props ──────────────────────────────────────────────────────────────────

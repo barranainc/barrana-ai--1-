@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -95,7 +95,7 @@ function WorkflowChainDiagram() {
                 {wf.num}
               </div>
               <div style={{ fontWeight: 700, fontSize: "0.775rem", color: "#1A1A2E", textAlign: "center", lineHeight: 1.2 }}>{wf.name}</div>
-              <div style={{ fontSize: "0.65rem", color: "#7B7B7B", textAlign: "center", lineHeight: 1.3 }}>{wf.trigger}</div>
+              <div style={{ fontSize: "0.65rem", color: "#707070", textAlign: "center", lineHeight: 1.3 }}>{wf.trigger}</div>
             </div>
             {i < workflows.length - 1 && (
               <div style={{ width: 16, height: 2, background: "#CBD5E1", flexShrink: 0, opacity: visible ? 1 : 0, transition: `opacity 0.3s ease ${0.05 + i * 0.1}s`, position: "relative" }}>
@@ -106,7 +106,7 @@ function WorkflowChainDiagram() {
         ))}
       </div>
 
-      <p style={{ fontSize: "0.8rem", color: "#7B7B7B", marginTop: "1.25rem", fontStyle: "italic" }}>
+      <p style={{ fontSize: "0.8rem", color: "#707070", marginTop: "1.25rem", fontStyle: "italic" }}>
         Each workflow feeds into the next. Lead intake triggers onboarding. Onboarding triggers document collection. Documents trigger invoicing.
       </p>
     </div>
@@ -147,13 +147,13 @@ function TriggerConditionActionFlow() {
           { label: "→", sublabel: "", bg: "transparent", border: "transparent", text: "#CBD5E1" },
           { label: "CONDITION", sublabel: "Is it relevant?", bg: "#EFF6FF", border: "#283891", text: "#283891" },
           { label: "→", sublabel: "", bg: "transparent", border: "transparent", text: "#CBD5E1" },
-          { label: "ACTION", sublabel: "System responds", bg: "#F0FDF4", border: "#16A34A", text: "#15803D" },
+          { label: "ACTION", sublabel: "System responds", bg: "#F0FDF4", border: "#15803d", text: "#15803D" },
         ].map((step, i) => (
           <div key={i} style={{ opacity: visible ? 1 : 0, transform: visible ? "scale(1)" : "scale(0.8)", transition: `opacity 0.4s ease ${i * 0.1}s, transform 0.4s ease ${i * 0.1}s` }}>
             {step.sublabel ? (
               <div style={{ background: step.bg, border: `2px solid ${step.border}`, borderRadius: 10, padding: "0.625rem 1rem", textAlign: "center" }}>
                 <div style={{ fontSize: "0.7rem", fontWeight: 800, letterSpacing: "0.08em", color: step.text }}>{step.label}</div>
-                <div style={{ fontSize: "0.7rem", color: "#7B7B7B", marginTop: "0.15rem" }}>{step.sublabel}</div>
+                <div style={{ fontSize: "0.7rem", color: "#707070", marginTop: "0.15rem" }}>{step.sublabel}</div>
               </div>
             ) : (
               <div style={{ fontSize: "1.5rem", color: "#CBD5E1", fontWeight: 300 }}>{step.label}</div>
@@ -293,7 +293,7 @@ export default function WorkflowAutomationSMB() {
             ].map(w => (
               <div key={w.name} style={{ border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem 1.5rem", background: "#FAFBFF" }}>
                 <div style={{ fontWeight: 800, color: "#283891", fontSize: "1rem", marginBottom: "0.25rem" }}>{w.name}</div>
-                <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "#7B7B7B", marginBottom: "0.5rem" }}>{w.trigger}</div>
+                <div style={{ fontSize: "0.8rem", fontWeight: 600, color: "#707070", marginBottom: "0.5rem" }}>{w.trigger}</div>
                 <p style={{ color: "#4B5563", lineHeight: 1.7, margin: 0, fontSize: "0.9rem" }}>{w.desc}</p>
               </div>
             ))}
@@ -394,14 +394,14 @@ export default function WorkflowAutomationSMB() {
               See which workflows to build first for your business.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              The Automation Planner generates a personalised workflow roadmap in under 5 minutes. Or book a free Automation Audit.
+              The Automation Planner generates a personalised workflow roadmap in under 5 minutes. Or book a free 15-minute introductory session.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the Automation Planner
               </Link>
               <AuditBookingLink style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
-                Book a Free Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
             </div>
           </div>

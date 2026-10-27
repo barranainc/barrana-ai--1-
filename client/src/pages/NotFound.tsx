@@ -33,7 +33,7 @@ export default function NotFound() {
             Page Not Found
           </h1>
 
-          <p className="mb-9 max-w-lg text-base leading-7 text-[#7B7B7B] sm:text-lg">
+          <p className="mb-9 max-w-lg text-base leading-7 text-[#707070] sm:text-lg">
             Sorry, the page you are looking for doesn't exist.
             <br />
             It may have been moved or deleted.

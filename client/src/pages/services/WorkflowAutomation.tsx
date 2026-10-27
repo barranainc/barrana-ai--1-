@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "30–90 days" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses using 3+ connected tools with manual hand-offs",
@@ -115,7 +115,7 @@ const data: ServicePageData = {
     {
       question: "How do I know which workflows to automate first?",
       answer:
-        "The free audit uses our Operational Friction Map to score every workflow and identify the highest-ROI automation opportunities.",
+        "You can score your own workflows with our free Operational Friction Map, then talk them through in a free 15-minute introductory session.",
     },
     {
       question: "Can you connect tools that do not have a direct integration?",
@@ -136,7 +136,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Your Tools Are Not Talking to Each Other. Your Team Is Playing Messenger. Stop That.",
   ctaBody:
-    "The audit maps your hand-offs, scores the friction, and delivers a prioritized automation plan.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "CRM Automation", href: "/services/crm-automation", desc: "A CRM that updates itself" },

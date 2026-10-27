@@ -183,15 +183,15 @@ Appointment reminders in the client's preferred language and channel. It is the 
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with settlement agencies, newcomer services, and social service organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your intake, scheduling, document, case, and reporting processes and show you where frontline hours are going.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 Where sensitive client data is involved, we build privacy-first and expect your privacy advisor and your funder's requirements to shape the design from the outset.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

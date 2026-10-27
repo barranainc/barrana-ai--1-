@@ -3,7 +3,7 @@
  * Brand Colors (OFFICIAL):
  *   Navy:    #283891  (primary)
  *   Magenta: #7E0F4A  (accent)
- *   Grey:    #7B7B7B  (body text)
+ *   Grey:    #707070  (body text)
  *   Dark:    #1A1A2E  (headings)
  *   Offwhite: #F5F6FA (alt section bg)
  *   Border:  #E2E4ED
@@ -170,7 +170,7 @@ const caseStudies = [
 const faqItems: FAQItem[] = [
   {
     question: "Is this going to be really expensive?",
-    answer: "Projects start from $1,500 CAD for a single automated workflow; a full system is quoted after the free audit. Fixed pricing - you know the number before we start. Payback periods vary with volumes and scope; we agree on what to measure before launch. And the audit that tells you everything? That is free.",
+    answer: "Projects start from $1,500 CAD for a single automated workflow; a full system is quoted after a free introductory session. Fixed pricing - you know the number before we start. Payback periods vary with volumes and scope; we agree on what to measure before launch. And the 15-minute introductory session? That is free.",
   },
   {
     question: "I am not technical at all. Will I understand this?",
@@ -186,7 +186,7 @@ const faqItems: FAQItem[] = [
   },
   {
     question: "I have tried technology before and it did not work.",
-    answer: "Most failed tech projects fail because they start with the tool instead of the problem. We start by mapping your actual workflows. Then we figure out what to automate. Then we build and test with real scenarios from your business before anything goes live. The audit is free. If automation is not the right answer, we will tell you that.",
+    answer: "Most failed tech projects fail because they start with the tool instead of the problem. We start by mapping your actual workflows. Then we figure out what to automate. Then we build and test with real scenarios from your business before anything goes live. The 15-minute introductory session is free. If automation is not the right answer, we will tell you that.",
   },
   {
     question: "How long before I see results?",
@@ -334,10 +334,10 @@ export default function StartHere() {
                   </p>
                   <p style={{ color: MAGENTA, fontWeight: 700, fontSize: "1.05rem", marginBottom: "0.5rem" }}>Talk to us</p>
                   <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.65 }}>
-                    You are ready. You want a human to look at your business and tell you what to do. That is what the free Automation Audit is for.
+                    You are ready. You want a human to look at your business and tell you what to do. Start with a free 15-minute introductory session.
                   </p>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.375rem", color: NAVY, fontWeight: 600, fontSize: "0.875rem", marginTop: "1rem" }}>
-                    Book Free Audit <ArrowRight size={14} />
+                    Book Free Introductory Session <ArrowRight size={14} />
                   </div>
                 </HoverCard>
               </AuditBookingLink>
@@ -392,7 +392,7 @@ export default function StartHere() {
                 </div>
                 <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.125rem", marginBottom: "0.875rem" }}>What It Costs</h3>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7 }}>
-                  Projects start from $1,500 CAD, and the fixed quote after your free audit depends on how many workflows you automate. Ongoing support is quoted with your project. Payback depends on your volumes and scope; we agree on what to measure before launch.
+                  Projects start from $1,500 CAD, and the fixed quote after a free introductory session depends on how many workflows you automate. Ongoing support is quoted with your project. Payback depends on your volumes and scope; we agree on what to measure before launch.
                 </p>
               </div>
             </Reveal>
@@ -640,7 +640,7 @@ export default function StartHere() {
                 </div>
                 <h3 style={{ color: DARK, fontWeight: 700, fontSize: "1.1875rem", marginBottom: "0.875rem" }}>Talk to a Human</h3>
                 <p style={{ color: GREY, fontSize: "0.9375rem", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Book a free 60-minute Automation Audit. We look at your specific workflows, calculate what your manual operations cost per year, and show you exactly what to automate first.
+                  Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
                 </p>
                 <AuditBookingLink
                   style={{
@@ -657,10 +657,10 @@ export default function StartHere() {
                     transition: "background 0.2s, color 0.2s",
                   }}
                 >
-                  Book a Free Automation Audit <ArrowRight size={16} />
+                  Book a Free Introductory Session <ArrowRight size={16} />
                 </AuditBookingLink>
                 <p style={{ color: GREY, fontSize: "0.8rem", marginTop: "0.75rem" }}>
-                  60 minutes. No obligation.
+                  15 minutes. No obligation.
                 </p>
               </HoverCard>
             </Reveal>

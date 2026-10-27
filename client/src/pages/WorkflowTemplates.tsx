@@ -122,7 +122,7 @@ export default function WorkflowTemplates() {
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-4" style={{ color: "#1A1A2E" }}>
               Workflow Templates
             </h1>
-            <p className="text-lg leading-relaxed" style={{ color: "#7B7B7B" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "#707070" }}>
               Visual automation templates showing exactly how each workflow is structured. Use these as reference for your own implementation.
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function WorkflowTemplates() {
               <h3 className="text-2xl font-bold mb-3" style={{ color: "#1A1A2E" }}>
                 {template.title}
               </h3>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "#7B7B7B" }}>
+              <p className="text-base leading-relaxed mb-8" style={{ color: "#707070" }}>
                 {template.description}
               </p>
               <WorkflowDiagram steps={template.steps} resultBadge={template.resultBadge} />
@@ -158,10 +158,10 @@ export default function WorkflowTemplates() {
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Want These Implemented for Your Business?</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>
-            Book a free Automation Audit and we will identify which templates apply to your business and customize them for your specific workflows.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
           </p>
           <AuditBookingLink className="btn-primary">
-            Book Free Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

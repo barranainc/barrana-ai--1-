@@ -179,15 +179,15 @@ Pre-visit intake. It recovers clinical time immediately, it is the clearest qual
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with naturopathic, integrative health, and allied practitioner clinics across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your intake, protocol follow-up, dispensary, and retention processes and show you where clinical time and patient outcomes are being lost to administration.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For regulated practices we build to PHIPA requirements and expect your privacy advisor and college standards to shape the design.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

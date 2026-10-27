@@ -313,7 +313,7 @@ export default function LocationIndustryPage() {
                 {page.ctaBody}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "1rem" }}>
-                <AuditBookingLink style={buttons.primaryOnDark}>Book Free Audit</AuditBookingLink>
+                <AuditBookingLink style={buttons.primaryOnDark}>Book Free Introductory Session</AuditBookingLink>
                 <Link href="/automation-planner" style={buttons.secondaryOnDark}>Start Automation Planner</Link>
               </div>
             </div>

@@ -21,7 +21,7 @@ const data: ServicePageData = {
     "Every new client inquiry follows the same pattern: someone on your team collects basic information over the phone, types it into a CRM, figures out which team member should handle it, sends a confirmation, and schedules the first meeting. That takes 30–45 minutes and happens differently every time depending on who handles it.",
     "The entire sequence is automatable. The AI handles the intake. Your team handles the expertise.",
   ],
-  ctaMicro: "See how your intake process looks before and after automation. Free audit.",
+  ctaMicro: "See how your intake process looks before and after automation. Free introductory session.",
 
   costHeading: "What Manual Intake Is Costing You",
   costItems: [
@@ -92,7 +92,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Within first billing cycle" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Professional firms (immigration, law, accounting) handling 20+ new inquiries per month",
@@ -144,7 +144,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Your Intake Process Is Your Client's First Impression. Make It Instant.",
   ctaBody:
-    "The audit maps your current intake workflow and shows you exactly where time is being lost and how to recover it.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     {

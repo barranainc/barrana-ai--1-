@@ -15,7 +15,7 @@ const READINESS_OPTIONS = [
     label: "Ready to Go",
     sublabel: "I want to start implementing within 30 days. Show me the plan.",
     microInsight:
-      "Great. Your results will include a clear action plan and a direct path to book a free 60-minute Automation Audit.",
+      "Great. Your results will include a clear action plan and a direct path to book a free 15-minute introductory session.",
   },
   {
     value: "interested" as const,
@@ -121,7 +121,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
       <p
         style={{
           fontSize: 15,
-          color: "#7B7B7B",
+          color: "#707070",
           lineHeight: 1.6,
           marginBottom: 32,
           marginTop: 0,
@@ -437,7 +437,7 @@ export default function StepVolume({ state, dispatch, onNext, onBack }: StepProp
                 <div
                   style={{
                     fontSize: 12,
-                    color: "#7B7B7B",
+                    color: "#707070",
                     textAlign: "center",
                     lineHeight: 1.4,
                   }}

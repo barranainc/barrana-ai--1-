@@ -248,7 +248,7 @@ export default function PrivacyPolicy() {
                 completed automation planner (planner_complete) and a click on a
                 free-audit booking button (book_audit_click); the Meta Pixel
                 sets a cookie and sends a PageView event for each page and a
-                Lead event labelled Automation Audit Request (or the campaign
+                Lead event labelled Introductory Session Request (or the campaign
                 name) after a successful form submission. These events may
                 include the page URL, referring page, browser or device details,
                 and the IP address processed during the request. They never
@@ -404,7 +404,7 @@ export default function PrivacyPolicy() {
               </li>
               <li>
                 <strong className="text-[#111A36]">Calendly</strong>, which
-                receives the details you enter when you book your free audit
+                receives the details you enter when you book your free introductory session
                 through our scheduling link (calendly.com) and handles that
                 booking under its own privacy policy;
               </li>

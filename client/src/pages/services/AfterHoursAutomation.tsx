@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "Your business is open 8 hours a day. Leads arrive 24 hours a day. Homeowners research contractors at 9pm. Patients look for clinics at 7am. Immigration clients in different time zones inquire at 2am.",
     "16 hours of every day, your business is completely offline. That is 16 hours of zero lead capture your competitors are filling.",
   ],
-  ctaMicro: "See how many leads arrive outside business hours. Free audit.",
+  ctaMicro: "See how many leads arrive outside business hours. Free introductory session.",
 
   costHeading: "What Zero After-Hours Coverage Is Costing You",
   costItems: [
@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Often within first week" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Contractors (homeowners browse evenings and weekends)",
@@ -130,13 +130,13 @@ const data: ServicePageData = {
     {
       question: "How much does this cost?",
       answer:
-        "After-hours automation starts from $1,500 CAD, with a fixed quote after the free 60-minute Automation Audit. Monthly operating cost is a fraction of hiring overnight coverage.",
+        "After-hours automation starts from $1,500 CAD, with a fixed quote after a free 15-minute introductory session. Monthly operating cost is a fraction of hiring overnight coverage.",
     },
   ],
 
   ctaHeadline: "Your Competitors Do Not Sleep. Your Lead Capture Should Not Either.",
   ctaBody:
-    "The audit analyzes your after-hours inquiry patterns and shows you exactly how much revenue is being lost between 5pm and 9am.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "AI Receptionist", href: "/services/ai-receptionist", desc: "Full AI call handling" },

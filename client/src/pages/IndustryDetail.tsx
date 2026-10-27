@@ -249,7 +249,7 @@ export default function IndustryDetail() {
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">{industry.heroTitle}</h1>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">{industry.heroSubtitle}</p>
             <AuditBookingLink className="btn-primary">
-              Book a Free Automation Audit <ArrowRight size={16} />
+              Book a Free Introductory Session <ArrowRight size={16} />
             </AuditBookingLink>
           </div>
         </div>
@@ -343,9 +343,9 @@ export default function IndustryDetail() {
       <section className="py-16" style={{ backgroundColor: "#283891" }}>
         <div className="container text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Automate Your {industry.name} Operations?</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">Book a free 60-minute Automation Audit. We walk through your specific workflows and identify the highest-impact automation opportunities.</p>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.</p>
           <AuditBookingLink className="btn-accent">
-            Book Free Automation Audit <ArrowRight size={16} />
+            Book Free Introductory Session <ArrowRight size={16} />
           </AuditBookingLink>
         </div>
       </section>

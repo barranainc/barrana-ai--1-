@@ -4,7 +4,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Dental Offices Toronto | Fill Chairs, Clear Recall Lists | Barrana.ai",
-  description: "Reduce dental no-shows 50-60%, automate recall campaigns, patient booking, digital intake, and review requests for dental practices. Free audit.",
+  description: "Reduce dental no-shows 50-60%, automate recall campaigns, patient booking, digital intake, and review requests for dental practices. Free introductory session.",
   route: "dental-offices",
   breadcrumb: "Dental Offices",
   h1: "Your Hygienist Chairs Sit Empty When Patients No-Show. Your Recall List Has 300 Overdue Patients. Automation Handles Both.",
@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Dental practices depend on chair utilization. Every empty hygienist chair is $150-$300 in lost revenue that cannot be recovered. Between no-shows, missed recall patients, and front desk staff buried in phone calls, most practices operate well below their revenue capacity.",
     "The math is straightforward: a 2-chair hygiene practice with 10% no-show improvement and better recall compliance can add $80,000-$120,000 in annual revenue without adding a single new marketing dollar.",
   ],
-  ctaMicro: "Calculate your no-show cost and recall gap. Free 60-minute audit.",
+  ctaMicro: "Calculate your no-show cost and recall gap. Free 15-minute introductory session.",
 
   costHeading: "What Your Dental Practice Is Leaving on the Table",
   costItems: [
@@ -67,7 +67,7 @@ const data: IndustryPageData = {
     { label: "Annual Revenue Impact", after: "$80,000-$120,000 for 2-chair practice" },
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Dental practices with 2+ hygienist chairs",
@@ -88,14 +88,14 @@ const data: IndustryPageData = {
     { question: "Can patients book specific procedure types?", answer: "Yes. Booking configured by appointment type (cleaning, exam, specific procedures) with appropriate duration and chair assignment." },
     { question: "Insurance verification?", answer: "We can automate insurance eligibility checks as part of the intake or booking workflow depending on your management system." },
     { question: "PHIPA compliance?", answer: "All patient data stays in your practice management system. We do not store, process, or access clinical patient data. Automation flows documented." },
-    { question: "How quickly?", answer: "Standard dental automation: 2-3 weeks from audit to live." },
-    { question: "How much?", answer: "Dental practice automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "How quickly?", answer: "Standard dental automation: 2-3 weeks from project start to live." },
+    { question: "How much?", answer: "Dental practice automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can we do treatment plan follow-up?", answer: "Yes. Presented-but-not-scheduled treatment plans get systematic follow-up at 48hr, 7-day, and 30-day intervals." },
   ],
 
   ctaHeadline: "Your Chairs Should Be Full. Your Recall List Should Be Current. Automation Makes Both Happen.",
   ctaBody: "Walk away with a clear plan for recovering $80,000-$120,000 per year in chair revenue. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Dental Offices Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

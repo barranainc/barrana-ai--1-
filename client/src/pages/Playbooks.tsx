@@ -60,7 +60,7 @@ export default function Playbooks() {
             <h1 className="text-4xl lg:text-5xl font-extrabold mb-4" style={{ color: "#1A1A2E" }}>
               Automation Playbooks
             </h1>
-            <p className="text-lg leading-relaxed" style={{ color: "#7B7B7B" }}>
+            <p className="text-lg leading-relaxed" style={{ color: "#707070" }}>
               Step-by-step guides for automating the most impactful workflows in your business.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function Playbooks() {
               >
                 <div className="text-4xl mb-4">{pb.emoji}</div>
                 <h2 className="text-lg font-bold mb-2" style={{ color: "#1A1A2E" }}>{pb.title}</h2>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "#7B7B7B" }}>{pb.desc}</p>
+                <p className="text-sm leading-relaxed mb-4" style={{ color: "#707070" }}>{pb.desc}</p>
                 <div className="flex items-center justify-between">
                   <span
                     className="text-xs font-semibold px-2.5 py-1 rounded-full"
@@ -101,14 +101,14 @@ export default function Playbooks() {
 
           {/* CTA below grid */}
           <div className="mt-16 text-center">
-            <p className="text-base mb-4" style={{ color: "#7B7B7B" }}>
+            <p className="text-base mb-4" style={{ color: "#707070" }}>
               Ready to implement one of these playbooks in your business?
             </p>
             <AuditBookingLink
               className="inline-block px-6 py-3 rounded-lg font-semibold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#283891" }}
             >
-              Book a Free Automation Audit
+              Book a Free Introductory Session
             </AuditBookingLink>
           </div>
         </div>

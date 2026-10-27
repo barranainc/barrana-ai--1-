@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 
 const BURGUNDY = "#7E0F4A";
-const GREY     = "#7B7B7B";
+const GREY     = "#707070";
 const DARK     = "#1A1A2E";
 
 interface Props {

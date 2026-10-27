@@ -45,7 +45,7 @@ const DRAINS: DrainItem[] = [
   { label: "Intake processing", hours: 12, fractionOfTotal: 12 / 40, color: "#EF4444" },
   { label: "Document chasing", hours: 8, fractionOfTotal: 8 / 40, color: "#F97316" },
   { label: "Status calls", hours: 4, fractionOfTotal: 4 / 40, color: "#EAB308" },
-  { label: "Admin / reporting", hours: 3, fractionOfTotal: 3 / 40, color: "#D97706" },
+  { label: "Admin / reporting", hours: 3, fractionOfTotal: 3 / 40, color: "#b45309" },
 ];
 
 const CONSULTING_HOURS = 13;

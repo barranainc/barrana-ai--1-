@@ -167,7 +167,7 @@ export default function ServiceDetail() {
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">{service.title}</h1>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">{service.description}</p>
             <AuditBookingLink className="btn-primary">
-              Book a Free Automation Audit <ArrowRight size={16} />
+              Book a Free Introductory Session <ArrowRight size={16} />
             </AuditBookingLink>
           </div>
         </div>
@@ -222,9 +222,9 @@ export default function ServiceDetail() {
 
               <div className="rounded-xl p-6 text-white" style={{ backgroundColor: "#283891" }}>
                 <h3 className="font-bold mb-3">Ready to Get Started?</h3>
-                <p className="text-sm text-blue-100 mb-4">Book a free 60-minute Automation Audit. We walk through your workflows and identify the highest-impact opportunities.</p>
+                <p className="text-sm text-blue-100 mb-4">Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.</p>
                 <AuditBookingLink className="btn-accent text-sm w-full justify-center">
-                  Book Free Audit <ArrowRight size={14} />
+                  Book Free Introductory Session <ArrowRight size={14} />
                 </AuditBookingLink>
               </div>
             </div>

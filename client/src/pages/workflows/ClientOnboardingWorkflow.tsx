@@ -37,7 +37,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -82,13 +82,13 @@ function OnboardingTimeline() {
               transition: `background 0.4s ease ${i * 0.1}s`,
             }}>
               <div style={{ fontWeight: 600, color: "#DC2626" }}>{s.label}</div>
-              <div style={{ color: "#7B7B7B", fontSize: "0.7rem" }}>{s.time}</div>
+              <div style={{ color: "#707070", fontSize: "0.7rem" }}>{s.time}</div>
             </div>
           ))}
         </div>
       </div>
 
-      <div style={{ textAlign: "center", fontSize: "1.5rem", color: "#7B7B7B", marginBottom: "1.25rem" }}>↓ Automation compresses this to minutes</div>
+      <div style={{ textAlign: "center", fontSize: "1.5rem", color: "#707070", marginBottom: "1.25rem" }}>↓ Automation compresses this to minutes</div>
 
       {/* Auto row */}
       <div>
@@ -107,7 +107,7 @@ function OnboardingTimeline() {
               transition: `background 0.4s ease ${i * 0.1}s`,
             }}>
               <div style={{ fontWeight: 600, color: "#0D9668" }}>{s.label}</div>
-              <div style={{ color: "#7B7B7B", fontSize: "0.7rem" }}>{s.time}</div>
+              <div style={{ color: "#707070", fontSize: "0.7rem" }}>{s.time}</div>
             </div>
           ))}
         </div>
@@ -157,7 +157,7 @@ function IndustryOnboardingCards() {
           <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.75rem" }}>{ind.name}</div>
           <ul style={{ paddingLeft: "1rem", margin: 0 }}>
             {ind.points.map((p, j) => (
-              <li key={j} style={{ color: "#7B7B7B", fontSize: "0.83rem", lineHeight: 1.6, marginBottom: "0.35rem" }}>{p}</li>
+              <li key={j} style={{ color: "#707070", fontSize: "0.83rem", lineHeight: 1.6, marginBottom: "0.35rem" }}>{p}</li>
             ))}
           </ul>
         </div>
@@ -190,7 +190,7 @@ export default function ClientOnboardingWorkflow() {
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
           <span style={{ background: "#EEF2FF", color: "#283891", fontWeight: 600, fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>Workflow Guide</span>
-          <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>10 min read</span>
+          <span style={{ background: "#F8F9FA", color: "#707070", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>10 min read</span>
         </div>
         <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
           How to Automate Client Onboarding Using Your Current Tools
@@ -204,16 +204,16 @@ export default function ClientOnboardingWorkflow() {
 
       {/* Section 1 */}
       <SectionHeading>The Manual Onboarding Problem</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Manual client onboarding is a 7-step process that a person has to execute over 2–5 days. Send the welcome email. Remember to attach the intake form. Follow up when the form isn't completed. Manually create the CRM record. Send a document request. Try to book the first meeting. Figure out who on the team should be assigned. Each step requires context, each step requires data entry, and each step can fail if someone is busy or on holiday.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         The client experience varies depending on who handles the file. A client who signs up on a Monday gets a different experience than one who signs up on a Friday. That inconsistency is a risk to your reputation and your operations.
       </p>
 
       {/* Section 2 */}
       <SectionHeading>What Automated Onboarding Delivers</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Every new client receives, without exception:
       </p>
       <ul style={{ color: "#1A1A2E", lineHeight: 1.9, paddingLeft: "1.5rem", marginBottom: "1.5rem" }}>
@@ -292,7 +292,7 @@ export default function ClientOnboardingWorkflow() {
         ].map((item, i) => (
           <div key={i} style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.4rem", fontSize: "0.9rem" }}>{item.tool}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>
@@ -308,12 +308,12 @@ export default function ClientOnboardingWorkflow() {
           <div key={i} style={{ background: "#EEF2FF", borderRadius: 10, padding: "1.1rem" }}>
             <div style={{ fontWeight: 700, color: "#283891", fontSize: "0.8rem", marginBottom: "0.2rem" }}>{item.week}</div>
             <div style={{ fontWeight: 700, color: "#1A1A2E", marginBottom: "0.4rem" }}>{item.label}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-        <strong>Pricing starts from $1,500 CAD</strong>, with a fixed quote after the free audit for a full onboarding sequence covering one or two service types. Multi-service builds with conditional branching are priced based on complexity.
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+        <strong>Pricing starts from $1,500 CAD</strong>, with a fixed quote after a free introductory session for a full onboarding sequence covering one or two service types. Multi-service builds with conditional branching are priced based on complexity.
       </p>
 
       {/* Before/After */}
@@ -348,7 +348,7 @@ export default function ClientOnboardingWorkflow() {
           <Link href="/automation-planner">
             <a style={{ background: "#7E0F4A", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Start the Automation Planner</a>
           </Link>
-          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
         </div>
       </div>
 

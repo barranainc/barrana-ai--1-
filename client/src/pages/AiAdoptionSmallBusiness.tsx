@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -78,11 +78,11 @@ function ManualVsAutomatedDay() {
       </div>
 
       <div style={{ display: "flex", gap: "1rem", marginBottom: "0.75rem" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#707070" }}>
           <div style={{ width: 12, height: 12, borderRadius: 2, background: "#DC2626" }} /> Manual
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#7B7B7B" }}>
-          <div style={{ width: 12, height: 12, borderRadius: 2, background: "#16A34A" }} /> Automated
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", color: "#707070" }}>
+          <div style={{ width: 12, height: 12, borderRadius: 2, background: "#15803d" }} /> Automated
         </div>
       </div>
 
@@ -91,20 +91,20 @@ function ManualVsAutomatedDay() {
           <div key={task.label} style={{ opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-20px)", transition: `opacity 0.4s ease ${i * 0.12}s, transform 0.4s ease ${i * 0.12}s` }}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.3rem" }}>
               <span style={{ fontSize: "0.875rem", fontWeight: 600, color: "#1A1A2E" }}>{task.label}</span>
-              <span style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{task.manual} min → {task.auto} min</span>
+              <span style={{ fontSize: "0.8rem", color: "#707070" }}>{task.manual} min → {task.auto} min</span>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
               <div style={{ background: "#FEE2E2", borderRadius: 4, height: 14, overflow: "hidden" }}>
                 <div style={{ height: "100%", background: "#DC2626", borderRadius: 4, width: visible ? `${(task.manual / maxMin) * 100}%` : "0%", transition: `width 0.7s cubic-bezier(0.16,1,0.3,1) ${0.2 + i * 0.12}s` }} />
               </div>
               <div style={{ background: "#DCFCE7", borderRadius: 4, height: 14, overflow: "hidden" }}>
-                <div style={{ height: "100%", background: "#16A34A", borderRadius: 4, width: visible ? `${(task.auto / maxMin) * 100}%` : "0%", transition: `width 0.7s cubic-bezier(0.16,1,0.3,1) ${0.4 + i * 0.12}s` }} />
+                <div style={{ height: "100%", background: "#15803d", borderRadius: 4, width: visible ? `${(task.auto / maxMin) * 100}%` : "0%", transition: `width 0.7s cubic-bezier(0.16,1,0.3,1) ${0.4 + i * 0.12}s` }} />
               </div>
             </div>
           </div>
         ))}
       </div>
-      <p style={{ marginTop: "1.25rem", fontSize: "0.8rem", color: "#7B7B7B", fontStyle: "italic" }}>
+      <p style={{ marginTop: "1.25rem", fontSize: "0.8rem", color: "#707070", fontStyle: "italic" }}>
         Manual total: 7 hrs/day in coordination. Automated: 45 min oversight.
       </p>
     </div>
@@ -151,7 +151,7 @@ function AdoptionStaircase() {
             </div>
             <div>
               <div style={{ fontWeight: 700, color: stage.color, fontSize: "0.95rem" }}>{stage.name}</div>
-              <div style={{ fontSize: "0.8rem", color: "#7B7B7B", marginTop: "0.1rem" }}>{stage.desc}</div>
+              <div style={{ fontSize: "0.8rem", color: "#707070", marginTop: "0.1rem" }}>{stage.desc}</div>
             </div>
           </div>
         ))}
@@ -186,14 +186,14 @@ function AutomateVsHumanGrid() {
   return (
     <div ref={ref} style={{ margin: "2rem 0" }}>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1rem" }}>
-        <div style={{ background: "#F0FDF4", border: "2px solid #16A34A", borderRadius: 16, padding: "1.5rem" }}>
-          <div style={{ fontWeight: 800, fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#16A34A", marginBottom: "1rem" }}>
+        <div style={{ background: "#F0FDF4", border: "2px solid #15803d", borderRadius: 16, padding: "1.5rem" }}>
+          <div style={{ fontWeight: 800, fontSize: "0.8rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#15803d", marginBottom: "1rem" }}>
             ✓ Automate These
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
             {automate.map((item, i) => (
               <div key={item} style={{ display: "flex", alignItems: "center", gap: "0.6rem", opacity: visible ? 1 : 0, transform: visible ? "translateX(0)" : "translateX(-15px)", transition: `opacity 0.35s ease ${i * 0.07}s, transform 0.35s ease ${i * 0.07}s` }}>
-                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#16A34A", flexShrink: 0 }} />
+                <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#15803d", flexShrink: 0 }} />
                 <span style={{ fontSize: "0.875rem", color: "#1A1A2E", fontWeight: 500 }}>{item}</span>
               </div>
             ))}
@@ -226,7 +226,7 @@ export default function AiAdoptionSmallBusiness() {
     { q: "How long does AI adoption take for a small business?", a: "Your first workflow takes 1–2 weeks to design, build, and test. A multi-workflow system takes 4–8 weeks. A full operational system covering 6+ workflows typically takes 2–3 months. Most clients see measurable ROI from the first workflow within 30 days." },
     { q: "Do I need to change my current software?", a: "No. We integrate with the tools you already use - your CRM, calendar, email, and accounting software. We connect them rather than replace them. If a critical tool is missing, we recommend adding it as part of the process." },
     { q: "Is this relevant for a solo operator?", a: "Yes - solo operators often see the highest impact. Every task that gets automated returns time directly to you, since there is no team to absorb the coordination overhead. Lead response and booking automation are the most valuable starting points for solo businesses." },
-    { q: "What if I'm not sure what to automate?", a: "That is exactly what the free Automation Audit determines. In a 60-minute session, we walk through your current workflows, identify the highest-friction tasks, and recommend a Phase 1 with clear measures agreed before launch." },
+    { q: "What if I'm not sure what to automate?", a: "Start with a free 15-minute introductory session. We discuss your business and workflow challenges and explore where AI automation could help; if you go ahead, we map your workflows in detail and recommend a Phase 1 with clear measures agreed before launch." },
     { q: "Is my client data safe?", a: "All data stays within your controlled systems. We do not introduce third-party platforms that store your client information without your knowledge. Every data flow is documented, and all Canadian implementations follow PIPEDA guidelines." },
   ];
 
@@ -292,7 +292,7 @@ export default function AiAdoptionSmallBusiness() {
           <SummaryBox>
             <div style={{ fontWeight: 700, fontSize: "0.75rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#283891", marginBottom: "0.625rem" }}>Quick Answer</div>
             <p style={{ color: "#1A1A2E", lineHeight: 1.75, margin: 0, fontSize: "0.9375rem" }}>
-              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and is straightforward to measure. Projects start from $1,500 CAD, with a fixed quote after the free audit.
+              AI adoption for a small business means systematically identifying repetitive operational tasks - lead response, booking, intake, document collection, invoicing, and reporting - and automating them using connected tools and AI logic. It is not about replacing people. It is about eliminating the coordination overhead that consumes 30–50% of a small team's time. The best starting point for most businesses is lead response automation, which can be implemented in 1–2 weeks and is straightforward to measure. Projects start from $1,500 CAD, with a fixed quote after a free introductory session.
             </p>
           </SummaryBox>
 
@@ -324,7 +324,7 @@ export default function AiAdoptionSmallBusiness() {
             Most businesses attempt automation in the wrong order: they choose tools before mapping their workflows, or they try to automate everything at once. The five-stage approach below produces consistent, measurable results.
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Assessment.</strong> Map every client-facing and internal workflow. Identify where time is lost, where errors occur, and where ROI potential is highest. This is the free 60-minute Automation Audit, a structured workflow review rather than a sales call.</li>
+            <li><strong>Assessment.</strong> Map every client-facing and internal workflow. Identify where time is lost, where errors occur, and where ROI potential is highest. This structured review is part of the project and follows a free 15-minute introductory session.</li>
             <li><strong>First Automation.</strong> Deploy a single workflow - typically lead response - that solves the highest-friction point. Build it, test it, and prove the ROI before expanding.</li>
             <li><strong>Expand.</strong> Add 2–3 connected workflows (booking, intake, document collection). Each one compounds the previous - the system becomes more valuable as the workflows connect.</li>
             <li><strong>Connect.</strong> Integrate tools into a unified operational system. Data flows between your CRM, calendar, documents, and accounting without human intervention.</li>
@@ -359,14 +359,14 @@ export default function AiAdoptionSmallBusiness() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
               { tier: "Single Workflow", price: "From $1,500 CAD", desc: "One end-to-end workflow (e.g. lead response)" },
-              { tier: "Multi-Workflow", price: "Fixed quote after audit", desc: "2–4 connected workflows with integrations" },
-              { tier: "Full System", price: "Fixed quote after audit", desc: "6+ workflows, full operational integration" },
+              { tier: "Multi-Workflow", price: "Fixed quote after introductory session", desc: "2–4 connected workflows with integrations" },
+              { tier: "Full System", price: "Fixed quote after introductory session", desc: "6+ workflows, full operational integration" },
               { tier: "Ongoing Support", price: "Quoted with your project", desc: "Monitoring, updates, and iteration support" },
             ].map(t => (
               <div key={t.tier} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{t.tier}</div>
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#707070", marginBottom: "0.5rem" }}>{t.tier}</div>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#283891", marginBottom: "0.4rem" }}>{t.price}</div>
-                <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{t.desc}</div>
+                <div style={{ fontSize: "0.8rem", color: "#707070" }}>{t.desc}</div>
               </div>
             ))}
           </div>
@@ -391,7 +391,7 @@ export default function AiAdoptionSmallBusiness() {
             Every Barrana engagement follows a five-stage method:
           </p>
           <ol style={{ color: "#4B5563", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
-            <li><strong>Free Automation Audit.</strong> 60 minutes. We walk through your workflows and identify the highest-ROI starting point with no cost or obligation.</li>
+            <li><strong>Free Introductory Session.</strong> 15 minutes. We discuss your business and workflow challenges and explore where AI automation could save your team time, with no cost or obligation.</li>
             <li><strong>Friction Map.</strong> A documented analysis of your current processes, including time cost, error rate, and automation potential for each workflow.</li>
             <li><strong>Fixed-Price Phase 1.</strong> We quote a fixed price for the first workflow before any work begins. No scope creep, no hourly billing surprises.</li>
             <li><strong>Build, Test, and Launch.</strong> Every system is tested with real data before going live. We do not launch until you are satisfied with the results.</li>
@@ -417,14 +417,14 @@ export default function AiAdoptionSmallBusiness() {
               Ready to eliminate the coordination overhead?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Start with the Automation Planner to get a personalised workflow recommendation - or book a free Automation Audit.
+              Start with the Automation Planner to get a personalised workflow recommendation - or book a free 15-minute introductory session.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 Start the Automation Planner
               </Link>
               <AuditBookingLink style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
-                Book a Free Automation Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
             </div>
           </div>

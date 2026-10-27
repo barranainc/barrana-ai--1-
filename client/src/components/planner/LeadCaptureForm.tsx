@@ -271,7 +271,7 @@ export default function LeadCaptureForm({ onSubmit, isSubmitted }: Props) {
           style={{
             margin: 0,
             fontSize: 12,
-            color: "#7B7B7B",
+            color: "#707070",
             textAlign: "center",
             lineHeight: 1.5,
           }}

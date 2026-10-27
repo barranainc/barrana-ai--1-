@@ -42,7 +42,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -102,7 +102,7 @@ function IndustryGrid() {
           <span style={{ fontSize: "2rem" }}>{ind.emoji}</span>
           <span style={{ fontWeight: 800, fontSize: "0.9375rem", color: "#1A1A2E" }}>{ind.name}</span>
           <div>
-            <span style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#7B7B7B" }}>Top opportunity</span>
+            <span style={{ fontSize: "0.7rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.07em", color: "#707070" }}>Top opportunity</span>
             <p style={{ fontSize: "0.8125rem", color: "#374151", lineHeight: 1.5, margin: "0.25rem 0 0" }}>{ind.opportunity}</p>
           </div>
           <span style={{ fontSize: "0.8rem", color: "#283891", fontWeight: 700, marginTop: "auto" }}>Explore →</span>
@@ -137,7 +137,7 @@ function MaturityScale() {
         margin: "2rem 0",
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
+      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#707070", marginBottom: "1.5rem" }}>
         Industry Automation Maturity - Current vs Potential (Scale 1–5)
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
@@ -145,7 +145,7 @@ function MaturityScale() {
           <div key={i}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.4rem" }}>
               <span style={{ fontSize: "0.875rem", fontWeight: 700, color: "#1A1A2E" }}>{row.label}</span>
-              <span style={{ fontSize: "0.78rem", color: "#7B7B7B" }}>
+              <span style={{ fontSize: "0.78rem", color: "#707070" }}>
                 Current: {row.current}/5 &nbsp;·&nbsp; Potential: {row.potential}/5
               </span>
             </div>
@@ -351,7 +351,7 @@ export default function AiAutomationIndustries() {
                 Find the Right Starting Point for Your Industry
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 1.75rem" }}>
-                Use our Automation Planner to identify the highest-ROI starting point for your specific industry and workflow, or book a free audit with our team.
+                Use our Automation Planner to identify the highest-ROI starting point for your specific industry and workflow, or book a free introductory session with our team.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
@@ -365,7 +365,7 @@ export default function AiAutomationIndustries() {
 
             {/* Related Links */}
             <div style={{ marginTop: "3rem" }}>
-              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#7B7B7B", marginBottom: "1rem" }}>Industry Pages</p>
+              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#707070", marginBottom: "1rem" }}>Industry Pages</p>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 {[
                   { label: "Accounting Firms", href: "/industries/accounting-firms" },

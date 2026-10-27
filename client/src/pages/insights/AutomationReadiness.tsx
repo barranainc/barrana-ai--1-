@@ -35,7 +35,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -58,7 +58,7 @@ function ReadinessChecker() {
   };
 
   const levelLabel = score >= 5 ? "Ready for Full System" : score >= 4 ? "Ready for Multi-Workflow" : score >= 3 ? "Ready for Phase 1" : "Not quite yet";
-  const levelColor = score >= 5 ? "#283891" : score >= 4 ? "#2e409e" : score >= 3 ? "#22c55e" : "#7B7B7B";
+  const levelColor = score >= 5 ? "#283891" : score >= 4 ? "#2e409e" : score >= 3 ? "#22c55e" : "#707070";
 
   return (
     <div style={{ background: "#F8F9FC", borderRadius: 16, padding: "2rem", margin: "2rem 0" }}>
@@ -69,16 +69,16 @@ function ReadinessChecker() {
             <div style={{ width: 22, height: 22, borderRadius: 6, border: `2px solid ${checked[i] ? "#22c55e" : "#E2E8F0"}`, background: checked[i] ? "#22c55e" : "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, transition: "all 0.2s" }}>
               {checked[i] && <svg width="12" height="10" viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>}
             </div>
-            <span style={{ color: checked[i] ? "#1A1A2E" : "#7B7B7B", fontWeight: checked[i] ? 600 : 400, fontSize: "0.95rem", transition: "color 0.2s" }}>{q}</span>
+            <span style={{ color: checked[i] ? "#1A1A2E" : "#707070", fontWeight: checked[i] ? 600 : 400, fontSize: "0.95rem", transition: "color 0.2s" }}>{q}</span>
           </div>
         ))}
       </div>
       <div style={{ background: "#fff", border: `2px solid ${levelColor}`, borderRadius: 12, padding: "1.25rem", textAlign: "center" }}>
         <div style={{ fontSize: "2.5rem", fontWeight: 900, color: levelColor }}>{score}/5</div>
         <div style={{ fontWeight: 700, color: levelColor, fontSize: "1rem", marginTop: "0.25rem" }}>{levelLabel}</div>
-        {score < 3 && <p style={{ color: "#7B7B7B", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>Address the unchecked items before starting automation.</p>}
-        {score >= 3 && score < 5 && <p style={{ color: "#7B7B7B", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>You have a solid foundation. Start with one workflow and expand.</p>}
-        {score === 5 && <p style={{ color: "#7B7B7B", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>Your business is well-positioned for a full automation system.</p>}
+        {score < 3 && <p style={{ color: "#707070", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>Address the unchecked items before starting automation.</p>}
+        {score >= 3 && score < 5 && <p style={{ color: "#707070", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>You have a solid foundation. Start with one workflow and expand.</p>}
+        {score === 5 && <p style={{ color: "#707070", fontSize: "0.85rem", margin: "0.5rem 0 0" }}>Your business is well-positioned for a full automation system.</p>}
       </div>
     </div>
   );
@@ -98,7 +98,7 @@ function NotReadyCards() {
         <div key={i} style={{ borderLeft: "4px solid #f59e0b", background: "#FFFBEB", borderRadius: "0 12px 12px 0", padding: "1.25rem", opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: `opacity 0.45s ease ${i * 100}ms, transform 0.45s ease ${i * 100}ms` }}>
           <div style={{ fontSize: "1.4rem", marginBottom: "0.5rem" }}>{card.icon}</div>
           <div style={{ fontWeight: 700, color: "#1A1A2E", fontSize: "0.95rem", marginBottom: "0.4rem" }}>{card.problem}</div>
-          <div style={{ color: "#7B7B7B", fontSize: "0.88rem", fontStyle: "italic" }}>Fix: {card.fix}</div>
+          <div style={{ color: "#707070", fontSize: "0.88rem", fontStyle: "italic" }}>Fix: {card.fix}</div>
         </div>
       ))}
     </div>
@@ -174,7 +174,7 @@ export default function AutomationReadiness() {
                 <div style={{ background: "#283891", color: "#fff", borderRadius: "50%", width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "0.9rem", flexShrink: 0, marginTop: 2 }}>{s.num}</div>
                 <div>
                   <strong style={{ color: "#1A1A2E", display: "block", marginBottom: "0.4rem" }}>{s.title}</strong>
-                  <p style={{ color: "#7B7B7B", lineHeight: 1.7, margin: 0 }}>{s.body}</p>
+                  <p style={{ color: "#707070", lineHeight: 1.7, margin: 0 }}>{s.body}</p>
                 </div>
               </div>
             ))}
@@ -186,29 +186,29 @@ export default function AutomationReadiness() {
                 { title: "A large team", body: "Many of our most successful clients are solo operators or 2–3 person firms." },
                 { title: "An enterprise CRM", body: "Free tools like HubSpot CRM or even Google Sheets are a sufficient starting point." },
                 { title: "A big budget", body: "Projects start from $1,500 CAD, with the measures of success agreed before launch." },
-                { title: "A perfectly documented process", body: "We document it during the audit. You just need to be able to describe what you do today." },
+                { title: "A perfectly documented process", body: "We document it with you during the project. You just need to be able to describe what you do today." },
               ].map((item) => (
                 <div key={item.title} style={{ background: "#F8F9FC", borderRadius: 12, padding: "1.25rem" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.5rem" }}>
                     <span style={{ color: "#22c55e", fontWeight: 900, fontSize: "1rem" }}>✓</span>
                     <strong style={{ color: "#1A1A2E", fontSize: "0.95rem" }}>{item.title}</strong>
                   </div>
-                  <p style={{ color: "#7B7B7B", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>{item.body}</p>
+                  <p style={{ color: "#707070", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>{item.body}</p>
                 </div>
               ))}
             </div>
 
             <SectionHeading>The Quick Readiness Assessment</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.7, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.7, marginBottom: "1rem" }}>
               Toggle each item to Yes as it applies to your business. Your readiness level updates in real time.
             </p>
             <ReadinessChecker />
 
             <SectionHeading>What to Fix Before Automating</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               If you're not quite there yet on the readiness signals, here are the four things to address first:
             </p>
-            <ol style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ol style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li><strong style={{ color: "#1A1A2E" }}>Define the workflow</strong> - you can't automate what you can't describe. Write out the steps, even roughly.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Have a CRM or spreadsheet for client records</strong> - automation needs somewhere to read and write client data.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Have at least one tool for client intake</strong> - a form, an email inbox, or any structured method of receiving new enquiries.</li>
@@ -229,7 +229,7 @@ export default function AutomationReadiness() {
                 <div key={item.industry} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
                   <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.3rem", fontSize: "0.95rem" }}>{item.industry}</div>
                   <div style={{ fontWeight: 600, color: "#1A1A2E", fontSize: "0.88rem", marginBottom: "0.4rem" }}>{item.signal}</div>
-                  <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+                  <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
                 </div>
               ))}
             </div>
@@ -245,7 +245,7 @@ export default function AutomationReadiness() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="We're a solo operator with 2 clients - are we ready?" a="Probably not yet for workflow automation. Focus on landing more clients. But start preparing: use a proper CRM and document your intake process." />
               <FAQItem q="What if our processes aren't consistent yet?" a="Fix the process first. Automation doesn't fix a broken process - it accelerates it. Map the ideal workflow, then automate." />
-              <FAQItem q="How do we know which automation to start with?" a="The Automation Planner helps you identify this. You can also book a free audit and we'll walk through it with you." />
+              <FAQItem q="How do we know which automation to start with?" a="The Automation Planner helps you identify this. You can also book a free introductory session and we'll talk it through with you." />
               <FAQItem q="We tried automation before and it failed. Does readiness help?" a="Yes. Most automation failures happen because either the workflow wasn't defined or the wrong thing was automated first. The readiness framework prevents both." />
             </div>
 
@@ -254,7 +254,7 @@ export default function AutomationReadiness() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner maps your readiness and identifies your best starting point in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/automation-readiness" />

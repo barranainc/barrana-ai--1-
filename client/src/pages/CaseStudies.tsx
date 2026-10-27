@@ -66,7 +66,7 @@ const CARDS: CaseStudyCard[] = [
     keyMetric: "90 sec",
     metricLabel: "Lead response time",
     summary: "From 4-6 hour response delays to 90-second automated follow-up. 100% after-hours lead capture.",
-    color: "#D97706",
+    color: "#b45309",
   },
   {
     slug: "physio-clinic-richmond-hill",
@@ -132,7 +132,7 @@ const CARDS: CaseStudyCard[] = [
     keyMetric: "10 days",
     metricLabel: "To fill seasonal schedule",
     summary: "Fall maintenance campaign automated. Emergency dispatch live 24/7. Maintenance agreement renewal rate up 28%.",
-    color: "#D97706",
+    color: "#b45309",
   },
   {
     slug: "property-management-toronto",
@@ -325,7 +325,7 @@ export default function CaseStudies() {
                 {[
                   { v: "12", l: "Illustrative Examples" },
                   { v: "6", l: "Industries" },
-                  { v: "60 min", l: "Free Automation Audit" },
+                  { v: "15 min", l: "Free Introductory Session" },
                 ].map((s) => (
                   <div key={s.l}>
                     <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#283891" }}>{s.v}</div>
@@ -394,7 +394,7 @@ export default function CaseStudies() {
       <section style={{ background: "white", padding: "1.5rem 0" }}>
         <div className="container">
           <p style={{ fontSize: "0.75rem", color: "#9CA3AF", maxWidth: "640px" }}>
-            <strong>Note on figures:</strong> These are illustrative examples, not verified client results. Real results vary with business size, industry, workflow complexity and implementation scope; we measure your own baseline during the free Automation Audit.
+            <strong>Note on figures:</strong> These are illustrative examples, not verified client results. Real results vary with business size, industry, workflow complexity and implementation scope; we agree how to measure your baseline before work starts.
           </p>
         </div>
       </section>
@@ -417,10 +417,10 @@ export default function CaseStudies() {
             Want Results Like These?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.75)", marginBottom: "2rem", maxWidth: "480px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
-            Book a free 60-minute Automation Audit. We walk through your workflows, identify the highest-impact opportunities, and give you a prioritized plan.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
           </p>
           <AuditBookingLink className="btn-accent">
-            Book Free Automation Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

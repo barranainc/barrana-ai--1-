@@ -333,10 +333,10 @@ export default function Industries() {
         >
           <h2 className="text-3xl font-extrabold text-white mb-4">Don't See Your Industry?</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            We work with any professional service business in the GTA. Book a free Automation Audit and we will walk through your specific workflows.
+            We work with any professional service business in the GTA. Book a free 15-minute introductory session and we will discuss your business and workflow challenges.
           </p>
           <AuditBookingLink className="btn-accent">
-            Book Free Automation Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

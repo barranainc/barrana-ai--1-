@@ -127,7 +127,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first seasonal campaign",
   keyResultCallout:
     "300 seasonal maintenance slots targeted, 225 booked in 10 days. Emergency dispatch went from voicemail to immediate. Agreement renewal lapse dropping from 22% toward single digits. Dispatcher freed from 6 weeks of manual calling.",
@@ -162,7 +162,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Next Season Starts in Weeks. Your Client List Is Sitting There. Automate the Outreach.",
   ctaBody:
-    "The audit analyzes your seasonal patterns and shows you what a 10-day campaign looks like vs your current manual process.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Home Services", href: "/industries/home-services" },
     { label: "After-Hours Automation", href: "/services/after-hours-automation" },

@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -63,7 +63,7 @@ function CallFlowDiagram() {
   ];
 
   const outcomes = [
-    { label: "Book Appointment", desc: "Calendar + CRM record created", color: "#15803D", bg: "#F0FDF4", border: "#16A34A" },
+    { label: "Book Appointment", desc: "Calendar + CRM record created", color: "#15803D", bg: "#F0FDF4", border: "#15803d" },
     { label: "Transfer to Human", desc: "Warm handoff with context brief", color: "#283891", bg: "#EFF6FF", border: "#283891" },
     { label: "Take a Message", desc: "CRM record + team notification", color: "#7E0F4A", bg: "#FDF2F8", border: "#7E0F4A" },
   ];
@@ -107,7 +107,7 @@ function CallFlowDiagram() {
 
       {/* 3-way branch */}
       <div style={{ borderTop: "2px dashed #CBD5E1", paddingTop: "1.5rem" }}>
-        <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#7B7B7B", letterSpacing: "0.07em", textTransform: "uppercase", marginBottom: "1rem" }}>Routing Outcomes</div>
+        <div style={{ fontSize: "0.75rem", fontWeight: 700, color: "#707070", letterSpacing: "0.07em", textTransform: "uppercase", marginBottom: "1rem" }}>Routing Outcomes</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0.875rem" }}>
           {outcomes.map((o, i) => (
             <div key={o.label} style={{
@@ -120,7 +120,7 @@ function CallFlowDiagram() {
               transition: `opacity 0.4s ease ${0.6 + i * 0.12}s, transform 0.4s ease ${0.6 + i * 0.12}s`,
             }}>
               <div style={{ fontWeight: 800, fontSize: "0.875rem", color: o.color, marginBottom: "0.3rem" }}>{o.label}</div>
-              <div style={{ fontSize: "0.775rem", color: "#7B7B7B" }}>{o.desc}</div>
+              <div style={{ fontSize: "0.775rem", color: "#707070" }}>{o.desc}</div>
             </div>
           ))}
         </div>
@@ -130,7 +130,7 @@ function CallFlowDiagram() {
       <div style={{ marginTop: "1.5rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
         {["CRM record created", "Calendar entry added", "Team briefing delivered"].map((badge, i) => (
           <div key={badge} style={{
-            background: "#F0FDF4", border: "1.5px solid #16A34A", borderRadius: 24, padding: "0.3rem 0.875rem",
+            background: "#F0FDF4", border: "1.5px solid #15803d", borderRadius: 24, padding: "0.3rem 0.875rem",
             fontSize: "0.775rem", fontWeight: 700, color: "#15803D",
             opacity: visible ? 1 : 0,
             transition: `opacity 0.4s ease ${0.9 + i * 0.1}s`,
@@ -153,7 +153,7 @@ function CoverageTimeline() {
       label: "Human Receptionist",
       segments: Array.from({ length: 24 }, (_, h) => ({
         covered: h >= 9 && h < 17,
-        color: h >= 9 && h < 17 ? "#16A34A" : "#FCA5A5",
+        color: h >= 9 && h < 17 ? "#15803d" : "#FCA5A5",
         isMissed: h < 9 || h >= 17,
       })),
       missedLabel: "Missed calls",
@@ -183,7 +183,7 @@ function CoverageTimeline() {
       {/* Hour labels */}
       <div style={{ display: "flex", gap: 0, marginBottom: "0.5rem", paddingLeft: 180 }}>
         {[0, 6, 12, 18, 23].map(h => (
-          <div key={h} style={{ flex: h === 23 ? 1 : 6, fontSize: "0.65rem", color: "#7B7B7B", textAlign: "left" }}>
+          <div key={h} style={{ flex: h === 23 ? 1 : 6, fontSize: "0.65rem", color: "#707070", textAlign: "left" }}>
             {h === 0 ? "12am" : h === 6 ? "6am" : h === 12 ? "12pm" : h === 18 ? "6pm" : "11pm"}
           </div>
         ))}
@@ -224,12 +224,12 @@ function CoverageTimeline() {
       {/* Legend */}
       <div style={{ display: "flex", gap: "1.25rem", marginTop: "1.25rem", flexWrap: "wrap" }}>
         {[
-          { color: "#16A34A", label: "Human (9am–5pm)" },
+          { color: "#15803d", label: "Human (9am–5pm)" },
           { color: "#FCA5A5", label: "Unattended (missed calls)" },
           { color: "#0F766E", label: "AI Receptionist" },
           { color: "#283891", label: "Human (business hours)" },
         ].map(l => (
-          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", color: "#7B7B7B" }}>
+          <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "0.4rem", fontSize: "0.75rem", color: "#707070" }}>
             <div style={{ width: 12, height: 12, borderRadius: 2, background: l.color, flexShrink: 0 }} />
             {l.label}
           </div>
@@ -485,15 +485,15 @@ export default function AiReceptionistPage() {
           <SectionHeading>Cost Breakdown</SectionHeading>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
-              { label: "Ongoing service", value: "Quoted with your project", note: "Included in the fixed quote after the free audit" },
-              { label: "Setup & configuration", value: "From $1,500 CAD", note: "One-time build and integration, fixed quote after the free audit" },
+              { label: "Ongoing service", value: "Quoted with your project", note: "Included in the fixed quote after a free introductory session" },
+              { label: "Setup & configuration", value: "From $1,500 CAD", note: "One-time build and integration, fixed quote after a free introductory session" },
               { label: "Human receptionist", value: "$3,000–$4,000/month", note: "Salary + benefits, business hours only" },
               { label: "Payback", value: "Depends on call volume", note: "Measured against your baseline after launch" },
             ].map(c => (
               <div key={c.label} style={{ background: "#F8FAFF", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem" }}>
-                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#7B7B7B", marginBottom: "0.5rem" }}>{c.label}</div>
+                <div style={{ fontSize: "0.75rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", color: "#707070", marginBottom: "0.5rem" }}>{c.label}</div>
                 <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "#283891", marginBottom: "0.3rem" }}>{c.value}</div>
-                <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>{c.note}</div>
+                <div style={{ fontSize: "0.8rem", color: "#707070" }}>{c.note}</div>
               </div>
             ))}
           </div>
@@ -520,11 +520,11 @@ export default function AiReceptionistPage() {
               Stop missing after-hours calls.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Book a free Automation Audit to see whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
+              Book a free 15-minute introductory session to talk through whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
-                Book a Free Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
               <Link href="/services/ai-receptionist" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the AI Receptionist Service

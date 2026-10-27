@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "You have tried individual automations. Maybe a Zapier connection here, a chatbot there. They help, but they do not solve the underlying problem: your operations are a patchwork of disconnected tools, manual hand-offs, and inconsistent processes.",
     "A custom AI system is the architectural solution. It connects everything, automates the coordination layer end-to-end, and gives you real-time visibility into the entire operation.",
   ],
-  ctaMicro: "Get a custom system architecture designed for your business. Free audit.",
+  ctaMicro: "Get a custom system architecture designed for your business. Free introductory session.",
 
   costHeading: "What Disconnected Tools Are Costing You",
   costItems: [
@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "60–120 days" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses with 10–50 staff and complex operations",
@@ -115,7 +115,7 @@ const data: ServicePageData = {
     {
       question: "How much does a custom system cost?",
       answer:
-        "Projects start from $1,500 CAD; custom systems get a fixed quote after the free 60-minute Automation Audit, based on complexity. Phased implementation allows you to spread the investment.",
+        "Projects start from $1,500 CAD; custom systems get a fixed quote after a free 15-minute introductory session, based on complexity. Phased implementation allows you to spread the investment.",
     },
     {
       question: "How long does implementation take?",
@@ -136,7 +136,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Your Business Deserves a System Built Specifically for How You Operate.",
   ctaBody:
-    "The deep operational audit maps your entire operation and delivers a custom system architecture designed for your growth.",
+    "Start with a free 15-minute introductory session. If a custom system makes sense, the paid project begins with a deep operational audit and a system architecture designed for your growth.",
 
   internalLinks: [
     { label: "AI Agents for Business", href: "/services/ai-agents", desc: "The technology inside custom systems" },

@@ -45,7 +45,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s", flexShrink: 0, marginLeft: "1rem" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -79,7 +79,7 @@ function AutomationBoundaryMap() {
         overflowX: "auto",
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#7B7B7B", marginBottom: "1.5rem" }}>
+      <div style={{ fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "#707070", marginBottom: "1.5rem" }}>
         Client Lifecycle - Automation Boundary Map
       </div>
       <div style={{ display: "flex", gap: "0", alignItems: "center", flexWrap: "wrap", minWidth: "560px" }}>
@@ -372,11 +372,11 @@ export default function HumanInTheLoop() {
                 Design Automation That Keeps You in Control
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 1.75rem" }}>
-                Book a free 60-minute Automation Audit. We'll walk through your workflows and show you exactly where to place approval gates and escalation paths - no obligation.
+                Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
-                  Book a Free Audit →
+                  Book a Free Introductory Session →
                 </AuditBookingLink>
                 <Link href="/governance" style={{ background: "rgba(255,255,255,0.1)", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block", border: "1.5px solid rgba(255,255,255,0.25)" }}>
                   See Our Governance Approach
@@ -386,7 +386,7 @@ export default function HumanInTheLoop() {
 
             {/* Related Links */}
             <div style={{ marginTop: "3rem" }}>
-              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#7B7B7B", marginBottom: "1rem" }}>Related Pages</p>
+              <p style={{ fontWeight: 800, fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#707070", marginBottom: "1rem" }}>Related Pages</p>
               <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
                 {[
                   { label: "Governance Approach", href: "/governance" },

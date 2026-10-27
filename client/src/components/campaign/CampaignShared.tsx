@@ -4,7 +4,7 @@ import { trackMeta } from "@/lib/metaPixel";
  * BARRANA.AI CAMPAIGN COMPONENTS
  * Shared components for standalone campaign landing pages.
  * Design: Personal letter aesthetic - no nav, no distractions, one goal.
- * Colors: Navy #283891 | Magenta #7E0F4A | Grey #7B7B7B | Success Green #0D9668 | Danger Red #DC2626
+ * Colors: Navy #283891 | Magenta #7E0F4A | Grey #707070 | Success Green #0D9668 | Danger Red #DC2626
  * These pages are noindex and have NO main site navigation.
  */
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
@@ -15,7 +15,7 @@ import { CALENDLY_URL } from "@/lib/booking";
 // ─── Brand Constants ─────────────────────────────────────────────────────────
 export const NAVY = "#283891";
 export const MAGENTA = "#7E0F4A";
-export const GREY = "#7B7B7B";
+export const GREY = "#707070";
 export const SUCCESS = "#0D9668";
 export const DANGER = "#DC2626";
 export const BARRANA_LOGO_URL = "/barrana-logo.png";
@@ -117,7 +117,7 @@ export function CampaignFooter() {
   );
 }
 
-// ─── Campaign CTA Button (opens the free-audit booking page) ─────────────────
+// ─── Campaign CTA Button (opens the introductory-session booking page) ─────────────────
 interface CampaignCTAProps {
   utm?: string;
   centered?: boolean;
@@ -139,7 +139,7 @@ export function CampaignCTA({ centered = false, large = false }: CampaignCTAProp
         whileTap={{ scale: 0.98 }}
         transition={{ duration: 0.15 }}
       >
-        Book Your Free 60-Minute Audit →
+        Book Your Free 15-Minute Introductory Session →
       </motion.a>
       <p className="text-sm mt-3" style={{ color: GREY }}>
         No pitch. No obligation.
@@ -243,9 +243,9 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
           industry,
           message: form.challenge,
           source: "barrana.ai",
-          formName: `Campaign - ${industry} Audit Request`,
+          formName: `Campaign - ${industry} Introductory Session Request`,
           pageUrl: window.location.href,
-          tags: ["campaign-lead", "audit-request", industry.toLowerCase().replace(/\s+/g, "-"), utm],
+          tags: ["campaign-lead", "introductory-session-request", industry.toLowerCase().replace(/\s+/g, "-"), utm],
         }),
       });
       if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
@@ -279,11 +279,11 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
             className="inline-block text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4"
             style={{ backgroundColor: NAVY, color: "white" }}
           >
-            Free 60-Minute Automation Audit
+            Free 15-Minute Introductory Session
           </div>
 
           <h2 className="text-2xl md:text-3xl font-bold mb-2" style={{ color: NAVY }}>
-            Claim Your Free Audit
+            Claim Your Free Introductory Session
           </h2>
           <p className="text-sm mb-8" style={{ color: GREY }}>
             Tell us a bit about your {industry.toLowerCase()} business. We will show you which workflows to automate first and what it is worth to you - at no cost, no pitch.
@@ -299,7 +299,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
               <div className="text-4xl mb-4">✅</div>
               <h3 className="text-xl font-bold mb-2" style={{ color: NAVY }}>You are booked in.</h3>
               <p className="text-sm" style={{ color: GREY }}>
-                We will reach out within 1 business day to confirm your 60-minute audit time. Check your inbox - including spam.
+                We will reach out within 1 business day to confirm your 15-minute introductory session. Check your inbox - including spam.
               </p>
               <p className="text-xs mt-4 font-medium" style={{ color: MAGENTA }}>
                 No pitch. No obligation.
@@ -393,7 +393,7 @@ export function CampaignLeadForm({ industry, utm }: CampaignLeadFormProps) {
                 whileTap={loading ? {} : { scale: 0.98 }}
                 transition={{ duration: 0.15 }}
               >
-                {loading ? "Submitting…" : "Book My Free 60-Minute Audit →"}
+                {loading ? "Submitting…" : "Book My Free 15-Minute Introductory Session →"}
               </motion.button>
 
               <p className="text-xs text-center" style={{ color: GREY }}>
@@ -654,7 +654,7 @@ export function RevenueRecoveryMeter({ totalAtRisk, recoverable, recoverablePerc
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 2 }}
         >
-          ↑ This is what the free 60-minute audit will look at for your business specifically.
+          ↑ These are the areas we can talk through in your free 15-minute introductory session.
         </motion.p>
       </div>
     </div>

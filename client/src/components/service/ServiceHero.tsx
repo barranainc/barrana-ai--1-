@@ -27,7 +27,7 @@ export default function ServiceHero({
   h1,
   subheadline,
   body,
-  ctaText = "Get Your Free 60-Minute Automation Audit",
+  ctaText = "Get Your Free 15-Minute Introductory Session",
   ctaMicro,
   visual,
 }: ServiceHeroProps) {

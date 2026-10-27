@@ -2,7 +2,7 @@
  * SocialProofToast.tsx
  * Fixed bottom-left toast cycling through factual social proof messages.
  * Appears after 5s, dismissable, persists via localStorage.
- * Only uses factual statements - no fake real-time notifications.
+ * Only uses owner-approved facts - no fake real-time notifications or unsupported results.
  */
 
 import { useEffect, useState } from "react";
@@ -11,11 +11,10 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 const DISMISS_KEY = "barrana_toast_dismissed";
 
+// Only owner-approved facts (27 Oct 2026). Client counts and average results were removed: no evidence on file.
 const messages = [
-  "Serving 12+ businesses across the GTA this quarter.",
-  "Average client recovers 15+ hours per week after deployment.",
-  "Lead response automated for businesses in Vaughan, Toronto, and Markham.",
-  "Fixed pricing. Every engagement scoped after a free audit.",
+  "Fixed pricing. Automation projects start from $1,500 CAD.",
+  "Every engagement starts with a free 15-minute introductory session.",
 ];
 
 export default function SocialProofToast() {
@@ -85,7 +84,6 @@ export default function SocialProofToast() {
           textTransform: "uppercase",
           color: "var(--b-navy)",
           marginBottom: "0.25rem",
-          opacity: 0.7,
         }}>
           Barrana.ai
         </div>

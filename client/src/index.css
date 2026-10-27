@@ -3,7 +3,7 @@
  * Brand Colors (OFFICIAL - use ONLY these three):
  *   Barrana Navy:    #283891  (primary - headings, CTAs, icons, nav, dark sections)
  *   Barrana Magenta: #7E0F4A  (accent - highlights, underlines, hover states, badges)
- *   Barrana Grey:    #7B7B7B  (body text, secondary labels, muted elements)
+ *   Barrana Grey:    #707070  (body text, secondary labels, muted elements)
  *
  * Supporting neutrals (not brand colors - structural use only):
  *   White:           #FFFFFF  (backgrounds, cards)
@@ -785,7 +785,7 @@
   --b-navy-dark: #1a2d6e;   /* Deeper navy for gradients */
   --b-navy-wash: #E8EAF6;   /* Light navy tint for backgrounds */
   --b-magenta:   #7E0F4A;   /* Accent: underlines, highlights, badges, hover */
-  --b-grey:      #7B7B7B;   /* Body text, secondary labels, muted */
+  --b-grey:      #707070;   /* Body text, secondary labels, muted. Brand grey #7B7B7B darkened slightly (27 Oct 2026) so small text meets 4.5:1 contrast on white. */
   --b-grey-dark: #4A4A4A;   /* Darker body text */
 
   /* ─── Structural Neutrals (not brand colors) ─── */
@@ -796,9 +796,9 @@
   --b-surface-light: #F5F5F5;
 
   /* ─── Semantic utility colors (used in diagrams/before-after) ─── */
-  --b-success:  #16a34a;  /* After/improvement state */
+  --b-success:  #15803d;  /* After/improvement state */
   --b-warning:  #7E0F4A;  /* Before/problem state - brand burgundy */
-  --b-amber:    #d97706;  /* Trigger/attention */
+  --b-amber:    #b45309;  /* Trigger/attention */
   --b-success-bg: #f0fdf4;
   --b-warning-bg: #FCE4F0;  /* Burgundy wash */
   --b-amber-bg:   #fffbeb;
@@ -1595,7 +1595,7 @@
   --bh-navy-ink: #111a49;
   --bh-magenta: #7e0f4a;
   --bh-magenta-deep: #5f0b38;
-  --bh-grey: #7b7b7b;
+  --bh-grey: #707070;
   --bh-ink: #1a1a2e;
   --bh-mist: #f4f5fb;
   --bh-lilac: #eceef9;
@@ -2222,7 +2222,7 @@
   --site-navy-mid: #17235f;
   --site-magenta: #7e0f4a;
   --site-magenta-deep: #5f0b38;
-  --site-grey: #7b7b7b;
+  --site-grey: #707070;
   --site-ink: #1a1a2e;
   --site-mist: #f5f6fa;
   --site-lilac: #eceef9;

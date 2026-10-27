@@ -139,7 +139,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first month",
   keyResultCallout:
     "$120,000 in annual revenue recovered. No-shows down 55%. Recall compliance from 64% to 91%. 350 overdue patients contacted in one week (would have taken months manually). Google reviews tripled.",
@@ -165,7 +165,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Recall List Is Revenue Waiting to Be Captured. Your No-Shows Are Revenue Walking Away. Fix Both.",
   ctaBody:
-    "The audit analyzes your no-show rate, recall compliance, and front desk utilization. You walk away with a specific revenue recovery projection.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Dental Offices", href: "/industries/dental-offices" },
     { label: "Appointment Automation", href: "/services/appointment-automation" },

@@ -60,7 +60,7 @@ export default function ShareResults({ state }: Props) {
       >
         Share These Results
       </h3>
-      <p style={{ margin: "0 0 18px", fontSize: 14, color: "#7B7B7B", lineHeight: 1.5 }}>
+      <p style={{ margin: "0 0 18px", fontSize: 14, color: "#707070", lineHeight: 1.5 }}>
         Share with your business partner or team.
       </p>
 
@@ -73,7 +73,7 @@ export default function ShareResults({ state }: Props) {
           padding: "10px 14px",
           marginBottom: 14,
           fontSize: 12,
-          color: "#7B7B7B",
+          color: "#707070",
           fontFamily: "monospace",
           wordBreak: "break-all",
           lineHeight: 1.5,

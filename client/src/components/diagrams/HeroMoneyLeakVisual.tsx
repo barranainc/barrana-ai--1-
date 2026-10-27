@@ -6,7 +6,7 @@
 import { useState, useEffect } from "react";
 
 const MAGENTA = "#7E0F4A";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 
 const LEAKS = [
   { label: "Missed & Slow Leads", amount: "$36K–$180K/yr", width: "85%" },

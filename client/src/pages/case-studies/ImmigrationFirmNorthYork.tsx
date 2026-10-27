@@ -140,8 +140,8 @@ const data: CaseStudyData = {
       afterW: 10,
     },
   ],
-  implementationTimeline: "4 weeks from audit to full deployment",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  implementationTimeline: "4 weeks from project start to full deployment",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first billing cycle",
   keyResultCallout:
     "14 staff hours recovered per week. 11 additional billable consultant hours. 25% more client files handled with the same 3-person team. Document collection time cut in half. Status calls reduced by 68%.",
@@ -176,7 +176,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Practice Has the Same Bottlenecks. The Solution Is the Same. The Workflows Are Customized to You.",
   ctaBody:
-    "The free audit maps your specific intake, document, and communication workflows and delivers a plan to automate them within 30 days.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     {
       label: "Immigration Consultants",

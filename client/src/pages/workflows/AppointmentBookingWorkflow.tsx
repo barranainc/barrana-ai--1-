@@ -37,7 +37,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -75,7 +75,7 @@ function CancellationBranch() {
           </div>
         ))}
       </div>
-      <p style={{ color: "#7B7B7B", fontSize: "0.85rem", marginTop: "0.75rem", margin: "0.75rem 0 0" }}>
+      <p style={{ color: "#707070", fontSize: "0.85rem", marginTop: "0.75rem", margin: "0.75rem 0 0" }}>
         Fills 60–70% of cancelled slots automatically without any staff involvement.
       </p>
     </div>
@@ -103,12 +103,12 @@ function NoShowImpact() {
         <div style={{ background: "#FEF2F2", border: "2px solid #FECACA", borderRadius: 12, padding: "1.5rem", textAlign: "center" }}>
           <div style={{ fontSize: "clamp(1.75rem,4vw,2.5rem)", fontWeight: 900, color: "#DC2626", lineHeight: 1 }}>20%</div>
           <div style={{ fontWeight: 700, color: "#1A1A2E", marginTop: "0.5rem", marginBottom: "0.4rem" }}>No-Show Rate</div>
-          <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>Before automation</div>
+          <div style={{ fontSize: "0.8rem", color: "#707070" }}>Before automation</div>
         </div>
         <div style={{ background: "#F0FDF4", border: "2px solid #BBF7D0", borderRadius: 12, padding: "1.5rem", textAlign: "center" }}>
           <div style={{ fontSize: "clamp(1.75rem,4vw,2.5rem)", fontWeight: 900, color: "#0D9668", lineHeight: 1 }}>8%</div>
           <div style={{ fontWeight: 700, color: "#1A1A2E", marginTop: "0.5rem", marginBottom: "0.4rem" }}>No-Show Rate</div>
-          <div style={{ fontSize: "0.8rem", color: "#7B7B7B" }}>After dual reminder system</div>
+          <div style={{ fontSize: "0.8rem", color: "#707070" }}>After dual reminder system</div>
         </div>
       </div>
       <div style={{ background: "#EEF2FF", borderRadius: 10, padding: "1.25rem", textAlign: "center" }}>
@@ -145,7 +145,7 @@ export default function AppointmentBookingWorkflow() {
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
           <span style={{ background: "#EEF2FF", color: "#283891", fontWeight: 600, fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>Workflow Guide</span>
-          <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>9 min read</span>
+          <span style={{ background: "#F8F9FA", color: "#707070", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>9 min read</span>
         </div>
         <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
           How to Automate Appointment Booking and Reduce No-Shows
@@ -159,16 +159,16 @@ export default function AppointmentBookingWorkflow() {
 
       {/* Section 1 */}
       <SectionHeading>The Manual Booking Problem</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Phone-dependent scheduling creates a hidden cost that most practices never add up. Staff spend 30–40% of their time on scheduling tasks: incoming calls to book, incoming calls to reschedule, outgoing calls to confirm, and manual calendar management. That's not the highest-value work for trained professionals.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         No-shows happen because reminders are inconsistent or forgotten - sent sometimes but not always, via one channel only, or not personalized enough to feel urgent. And when a client cancels, the slot sits empty because there's no waitlist system. Revenue is lost not because demand isn't there, but because the process can't fill the gap fast enough.
       </p>
 
       {/* Section 2 */}
       <SectionHeading>What Automated Booking Looks Like</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         A client visits your website or receives a booking link by email or SMS. They see your real-time availability - only times you've made open, respecting your rules and buffer times. They pick a time, fill in any required information, and confirm. Within seconds, they receive a confirmation email. No phone call. No back-and-forth. No staff involvement. The entire booking takes under 3 minutes.
       </p>
 
@@ -188,10 +188,10 @@ export default function AppointmentBookingWorkflow() {
 
       {/* Section 3 */}
       <SectionHeading>The Dual Reminder System (48hr + 2hr)</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Single reminders work. Dual reminders work significantly better. The research is consistent: combining a 48-hour email with a 2-hour SMS cuts no-shows by 25–40% compared to no reminders at all, and by 15–20% compared to a single reminder.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         The timing is deliberate. The 48-hour reminder gives clients enough runway to reschedule if something has come up - which is good: you'd rather have the slot filled by someone else than have a ghost. The 2-hour reminder is close enough to the appointment that it creates commitment. SMS open rate at 2 hours out: 98% within 3 minutes of delivery. Email open rates at that window: 35-45%. Using both covers every client preference.
       </p>
 
@@ -200,10 +200,10 @@ export default function AppointmentBookingWorkflow() {
 
       {/* Section 4 */}
       <SectionHeading>Waitlist Auto-Fill</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         When a client cancels - whether from the reminder link or by calling - the system immediately checks the waitlist. The first waitlisted client receives an offer: "A spot has opened on [date] at [time]. Click here to claim it within 2 hours." If they don't claim it, the offer goes to the next person on the list.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         This fills 60–70% of cancelled slots automatically. The remaining 30–40% are genuinely short-notice cancellations where no waitlisted client is available at that time. Even recovering 60% of cancelled slots at $150–$300 per session compounds meaningfully over a year.
       </p>
 
@@ -219,7 +219,7 @@ export default function AppointmentBookingWorkflow() {
           <div key={i} style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "0.25rem" }}>{item.industry}</div>
             <div style={{ fontSize: "0.8rem", color: "#283891", marginBottom: "0.5rem", fontWeight: 600 }}>{item.tool}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>
@@ -245,7 +245,7 @@ export default function AppointmentBookingWorkflow() {
         ].map((item, i) => (
           <div key={i} style={{ background: "#fff", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.4rem", fontSize: "0.9rem" }}>{item.tool}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.85rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>
@@ -284,7 +284,7 @@ export default function AppointmentBookingWorkflow() {
           <Link href="/automation-planner">
             <a style={{ background: "#7E0F4A", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Start the Automation Planner</a>
           </Link>
-          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
         </div>
       </div>
 

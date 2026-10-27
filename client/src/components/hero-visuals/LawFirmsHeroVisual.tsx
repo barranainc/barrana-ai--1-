@@ -38,7 +38,7 @@ function FlameIcon({ flicker }: { flicker: boolean }) {
       />
       <motion.ellipse
         cx={8} cy={15} rx={3} ry={2}
-        fill="#D97706"
+        fill="#b45309"
         animate={flicker ? { opacity: [0.8, 1, 0.7, 1, 0.8] } : {}}
         transition={{ duration: 0.6, repeat: Infinity, ease: "easeInOut" }}
       />

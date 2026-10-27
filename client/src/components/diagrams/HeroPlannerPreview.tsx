@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 const NAVY = "#283891";
 const MAGENTA = "#7E0F4A";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const BORDER = "#E2E4ED";
 
 const STEPS = [

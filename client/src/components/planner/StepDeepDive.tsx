@@ -111,7 +111,7 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
         >
           Let us dig into what matters most.
         </h2>
-        <p style={{ color: "#7B7B7B", fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
+        <p style={{ color: "#707070", fontSize: 15, lineHeight: 1.6, marginBottom: 32 }}>
           No workflows were selected. Please go back and select some workflows first.
         </p>
         <div style={{ display: "flex", gap: 12 }}>
@@ -171,7 +171,7 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
       <p
         style={{
           fontSize: 15,
-          color: "#7B7B7B",
+          color: "#707070",
           lineHeight: 1.6,
           marginBottom: 8,
           marginTop: 0,
@@ -247,7 +247,7 @@ export default function StepDeepDive({ state, dispatch, onNext, onBack }: StepPr
                             style={{
                               fontSize: 12,
                               fontWeight: 400,
-                              color: "#7B7B7B",
+                              color: "#707070",
                               marginLeft: 6,
                             }}
                           >

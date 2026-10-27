@@ -1,5 +1,5 @@
 /**
- * Booking links for the free Automation Audit (owner decision, 27 Oct 2026): every "Book a free audit"
+ * Booking links for the free 15-minute introductory session (owner decision, 27 Oct 2026): every "Book a free introductory session"
  * button opens the owner's Calendly page in a new tab. The URL lives in lib/booking.ts.
  */
 import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
@@ -16,7 +16,7 @@ function trackBookingClick() {
   trackEvent("book_audit_click", { page_path: window.location.pathname });
 }
 
-/** "Book a free audit" button or link: opens Calendly in a new tab, keeping the caller's className/style. */
+/** "Book a free introductory session" button or link: opens Calendly in a new tab, keeping the caller's className/style. */
 export default function AuditBookingLink({ children, onClick, ...props }: AnchorProps) {
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
     trackBookingClick();

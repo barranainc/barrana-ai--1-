@@ -167,13 +167,13 @@ Lead response automation is the second priority. Booking and dispatch optimizati
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
-Barrana works with service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA. We start with a 60-minute Automation Audit - free, no obligation.
+Barrana works with service businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA. We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
-In that session we walk through your current booking, dispatch, documentation, and renewal processes, identify where the time and revenue are leaking, and give you a phased plan with fixed pricing.
+If automation is a good fit, you then receive a fixed-price quote.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 No hourly billing. No software you will never open. Fixed-price builds starting at $1,500 CAD.
 

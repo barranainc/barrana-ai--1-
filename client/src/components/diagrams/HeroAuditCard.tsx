@@ -1,21 +1,21 @@
 /**
- * HeroAuditCard.tsx - Compact Audit Checklist Card for "Ready to Talk" hero tab
+ * HeroAuditCard.tsx - Compact introductory-session card for "Ready to Talk" hero tab
  */
 
 import { CheckCircle } from "lucide-react";
 
 const DARK = "#1A1A2E";
 const GREEN = "#0D9668";
-const GREY = "#7B7B7B";
+const GREY = "#707070";
 const NAVY = "#283891";
 const BORDER = "#E2E4ED";
 
 const ITEMS = [
-  "Walk-through of your current workflows",
-  "Annual cost calculation of your manual processes",
-  "Top 3 automation opportunities ranked",
-  "Phased implementation plan with fixed pricing",
-  "Free, no obligation",
+  "Your business and goals",
+  "The workflow challenges costing your team time",
+  "Where AI automation could save your team time",
+  "Whether a fixed-price project makes sense",
+  "15 minutes, free, no obligation",
 ];
 
 export default function HeroAuditCard() {
@@ -39,7 +39,7 @@ export default function HeroAuditCard() {
           marginBottom: "1rem",
         }}
       >
-        What You Get in the Free Audit
+        What We Cover in the Free Introductory Session
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem" }}>
@@ -67,7 +67,7 @@ export default function HeroAuditCard() {
 
       <div style={{ borderTop: `1px solid ${BORDER}`, marginTop: "1rem", paddingTop: "0.625rem", textAlign: "center" as const }}>
         <span style={{ fontSize: "0.6875rem", color: NAVY, fontWeight: 600 }}>
-          60 minutes. Free. No obligation.
+          15 minutes. Free. No obligation.
         </span>
       </div>
     </div>

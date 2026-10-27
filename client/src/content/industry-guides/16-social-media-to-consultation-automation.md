@@ -177,15 +177,15 @@ Instant acknowledgment with a booking link. It is the least complex build and it
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with clinics, practices, and practitioner-led businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your enquiry channels, booking process, and follow-up and show you where audience attention is failing to become booked revenue.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For regulated practices, we build to keep clinical information out of social platforms and expect your college's advertising standards and your privacy advisor to shape the design.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

@@ -134,7 +134,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first month",
   keyResultCallout:
     "$85,000 in annual revenue recovered. No-shows down 38%. Waitlist fills 70% of cancellations. Front desk freed from 55% of phone burden. Paper intake eliminated. Patients return for maintenance care 25% more often.",
@@ -169,7 +169,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Every Empty Slot Is Revenue You Cannot Get Back. The Fix Takes 3 Weeks.",
   ctaBody:
-    "The audit calculates your specific no-show cost and shows you the reminder system designed for your practice.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     {
       label: "Physiotherapy Clinics",

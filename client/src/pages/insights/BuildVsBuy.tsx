@@ -35,7 +35,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -100,7 +100,7 @@ function BuildVsBuyTable() {
             <div>
               {rows.map((row) => (
                 <div key={row.key} style={{ padding: "0.75rem 1rem", borderBottom: "1px solid #F0F2F5" }}>
-                  <div style={{ fontSize: "0.73rem", color: "#7B7B7B", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.2rem" }}>{row.label}</div>
+                  <div style={{ fontSize: "0.73rem", color: "#707070", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.2rem" }}>{row.label}</div>
                   <div style={{ fontSize: "0.88rem", color: "#1A1A2E", fontWeight: col.highlight ? 600 : 400 }}>{col[row.key] as string}</div>
                 </div>
               ))}
@@ -127,31 +127,31 @@ function HybridArchitecture() {
           ))}
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0 0.5rem" }}>
-          <div style={{ color: "#7B7B7B", fontSize: "1.4rem" }}>→</div>
-          <div style={{ fontSize: "0.7rem", color: "#7B7B7B" }}>connects to</div>
+          <div style={{ color: "#707070", fontSize: "1.4rem" }}>→</div>
+          <div style={{ fontSize: "0.7rem", color: "#707070" }}>connects to</div>
         </div>
         <div style={{ background: "#283891", color: "#fff", borderRadius: 12, padding: "1rem 1.25rem", textAlign: "center", minWidth: 120 }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 600, opacity: 0.8, marginBottom: "0.25rem" }}>ORCHESTRATION</div>
           <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>Make / Zapier</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0 0.5rem" }}>
-          <div style={{ color: "#7B7B7B", fontSize: "1.4rem" }}>→</div>
-          <div style={{ fontSize: "0.7rem", color: "#7B7B7B" }}>applies</div>
+          <div style={{ color: "#707070", fontSize: "1.4rem" }}>→</div>
+          <div style={{ fontSize: "0.7rem", color: "#707070" }}>applies</div>
         </div>
         <div style={{ background: "#7E0F4A", color: "#fff", borderRadius: 12, padding: "1rem 1.25rem", textAlign: "center", minWidth: 120 }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 600, opacity: 0.8, marginBottom: "0.25rem" }}>CUSTOM</div>
           <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>Logic Layer</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "0 0.5rem" }}>
-          <div style={{ color: "#7B7B7B", fontSize: "1.4rem" }}>→</div>
-          <div style={{ fontSize: "0.7rem", color: "#7B7B7B" }}>produces</div>
+          <div style={{ color: "#707070", fontSize: "1.4rem" }}>→</div>
+          <div style={{ fontSize: "0.7rem", color: "#707070" }}>produces</div>
         </div>
         <div style={{ background: "#1A1A2E", color: "#fff", borderRadius: 12, padding: "1rem 1.25rem", textAlign: "center", minWidth: 120 }}>
           <div style={{ fontSize: "0.7rem", fontWeight: 600, opacity: 0.8, marginBottom: "0.25rem" }}>OUTPUTS</div>
           <div style={{ fontWeight: 800, fontSize: "0.9rem" }}>Your Workflows</div>
         </div>
       </div>
-      <p style={{ textAlign: "center", color: "#7B7B7B", fontSize: "0.82rem", marginTop: "1.25rem" }}>
+      <p style={{ textAlign: "center", color: "#707070", fontSize: "0.82rem", marginTop: "1.25rem" }}>
         Existing tools. Custom logic. Connected intelligently.
       </p>
     </div>
@@ -201,20 +201,20 @@ export default function BuildVsBuy() {
 
             <SectionHeading>The Three Options</SectionHeading>
 
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Off-the-Shelf</strong> means buying a standalone product designed to handle a specific task out of the box - a chatbot, a booking tool, an email marketing platform. You configure it but don't customise the underlying logic. It works well for generic, standard use cases and requires no technical expertise to deploy.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Hybrid / Connected</strong> means taking the off-the-shelf tools you already use (CRM, calendar, accounting, email) and building custom automation logic between them using a platform like Make or Zapier. The tools themselves are standard products, but the connections, conditions, and routing rules are built specifically for your workflows.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               <strong style={{ color: "#1A1A2E" }}>Fully Custom</strong> means commissioning bespoke software: custom code, custom AI models, custom integrations. Nothing is off-the-shelf. This offers maximum flexibility and is appropriate for organisations with proprietary data models, complex decision logic, or strict compliance requirements - but at significantly higher cost and timeline.
             </p>
 
             <BuildVsBuyTable />
 
             <SectionHeading>When Off-the-Shelf Works</SectionHeading>
-            <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li>Your use case is simple and standard - generic booking, generic email sequences</li>
               <li>You only need one tool for one task and don't need it to connect with others</li>
               <li>Your volume is low (under 20 interactions per month)</li>
@@ -223,7 +223,7 @@ export default function BuildVsBuy() {
             </ul>
 
             <SectionHeading>When the Hybrid Approach Wins</SectionHeading>
-            <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li>Multiple tools need to talk to each other (CRM + calendar + email + accounting)</li>
               <li>Your workflows are specific to your business model or service type</li>
               <li>You need conditional logic - different actions depending on client type, service, or status</li>
@@ -234,7 +234,7 @@ export default function BuildVsBuy() {
             <HybridArchitecture />
 
             <SectionHeading>When to Build Fully Custom</SectionHeading>
-            <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li>You have proprietary data models that off-the-shelf tools can't accommodate</li>
               <li>Your decision logic is complex enough that no platform can express it reliably</li>
               <li>You operate in a regulated industry with specific compliance requirements (e.g. AFSL, AHPRA)</li>
@@ -243,18 +243,18 @@ export default function BuildVsBuy() {
             </ul>
 
             <SectionHeading>The Real Cost of Each Option</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               Off-the-shelf tools appear cheapest upfront - $20–$500/month with no implementation cost. But the real cost is in the workarounds: manual steps you still have to do because the tool can't quite do what you need, or multiple tools that don't connect, or staff time spent compensating for the tool's limitations.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
               The hybrid approach has a moderate upfront investment (Barrana projects start from $1,500 CAD) and a low ongoing cost, and it is built around your actual workflows. The logic is custom to your business, which means fewer workarounds and more reliable operation.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
               Fully custom development carries a high upfront cost ($50,000+), moderate ongoing cost, and maximum flexibility. For SMBs, this is rarely justified - the hybrid approach delivers 90% of the value at 20% of the cost.
             </p>
 
             <SectionHeading>Common Build vs Buy Mistakes</SectionHeading>
-            <ul style={{ color: "#7B7B7B", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
+            <ul style={{ color: "#707070", lineHeight: 1.9, paddingLeft: "1.25rem" }}>
               <li><strong style={{ color: "#1A1A2E" }}>Buying off-the-shelf because it's cheaper upfront</strong> - then paying more in staff time spent on workarounds over 12 months.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Thinking custom is the only way to get what they need</strong> - most SMB requirements are achievable with the hybrid approach.</li>
               <li><strong style={{ color: "#1A1A2E" }}>Not factoring in integration costs</strong> - a tool that can't connect to your CRM has hidden costs that emerge over time.</li>
@@ -262,13 +262,13 @@ export default function BuildVsBuy() {
             </ul>
 
             <SectionHeading>How Barrana Approaches This Decision</SectionHeading>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "0.75rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "0.75rem" }}>
               We always start with your existing tools. Replacing software you already use is expensive and disruptive - and usually unnecessary. Our first step is understanding what you have and identifying which connections are missing.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "0.75rem" }}>
+            <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "0.75rem" }}>
               We build the logic connecting your existing tools - the conditions, routing rules, data mappings, and automation sequences that make your workflows run without manual intervention. This is the "custom" part: not the tools, but the intelligence between them.
             </p>
-            <p style={{ color: "#7B7B7B", lineHeight: 1.8 }}>
+            <p style={{ color: "#707070", lineHeight: 1.8 }}>
               We only recommend a new platform if there is a genuine gap - something no existing tool can fill. And we never recommend enterprise software to a 5-person firm.
             </p>
 
@@ -292,7 +292,7 @@ export default function BuildVsBuy() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner helps you map your needs and identify the right approach in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/build-vs-buy" />

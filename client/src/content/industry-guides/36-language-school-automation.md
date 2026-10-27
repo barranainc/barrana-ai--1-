@@ -185,15 +185,15 @@ Multilingual enquiry intake with immediate acknowledgment. It addresses the larg
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with language schools, career colleges, and education providers across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your enquiry, enrollment, placement, attendance, and progression processes and show you where students and administrative hours are being lost.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 Where international student records are involved, we build for completeness and retrievability, and we expect your immigration advisor to confirm what your obligations actually are.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

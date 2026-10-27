@@ -4,7 +4,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Mortgage Brokers Toronto | Win the Application Before Competitors | Barrana.ai",
-  description: "Automate lead response, mortgage application intake, document collection, rate notifications, and renewal reminders for mortgage brokerages. Free audit.",
+  description: "Automate lead response, mortgage application intake, document collection, rate notifications, and renewal reminders for mortgage brokerages. Free introductory session.",
   route: "mortgage-brokers",
   breadcrumb: "Mortgage Brokers",
   h1: "Mortgage Leads Go Cold in Hours. Document Collection Takes Weeks. Maturity Renewals Slip to Lenders. Automation Fixes All Three.",
@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Mortgage clients are shopping 3-5 brokers simultaneously. The first broker to respond with substance, not just a form confirmation, earns the application. Meanwhile, collecting income verification, tax returns, and bank statements takes 3-4 weeks of manual email chasing.",
     "And your existing book? Without systematic outreach starting 6 months before maturity, your clients get a competitive rate from their current lender and never call you. Automation solves all three gaps: speed, documents, and retention.",
   ],
-  ctaMicro: "See how many deals you are losing to slow response and document delays. Free 60-minute audit.",
+  ctaMicro: "See how many deals you are losing to slow response and document delays. Free 15-minute introductory session.",
 
   costHeading: "What Manual Processes Cost Your Mortgage Business",
   costItems: [
@@ -66,7 +66,7 @@ const data: IndustryPageData = {
     { label: "Pipeline Visibility", after: "Real-time, automated" },
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Mortgage brokerages handling 10+ applications per month",
@@ -86,15 +86,15 @@ const data: IndustryPageData = {
     { question: "FSRA compliance?", answer: "All communications logged per client file. Complete audit trail maintained for regulatory requirements. Disclosure requirements built into communication templates." },
     { question: "Which mortgage tools?", answer: "We integrate with Velocity, Finastra/Mortgagebot, and CRM systems used by brokerages (Salesforce, Go High Level, custom)." },
     { question: "Residential and commercial?", answer: "Yes. Separate workflows, document checklists, and timelines per mortgage type." },
-    { question: "How long?", answer: "Standard mortgage automation: 3-4 weeks from audit to live." },
-    { question: "How much?", answer: "Mortgage broker automation starts from $1,500 CAD, with a fixed quote after the free audit based on scope. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "How long?", answer: "Standard mortgage automation: 3-4 weeks from project start to live." },
+    { question: "How much?", answer: "Mortgage broker automation starts from $1,500 CAD, with a fixed quote after a free introductory session based on scope. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Maturity tracking: how does it know when mortgages are up?", answer: "We import maturity dates from your records or CRM. The system then automatically triggers the 6-month renewal sequence for each client." },
     { question: "Can it handle multiple lenders?", answer: "Yes. The system tracks which lender holds each mortgage and can customize renewal outreach accordingly." },
   ],
 
   ctaHeadline: "Every Slow Response Loses a Mortgage Application. Every Missed Maturity Loses Recurring Revenue. Automate Both.",
   ctaBody: "Walk away with a clear plan for winning applications faster and retaining your renewal book. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Mortgage Brokers Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

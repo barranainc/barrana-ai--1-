@@ -190,15 +190,15 @@ Trial lesson booking with automated post-trial follow-up. It is the cheapest bui
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with music schools, arts education providers, and lesson-based businesses across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your enquiry, scheduling, make-up, progress, and re-enrollment processes and show you where administrative hours and students are being lost.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For organizations working with minors we build screening expiry as a blocking control and route all communication through school-managed channels by default.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

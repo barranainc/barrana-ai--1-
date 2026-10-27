@@ -132,7 +132,7 @@ export default function HeroVisualCard({ stats, badge = "Typical Outcomes", show
           lineHeight: 1.4,
         }}
       >
-        Illustrative ranges from typical projects, not verified client results. Your Automation Audit gives a projection for your business.
+        Illustrative ranges from typical projects, not verified client results. Your own figures will differ.
       </p>
     </div>
   );

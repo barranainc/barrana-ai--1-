@@ -73,7 +73,7 @@ const pillarGuides = [
   { emoji: "📞", category: "Service Guide", title: "AI Receptionist for Small Businesses and Professional Services", desc: "How AI receptionists work, what they cost vs a human, when to escalate calls, and honest coverage comparisons by industry.", readTime: "10 min read", href: "/ai-receptionist", color: "#283891" },
   { emoji: "🧑‍💼", category: "Governance", title: "Human-in-the-Loop AI: Why the Best Automation Keeps Humans in Charge", desc: "How to design automation systems with approval gates, escalation paths, and human decision points - the Control Layer explained.", readTime: "12 min read", href: "/human-in-the-loop-ai", color: "#7E0F4A" },
   { emoji: "🏭", category: "Industry Guide", title: "AI Automation by Industry: What Works for Your Business", desc: "Hub page linking to industry-specific automation playbooks for accountants, immigration consultants, law firms, clinics, contractors, and agencies.", readTime: "8 min read", href: "/ai-automation-industries", color: "#283891" },
-  { emoji: "📍", category: "Local", title: "AI Automation for Small Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and free Automation Audit for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
+  { emoji: "📍", category: "Local", title: "AI Automation for Small Businesses in Vaughan and the GTA", desc: "Local service areas, PIPEDA-aware approach, what a typical engagement looks like, and a free 15-minute introductory session for GTA businesses.", readTime: "8 min read", href: "/ai-automation-vaughan", color: "#7E0F4A" },
 ];
 
 // ── Decision / insights pages (5) ────────────────────────────────────────────
@@ -222,7 +222,7 @@ const frameworks = [
 const faqs = [
   {
     q: "How long does it take to build an automation system?",
-    a: "Most automation systems are built and deployed within 2 to 4 weeks. The timeline depends on the complexity of the workflows, the number of tools being integrated, and the availability of your team for the audit and review sessions.",
+    a: "Most automation systems are built and deployed within 2 to 4 weeks. The timeline depends on the complexity of the workflows, the number of tools being integrated, and the availability of your team for workflow mapping and review sessions.",
   },
   {
     q: "Do I need to change the software I am currently using?",
@@ -234,7 +234,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Every engagement is fixed-price. After the free Automation Audit, we provide a written proposal with a clear scope, timeline, and price. Projects start from $1,500 CAD.",
+    a: "Every engagement is fixed-price. After a free 15-minute introductory session, we provide a written proposal with a clear scope, timeline, and price. Projects start from $1,500 CAD.",
   },
   {
     q: "Is my client data safe?",
@@ -629,10 +629,10 @@ export default function Resources() {
         >
           <h2 className="text-3xl font-extrabold text-white mb-4">Want a Personalized Automation Assessment?</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            Book a free 60-minute Automation Audit. We apply these frameworks directly to your business and give you a prioritized action plan.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
           </p>
           <AuditBookingLink className="btn-accent">
-            Book Free Automation Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

@@ -24,7 +24,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -90,7 +90,7 @@ function SolopreneurWeekCalendar() {
                 )}
                 <div style={{ width: "100%", height: billableH, background: "#22C55E", opacity: visible ? 1 : 0, transition: `opacity 0.4s ease ${i * 0.15}s` }} />
               </div>
-              <span style={{ fontSize: "0.8rem", color: "#7B7B7B", fontWeight: 600 }}>{d.day}</span>
+              <span style={{ fontSize: "0.8rem", color: "#707070", fontWeight: 600 }}>{d.day}</span>
             </div>
           );
         })}
@@ -103,11 +103,11 @@ function SolopreneurWeekCalendar() {
           </div>
         ) : (
           <div style={{ background: "#F0FDF4", border: "1px solid #BBF7D0", borderRadius: 8, padding: "0.75rem 1.5rem", textAlign: "center", animation: "fadeIn 0.5s ease" }}>
-            <span style={{ color: "#16A34A", fontWeight: 700, fontSize: "1rem" }}>With automation: 10-12 hrs/week recovered</span>
+            <span style={{ color: "#15803d", fontWeight: 700, fontSize: "1rem" }}>With automation: 10-12 hrs/week recovered</span>
           </div>
         )}
       </div>
-      <p style={{ textAlign: "center", fontSize: "0.8rem", color: "#7B7B7B", marginTop: "0.5rem" }}>
+      <p style={{ textAlign: "center", fontSize: "0.8rem", color: "#707070", marginTop: "0.5rem" }}>
         {!showAfter ? "Showing: current week breakdown" : "Showing: automated week - watch the bars shift"}
       </p>
     </div>
@@ -143,7 +143,7 @@ function SolopreneurToolHub() {
           <div key={t.name} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 10, padding: "0.85rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 4, opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(16px)", transition: `opacity 0.4s ease ${i * 0.07}s, transform 0.4s ease ${i * 0.07}s` }}>
             <span style={{ fontSize: "1.5rem" }}>{t.emoji}</span>
             <span style={{ fontWeight: 700, fontSize: "0.9rem", color: "#1A1A2E" }}>{t.name}</span>
-            <span style={{ fontSize: "0.75rem", color: "#7B7B7B" }}>{t.detail}</span>
+            <span style={{ fontSize: "0.75rem", color: "#707070" }}>{t.detail}</span>
           </div>
         ))}
       </div>
@@ -208,7 +208,7 @@ function SolopreneurToolHub() {
             }}>
               <div style={{ fontSize: "1.1rem" }}>{t.emoji}</div>
               <div style={{ fontWeight: 700, fontSize: "0.7rem", color: "#1A1A2E", lineHeight: 1.2 }}>{t.name}</div>
-              <div style={{ fontSize: "0.6rem", color: "#7B7B7B", lineHeight: 1.2 }}>{t.detail}</div>
+              <div style={{ fontSize: "0.6rem", color: "#707070", lineHeight: 1.2 }}>{t.detail}</div>
             </div>
           );
         })}
@@ -293,7 +293,7 @@ const faqData = [
   },
   {
     q: "What about my website?",
-    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We assess this during the free Automation Audit.",
+    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We can talk this through in a free 15-minute introductory session.",
   },
 ];
 
@@ -370,14 +370,14 @@ export default function Solopreneurs() {
     },
     {
       name: "Growth",
-      price: "Fixed quote after audit",
+      price: "Fixed quote after introductory session",
       items: ["Everything in Starter", "Client onboarding", "Invoice & payment collection", "Testimonial requests"],
       note: "The most popular choice for solopreneurs scaling to $15k+/month.",
       highlight: true,
     },
     {
       name: "Full System",
-      price: "Fixed quote after audit",
+      price: "Fixed quote after introductory session",
       items: ["Everything in Growth", "Content repurposing engine", "Re-engagement sequences", "Reporting dashboard"],
       note: "Built for solopreneurs ready to launch group programs or courses.",
       highlight: false,
@@ -441,7 +441,7 @@ export default function Solopreneurs() {
                 </a>
               </Link>
               <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.4)", display: "inline-block" }}>
-                  Book a Free Automation Audit
+                  Book a Free Introductory Session
                 </AuditBookingLink>
             </div>
           </div>
@@ -465,7 +465,7 @@ export default function Solopreneurs() {
                   <div style={{ fontWeight: 800, color: "#1A1A2E", marginBottom: "0.5rem" }}>{d.day}</div>
                   <div style={{ color: "#22C55E", fontSize: "0.9rem", marginBottom: "0.4rem" }}>✓ {d.sessions}</div>
                   {d.ops.map((o) => <div key={o} style={{ color: "#EF4444", fontSize: "0.85rem", marginBottom: "0.2rem" }}>✗ {o}</div>)}
-                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#7B7B7B" }}>Total: {d.total} - only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
+                  <div style={{ marginTop: "0.5rem", fontSize: "0.85rem", color: "#707070" }}>Total: {d.total} - only <strong style={{ color: "#1A1A2E" }}>{d.billable}</strong></div>
                 </div>
               ))}
             </div>
@@ -502,7 +502,7 @@ export default function Solopreneurs() {
                     <span style={{ color: "#4A4A4A", fontSize: "0.9rem" }}>{w.before}</span>
                   </div>
                   <div>
-                    <span style={{ color: "#16A34A", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>Automated: </span>
+                    <span style={{ color: "#15803d", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>Automated: </span>
                     <span style={{ color: "#4A4A4A", fontSize: "0.9rem" }}>{w.after}</span>
                   </div>
                 </div>
@@ -551,7 +551,7 @@ export default function Solopreneurs() {
                 {
                   label: "Automation's Zone",
                   bg: "#F0FDF4",
-                  border: "#16A34A",
+                  border: "#15803d",
                   headingColor: "#15803D",
                   icon: "⚙️",
                   items: [
@@ -649,11 +649,11 @@ export default function Solopreneurs() {
                       <li key={item} style={{ color: tier.highlight ? "#C7D2FE" : "#4A4A4A", lineHeight: 1.8, fontSize: "0.9rem" }}>{item}</li>
                     ))}
                   </ul>
-                  <p style={{ fontSize: "0.85rem", color: tier.highlight ? "#A5B4FC" : "#7B7B7B", fontStyle: "italic", margin: 0 }}>{tier.note}</p>
+                  <p style={{ fontSize: "0.85rem", color: tier.highlight ? "#A5B4FC" : "#707070", fontStyle: "italic", margin: 0 }}>{tier.note}</p>
                 </div>
               ))}
             </div>
-            <p style={{ marginTop: "1.5rem", color: "#7B7B7B", fontSize: "0.9rem" }}>
+            <p style={{ marginTop: "1.5rem", color: "#707070", fontSize: "0.9rem" }}>
               Ongoing maintenance is quoted with your project: monitoring workflows, updating integrations, and adding small automations as your business evolves.
             </p>
           </div>
@@ -714,7 +714,7 @@ export default function Solopreneurs() {
               </a>
             </Link>
             <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.9rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", display: "inline-block" }}>
-                Book a Free Automation Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
           </div>
           <p style={{ color: "#718096", fontSize: "0.875rem" }}>

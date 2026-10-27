@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Law Firms Toronto | Protect Billable Hours | Barrana.ai",
   description:
-    "Automate client intake, matter management, document exchange, billing, and status updates for law firms. Clio integrated. Free audit.",
+    "Automate client intake, matter management, document exchange, billing, and status updates for law firms. Clio integrated. Free introductory session.",
   route: "law-firms",
   breadcrumb: "Law Firms",
   h1: "Every Non-Billable Hour Your Lawyers Spend on Admin Is Revenue That Disappears. Protect It.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Legal services depend on expertise and judgment. But law practices are also complex operational machines: intake, conflict checks, retainer management, document exchange, deadline tracking, billing, and client communication. Each process has administrative layers that consume non-billable time.",
     "A solo practitioner spending 2 hours per day on admin loses 500+ billable hours per year. At $300/hour, that is $150,000 in potential revenue consumed by tasks that require no legal training.",
   ],
-  ctaMicro: "Calculate how many billable hours your firm loses to admin. Free audit.",
+  ctaMicro: "Calculate how many billable hours your firm loses to admin. Free introductory session.",
   costHeading: "What Administrative Overhead Costs Your Practice",
   costItems: [
     {
@@ -131,7 +131,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+    "These are typical outcomes; your own figures will differ.",
   bestFit: [
     "Solo practitioners losing billable hours to admin",
     "Boutique firms (2-10 lawyers) with practice area routing needs",
@@ -174,14 +174,14 @@ const data: IndustryPageData = {
     {
       question: "How much?",
       answer:
-        "Law firm automation starts from $1,500 CAD. Fixed pricing after audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Law firm automation starts from $1,500 CAD. Fixed pricing after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:
     "Your Lawyers Were Not Hired to Do Data Entry. Protect the Billable Hours. Automate the Admin.",
   ctaBody:
     "Walk away with a clear plan for recovering 500+ billable hours per year. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Law Firms Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
   internalLinks: [
     {

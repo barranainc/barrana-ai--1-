@@ -66,7 +66,7 @@ const HOURS = [
 // Segments of the 12-hour timeline
 const SEGMENTS = [
   { start: 0, end: 3 / 12, color: "#10B981", label: "Answered ✓", type: "answered" },
-  { start: 3 / 12, end: 4 / 12, color: "#D97706", label: "Voicemail", type: "partial" },
+  { start: 3 / 12, end: 4 / 12, color: "#b45309", label: "Voicemail", type: "partial" },
   { start: 4 / 12, end: 8 / 12, color: "#10B981", label: "", type: "mixed" },
   { start: 8 / 12, end: 1, color: "#EF4444", label: "No Coverage", type: "missed" },
 ];

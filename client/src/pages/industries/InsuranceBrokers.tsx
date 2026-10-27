@@ -4,7 +4,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Insurance Brokers Toronto | Never Miss a Renewal | Barrana.ai",
-  description: "Automate quote follow-up, renewal reminders, client onboarding, cross-sell detection, and compliance logging for insurance brokerages. Free audit.",
+  description: "Automate quote follow-up, renewal reminders, client onboarding, cross-sell detection, and compliance logging for insurance brokerages. Free introductory session.",
   route: "insurance-brokers",
   breadcrumb: "Insurance Brokers",
   h1: "40% of Your Quotes Get Zero Follow-Up. 15-20% of Your Renewals Lapse. Both Are Fixable.",
@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Insurance brokerages live on two things: closing new business and retaining renewals. Both depend on consistent, precisely timed follow-up that no human broker can maintain across hundreds of active policies and open quotes.",
     "Without automation, quote follow-up depends on the broker's workload that week. Renewal tracking depends on a spreadsheet someone updates monthly. Both fail silently.",
   ],
-  ctaMicro: "See how many quotes and renewals are falling through the cracks. Free 60-minute audit.",
+  ctaMicro: "See how many quotes and renewals are falling through the cracks. Free 15-minute introductory session.",
 
   costHeading: "What Manual Follow-Up Costs Your Brokerage",
   costItems: [
@@ -66,7 +66,7 @@ const data: IndustryPageData = {
     { label: "Broker Admin Time", after: "Reduced - more time selling" },
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Insurance brokerages with 200+ active policies",
@@ -88,13 +88,13 @@ const data: IndustryPageData = {
     { question: "RIBO compliance?", answer: "All client communications logged per policy. Complete audit trail maintained for regulatory and E&O documentation requirements." },
     { question: "How long to implement?", answer: "Standard brokerage automation: 3-4 weeks." },
     { question: "Does it work for independent brokers?", answer: "Yes. Solo and small brokerages benefit most because they have the least admin support for manual follow-up." },
-    { question: "How much?", answer: "Insurance brokerage automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "How much?", answer: "Insurance brokerage automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch." },
     { question: "Can it handle multi-policy households?", answer: "Yes. The system links policies to household records, coordinates renewal dates, and prevents duplicate outreach." },
   ],
 
   ctaHeadline: "Every Unfollowed Quote Is Commission Lost. Every Missed Renewal Is a Client Gone. Automate the Follow-Up That Keeps Your Book Growing.",
   ctaBody: "Walk away with a clear plan for 100% quote follow-up and near-zero renewal lapses. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Insurance Brokers Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

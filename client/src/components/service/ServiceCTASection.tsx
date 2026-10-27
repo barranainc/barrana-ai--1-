@@ -18,7 +18,7 @@ export interface ServiceCTASectionProps {
 export default function ServiceCTASection({
   headline,
   body,
-  primaryCTA = "Get Your Free 60-Minute Automation Audit",
+  primaryCTA = "Get Your Free 15-Minute Introductory Session",
   secondaryCTA = "Download: 5 Workflows Every Service Business Should Automate First",
   primaryMicro = "Walk away with a clear plan to automate your business in 30 days.",
   secondaryMicro,

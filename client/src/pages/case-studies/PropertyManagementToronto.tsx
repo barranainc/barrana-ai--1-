@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "5 weeks (multi-building complexity)",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Through revenue from 55 additional units",
   keyResultCallout:
     "65 units to 120 units. Same 3-person team. Owner reporting fully automated. Maintenance triaged by AI. Rent reminders removed the most uncomfortable part of the job. Zero surprise lease expirations.",
@@ -167,7 +167,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Portfolio Could Be 50% Larger With the Same Team. The Coordination Is What Holds You Back.",
   ctaBody:
-    "The audit maps your per-unit operational overhead and shows you exactly how automation creates capacity for growth.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Property Management", href: "/industries/property-management" },
     { label: "Operations Reporting", href: "/services/operations-reporting" },

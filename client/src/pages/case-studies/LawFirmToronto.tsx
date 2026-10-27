@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "4 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first quarter",
   keyResultCallout:
     "500+ billable hours recovered per year. $175,000+ in billable capacity restored. Billing reduced from hours to minutes per lawyer per month. Client status calls down 65%. Intake response from days to minutes.",
@@ -155,7 +155,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Every Hour Your Lawyers Spend on Admin Is $350 That Disappears. Protect It.",
   ctaBody:
-    "The audit maps your firm's admin overhead and shows you exactly how many billable hours you can recover.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Law Firms", href: "/industries/law-firms" },
     { label: "Client Intake Automation", href: "/services/client-intake-automation" },

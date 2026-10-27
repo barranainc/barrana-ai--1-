@@ -36,7 +36,7 @@ export default function PlannerNav({
             borderRadius: 8,
             border: "2px solid #E2E4ED",
             background: "white",
-            color: "#7B7B7B",
+            color: "#707070",
             fontSize: 15,
             fontWeight: 600,
             cursor: "pointer",
@@ -44,12 +44,12 @@ export default function PlannerNav({
             lineHeight: 1,
           }}
           onMouseEnter={(e) => {
-            (e.currentTarget as HTMLButtonElement).style.borderColor = "#7B7B7B";
+            (e.currentTarget as HTMLButtonElement).style.borderColor = "#707070";
             (e.currentTarget as HTMLButtonElement).style.color = "#1A1A2E";
           }}
           onMouseLeave={(e) => {
             (e.currentTarget as HTMLButtonElement).style.borderColor = "#E2E4ED";
-            (e.currentTarget as HTMLButtonElement).style.color = "#7B7B7B";
+            (e.currentTarget as HTMLButtonElement).style.color = "#707070";
           }}
         >
           {backLabel}
@@ -65,7 +65,7 @@ export default function PlannerNav({
           borderRadius: 8,
           border: "none",
           background: canNext ? "#7E0F4A" : "#E2E4ED",
-          color: canNext ? "white" : "#7B7B7B",
+          color: canNext ? "white" : "#707070",
           fontSize: 15,
           fontWeight: 700,
           cursor: canNext ? "pointer" : "not-allowed",

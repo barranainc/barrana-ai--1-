@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "You invested in a CRM. Six months later, half the records are outdated, pipeline stages are wrong, and nobody trusts the data enough to make decisions from it. The problem is not the CRM. The problem is that it depends on manual entry.",
     "Automate the data layer. The CRM becomes the real-time operating picture of your business.",
   ],
-  ctaMicro: "See how your CRM can update itself. Free audit.",
+  ctaMicro: "See how your CRM can update itself. Free introductory session.",
 
   costHeading: "What an Inaccurate CRM Is Costing You",
   costItems: [
@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Immediate (better decisions)" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses where CRM adoption has failed due to manual entry burden",
@@ -136,7 +136,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Your CRM Should Tell You What Is Happening. Not Require You to Tell It.",
   ctaBody:
-    "The audit assesses your current CRM accuracy and shows you what automated data management looks like.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "Lead Response Automation", href: "/services/lead-response-automation", desc: "Capture leads into your CRM automatically" },

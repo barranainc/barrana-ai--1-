@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Accounting Firms | Tax Season Without the Chaos | Barrana.ai",
   description:
-    "Automate tax document collection, client onboarding, invoicing, and capacity planning for accounting practices. QuickBooks integrated. Free audit.",
+    "Automate tax document collection, client onboarding, invoicing, and capacity planning for accounting practices. QuickBooks integrated. Free introductory session.",
   route: "accounting-firms",
   breadcrumb: "Accounting Firms",
   h1: "Tax Season Exposes Every Inefficiency in Your Practice. Automation Fixes Them Before Next Season Starts.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "The most profitable time in your firm's year is also the most chaotic. Staff spend 2-3 hours per day chasing documents instead of preparing returns. Invoices go out weeks late. New client onboarding varies by whoever answers the phone.",
     "These problems are not seasonal. They exist year-round. Tax season just makes them visible. Automation solves the underlying operational gaps so every period runs smoothly.",
   ],
-  ctaMicro: "See how much capacity you are losing to document chasing. Free audit.",
+  ctaMicro: "See how much capacity you are losing to document chasing. Free introductory session.",
   costHeading: "What Manual Processes Cost Your Firm",
   costItems: [
     {
@@ -132,7 +132,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+    "These are typical outcomes; your own figures will differ.",
   bestFit: [
     "Accounting firms handling 50+ client files per season",
     "Multi-staff practices where document collection is a major bottleneck",
@@ -180,14 +180,14 @@ const data: IndustryPageData = {
     {
       question: "How much does it cost?",
       answer:
-        "Accounting firm automation starts from $1,500 CAD, with a fixed quote after the free audit based on workflow count.",
+        "Accounting firm automation starts from $1,500 CAD, with a fixed quote after a free introductory session based on workflow count.",
     },
   ],
   ctaHeadline:
     "Tax Season Should Be Profitable, Not Chaotic. Automate the Admin That Slows Your Firm Down.",
   ctaBody:
     "Walk away with a clear plan for cutting document collection time in half. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Accounting Firms Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
   internalLinks: [
     {

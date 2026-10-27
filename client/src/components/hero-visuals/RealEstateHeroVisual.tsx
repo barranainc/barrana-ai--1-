@@ -140,7 +140,7 @@ export default function RealEstateHeroVisual({ className }: { className?: string
                     <div style={{ fontSize: "0.6rem", fontWeight: 700, color: "#EF4444" }}>
                       {stage.dropLabel}
                     </div>
-                    <div style={{ fontSize: "0.6rem", color: "#D97706", fontWeight: 600 }}>
+                    <div style={{ fontSize: "0.6rem", color: "#b45309", fontWeight: 600 }}>
                       {stage.dropDollars}
                     </div>
                   </motion.div>

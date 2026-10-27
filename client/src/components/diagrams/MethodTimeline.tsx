@@ -12,11 +12,11 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 const steps = [
   {
     Icon: Search,
-    label: "Friction Mapping",
-    sub: "60 min - Free",
+    label: "Introductory session",
+    sub: "15 min - Free",
     color: "var(--b-amber)",
     colorBg: "var(--b-amber-bg)",
-    deliverables: "Workflow walk-through, friction analysis, ROI projection.",
+    deliverables: "Your business, workflow challenges, where AI automation could help.",
   },
   {
     Icon: PenTool,

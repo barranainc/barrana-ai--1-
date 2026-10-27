@@ -138,7 +138,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "2 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first 2 weeks",
   keyResultCallout:
     "Quote conversion doubled in 90 days. Google reviews tripled. Owner stopped working evenings. Invoicing became automatic. Recurring clients managed by the system.",
@@ -164,7 +164,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Clients Are Looking for You at 9pm. Be There. Without Being There.",
   ctaBody:
-    "The audit shows you how many quotes arrive outside business hours and what it costs when they go unanswered.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Cleaning Companies", href: "/industries/cleaning-companies" },
     { label: "Lead Response Automation", href: "/services/lead-response-automation" },

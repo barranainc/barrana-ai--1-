@@ -187,15 +187,15 @@ Your accountant, and ideally a lawyer with charity law experience. Given that re
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with registered charities, nonprofits, and community organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your donation capture, receipting, acknowledgment, and reporting processes and show you where staff time and compliance risk are concentrated.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 We build the workflow. Your accountant or counsel validates the receipting rules. That division of labour is deliberate.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Never hourly. Works with the systems you already run.
 

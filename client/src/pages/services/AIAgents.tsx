@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "Most business owners who think they need a chatbot actually need something entirely different. They need a system that books appointments, qualifies leads, creates CRM records, sends follow-up sequences, routes tasks, and generates reports without anyone manually managing each step.",
     "That is not a chatbot. That is an AI agent. And it is the technology behind every automation system Barrana builds.",
   ],
-  ctaMicro: "See which AI agent type fits your business. Free audit.",
+  ctaMicro: "See which AI agent type fits your business. Free introductory session.",
 
   costHeading: "What Buying the Wrong AI Tool Is Costing You",
   costItems: [
@@ -88,7 +88,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "30–90 days" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses with high-volume repetitive operations (20+ inquiries/month)",
@@ -119,7 +119,7 @@ const data: ServicePageData = {
     {
       question: "How much does an AI agent cost?",
       answer:
-        "Pricing starts from $1,500 CAD for a simple single-function agent; complex multi-integration agents are quoted after the free 60-minute Automation Audit. Fixed pricing.",
+        "Pricing starts from $1,500 CAD for a simple single-function agent; complex multi-integration agents are quoted after a free 15-minute introductory session. Fixed pricing.",
     },
     {
       question: "Can an AI agent handle phone calls?",
@@ -135,7 +135,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Stop Buying Chatbots When You Need Operations. Get the Right AI System.",
   ctaBody:
-    "The audit assesses your workflows and recommends the right combination of AI agents and automation for your business.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "Lead Response Automation", href: "/services/lead-response-automation", desc: "AI agents for lead capture" },

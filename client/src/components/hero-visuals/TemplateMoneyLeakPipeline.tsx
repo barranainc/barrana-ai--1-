@@ -174,7 +174,7 @@ export default function TemplateMoneyLeakPipeline({
                     }}
                   >
                     <div style={{ fontSize: "0.6rem", fontWeight: 600, color: "#EF4444" }}>{leak.label}</div>
-                    <div style={{ fontSize: "0.65rem", fontWeight: 700, color: "#D97706" }}>{leak.amount}</div>
+                    <div style={{ fontSize: "0.65rem", fontWeight: 700, color: "#b45309" }}>{leak.amount}</div>
                   </motion.div>
 
                   {/* Sealed patch */}

@@ -10,8 +10,8 @@ const steps = [
   {
     number: "01",
     tag: "Free",
-    title: "Operational Friction Mapping",
-    desc: "We spend 60 minutes mapping your current workflows, identifying where time is lost and what can be automated in the first 30 days.",
+    title: "Introductory Session",
+    desc: "We start with a free 15-minute introductory session to discuss your business and workflow challenges, then map your workflows in detail once you go ahead.",
     color: "#283891",
   },
   {

@@ -37,7 +37,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         {q}
         <span style={{ fontSize: "1.25rem", color: "#283891", display: "inline-block", transform: open ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
       </button>
-      {open && <p style={{ marginTop: "0.75rem", color: "#7B7B7B", lineHeight: 1.7 }}>{a}</p>}
+      {open && <p style={{ marginTop: "0.75rem", color: "#707070", lineHeight: 1.7 }}>{a}</p>}
     </div>
   );
 }
@@ -54,7 +54,7 @@ function ResponseTimeChart() {
   return (
     <div ref={ref} style={{ background: "#fff", border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.5rem", marginBottom: "2rem" }}>
       <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1A2E", marginBottom: "0.5rem" }}>Lead Contact Rate by Response Time</h3>
-      <p style={{ fontSize: "0.875rem", color: "#7B7B7B", marginBottom: "1.25rem" }}>How quickly you respond directly determines whether you reach the lead at all.</p>
+      <p style={{ fontSize: "0.875rem", color: "#707070", marginBottom: "1.25rem" }}>How quickly you respond directly determines whether you reach the lead at all.</p>
       {data.map((d, i) => (
         <div key={i} style={{ marginBottom: "0.875rem" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.3rem" }}>
@@ -74,7 +74,7 @@ function ResponseTimeChart() {
           </div>
         </div>
       ))}
-      <p style={{ fontSize: "0.75rem", color: "#7B7B7B", marginTop: "1rem" }}>Source: Harvard Business Review / Lead Response Management Study</p>
+      <p style={{ fontSize: "0.75rem", color: "#707070", marginTop: "1rem" }}>Source: Harvard Business Review / Lead Response Management Study</p>
     </div>
   );
 }
@@ -103,7 +103,7 @@ export default function LeadIntakeWorkflow() {
       <div style={{ marginBottom: "2rem" }}>
         <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem", flexWrap: "wrap" }}>
           <span style={{ background: "#EEF2FF", color: "#283891", fontWeight: 600, fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>Workflow Guide</span>
-          <span style={{ background: "#F8F9FA", color: "#7B7B7B", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>10 min read</span>
+          <span style={{ background: "#F8F9FA", color: "#707070", fontSize: "0.8rem", padding: "0.3rem 0.8rem", borderRadius: 20 }}>10 min read</span>
         </div>
         <h1 style={{ ...typography.pageTitle, marginBottom: "1rem" }}>
           How to Automate Lead Intake for Small Businesses
@@ -117,10 +117,10 @@ export default function LeadIntakeWorkflow() {
 
       {/* Section 1 */}
       <SectionHeading>The Manual Lead Intake Problem</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         When a lead submits a form on your website, here is what typically happens: the enquiry arrives by email. Someone on the team sees it - two hours later, if they're not in a meeting. They manually create a CRM record, type a confirmation email, and try to book a meeting. By then, the lead has moved on. They submitted to three other businesses. The one that responded first got the call.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         After hours it's worse. A lead who submits at 7 pm on a Friday doesn't hear back until Monday morning - 60+ hours later. The contact rate at that point is under 2%. You paid for the ad, you got the click, and you lost the lead because the response came too late.
       </p>
 
@@ -159,16 +159,16 @@ export default function LeadIntakeWorkflow() {
 
       {/* Section 3 */}
       <SectionHeading>The Complete Workflow (Trigger to Outcome)</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         The trigger is a form submission - from your website, a landing page, or a Google Business profile. The moment the form fires, a webhook sends the data to Make (formerly Integromat). Make is the orchestration layer: it routes data between your tools and runs the conditional logic.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Within seconds, Make sends a personalized acknowledgement via email and SMS simultaneously (using Twilio for SMS). The message references what the lead enquired about and sets expectations: "We've received your enquiry about [service]. A team member will be in touch within [X hours]." During business hours, that handoff is often immediate.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         The qualification sequence fires next. This is typically 2–3 questions delivered inline in the email or via a short form. The answers trigger conditional branches in Make: an immigration enquiry routes differently from a bookkeeping enquiry. A high-budget lead with an urgent timeline gets flagged for priority follow-up.
       </p>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         Once qualified, the CRM record is created automatically - all fields populated from the form and qualification answers. A Calendly or equivalent booking link is included in the next touchpoint. The assigned team member receives a Slack or email notification with the full context summary.
       </p>
 
@@ -187,7 +187,7 @@ export default function LeadIntakeWorkflow() {
         ].map((item, i) => (
           <div key={i} style={{ background: "#F8F9FA", borderRadius: 10, padding: "1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#283891", marginBottom: "0.4rem", fontSize: "0.95rem" }}>{item.tool}</div>
-            <div style={{ color: "#7B7B7B", fontSize: "0.875rem", lineHeight: 1.6 }}>{item.desc}</div>
+            <div style={{ color: "#707070", fontSize: "0.875rem", lineHeight: 1.6 }}>{item.desc}</div>
           </div>
         ))}
       </div>
@@ -203,14 +203,14 @@ export default function LeadIntakeWorkflow() {
         ].map((item, i) => (
           <div key={i} style={{ background: "#fff", borderRadius: 10, padding: "1.1rem", border: "1px solid #E2E8F0" }}>
             <div style={{ fontWeight: 700, color: "#7E0F4A", marginBottom: "0.5rem" }}>{item.industry}</div>
-            <p style={{ color: "#7B7B7B", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
+            <p style={{ color: "#707070", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{item.note}</p>
           </div>
         ))}
       </div>
 
       {/* Section 6 */}
       <SectionHeading>What Should Stay Human in Lead Handling</SectionHeading>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1rem" }}>
         Automation handles speed and consistency. Humans handle judgement and relationship. Specifically, keep these human:
       </p>
       <ul style={{ color: "#1A1A2E", lineHeight: 1.9, paddingLeft: "1.5rem", marginBottom: "1.5rem" }}>
@@ -232,7 +232,7 @@ export default function LeadIntakeWorkflow() {
           <p style={{ color: "#1A1A2E", fontSize: "0.9rem", lineHeight: 1.7, margin: 0 }}>Build the workflow in Make, connect CRM, set up booking integration, test across all lead sources, go live.</p>
         </div>
       </div>
-      <p style={{ color: "#7B7B7B", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+      <p style={{ color: "#707070", lineHeight: 1.8, marginBottom: "1.5rem" }}>
         <strong>Pricing starts from $1,500 CAD</strong> for a single-workflow lead automation covering one primary service type. Multi-service or multi-branch configurations are priced accordingly.
       </p>
 
@@ -271,7 +271,7 @@ export default function LeadIntakeWorkflow() {
           <Link href="/automation-planner">
             <a style={{ background: "#7E0F4A", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Start the Automation Planner</a>
           </Link>
-          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
         </div>
       </div>
 
