@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Landscaping Companies Toronto | Barrana.ai",
   description:
-    "Automate seasonal contract renewals, crew scheduling, quote follow-up, weather-triggered dispatch, invoicing, and referral campaigns for landscaping companies. Free audit.",
+    "Automate seasonal contract renewals, crew scheduling, quote follow-up, weather-triggered dispatch, invoicing, and referral campaigns for landscaping companies. Free introductory session.",
   route: "landscaping",
   breadcrumb: "Landscaping Companies",
   h1: "Spring Is 6 Weeks Away and You Need 200 Contracts Renewed. That Is 200 Calls Your Team Does Not Have Time to Make.",
@@ -15,8 +15,8 @@ const data: IndustryPageData = {
     "Landscaping and snow removal companies operate on seasonal cycles. Every transition requires mass communication: spring contract renewals, summer maintenance upsells, fall cleanup scheduling, and winter snow removal activation. Each involves contacting hundreds of clients within a tight window.",
     "Manual outreach means some clients are contacted, some are not, and the season starts before the campaign finishes. Automation contacts every client, on time, every season.",
   ],
-  ctaText: "Get Your Free Landscaping Companies Automation Audit",
-  ctaMicro: "See how many seasonal contracts you are losing to late outreach. Free audit.",
+  ctaText: "Get Your Free Introductory Session",
+  ctaMicro: "See how many seasonal contracts you are losing to late outreach. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Landscaping Companies",
   costItems: [
@@ -129,7 +129,7 @@ const data: IndustryPageData = {
     { label: "Invoicing", before: "Manual seasonal backlogs", after: "Automatic, zero backlogs" },
     { label: "Typical payback", after: "Within first seasonal campaign" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Landscaping companies managing 100+ residential properties",
@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much does it cost?",
-      answer: "Landscaping company automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Landscaping company automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Before/after photos?",
@@ -175,8 +175,8 @@ const data: IndustryPageData = {
 
   ctaHeadline: "Every Season Starts the Same Way: Hundreds of Clients to Contact and Not Enough Time. Automate the Outreach That Keeps Your Book Full.",
   ctaBody: "Walk away with a seasonal automation plan built for your operation. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Landscaping Companies Automation Audit",
-  primaryMicro: "Free 60-minute audit. See exactly what to automate first.",
+  primaryCTA: "Get Your Free Introductory Session",
+  primaryMicro: "Free 15-minute introductory session. Explore where automation could help.",
 
   internalLinks: [
     { label: "After-Hours Automation", href: "/services/after-hours-automation", desc: "Capture leads while your crew sleeps" },

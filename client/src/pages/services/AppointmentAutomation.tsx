@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "A physiotherapy clinic seeing 40 patients per day with a 20% no-show rate loses 8 appointments daily. At $80 per visit, that is $640 per day. $3,200 per week. Over $150,000 per year. Most of those no-shows are preventable with consistent reminders.",
     "Your front desk cannot send 80 reminder messages per day on top of check-ins, phone calls, and insurance questions. A system can.",
   ],
-  ctaMicro: "Calculate your no-show cost. Free. Takes 60 minutes.",
+  ctaMicro: "Free 15-minute introductory session. No obligation.",
 
   costHeading: "What No-Shows Are Costing Your Practice",
   costItems: [
@@ -90,7 +90,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Clinics seeing 20+ patients per day",
@@ -142,7 +142,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Every Empty Slot Is Revenue Your Practice Cannot Recover. Fill Them Automatically.",
   ctaBody:
-    "The audit calculates your no-show cost and shows you the automated reminder system designed for your practice.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "AI Receptionist", href: "/services/ai-receptionist", desc: "Answer every call, 24/7" },

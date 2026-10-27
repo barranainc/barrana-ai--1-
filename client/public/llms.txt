@@ -8,8 +8,8 @@
 - [Start Here](https://barrana.ai/start-here): Orientation for choosing a useful first workflow.
 - [Services](https://barrana.ai/services): Automation capabilities and implementation areas.
 - [Industries](https://barrana.ai/industries): Workflow patterns by business context.
-- [Pricing](https://barrana.ai/pricing): Projects start from $1,500 CAD; fixed quote after the free 60-minute Automation Audit.
-- [Contact](https://barrana.ai/contact): Book a free 60-minute Automation Audit.
+- [Pricing](https://barrana.ai/pricing): Projects start from $1,500 CAD; fixed quote after a free 15-minute introductory session.
+- [Contact](https://barrana.ai/contact): Book a free 15-minute introductory session.
 
 ## Practical guidance
 

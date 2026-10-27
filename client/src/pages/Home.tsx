@@ -355,7 +355,7 @@ const faqItems: FAQItem[] = [
   {
     question: "How much does automation cost?",
     answer:
-      "Projects start from $1,500 CAD for a single workflow; multi-workflow systems and full operational automation are quoted after the free 60-minute Automation Audit. All pricing is fixed, and ongoing support is quoted with your project. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
+      "Projects start from $1,500 CAD for a single workflow; multi-workflow systems and full operational automation are quoted after a free 15-minute introductory session. All pricing is fixed, and ongoing support is quoted with your project. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
   },
   {
     question: "How fast will I see results?",
@@ -385,7 +385,7 @@ const faqItems: FAQItem[] = [
   {
     question: "What should I automate first?",
     answer:
-      "For most service businesses: lead response automation. It has the highest ROI, lowest complexity, and fastest implementation. If you are not sure, the free Automation Audit maps your workflows and tells you exactly where to start.",
+      "For most service businesses: lead response automation. It has the highest ROI, lowest complexity, and fastest implementation. If you are not sure, book a free 15-minute introductory session and we will help you decide where to start.",
   },
   {
     question: "What areas do you serve?",
@@ -399,7 +399,7 @@ const objectionItems: FAQItem[] = [
   {
     question: "How much does this cost?",
     answer:
-      "Projects start from $1,500 CAD for a single workflow; larger systems are quoted after the free 60-minute Automation Audit. Fixed pricing. No hourly billing. No surprise invoices. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
+      "Projects start from $1,500 CAD for a single workflow; larger systems are quoted after a free 15-minute introductory session. Fixed pricing. No hourly billing. No surprise invoices. Payback periods vary with volumes and scope; we agree on what to measure before launch.",
   },
   {
     question: "Will this replace my staff?",
@@ -442,7 +442,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Barrana.ai",
   description:
-    "AI automation consultancy for small businesses. We build systems that respond to leads in 90 seconds, recover 15+ staff hours per week, and increase operational capacity by 30%.",
+    "AI automation for small and medium service businesses in the GTA. Barrana connects the tools your business already uses so routine work gets done with clear controls, records, and human oversight.",
   url: "https://barrana.ai",
   telephone: "+1-647-367-6771",
   email: "help@barrana.ai",
@@ -515,7 +515,7 @@ const HERO_STATES: HeroState[] = [
     secondaryCTA: { text: "See Illustrative Examples", href: "/case-studies" },
     metrics: [
       { value: "$80K\u2013$200K/yr", label: "Illustrative annual loss (5\u201315 staff)" },
-      { value: "60 min", label: "Free Automation Audit" },
+      { value: "15 min", label: "Free Introductory Session" },
       { value: "From $1,500 CAD", label: "Fixed-price implementation" },
     ],
   },
@@ -545,12 +545,12 @@ const HERO_STATES: HeroState[] = [
     emphasisText: "Let Us Look at Your Business.",
     emphasisColor: NAVY,
     afterText: "",
-    sub: "Book a free 60-minute Automation Audit. We walk through your workflows, calculate what your manual operations cost per year, and show you exactly what to automate first.",
-    microcopy: "60 minutes. No sales pitch.\nIf automation is not the right answer, we will tell you that.",
-    primaryCTA: { text: "Book Your Free Automation Audit", href: CALENDLY_URL },
+    sub: "Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.",
+    microcopy: "15 minutes. No sales pitch.\nIf automation is not the right answer, we will tell you that.",
+    primaryCTA: { text: "Book Your Free Introductory Session", href: CALENDLY_URL },
     secondaryCTA: { text: "Call Us: +1 647 367 6771", href: "tel:+16473676771" },
     metrics: [
-      { value: "60 min", label: "The audit takes one hour" },
+      { value: "15 min", label: "Free introductory session" },
       { value: "Free", label: "No charge, no obligation" },
       { value: "Fixed quote", label: "If you decide to go ahead" },
     ],
@@ -1476,11 +1476,11 @@ export default function Home() {
           <Reveal delay={0.2}>
             <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
               <AuditBookingLink className="btn-primary">
-                Book Your Free Automation Audit
+                Book Your Free Introductory Session
                 <ArrowRight size={16} />
               </AuditBookingLink>
               <p style={{ fontSize: "0.8125rem", color: GREY, marginTop: "0.5rem" }}>
-                60 minutes. Free.
+                15 minutes. Free.
               </p>
             </div>
           </Reveal>
@@ -2020,7 +2020,7 @@ export default function Home() {
                 <ArrowRight size={16} />
               </Link>
               <AuditBookingLink className="btn-primary">
-                Book a Free Audit - See what these numbers look like for your business
+                Book a Free Introductory Session - See what these numbers look like for your business
                 <ArrowRight size={16} />
               </AuditBookingLink>
             </div>
@@ -2115,10 +2115,10 @@ export default function Home() {
             {[
               {
                 badge: "Week 1",
-                title: "Free Audit",
-                body: "We walk through your workflows and calculate exactly what your operations are costing you. You leave with a number.",
-                dollar: "Identify $X in annual operational waste - at no cost",
-                tag: "Free \u00B7 60 min \u00B7 No obligation",
+                title: "Free Introductory Session",
+                body: "We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.",
+                dollar: "A clear next step - at no cost",
+                tag: "Free \u00B7 15 min \u00B7 No obligation",
               },
               {
                 badge: "Weeks 2\u20133",
@@ -2229,7 +2229,7 @@ export default function Home() {
                   Honest answers. No fluff. If automation is not right for your business, we will tell you.
                 </p>
                 <AuditBookingLink className="btn-primary" style={{ display: "inline-flex" }}>
-                  Book a Free Audit
+                  Book a Free Introductory Session
                   <ArrowRight size={16} />
                 </AuditBookingLink>
               </div>
@@ -2276,10 +2276,10 @@ export default function Home() {
             }}
           >
             <h2 style={{ color: "white", marginBottom: "1rem", fontSize: "clamp(1.875rem, 3.5vw, 2.25rem)", letterSpacing: "-0.02em" }}>
-              Your Operations Will Not Fix Themselves. The Audit Takes 60 Minutes.
+              Your Operations Will Not Fix Themselves. The First Conversation Takes 15 Minutes.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.75)", lineHeight: 1.7, marginBottom: "2.5rem" }}>
-              We will walk through your workflows, calculate what your manual operations cost per year, and show you exactly where automation recovers that money. Free. No obligation.
+              We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time. Free. No obligation.
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center", alignItems: "flex-start" }}>
               <div>
@@ -2298,7 +2298,7 @@ export default function Home() {
                     boxShadow: "0 4px 20px rgba(126,15,74,0.4)",
                   }}
                 >
-                  Book Your Free Automation Audit
+                  Book Your Free Introductory Session
                   <ArrowRight size={16} />
                 </AuditBookingLink>
               </div>

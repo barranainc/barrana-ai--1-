@@ -92,7 +92,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses relying on inbound calls for new clients",
@@ -144,7 +144,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Your Phone Is Ringing Right Now. Is Anyone Answering?",
   ctaBody:
-    "The audit reviews your call volume, after-hours inquiry patterns, and calculates the revenue impact of missed calls specific to your business.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     {

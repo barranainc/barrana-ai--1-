@@ -179,15 +179,15 @@ Treatment interval tracking with rebooking prompts. It is the clearest revenue d
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with medical aesthetics clinics, med spas, and cosmetic practices across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your consultation, intake, treatment documentation, aftercare, and rebooking processes and show you where retention revenue is leaking.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For regulated practices we build to PHIPA requirements, keep clinical and marketing consent separate, and expect your privacy and health law advisors to review the design.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

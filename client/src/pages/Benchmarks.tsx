@@ -101,7 +101,7 @@ export default function Benchmarks() {
             <p style={{ fontSize: "0.875rem", color: "#374151", lineHeight: 1.65, margin: 0 }}>
               Illustrative ranges from typical automation projects, not a measured study: no sample size, dates or
               baselines are published for them. Results depend on your volume, baseline, business type and the
-              workflows automated. During the free Automation Audit we record your own baseline so the change can be measured.
+              workflows automated. Before work starts we agree how to record your baseline so the change can be measured.
             </p>
           </div>
         </div>
@@ -180,11 +180,11 @@ export default function Benchmarks() {
               lineHeight: 1.65,
             }}
           >
-            Book a free Automation Audit and we will calculate projected ROI for your specific
-            workflows and team size.
+            Book a free 15-minute introductory session to talk through your own workflows
+            and where AI automation could save your team time.
           </p>
           <AuditBookingLink className="btn-primary">
-            Book Free Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

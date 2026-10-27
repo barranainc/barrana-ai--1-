@@ -140,7 +140,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "4 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Immediate (avoided $60K hire + 5 new clients)",
   keyResultCallout:
     "40% more clients with same team. $60,000+ operations hire avoided. Monthly reporting reduced from 72 hours to 8 hours. Onboarding from 2 weeks to 48 hours. Zero missed handoffs.",
@@ -175,7 +175,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Capacity Ceiling Is Not Creative Talent. It Is Operational Overhead. Remove It.",
   ctaBody:
-    "The audit maps your operational overhead per client and shows you where automation creates the capacity to grow.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Marketing Agencies", href: "/industries/marketing-agencies" },
     { label: "Workflow Automation", href: "/services/workflow-automation" },

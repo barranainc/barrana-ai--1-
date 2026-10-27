@@ -65,7 +65,7 @@ export default function TemplateTimeDrainWaterfall({
   }, [reduced]);
 
   // Colors for drain bars
-  const DRAIN_COLORS = ["#EF4444", "#F97316", "#D97706", "#EAB308"];
+  const DRAIN_COLORS = ["#EF4444", "#F97316", "#b45309", "#EAB308"];
 
   return (
     <div

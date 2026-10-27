@@ -61,9 +61,9 @@ export default function Contact() {
         companyName: formData.business.trim(),
         industry: formData.industry,
         message: formData.workflow.trim(),
-        formName: "Automation Audit Request",
+        formName: "Introductory Session Request",
         pageUrl: window.location.href,
-        tags: ["website-lead", "automation-audit"],
+        tags: ["website-lead", "introductory-session"],
         customFields: [
           { key: "team_size", field_value: formData.teamSize },
         ],
@@ -73,12 +73,12 @@ export default function Contact() {
         throw new Error(result.error || "The request could not be submitted.");
       }
 
-      trackMeta("Lead", { content_name: "Automation Audit Request" });
-      trackEvent("generate_lead", { form_name: "Automation Audit Request" });
+      trackMeta("Lead", { content_name: "Introductory Session Request" });
+      trackEvent("generate_lead", { form_name: "Introductory Session Request" });
       setSubmitted(true);
       toast.success("Your request was sent.");
     } catch (error) {
-      console.error("Automation Audit request failed:", error);
+      console.error("Introductory session request failed:", error);
       const message =
         "We could not send your request. Please check your connection and try again.";
       setSubmitError(message);
@@ -92,8 +92,8 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F5F6FA] text-slate-950">
       <SEOHead
-        title="Book a Free 60-Minute Automation Audit | Barrana.ai"
-        description="Book a free 60-minute Automation Audit. Barrana walks through your workflows, estimates what manual work costs you each year, and shows what to automate first."
+        title="Book a Free 15-Minute Introductory Session | Barrana.ai"
+        description="Book a free 15-minute introductory session. Barrana discusses your business, understands your workflow challenges, and explores where AI automation could save your team time."
       />
 
       <section className="relative overflow-hidden bg-[#09142F] py-16 text-white lg:py-20">
@@ -107,16 +107,16 @@ export default function Contact() {
           }}
         />
         <div className="container relative max-w-5xl">
-          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">Free 60-minute Automation Audit</p>
+          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#9BE5DD]">Free 15-minute introductory session</p>
           <h1 className="mt-5 max-w-4xl text-4xl font-extrabold tracking-[-0.035em] sm:text-5xl lg:text-6xl">
             Find the workflow AI should fix first.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-            Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <AuditBookingLink className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#7E0F4A] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#6A0C3E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
-              Book your free audit <ArrowRight size={17} aria-hidden="true" />
+              Book your free introductory session <ArrowRight size={17} aria-hidden="true" />
             </AuditBookingLink>
             <span className="text-sm text-slate-300">Pick a time online, or describe your workflow below.</span>
           </div>
@@ -127,14 +127,13 @@ export default function Contact() {
         <div className="container grid max-w-6xl gap-10 lg:grid-cols-[0.72fr_1.28fr]">
           <aside className="space-y-6">
             <div className="rounded-2xl border border-slate-200 bg-white p-6">
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7E0F4A]">What the audit covers</p>
+              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7E0F4A]">What we cover</p>
               <ul className="mt-5 space-y-4">
                 {[
-                  "The trigger that starts the workflow",
-                  "The tools and people involved",
-                  "The repeated handoff or constraint",
-                  "The exceptions that need human judgment",
-                  "What to automate first, and what to leave alone",
+                  "Your business and goals",
+                  "The workflow challenges costing your team time",
+                  "The tools and people involved today",
+                  "Where AI automation could save your team time",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm leading-6 text-slate-600">
                     <Check size={16} className="mt-1 shrink-0 text-[#283891]" aria-hidden="true" />
@@ -150,7 +149,7 @@ export default function Contact() {
                 <h2 className="font-bold">What you get</h2>
               </div>
               <p className="mt-4 text-sm leading-6 text-blue-100">
-                The audit is free, takes 60 minutes, and comes with no obligation. If you decide to go ahead, implementation is quoted separately at a fixed price.
+                The introductory session is free, takes 15 minutes, and comes with no obligation. If you decide to go ahead, implementation is quoted separately at a fixed price.
               </p>
             </div>
 
@@ -171,12 +170,12 @@ export default function Contact() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E9EDFF] text-[#283891]">
                   <ClipboardCheck size={27} aria-hidden="true" />
                 </div>
-                <h2 className="mt-6 text-2xl font-extrabold text-[#111A36]">Your audit request was sent.</h2>
+                <h2 className="mt-6 text-2xl font-extrabold text-[#111A36]">Your request was sent.</h2>
                 <p className="mt-3 max-w-lg text-sm leading-6 text-slate-600">
-                  Barrana will review the workflow you described and contact you. You can also book a time for your free Automation Audit now.
+                  Barrana will review the workflow you described and contact you. You can also book your free 15-minute introductory session now.
                 </p>
                 <AuditBookingLink className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[#283891] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#1F2D75]">
-                  Book your free audit <ArrowRight size={15} aria-hidden="true" />
+                  Book your free introductory session <ArrowRight size={15} aria-hidden="true" />
                 </AuditBookingLink>
                 <Link href="/" className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-[#283891] hover:text-[#7E0F4A]">
                   Return to the homepage <ArrowRight size={15} aria-hidden="true" />
@@ -251,7 +250,7 @@ export default function Contact() {
                     {!loading && <ArrowRight size={17} aria-hidden="true" />}
                   </button>
                   <p className="text-center text-xs leading-5 text-slate-500">
-                    Submit only information you are comfortable sharing before your audit. See our{" "}
+                    Submit only information you are comfortable sharing before your session. See our{" "}
                     <Link href="/privacy-policy" className="font-semibold text-[#283891] underline underline-offset-2 hover:text-[#7E0F4A]">
                       Privacy Policy
                     </Link>

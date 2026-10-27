@@ -159,9 +159,9 @@ function Hero({ data, show }: { data: CaseStudyData; show: boolean }) {
             {data.intro}
           </p>
           <div style={st(5)}>
-            <AuditBookingLink className="btn-primary">See What Applies to You - Book a Free Audit</AuditBookingLink>
+            <AuditBookingLink className="btn-primary">See What Applies to You - Book a Free Introductory Session</AuditBookingLink>
             <p style={{ fontSize: "0.8125rem", color: "var(--b-grey)", marginTop: "0.625rem" }}>
-              See what automation looks like for your operations. 60 minutes. No obligation.
+              Talk through your own operations. 15 minutes. No obligation.
             </p>
           </div>
         </div>
@@ -389,7 +389,7 @@ export default function CaseStudyPageLayout({ data }: Props) {
       <ServiceCTASection
         headline={data.ctaHeadline}
         body={data.ctaBody}
-        primaryCTA="Get Your Free 60-Minute Automation Audit"
+        primaryCTA="Get Your Free 15-Minute Introductory Session"
         secondaryCTA="View All Case Studies"
         primaryMicro="Walk away with a clear plan. No pitch. No obligation."
       />

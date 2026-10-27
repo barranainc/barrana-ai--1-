@@ -100,7 +100,7 @@ export default function AutomateClientIntake() {
           </nav>
           <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", marginBottom: "0.75rem", flexWrap: "wrap" }}>
             <span style={{
-              background: "#F0FDF4", color: "#16A34A",
+              background: "#F0FDF4", color: "#15803d",
               fontWeight: 700, fontSize: "0.75rem",
               letterSpacing: "0.07em", textTransform: "uppercase",
               borderRadius: "999px", padding: "0.3rem 0.85rem",
@@ -186,7 +186,7 @@ export default function AutomateClientIntake() {
               <div key={label} style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", padding: "0.875rem 1.25rem", gap: "1rem", background: i % 2 === 0 ? "white" : "#F7F9FC", borderTop: "1px solid #E2E6F3" }}>
                 <span style={{ color: "#1A1A2E", fontWeight: 600, fontSize: "0.9rem" }}>{label}</span>
                 <span style={{ color: "#DC2626", fontSize: "0.9rem" }}>{before}</span>
-                <span style={{ color: "#16A34A", fontWeight: 600, fontSize: "0.9rem" }}>{after}</span>
+                <span style={{ color: "#15803d", fontWeight: 600, fontSize: "0.9rem" }}>{after}</span>
               </div>
             ))}
           </div>
@@ -273,10 +273,10 @@ export default function AutomateClientIntake() {
               Ready to Automate Your Intake Process?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", lineHeight: 1.7, marginBottom: "1.75rem", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Most of our clients have a fully automated intake system live within 2 weeks. Book a free audit and we will show you exactly what your intake flow looks like automated.
+              Most of our clients have a fully automated intake system live within 2 weeks. Book a free introductory session and we’ll explore where automation could help your intake.
             </p>
             <AuditBookingLink style={{ display: "inline-block", padding: "0.875rem 2rem", background: "#7E0F4A", color: "white", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>
-              Book Your Free Audit
+              Book Your Free Introductory Session
             </AuditBookingLink>
           </div>
         </RevealSection>

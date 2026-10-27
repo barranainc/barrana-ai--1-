@@ -90,7 +90,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Immediate (recovered revenue)" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Service businesses completing 10+ projects per month",
@@ -137,7 +137,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Every Week of Delayed Invoicing Is a Week of Delayed Cash Flow. Automate It.",
   ctaBody:
-    "The audit maps your current billing cycle and shows you exactly how many days of cash flow you can recover.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "Document Collection", href: "/services/document-collection", desc: "Automate what precedes billing" },

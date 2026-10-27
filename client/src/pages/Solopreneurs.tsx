@@ -103,7 +103,7 @@ function SolopreneurWeekCalendar() {
           </div>
         ) : (
           <div style={{ background: "#F0FDF4", border: "1px solid #BBF7D0", borderRadius: 8, padding: "0.75rem 1.5rem", textAlign: "center", animation: "fadeIn 0.5s ease" }}>
-            <span style={{ color: "#16A34A", fontWeight: 700, fontSize: "1rem" }}>With automation: 10-12 hrs/week recovered</span>
+            <span style={{ color: "#15803d", fontWeight: 700, fontSize: "1rem" }}>With automation: 10-12 hrs/week recovered</span>
           </div>
         )}
       </div>
@@ -293,7 +293,7 @@ const faqData = [
   },
   {
     q: "What about my website?",
-    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We assess this during the free Automation Audit.",
+    a: "If your website isn't converting visitors into enquiries, we can rebuild it as part of the engagement. The website feeds the automation - if the top of the funnel is broken, the rest doesn't matter. We can talk this through in a free 15-minute introductory session.",
   },
 ];
 
@@ -370,14 +370,14 @@ export default function Solopreneurs() {
     },
     {
       name: "Growth",
-      price: "Fixed quote after audit",
+      price: "Fixed quote after introductory session",
       items: ["Everything in Starter", "Client onboarding", "Invoice & payment collection", "Testimonial requests"],
       note: "The most popular choice for solopreneurs scaling to $15k+/month.",
       highlight: true,
     },
     {
       name: "Full System",
-      price: "Fixed quote after audit",
+      price: "Fixed quote after introductory session",
       items: ["Everything in Growth", "Content repurposing engine", "Re-engagement sequences", "Reporting dashboard"],
       note: "Built for solopreneurs ready to launch group programs or courses.",
       highlight: false,
@@ -441,7 +441,7 @@ export default function Solopreneurs() {
                 </a>
               </Link>
               <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.4)", display: "inline-block" }}>
-                  Book a Free Automation Audit
+                  Book a Free Introductory Session
                 </AuditBookingLink>
             </div>
           </div>
@@ -502,7 +502,7 @@ export default function Solopreneurs() {
                     <span style={{ color: "#4A4A4A", fontSize: "0.9rem" }}>{w.before}</span>
                   </div>
                   <div>
-                    <span style={{ color: "#16A34A", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>Automated: </span>
+                    <span style={{ color: "#15803d", fontSize: "0.8rem", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.05em" }}>Automated: </span>
                     <span style={{ color: "#4A4A4A", fontSize: "0.9rem" }}>{w.after}</span>
                   </div>
                 </div>
@@ -551,7 +551,7 @@ export default function Solopreneurs() {
                 {
                   label: "Automation's Zone",
                   bg: "#F0FDF4",
-                  border: "#16A34A",
+                  border: "#15803d",
                   headingColor: "#15803D",
                   icon: "⚙️",
                   items: [
@@ -714,7 +714,7 @@ export default function Solopreneurs() {
               </a>
             </Link>
             <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.9rem 2rem", borderRadius: 8, fontWeight: 700, fontSize: "1rem", textDecoration: "none", border: "2px solid rgba(255,255,255,0.35)", display: "inline-block" }}>
-                Book a Free Automation Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
           </div>
           <p style={{ color: "#718096", fontSize: "0.875rem" }}>

@@ -19,7 +19,7 @@ const data: ServicePageData = {
     "Manual operations are invisible operations. You do not know which client files are complete, which invoices are overdue, which team member is at capacity, or which tasks have been dropped. You find out when something fails, not before.",
     "Automation creates visibility as a byproduct. When every operational step is system-managed, you see everything in real time.",
   ],
-  ctaMicro: "See where your operations are blind. Free 60-minute audit.",
+  ctaMicro: "See where your operations are blind. Free 15-minute introductory session.",
 
   costHeading: "What Invisible Operations Are Costing You",
   costItems: [
@@ -89,7 +89,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Immediate (prevented failures)" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Businesses with 5+ staff where coordination is complex",
@@ -136,7 +136,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Stop Running Your Business Blind. See Everything. Chase Nothing.",
   ctaBody:
-    "The audit identifies your biggest visibility gaps and shows you what real-time operational awareness looks like.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "Workflow Automation", href: "/services/workflow-automation", desc: "Connect your tools end-to-end" },

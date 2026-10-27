@@ -351,7 +351,7 @@ export default function AiAutomationIndustries() {
                 Find the Right Starting Point for Your Industry
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 1.75rem" }}>
-                Use our Automation Planner to identify the highest-ROI starting point for your specific industry and workflow, or book a free audit with our team.
+                Use our Automation Planner to identify the highest-ROI starting point for your specific industry and workflow, or book a free introductory session with our team.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>

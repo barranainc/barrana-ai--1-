@@ -186,15 +186,15 @@ Lot-level inventory with expiry logic. It reduces write-offs immediately, it pre
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with medical supply distributors, healthcare logistics businesses, and regulated distribution operations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your order, inventory, shipping, and traceability processes and show you where regulatory exposure and margin are concentrated.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For regulated distribution we expect your quality and regulatory affairs leads to shape the design and to own validation. We build the workflow; they own the compliance decisions.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

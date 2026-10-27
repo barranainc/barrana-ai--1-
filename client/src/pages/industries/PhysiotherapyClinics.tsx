@@ -6,7 +6,7 @@ const data: IndustryPageData = {
   title:
     "AI Automation for Physiotherapy Clinics",
   description:
-    "Reduce no-shows, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free audit.",
+    "Reduce no-shows, automate patient booking, dual reminders, digital intake, waitlist management, and post-treatment follow-up. Jane App integrated. Free introductory session.",
   route: "physiotherapy-clinics",
   breadcrumb: "Physiotherapy Clinics",
   h1: "Every No-Show Is $80 That Walked Out the Door. At 40 Patients Per Day, That Is $150,000 Per Year.",
@@ -16,7 +16,7 @@ const data: IndustryPageData = {
     "A physiotherapy clinic seeing 40 patients per day with a 20% no-show rate loses 8 appointments daily. At $80 per visit, that is $640 per day, $3,200 per week, over $150,000 per year. The majority of those no-shows are preventable with consistent reminders your front desk cannot send manually at that scale.",
     "Beyond no-shows, your front desk juggles booking calls, check-ins, insurance questions, and paper intake forms simultaneously. The phones ring. Patients wait. Something always gets dropped.",
   ],
-  ctaMicro: "Calculate your annual no-show cost. Free 60-minute audit.",
+  ctaMicro: "Calculate your annual no-show cost. Free 15-minute introductory session.",
   costHeading: "What Your Clinic Loses to No-Shows and Manual Processes",
   costItems: [
     {
@@ -132,7 +132,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+    "These are typical outcomes; your own figures will differ.",
   bestFit: [
     "Clinics seeing 20+ patients per day",
     "Multi-practitioner practices with scheduling complexity",
@@ -187,7 +187,7 @@ const data: IndustryPageData = {
     "Every Empty Slot Is Revenue Your Practice Cannot Recover. Dual Reminders Fill Them. Automation Runs Them.",
   ctaBody:
     "Walk away with a clear plan for recovering $640+ per day in no-show revenue. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Clinics Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
   internalLinks: [
     {

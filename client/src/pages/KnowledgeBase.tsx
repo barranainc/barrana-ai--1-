@@ -67,8 +67,8 @@ export default function KnowledgeBase() {
       <section className="cta-section py-20">
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Ready to Implement Automation?</h2>
-          <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>Book a free 60-minute Automation Audit. We walk through your workflows and identify your highest-impact automation opportunities.</p>
-          <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
+          <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.</p>
+          <AuditBookingLink className="btn-primary">Book Free Introductory Session</AuditBookingLink>
         </div>
       </section>
     </div>

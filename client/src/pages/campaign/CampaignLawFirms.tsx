@@ -1,6 +1,6 @@
 /**
  * CAMPAIGN PAGE: /campaign/law-firms
- * Standalone, noindex, no main nav. Single goal: book audit.
+ * Standalone, noindex, no main nav. Single goal: book an introductory session.
  * Target: Small law firms in GTA losing clients to slow intake and manual follow-up.
  * Brand: Navy #283891 | Magenta #7E0F4A | Grey #707070
  */
@@ -185,16 +185,16 @@ export default function CampaignLawFirms() {
         <FadeSection style={{ backgroundColor: "#EEF0F8" }} className="py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 md:px-6">
             <h2 className="text-2xl font-bold mb-2" style={{ color: NAVY }}>
-              Book Your Free Automation Audit
+              Book Your Free Introductory Session
             </h2>
-            <p className="text-sm mb-6" style={{ color: GREY }}>60 minutes.</p>
+            <p className="text-sm mb-6" style={{ color: GREY }}>15 minutes.</p>
             <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 shadow-sm">
-              <p className="font-semibold mb-4" style={{ color: NAVY }}>What you get in 60 minutes:</p>
+              <p className="font-semibold mb-4" style={{ color: NAVY }}>What we cover in 15 minutes:</p>
               <ul className="flex flex-col gap-0">
                 {[
-                  "Exactly where your intake is leaking clients (with dollar amounts)",
-                  "Which 1-2 workflows would give you the biggest return if automated",
-                  "What it would cost to fix (fixed pricing, you know the number upfront)",
+                  "Your business and how enquiries and client work flow today",
+                  "The workflow challenges costing your team the most time",
+                  "Where AI automation could save your team time, and whether a fixed-price project makes sense",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 py-2.5 border-b border-gray-100 last:border-0">
                     <span className="text-lg flex-shrink-0 mt-0.5" style={{ color: SUCCESS }}>✓</span>

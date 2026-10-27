@@ -175,15 +175,15 @@ Recall automation at one location as a pilot. It produces measurable production 
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with dental groups, medical clinics, and multi-location healthcare practices across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your intake, recall, treatment follow-up, and reporting processes across locations and show you where production is leaking and where offices diverge.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
 For regulated practices we build to PHIPA requirements and expect your privacy officer to review the design.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

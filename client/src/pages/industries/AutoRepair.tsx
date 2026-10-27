@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Auto Repair Shops Toronto | Barrana.ai",
   description:
-    "Automate service reminders, appointment booking, estimate follow-up, invoicing, and review requests for auto repair and service shops. Free audit.",
+    "Automate service reminders, appointment booking, estimate follow-up, invoicing, and review requests for auto repair and service shops. Free introductory session.",
   route: "auto-repair",
   breadcrumb: "Auto Repair Shops",
   h1: "Your Customers Need Oil Changes Every 5,000 km. Nobody Is Tracking Any of It.",
@@ -15,8 +15,8 @@ const data: IndustryPageData = {
     "Auto repair shops have a built-in recurring revenue model that most never fully capture. Every vehicle needs regular maintenance: oil changes, brake inspections, tire rotations, seasonal swaps, and scheduled services. But most shops only see customers when something breaks because nobody sent the reminder.",
     "The shops that grow fastest treat maintenance reminders as a revenue system, not an afterthought. Automation sends the right reminder to the right customer at the right time, every time.",
   ],
-  ctaText: "Get Your Free Auto Repair Shops Automation Audit",
-  ctaMicro: "See how much maintenance revenue your shop is leaving on the table. Free audit.",
+  ctaText: "Get Your Free Introductory Session",
+  ctaMicro: "See how much maintenance revenue your shop is leaving on the table. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Auto Repair Shops",
   costItems: [
@@ -129,7 +129,7 @@ const data: IndustryPageData = {
     { label: "Google reviews", before: "Rarely requested", after: "Consistent automatic requests every service" },
     { label: "Typical payback", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific shop.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Auto repair shops with 200+ active customers",
@@ -165,7 +165,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much does it cost?",
-      answer: "Auto repair shop automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Auto repair shop automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Seasonal campaigns to how many customers?",
@@ -175,8 +175,8 @@ const data: IndustryPageData = {
 
   ctaHeadline: "Every Vehicle in Your System Needs Regular Maintenance. Every Customer Forgets. Automate the Reminder That Brings Them Back.",
   ctaBody: "Walk away with a clear plan for recovering maintenance revenue. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Auto Repair Shops Automation Audit",
-  primaryMicro: "Free 60-minute audit. See exactly what to automate first.",
+  primaryCTA: "Get Your Free Introductory Session",
+  primaryMicro: "Free 15-minute introductory session. Explore where automation could help.",
 
   internalLinks: [
     { label: "Appointment Automation", href: "/services/appointment-automation", desc: "Book, confirm, and remind automatically" },

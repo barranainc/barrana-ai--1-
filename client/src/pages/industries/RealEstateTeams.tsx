@@ -4,7 +4,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 
 const data: IndustryPageData = {
   title: "AI Automation for Real Estate Teams",
-  description: "Automate lead capture from all channels, buyer nurture sequences, listing follow-up, CRM management, and post-offer communication for real estate teams. Free audit.",
+  description: "Automate lead capture from all channels, buyer nurture sequences, listing follow-up, CRM management, and post-offer communication for real estate teams. Free introductory session.",
   route: "real-estate-teams",
   breadcrumb: "Real Estate Teams",
   h1: "Real Estate Leads Have a 5-Minute Window. Your Team Is Showing Properties. Automation Keeps the Pipeline Moving 24/7.",
@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Buyer and seller leads arrive through Realtor.ca, Facebook ads, Google, your website, and referrals at unpredictable times. The first agent to respond with substance earns the appointment. But your team is out showing properties, in meetings, or done for the evening.",
     "Without automation, lead response is random. Long-term nurture gets abandoned after 2 weeks. CRM records are updated at end of day if at all. The pipeline leaks at every stage.",
   ],
-  ctaMicro: "See how many leads your team is losing to inconsistent follow-up. Free audit.",
+  ctaMicro: "See how many leads your team is losing to inconsistent follow-up. Free introductory session.",
 
   costHeading: "What Inconsistent Follow-Up Costs Your Team",
   costItems: [
@@ -66,7 +66,7 @@ const data: IndustryPageData = {
     { label: "Lead-to-Showing Rate", after: "Improved through faster, consistent response" },
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Real estate teams with 2+ agents",
@@ -88,12 +88,12 @@ const data: IndustryPageData = {
     { question: "Can it send listing alerts?", answer: "Yes. Connected to your MLS feed or listing database for automatic buyer notifications matching their criteria." },
     { question: "How long to implement?", answer: "Standard real estate automation: 2-3 weeks." },
     { question: "Does it work for individual agents?", answer: "Yes. Solo agents benefit from consistent follow-up they cannot maintain manually while showing properties." },
-    { question: "Cost?", answer: "Real estate team automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch." },
+    { question: "Cost?", answer: "Real estate team automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch." },
   ],
 
   ctaHeadline: "Your Pipeline Leaks at Every Stage. Every Unfollowed Lead Is Commission Lost. Plug the Gaps.",
   ctaBody: "Walk away with a clear plan for capturing every lead and nurturing every buyer. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Real Estate Teams Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

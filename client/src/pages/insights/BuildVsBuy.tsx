@@ -292,7 +292,7 @@ export default function BuildVsBuy() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner helps you map your needs and identify the right approach in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
               </div>
             </div>
             <RelatedResources pagePath="/insights/build-vs-buy" />

@@ -138,7 +138,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first nurtured transaction",
   keyResultCallout:
     "Pipeline value up 40% in 6 months. 6 additional transactions from nurtured leads in first 8 months. 90-second response for every lead. 12-month nurture that never stops. Zero CRM data entry for agents.",
@@ -170,7 +170,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Pipeline Is Full of 12-Month Buyers. Without Nurture, They Close With Someone Else.",
   ctaBody:
-    "The audit maps your lead sources, follow-up gaps, and shows you what a 12-month automated nurture system looks like for your team.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Real Estate Teams", href: "/industries/real-estate-teams" },
     { label: "Lead Response Automation", href: "/services/lead-response-automation" },

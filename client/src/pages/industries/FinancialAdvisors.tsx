@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Financial Advisors Toronto | Barrana.ai",
   description:
-    "Automate client onboarding, annual review scheduling, KYC document collection, compliance logging, and milestone touchpoints for financial advisory practices. Free audit.",
+    "Automate client onboarding, annual review scheduling, KYC document collection, compliance logging, and milestone touchpoints for financial advisory practices. Free introductory session.",
   route: "financial-advisors",
   breadcrumb: "Financial Advisors",
   h1: "Your Clients Expect Proactive Communication. Your Calendar Says Otherwise. Automation Bridges the Gap.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Financial advisory is a relationship business. Clients expect proactive outreach, timely reviews, and personal attention. But most advisors manage 100-300 households. Keeping up with annual reviews, KYC renewals, birthday greetings, market updates, and life-event check-ins manually is impossible at scale.",
     "The advisors who grow their book fastest are not working harder. They have systems that maintain the relationship rhythm while they focus on financial planning and new business.",
   ],
-  ctaMicro: "See how many client touchpoints you are missing. Free 60-minute audit.",
+  ctaMicro: "See how many client touchpoints you are missing. Free 15-minute introductory session.",
 
   costHeading: "What Manual Operations Cost Financial Advisors",
   costItems: [
@@ -107,7 +107,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Advisors managing 100+ households",
@@ -141,7 +141,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard advisor automation: 3-4 weeks." },
     {
       question: "How much?",
-      answer: "Financial advisor automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Financial advisor automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
 
@@ -149,7 +149,7 @@ const data: IndustryPageData = {
     "Your Clients Expect Proactive Service. Automation Delivers It at Scale. Every Client, Every Time.",
   ctaBody:
     "Walk away with a clear plan for reaching every client, every year, with zero gaps. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Financial Advisors Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

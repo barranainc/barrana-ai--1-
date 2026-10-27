@@ -109,8 +109,8 @@ export default function KnowledgeArticle() {
             </div>
             <div className="mt-12 p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
               <h3 className="text-xl font-bold text-white mb-3">Ready to Implement This?</h3>
-              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit and we will walk through this workflow for your specific business.</p>
-              <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
+              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.</p>
+              <AuditBookingLink className="btn-primary">Book Free Introductory Session</AuditBookingLink>
             </div>
           </div>
         </div>

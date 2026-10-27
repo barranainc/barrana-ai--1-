@@ -380,11 +380,11 @@ export default function Integrations() {
               margin: "0 auto 2rem",
             }}
           >
-            We integrate with 200+ platforms. Book an automation audit and tell us what you use -
+            We integrate with 200+ platforms. Book a free 15-minute introductory session and tell us what you use -
             if there's an API, we can connect it.
           </p>
           <AuditBookingLink className="btn-primary">
-            Book an Audit
+            Book a Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

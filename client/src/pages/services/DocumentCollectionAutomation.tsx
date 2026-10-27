@@ -21,7 +21,7 @@ const data: ServicePageData = {
     "Every tax season, every immigration case, every legal matter has the same bottleneck: waiting for client documents. Your staff send request emails, get partial responses, send reminders, make phone calls, and eventually compile disorganized files from scattered email threads.",
     "That entire chase is eliminable. The system handles the requesting, tracking, reminding, and organizing. Your staff receive complete, structured packages ready for professional work.",
   ],
-  ctaMicro: "See how much time your team wastes on document chasing. Free audit.",
+  ctaMicro: "See how much time your team wastes on document chasing. Free introductory session.",
 
   costHeading: "What Document Chasing Is Costing You",
   costItems: [
@@ -92,7 +92,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "Within first engagement cycle" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Accounting firms handling 50+ client files per season",
@@ -144,7 +144,7 @@ const data: ServicePageData = {
 
   ctaHeadline: "Tax Season Does Not Have to Mean Document Season. Automate the Chase.",
   ctaBody:
-    "The audit maps your current collection process and shows you exactly where the time goes and how to eliminate it.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     {

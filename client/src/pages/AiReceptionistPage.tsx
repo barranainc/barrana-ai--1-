@@ -63,7 +63,7 @@ function CallFlowDiagram() {
   ];
 
   const outcomes = [
-    { label: "Book Appointment", desc: "Calendar + CRM record created", color: "#15803D", bg: "#F0FDF4", border: "#16A34A" },
+    { label: "Book Appointment", desc: "Calendar + CRM record created", color: "#15803D", bg: "#F0FDF4", border: "#15803d" },
     { label: "Transfer to Human", desc: "Warm handoff with context brief", color: "#283891", bg: "#EFF6FF", border: "#283891" },
     { label: "Take a Message", desc: "CRM record + team notification", color: "#7E0F4A", bg: "#FDF2F8", border: "#7E0F4A" },
   ];
@@ -130,7 +130,7 @@ function CallFlowDiagram() {
       <div style={{ marginTop: "1.5rem", display: "flex", gap: "0.75rem", flexWrap: "wrap", alignItems: "center" }}>
         {["CRM record created", "Calendar entry added", "Team briefing delivered"].map((badge, i) => (
           <div key={badge} style={{
-            background: "#F0FDF4", border: "1.5px solid #16A34A", borderRadius: 24, padding: "0.3rem 0.875rem",
+            background: "#F0FDF4", border: "1.5px solid #15803d", borderRadius: 24, padding: "0.3rem 0.875rem",
             fontSize: "0.775rem", fontWeight: 700, color: "#15803D",
             opacity: visible ? 1 : 0,
             transition: `opacity 0.4s ease ${0.9 + i * 0.1}s`,
@@ -153,7 +153,7 @@ function CoverageTimeline() {
       label: "Human Receptionist",
       segments: Array.from({ length: 24 }, (_, h) => ({
         covered: h >= 9 && h < 17,
-        color: h >= 9 && h < 17 ? "#16A34A" : "#FCA5A5",
+        color: h >= 9 && h < 17 ? "#15803d" : "#FCA5A5",
         isMissed: h < 9 || h >= 17,
       })),
       missedLabel: "Missed calls",
@@ -224,7 +224,7 @@ function CoverageTimeline() {
       {/* Legend */}
       <div style={{ display: "flex", gap: "1.25rem", marginTop: "1.25rem", flexWrap: "wrap" }}>
         {[
-          { color: "#16A34A", label: "Human (9am–5pm)" },
+          { color: "#15803d", label: "Human (9am–5pm)" },
           { color: "#FCA5A5", label: "Unattended (missed calls)" },
           { color: "#0F766E", label: "AI Receptionist" },
           { color: "#283891", label: "Human (business hours)" },
@@ -485,8 +485,8 @@ export default function AiReceptionistPage() {
           <SectionHeading>Cost Breakdown</SectionHeading>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", margin: "1.5rem 0" }}>
             {[
-              { label: "Ongoing service", value: "Quoted with your project", note: "Included in the fixed quote after the free audit" },
-              { label: "Setup & configuration", value: "From $1,500 CAD", note: "One-time build and integration, fixed quote after the free audit" },
+              { label: "Ongoing service", value: "Quoted with your project", note: "Included in the fixed quote after a free introductory session" },
+              { label: "Setup & configuration", value: "From $1,500 CAD", note: "One-time build and integration, fixed quote after a free introductory session" },
               { label: "Human receptionist", value: "$3,000–$4,000/month", note: "Salary + benefits, business hours only" },
               { label: "Payback", value: "Depends on call volume", note: "Measured against your baseline after launch" },
             ].map(c => (
@@ -520,11 +520,11 @@ export default function AiReceptionistPage() {
               Stop missing after-hours calls.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              Book a free Automation Audit to see whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
+              Book a free 15-minute introductory session to talk through whether an AI receptionist is right for your business - or explore the full AI Receptionist service.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
-                Book a Free Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
               <Link href="/services/ai-receptionist" style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the AI Receptionist Service

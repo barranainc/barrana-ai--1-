@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Cleaning Companies Toronto | Barrana.ai",
   description:
-    "Automate quote requests, booking, reminders, invoicing, review requests, and recurring schedule management for residential and commercial cleaning companies. Free audit.",
+    "Automate quote requests, booking, reminders, invoicing, review requests, and recurring schedule management for residential and commercial cleaning companies. Free introductory session.",
   route: "cleaning-companies",
   breadcrumb: "Cleaning Companies",
   h1: "Your Clients Book at 9pm. Your Office Closes at 5pm. Automation Does Not Have Business Hours.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Cleaning companies live on volume: dozens of bookings per week, recurring schedules across hundreds of clients, and a constant flow of new quote requests. The companies that grow fastest are not cleaning more. They are losing less: fewer missed quotes, fewer no-shows, fewer billing delays.",
     "Manual scheduling and follow-up work at 20 clients. At 100 clients, it breaks. Automation scales the operations so you can scale the business.",
   ],
-  ctaMicro: "See how many quote requests you are losing to slow response. Free audit.",
+  ctaMicro: "See how many quote requests you are losing to slow response. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Cleaning Companies",
   costItems: [
@@ -111,7 +111,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Cleaning companies with 50+ bookings per month",
@@ -144,7 +144,7 @@ const data: IndustryPageData = {
     { question: "How long?", answer: "Standard cleaning company automation: 2-3 weeks." },
     {
       question: "How much?",
-      answer: "Cleaning company automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+      answer: "Cleaning company automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Crew management?",
@@ -156,7 +156,7 @@ const data: IndustryPageData = {
     "Your Clients Book When It Is Convenient for Them. Make Sure Your Business Is Ready 24/7.",
   ctaBody:
     "Walk away with a clear plan for capturing every quote and managing every clean automatically. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Cleaning Companies Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

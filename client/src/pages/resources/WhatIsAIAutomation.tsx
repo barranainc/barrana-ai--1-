@@ -134,13 +134,13 @@ function ManualVsAutomatedFlow() {
         <div style={{ flex: "1 1 260px" }}>
           <div style={{
             fontWeight: 800, fontSize: "0.8rem", textTransform: "uppercase",
-            letterSpacing: "0.1em", color: "#16A34A", marginBottom: "1.25rem",
+            letterSpacing: "0.1em", color: "#15803d", marginBottom: "1.25rem",
             display: "flex", alignItems: "center", gap: "0.5rem",
           }}>
             <span style={{ fontSize: "1rem" }}>✓</span> With Automation
           </div>
           <div style={{
-            background: "#F0FDF4", border: "1.5px solid #16A34A",
+            background: "#F0FDF4", border: "1.5px solid #15803d",
             borderRadius: "12px", padding: "1.25rem",
             opacity: visible ? 1 : 0,
             transform: visible ? "scale(1)" : "scale(0.92)",
@@ -152,14 +152,14 @@ function ManualVsAutomatedFlow() {
                 padding: "0.35rem 0",
                 borderBottom: i < manualSteps.length - 1 ? "1px solid #DCFCE7" : "none",
               }}>
-                <span style={{ color: "#16A34A", fontWeight: 900, fontSize: "1rem", flexShrink: 0 }}>✓</span>
+                <span style={{ color: "#15803d", fontWeight: 900, fontSize: "1rem", flexShrink: 0 }}>✓</span>
                 <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "#14532D" }}>{step.label}</span>
               </div>
             ))}
           </div>
           <div style={{
             marginTop: "1rem",
-            background: "#16A34A", color: "#fff",
+            background: "#15803d", color: "#fff",
             borderRadius: "8px", padding: "0.6rem 1rem",
             fontWeight: 800, fontSize: "0.875rem", textAlign: "center",
             opacity: visible ? 1 : 0,
@@ -206,14 +206,14 @@ function ROITimeline() {
                 <div style={{
                   width: "40px",
                   height: visible ? "72px" : "0px",
-                  background: "linear-gradient(to top, #16A34A, #4ADE80)",
+                  background: "linear-gradient(to top, #15803d, #4ADE80)",
                   borderRadius: "6px 6px 0 0",
                   transition: `height 0.7s cubic-bezier(0.16,1,0.3,1) ${i * 0.15 + 0.4}s`,
                   position: "relative",
                 }}>
                   <span style={{
                     position: "absolute", top: "-22px", left: "50%", transform: "translateX(-50%)",
-                    fontSize: "0.65rem", fontWeight: 800, color: "#16A34A", whiteSpace: "nowrap",
+                    fontSize: "0.65rem", fontWeight: 800, color: "#15803d", whiteSpace: "nowrap",
                   }}>+ROI</span>
                 </div>
               )}
@@ -453,7 +453,7 @@ export default function WhatIsAIAutomation() {
           <SectionHeading>What It Costs</SectionHeading>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
             For a professional services firm in Canada, an AI automation implementation - including scoping, build, testing, and training - starts
-            from <strong>$1,500 CAD</strong>, with a fixed quote after the free audit based on the number of workflows and integrations involved.
+            from <strong>$1,500 CAD</strong>, with a fixed quote after a free introductory session based on the number of workflows and integrations involved.
           </p>
           <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7 }}>
             The ongoing monthly cost for automation platform licenses (Make, Zapier, or similar) is typically $50–$200/month for a small firm.
@@ -489,10 +489,10 @@ export default function WhatIsAIAutomation() {
               Ready to Implement This?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              Book a free 60-minute Automation Audit. We'll walk through your highest-friction workflows and show you exactly what's automatable - no obligation.
+              Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
             </p>
             <AuditBookingLink className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
-              Book Your Free Automation Audit →
+              Book Your Free Introductory Session →
             </AuditBookingLink>
           </div>
         </div>

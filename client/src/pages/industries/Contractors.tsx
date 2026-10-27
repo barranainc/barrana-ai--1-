@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Contractors & Trades",
   description:
-    "Automate lead capture, quote follow-up, site visit booking, after-hours calls, and invoicing for contractors. Jobber integrated. Free audit.",
+    "Automate lead capture, quote follow-up, site visit booking, after-hours calls, and invoicing for contractors. Jobber integrated. Free introductory session.",
   route: "contractors",
   breadcrumb: "Contractors and Trades",
   h1: "You Are on the Job All Day. Your Leads Arrive All Day. Automation Bridges That Gap.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "A homeowner submits quote requests to 3-5 contractors. The first professional response wins the majority of jobs. Most contractors cannot respond within hours because they are doing the actual work. By the time they check their phone at lunch, the homeowner has already booked with someone faster.",
     "At average job values of $5,000-$15,000, losing 8-12 leads per month to slow response means $40,000-$180,000 per year in revenue walking away. Not because your work is bad. Because your response was slow.",
   ],
-  ctaMicro: "See how many leads you lose to slow response every month. Free 60-minute audit.",
+  ctaMicro: "See how many leads you lose to slow response every month. Free 15-minute introductory session.",
   costHeading: "What Slow Response Costs Your Contracting Business",
   costItems: [
     {
@@ -132,7 +132,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+    "These are typical outcomes; your own figures will differ.",
   bestFit: [
     "Contractors receiving 20+ quote requests per month",
     "Trades businesses where the owner is on-site during business hours",
@@ -170,7 +170,7 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Contractor lead automation starts from $1,500 CAD, with a fixed quote after the free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Contractor lead automation starts from $1,500 CAD, with a fixed quote after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "After-hours AI: does it really answer calls?",
@@ -182,7 +182,7 @@ const data: IndustryPageData = {
     "Your Crew Does the Work. The System Wins the Next Job. Automate the Gap Between.",
   ctaBody:
     "Walk away with a clear plan for capturing leads 24/7 without missing a single job. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Contractors Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
   internalLinks: [
     {

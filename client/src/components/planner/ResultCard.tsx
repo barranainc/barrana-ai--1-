@@ -13,7 +13,7 @@ const CLASSIFICATION_CONFIG: Record<
 > = {
   "quick-win": { label: "Quick Win", bg: "#ECFDF5", color: "#0D9668" },
   "strong-next": { label: "Strong Next Phase", bg: "#EEF1FA", color: "#283891" },
-  "careful-design": { label: "Needs Careful Design", bg: "#FFFBEB", color: "#D97706" },
+  "careful-design": { label: "Needs Careful Design", bg: "#FFFBEB", color: "#b45309" },
   "keep-human": { label: "Keep Human-Led", bg: "#F3F4F6", color: "#6B7280" },
 };
 

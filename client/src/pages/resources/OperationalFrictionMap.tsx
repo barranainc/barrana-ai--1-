@@ -444,10 +444,10 @@ export default function OperationalFrictionMap() {
               Want Us to Map Your Business?
             </h2>
             <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "1.75rem", lineHeight: 1.6 }}>
-              We run a live Friction Mapping exercise as part of every Automation Audit. Book your free 60-minute Automation Audit and identify your first automation.
+              Want to talk through your results? Book a free 15-minute introductory session and we’ll explore where AI automation could save your team time.
             </p>
             <AuditBookingLink className="btn-primary" style={{ display: "inline-block", textDecoration: "none" }}>
-              Book a Free Automation Audit →
+              Book a Free Introductory Session →
             </AuditBookingLink>
           </div>
         </div>

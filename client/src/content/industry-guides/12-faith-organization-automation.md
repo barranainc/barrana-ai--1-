@@ -166,13 +166,13 @@ Donation capture and receipting. It removes the heaviest recurring burden, it re
 
 ---
 
-## Book a Free Automation Audit
+## Book a Free 15-Minute Introductory Session
 
 Barrana works with mosques, temples, churches, gurdwaras, and community organizations across Toronto, Vaughan, Markham, Mississauga, and the wider GTA.
 
-We start with a 60-minute Automation Audit - free, no obligation. We walk through your donation, membership, event, and volunteer processes and show you where your small staff and large volunteer base are losing hours.
+We start with a free 15-minute introductory session, no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
 
-**[Book your free Automation Audit →](https://calendly.com/ikramrana15/15min)**
+**[Book your free introductory session →](https://calendly.com/ikramrana15/15min)**
 
 Fixed-price builds starting at $1,500 CAD. Works with the systems you already run.
 

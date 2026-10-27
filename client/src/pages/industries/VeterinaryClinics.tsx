@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Veterinary Clinics Toronto | Barrana.ai",
   description:
-    "Automate pet appointment booking, vaccination reminders, prescription refill alerts, post-surgery follow-up, and Google reviews for veterinary practices. Free audit.",
+    "Automate pet appointment booking, vaccination reminders, prescription refill alerts, post-surgery follow-up, and Google reviews for veterinary practices. Free introductory session.",
   route: "veterinary-clinics",
   breadcrumb: "Veterinary Clinics",
   h1: "Fluffy Is Due for Vaccinations. Her Owner Forgot. Your Staff Forgot to Remind Them. Automation Does Not Forget.",
@@ -16,7 +16,7 @@ const data: IndustryPageData = {
     "The practices that retain clients long-term are the ones that communicate proactively. Pet owners who receive timely vaccination reminders, refill alerts, and wellness check notifications stay loyal for the life of their pet.",
   ],
   ctaMicro:
-    "See how many vaccination and wellness reminders your practice is missing. Free audit.",
+    "See how many vaccination and wellness reminders your practice is missing. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Veterinary Clinics",
   costItems: [
@@ -138,7 +138,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Veterinary practices seeing 20+ patients per day",
@@ -177,7 +177,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Veterinary clinic automation starts from $1,500 CAD, with a fixed quote after the free audit.",
+      answer: "Veterinary clinic automation starts from $1,500 CAD, with a fixed quote after a free introductory session.",
     },
     {
       question: "Seasonal parasite prevention?",
@@ -190,7 +190,7 @@ const data: IndustryPageData = {
     "Every Missed Vaccination Is Revenue Lost and a Pet Unprotected. Automate the Reminders.",
   ctaBody:
     "Walk away with a clear plan for 90%+ vaccination compliance and zero missed follow-ups. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Veterinary Clinics Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

@@ -13,7 +13,7 @@ const data: IndustryPageData = {
     "Service businesses share a common operational cycle: clients inquire, get onboarded, receive the service, and are invoiced. At every stage, manual tasks create delays, inconsistency, and hours of wasted staff time.",
     "The businesses that grow fastest systematize these operational layers early. Their team scales the delivery. The system handles the coordination.",
   ],
-  ctaMicro: "See which part of your client lifecycle needs automation most. Free 60-minute audit.",
+  ctaMicro: "See which part of your client lifecycle needs automation most. Free 15-minute introductory session.",
 
   costHeading: "What Manual Operations Cost a Typical Service Business",
   costItems: [
@@ -66,7 +66,7 @@ const data: IndustryPageData = {
     { label: "Cash Flow", after: "Stabilized through same-day invoicing" },
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
-  roiNote: "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+  roiNote: "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Any service business with recurring client workflows",
@@ -86,14 +86,14 @@ const data: IndustryPageData = {
     { question: "What types of service businesses?", answer: "Any business running on appointments, inquiries, and client relationships: consulting, cleaning, tutoring, repair, wellness, professional services, home services, and more." },
     { question: "Do I need a CRM?", answer: "For automation to work properly, yes. We recommend and set up lightweight CRMs as part of implementation if you do not have one." },
     { question: "Can I start with just one workflow?", answer: "Yes. We recommend starting with the highest-impact workflow (usually lead response or scheduling) and expanding from there." },
-    { question: "How much does it cost?", answer: "Projects start from $1,500 CAD for a single workflow; full lifecycle automation is quoted after the free audit. Fixed pricing." },
+    { question: "How much does it cost?", answer: "Projects start from $1,500 CAD for a single workflow; full lifecycle automation is quoted after a free introductory session. Fixed pricing." },
     { question: "How long?", answer: "First workflow live in 2-3 weeks. Full system in 4-8 weeks." },
-    { question: "What if I am not sure what to automate first?", answer: "That is exactly what the free audit determines. We walk through your workflows, score the friction, and tell you where to start." },
+    { question: "What if I am not sure what to automate first?", answer: "Start with a free 15-minute introductory session. We discuss your business and workflow challenges and help you decide where to start." },
   ],
 
   ctaHeadline: "Your Business Runs on Client Relationships. Automation Makes Sure the Operations Keep Up.",
   ctaBody: "Walk away with a clear plan for systematizing your entire client lifecycle. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Service Businesses Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

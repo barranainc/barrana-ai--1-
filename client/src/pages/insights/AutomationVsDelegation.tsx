@@ -295,7 +295,7 @@ export default function AutomationVsDelegation() {
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Is there anything that should never be automated?" a="Yes - tasks involving professional liability, emotional support, creative judgement, and regulated advice should not be automated. They can be supported by automation but must remain human-led." />
               <FAQItem q="Can AI assist with delegation?" a="Yes. AI can draft, summarise, or prepare information for the delegate - reducing the time the task takes. The decision and execution remain human." />
-              <FAQItem q="How do we identify which of our tasks fit each quadrant?" a="The Automation Audit maps your workflows and scores each task on frequency and judgement required. This is the output of the friction mapping exercise." />
+              <FAQItem q="How do we identify which of our tasks fit each quadrant?" a="Score each task on frequency and judgement required; the Operational Friction Map can help. If you go ahead with a project, we map your workflows in detail with you." />
               <FAQItem q="We've been delegating everything because we didn't know what could be automated. Where do we start?" a="Start with the highest-frequency, lowest-judgement tasks. Invoice reminders, appointment reminders, lead acknowledgements, document requests. These are usually automatable within 1–2 weeks." />
             </div>
 
@@ -304,7 +304,7 @@ export default function AutomationVsDelegation() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner maps your workflows and scores each task in minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
               </div>
             </div>
 

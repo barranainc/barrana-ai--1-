@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Tutoring Centers Toronto | Barrana.ai",
   description:
-    "Automate student enrollment, session scheduling, parent communication, progress reporting, and re-enrollment campaigns for tutoring and education centers. Free audit.",
+    "Automate student enrollment, session scheduling, parent communication, progress reporting, and re-enrollment campaigns for tutoring and education centers. Free introductory session.",
   route: "tutoring-education",
   breadcrumb: "Tutoring and Education Centers",
   h1: "Enrollment Season Is a 3-Week Scramble Every Year. Session Scheduling Is a Spreadsheet Nightmare. Automate Both.",
@@ -16,7 +16,7 @@ const data: IndustryPageData = {
     "The centers that grow enrollment while maintaining quality are the ones that automate the administrative coordination. Tutors teach. The system handles everything else.",
   ],
   ctaMicro:
-    "See how automation streamlines your enrollment and scheduling. Free audit.",
+    "See how automation streamlines your enrollment and scheduling. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Tutoring Centers",
   costItems: [
@@ -151,7 +151,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Tutoring centers with 50+ active students",
@@ -190,7 +190,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Tutoring center automation starts from $1,500 CAD, with a fixed quote after the free audit.",
+      answer: "Tutoring center automation starts from $1,500 CAD, with a fixed quote after a free introductory session.",
     },
     {
       question: "Seasonal enrollment campaigns?",
@@ -203,7 +203,7 @@ const data: IndustryPageData = {
     "Enrollment Season Does Not Have to Be Chaos. Session Management Does Not Have to Be a Spreadsheet. Automate.",
   ctaBody:
     "Walk away with a clear plan for 80%+ re-enrollment and zero scheduling conflicts. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Tutoring Centers Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

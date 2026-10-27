@@ -112,11 +112,11 @@ function cityFaqs(city: string) {
   return [
     {
       q: `Do you work with businesses in ${city}?`,
-      a: `Yes. Barrana.ai is based at 50 Corstate Avenue in Vaughan and works with service businesses across the GTA, including ${city}. Audits and onboarding can be held in person when requested; implementation and support are handled remotely.`,
+      a: `Yes. Barrana.ai is based at 50 Corstate Avenue in Vaughan and works with service businesses across the GTA, including ${city}. Introductory sessions and onboarding can be held in person when requested; implementation and support are handled remotely.`,
     },
     {
       q: `Where should a ${city} business start with automation?`,
-      a: "With the one repeated workflow that costs your team the most time or loses the most enquiries. The free 60-minute Automation Audit maps your workflows and shows what to automate first, and what to leave alone.",
+      a: "With the one repeated workflow that costs your team the most time or loses the most enquiries. A free 15-minute introductory session is the place to talk it through: we discuss your business and workflow challenges and explore where AI automation could save your team time.",
     },
     {
       q: "Do we need to change our software?",
@@ -153,7 +153,7 @@ export default function LocalSEOPage() {
     <div className="min-h-screen bg-white">
       <SEOHead
         title={`AI Automation for Small Business in ${page.city} | Barrana.ai`}
-        description={`Workflow automation for ${page.city} service businesses: lead response, client intake, document collection and scheduling. Start with a free 60-minute Automation Audit.`}
+        description={`Workflow automation for ${page.city} service businesses: lead response, client intake, document collection and scheduling. Start with a free 15-minute introductory session.`}
       />
       <section className="hero-light pt-24 pb-16">
         <div className="container">
@@ -223,9 +223,9 @@ export default function LocalSEOPage() {
             </p>
 
             <div className="p-8 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
-              <h2 className="text-xl font-bold text-white mb-3">Free Automation Audit for {page.city} Businesses</h2>
-              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.</p>
-              <AuditBookingLink className="btn-primary">Book Your Free Automation Audit</AuditBookingLink>
+              <h2 className="text-xl font-bold text-white mb-3">Free Introductory Session for {page.city} Businesses</h2>
+              <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.</p>
+              <AuditBookingLink className="btn-primary">Book Your Free Introductory Session</AuditBookingLink>
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ const BURGUNDY = "#7E0F4A";
 const GREY = "#707070";
 const DARK = "#1A1A2E";
 const GREEN = "#0D9668";
-const AMBER = "#D97706";
+const AMBER = "#b45309";
 
 // ── Animated counter ──────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 1400, trigger = false) {
@@ -395,10 +395,10 @@ function HeroOpportunityCard({ opp, state, onCTA }: {
           onMouseEnter={(e) => { (e.target as HTMLElement).style.background = "#6a0c3e"; }}
           onMouseLeave={(e) => { (e.target as HTMLElement).style.background = BURGUNDY; }}
         >
-          Book a Free Automation Audit About This
+          Book a Free Introductory Session About This
         </a>
         <p style={{ margin: "auto 0", fontSize: 12, color: "#8FA4E8" }}>
-          60 minutes. Free. Bring these planner results with you.
+          15 minutes. Free. Bring these planner results with you.
         </p>
       </div>
     </div>
@@ -523,7 +523,7 @@ function InteractiveRoadmap({ phase1, phase2, phase3 }: { phase1: Opportunity[];
   const [activePhase, setActivePhase] = useState<1 | 2 | 3>(1);
 
   const phases = [
-    { key: 1 as const, label: "Immediate Wins", timeframe: "Weeks 1–3", items: phase1, icon: "⚡", color: NAVY, involvement: "60-minute audit + 30-minute training session" },
+    { key: 1 as const, label: "Immediate Wins", timeframe: "Weeks 1–3", items: phase1, icon: "⚡", color: NAVY, involvement: "15-minute introductory session + 30-minute training session" },
     { key: 2 as const, label: "Operational Improvements", timeframe: "Weeks 4–8", items: phase2, icon: "⚙️", color: "#4B61B8", involvement: "Brief check-in to confirm Phase 1 performance" },
     { key: 3 as const, label: "Connected Systems", timeframe: "Weeks 9–16", items: phase3, icon: "🔗", color: GREY, involvement: "Review session once Phase 1 and 2 are proven" },
   ];
@@ -901,7 +901,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
           </p>
           <BeforeAfterSection metrics={beforeAfterMetrics} />
           <p style={{ margin: "18px 0 0", fontSize: 12, color: "#9CA3AF", lineHeight: 1.5 }}>
-            Estimates are indicative. Actual results depend on implementation quality, staff adoption, and your specific workflows. A Barrana Automation Audit provides precise projections.
+            Estimates are indicative. Actual results depend on implementation quality, staff adoption, and your specific workflows. Your own results will depend on your figures.
           </p>
         </div>
       </FadeIn>
@@ -946,7 +946,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
               />
             </div>
 
-            {/* Automation Audit card */}
+            {/* Introductory session card */}
             <div style={{ background: "rgba(255,255,255,0.08)", border: "1.5px solid rgba(255,255,255,0.15)", borderRadius: 16, padding: "28px 24px", display: "flex", flexDirection: "column" }}>
               <p style={{ margin: "0 0 6px", fontSize: 12, fontWeight: 700, color: "#93C5FD", textTransform: "uppercase", letterSpacing: "0.1em" }}>
                 Option B
@@ -955,7 +955,7 @@ export default function PlannerResults({ state, onRestart }: Props) {
                 Turn Your Results Into a Plan
               </h3>
               <p style={{ margin: "0 0 auto", fontSize: 14, color: "#A3B4E8", lineHeight: 1.6 }}>
-                Book a free 60-minute Automation Audit. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.
+                Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time.
               </p>
               <div style={{ marginTop: 24 }}>
                 <a
@@ -971,10 +971,10 @@ export default function PlannerResults({ state, onRestart }: Props) {
                   onMouseEnter={(e) => { const el = e.currentTarget; el.style.background = "white"; el.style.color = NAVY; }}
                   onMouseLeave={(e) => { const el = e.currentTarget; el.style.background = "transparent"; el.style.color = "white"; }}
                 >
-                  Book a Free Automation Audit
+                  Book a Free Introductory Session
                 </a>
                 <p style={{ margin: "10px 0 0", fontSize: 12, color: "#8FA4E8", textAlign: "center" }}>
-                  60 minutes. Free. No obligation.
+                  15 minutes. Free. No obligation.
                 </p>
               </div>
             </div>

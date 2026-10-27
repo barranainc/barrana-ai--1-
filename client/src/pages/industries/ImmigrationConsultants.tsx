@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "A regulated Canadian immigration consultant has one core product: expert advice and application management. But 40% of their week is consumed by tasks that require no expertise: collecting client information, chasing documents, answering status questions, and updating spreadsheets.",
     "For a 2-consultant firm handling 50 inquiries per month, that is over 900 hours per year of recoverable capacity. Each hour recovered is an hour available for billable consulting work.",
   ],
-  ctaMicro: "See how much billable time your firm is losing to admin. Free 60-minute audit.",
+  ctaMicro: "See how much billable time your firm is losing to admin. Free 15-minute introductory session.",
   costHeading: "What Admin Overhead Costs Your Immigration Practice",
   costItems: [
     {
@@ -136,7 +136,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific practice.",
+    "These are typical outcomes; your own figures will differ.",
   bestFit: [
     "Immigration practices handling 30+ inquiries/month",
     "Multi-consultant firms where routing matters",
@@ -169,7 +169,7 @@ const data: IndustryPageData = {
     {
       question: "How long to implement?",
       answer:
-        "Standard immigration automation: 3-4 weeks from audit to live deployment including intake design, document portal setup, and CRM integration.",
+        "Standard immigration automation: 3-4 weeks from project start to live deployment including intake design, document portal setup, and CRM integration.",
     },
     {
       question: "Can it handle IRCC-specific requirements?",
@@ -184,14 +184,14 @@ const data: IndustryPageData = {
     {
       question: "How much does this cost?",
       answer:
-        "Immigration intake and document automation starts from $1,500 CAD. Fixed pricing after free audit. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Immigration intake and document automation starts from $1,500 CAD. Fixed pricing after a free introductory session. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
   ],
   ctaHeadline:
     "Your Consultants Were Hired for Their Expertise, Not to Chase Documents. Automate the Admin.",
   ctaBody:
     "Walk away with a clear plan for recovering 11+ billable hours per week. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Immigration Consultants Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
   internalLinks: [
     {

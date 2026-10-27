@@ -16,7 +16,7 @@ export default function ROICalculator() {
   const additionalConversions = leadsPerMonth * 0.15;
   const additionalRevenue = additionalConversions * avgDealValue;
   const totalMonthlyROI = savedCostPerMonth + additionalRevenue;
-  // Uses the published starting price (owner-approved 27 Oct 2026); real quotes follow the free audit.
+  // Uses the published starting price (owner-approved 27 Oct 2026); real quotes follow a free introductory session.
   const paybackMonths = Math.ceil(1500 / totalMonthlyROI);
 
   const inputs = [
@@ -86,10 +86,10 @@ export default function ROICalculator() {
                 ))}
               </div>
               <div className="mt-6 p-4 rounded-xl text-xs" style={{ backgroundColor: "#FFF8E7", border: "1px solid rgba(217,119,6,0.2)", color: "#92400E" }}>
-                <strong>Estimate, not a quote or a promise.</strong> The calculator assumes automation removes about 80% of the admin hours you enter, that 15% of your monthly leads convert in addition because of faster response, and an implementation cost of about $1,500 CAD. Freed staff time is capacity, not a cash saving, unless costs actually fall. Your actual result depends on your workflows, starting point and scope; we measure your baseline during the free Automation Audit.
+                <strong>Estimate, not a quote or a promise.</strong> The calculator assumes automation removes about 80% of the admin hours you enter, that 15% of your monthly leads convert in addition because of faster response, and an implementation cost of about $1,500 CAD. Freed staff time is capacity, not a cash saving, unless costs actually fall. Your actual result depends on your workflows, starting point and scope; we agree how to measure your baseline before work starts.
               </div>
               <div className="mt-6">
-                <AuditBookingLink className="btn-primary block text-center">Book Free Audit to Get Exact Numbers</AuditBookingLink>
+                <AuditBookingLink className="btn-primary block text-center">Book Free Introductory Session to Get Exact Numbers</AuditBookingLink>
               </div>
             </div>
           </div>

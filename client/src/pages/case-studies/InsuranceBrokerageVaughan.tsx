@@ -132,7 +132,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "3 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first renewal cycle",
   keyResultCallout:
     "Renewal lapse rate from 18% to under 6%. 144 additional policies retained per year. 100% quote follow-up. Cross-sell opportunities surfaced for every client. RIBO compliance gaps closed.",
@@ -166,7 +166,7 @@ const data: CaseStudyData = {
   ],
   ctaHeadline: "Every Lapsed Policy Is Recurring Revenue Lost Forever. The Fix Is Consistent Outreach.",
   ctaBody:
-    "The audit analyzes your renewal lapse rate and shows you the 90/60/30-day sequence that prevents it.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Insurance Brokers", href: "/industries/insurance-brokers" },
     { label: "CRM Automation", href: "/services/crm-automation" },

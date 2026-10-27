@@ -279,7 +279,7 @@ export default function WhatToAutomateFirst() {
             <SectionHeading>Frequently Asked Questions</SectionHeading>
             <div style={{ marginBottom: "2.5rem" }}>
               <FAQItem q="Can I automate two things at once for Phase 1?" a="We recommend starting with one workflow and measuring results before adding the second. Two simultaneous implementations often lead to scope creep and delayed results." />
-              <FAQItem q="What if my most urgent problem isn't in the top 5?" a="Map your workflows first. Urgency and ROI aren't always the same thing. The Automation Audit helps you prioritise objectively." />
+              <FAQItem q="What if my most urgent problem isn't in the top 5?" a="Map your workflows first. Urgency and ROI aren't always the same thing. A free 15-minute introductory session can help you talk through priorities." />
               <FAQItem q="How long before I see ROI from lead response automation?" a="It depends on your lead volume and client value, so we agree on what to measure before launch. Compare the system cost with the value of the extra leads you convert that slow response used to lose." />
               <FAQItem q="Does industry matter for this ranking?" a="Yes. The rankings above apply to most service businesses, but the Industry-Specific section shows exceptions by sector." />
             </div>
@@ -289,7 +289,7 @@ export default function WhatToAutomateFirst() {
               <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.5rem" }}>The Automation Planner identifies your highest-ROI first automation in under 5 minutes.</p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <Link href="/automation-planner"><a style={{ background: "#fff", color: "#283891", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem" }}>Start the Automation Planner</a></Link>
-                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book Free Audit</AuditBookingLink>
+                <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.85rem 2rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "0.95rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book Free Introductory Session</AuditBookingLink>
               </div>
             </div>
 

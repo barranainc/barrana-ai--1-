@@ -275,7 +275,7 @@ export default function Services() {
                 Not software subscriptions. Not AI experiments. Working automation systems built around your actual business workflows. Every service is scoped, priced, and delivered at a fixed price before work begins.
               </p>
               <AuditBookingLink className="btn-primary">
-                Book a Free Automation Audit
+                Book a Free Introductory Session
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </AuditBookingLink>
             </div>
@@ -293,10 +293,10 @@ export default function Services() {
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Ready to Automate Your Operations?</h2>
           <p className="text-blue-200 mb-8 max-w-xl mx-auto">
-            Book a free 60-minute Automation Audit. We walk through your workflows and identify your highest-impact opportunities. No obligation.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team valuable time. No obligation.
           </p>
           <AuditBookingLink className="btn-accent">
-            Book Free Automation Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

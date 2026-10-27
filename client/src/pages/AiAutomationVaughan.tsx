@@ -141,7 +141,7 @@ function GTAServiceArea() {
 // ─── Graphic 2: Engagement Timeline ───────────────────────────────────────────
 
 const timelineSteps = [
-  { label: "Week 1", title: "Audit", desc: "60-min free audit. Map workflows, identify friction points, define starting opportunity." },
+  { label: "Week 1", title: "Introductory session", desc: "Free 15-minute introductory session, then workflows mapped in detail, friction points identified and a starting opportunity defined." },
   { label: "Week 2", title: "Map + Propose", desc: "Workflow diagrams, integration plan, fixed-price proposal. No surprises." },
   { label: "Weeks 3–4", title: "Phase 1 Build", desc: "First workflow built, integrated, and tested in your actual environment." },
   { label: "Week 5", title: "Test + Train", desc: "Live testing with real data. Team training on approvals and oversight." },
@@ -260,7 +260,7 @@ export default function AiAutomationVaughan() {
             <SummaryBox>
               <p style={{ fontWeight: 700, color: "#283891", marginBottom: "0.5rem", fontSize: "0.875rem" }}>Quick Summary</p>
               <p style={{ fontSize: "0.9375rem", color: "#1A1A2E", lineHeight: 1.65, margin: 0 }}>
-                Barrana.ai provides AI automation services for small businesses in Vaughan and the Greater Toronto Area. Based at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2, Barrana serves businesses with 2–50 staff across professional services, healthcare, trades, and agencies. Services include lead response automation, AI receptionists, client intake, document collection, invoicing, and workflow automation. All implementations are PIPEDA-aware, use fixed pricing, and integrate with existing tools. Free 60-minute Automation Audit available.
+                Barrana.ai provides AI automation services for small businesses in Vaughan and the Greater Toronto Area. Based at 50 Corstate Avenue, Unit 01, Vaughan, ON L4K 4X2, Barrana serves businesses with 2–50 staff across professional services, healthcare, trades, and agencies. Services include lead response automation, AI receptionists, client intake, document collection, invoicing, and workflow automation. All implementations are PIPEDA-aware, use fixed pricing, and integrate with existing tools. Free 15-minute introductory session available.
               </p>
             </SummaryBox>
 
@@ -342,7 +342,7 @@ export default function AiAutomationVaughan() {
             {/* Section 3 */}
             <SectionHeading>Our Approach: Operator-First, Practical, Phased</SectionHeading>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
-              We start every engagement with a free 60-minute Automation Audit. This is not a sales call. We walk through your actual workflows, identify where time is lost, and show you exactly what is automatable and what should stay manual. You leave with a clear picture of your automation opportunity regardless of whether we work together.
+              We start every engagement with a free 15-minute introductory session. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time. If you go ahead, we then map your workflows in detail and show you what is automatable and what should stay manual.
             </p>
             <p style={{ fontSize: "0.9375rem", color: "#374151", lineHeight: 1.7, marginBottom: "1rem" }}>
               All work is quoted at a fixed price before any build begins. No hourly billing, no scope creep invoicing, no surprises. We work with the tools you already use - your CRM, your email system, your practice management software - so you do not need to change your stack or learn a new platform.
@@ -383,36 +383,36 @@ export default function AiAutomationVaughan() {
               />
               <FAQItem
                 q="Is there a minimum contract size?"
-                a="Projects start from $1,500 CAD for a single-workflow automation. The fixed quote after the free 60-minute Automation Audit covers scoping, build, testing, and team training."
+                a="Projects start from $1,500 CAD for a single-workflow automation. The fixed quote after a free 15-minute introductory session covers scoping, build, testing, and team training."
               />
               <FAQItem
                 q="How long does an engagement take?"
-                a="Phase 1 typically takes 2–4 weeks from audit to go-live. A full multi-workflow system takes 6–10 weeks. Timelines depend on integration complexity and client responsiveness during testing."
+                a="Phase 1 typically takes 2–4 weeks from project start to go-live. A full multi-workflow system takes 6–10 weeks. Timelines depend on integration complexity and client responsiveness during testing."
               />
               <FAQItem
                 q="Do you offer support after implementation?"
                 a="Yes. Monitoring and maintenance are quoted with your project and cover platform licensing oversight, error monitoring, and minor workflow adjustments as your business evolves."
               />
               <FAQItem
-                q="Is the initial audit really free?"
-                a="Yes. The 60-minute Automation Audit is completely free with no obligation. We walk through your workflows and tell you exactly what to automate and in what order. You can use this information with any provider, or with us."
+                q="Is the introductory session really free?"
+                a="Yes. The 15-minute introductory session is completely free with no obligation. You can use this information with any provider, or with us."
               />
             </div>
 
             {/* CTA */}
             <div style={{ ...surfaces.darkGradient, borderRadius: "20px", padding: "3rem 2.5rem", textAlign: "center", marginTop: "3rem" }}>
               <h2 style={{ color: "#fff", fontSize: "clamp(1.25rem,2.5vw,1.75rem)", fontWeight: 900, marginBottom: "0.75rem" }}>
-                Book Your Free Audit in Vaughan
+                Book Your Free Introductory Session in Vaughan
               </h2>
               <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "1rem", marginBottom: "0.5rem", lineHeight: 1.6, maxWidth: "540px", margin: "0 auto 0.5rem" }}>
-                60 minutes. No obligation. We'll walk through your workflows and tell you exactly what to automate and in what order.
+                15 minutes. No obligation. We’ll discuss your business and explore where AI automation could save your team time.
               </p>
               <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "0.875rem", marginBottom: "1.75rem" }}>
                 50 Corstate Avenue, Unit 01 - Vaughan, ON L4K 4X2
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
                 <AuditBookingLink style={{ background: "#7E0F4A", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block" }}>
-                  Book Free Audit in Vaughan →
+                  Book Free Introductory Session in Vaughan →
                 </AuditBookingLink>
                 <Link href="/services" style={{ background: "rgba(255,255,255,0.1)", color: "#fff", fontWeight: 700, fontSize: "0.9375rem", padding: "0.85rem 1.75rem", borderRadius: "10px", textDecoration: "none", display: "inline-block", border: "1.5px solid rgba(255,255,255,0.25)" }}>
                   See Our Services
@@ -468,8 +468,8 @@ export default function AiAutomationVaughan() {
         "@type": "FAQPage",
         "mainEntity": [
           { "@type": "Question", "name": "Do you only serve businesses in Vaughan?", "acceptedAnswer": { "@type": "Answer", "text": "No. We serve businesses across the GTA and work remotely with businesses throughout Ontario." } },
-          { "@type": "Question", "name": "Is the initial audit really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 60-minute Automation Audit is completely free with no obligation." } },
-          { "@type": "Question", "name": "How long does an engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "Phase 1 typically takes 2–4 weeks from audit to go-live. A full multi-workflow system takes 6–10 weeks." } }
+          { "@type": "Question", "name": "Is the introductory session really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 15-minute introductory session is completely free with no obligation." } },
+          { "@type": "Question", "name": "How long does an engagement take?", "acceptedAnswer": { "@type": "Answer", "text": "Phase 1 typically takes 2–4 weeks from project start to go-live. A full multi-workflow system takes 6–10 weeks." } }
         ]
       }} />
     </div>

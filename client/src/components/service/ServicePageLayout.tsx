@@ -282,7 +282,7 @@ export default function ServicePageLayout({ data, heroVisual }: ServicePageLayou
           <div style={{ maxWidth: "720px" }}>
             <FAQAccordion items={data.faqItems} />
             <p style={{ marginTop: "1.5rem", fontSize: "0.95rem" }}>
-              Projects start from $1,500 CAD, with a fixed quote after the free Automation Audit.{" "}
+              Projects start from $1,500 CAD, with a fixed quote after a free 15-minute introductory session.{" "}
               <Link href="/pricing" style={{ color: "#283891", fontWeight: 700 }}>See pricing</Link>
             </p>
           </div>

@@ -284,7 +284,7 @@ export default function AppointmentBookingWorkflow() {
           <Link href="/automation-planner">
             <a style={{ background: "#7E0F4A", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem" }}>Start the Automation Planner</a>
           </Link>
-          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Audit</AuditBookingLink>
+          <AuditBookingLink style={{ background: "transparent", color: "#fff", padding: "0.875rem 1.75rem", borderRadius: 8, fontWeight: 700, textDecoration: "none", fontSize: "1rem", border: "2px solid rgba(255,255,255,0.4)" }}>Book a Free Introductory Session</AuditBookingLink>
         </div>
       </div>
 

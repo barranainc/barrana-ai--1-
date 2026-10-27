@@ -5,7 +5,7 @@ import IndustryPlannerCTA from "@/components/planner-cta/IndustryPlannerCTA";
 const data: IndustryPageData = {
   title: "AI Automation for Property Management Companies Toronto | Barrana.ai",
   description:
-    "Automate tenant communications, maintenance requests, lease renewals, rent reminders, and owner reporting for property management companies. Free audit.",
+    "Automate tenant communications, maintenance requests, lease renewals, rent reminders, and owner reporting for property management companies. Free introductory session.",
   route: "property-management",
   breadcrumb: "Property Management",
   h1: "Managing 50+ Units With a 3-Person Team? Automation Is How You Scale to 200 Without Hiring Five More.",
@@ -15,7 +15,7 @@ const data: IndustryPageData = {
     "Property management is a volume business. Every additional unit generates tenant communications, maintenance coordination, owner reporting, and lease administration. At 50 units, a 3-person team can manage. At 150 units, without systems, the same team drowns.",
     "The companies that scale profitably automate the coordination layer: maintenance routing, rent collection reminders, lease tracking, and owner reporting. The team handles relationships and decision-making.",
   ],
-  ctaMicro: "See how many management hours you can recover per unit. Free audit.",
+  ctaMicro: "See how many management hours you can recover per unit. Free introductory session.",
 
   costHeading: "What Manual Operations Cost Property Managers",
   costItems: [
@@ -107,7 +107,7 @@ const data: IndustryPageData = {
     { label: "Payback Period", after: "Agreed and measured after launch" },
   ],
   roiNote:
-    "These are typical outcomes. The Automation Audit provides a projection for your specific business.",
+    "These are typical outcomes; your own figures will differ.",
 
   bestFit: [
     "Property management companies managing 50+ residential units",
@@ -147,7 +147,7 @@ const data: IndustryPageData = {
     },
     {
       question: "How much?",
-      answer: "Property management automation starts from $1,500 CAD, with a fixed quote after the free audit based on portfolio size and workflow count.",
+      answer: "Property management automation starts from $1,500 CAD, with a fixed quote after a free introductory session based on portfolio size and workflow count.",
     },
   ],
 
@@ -155,7 +155,7 @@ const data: IndustryPageData = {
     "Your Portfolio Is Growing. Your Team Size Is Not. Automate the Coordination That Limits Your Scale.",
   ctaBody:
     "Walk away with a clear plan for managing 2-3x more units with your current team. Free. No pitch. No obligation.",
-  primaryCTA: "Get Your Free Property Managers Automation Audit",
+  primaryCTA: "Get Your Free Introductory Session",
   primaryMicro: "Walk away with a clear plan. No pitch. No obligation.",
 
   internalLinks: [

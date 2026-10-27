@@ -1,8 +1,8 @@
 /**
  * Pricing page (audit R7, owner-approved 27 Oct 2026: "starting from $1,500 CAD" everywhere).
  *
- * Only owner-approved facts belong here: the $1,500 CAD starting point, the free 60-minute Automation
- * Audit, and a fixed quote after it. Do not add tiers, taxes, inclusions or timelines without approval.
+ * Only owner-approved facts belong here: the $1,500 CAD starting point, the free 15-minute introductory
+ * session, and a fixed quote after it. Do not add tiers, taxes, inclusions or timelines without approval.
  */
 import { Link } from "wouter";
 import { ArrowRight, Check, ClipboardList, FileCheck2, Wrench } from "lucide-react";
@@ -15,13 +15,13 @@ import { ORG_REF, SITE_URL } from "@/lib/schema";
 const steps = [
   {
     icon: ClipboardList,
-    title: "1. Free 60-minute Automation Audit",
-    body: "No charge and no obligation. We walk through your workflows, estimate what your manual work costs each year, and show you what to automate first.",
+    title: "1. Free 15-minute introductory session",
+    body: "No charge and no obligation. We discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.",
   },
   {
     icon: FileCheck2,
     title: "2. A fixed quote",
-    body: "After the audit you receive a fixed price for the workflow or workflows you want automated. No hourly billing and no surprise invoices.",
+    body: "After we understand what you need, you receive a fixed price for the workflow or workflows you want automated. No hourly billing and no surprise invoices.",
   },
   {
     icon: Wrench,
@@ -40,15 +40,15 @@ const priceFactors = [
 const faqs = [
   {
     q: "How much does automation cost with Barrana?",
-    a: "Projects start from $1,500 CAD. The exact price is a fixed quote that you receive after the free 60-minute Automation Audit, based on the workflows you choose.",
+    a: "Projects start from $1,500 CAD. The exact price is a fixed quote that you receive after a free 15-minute introductory session, based on the workflows you choose.",
   },
   {
-    q: "Is the Automation Audit really free?",
-    a: "Yes. The 60-minute Automation Audit costs nothing and comes with no obligation. Book a time that suits you with our scheduling link.",
+    q: "Is the introductory session really free?",
+    a: "Yes. The 15-minute introductory session costs nothing and comes with no obligation. Book a time that suits you with our scheduling link.",
   },
   {
     q: "Do you charge by the hour?",
-    a: "No. Implementation is quoted as a fixed price after the audit, so you know the cost before any work starts.",
+    a: "No. Implementation is quoted as a fixed price once we understand what you need, so you know the cost before any work starts.",
   },
   {
     q: "What currency are your prices in?",
@@ -69,7 +69,7 @@ const offerSchema = {
   offers: [
     {
       "@type": "Offer",
-      name: "Automation Audit (60 minutes)",
+      name: "Introductory session (15 minutes)",
       price: "0",
       priceCurrency: "CAD",
       url: CALENDLY_URL,
@@ -95,7 +95,7 @@ export default function Pricing() {
     <div className="min-h-screen bg-white">
       <SEOHead
         title="Pricing: Automation From $1,500 CAD | Barrana.ai"
-        description="Barrana automation projects start from $1,500 CAD. Start with a free 60-minute Automation Audit, then get a fixed quote for the workflows you choose. No hourly billing."
+        description="Barrana automation projects start from $1,500 CAD. Start with a free 15-minute introductory session, then get a fixed quote for the workflows you choose. No hourly billing."
       />
       <JsonLd data={offerSchema} />
       <JsonLd data={faqSchema} />
@@ -108,11 +108,11 @@ export default function Pricing() {
             <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6">Automation projects start from $1,500 CAD</h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               Barrana builds fixed-price automation for small and medium service businesses. Your exact price is set in a fixed
-              quote after the free 60-minute Automation Audit, so you know the cost before any work starts.
+              quote after a free 15-minute introductory session, so you know the cost before any work starts.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <AuditBookingLink className="btn-accent">
-                Book Your Free Automation Audit <ArrowRight size={16} aria-hidden="true" />
+                Book Your Free Introductory Session <ArrowRight size={16} aria-hidden="true" />
               </AuditBookingLink>
               <Link href="/services" className="btn-secondary">
                 See what we automate
@@ -127,10 +127,10 @@ export default function Pricing() {
           <div className="grid gap-6 md:grid-cols-2 max-w-5xl">
             <div className="rounded-2xl border border-slate-200 p-7">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7E0F4A]">Free</p>
-              <h2 className="mt-2 text-2xl font-extrabold text-gray-900">Automation Audit</h2>
+              <h2 className="mt-2 text-2xl font-extrabold text-gray-900">Introductory session</h2>
               <p className="mt-1 text-3xl font-extrabold text-[#283891]">$0</p>
               <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
-                {["60 minutes, no obligation", "A walk-through of your workflows", "What to automate first, and what to leave alone", "Book online at a time that suits you"].map((item) => (
+                {["15 minutes, no obligation", "Talk through your business and workflow challenges", "Where AI automation could save your team time", "Book online at a time that suits you"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check size={16} className="mt-1 shrink-0 text-[#283891]" aria-hidden="true" />
                     {item}
@@ -143,7 +143,7 @@ export default function Pricing() {
               <h2 className="mt-2 text-2xl font-extrabold text-gray-900">Automation implementation</h2>
               <p className="mt-1 text-3xl font-extrabold text-[#283891]">From $1,500 CAD</p>
               <ul className="mt-5 space-y-3 text-sm leading-6 text-slate-700">
-                {["Fixed quote after the audit", "No hourly billing", "Built and tested before launch", "Human checks where judgement is needed"].map((item) => (
+                {["Fixed quote once we understand what you need", "No hourly billing", "Built and tested before launch", "Human checks where judgement is needed"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <Check size={16} className="mt-1 shrink-0 text-[#283891]" aria-hidden="true" />
                     {item}
@@ -174,7 +174,7 @@ export default function Pricing() {
       <section className="py-16">
         <div className="container max-w-3xl">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-4">What affects your quote</h2>
-          <p className="text-slate-700 mb-5">Every project starts from $1,500 CAD. The fixed quote after your audit depends on:</p>
+          <p className="text-slate-700 mb-5">Every project starts from $1,500 CAD. The fixed quote depends on:</p>
           <ul className="space-y-3">
             {priceFactors.map((item) => (
               <li key={item} className="flex items-start gap-3 text-slate-700">
@@ -208,10 +208,10 @@ export default function Pricing() {
 
       <section className="py-16" style={{ backgroundColor: "#283891" }}>
         <div className="container text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Start with a free 60-minute Automation Audit</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">See what to automate first and get a fixed quote, starting from $1,500 CAD.</p>
+          <h2 className="text-3xl font-bold text-white mb-4">Start with a free 15-minute introductory session</h2>
+          <p className="text-blue-100 mb-8 max-w-xl mx-auto">Talk through your business, then get a fixed quote, starting from $1,500 CAD.</p>
           <AuditBookingLink className="btn-accent">
-            Book Your Free Automation Audit <ArrowRight size={16} aria-hidden="true" />
+            Book Your Free Introductory Session <ArrowRight size={16} aria-hidden="true" />
           </AuditBookingLink>
         </div>
       </section>

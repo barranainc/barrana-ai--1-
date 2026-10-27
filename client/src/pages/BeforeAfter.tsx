@@ -202,11 +202,11 @@ export default function BeforeAfter() {
               lineHeight: 1.65,
             }}
           >
-            Book a free Automation Audit and we will walk through your current workflows, identify the highest-impact
-            automations, and show you what the after state looks like for your specific business.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow
+            challenges, and explore where AI automation could save your team time.
           </p>
           <AuditBookingLink className="btn-primary">
-            Book Free Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

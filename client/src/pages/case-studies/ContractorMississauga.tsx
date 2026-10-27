@@ -141,7 +141,7 @@ const data: CaseStudyData = {
     },
   ],
   implementationTimeline: "2 weeks",
-  investmentRange: "From $1,500 CAD (fixed quote after the free audit)",
+  investmentRange: "From $1,500 CAD (fixed quote after a free introductory session)",
   payback: "Within first 2 weeks (1 captured job)",
   keyResultCallout:
     "22% increase in quote-to-job conversion within 60 days. 90-second response time. 100% after-hours capture. The owner stopped missing leads because his phone went to voicemail. He started each morning with booked appointments he did not have to schedule.",
@@ -176,7 +176,7 @@ const data: CaseStudyData = {
   ctaHeadline:
     "Your Leads Are Not Waiting. Your Competitors Are Not Waiting. Close the Response Gap.",
   ctaBody:
-    "The audit quantifies exactly how many leads you are losing to slow response and shows you the automated version of your lead pipeline.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
   internalLinks: [
     { label: "Contractors & Trades", href: "/industries/contractors" },
     {

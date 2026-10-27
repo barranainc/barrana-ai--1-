@@ -108,7 +108,7 @@ export default function Playbooks() {
               className="inline-block px-6 py-3 rounded-lg font-semibold text-white transition-opacity hover:opacity-90"
               style={{ backgroundColor: "#283891" }}
             >
-              Book a Free Automation Audit
+              Book a Free Introductory Session
             </AuditBookingLink>
           </div>
         </div>

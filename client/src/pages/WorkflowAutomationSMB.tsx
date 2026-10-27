@@ -147,7 +147,7 @@ function TriggerConditionActionFlow() {
           { label: "→", sublabel: "", bg: "transparent", border: "transparent", text: "#CBD5E1" },
           { label: "CONDITION", sublabel: "Is it relevant?", bg: "#EFF6FF", border: "#283891", text: "#283891" },
           { label: "→", sublabel: "", bg: "transparent", border: "transparent", text: "#CBD5E1" },
-          { label: "ACTION", sublabel: "System responds", bg: "#F0FDF4", border: "#16A34A", text: "#15803D" },
+          { label: "ACTION", sublabel: "System responds", bg: "#F0FDF4", border: "#15803d", text: "#15803D" },
         ].map((step, i) => (
           <div key={i} style={{ opacity: visible ? 1 : 0, transform: visible ? "scale(1)" : "scale(0.8)", transition: `opacity 0.4s ease ${i * 0.1}s, transform 0.4s ease ${i * 0.1}s` }}>
             {step.sublabel ? (
@@ -394,14 +394,14 @@ export default function WorkflowAutomationSMB() {
               See which workflows to build first for your business.
             </h2>
             <p style={{ color: "rgba(255,255,255,0.65)", maxWidth: 520, margin: "0 auto 1.75rem" }}>
-              The Automation Planner generates a personalised workflow roadmap in under 5 minutes. Or book a free Automation Audit.
+              The Automation Planner generates a personalised workflow roadmap in under 5 minutes. Or book a free 15-minute introductory session.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link href="/automation-planner" style={{ background: "#7E0F4A", color: "#fff", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
                 See the Automation Planner
               </Link>
               <AuditBookingLink style={{ background: "transparent", color: "#fff", border: "2px solid rgba(255,255,255,0.35)", borderRadius: 8, padding: "0.875rem 1.75rem", fontWeight: 700, textDecoration: "none", fontSize: "0.9375rem" }}>
-                Book a Free Audit
+                Book a Free Introductory Session
               </AuditBookingLink>
             </div>
           </div>

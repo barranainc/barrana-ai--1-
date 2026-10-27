@@ -143,7 +143,7 @@ export default function AccountingHeroVisual({ className }: { className?: string
             <path
               d={describeArc(cx, cy, r, greenEnd, yellowEnd)}
               fill="none"
-              stroke="#D97706"
+              stroke="#b45309"
               strokeWidth={18}
               strokeLinecap="butt"
               opacity={0.8}

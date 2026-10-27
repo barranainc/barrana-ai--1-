@@ -158,10 +158,10 @@ export default function WorkflowTemplates() {
         <div className="container text-center">
           <h2 className="text-3xl font-extrabold text-white mb-4">Want These Implemented for Your Business?</h2>
           <p className="mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.65)" }}>
-            Book a free Automation Audit and we will identify which templates apply to your business and customize them for your specific workflows.
+            Book a free 15-minute introductory session. We’ll discuss your business, understand your workflow challenges, and explore where AI automation could save your team time.
           </p>
           <AuditBookingLink className="btn-primary">
-            Book Free Audit
+            Book Free Introductory Session
           </AuditBookingLink>
         </div>
       </section>

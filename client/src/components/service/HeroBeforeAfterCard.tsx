@@ -36,7 +36,7 @@ export default function HeroBeforeAfterCard({ metrics, show }: Props) {
       transition: reduced ? "none" : "opacity 0.65s ease 0.35s, transform 0.65s cubic-bezier(0.16,1,0.3,1) 0.35s",
     }}>
       {/* Top gradient bar */}
-      <div style={{ height: 3, background: "linear-gradient(90deg, #DC2626 0%, #283891 50%, #16a34a 100%)" }} />
+      <div style={{ height: 3, background: "linear-gradient(90deg, #DC2626 0%, #283891 50%, #15803d 100%)" }} />
 
       {/* Header */}
       <div style={{
@@ -51,7 +51,7 @@ export default function HeroBeforeAfterCard({ metrics, show }: Props) {
         </span>
         <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
           <span style={{ fontSize: "0.6rem", fontWeight: 700, color: "#DC2626", textTransform: "uppercase", letterSpacing: "0.08em" }}>Before</span>
-          <span style={{ fontSize: "0.6rem", fontWeight: 700, color: "#16a34a", textTransform: "uppercase", letterSpacing: "0.08em" }}>After</span>
+          <span style={{ fontSize: "0.6rem", fontWeight: 700, color: "#15803d", textTransform: "uppercase", letterSpacing: "0.08em" }}>After</span>
         </div>
       </div>
 
@@ -86,13 +86,13 @@ export default function HeroBeforeAfterCard({ metrics, show }: Props) {
                 <div style={{ flex: 1, height: 8, background: "rgba(22,163,74,0.10)", borderRadius: 4, overflow: "hidden" }}>
                   <div style={{
                     height: "100%",
-                    background: "#16a34a",
+                    background: "#15803d",
                     borderRadius: 4,
                     width: visible ? `${m.afterW}%` : "0%",
                     transition: reduced ? "none" : `width 0.75s cubic-bezier(0.16,1,0.3,1) ${0.6 + i * 0.08}s`,
                   }} />
                 </div>
-                <span style={{ fontSize: "0.6875rem", fontWeight: 600, color: "#16a34a", whiteSpace: "nowrap" }}>
+                <span style={{ fontSize: "0.6875rem", fontWeight: 600, color: "#15803d", whiteSpace: "nowrap" }}>
                   ✓ {m.after}
                 </span>
               </div>

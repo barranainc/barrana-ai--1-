@@ -93,7 +93,7 @@ const data: ServicePageData = {
     { label: "Typical Payback", after: "30–60 days" },
   ],
   roiNote:
-    "These are typical outcome scenarios. The Automation Audit provides a projection specific to your business.",
+    "These are typical outcome scenarios; your own figures will differ.",
 
   bestFit: [
     "Service businesses receiving 20+ inbound leads per month",
@@ -114,7 +114,7 @@ const data: ServicePageData = {
     {
       question: "How much does lead response automation cost?",
       answer:
-        "Projects start from $1,500 CAD, with a fixed quote after the free 60-minute Automation Audit. Third-party tool subscriptions are paid directly to those providers. Payback depends on your volumes and scope; we agree on what to measure before launch.",
+        "Projects start from $1,500 CAD, with a fixed quote after a free 15-minute introductory session. Third-party tool subscriptions are paid directly to those providers. Payback depends on your volumes and scope; we agree on what to measure before launch.",
     },
     {
       question: "Does the automated response sound generic?",
@@ -139,13 +139,13 @@ const data: ServicePageData = {
     {
       question: "How long does implementation take?",
       answer:
-        "Standard lead response automation: 2–3 weeks from audit to live deployment, including template writing, CRM integration, and testing.",
+        "Standard lead response automation: 2–3 weeks from project start to live deployment, including template writing, CRM integration, and testing.",
     },
   ],
 
   ctaHeadline: "Every Hour You Wait, Another Lead Books With Someone Faster.",
   ctaBody:
-    "The audit quantifies exactly how many leads you are losing and shows you what the automated version looks like for your business.",
+    "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
     { label: "AI Receptionist", href: "/services/ai-receptionist", desc: "24/7 call handling" },

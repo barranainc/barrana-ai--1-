@@ -29,7 +29,7 @@ const faqCategories = [
     category: "Pricing and Contracts",
     faqs: [
       { q: "What does fixed-price mean?", a: "Every engagement is scoped and priced before work begins. You know exactly what you are getting and what it costs. There are no hourly billing surprises. If scope changes, we discuss it openly before proceeding. Fixed-price engagements protect you from cost overruns and ensure we are accountable for delivery." },
-      { q: "How much does AI automation cost?", a: "Pricing depends on the scope of the automation system. Single-workflow automations typically start in the range of a few thousand dollars. Multi-workflow systems with complex integrations are priced based on the discovery findings. We provide a detailed proposal after the free Automation Audit." },
+      { q: "How much does AI automation cost?", a: "Pricing depends on the scope of the automation system. Single-workflow automations typically start in the range of a few thousand dollars. Multi-workflow systems with complex integrations are priced based on the discovery findings. We provide a detailed proposal after a free 15-minute introductory session." },
       { q: "Is there ongoing cost after the system is built?", a: "The tools we use (Make, Zapier, etc.) have monthly subscription costs that you pay directly to those platforms. These are typically $20 to $200 per month depending on usage volume. We do not mark up platform costs. Ongoing maintenance and optimization services are available as an optional add-on." },
     ],
   },
@@ -70,7 +70,7 @@ export default function FAQ() {
               Questions We Hear From Every Client
             </h1>
             <p className="text-lg leading-relaxed" style={{ color: "#6B7280" }}>
-              Answers to the most common questions about AI automation for small businesses, our process, pricing, and results. If your question is not here, book a free audit and we will answer it directly.
+              Answers to the most common questions about AI automation for small businesses, our process, pricing, and results. If your question is not here, book a free introductory session and we will answer it directly.
             </p>
           </div>
         </div>
@@ -119,8 +119,8 @@ export default function FAQ() {
           {/* CTA */}
           <div className="mt-16 text-center p-10 rounded-2xl" style={{ background: "linear-gradient(135deg, #1E2B6E, #283891)" }}>
             <h3 className="text-2xl font-bold text-white mb-3">Still Have Questions?</h3>
-            <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 60-minute Automation Audit and we will answer every question specific to your business.</p>
-            <AuditBookingLink className="btn-primary">Book Free Audit</AuditBookingLink>
+            <p className="mb-6" style={{ color: "rgba(255,255,255,0.7)" }}>Book a free 15-minute introductory session and we will answer your questions about your business.</p>
+            <AuditBookingLink className="btn-primary">Book Free Introductory Session</AuditBookingLink>
           </div>
         </div>
       </section>

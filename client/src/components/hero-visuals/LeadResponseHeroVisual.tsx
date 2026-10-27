@@ -259,7 +259,7 @@ export default function LeadResponseHeroVisual({ className }: { className?: stri
             />
           )}
         </div>
-        <div style={{ fontSize: "0.875rem", color: "#D97706", fontWeight: 700 }}>
+        <div style={{ fontSize: "0.875rem", color: "#b45309", fontWeight: 700 }}>
           Est. value:{" "}
           {reduced ? (
             <span style={{ fontVariantNumeric: "tabular-nums" }}>$480,000/yr</span>
