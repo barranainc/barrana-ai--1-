@@ -341,7 +341,7 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
               href={data.realProject.href}
               className="mb-8 block rounded-2xl border-2 border-[#15803d]/40 bg-white p-6 no-underline transition-shadow hover:shadow-lg"
             >
-              <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#15803d]">
+              <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#166534]">
                 <ShieldCheck size={13} className="mt-[3px] shrink-0" aria-hidden="true" />
                 Real client project
               </span>

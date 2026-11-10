@@ -392,7 +392,7 @@ export default function CaseStudies() {
                 href={project.href}
                 className="block rounded-2xl border-2 border-[#15803d]/40 bg-white p-6 no-underline transition-shadow hover:shadow-lg"
               >
-                <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#15803d]">
+                <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#166534]">
                   <ShieldCheck size={13} className="mt-[3px] shrink-0" aria-hidden="true" />
                   {project.label}
                 </span>
@@ -478,7 +478,7 @@ export default function CaseStudies() {
       {/* Disclaimer */}
       <section style={{ background: "white", padding: "1.5rem 0" }}>
         <div className="container">
-          <p style={{ fontSize: "0.75rem", color: "#9CA3AF", maxWidth: "640px" }}>
+          <p style={{ fontSize: "0.75rem", color: "#6B7280", maxWidth: "640px" }}>
             <strong>Note on figures:</strong> The illustrative examples are composites, not verified client results. Figures on real client project pages are dated and published with the client's approval. Real results vary with business size, industry, workflow complexity and implementation scope; we agree how to measure your baseline before work starts.
           </p>
         </div>

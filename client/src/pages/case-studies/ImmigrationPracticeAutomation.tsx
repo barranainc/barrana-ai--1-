@@ -103,7 +103,7 @@ export default function ImmigrationPracticeAutomation() {
             ]}
           />
           <div className="max-w-3xl">
-            <p className="inline-flex max-w-full items-start gap-2 rounded-lg bg-[#E8F5EE] px-3 py-1.5 font-mono text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-[#15803d]">
+            <p className="inline-flex max-w-full items-start gap-2 rounded-lg bg-[#E8F5EE] px-3 py-1.5 font-mono text-[11px] font-semibold uppercase leading-5 tracking-[0.12em] text-[#166534]">
               <ShieldCheck size={14} className="mt-[3px] shrink-0" aria-hidden="true" />
               <span>Real client project | Client identity withheld</span>
             </p>
