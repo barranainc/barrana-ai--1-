@@ -4,7 +4,7 @@
  */
 
 import { Link } from "wouter";
-import { ArrowRight, BookOpen, Briefcase, Building2, BarChart3, Wrench } from "lucide-react";
+import { ArrowRight, BookOpen, Briefcase, Building2, BarChart3, ShieldCheck, Wrench } from "lucide-react";
 import { internalLinks } from "@/config/internal-links";
 
 const NAVY = "#283891";
@@ -17,7 +17,8 @@ const typeMeta: Record<string, { badge: string; bg: string; color: string; Icon:
   service:   { badge: "Service",    bg: "rgba(40,56,145,0.10)", color: NAVY,    Icon: Wrench },
   industry:  { badge: "Industry",   bg: "rgba(126,15,74,0.10)", color: MAGENTA, Icon: Building2 },
   workflow:  { badge: "Guide",      bg: "rgba(40,56,145,0.08)", color: NAVY,    Icon: BarChart3 },
-  caseStudy: { badge: "Case Study", bg: "rgba(126,15,74,0.08)", color: MAGENTA, Icon: Briefcase },
+  caseStudy: { badge: "Illustrative Example", bg: "rgba(126,15,74,0.08)", color: MAGENTA, Icon: Briefcase },
+  realProject: { badge: "Real Client Project", bg: "rgba(21,128,61,0.10)", color: "#15803d", Icon: ShieldCheck },
   decision:  { badge: "Guide",      bg: "rgba(40,56,145,0.08)", color: NAVY,    Icon: BookOpen },
 };
 
@@ -38,7 +39,10 @@ function pickBestItems(pagePath: string): TaggedLink[] {
   if (cfg.industries.length > 0)  pool.push({ ...cfg.industries[0], type: "industry" });
   if (cfg.workflows.length > 0)   pool.push({ ...cfg.workflows[0], type: "workflow" });
   else if (cfg.decisions.length > 0) pool.push({ ...cfg.decisions[0], type: "decision" });
-  if (cfg.caseStudies.length > 0) pool.push({ ...cfg.caseStudies[0], type: "caseStudy" });
+  if (cfg.caseStudies.length > 0) {
+    const { href, label, real } = cfg.caseStudies[0];
+    pool.push({ href, label, type: real ? "realProject" : "caseStudy" });
+  }
 
   /* If under 4, backfill from decisions or extra services */
   if (pool.length < 4 && cfg.decisions.length > 0 && !pool.some(p => p.type === "decision")) {

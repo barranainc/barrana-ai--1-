@@ -107,10 +107,10 @@ export default function HeroBeforeAfterCard({ metrics, show }: Props) {
         background: "#F7F9FC",
         borderTop: "1px solid rgba(40,56,145,0.07)",
         fontSize: "0.6375rem",
-        color: "rgba(100,116,139,0.7)",
+        color: "#5F5F6B",
         lineHeight: 1.4,
       }}>
-        Typical outcomes for clients after Barrana.ai implementation.
+        Illustrative figures, not verified client results.
       </div>
     </div>
   );

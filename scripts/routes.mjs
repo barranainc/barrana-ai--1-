@@ -58,6 +58,7 @@ export const routes = [
 
   // ── Case Studies ───────────────────────────────────────────────────────
   { path: "/case-studies", priority: 0.8, changefreq: "weekly" },
+  { path: "/case-studies/immigration-practice-automation", priority: 0.8, changefreq: "monthly" },
   { path: "/case-studies/immigration-firm-north-york", priority: 0.7, changefreq: "monthly" },
   { path: "/case-studies/accounting-firm-vaughan", priority: 0.7, changefreq: "monthly" },
   { path: "/case-studies/contractor-mississauga", priority: 0.7, changefreq: "monthly" },

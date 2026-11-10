@@ -9,7 +9,8 @@ export interface PageLinks {
   services: { href: string; label: string }[];
   industries: { href: string; label: string }[];
   workflows: { href: string; label: string }[];
-  caseStudies: { href: string; label: string }[];
+  /** `real: true` marks a real, anonymized client project; every other case study is illustrative. */
+  caseStudies: { href: string; label: string; real?: boolean }[];
   decisions: { href: string; label: string }[];
   local: { href: string; label: string }[];
   cta: "planner" | "strategy-call" | "audit";
@@ -66,6 +67,7 @@ const W = {
 };
 
 const CS = {
+  immigrationReal: { href: "/case-studies/immigration-practice-automation", label: "Immigration Practice Automation", real: true },
   immigration:  { href: "/case-studies/immigration-firm-north-york",        label: "Immigration Firm - North York" },
   accounting:   { href: "/case-studies/accounting-firm-vaughan",             label: "Accounting Firm - Vaughan" },
   contractor:   { href: "/case-studies/contractor-mississauga",              label: "Contractor - Mississauga" },
@@ -127,7 +129,7 @@ export const internalLinks: Record<string, PageLinks> = {
     services: [S.documentCollection, S.crm, S.workflow],
     industries: [I.immigration, I.law, I.accounting, I.financial],
     workflows: [W.clientOnboard],
-    caseStudies: [CS.immigration, CS.law],
+    caseStudies: [CS.immigrationReal, CS.immigration, CS.law],
     decisions: [D.readiness],
     local: [L.vaughan],
     cta: "audit",
@@ -149,7 +151,7 @@ export const internalLinks: Record<string, PageLinks> = {
     services: [S.clientIntake, S.workflow, S.crm],
     industries: [I.immigration, I.accounting, I.law, I.mortgage],
     workflows: [W.docCollection, W.clientOnboard],
-    caseStudies: [CS.immigration, CS.accounting],
+    caseStudies: [CS.immigrationReal, CS.immigration, CS.accounting],
     decisions: [D.readiness],
     local: [L.vaughan],
     cta: "audit",
@@ -182,7 +184,7 @@ export const internalLinks: Record<string, PageLinks> = {
     services: [S.crm, S.opsReporting, S.documentCollection],
     industries: [I.marketing, I.property, I.insurance],
     workflows: [W.clientOnboard, W.leadIntake],
-    caseStudies: [CS.marketing, CS.property],
+    caseStudies: [CS.immigrationReal, CS.marketing, CS.property],
     decisions: [D.buildVsBuy],
     local: [L.vaughan],
     cta: "planner",
@@ -263,7 +265,7 @@ export const internalLinks: Record<string, PageLinks> = {
     services: [S.clientIntake, S.documentCollection, S.afterHours, S.crm, S.workflow],
     industries: [I.law, I.accounting],
     workflows: [W.clientOnboard, W.docCollection],
-    caseStudies: [CS.immigration],
+    caseStudies: [CS.immigrationReal, CS.immigration],
     decisions: [D.readiness],
     local: [L.vaughan],
     cta: "audit",

@@ -52,6 +52,7 @@ const VeterinaryClinics = lazyPage(() => import("./pages/industries/VeterinaryCl
 const TutoringEducation = lazyPage(() => import("./pages/industries/TutoringEducation"));
 const AutoRepair = lazyPage(() => import("./pages/industries/AutoRepair"));
 const Landscaping = lazyPage(() => import("./pages/industries/Landscaping"));
+const ImmigrationPracticeAutomation = lazyPage(() => import("./pages/case-studies/ImmigrationPracticeAutomation"));
 const ImmigrationFirmNorthYork = lazyPage(() => import("./pages/case-studies/ImmigrationFirmNorthYork"));
 const AccountingFirmVaughan = lazyPage(() => import("./pages/case-studies/AccountingFirmVaughan"));
 const ContractorMississauga = lazyPage(() => import("./pages/case-studies/ContractorMississauga"));
@@ -213,6 +214,7 @@ function LayoutRoutes() {
         <Route path="/resources/:slug" component={IndustryAutomationGuide} />
         <Route path="/automation-planner" component={AutomationPlanner} />
         <Route path="/case-studies" component={CaseStudies} />
+        <Route path="/case-studies/immigration-practice-automation" component={ImmigrationPracticeAutomation} />
         <Route path="/case-studies/immigration-firm-north-york" component={ImmigrationFirmNorthYork} />
         <Route path="/case-studies/accounting-firm-vaughan" component={AccountingFirmVaughan} />
         <Route path="/case-studies/contractor-mississauga" component={ContractorMississauga} />
@@ -383,6 +385,7 @@ const ROUTE_TABLE = [
   ["/resources/:slug", IndustryAutomationGuide],
   ["/automation-planner", AutomationPlanner],
   ["/case-studies", CaseStudies],
+  ["/case-studies/immigration-practice-automation", ImmigrationPracticeAutomation],
   ["/case-studies/immigration-firm-north-york", ImmigrationFirmNorthYork],
   ["/case-studies/accounting-firm-vaughan", AccountingFirmVaughan],
   ["/case-studies/contractor-mississauga", ContractorMississauga],

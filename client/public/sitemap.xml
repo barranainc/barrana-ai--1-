@@ -216,6 +216,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://barrana.ai/case-studies/immigration-practice-automation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://barrana.ai/case-studies/immigration-firm-north-york</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

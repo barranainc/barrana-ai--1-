@@ -148,6 +148,11 @@ const data: ServicePageData = {
 
   internalLinks: [
     {
+      label: "Real Client Project: Immigration Practice",
+      href: "/case-studies/immigration-practice-automation",
+      desc: "How an RCIC-led consultancy automated intake and case setup",
+    },
+    {
       label: "Document Collection Automation",
       href: "/services/document-collection",
       desc: "Automate what comes after intake",

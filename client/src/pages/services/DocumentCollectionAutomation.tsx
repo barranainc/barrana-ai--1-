@@ -148,6 +148,11 @@ const data: ServicePageData = {
 
   internalLinks: [
     {
+      label: "Real Client Project: Immigration Practice",
+      href: "/case-studies/immigration-practice-automation",
+      desc: "A real client portal for questionnaires and document uploads",
+    },
+    {
       label: "Client Intake Automation",
       href: "/services/client-intake-automation",
       desc: "Automate what comes before documents",

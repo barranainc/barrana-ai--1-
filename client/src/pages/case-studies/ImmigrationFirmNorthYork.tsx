@@ -191,6 +191,7 @@ const data: CaseStudyData = {
       label: "After-Hours Automation",
       href: "/services/after-hours-automation",
     },
+    { label: "Real Client Project: Immigration Practice", href: "/case-studies/immigration-practice-automation" },
     { label: "All Case Studies", href: "/case-studies" },
   ],
   color: "#283891",

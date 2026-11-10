@@ -217,9 +217,14 @@ const data: IndustryPageData = {
     {
       label: "Case Studies",
       href: "/case-studies",
-      desc: "Illustrative examples of typical outcomes",
+      desc: "A real client project and illustrative examples",
     },
   ],
+  realProject: {
+    label: "How a Canadian immigration consultancy automated intake and case management",
+    href: "/case-studies/immigration-practice-automation",
+    desc: "A real, anonymized Barrana project for an RCIC-led practice: intake, agreements, payments, case setup and document collection. 100+ agreements generated in a single month (as of November 2026). Unlike the illustrative figures elsewhere on this page, these are recorded results; the client's name is withheld.",
+  },
 };
 
 export default function ImmigrationConsultants() {

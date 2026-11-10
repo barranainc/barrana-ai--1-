@@ -7,7 +7,8 @@ import { ORG_REF } from "@/lib/schema";
  */
 
 import React from "react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { colors, spacing, typography, cards, surfaces } from "@/styles/design-tokens";
 import TrustBadges from "@/components/diagrams/TrustBadges";
 import WorkflowDiagram from "@/components/diagrams/WorkflowDiagram";
@@ -96,6 +97,9 @@ export interface IndustryPageData {
 
   // Internal links
   internalLinks: { label: string; href: string; desc?: string }[];
+
+  /* Real, anonymized client project shown above Related Resources (keep it distinct from illustrative figures) */
+  realProject?: { label: string; href: string; desc: string };
 
   // Hero visual stats (right column of hero - auto-derived from roiMetrics if not set)
   heroStats?: { value: string; label: string }[];
@@ -332,6 +336,22 @@ export default function IndustryPageLayout({ data, heroVisual, children }: Indus
       {/* 13. Related Resources - off-white */}
       <section style={sectionStyle(colors.surfaceLight)}>
         <div className="container">
+          {data.realProject && (
+            <Link
+              href={data.realProject.href}
+              className="mb-8 block rounded-2xl border-2 border-[#15803d]/40 bg-white p-6 no-underline transition-shadow hover:shadow-lg"
+            >
+              <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#15803d]">
+                <ShieldCheck size={13} className="mt-[3px] shrink-0" aria-hidden="true" />
+                Real client project
+              </span>
+              <span className="mt-3 block text-xl font-bold text-gray-900">{data.realProject.label}</span>
+              <span className="mt-2 block max-w-3xl text-slate-700 leading-relaxed">{data.realProject.desc}</span>
+              <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#15803d]">
+                Read the case study <ArrowRight size={16} aria-hidden="true" />
+              </span>
+            </Link>
+          )}
           <InternalLinksGrid links={data.internalLinks} />
         </div>
       </section>

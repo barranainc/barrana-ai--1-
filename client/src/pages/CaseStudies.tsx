@@ -1,12 +1,15 @@
 /**
  * CaseStudies.tsx - Barrana.ai Case Studies Index
- * 12-card filterable grid. Each card: industry badge + title + key metric + location.
- * Cards link to individual case study pages.
+ * A "Real client projects" section (real, anonymized work with dated figures; owner brief 6 Nov 2026) above
+ * the 12-card filterable grid of illustrative examples. Each illustrative card: industry badge + title + key
+ * metric + location, labelled "Illustrative". Keep the two kinds visibly separate.
  */
 
 import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
+import { ShieldCheck } from "lucide-react";
 import AuditBookingLink from "@/components/AuditBookingLink";
+import SEOHead from "@/components/SEOHead";
 
 function useReveal(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
@@ -169,6 +172,25 @@ const CARDS: CaseStudyCard[] = [
   },
 ];
 
+interface RealProjectCard {
+  href: string;
+  label: string;
+  title: string;
+  metric: string;
+  note: string;
+}
+
+/** Real, anonymized client projects. Figures must match the project page and carry their date. */
+const REAL_PROJECTS: RealProjectCard[] = [
+  {
+    href: "/case-studies/immigration-practice-automation",
+    label: "Real client project | Canadian immigration consultancy",
+    title: "How a regulated immigration practice automated intake, agreements, case setup and document collection.",
+    metric: "100+ agreements generated in a single month (as of November 2026).",
+    note: "Client identity withheld for confidentiality.",
+  },
+];
+
 const ALL_TAGS = ["All", "Professional Services", "Healthcare", "Trades & Home Services", "Real Estate", "Financial Services"];
 
 function CardItem({ card, idx }: { card: CaseStudyCard; idx: number }) {
@@ -226,7 +248,19 @@ function CardItem({ card, idx }: { card: CaseStudyCard; idx: number }) {
               >
                 {card.industry}
               </span>
-              <span style={{ fontSize: "0.6875rem", color: "#94A3B8" }}>{card.location}</span>
+              <span style={{ fontSize: "0.6875rem", color: "#64748B" }}>{card.location}</span>
+              <span
+                style={{
+                  fontSize: "0.6875rem",
+                  fontWeight: 700,
+                  color: "#92400E",
+                  background: "#FFF8E7",
+                  borderRadius: "999px",
+                  padding: "0.2rem 0.625rem",
+                }}
+              >
+                Illustrative
+              </span>
             </div>
 
             {/* Key metric */}
@@ -248,7 +282,7 @@ function CardItem({ card, idx }: { card: CaseStudyCard; idx: number }) {
             </div>
 
             {/* Title */}
-            <h2
+            <h3
               style={{
                 fontSize: "0.9375rem",
                 fontWeight: 700,
@@ -259,7 +293,7 @@ function CardItem({ card, idx }: { card: CaseStudyCard; idx: number }) {
               }}
             >
               {card.title}
-            </h2>
+            </h3>
 
             {/* Summary */}
             <p style={{ fontSize: "0.8125rem", color: "#64748B", lineHeight: 1.6, margin: 0 }}>
@@ -299,6 +333,10 @@ export default function CaseStudies() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEOHead
+        title="Case Studies: Client Work and Illustrative Examples | Barrana.ai"
+        description="A real, anonymized Barrana client project alongside illustrative automation examples for service businesses. Real project figures are dated; illustrative examples are composites."
+      />
       {/* Hero */}
       <section style={{ background: "#F7F9FC", paddingTop: "6rem", paddingBottom: "3.5rem" }}>
         <div className="container">
@@ -315,26 +353,73 @@ export default function CaseStudies() {
             </div>
             <div style={{ maxWidth: "640px" }}>
               <h1 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 800, color: "#111827", marginBottom: "1rem", lineHeight: 1.15 }}>
-                Illustrative Examples.<br />Typical Outcomes.
+                Client work and illustrative examples
               </h1>
               <p style={{ fontSize: "1.0625rem", color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                Each page is an illustrative example: an anonymised composite based on typical automation engagements for GTA service businesses. The figures are not verified client results; your results will differ.
+                Explore a real, anonymized Barrana client project alongside illustrative examples of what automation may look like for service businesses. Real project figures are dated and described on their own pages. Illustrative examples are composites, not verified client outcomes; results vary by workflow and implementation.
               </p>
               {/* Stats row */}
               <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap" }}>
                 {[
-                  { v: "12", l: "Illustrative Examples" },
-                  { v: "6", l: "Industries" },
+                  { v: String(REAL_PROJECTS.length), l: "Real Client Project" + (REAL_PROJECTS.length === 1 ? "" : "s") },
+                  { v: String(CARDS.length), l: "Illustrative Examples" },
                   { v: "15 min", l: "Free Introductory Session" },
                 ].map((s) => (
                   <div key={s.l}>
                     <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#283891" }}>{s.v}</div>
-                    <div style={{ fontSize: "0.75rem", color: "#94A3B8", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.l}</div>
+                    <div style={{ fontSize: "0.75rem", color: "#64748B", fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>{s.l}</div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Real client projects */}
+      <section style={{ background: "white", padding: "3.5rem 0" }}>
+        <div className="container">
+          <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#111827", marginBottom: "0.5rem" }}>
+            Real client projects
+          </h2>
+          <p style={{ fontSize: "0.9375rem", color: "#4B5563", lineHeight: 1.6, marginBottom: "1.5rem", maxWidth: "640px" }}>
+            Real Barrana work, published with the client's approval. Names are withheld and figures are dated on each page.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "1.5rem" }}>
+            {REAL_PROJECTS.map((project) => (
+              <Link
+                key={project.href}
+                href={project.href}
+                className="block rounded-2xl border-2 border-[#15803d]/40 bg-white p-6 no-underline transition-shadow hover:shadow-lg"
+              >
+                <span className="inline-flex max-w-full items-start gap-1.5 rounded-lg bg-[#E8F5EE] px-3 py-1 text-[11px] leading-5 font-bold uppercase tracking-[0.06em] text-[#15803d]">
+                  <ShieldCheck size={13} className="mt-[3px] shrink-0" aria-hidden="true" />
+                  {project.label}
+                </span>
+                <h3 className="mt-4 text-lg font-bold leading-snug text-gray-900">{project.title}</h3>
+                <p className="mt-3 text-sm font-semibold text-[#283891]">{project.metric}</p>
+                <p className="mt-1 text-sm text-slate-600">{project.note}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#15803d]">
+                  Read the case study
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Illustrative examples heading */}
+      <section style={{ background: "#F7F9FC", padding: "3rem 0 1.5rem" }}>
+        <div className="container">
+          <h2 style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)", fontWeight: 800, color: "#111827", marginBottom: "0.5rem" }}>
+            Illustrative examples
+          </h2>
+          <p style={{ fontSize: "0.9375rem", color: "#4B5563", lineHeight: 1.6, margin: 0, maxWidth: "640px" }}>
+            Anonymised composites based on typical automation engagements for GTA service businesses. These are not verified client results; your results will differ.
+          </p>
         </div>
       </section>
 
@@ -368,7 +453,7 @@ export default function CaseStudies() {
       </section>
 
       {/* Card grid */}
-      <section style={{ background: "#F7F9FC", padding: "3.5rem 0 4.5rem" }}>
+      <section style={{ background: "#F7F9FC", padding: "2rem 0 4.5rem" }}>
         <div className="container">
           <div
             style={{
@@ -394,7 +479,7 @@ export default function CaseStudies() {
       <section style={{ background: "white", padding: "1.5rem 0" }}>
         <div className="container">
           <p style={{ fontSize: "0.75rem", color: "#9CA3AF", maxWidth: "640px" }}>
-            <strong>Note on figures:</strong> These are illustrative examples, not verified client results. Real results vary with business size, industry, workflow complexity and implementation scope; we agree how to measure your baseline before work starts.
+            <strong>Note on figures:</strong> The illustrative examples are composites, not verified client results. Figures on real client project pages are dated and published with the client's approval. Real results vary with business size, industry, workflow complexity and implementation scope; we agree how to measure your baseline before work starts.
           </p>
         </div>
       </section>

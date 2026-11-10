@@ -139,6 +139,7 @@ const data: ServicePageData = {
     "In a free 15-minute introductory session we discuss your business and workflow challenges and explore where AI automation could save your team time.",
 
   internalLinks: [
+    { label: "Real Client Project: Immigration Practice", href: "/case-studies/immigration-practice-automation", desc: "An automation layer around Monday.com and Microsoft 365" },
     { label: "CRM Automation", href: "/services/crm-automation", desc: "A CRM that updates itself" },
     { label: "Operations Reporting", href: "/services/operations-reporting", desc: "Operational visibility" },
     { label: "Lead Response Automation", href: "/services/lead-response-automation", desc: "Automate your lead pipeline" },
