@@ -478,7 +478,7 @@ export default function CaseStudies() {
       {/* Disclaimer */}
       <section style={{ background: "white", padding: "1.5rem 0" }}>
         <div className="container">
-          <p style={{ fontSize: "0.75rem", color: "#6B7280", maxWidth: "640px" }}>
+          <p style={{ fontSize: "0.75rem", color: "#5F5F6B", maxWidth: "640px" }}>
             <strong>Note on figures:</strong> The illustrative examples are composites, not verified client results. Figures on real client project pages are dated and published with the client's approval. Real results vary with business size, industry, workflow complexity and implementation scope; we agree how to measure your baseline before work starts.
           </p>
         </div>
